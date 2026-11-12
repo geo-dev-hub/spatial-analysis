@@ -1,7 +1,6 @@
 name: Technical correction
 description: Report an error, unclear explanation, missing edge case or implementation issue.
 title: "[Correction] "
-labels: ["correction", "needs-review"]
 body:
   - type: markdown
     attributes:
