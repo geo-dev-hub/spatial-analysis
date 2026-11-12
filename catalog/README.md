@@ -2,6 +2,10 @@
 
 This directory is the structured index of the project's knowledge inventory. It is not the place for full technical explanations; those belong in canonical records under `algorithms/`.
 
+## Coverage
+
+See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest view of what is captured, what has been researched and where work remains. The matrix deliberately does not count a source transcription as verified coverage.
+
 ## Intake source
 
 The initial 47-page *Spatial Analysis Algorithms: Complete Compendium* has been imported page-by-page under [source-inventory](../source-inventory/README.md). That is the preserved intake record.
