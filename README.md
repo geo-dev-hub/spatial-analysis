@@ -93,4 +93,4 @@ The [algorithm collection](algorithms/README.md) also includes the foundational 
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path and a spatial-indexing foundation, a filter-and-refine spatial-join lesson and a spatial-weights foundation are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
+**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path, and foundational lessons in spatial indexing, spatial joins and spatial weights are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
