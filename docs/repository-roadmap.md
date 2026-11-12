@@ -12,6 +12,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Clear links to algorithms, implementations, exercises, research and benchmarks.
 - [x] Contribution guidance and GitHub issue forms.
 - [ ] Check every internal link and anchor across the repository.
+- [ ] Confirm rights to publish the supplied compendium and its transcription.
+- [ ] Choose project licences for original code and documentation; agree contributor sign-off.
 - [ ] Review navigation on a phone-sized screen and with a screen reader.
 
 ## 2. The source compendium is accounted for
