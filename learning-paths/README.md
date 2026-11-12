@@ -46,7 +46,7 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 ## Another place to begin
 
-If you want to understand whether nearby places have similar values, follow the [global spatial autocorrelation path](global-spatial-autocorrelation.md). It introduces Moran's I and Geary's C, then moves to Local Moran's I for clusters and spatial outliers, with worked examples and interactive notebooks.
+If you want to understand whether nearby places have similar values, follow the [global spatial autocorrelation path](global-spatial-autocorrelation.md). It introduces Moran's I and Geary's C, then moves to Local Moran's I and Local Geary for local clusters and neighbourhood differences, with worked examples and interactive notebooks.
 
 ## The collection keeps growing
 
