@@ -27,6 +27,10 @@ The orientation test asks whether a third point lies to the left of, right of, o
 
 This is a deliberately narrow contract. Real GIS data commonly uses floating-point coordinates, and robust predicates for those inputs require more care. See Shewchuk's work on adaptive-precision geometric predicates.
 
+## Step-by-step implementation walkthrough
+
+Read [how the implementation works](implementation-walkthrough.md) for orientation tests, collinear overlap, endpoint contact and exact rational crossings.
+
 ## What this does not do
 
 This function intersects **one pair** of segments. It is not Bentley–Ottmann, does not find all intersections in a set, and does not provide a sweep-line data structure. The next level up is an all-segment problem with an output-sensitive algorithm.
