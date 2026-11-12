@@ -61,6 +61,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 - [How to contribute](CONTRIBUTING.md)
 - [How we use mathematics and visuals](docs/math-and-visuals.md)
 - [What the source compendium covers](catalog/coverage-matrix.md)
+- [Repository roadmap](docs/repository-roadmap.md)
 - [Research notes](research/README.md)
 - [Exercises](exercises/README.md)
 - [Benchmarks](benchmarks/README.md)
