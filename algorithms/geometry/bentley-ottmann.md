@@ -53,9 +53,13 @@ Before using our schematic, it is worth seeing the algorithm explained visually 
 
 These are linked to their original hosts rather than copied into this repository. We could not establish an explicit reuse licence for the diagrams from the materials reviewed, so attribution alone is not being treated as permission to redistribute them. The project schematic below is an original supplementary drawing, not a replacement for the source teaching figures.
 
-![An original schematic of a sweep line and status order](../../assets/bentley-ottmann-sweep.svg)
+![Animated illustration of line segments being processed to find their intersections](https://upload.wikimedia.org/wikipedia/commons/8/82/Segments_intersections.gif)
 
-*Figure 1. Project-created conceptual illustration. For full event-by-event visual traces, use the linked lecture slides above.*
+*Figure 1. “Segments intersections,” by Sergey539, Wikimedia Commons. Licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/); the file is also available under the GNU Free Documentation License. Reproduced unchanged. [Source and licence record](https://commons.wikimedia.org/wiki/File:Segments_intersections.gif).*
+
+![A project-created schematic of a sweep line and status order](../../assets/bentley-ottmann-sweep.svg)
+
+*Figure 2. Project-created conceptual illustration. For full event-by-event visual traces, use the linked lecture slides above.*
 
 ## 4. In one minute
 
