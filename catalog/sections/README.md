@@ -17,3 +17,6 @@ The remaining sections stay available in the [original section map](../source-se
 - [Section 10 — Classical, statistical and computational additions](10-classical-statistical-computational-additions.md): item-level extraction from source pages 21–23.
 - [Section 11 — GeoAI, GeoFMs and computer vision additions](11-geoai-computer-vision-additions.md): item-level extraction from source pages 23–24; names are explicitly unverified in the source.
 - [Section 12 — Signal processing, GNSS, regional science and resilience](12-signal-gnss-regional-science.md): item-level extraction from source pages 24–26; the source describes these as methods borrowed from adjacent fields.
+
+- [Section 13 — GeoFM workflows, urban and mobility foundation models, geo-LLMs](13-geofm-workflows-urban-mobility-llms.md): item-level extraction from source pages 26–28; model names are explicitly described as representative and memory-based.
+- [Section 14 — Databases, graphics, morphology, hazards and cartographic mathematics](14-databases-graphics-morphology-hazards.md): item-level extraction from source pages 28–30.
