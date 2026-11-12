@@ -9,6 +9,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
 
+## A connected place to start
+
+The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four lessons in a practical sequence, from point location to all-segment intersection.
+
 ## How to read a record
 
 Start with the practical question, then follow the explanation into the formal definition, method, guarantees, complexity, numerical issues and references. Where a runnable implementation exists, it is linked from the record.
