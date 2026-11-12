@@ -6,7 +6,7 @@ This map records the original 22 numbered sections in *Spatial Analysis Algorith
 |---:|---|---:|
 | 1 | Core GIS: geometry, indexing, proximity, networks, routing | 1–2 |
 | 2 | Spatial statistics: autocorrelation, point patterns, clustering, regression, econometrics | 2–4 |
-| 3 | Geostatistics, interpolation, uncertainty, spatiotemporal models | 4–5 |
+| 3 | Geostatistics, interpolation, uncertainty, spatiotemporal models | 4–6 |
 | 4 | Raster, terrain, hydrology, geomorphology | 6–7 |
 | 5 | Remote sensing, SAR, LiDAR, photogrammetry | 7–9 |
 | 6 | Optimization, location science, mobility, transport | 9–11 |
