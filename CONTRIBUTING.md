@@ -1,44 +1,51 @@
-# Contributing
+# Help make spatial analysis easier to understand
 
-Contributions are welcome from learners, practitioners, researchers and implementers.
+You don't have to be an expert to make this collection better.
 
-You do not need to be an expert to contribute. A carefully described question, correction, source, minimal example or reproducible bug report can be valuable.
+Maybe you spotted an error. Maybe you know a useful paper, found an edge case, built a small example or have a question that the explanation didn't answer. Those are all good reasons to get involved.
 
-## Ways to contribute
+## You can help by…
 
-- Suggest an algorithm or missing topic.
-- Improve an explanation or identify an unsupported claim.
-- Add authoritative references or implementation documentation.
-- Contribute code, tests, notebooks or visualisations.
-- Add edge cases, datasets or benchmark results.
-- Propose exercises, worked examples or learning paths.
-- Report terminology, licensing or attribution issues.
+- suggesting a method or topic we have missed;
+- asking a question or pointing out something that isn't clear;
+- sharing a paper, documentation page or other useful reference;
+- correcting an explanation or adding an example;
+- contributing code, tests, notebooks or visualisations;
+- trying an exercise and telling us where you got stuck;
+- sharing a dataset or benchmark result that others can reproduce;
+- translating or improving learning materials.
 
-## Before opening a pull request
+Small contributions matter. A clear issue report can be just as useful as a large code change.
 
-1. Search the catalogue and open issues to avoid creating duplicates.
-2. Preserve existing stable IDs when editing an established record.
-3. State what changed and why.
-4. Cite sources for technical claims; include version and access date where relevant.
-5. Make examples reproducible and state dependencies.
-6. Include coordinate reference systems, units, geometry assumptions and tolerances where relevant.
-7. Do not include private, restricted or improperly licensed data.
+## Before you send a change
 
-## Research quality
+1. Check whether the topic or issue is already in the collection.
+2. Tell us what you changed and why.
+3. Include a source for technical claims.
+4. If you share code, include the versions and steps needed to run it.
+5. For spatial examples, state the coordinate reference system, units and any important assumptions.
+6. Only share data, code and images that you have permission to redistribute.
 
-- Separate mathematical properties from behaviour of a particular software implementation.
-- Do not describe empirical performance as a universal complexity guarantee.
-- State input assumptions and failure conditions.
-- Distinguish exact, approximate, heuristic and stochastic methods.
-- Identify the software/library version used in an implementation.
-- Never fabricate a citation, benchmark or test result.
+If you're unsure how to contribute, open an issue and describe what you have in mind. You can start a conversation before preparing a full change.
 
-## Attribution and licensing
+## Help us keep it trustworthy
 
-By contributing, you agree that your contribution may be distributed under the repository's applicable licence. The project will use explicit licensing for code and documentation; until those licences are committed, do not assume that all content has the same licence.
+We want explanations that are approachable without being careless.
 
-Credit substantial contributions in the relevant record or release notes. Do not copy substantial third-party text, figures, code or datasets without permission or a compatible licence. Link to sources and provide original explanations.
+- Tell readers when a method is exact, approximate, heuristic or stochastic.
+- Separate what the mathematics guarantees from what a particular software package does.
+- Explain when a result depends on the data, coordinate system, precision or software version.
+- Don't present one benchmark as proof that a method is always faster.
+- Never invent a source, result or test.
 
-## Review
+## Credit and reuse
 
-A contribution may be revised for clarity, reproducibility, accuracy, accessibility or consistency. Technical disagreement should be resolved by evidence and clearly documented assumptions, not by hiding competing valid approaches.
+Substantial contributions will be credited in the relevant material or project notes. Please link to original sources rather than copying large sections of someone else's writing, figures, code or datasets.
+
+The project will publish clear licences for code and documentation. Until those are in place, please ask before assuming a contribution can be reused elsewhere.
+
+## What happens next?
+
+Contributions may be reviewed for accuracy, clarity, accessibility and reproducibility. We may suggest changes or ask a follow-up question. When people disagree about a technical detail, we'll make the assumptions visible and use evidence to work through it.
+
+Thanks for helping make spatial analysis clearer, more useful and easier to explore.
