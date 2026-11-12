@@ -85,6 +85,20 @@ The JTS OverlayNG documentation describes a graph-based overlay pipeline. In sim
 
 This is a conceptual summary of the documented OverlayNG pipeline, not a claim that every geometry engine uses exactly these internal data structures or steps.
 
+```mermaid
+flowchart TD
+    A["Two input geometries"] --> B["Check empties and envelopes"]
+    B --> C["Extract and prepare linework"]
+    C --> D["Node crossings and overlaps"]
+    D --> E["Merge coincident edges and labels"]
+    E --> F["Build and classify topology graph"]
+    F --> G["Select components for intersection"]
+    G --> H["Build polygon rings and lower-dimensional parts"]
+    H --> I["Return intersection geometry"]
+```
+
+The diagram is a teaching-level map of the stages described above. It deliberately leaves implementation-specific optimisations and data structures out.
+
 ## 6. The smaller problems inside the operation
 
 - **Envelope filtering:** quickly identify geometries whose bounding boxes cannot overlap.
