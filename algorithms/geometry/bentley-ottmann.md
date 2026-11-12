@@ -205,11 +205,11 @@ Consider three segments:
 
 - $s_1$: $(1,1)$ to $(9,7)$
 - $s_2$: $(1,7)$ to $(9,1)$
-- $s_3$: $(2,1)$ to $(8,5)$
+- $s_3$: $(2,0)$ to $(8,7)$
 
 Segments $s_1$ and $s_2$ enter at $x=1$. Segment $s_3$ enters later, at $x=2$. The status is kept in bottom-to-top order as each endpoint event is processed.
 
-The first pair meets at $(5,4)$. Immediately before $x=5$, $s_1$ is below $s_2$; immediately after, it is above. The event makes the two segments exchange positions. Segment $s_3$ then intersects $s_2$ and $s_1$ at two later, distinct x-coordinates. This gives the sweep more than one crossing event to process without introducing a three-way intersection.
+The first pair meets at $(5,4)$. Immediately before $x=5$, $s_1$ is below $s_2$; immediately after, it is above. The event makes the two segments exchange positions. Segment $s_3$ then intersects $s_2$ at $x=121/23$ and $s_1$ at $x=31/5$, two later, distinct x-coordinates. This gives the sweep more than one crossing event to process without introducing a three-way intersection.
 
 The runnable example and its tests calculate the event coordinates exactly and compare the reported segment pairs against the independent pairwise oracle.
 
