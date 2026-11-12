@@ -13,6 +13,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 - [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
 
+## Methods and analytical foundations
+
+Not every spatial method is a standalone algorithm. See the [methods collection](../methods/README.md) for foundational objects and modelling choices, beginning with the spatial weights matrix.
+
 ## Query processing
 
 - [Filter-and-refine spatial join](query-processing/filter-refine-spatial-join.md) — use a spatial index to find candidate geometry pairs, then apply the exact spatial predicate.
