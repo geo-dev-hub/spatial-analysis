@@ -9,6 +9,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
 
+## Spatial indexing
+
+- [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
+
 ## Spatial statistics
 
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
