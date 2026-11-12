@@ -13,7 +13,7 @@ A map can suggest an answer, but Moran's I gives us a way to measure the overall
 ## 2. The problem
 
 A dataset gives us:
-- a value for each of (n) spatial units, such as a district, census area or grid cell;
+- a value for each of $n$ spatial units, such as a district, census area or grid cell;
 - a definition of which units are connected or considered close to one another.
 
 The second part matters as much as the first. Sharing a boundary, falling within a distance band and being among the (k) nearest neighbours are different definitions of spatial relationship. They can produce different results.
@@ -28,11 +28,11 @@ For each area, compare its value with the values in its neighbourhood.
 - If high values tend to sit beside low values, the association is negative.
 - If the arrangement is no more patterned than the chosen null model would suggest, the statistic will be near its expected value under that null.
 
-The spatial weights matrix (W) records the neighbourhood relationships. The value (w_{ij}) describes the weight assigned from unit (i) to unit (j). A zero means that the pair does not contribute to the neighbourhood comparison.
+The spatial weights matrix $W$ records the neighbourhood relationships. The value $w_{ij}$ describes the weight assigned from unit $i$ to unit $j$. A zero means that the pair does not contribute to the neighbourhood comparison.
 
 ## 4. In one minute
 
-Let (x_i) be the observed value for unit (i), and let (z_i=x_i-ar{x}) be its deviation from the overall mean. Let (S_0) be the sum of all weights:
+Let $x_i$ be the observed value for unit $i$, and let (z_i=x_i-ar{x}) be its deviation from the overall mean. Let $S_0$ be the sum of all weights:
 
 $$
 S_0 = \sum_{i=1}^{n}\sum_{j=1}^{n} w_{ij}
@@ -100,14 +100,14 @@ W =
 \end{bmatrix}
 $$
 
-For (x=[1,2,3,4]):
+For $x=[1,2,3,4]$:
 
-- (n=4)
+- $n=4$
 - (ar{x}=2.5)
-- (z=[-1.5,-0.5,0.5,1.5])
-- (S_0=6)
-- (sum_i\sum_j w_{ij}z_i z_j=2.5)
-- (sum_i z_i^2=5)
+- $z=[-1.5,-0.5,0.5,1.5]$
+- $S_0=6$
+- $\sum_i\sum_j w_{ij}z_i z_j=2.5$
+- $\sum_i z_i^2=5$
 
 Therefore:
 
@@ -141,8 +141,8 @@ A value of (I) by itself does not tell us whether the observed pattern is unusua
 
 A common approach is a permutation test:
 
-1. Calculate (I_{obs}) from the observed values and fixed weights.
-2. Shuffle the observed values across the spatial units, keeping (W) fixed.
+1. Calculate $I_{obs}$ from the observed values and fixed weights.
+2. Shuffle the observed values across the spatial units, keeping $W$ fixed.
 3. Recalculate Moran's I for the shuffled values.
 4. Repeat this (M) times.
 5. Compare the observed statistic with the simulated distribution.
@@ -153,7 +153,7 @@ $$
 p = \frac{C+1}{M+1}
 $$
 
-Here (C) is the number of simulated statistics at least as large as the observed statistic. The added one prevents a zero pseudo-(p)-value. With (M=999), the smallest attainable value is (0.001).
+Here $C$ is the number of simulated statistics at least as large as the observed statistic. The added one prevents a zero pseudo-(p)-value. With $M=999$, the smallest attainable value is $0.001$.
 
 Choose the alternative hypothesis before running the test. A right-tailed test for clustering, a left-tailed test for dispersion and a two-tailed test answer different questions.
 
@@ -206,10 +206,10 @@ Here `rook=False` builds Queen contiguity, and `transform("r")` row-standardises
 
 ## 11. Complexity and implementation limits
 
-The teaching implementation uses a dense (n\times n) matrix.
+The teaching implementation uses a dense $n\times n$ matrix.
 
-- **Time:** (O(n^2)) for the direct double sum.
-- **Weight storage:** (O(n^2)) for the dense matrix.
+- **Time:** $O(n^2)$ for the direct double sum.
+- **Weight storage:** $O(n^2)$ for the dense matrix.
 - **Sparse implementations:** can work in proportion to the number of nonzero weights, often written (O(m)) for the statistic once the weights are stored.
 
 The dense implementation is intended for learning and small examples. It is not the right tool for a very large sparse spatial graph.
