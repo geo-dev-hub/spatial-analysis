@@ -18,16 +18,6 @@ You have two mapped areas—perhaps a school catchment and a flood zone. You wan
 
 **Polygon intersection finds the shared part.** Depending on how the boundaries meet, the answer might be an area, a line, a point or nothing at all. This is useful when comparing land parcels, service areas, habitats, hazards or any other mapped regions.
 
-## 4. In one minute
-
-For geometries $A$ and $B$, the intersection $A \cap B$ contains exactly the points that belong to both:
-
-$$
-A \cap B = \{x \mid x \in A \text{ and } x \in B\}.
-$$
-
-For two polygonal regions, the result is the shared area. Depending on how the boundaries meet, the full topological intersection may also contain line or point components. A robust overlay implementation must determine where boundaries cross or coincide, split linework at those locations (noding), classify the resulting pieces by their topological relationship to both inputs, and assemble the pieces that belong in the result.
-
 ## 2. The problem
 
 Given two planar geometries A and B, compute a geometry representing their point-set intersection.
@@ -53,6 +43,16 @@ The hard part begins when their edges cross, touch, overlap or almost line up. A
 ![A comparison of polygon overlay operations including intersection, union, difference and clipping](https://upload.wikimedia.org/wikipedia/commons/c/c2/Vector_Overlay_Operators.png)
 
 *Figure 1. “Vector Overlay Operators,” by Bplewe, Wikimedia Commons. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reproduced unchanged. The figure compares several common overlay operations; focus on the row labelled “intersect” for this lesson. [Source and licence record](https://commons.wikimedia.org/wiki/File:Vector_Overlay_Operators.png).
+
+## 4. In one minute
+
+For geometries $A$ and $B$, the intersection $A \cap B$ contains exactly the points that belong to both:
+
+$$
+A \cap B = \{x \mid x \in A \text{ and } x \in B\}.
+$$
+
+For two polygonal regions, the result is the shared area. Depending on how the boundaries meet, the full topological intersection may also contain line or point components. A robust overlay implementation must determine where boundaries cross or coincide, split linework at those locations (noding), classify the resulting pieces by their topological relationship to both inputs, and assemble the pieces that belong in the result.
 
 ## 5. Formal foundations
 
@@ -200,7 +200,7 @@ Useful invariants for valid inputs:
 - intersection with an empty geometry is empty;
 - intersection of A with A is topologically equal to A, subject to documented precision/canonicalisation semantics.
 
-## 13. Alternatives and related methods
+## 14. Alternatives and related methods
 
 - Use `intersects` when only a yes/no answer is required; constructing the full overlay is unnecessary.
 - Use envelope filtering or a spatial index to reduce candidate pairs in large workloads.
@@ -233,15 +233,10 @@ Useful invariants for valid inputs:
 4. JTS Feature Summary: https://dr-jts.github.io/jts-doc/features.html
 5. User-supplied *Spatial Analysis Algorithms: Complete Compendium*, section 1, page 1. See [source inventory](../../source-inventory/README.md).
 
-## 17. What we still need to investigate
+## 18. What we still need to investigate
 
 - Which exact polygon clipping families should receive separate records first, and what input assumptions distinguish them?
 - How should the project explain full-precision robust noding versus fixed-precision snap-rounding without implying one is universally superior?
 - Which public implementation will be the first reproducible reference: Python/Shapely, Java/JTS, C++/GEOS or PostGIS SQL?
 - Which CRS and precision examples best expose the practical difference between coordinate units, floating precision and snapping?
 
-## Change history
-
-| Version | Date | Change | Author / contributor |
-|---|---|---|---|
-| 0.1 | 2026-11-13 | Initial research draft; requires implementation and technical review | Project draft |
