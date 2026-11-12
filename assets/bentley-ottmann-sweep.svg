@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
 <title id="title">Bentley–Ottmann sweep-line concept</title>
-<desc id="desc">Three line segments, a vertical sweep line, a marked crossing event, and a status order that swaps as the sweep passes the event.</desc>
+<desc id="desc">Two crossing segments, a vertical sweep line, a marked crossing event, and a status order that swaps as the sweep passes the event.</desc>
 <rect width="1100" height="560" fill="#fbfaf7"/>
 <text x="55" y="48" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#292724">A crossing changes the order of the active segments</text>
 <text x="55" y="78" font-family="Arial,sans-serif" font-size="15" fill="#66615b">Conceptual geometry and status snapshots — not to scale</text>
@@ -12,7 +12,6 @@
   </g>
   <path d="M75 285 L545 80" stroke="#247a9b" stroke-width="5" stroke-linecap="round"/>
   <path d="M75 80 L545 285" stroke="#c36b45" stroke-width="5" stroke-linecap="round"/>
-  <path d="M125 250 L495 105" stroke="#6d8b62" stroke-width="5" stroke-linecap="round"/>
   <path d="M310 25V340" stroke="#292724" stroke-width="2.5" stroke-dasharray="8 7"/>
   <circle cx="310" cy="182.5" r="8" fill="#292724" stroke="#fff" stroke-width="3"/>
   <path d="M322 174 L385 132" stroke="#292724" stroke-width="1.5"/>
@@ -21,7 +20,7 @@
   <text x="60" y="25" font-family="Arial,sans-serif" font-size="13" fill="#777">LEFT</text>
   <text x="530" y="25" font-family="Arial,sans-serif" font-size="13" fill="#777">RIGHT</text>
   <g font-family="Arial,sans-serif" font-size="14" fill="#292724">
-    <text x="80" y="315">s₁</text><text x="80" y="65">s₂</text><text x="130" y="238">s₃</text>
+    <text x="80" y="315">s₁</text><text x="80" y="65">s₂</text>
   </g>
 </g>
 <g transform="translate(710 115)">
