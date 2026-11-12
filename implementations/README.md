@@ -21,9 +21,10 @@ Examples demonstrate a named software implementation unless they explicitly reim
 
 
 - [Global Moran's I in Python](python/global-morans-i/README.md): dependency-free dense-matrix calculation, row-standardisation helper and 13 tests. It computes the statistic only; use a spatial statistics library for inference.
+- [Global Geary's C in Python](python/geary-c/README.md): dependency-free dense-matrix calculation and 16 tests. It computes the statistic only; use a spatial statistics library for inference.
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all five examples and execute the learning notebooks on relevant pushes and pull requests, using Python 3.13. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all six examples and execute the learning notebooks on relevant pushes and pull requests, using Python 3.13. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
