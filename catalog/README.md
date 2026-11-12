@@ -61,6 +61,10 @@ Codes may be extended as the inventory is fully audited. Once assigned to a publ
 | `verification_status` | Whether the item has been independently checked |
 | `notes` | Ambiguity, duplicate candidate or scope note |
 
+## Item-level section indexes
+
+The [section index](sections/README.md) links to source entries extracted and classified section by section. [Section 1](sections/01-core-gis.md) is the first completed intake pass; it is not yet a fully verified technical catalogue.
+
 ## First audited record
 
 The first canonical draft is [Polygon intersection](../algorithms/geometry/polygon-intersection.md), sourced from section 1, page 1. Its ID is `SA-GEO-POLYGON-INTERSECTION`.
