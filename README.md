@@ -25,7 +25,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | If you're interested in… | Start here |
 |---|---|
 | The building blocks of GIS | [Core GIS and geometry](learning-paths/README.md#start-with-a-problem) |
-| How spatial algorithms work | [Algorithm collection](algorithms/) |
+| How spatial algorithms work | [Algorithm collection](algorithms/README.md) |
 | Working examples and code | [Implementations](implementations/README.md) |
 | Testing speed and accuracy | [Benchmarks](benchmarks/) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
@@ -61,6 +61,8 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 ### First example
 
 Start with [polygon intersection](algorithms/geometry/polygon-intersection.md): how do we find the part shared by two shapes? Read the explanation, then [run the Python example](implementations/python/polygon-intersection/README.md) and its tests. The example is implemented with Shapely 2.1.2; the test suite has passed in the recorded environment.
+
+A second foundational example is [point in polygon](algorithms/geometry/point-in-polygon.md): given a point and a boundary, is it inside, outside or on the edge? It includes a small ray-crossing implementation and 11 tests.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
