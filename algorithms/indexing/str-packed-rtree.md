@@ -143,7 +143,8 @@ These are structural expectations, not a performance guarantee for every dataset
 
 The project includes a small STR-packed R-tree implementation for axis-aligned rectangles. It returns candidate indices and compares its output with a brute-force scan in the tests.
 
-- [Python implementation and walkthrough](../../implementations/python/str-packed-rtree/README.md)
+- [Python implementation](../../implementations/python/str-packed-rtree/README.md)
+- [Step-by-step implementation walkthrough](../../implementations/python/str-packed-rtree/implementation-walkthrough.md)
 - [Implementation source](../../implementations/python/str-packed-rtree/str_packed_rtree.py)
 - [Tests](../../implementations/python/str-packed-rtree/test_str_packed_rtree.py)
 - [Interactive notebook](../../notebooks/str-packed-rtree-lab.ipynb)
