@@ -18,3 +18,10 @@ Examples demonstrate a named software implementation unless they explicitly reim
 - [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 11 tests.
 - [Segment intersection with Python](python/segment-intersection/README.md): exact integer orientation tests and rational intersection coordinates, with 11 tests.
 - [Bentley–Ottmann with Python](python/bentley-ottmann/README.md): paired list-status and implicit-treap implementations, exact rational event coordinates, differential tests, an intern walkthrough and a reproducible benchmark.
+
+
+## Automated checks
+
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all four examples on relevant pushes and pull requests, using Python 3.13. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+
+A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
