@@ -36,6 +36,9 @@ jobs:
           - example: global-morans-i
             directory: implementations/python/global-morans-i
             pythonpath: ""
+          - example: geary-c
+            directory: implementations/python/geary-c
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -82,3 +85,4 @@ jobs:
           python -m ipykernel install --user --name python3
           mkdir -p /tmp/notebook-output
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/global-morans-i-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/gearys-c-lab.ipynb
