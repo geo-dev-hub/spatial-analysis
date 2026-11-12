@@ -13,7 +13,7 @@ The source groups together descriptive statistics, inferential procedures, point
 | Source entry | Kind to review | Source page |
 |---|---|---:|
 | Global: [Moran's I](../../algorithms/statistics/global-morans-i.md), [Geary's C](../../algorithms/statistics/gearys-c.md), join count, Lee's L, bivariate Moran's I, Mantel and partial Mantel tests | Global statistics / tests | 2 |
-| Local: Local Moran's I (LISA), Getis-Ord Gi*, Moran scatterplot | Local statistics / diagnostic visualisation | 3 |
+| Local: [Local Moran's I (LISA)](../../algorithms/statistics/local-morans-i.md), Getis-Ord Gi*, Moran scatterplot | Local statistics / diagnostic visualisation | 3 |
 | Summary geometry: mean center, median center, standard distance, standard deviational ellipse | Descriptive spatial summaries / geometric measures | 3 |
 | Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3 |
 | Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3 |
