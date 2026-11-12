@@ -33,7 +33,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Exploring calculations interactively | [Notebooks](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
-| Finding patterns in spatial data | [Global spatial autocorrelation](learning-paths/global-spatial-autocorrelation.md) |
+| Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
 ## A growing collection, not a closed course
@@ -80,7 +80,13 @@ A third is [segment intersection](algorithms/geometry/segment-intersection.md): 
 
 Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. You can also [run the restricted Python teaching implementation](implementations/python/bentley-ottmann/README.md) and follow its [step-by-step walkthrough](implementations/python/bentley-ottmann/implementation-walkthrough.md); its nine tests compare results with the pairwise method.
 
-Start exploring spatial patterns with [Global Moran's I](algorithms/statistics/global-morans-i.md). The lesson includes a worked calculation, a tested Python implementation and an [interactive notebook](notebooks/global-morans-i-lab.ipynb) for inspecting spatial weights, the Moran scatterplot and a permutation distribution.
+## A first look at spatial patterns
+
+Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots.
+
+You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
+
+The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons and their tested Python examples.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
