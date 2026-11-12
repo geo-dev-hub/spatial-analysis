@@ -182,7 +182,7 @@ Now change CD to (4,4)–(4,7). They meet at one endpoint, not in their interior
 
 Finally, change CD to (2,2)–(6,6). The segments share a portion of the same diagonal. The result is an overlapping segment, not a single point.
 
-The [Python example](../../implementations/python/segment-intersection/README.md) lets you run these cases and inspect exact rational coordinates.
+The [Python example](../../implementations/python/segment-intersection/README.md) lets you run these cases and inspect exact rational coordinates. A [step-by-step implementation walkthrough](../../implementations/python/segment-intersection/implementation-walkthrough.md) explains the orientation, collinear and rational-intersection branches.
 
 ## 11. Implementations
 
