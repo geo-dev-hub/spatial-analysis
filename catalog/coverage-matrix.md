@@ -11,7 +11,7 @@ This matrix connects the original compendium to the work published in this repos
 
 | Section | Original source topic | Intake | Current project coverage | Next useful work |
 |---:|---|---|---|---|
-| 1 | Core GIS: geometry, indexing, proximity, networks, routing | Captured | **In progress.** Point in polygon, segment intersection, polygon intersection and Bentley–Ottmann have records; Python examples exist for all four. | Continue geometry and topology; then indexing, proximity, joins and network/routing methods. |
+| 1 | Core GIS: geometry, indexing, proximity, networks, routing | Captured | **In progress.** [Item-level source index](sections/01-core-gis.md); point in polygon, segment intersection, polygon intersection and Bentley–Ottmann have records; Python examples exist for all four. | Continue geometry and topology; then indexing, proximity, joins and network/routing methods. |
 | 2 | Spatial statistics: autocorrelation, point patterns, clustering, regression, econometrics | Captured | Not started | Build a foundation path from spatial weights and autocorrelation through point patterns and spatial regression. |
 | 3 | Geostatistics, interpolation, uncertainty, spatiotemporal models | Captured | Not started | Begin with distance-based interpolation, variograms and ordinary kriging; make uncertainty visible in examples. |
 | 4 | Raster, terrain, hydrology, geomorphology | Captured | Not started | Establish raster data models, neighbourhood operations, terrain derivatives and flow routing. |
