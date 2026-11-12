@@ -2,8 +2,8 @@
 
 - **Stable ID:** `SA-GEO-BENTLEY-OTTMANN`
 - **Domain:** Computational geometry / vector topology
-- **Status:** researched algorithm record; restricted Python teaching implementation published
-- **Version:** 0.1
+- **Status:** researched algorithm record; list-reference and treap-status Python teaching implementations published
+- **Version:** 0.2
 - **Source inventory location:** Compendium, section 1, page 1; listed under segment intersection
 - **Related records:** [Segment intersection](segment-intersection.md), [Point in polygon](point-in-polygon.md), planar arrangements, robust predicates
 - **Prerequisites:** line segments, pairwise segment intersection, sorting, priority queues, balanced search trees
@@ -181,7 +181,7 @@ $$
 
 When $k$ is small, the sweep can avoid most pair tests. When almost every pair intersects, $k=\Theta(n^2)$ and the output itself is quadratic.
 
-**Implementation warning:** a Python teaching version using a plain list for status insertion/removal does not achieve the classical bound. Its measured and theoretical costs must be stated separately from the abstract algorithm.
+**Implementation warning:** the repository keeps two implementations so their costs are not confused. The list-status version has linear-time status operations and does not achieve the classical bound. The implicit randomized treap version has expected logarithmic status operations, giving an expected `O((n+k) log n)` bound under the restricted general-position contract. A randomized treap does not provide the deterministic worst-case guarantee of an AVL or red-black tree.
 
 ## 9. Assumptions and degeneracies
 
@@ -234,11 +234,11 @@ A reliable implementation should be built in stages:
 6. **Test against the oracle:** generate small segment sets, compare the sweep's output with all-pairs output, and retain every discovered failure as a regression test.
 7. **Benchmark separately:** measure sparse and dense intersection cases. Report the actual data structure and its cost.
 
-The restricted implementation is available at [Bentley–Ottmann with Python](../../implementations/python/bentley-ottmann/README.md), with an [intern-ready walkthrough](../../implementations/python/bentley-ottmann/implementation-walkthrough.md). It uses a heap for events and a Python list for status so the event logic stays visible. It is a teaching implementation, not a production solver, and it does not achieve the abstract balanced-tree time bound.
+The paired implementations are available at [Bentley–Ottmann with Python](../../implementations/python/bentley-ottmann/README.md), with an [intern-ready walkthrough](../../implementations/python/bentley-ottmann/implementation-walkthrough.md). The list version keeps the event logic easy to inspect. The treap version demonstrates an implicit sequence tree, stable node identities and explicit adjacent swaps. A [separate design note](../../implementations/python/bentley-ottmann/status-structure.md) explains why this avoids a mutable geometric comparator. Both remain teaching implementations, not production solvers.
 
 ## 12. Tests: current coverage and what comes next
 
-The current Python prototype has nine tests, including exact-coordinate assertions, contract checks, changing-status cases and seeded differential tests against the pairwise oracle. The next test expansion should cover:
+The current Python implementation suite has 20 tests across the list sweep, treap sweep and treap data structure. They include exact-coordinate assertions, contract checks, changing-status cases, randomized sequence operations, parent/rank/size invariants and seeded differential tests against the pairwise oracle. The next test expansion should cover:
 
 - no intersections;
 - one proper crossing;
@@ -297,4 +297,4 @@ The algorithm works in a planar coordinate system. Applying it directly to longi
 
 | Version | Date | Change | Author / contributor |
 |---|---|---|---|
-| 0.1 | 2026-11-13 | Initial researched algorithm record with sweep-line diagram and rendered equations | Project draft |
+| 0.2 | 2026-11-13 | Added paired list and implicit-treap implementations, data-structure explanation and benchmark | Project draft |\n| 0.1 | 2026-11-13 | Initial researched algorithm record with sweep-line diagram and rendered equations | Project draft |
