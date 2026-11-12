@@ -58,13 +58,15 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 - [The writing and teaching principles](docs/voice-and-writing.md)
 - [The learning and membership experience](docs/publishing-model.md)
 
-### First example
+### First examples
 
 Start with [polygon intersection](algorithms/geometry/polygon-intersection.md): how do we find the part shared by two shapes? Read the explanation, then [run the Python example](implementations/python/polygon-intersection/README.md) and its tests. The example is implemented with Shapely 2.1.2; the test suite has passed in the recorded environment.
 
 A second foundational example is [point in polygon](algorithms/geometry/point-in-polygon.md): given a point and a boundary, is it inside, outside or on the edge? It includes a small ray-crossing implementation and 11 tests.
 
-A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests. It also introduces the larger Bentley–Ottmann all-segment problem.
+A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests.
+
+Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. A runnable implementation is the next research and engineering step.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
