@@ -46,7 +46,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] SVG for precise geometric illustrations.
 - [x] Source-figure attribution and licence policy.
 - [x] Two verified CC BY-SA 4.0 diagrams linked into relevant lessons.
-- [ ] Add notebooks or interactive demonstrations where changing inputs materially improves understanding.
+- [x] Add an interactive notebook for Global Moran's I; add others where changing inputs materially improves understanding.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
 - [ ] Ensure every figure has useful alt text and a caption.
