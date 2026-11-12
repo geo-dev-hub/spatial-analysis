@@ -1,4 +1,4 @@
-"""Reproducible microbenchmark: list-status sweep versus all-pairs oracle.
+"""Reproducible microbenchmark: list/treap sweeps versus all-pairs oracle.
 
 Run from this directory:
     PYTHONPATH=../segment-intersection python benchmark.py
@@ -12,8 +12,10 @@ from __future__ import annotations
 import random
 import time
 
-import bentley_ottmann as sweep
+import bentley_ottmann as list_impl
+import bentley_ottmann_treap as treap_impl
 from bentley_ottmann import Segment, bentley_ottmann
+from bentley_ottmann_treap import bentley_ottmann_treap
 from segment_intersection import segment_intersection
 
 
@@ -21,14 +23,11 @@ def make_fixture(n: int, seed: int = 20261113) -> list[Segment]:
     rng = random.Random(seed + n)
     end_order = list(range(n))
     rng.shuffle(end_order)
-    # Parallel horizontal segments never intersect. Start and end x values are
-    # all distinct, and endpoint heights are distinct.
     return [Segment(i, (i, 10 * i), (2 * n + end_order[i], 10 * i)) for i in range(n)]
 
 
 def all_pairs(segments: list[Segment]) -> tuple[int, int]:
-    checks = 0
-    hits = 0
+    checks = hits = 0
     for i, first in enumerate(segments):
         for second in segments[i + 1 :]:
             checks += 1
@@ -44,28 +43,40 @@ def timed(fn):
 
 
 def main() -> None:
-    print("n,sweep_seconds,sweep_pair_checks,brute_seconds,brute_pair_checks,hits")
+    print("n,list_seconds,list_pair_checks,treap_seconds,treap_pair_checks,brute_seconds,brute_pair_checks,hits")
     for n in (50, 100, 200, 400, 800):
         segments = make_fixture(n)
-        original = sweep.segment_intersection
-        sweep_checks = 0
 
-        def counted(a, b, c, d):
-            nonlocal sweep_checks
-            sweep_checks += 1
-            return original(a, b, c, d)
-
-        sweep.segment_intersection = counted
+        original_pair = list_impl.segment_intersection
+        list_checks = 0
+        def count_list(a, b, c, d):
+            nonlocal list_checks
+            list_checks += 1
+            return original_pair(a, b, c, d)
+        list_impl.segment_intersection = count_list
         try:
-            sweep_seconds, sweep_result = timed(lambda: bentley_ottmann(segments))
+            list_seconds, list_result = timed(lambda: bentley_ottmann(segments))
         finally:
-            sweep.segment_intersection = original
+            list_impl.segment_intersection = original_pair
+
+        original_intersection = treap_impl._intersection
+        treap_checks = 0
+        def count_treap(a, b):
+            nonlocal treap_checks
+            treap_checks += 1
+            return original_intersection(a, b)
+        treap_impl._intersection = count_treap
+        try:
+            treap_seconds, treap_result = timed(lambda: bentley_ottmann_treap(segments))
+        finally:
+            treap_impl._intersection = original_intersection
+
         brute_seconds, (brute_checks, brute_hits) = timed(lambda: all_pairs(segments))
-        if sweep_result or brute_hits:
-            raise AssertionError("Parallel benchmark fixture unexpectedly intersected")
-        if sweep_checks > brute_checks:
-            raise AssertionError("Sweep performed more pair checks than brute force")
-        print(f"{n},{sweep_seconds:.6f},{sweep_checks},{brute_seconds:.6f},{brute_checks},{brute_hits}")
+        if list_result != treap_result or list_result or brute_hits:
+            raise AssertionError("Benchmark implementations disagree or fixture unexpectedly intersected")
+        if list_checks > brute_checks or treap_checks > brute_checks:
+            raise AssertionError("A sweep performed more pair checks than brute force")
+        print(f"{n},{list_seconds:.6f},{list_checks},{treap_seconds:.6f},{treap_checks},{brute_seconds:.6f},{brute_checks},{brute_hits}")
 
 
 if __name__ == "__main__":
