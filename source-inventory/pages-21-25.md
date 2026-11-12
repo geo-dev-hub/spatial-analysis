@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 21 / 47>
+`<PARSED TEXT FOR PAGE: 21 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -57,7 +57,7 @@ Spatial cross-validation and sampling
 
                                                                                        Page 21 of 47
 
-<PARSED TEXT FOR PAGE: 22 / 47>
+`<PARSED TEXT FOR PAGE: 22 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -112,7 +112,7 @@ Population and social data
 
                                                                                             Page 22 of 47
 
-<PARSED TEXT FOR PAGE: 23 / 47>
+`<PARSED TEXT FOR PAGE: 23 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -167,7 +167,7 @@ Neural combinatorial optimization and RL for spatial problems
 
                                                                                       Page 23 of 47
 
-<PARSED TEXT FOR PAGE: 24 / 47>
+`<PARSED TEXT FOR PAGE: 24 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -222,7 +222,7 @@ Smoothing and semiparametric spatial models
 
                                                                                            Page 24 of 47
 
-<PARSED TEXT FOR PAGE: 25 / 47>
+`<PARSED TEXT FOR PAGE: 25 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
