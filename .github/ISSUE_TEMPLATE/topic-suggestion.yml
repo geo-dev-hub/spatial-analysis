@@ -1,7 +1,6 @@
 name: Suggest a topic
 description: Suggest a method, question, application or learning resource for the collection.
 title: "[Topic] "
-labels: ["topic-suggestion", "triage"]
 body:
   - type: markdown
     attributes:
