@@ -17,7 +17,7 @@ python -m pip install jupyterlab
 jupyter lab
 ```
 
-Open the notebook from JupyterLab and run the cells in order. You can also use [Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb).
+Open the notebook from JupyterLab and run the cells in order. You can also open [Moran's I in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb) or [Geary's C in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb).
 
 The repository workflow also executes both notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
 
