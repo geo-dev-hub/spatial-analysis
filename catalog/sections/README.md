@@ -20,3 +20,6 @@ The remaining sections stay available in the [original section map](../source-se
 
 - [Section 13 — GeoFM workflows, urban and mobility foundation models, geo-LLMs](13-geofm-workflows-urban-mobility-llms.md): item-level extraction from source pages 26–28; model names are explicitly described as representative and memory-based.
 - [Section 14 — Databases, graphics, morphology, hazards and cartographic mathematics](14-databases-graphics-morphology-hazards.md): item-level extraction from source pages 28–30.
+
+- [Section 15 — Vision backbones, registration, vector extraction and hydrology ML](15-vision-registration-vector-extraction.md): item-level extraction from source pages 31–33; source warns that names are representative and from memory.
+- [Section 16 — Flows, regions, deformation, marine, biodiversity and humanitarian methods](16-flows-regions-deformation-marine.md): item-level extraction from source pages 33–34.
