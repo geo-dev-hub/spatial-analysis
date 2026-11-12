@@ -1,7 +1,6 @@
 name: Suggest a diagram or visual source
 description: Share a figure, map, animation or visual resource that could improve a lesson.
 title: "[Visual source] "
-labels: ["visual-source", "research"]
 body:
   - type: markdown
     attributes:
