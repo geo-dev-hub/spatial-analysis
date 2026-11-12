@@ -32,7 +32,7 @@ where:
 - (w_{ij}) is the spatial weight from location (i) to location (j);
 - the weighted sum is the spatial lag of the standardised values.
 
-This is the standardised form used by PySAL's `Moran_Local`, where the input values are transformed to have zero mean and unit standard deviation. Other presentations of local Moran statistics may use a different scaling convention. Always identify the convention and implementation used.
+This is the standardised form used by PySAL's `Moran_Local`: the input is transformed to have zero mean and unit standard deviation, and the factor $(n-1)/\\sum_k z_k^2$ is applied. Since the squared standardised values sum to $n$, this factor is $(n-1)/n$. Other presentations of local Moran statistics may use a different scaling convention. Always identify the convention and implementation used.
 
 ## Four local patterns
 
@@ -45,10 +45,10 @@ quadrantChart
     title Local Moran scatterplot: four neighbourhood patterns
     x-axis "Below overall mean" --> "Above overall mean"
     y-axis "Neighbours below mean" --> "Neighbours above mean"
-    quadrant-1 "High–Low: outlier"
-    quadrant-2 "High–High: cluster"
+    quadrant-1 "High–High: cluster"
+    quadrant-2 "Low–High: outlier"
     quadrant-3 "Low–Low: cluster"
-    quadrant-4 "Low–High: outlier"
+    quadrant-4 "High–Low: outlier"
     "High–High": [0.8, 0.8]
     "Low–High": [0.2, 0.8]
     "Low–Low": [0.2, 0.2]
