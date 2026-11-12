@@ -173,7 +173,7 @@ This simple example avoids degeneracies. It does not test coincident boundaries,
 | PostGIS | `ST_Intersection` | SQL interface backed by GEOS for geometry overlay; verify version-specific behaviour before documenting |
 | Shapely | `intersection` | Python interface to GEOS; record Shapely and GEOS versions in reproducible examples |
 
-The first runnable reference is [Python with Shapely 2.1.2](../../implementations/python/polygon-intersection/README.md). It demonstrates the API and tests the expected geometry relationships; it does not reimplement the internal GEOS overlay algorithm. No benchmark is asserted here.
+The first runnable reference is [Python with Shapely 2.1.2](../../implementations/python/polygon-intersection/README.md), with a [step-by-step implementation walkthrough](../../implementations/python/polygon-intersection/implementation-walkthrough.md). It demonstrates the API and tests the expected geometry relationships; it does not reimplement the internal GEOS overlay algorithm. No benchmark is asserted here.
 
 ## 13. How we check the answer
 
