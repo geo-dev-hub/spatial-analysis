@@ -39,6 +39,12 @@ This is the **even–odd rule**, also called ray crossing or the crossing-number
 
 A second important approach uses the **winding number**: how many times, and in which direction, the polygon boundary winds around the test point. Under the nonzero winding rule, a nonzero winding number indicates the point is inside. The even–odd and winding-number approaches are closely related, but they can define the interior of self-intersecting rings differently.
 
+### See the crossing idea
+
+![A point-in-polygon illustration showing a query point and polygon boundary](https://upload.wikimedia.org/wikipedia/commons/2/2d/Point_in_polygon_problem.svg)
+
+*Figure 1. “Point in polygon problem,” by Adam Majewski, Wikimedia Commons. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The figure is reproduced unchanged; the licence requires attribution and share-alike for adaptations. [Source and licence record](https://commons.wikimedia.org/wiki/File:Point_in_polygon_problem.svg).*
+
 ## 4. Formal foundations
 
 Let the polygon boundary be a closed sequence of vertices (v_0, v_1, \ldots, v_{n-1}), with the final edge connecting (v_{n-1}) to (v_0). A point-location algorithm examines the relationship between (p) and these boundary edges.
@@ -76,10 +82,10 @@ For self-intersecting rings, “the interior” is not uniquely determined until
 
 ## 7. Complexity
 
-The teaching implementation checks every edge once. For a ring with (n) edges:
+The teaching implementation checks every edge once. For a ring with $n$ edges:
 
-- **Time:** (O(n))
-- **Additional space:** (O(n)) in this implementation because it materialises the vertex sequence; the edge scan itself requires (O(1)) additional working space.
+- **Time:** $O(n)$.
+- **Additional space:** $O(n)$ in this implementation because it materialises the vertex sequence; the edge scan itself requires $O(1)$ additional working space.
 
 If many points are tested against the same polygon, preprocessing or spatial indexing can reduce the work per query. That is a different algorithmic setting and should be benchmarked separately.
 
