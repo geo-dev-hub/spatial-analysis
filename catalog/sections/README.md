@@ -23,3 +23,6 @@ The remaining sections stay available in the [original section map](../source-se
 
 - [Section 15 — Vision backbones, registration, vector extraction and hydrology ML](15-vision-registration-vector-extraction.md): item-level extraction from source pages 31–33; source warns that names are representative and from memory.
 - [Section 16 — Flows, regions, deformation, marine, biodiversity and humanitarian methods](16-flows-regions-deformation-marine.md): item-level extraction from source pages 33–34.
+
+- [Section 17 — Geometry, scalable computation, design and siting](17-geometry-scalability-design-siting.md): item-level extraction from source pages 35–37.
+- [Section 18 — Moving objects, routing, transit, water and ice, emissions](18-moving-objects-routing-transit-water.md): item-level extraction from source pages 37–39; source warns that many names are from memory.
