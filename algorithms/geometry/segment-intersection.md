@@ -43,6 +43,12 @@ For two segments AB and CD, compare the orientations of C and D relative to AB, 
 
 If each segment's endpoints lie on opposite sides of the other segment's supporting line, the segments cross properly. If one of the orientation values is zero, we must check whether that endpoint actually lies within the other segment. If all four points are collinear, the problem becomes a one-dimensional interval overlap test.
 
+### See the orientation test drawn out
+
+The [Computational Geometry lecture notes from Universitat Politècnica de Catalunya](https://dccg.upc.edu/wp-content/uploads/2021/09/GeoC-Orientation-tests-R.pdf) show the left/right orientation test and how opposite-side tests identify a segment crossing. See the pages headed **Basic Tool: Orientation Tests**.
+
+We link to the original slides rather than embedding their figures because a reuse licence was not established during this review.
+
 The orientation test is the key building block. The boundary and collinear cases are not optional extras: without them, a segment-intersection routine will fail on ordinary map data.
 
 ```mermaid
