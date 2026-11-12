@@ -6,14 +6,14 @@
 - **Review state:** source entries extracted into this index; not every entry independently verified
 - **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Local Geary](../../algorithms/statistics/local-geary.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
 
-The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lesson is a supplementary companion added to explain the source-listed local Gi* method; it is not a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
+The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Local Geary](../../algorithms/statistics/local-geary.md) and [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lessons are supplementary companions added during research; neither is a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
 
 ## Autocorrelation and local statistics
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
 | Global: [Moran's I](../../algorithms/statistics/global-morans-i.md), [Geary's C](../../algorithms/statistics/gearys-c.md), join count, Lee's L, bivariate Moran's I, Mantel and partial Mantel tests | Global statistics / tests | 2 |
-| Local: [Local Moran's I (LISA)](../../algorithms/statistics/local-morans-i.md), [Local Geary](../../algorithms/statistics/local-geary.md), [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md), Moran scatterplot | Local statistics / diagnostic visualisation | 3 |
+| Local: [Local Moran's I (LISA)](../../algorithms/statistics/local-morans-i.md), [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md), Moran scatterplot | Local statistics / diagnostic visualisation | 3 |
 | Summary geometry: mean center, median center, standard distance, standard deviational ellipse | Descriptive spatial summaries / geometric measures | 3 |
 | Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3 |
 | Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3 |
