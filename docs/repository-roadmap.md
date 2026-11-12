@@ -21,9 +21,10 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Preserve the 47-page source transcription and original page boundaries.
 - [x] Preserve the original 22 section headings and editorial cautions.
 - [x] Publish a coverage matrix that distinguishes captured material from researched material.
-- [ ] Extract and classify every source entry without losing its original wording.
+- [x] Extract and classify the source entries across all 22 sections; preserve original groupings and labels.
 - [ ] Verify names, variants and claims against authoritative sources.
-- [ ] Record source-page provenance and relationships for each catalogue entry.
+- [x] Record source-page provenance in the item-level section indexes.
+- [ ] Map duplicates, variants and cross-domain relationships across the full catalogue.
 - [ ] Keep algorithms distinct from operations, models, data structures, systems, metrics, standards and workflows.
 
 ## 3. The first learning paths work end to end
