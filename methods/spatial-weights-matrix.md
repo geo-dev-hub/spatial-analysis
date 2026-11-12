@@ -155,7 +155,7 @@ print(queen.summary())
 print("Islands:", queen.isolates)
 ```
 
-In the current Graph API, `rook=True` means shared-edge contiguity; `rook=False` means Queen contiguity. The Graph API is the newer libpysal interface. The migration guide explains how it relates to the older `W` weights class.
+In the current Graph API, `rook=True` means shared-edge contiguity; `rook=False` means Queen contiguity. The Graph API is the newer libpysal interface and is currently documented as experimental, so its API may change. Pin and record the libpysal version used in a reproducible project. The migration guide explains how it relates to the older `W` weights class.
 
 The contiguity builder assumes polygon coverage: neighbouring polygons should share boundary segments or points. Gaps, overlaps and mismatched digitising can affect the result. The `strict` option changes how contiguity is detected; consult the API before using it on imperfect geometries.
 
