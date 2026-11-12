@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 11 / 47>
+`<PARSED TEXT FOR PAGE: 11 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -52,7 +52,7 @@ Positioning, navigation, robotics
 
                                                                                        Page 11 of 47
 
-<PARSED TEXT FOR PAGE: 12 / 47>
+`<PARSED TEXT FOR PAGE: 12 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -106,7 +106,7 @@ Agriculture and forestry
 
                                                                                      Page 12 of 47
 
-<PARSED TEXT FOR PAGE: 13 / 47>
+`<PARSED TEXT FOR PAGE: 13 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -160,7 +160,7 @@ Urban and socioeconomic
 
                                                                                        Page 13 of 47
 
-<PARSED TEXT FOR PAGE: 14 / 47>
+`<PARSED TEXT FOR PAGE: 14 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -213,7 +213,7 @@ Cross-disciplinary spatial methods
 
                                                                                        Page 14 of 47
 
-<PARSED TEXT FOR PAGE: 15 / 47>
+`<PARSED TEXT FOR PAGE: 15 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
