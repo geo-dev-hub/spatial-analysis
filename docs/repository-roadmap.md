@@ -14,6 +14,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add an automated check for relative links in Markdown files and notebook Markdown cells.
 - [ ] Check heading anchors and rendered navigation across the repository.
 - [ ] Confirm rights to publish the supplied compendium and its transcription.
+- [x] Prepare a licensing decision proposal for original code, documentation, third-party material and contributions.
 - [ ] Choose project licences for original code and documentation; agree contributor sign-off.
 - [ ] Review navigation on a phone-sized screen and with a screen reader.
 
@@ -32,15 +33,15 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 
 - [x] Geometry starter set: point in polygon, segment intersection, polygon intersection and Bentley–Ottmann.
 - [x] Runnable Python examples and tests for the four topics.
-- [x] Step-by-step Bentley–Ottmann implementation walkthrough.
+- [x] Step-by-step implementation walkthroughs for all eight Python examples.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
-- [x] Add Global Moran's I, Global Geary's C, Local Moran's I, Local Geary and Getis-Ord G/Gi* lessons, PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
+- [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
-- [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity, joins and networks.
+- [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
@@ -51,7 +52,9 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] SVG for precise geometric illustrations.
 - [x] Source-figure attribution and licence policy.
 - [x] Two verified CC BY-SA 4.0 diagrams linked into relevant lessons.
-- [x] Add six interactive notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
+- [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
+- [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
+- [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
 - [ ] Ensure every figure has useful alt text and a caption.
@@ -82,6 +85,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods, plus two spatial-indexing and query-processing lessons and a spatial-weights foundation. Nine interactive notebooks and eight Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Nine interactive notebooks and eight Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
