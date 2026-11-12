@@ -23,7 +23,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 ## A connected place to start
 
-The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The [global spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) starts with Moran's I and Geary's C, two complementary ways to measure spatial association.
+The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The [spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) connects global and local Moran, Geary and Getis-Ord methods, with six interactive notebooks.
 
 ## How to read a record
 
