@@ -60,4 +60,4 @@ The tests compare the index against a brute-force bounding-box scan across 300 g
 
 For a production-ready interface, see [Shapely's STRtree documentation](https://shapely.readthedocs.io/en/stable/strtree.html). Shapely's STRtree is query-only, returns indices in input order, supports vectorised queries and can apply exact predicates during the query.
 
-Continue with the [STR-packed R-tree lesson](../../../algorithms/indexing/str-packed-rtree.md) and the [interactive notebook](../../../notebooks/str-packed-rtree-lab.ipynb).
+Continue with the [STR-packed R-tree lesson](../../../algorithms/indexing/str-packed-rtree.md), the [step-by-step implementation walkthrough](implementation-walkthrough.md) and the [interactive notebook](../../../notebooks/str-packed-rtree-lab.ipynb).
