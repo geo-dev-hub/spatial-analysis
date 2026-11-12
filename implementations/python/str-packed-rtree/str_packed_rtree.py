@@ -129,7 +129,8 @@ class STRPackedRTree:
             else:
                 for child in node.children:
                     if _intersects(child.bounds, query_bounds):
-                        stack.append(child)  # type: ignore[arg-type]
+                        if isinstance(child, _Node):
+                        stack.append(child)
 
         return sorted(matches)
 
