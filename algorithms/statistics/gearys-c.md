@@ -193,7 +193,8 @@ Here `rook=False` constructs Queen contiguity and `transform("r")` row-standardi
 ## Python implementation and notebook
 
 - [Interactive Geary's C notebook](../../notebooks/gearys-c-lab.ipynb)
-- [Python implementation and walkthrough](../../implementations/python/geary-c/README.md)
+- [Python implementation](../../implementations/python/geary-c/README.md)
+- [Step-by-step implementation walkthrough](../../implementations/python/geary-c/implementation-walkthrough.md)
 - [Implementation source](../../implementations/python/geary-c/geary_c.py)
 - [Tests](../../implementations/python/geary-c/test_geary_c.py)
 
