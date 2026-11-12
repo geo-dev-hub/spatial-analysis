@@ -4,7 +4,9 @@ A reader should not have to imagine every geometric relationship or decode a for
 
 ## Mathematical notation
 
-GitHub renders mathematical expressions in Markdown. Use:
+GitHub renders LaTeX-formatted mathematics in Markdown using MathJax. Inline expressions use single dollar delimiters, and display equations use a line with two dollar delimiters. See the [official GitHub mathematical expressions guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions).
+
+Use:
 
 - inline mathematics for short expressions: `$A \cap B$`;
 - display mathematics for equations that deserve their own line: `$$ ... $$`.
