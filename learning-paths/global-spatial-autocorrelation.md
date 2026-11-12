@@ -1,4 +1,4 @@
-# Global spatial autocorrelation: do nearby places have similar values?
+# Spatial autocorrelation and hotspots: do nearby places have similar values?
 
 **Status:** First complete version. Six core methods are available with worked examples and interactive notebooks; the supplementary Global Getis-Ord G lesson explains the global-to-local hotspot family.
 
