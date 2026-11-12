@@ -134,7 +134,17 @@ This Python version uses a list for status. List insertion, deletion and lookup 
 
 It is also not a production GIS topology engine. Its restricted contract is stated in the implementation README.
 
-## 8. Suggested intern exercises
+## 8. First performance experiment
+
+Run:
+
+    PYTHONPATH=../segment-intersection python benchmark.py
+
+The script compares the sweep against the all-pairs oracle on deterministic, parallel, non-intersecting segments. It counts candidate-pair checks as well as elapsed time. The [benchmark report](benchmark-results.md) records the environment, measurements and limitations.
+
+The important observation is that fewer geometric pair checks do not automatically mean lower runtime. The list status still has linear-time operations. Read the report, then explain why the sweep can perform fewer pair checks and still take as long as—or longer than—the all-pairs method.
+
+## 9. Suggested intern exercises
 
 1. Add a print-only trace that displays each event and the status after processing it.
 2. Draw the same trace by hand and compare it with the program output.
