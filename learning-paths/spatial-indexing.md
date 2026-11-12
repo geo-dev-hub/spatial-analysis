@@ -52,7 +52,6 @@ The next additions to this path will cover:
 - dynamic R-tree variants and update operations;
 - quadtrees, k-d trees and other index structures;
 - nearest-neighbour and range queries;
-- filter-and-refine spatial joins;
 - space-filling curves and grid-based indexing.
 
 Each index makes different trade-offs. We will compare them only after the query workload, update pattern and data shape are clear.
