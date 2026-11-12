@@ -1,5 +1,9 @@
 name: Python examples
 
+concurrency:
+  group: spatial-analysis-ci-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     paths:
