@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 16 / 47>
+`<PARSED TEXT FOR PAGE: 16 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -55,7 +55,7 @@ Location encoders and representation learning
 
                                                                                       Page 16 of 47
 
-<PARSED TEXT FOR PAGE: 17 / 47>
+`<PARSED TEXT FOR PAGE: 17 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -109,7 +109,7 @@ Losses, augmentation, evaluation
 
                                                                                            Page 17 of 47
 
-<PARSED TEXT FOR PAGE: 18 / 47>
+`<PARSED TEXT FOR PAGE: 18 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -162,7 +162,7 @@ Georeferencing and transformation
 
                                                                                        Page 18 of 47
 
-<PARSED TEXT FOR PAGE: 19 / 47>
+`<PARSED TEXT FOR PAGE: 19 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -216,7 +216,7 @@ Data infrastructure and computing
 
                                                                                         Page 19 of 47
 
-<PARSED TEXT FOR PAGE: 20 / 47>
+`<PARSED TEXT FOR PAGE: 20 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
