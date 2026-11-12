@@ -34,9 +34,10 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Step-by-step Bentley–Ottmann implementation walkthrough.
 - [ ] Complete and review the first geometry learning path as a coherent sequence.
 - [ ] Add worked examples and exercises that connect the four topics.
-- [x] Add the first researched spatial-statistics lesson: Global Moran's I, with a tested dense reference implementation.
+- [x] Add Global Moran's I and Geary's C lessons, tested dense reference implementations and interactive notebooks.
+- [x] Add a learning path comparing the two global autocorrelation measures.
 - [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
-- [ ] Extend spatial statistics with Geary's C, local indicators and spatial regression.
+- [ ] Extend spatial statistics with local indicators, Getis-Ord statistics, multiple-testing correction and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
 ## 4. Every lesson uses the right teaching tools
@@ -56,7 +57,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Versioned dependencies for current Python examples.
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all five Python examples and execute the learning notebook.
+- [x] GitHub Actions workflow configured to test all six Python examples and execute both spatial-statistics notebooks.
 - [ ] Confirm successful Actions runs and repair any failures.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
