@@ -67,4 +67,4 @@ For points on polygons:
 - The example performs a planar 2D operation. CRS, units and geometry validity still matter.
 - For large datasets, benchmark the actual workload and compare the index selectivity with a brute-force baseline.
 
-Continue with the [filter-and-refine spatial join lesson](../../../algorithms/query-processing/filter-refine-spatial-join.md), the [STR-packed R-tree lesson](../../../algorithms/indexing/str-packed-rtree.md) and the [interactive notebook](../../../notebooks/filter-refine-spatial-join-lab.ipynb).
+Continue with the [filter-and-refine spatial join lesson](../../../algorithms/query-processing/filter-refine-spatial-join.md), the [step-by-step implementation walkthrough](implementation-walkthrough.md), the [STR-packed R-tree lesson](../../../algorithms/indexing/str-packed-rtree.md) and the [interactive notebook](../../../notebooks/filter-refine-spatial-join-lab.ipynb).
