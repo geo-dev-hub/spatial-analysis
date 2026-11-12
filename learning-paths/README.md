@@ -46,7 +46,7 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 ## Another place to begin
 
-If you want to understand why similar values appear near one another, start with [Global Moran's I](../algorithms/statistics/global-morans-i.md) and its [interactive notebook](../notebooks/global-morans-i-lab.ipynb). It is the first spatial-statistics lesson; related measures and local methods will be added as they are researched.
+If you want to understand whether nearby places have similar values, follow the [global spatial autocorrelation path](global-spatial-autocorrelation.md). It introduces Moran's I and Geary's C with worked examples and interactive notebooks.
 
 ## The collection keeps growing
 
