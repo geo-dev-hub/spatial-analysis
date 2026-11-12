@@ -32,7 +32,7 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | Not yet catalogued as individual records |
+| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | [STR-packed R-tree](../../algorithms/indexing/str-packed-rtree.md) covers the static STR bulk-loading variant; other structures remain unverified |
 | Space-filling curves and grids: Z-order (Morton), Hilbert, Geohash, H3, S2, quadkeys, HEALPix | Spatial encodings / grid systems / indexing schemes | 1 | Not yet catalogued as individual records |
 | Queries: range, kNN, reverse kNN, closest pair, spatial skyline, top-k spatial keyword, geofencing | Query types / spatial operations | 1 | Not yet catalogued |
 | Joins: filter-and-refine, plane-sweep, PBSM, TOUCH, partition-based, kNN joins | Join algorithms / query-processing strategies | 2 | Not yet catalogued as individual records |
