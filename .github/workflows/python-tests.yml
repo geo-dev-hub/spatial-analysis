@@ -41,6 +41,9 @@ jobs:
           - example: geary-c
             directory: implementations/python/geary-c
             pythonpath: ""
+          - example: str-packed-rtree
+            directory: implementations/python/str-packed-rtree
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -107,3 +110,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/local-geary-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/getis-ord-gi-star-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/global-getis-ord-g-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/str-packed-rtree-lab.ipynb
