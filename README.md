@@ -33,6 +33,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Exploring calculations interactively | [Notebooks](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
+| Finding patterns in spatial data | [Global spatial autocorrelation](learning-paths/global-spatial-autocorrelation.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
 ## A growing collection, not a closed course
