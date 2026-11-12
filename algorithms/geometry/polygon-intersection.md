@@ -34,9 +34,11 @@ The output is not necessarily one polygon:
 
 Do not confuse the overlay operation `intersection(A, B)` with the Boolean predicate `intersects(A, B)`. The predicate answers whether the intersection is non-empty; the overlay constructs the intersection geometry.
 
-## 3. Intuition
+## 3. The simple idea
 
-Imagine two transparent filled shapes on a map. The intersection keeps only the locations covered by both. The difficult part is not the set definition; it is computing a valid, unambiguous boundary when edges cross, touch, overlap, nearly coincide or collapse under finite precision.
+Picture two transparent filled shapes laid over one another. Keep the places covered by both; remove everything covered by only one. That is the whole idea.
+
+The hard part begins when their edges cross, touch, overlap or almost line up. A computer has to decide exactly where the shared region begins and ends, even though coordinates are stored with finite numerical precision.
 
 ## 4. Formal foundations
 
@@ -62,7 +64,7 @@ A \cap (B \cup C) = (A \cap B) \cup (A \cap C).
 
 These are mathematical set identities. A software geometry library may additionally impose representational rules for geometry collections, dimensional collapses, ring validity and precision. Those implementation semantics must be documented separately.
 
-## 5. General overlay method
+## 5. How a geometry engine works it out
 
 The JTS OverlayNG documentation describes a graph-based overlay pipeline. In simplified, implementation-oriented terms:
 
@@ -77,7 +79,7 @@ The JTS OverlayNG documentation describes a graph-based overlay pipeline. In sim
 
 This is a conceptual summary of the documented OverlayNG pipeline, not a claim that every geometry engine uses exactly these internal data structures or steps.
 
-## 6. Core subproblems
+## 6. The smaller problems inside the operation
 
 - **Envelope filtering:** quickly identify geometries whose bounding boxes cannot overlap.
 - **Segment intersection:** detect crossings, endpoint touches and collinear overlaps.
@@ -119,7 +121,7 @@ A naive all-pairs segment comparison performs quadratic candidate comparisons in
 
 GEOS/JTS OverlayNG documents precision models, snap-rounding, noding choices and topology-collapse behaviour. It also warns that floating-precision noding may not be fully robust in all cases.
 
-## 10. Worked example
+## 10. Try a small example
 
 Let A be the square with corners (0,0), (4,0), (4,4), (0,4), and B the square with corners (2,1), (5,1), (5,3), (2,3).
 
@@ -134,7 +136,7 @@ Its area is \((4-2)(3-1)=4\) square coordinate units.
 
 This simple example avoids degeneracies. It does not test coincident boundaries, holes, multipart geometries, invalid rings or floating-point robustness.
 
-## 11. Implementations
+## 11. Where you can use it
 
 | Library / implementation | Relevant API / method | Notes |
 |---|---|---|
@@ -145,7 +147,7 @@ This simple example avoids degeneracies. It does not test coincident boundaries,
 
 No benchmark or version-specific API behaviour is asserted here. Implementation tutorials will be separate and will pin versions.
 
-## 12. Tests and reproducibility
+## 12. How we check the answer
 
 Minimum test matrix for a reference implementation:
 
@@ -186,7 +188,7 @@ Useful invariants for valid inputs:
 - Identify shared areas between ecological, transport or infrastructure datasets.
 - Construct planar arrangements and polygon partitions.
 
-## 15. Exercises
+## 15. Have a go
 
 1. Draw two overlapping rectangles and compute their intersection by hand.
 2. Construct disjoint, containment, edge-touch and vertex-touch cases. Predict output dimension before running a geometry engine.
@@ -203,7 +205,7 @@ Useful invariants for valid inputs:
 4. JTS Feature Summary: https://dr-jts.github.io/jts-doc/features.html
 5. User-supplied *Spatial Analysis Algorithms: Complete Compendium*, section 1, page 1. See [source inventory](../../source-inventory/README.md).
 
-## 17. Open questions
+## 17. What we still need to investigate
 
 - Which exact polygon clipping families should receive separate records first, and what input assumptions distinguish them?
 - How should the project explain full-precision robust noding versus fixed-precision snap-rounding without implying one is universally superior?
