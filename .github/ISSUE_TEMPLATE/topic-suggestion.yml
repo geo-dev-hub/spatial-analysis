@@ -1,0 +1,37 @@
+name: Suggest a topic
+description: Suggest a method, question, application or learning resource for the collection.
+title: "[Topic] "
+labels: ["topic-suggestion", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to know the formal name of a method. Start with the problem or question.
+  - type: textarea
+    id: question
+    attributes:
+      label: What would you like to understand or do?
+      description: Describe the task, question or problem in your own words.
+    validations:
+      required: true
+  - type: input
+    id: method
+    attributes:
+      label: Do you know a method or name for it?
+      description: Optional. Include variants or alternative names if known.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Where have you encountered it?
+      description: A project, research paper, software tool, dataset or real-world application.
+    validations:
+      required: false
+  - type: textarea
+    id: sources
+    attributes:
+      label: Useful sources
+      description: Link to papers, documentation, diagrams or examples. Do not upload material you do not have permission to share.
+    validations:
+      required: false
