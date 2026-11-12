@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 6 / 47>
+`<PARSED TEXT FOR PAGE: 6 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -56,7 +56,7 @@ Hydrology
 
                                                                                          Page 6 of 47
 
-<PARSED TEXT FOR PAGE: 7 / 47>
+`<PARSED TEXT FOR PAGE: 7 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -111,7 +111,7 @@ Preprocessing and correction
 
                                                                                        Page 7 of 47
 
-<PARSED TEXT FOR PAGE: 8 / 47>
+`<PARSED TEXT FOR PAGE: 8 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -166,7 +166,7 @@ SAR and InSAR
 
                                                                                       Page 8 of 47
 
-<PARSED TEXT FOR PAGE: 9 / 47>
+`<PARSED TEXT FOR PAGE: 9 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -219,7 +219,7 @@ Biophysical and geophysical retrieval
 
                                                                                          Page 9 of 47
 
-<PARSED TEXT FOR PAGE: 10 / 47>
+`<PARSED TEXT FOR PAGE: 10 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
