@@ -40,6 +40,12 @@ Keeping those steps separate is the basis of filter-and-refine spatial query pro
 3. Find a concave polygon whose bounding box contains empty space. Query that empty space and compare candidates with exact intersections.
 4. Use Shapely's STRtree with and without a predicate. Explain the difference.
 
+## 2. Use the index to join two geometry layers
+
+[Read the filter-and-refine spatial join lesson](../algorithms/query-processing/filter-refine-spatial-join.md) and run its [interactive notebook](../notebooks/filter-refine-spatial-join-lab.ipynb).
+
+You will see how an STRtree narrows the possible geometry pairs, how the exact predicate refines those candidates and why predicate direction and boundary rules matter. The [tested Shapely implementation](../implementations/python/spatial-join/README.md) returns stable pairs of original input indices.
+
 ## What comes next
 
 The next additions to this path will cover:
