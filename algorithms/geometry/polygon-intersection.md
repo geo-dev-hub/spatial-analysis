@@ -14,9 +14,9 @@
 
 The intersection of geometries A and B is the set of all points that belong to both:
 
-\[
+$$
 A \cap B = \{x \mid x \in A \text{ and } x \in B\}.
-\]
+$$
 
 For two polygonal regions, the result is the shared area. Depending on how the boundaries meet, the full topological intersection may also contain line or point components. A robust overlay implementation must determine where boundaries cross or coincide, split linework at those locations (noding), classify the resulting pieces by their topological relationship to both inputs, and assemble the pieces that belong in the result.
 
@@ -50,23 +50,23 @@ The hard part begins when their edges cross, touch, overlap or almost line up. A
 
 For point sets A and B, intersection is the greatest set contained in both A and B. It is commutative and associative:
 
-\[
+$$
 A \cap B = B \cap A
-\]
+$$
 
-\[
+$$
 (A \cap B) \cap C = A \cap (B \cap C).
-\]
+$$
 
 It is idempotent, and distributes over union:
 
-\[
+$$
 A \cap A = A
-\]
+$$
 
-\[
+$$
 A \cap (B \cup C) = (A \cap B) \cup (A \cap C).
-\]
+$$
 
 These are mathematical set identities. A software geometry library may additionally impose representational rules for geometry collections, dimensional collapses, ring validity and precision. Those implementation semantics must be documented separately.
 
