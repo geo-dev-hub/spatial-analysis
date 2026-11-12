@@ -26,7 +26,8 @@ This repository is the public, version-controlled technical foundation. It is no
 
 | Path | Purpose |
 |---|---|
-| `catalog/` | Inventory, taxonomy and stable algorithm records |
+| `source-inventory/` | Preserved page-by-page intake of the original compendium |
+| `catalog/` | Normalised inventory, taxonomy and stable algorithm records |
 | `algorithms/` | Canonical algorithm dossiers |
 | `implementations/` | Reproducible implementations and examples |
 | `benchmarks/` | Performance experiments and comparison protocols |
@@ -44,18 +45,23 @@ Some directories will be populated as material is reviewed. An empty directory i
 - [Research and evidence standard](docs/research-standard.md)
 - [Contribution guide](CONTRIBUTING.md)
 - [Algorithm dossier template](templates/algorithm-dossier.md)
+- [Source inventory](source-inventory/README.md)
 - [Catalogue guide](catalog/README.md)
 - [Learning paths](learning-paths/README.md)
 - [Publishing and access model](docs/publishing-model.md)
 
 ## Source inventory
 
-The initial scope is based on the user-supplied *Spatial Analysis Algorithms: Complete Compendium* (47 pages, 12 November 2026). It spans foundational GIS and computational geometry through spatial databases, statistics, remote sensing, networks, simulation, GeoAI and applied domains.
+The initial scope is based on the supplied *Spatial Analysis Algorithms: Complete Compendium* (47 pages, 12 November 2026). Its extracted text has now been imported page-by-page under `source-inventory/`. The intake transcription preserves the original page order; it is not a claim that every named method has been verified.
 
-The compendium is the starting inventory, not a claim that every item has been verified, implemented or documented. Its wording and groupings will be retained in the intake record while the working catalogue is progressively normalised. No item should silently disappear during that process.
+The compendium spans foundational GIS and computational geometry through spatial databases, statistics, remote sensing, networks, simulation, GeoAI and applied domains. Its own caveats are retained. In particular, entries marked by the source as remembered or requiring verification must not be cited as established facts until checked.
+
+## First canonical dossier
+
+[Polygon intersection](algorithms/geometry/polygon-intersection.md) is the first research draft. It distinguishes the Boolean predicate from the geometry-producing overlay operation and documents the broad OverlayNG pipeline, precision concerns and an initial test matrix. It is not yet implementation-verified.
 
 ## Status
 
-**Stage:** Repository foundation established; inventory ingestion and first dossier are next.
+**Stage:** Repository foundation and 47-page source intake imported; first algorithm dossier drafted. Next: audit the source inventory into structured catalogue entries, then implement and test the first dossier.
 
 This project is evolving. See the commit history for changes and decisions.
