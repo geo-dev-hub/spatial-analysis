@@ -47,7 +47,9 @@ If each segment's endpoints lie on opposite sides of the other segment's support
 
 The [Computational Geometry lecture notes from Universitat Politècnica de Catalunya](https://dccg.upc.edu/wp-content/uploads/2021/09/GeoC-Orientation-tests-R.pdf) show the left/right orientation test and how opposite-side tests identify a segment crossing. See the pages headed **Basic Tool: Orientation Tests**.
 
-We link to the original slides rather than embedding their figures because a reuse licence was not established during this review.
+A second useful visual is [“Is-linesegm.png” on Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Is-linesegm.png), by Ag2gaeh, which illustrates two intersecting line segments. Its file page identifies a CC BY-SA 3.0 licence. We link to the file page rather than embedding it because the original asset URL has not been confirmed in this review.
+
+We also link to the original slides rather than embedding their figures because a reuse licence was not established during this review.
 
 The orientation test is the key building block. The boundary and collinear cases are not optional extras: without them, a segment-intersection routine will fail on ordinary map data.
 
