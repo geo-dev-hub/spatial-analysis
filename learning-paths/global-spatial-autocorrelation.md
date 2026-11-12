@@ -84,7 +84,13 @@ This moves from one global summary to a statistic for each spatial unit. Learn t
 
 Local Geary compares a unit directly with its neighbours through squared differences. It complements Local Moran: one emphasizes local pairwise contrast, while the other uses the focal value and the neighbourhood lag relative to the overall mean.
 
-## 6. Find concentrations of high and low values
+## 6. Test for an overall concentration of positive values
+
+[Read Global Getis-Ord G](../algorithms/statistics/global-getis-ord-g.md) and use its [interactive notebook](../notebooks/global-getis-ord-g-lab.ipynb).
+
+This is a supplementary companion method added to explain the global-to-local Getis-Ord family. It tests whether high or low positive values are concentrated overall; it does not locate the areas responsible.
+
+## 7. Find concentrations of high and low values
 
 [Read Getis-Ord Gi*](../algorithms/statistics/getis-ord-gi-star.md) and use its [interactive notebook](../notebooks/getis-ord-gi-star-lab.ipynb).
 
@@ -93,7 +99,6 @@ Gi* answers a different question from Local Moran: it looks for unusually high o
 ## What comes next
 
 The next lessons in this path will cover:
-- global Getis-Ord G and its relationship to Gi*;
 - multiple testing and false-discovery-rate correction;
 - spatial correlograms and how association changes with distance.
 
