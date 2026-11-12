@@ -1,67 +1,64 @@
 # Spatial Analysis
 
-A growing, structured knowledge and implementation project for spatial analysis algorithms.
+**Understand the methods behind the maps, models and decisions that shape our world.**
 
-The project connects four things:
+Spatial data is everywhere. It helps us find places, plan journeys, understand changing environments, measure access to services and make better decisions about the places we share.
 
-1. **Algorithm knowledge** — what a method does, why it works, its assumptions, limitations and computational cost.
-2. **Reproducible implementations** — code, test cases, examples, benchmarks and comparisons.
-3. **Learning journeys** — structured routes through the material, without forcing every learner to follow one sequence.
-4. **Research and publishing** — a continuously maintained body of work that can support public articles, weekly editions, premium learning materials and collaborative research.
+But what actually happens behind the map? How does a computer know two areas overlap? How do we find the best route, measure a pattern, predict what might change or decide where something should go?
 
-This repository is the public, version-controlled technical foundation. It is not intended to be a chronological newsletter archive or a dump of unreviewed AI-generated notes.
+This is a place to find out.
 
-## Project principles
+We explore the ideas behind spatial analysis, make them easier to understand, try them with real examples and show where they are useful. From the fundamentals to the methods used in research and production, the goal is simple: help more people understand what these tools do, when to use them and how to put them to work.
 
-- Preserve the source inventory before reorganising it.
-- Give each knowledge item a stable identifier independent of newsletter issue numbers.
-- Separate publication chronology from learning order.
-- Make claims traceable to sources and distinguish established methods from implementation choices.
-- Prefer small, testable, reproducible examples over unsupported claims.
-- Record assumptions, coordinate reference systems, units, tolerances and edge cases.
-- Keep the public contribution surface open; paid products may add depth, guidance and convenience without making basic participation pay-to-contribute.
-- Use AI as a research and drafting assistant, not as an unquestioned authority.
+## What you can do here
 
-## Repository map
+- **Make sense of a method.** Clear explanations of what it does, how it works and what to watch out for.
+- **See it in action.** Examples, code, maps, tests and practical experiments.
+- **Go deeper.** Mathematics, performance, trade-offs and the details that matter when the easy example isn't enough.
+- **Find your way through.** Follow a guided path, start with a problem you have, or explore whatever catches your interest.
+- **Build with others.** Share a correction, ask a question, contribute an implementation or help improve an explanation.
 
-| Path | Purpose |
+You do not have to start at the beginning. You do not have to know everything before you join in.
+
+## Explore
+
+| If you're interested in… | Start here |
 |---|---|
-| `source-inventory/` | Preserved page-by-page intake of the original compendium |
-| `catalog/` | Normalised inventory, taxonomy and stable algorithm records |
-| `algorithms/` | Canonical algorithm dossiers |
-| `implementations/` | Reproducible implementations and examples |
-| `benchmarks/` | Performance experiments and comparison protocols |
-| `exercises/` | Public learning exercises and selected solutions |
-| `learning-paths/` | Curated sequences through the catalogue |
-| `research/` | Research notes, evidence and open questions |
-| `templates/` | Reusable dossier, experiment and issue templates |
-| `docs/` | Methodology, contribution and editorial standards |
+| The building blocks of GIS | [Core GIS and geometry](learning-paths/README.md#start-with-a-problem) |
+| How spatial algorithms work | [Algorithm collection](algorithms/) |
+| Working examples and code | [Implementations](implementations/) |
+| Testing speed and accuracy | [Benchmarks](benchmarks/) |
+| Learning at your own pace | [Learning paths](learning-paths/README.md) |
+| Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
-Some directories will be populated as material is reviewed. An empty directory is not evidence that a topic has been completed or deliberately excluded.
+## A growing collection, not a closed course
 
-## Start here
+Spatial analysis is too broad to fit into one fixed syllabus. Some people want the foundations. Others arrive with a question about transport, satellite imagery, public health, ecology, cities or spatial data engineering.
 
-- [Project method](docs/project-method.md)
-- [Research and evidence standard](docs/research-standard.md)
-- [Contribution guide](CONTRIBUTING.md)
-- [Algorithm dossier template](templates/algorithm-dossier.md)
-- [Source inventory](source-inventory/README.md)
-- [Catalogue guide](catalog/README.md)
-- [Learning paths](learning-paths/README.md)
-- [Publishing and access model](docs/publishing-model.md)
+So the collection keeps growing. Each method has a home of its own, and learning paths bring related methods together for different goals. New research, examples and contributions can improve the collection over time.
 
-## Source inventory
+## Start anywhere. Keep going as far as you like.
 
-The initial scope is based on the supplied *Spatial Analysis Algorithms: Complete Compendium* (47 pages, 12 November 2026). Its extracted text has now been imported page-by-page under `source-inventory/`. The intake transcription preserves the original page order; it is not a claim that every named method has been verified.
+You can read, try an example, follow a learning path or help us make something clearer. The material is built to be useful on its own and better together.
 
-The compendium spans foundational GIS and computational geometry through spatial databases, statistics, remote sensing, networks, simulation, GeoAI and applied domains. Its own caveats are retained. In particular, entries marked by the source as remembered or requiring verification must not be cited as established facts until checked.
+---
 
-## First canonical dossier
+## About this repository
 
-[Polygon intersection](algorithms/geometry/polygon-intersection.md) is the first research draft. It distinguishes the Boolean predicate from the geometry-producing overlay operation and documents the broad OverlayNG pipeline, precision concerns and an initial test matrix. It is not yet implementation-verified.
+This is the public home for the project's explanations, research references, examples and collaborative work. It is maintained as a version-controlled technical resource so that corrections and improvements remain visible.
 
-## Status
+The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete Compendium* (47 pages, 12 November 2026). Its page-by-page text is preserved under [source-inventory](source-inventory/README.md). The original inventory is broad and includes algorithms, operations, statistical models, data structures, software, metrics and applied methods. Each item is reviewed before being presented as established technical guidance.
 
-**Stage:** Repository foundation and 47-page source intake imported; first algorithm dossier drafted. Next: audit the source inventory into structured catalogue entries, then implement and test the first dossier.
+### How the work is made
 
-This project is evolving. See the commit history for changes and decisions.
+- [How we research and explain a method](docs/project-method.md)
+- [How we check technical claims](docs/research-standard.md)
+- [How to contribute](CONTRIBUTING.md)
+- [The writing and teaching principles](docs/voice-and-writing.md)
+- [The learning and membership experience](docs/publishing-model.md)
+
+### First example
+
+[Polygon intersection](algorithms/geometry/polygon-intersection.md) is our first research draft. It looks at how two shapes overlap, why the result can be more complicated than it first appears, and what a geometry engine has to do to produce a reliable answer. It is still awaiting implementation and testing.
+
+**Current stage:** the source collection and project foundations are in place. We are now turning the inventory into clear explanations, working examples and useful ways to learn.
