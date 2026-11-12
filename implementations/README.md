@@ -17,3 +17,4 @@ Examples demonstrate a named software implementation unless they explicitly reim
 - [Polygon intersection with Python and Shapely](python/polygon-intersection/README.md): a library-backed overlay operation with nine tests.
 - [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 11 tests.
 - [Segment intersection with Python](python/segment-intersection/README.md): exact integer orientation tests and rational intersection coordinates, with 11 tests.
+- [Bentley–Ottmann with Python](python/bentley-ottmann/README.md): an exact-coordinate, event-queue sweep prototype with a transparent list-based status and eight differential tests.
