@@ -43,7 +43,7 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | Not yet catalogued |
+| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | [Filter-and-refine spatial join](../../algorithms/query-processing/filter-refine-spatial-join.md) covers indexed spatial joins; nearest-neighbour and distance-matrix methods remain unverified |
 | DE-9IM topological relations, RCC-8, cardinal direction relations | Formal relation models / qualitative spatial relations | 2 | Not yet catalogued |
 | Spatial weights: contiguity, distance band, kNN | Weight-matrix construction methods | 2 | Not yet catalogued |
 
