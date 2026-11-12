@@ -30,6 +30,22 @@ If you're unsure how to contribute, open an issue and describe what you have in 
 
 If you are ready to make a change, open a pull request. The repository checklist will help reviewers check the evidence, tests, mathematics, visuals and reuse rights.
 
+### Run the checks
+
+From the repository root, run the checks relevant to your change:
+
+```bash
+# Check relative links in Markdown files and notebook Markdown cells
+python scripts/check_internal_links.py
+
+# Run one Python example's test suite
+cd implementations/python/geary-c
+python -m pip install -r requirements.txt
+python -m pytest -q
+```
+
+The GitHub Actions workflow runs all six Python example suites and executes all six notebooks. It also checks local links on relevant changes. If you change a notebook, run it from top to bottom before opening the pull request; a successful CI run is useful evidence, not a substitute for checking the explanation and assumptions.
+
 ## Help us keep it trustworthy
 
 We want explanations that are approachable without being careless.
