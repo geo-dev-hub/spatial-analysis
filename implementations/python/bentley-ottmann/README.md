@@ -34,6 +34,14 @@ With a priority queue and balanced status tree, the classical algorithm runs in 
 
 This teaching implementation uses a Python list for the status so insertion, removal and neighbour changes are easy to inspect. Those operations can take `O(n)` time. A conservative bound for this version is `O((n+k)n + (n+k) log(n+k))`, excluding arithmetic bit complexity. It does **not** achieve the classical balanced-tree bound.
 
+## Run the first benchmark
+
+```bash
+PYTHONPATH=../segment-intersection python benchmark.py
+```
+
+The benchmark compares the list-status sweep with the all-pairs oracle on seeded, non-intersecting fixtures. It records both runtime and candidate-pair checks. See [the recorded results and interpretation](benchmark-results.md). The fixture is diagnostic, not a representative geospatial workload.
+
 ## Limitations
 
 This is not a production GIS overlay engine. It does not support vertical segments, shared endpoints, endpoint-on-segment contacts, multiway crossings, coincident event points or collinear overlaps. Exact arithmetic does not replace a complete degeneracy policy.
