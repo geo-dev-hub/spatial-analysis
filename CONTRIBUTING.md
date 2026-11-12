@@ -26,7 +26,9 @@ Small contributions matter. A clear issue report can be just as useful as a larg
 5. For spatial examples, state the coordinate reference system, units and any important assumptions.
 6. Only share data, code and images that you have permission to redistribute.
 
-If you're unsure how to contribute, open an issue and describe what you have in mind. You can start a conversation before preparing a full change.
+If you're unsure how to contribute, open an issue and describe what you have in mind. GitHub offers short forms for technical corrections, topic suggestions and visual sources. You can start a conversation before preparing a full change.
+
+If you are ready to make a change, open a pull request. The repository checklist will help reviewers check the evidence, tests, mathematics, visuals and reuse rights.
 
 ## Help us keep it trustworthy
 
