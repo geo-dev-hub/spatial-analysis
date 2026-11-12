@@ -44,6 +44,10 @@ The test suite covers inside, outside, edge, vertex, concavity and both open and
 3. Read `locate_point`: each edge is checked once and a crossing toggles the parity.
 4. Change the point coordinates and predict the classification before running the tests.
 
+## Step-by-step implementation walkthrough
+
+Read [how the implementation works](implementation-walkthrough.md) for ring normalisation, boundary detection, half-open scanline crossings and parity toggling.
+
 ## Important limits
 
 - This is a teaching implementation for a single simple ring.
