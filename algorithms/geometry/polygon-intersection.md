@@ -1,4 +1,6 @@
-# Polygon intersection (planar vector overlay)
+# Polygon intersection: what two areas have in common
+
+*Planar vector overlay*
 
 - **Stable ID:** `SA-GEO-POLYGON-INTERSECTION`
 - **Domain:** Computational geometry / vector overlay
@@ -10,9 +12,15 @@
 
 > Scope note: “intersection” can mean a segment-pair intersection test, an intersection-point construction, a Boolean predicate (`intersects`), or a full geometry overlay operation. This dossier focuses on **set-theoretic intersection of two planar vector geometries**, with polygon-polygon overlay as the main case. Segment intersection and Boolean predicates deserve their own linked records.
 
-## 1. In one minute
+## 1. Start here
 
-The intersection of geometries A and B is the set of all points that belong to both:
+You have two mapped areas—perhaps a school catchment and a flood zone. You want to know which places belong to both.
+
+**Polygon intersection finds the shared part.** Depending on how the boundaries meet, the answer might be an area, a line, a point or nothing at all. This is useful when comparing land parcels, service areas, habitats, hazards or any other mapped regions.
+
+## 4. In one minute
+
+For geometries $A$ and $B$, the intersection $A \cap B$ contains exactly the points that belong to both:
 
 $$
 A \cap B = \{x \mid x \in A \text{ and } x \in B\}.
@@ -46,7 +54,7 @@ The hard part begins when their edges cross, touch, overlap or almost line up. A
 
 *Figure 1. “Vector Overlay Operators,” by Bplewe, Wikimedia Commons. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reproduced unchanged. The figure compares several common overlay operations; focus on the row labelled “intersect” for this lesson. [Source and licence record](https://commons.wikimedia.org/wiki/File:Vector_Overlay_Operators.png).
 
-## 4. Formal foundations
+## 5. Formal foundations
 
 For point sets A and B, intersection is the greatest set contained in both A and B. It is commutative and associative:
 
@@ -70,7 +78,7 @@ $$
 
 These are mathematical set identities. A software geometry library may additionally impose representational rules for geometry collections, dimensional collapses, ring validity and precision. Those implementation semantics must be documented separately.
 
-## 5. How a geometry engine works it out
+## 6. How a geometry engine works it out
 
 The JTS OverlayNG documentation describes a graph-based overlay pipeline. In simplified, implementation-oriented terms:
 
@@ -99,7 +107,7 @@ flowchart TD
 
 The diagram is a teaching-level map of the stages described above. It deliberately leaves implementation-specific optimisations and data structures out.
 
-## 6. The smaller problems inside the operation
+## 7. The smaller problems inside the operation
 
 - **Envelope filtering:** quickly identify geometries whose bounding boxes cannot overlap.
 - **Segment intersection:** detect crossings, endpoint touches and collinear overlaps.
@@ -111,7 +119,7 @@ The diagram is a teaching-level map of the stages described above. It deliberate
 
 The source compendium lists polygon clipping families including Sutherland–Hodgman, Weiler–Atherton, Vatti and Greiner–Hormann, and separately lists Bentley–Ottmann for segment intersections. These are related algorithm families, not interchangeable names for the entire modern overlay pipeline. Their assumptions and supported polygon types need individual dossiers.
 
-## 7. Correctness and guarantees
+## 8. Correctness and guarantees
 
 At the mathematical level, the target is the point-set intersection. At the implementation level, correctness also depends on:
 - input validity requirements;
@@ -123,13 +131,13 @@ At the mathematical level, the target is the point-set intersection. At the impl
 
 JTS OverlayNG documents valid output geometries and describes how intersection may include components of the same or lower dimension. Its strict mode changes whether lower-dimensional collapse results are included. Therefore, tests and downstream expectations must specify the chosen semantics.
 
-## 8. Complexity
+## 9. Complexity
 
 There is no single meaningful complexity bound for “polygon intersection” without specifying the algorithm, input representation, number of segments, number of actual intersections, spatial distribution, precision model and output size.
 
 A naive all-pairs segment comparison performs quadratic candidate comparisons in the number of segments. Spatial indexes, monotone-chain indexing, sweep-line methods and envelope clipping can reduce work on many practical datasets, but actual complexity depends on candidate generation and the number of intersections. Record complexity for each concrete implementation or named algorithm separately; do not assign one universal Big-O figure to the entire overlay operation.
 
-## 9. Numerical and geometric considerations
+## 10. Numerical and geometric considerations
 
 - **Planar versus geographic coordinates:** a planar overlay assumes a planar coordinate space. Choose an appropriate projected CRS when planar distances/areas or local topology are required; do not treat longitude/latitude degrees as uniform Cartesian units.
 - **Floating-point arithmetic:** finite precision can misclassify near-collinear orientation, segment intersections and point-in-polygon relationships.
@@ -141,7 +149,7 @@ A naive all-pairs segment comparison performs quadratic candidate comparisons in
 
 GEOS/JTS OverlayNG documents precision models, snap-rounding, noding choices and topology-collapse behaviour. It also warns that floating-precision noding may not be fully robust in all cases.
 
-## 10. Try a small example
+## 11. Try a small example
 
 Let A be the square with corners (0,0), (4,0), (4,4), (0,4), and B the square with corners (2,1), (5,1), (5,3), (2,3).
 
@@ -156,7 +164,7 @@ Its area is \((4-2)(3-1)=4\) square coordinate units.
 
 This simple example avoids degeneracies. It does not test coincident boundaries, holes, multipart geometries, invalid rings or floating-point robustness.
 
-## 11. Software that provides this operation
+## 12. Software that provides this operation
 
 | Library / implementation | Relevant API / method | Notes |
 |---|---|---|
@@ -167,7 +175,7 @@ This simple example avoids degeneracies. It does not test coincident boundaries,
 
 The first runnable reference is [Python with Shapely 2.1.2](../../implementations/python/polygon-intersection/README.md). It demonstrates the API and tests the expected geometry relationships; it does not reimplement the internal GEOS overlay algorithm. No benchmark is asserted here.
 
-## 12. How we check the answer
+## 13. How we check the answer
 
 Minimum test matrix for a reference implementation:
 
@@ -200,7 +208,7 @@ Useful invariants for valid inputs:
 - Use coverage-specific union/overlay methods only when the input satisfies their coverage assumptions.
 - Repair invalid geometries only under an explicit policy; repair can change the represented point set.
 
-## 14. Applications
+## 15. Where this is useful
 
 - Clip administrative, environmental or planning layers to a study area.
 - Find overlapping land parcels, service areas or hazard zones.
@@ -208,7 +216,7 @@ Useful invariants for valid inputs:
 - Identify shared areas between ecological, transport or infrastructure datasets.
 - Construct planar arrangements and polygon partitions.
 
-## 15. Have a go
+## 16. Have a go
 
 1. Draw two overlapping rectangles and compute their intersection by hand.
 2. Construct disjoint, containment, edge-touch and vertex-touch cases. Predict output dimension before running a geometry engine.
@@ -217,7 +225,7 @@ Useful invariants for valid inputs:
 5. Create a nearly coincident-edge case and compare floating and fixed precision behaviour.
 6. Compare a naive segment-pair test with an indexed candidate-generation approach; report the number of candidate pairs, not just elapsed time.
 
-## 16. References
+## 17. References
 
 1. JTS 1.20.0, OverlayNG package documentation: https://locationtech.github.io/jts/javadoc/org/locationtech/jts/operation/overlayng/package-summary.html
 2. GEOS 3.15.0beta3, OverlayNG class documentation: https://libgeos.org/doxygen/classgeos_1_1operation_1_1overlayng_1_1OverlayNG.html
