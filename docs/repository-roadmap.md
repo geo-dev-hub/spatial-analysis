@@ -32,13 +32,13 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Geometry starter set: point in polygon, segment intersection, polygon intersection and Bentley–Ottmann.
 - [x] Runnable Python examples and tests for the four topics.
 - [x] Step-by-step Bentley–Ottmann implementation walkthrough.
-- [ ] Complete and review the first geometry learning path as a coherent sequence.
-- [ ] Add worked examples and exercises that connect the four topics.
+- [x] Complete the geometry foundations path as a coherent four-lesson sequence.
+- [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add Global Moran's I and Geary's C lessons, tested dense reference implementations and interactive notebooks.
 - [x] Add Global Moran's I, Global Geary's C, Local Moran's I, Local Geary and Getis-Ord G/Gi* lessons, PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
-- [x] Add a learning path comparing the two global autocorrelation measures.
+- [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
-- [ ] Extend spatial statistics with local indicators, Getis-Ord statistics, multiple-testing correction and spatial regression.
+- [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
 ## 4. Every lesson uses the right teaching tools
@@ -48,7 +48,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] SVG for precise geometric illustrations.
 - [x] Source-figure attribution and licence policy.
 - [x] Two verified CC BY-SA 4.0 diagrams linked into relevant lessons.
-- [x] Add an interactive notebook for Global Moran's I; add others where changing inputs materially improves understanding.
+- [x] Add six interactive notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
 - [ ] Ensure every figure has useful alt text and a caption.
@@ -59,7 +59,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all six Python examples and execute all six spatial-statistics notebooks.
-- [x] Confirm successful Actions runs for all six Python test suites and both notebooks.
+- [x] Confirm successful Actions runs for all six Python test suites and all six notebooks.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
@@ -69,7 +69,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 Before moving to the membership and Patreon work, check that:
 
 - a first-time reader can find a useful starting point without needing personal guidance;
-- the first learning path has a complete, tested sequence;
+- the geometry foundations path and the first spatial-autocorrelation path provide complete, reproducible sequences;
 - the source catalogue has a traceable review process and no invented coverage;
 - every published lesson distinguishes established facts, implementation behaviour, experiments and open questions;
 - examples and tests are reproducible;
@@ -79,6 +79,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository has its source intake, reader-facing foundations, contribution process, visual and mathematical standards, and a first set of runnable computational-geometry examples. The work is still early: the 22-section source catalogue has not been audited item by item, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods and six interactive notebooks. The six Python example suites and notebook execution are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
