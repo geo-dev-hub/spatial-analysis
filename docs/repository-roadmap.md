@@ -35,6 +35,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Complete and review the first geometry learning path as a coherent sequence.
 - [ ] Add worked examples and exercises that connect the four topics.
 - [x] Add Global Moran's I and Geary's C lessons, tested dense reference implementations and interactive notebooks.
+- [x] Add Local Moran's I lesson, a PySAL-based interactive notebook, conditional permutation explanation and FDR treatment.
 - [x] Add a learning path comparing the two global autocorrelation measures.
 - [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
 - [ ] Extend spatial statistics with local indicators, Getis-Ord statistics, multiple-testing correction and spatial regression.
@@ -57,7 +58,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Versioned dependencies for current Python examples.
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all six Python examples and execute both spatial-statistics notebooks.
+- [x] GitHub Actions workflow configured to test all six Python examples and execute all three spatial-statistics notebooks.
 - [x] Confirm successful Actions runs for all six Python test suites and both notebooks.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
