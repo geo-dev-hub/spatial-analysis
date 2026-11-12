@@ -16,7 +16,7 @@ A dataset gives us:
 - a value for each of $n$ spatial units, such as a district, census area or grid cell;
 - a definition of which units are connected or considered close to one another.
 
-The second part matters as much as the first. Sharing a boundary, falling within a distance band and being among the (k) nearest neighbours are different definitions of spatial relationship. They can produce different results.
+The second part matters as much as the first. Sharing a boundary, falling within a distance band and being among the $k$ nearest neighbours are different definitions of spatial relationship. They can produce different results.
 
 Moran's I is a **global statistic**: it summarises the overall relationship in one number. It does not tell us where individual clusters or outliers are located.
 
@@ -84,7 +84,7 @@ flowchart LR
     C --- D["Area 4"]
 ```
 
-With values (1,2,3,4), adjacent values are similar. With values (1,4,1,4), adjacent values alternate. The geography is unchanged; only the values have changed.
+With values $[1,2,3,4]$, adjacent values are similar. With values $[1,4,1,4]$, adjacent values alternate. The geography is unchanged; only the values have changed.
 
 ## 6. Work through a small example
 
