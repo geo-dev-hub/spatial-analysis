@@ -80,4 +80,5 @@ jobs:
       - name: Execute notebooks
         run: |
           python -m ipykernel install --user --name python3
-          python -m jupyter nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/global-morans-i-lab.ipynb
+          mkdir -p /tmp/notebook-output
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/global-morans-i-lab.ipynb
