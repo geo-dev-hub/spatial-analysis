@@ -1,0 +1,37 @@
+name: Suggest a diagram or visual source
+description: Share a figure, map, animation or visual resource that could improve a lesson.
+title: "[Visual source] "
+labels: ["visual-source", "research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A public webpage is not automatically permission to reuse its images. If the licence is unclear, we can still link to the original source.
+  - type: input
+    id: source
+    attributes:
+      label: Original source URL
+      description: Link to the creator's page or original publication, not a repost if possible.
+    validations:
+      required: true
+  - type: input
+    id: creator
+    attributes:
+      label: Creator and figure details
+      description: Creator, work title, figure number, slide or page.
+    validations:
+      required: false
+  - type: input
+    id: licence
+    attributes:
+      label: Licence or permission
+      description: Exact licence and link, or say "not found".
+    validations:
+      required: false
+  - type: textarea
+    id: relevance
+    attributes:
+      label: What does this help explain?
+      description: Name the lesson and explain what a reader should notice.
+    validations:
+      required: true
