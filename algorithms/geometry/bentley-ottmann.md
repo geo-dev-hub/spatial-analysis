@@ -2,7 +2,7 @@
 
 - **Stable ID:** `SA-GEO-BENTLEY-OTTMANN`
 - **Domain:** Computational geometry / vector topology
-- **Status:** researched algorithm record; implementation not yet published
+- **Status:** researched algorithm record; restricted Python teaching implementation published
 - **Version:** 0.1
 - **Source inventory location:** Compendium, section 1, page 1; listed under segment intersection
 - **Related records:** [Segment intersection](segment-intersection.md), [Point in polygon](point-in-polygon.md), planar arrangements, robust predicates
@@ -205,13 +205,13 @@ Consider three segments:
 
 - $s_1$: $(1,1)$ to $(9,7)$
 - $s_2$: $(1,7)$ to $(9,1)$
-- $s_3$: $(2,2)$ to $(8,6)$
+- $s_3$: $(2,1)$ to $(8,5)$
 
-At the left edge, all three segments enter the sweep at their left endpoints. The status is ordered by their height where they meet the sweep line.
+Segments $s_1$ and $s_2$ enter at $x=1$. Segment $s_3$ enters later, at $x=2$. The status is kept in bottom-to-top order as each endpoint event is processed.
 
-The first two segments meet at $(5,4)$. Before $x=5$, $s_1$ is below $s_2$; after $x=5$, it is above $s_2$. The intersection event causes the status order to swap. The algorithm then checks the new neighbours around the swapped pair.
+The first pair meets at $(5,4)$. Immediately before $x=5$, $s_1$ is below $s_2$; immediately after, it is above. The event makes the two segments exchange positions. Segment $s_3$ then intersects $s_2$ and $s_1$ at two later, distinct x-coordinates. This gives the sweep more than one crossing event to process without introducing a three-way intersection.
 
-The example is intentionally a conceptual trace. A production test fixture must calculate all event coordinates exactly and verify the complete set of reported pairs against an independent brute-force oracle.
+The runnable example and its tests calculate the event coordinates exactly and compare the reported segment pairs against the independent pairwise oracle.
 
 ## 11. How to implement it without hiding the hard parts
 
@@ -225,11 +225,11 @@ A reliable implementation should be built in stages:
 6. **Test against the oracle:** generate small segment sets, compare the sweep's output with all-pairs output, and retain every discovered failure as a regression test.
 7. **Benchmark separately:** measure sparse and dense intersection cases. Report the actual data structure and its cost.
 
-The first implementation in this repository should be deliberately scoped and labelled as a teaching implementation. We should not claim support for arbitrary GIS linework until the degeneracy contract and tests justify that claim.
+The first restricted implementation is now available at [Bentley–Ottmann with Python](../../implementations/python/bentley-ottmann/README.md). It uses a heap for events and a Python list for status so the event logic stays visible. It is a teaching implementation, not a production solver, and it does not achieve the abstract balanced-tree time bound.
 
-## 12. Tests that matter
+## 12. Tests: current coverage and what comes next
 
-At minimum, a future implementation needs tests for:
+The current Python prototype has eight tests, including exact-coordinate assertions, contract checks, changing-status cases and seeded differential tests against the pairwise oracle. The next test expansion should cover:
 
 - no intersections;
 - one proper crossing;
