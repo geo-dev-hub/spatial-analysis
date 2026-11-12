@@ -51,9 +51,9 @@ Let the polygon boundary be a closed sequence of vertices $v_0, v_1, \ldots, v_{
 
 For ray crossing, let $c(p,P)$ be the number of valid intersections between a ray from $p$ and the polygon boundary. Under the even–odd rule:
 
-$
+$$
 p \text{ is inside } P \iff c(p,P) \bmod 2 = 1
-$
+$$
 
 In plain language: an odd crossing count means inside; an even count means outside. The boundary test must be performed separately if the desired output distinguishes boundary from interior and exterior.
 
