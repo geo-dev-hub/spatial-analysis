@@ -35,6 +35,19 @@ Linking readers to a lawfully hosted original is a useful teaching practice when
 
 The algorithm record links to Laura Toma's Bowdoin lecture slides and Pat Morin's Carleton lecture notes because both contain valuable event-by-event diagrams. We have not found an explicit open reuse licence for those figures in the materials checked, so we link to the original PDFs rather than copying their images. The repository's separate sweep illustration is an original project-created schematic.
 
+## Visual-source register
+
+The following sources have been checked for the specific figure used in the linked lesson:
+
+| Lesson | Figure and creator | Source | Licence | How it is used |
+|---|---|---|---|---|
+| [Point in polygon](../algorithms/geometry/point-in-polygon.md) | “Point in polygon problem,” Adam Majewski | [Wikimedia Commons file page](https://commons.wikimedia.org/wiki/File:Point_in_polygon_problem.svg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Embedded unchanged from the original Wikimedia-hosted SVG; attribution is placed below the image |
+| [Polygon intersection](../algorithms/geometry/polygon-intersection.md) | “Vector Overlay Operators,” Bplewe | [Wikimedia Commons file page](https://commons.wikimedia.org/wiki/File:Vector_Overlay_Operators.png) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Embedded unchanged; the caption directs readers to the “intersect” row |
+
+Both licences permit sharing and commercial use with attribution and share-alike obligations. The figures are embedded from their original Wikimedia Commons hosts, not copied into this repository. If we later download, modify, package or redistribute either asset, re-check the file page and preserve the licence requirements for that specific use.
+
+For segment intersection, the [UPC Computational Geometry orientation-test lecture PDF](https://dccg.upc.edu/wp-content/uploads/2021/09/GeoC-Orientation-tests-R.pdf) contains useful diagrams for point-line orientation and segment crossing. We have not verified a reuse licence for those slides, so the repository links to the source rather than embedding or copying its figures.
+
 ## Before publishing a visual
 
 - [ ] Is this the original or authoritative source?
