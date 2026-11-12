@@ -49,7 +49,7 @@ The sweep does not inspect every pair. It maintains just enough local informatio
 Before using our schematic, it is worth seeing the algorithm explained visually by people who teach computational geometry:
 
 - **Laura Toma, Bowdoin College — [Bentley–Ottmann sweep lecture slides (PDF)](https://tildesites.bowdoin.edu/~ltoma/teaching/cs3250-CompGeom/spring18/Lectures/cg-bentleyottman.pdf).** The slide sequence shows the active-segment order, neighbour checks, event insertion and status swaps step by step. It is especially useful for following the algorithm through a sequence of events.
-- **Pat Morin, Carleton University — [Plane Sweep lecture notes (PDF)](https://patmorin.me/teaching/2402/notes/planesweep.pdf).** Includes diagrams of the sweep and explains why intersecting segments become adjacent before they cross.
+- **Pat Morin, Carleton University — [Plane Sweep lecture notes (PDF), especially page 24](https://patmorin.me/teaching/2402/notes/planesweep.pdf#page=24).** Page 24 gives a clean source diagram of the sweep line passing through a set of segments; the following slides build on the example. The notes also explain why intersecting segments become adjacent before they cross.
 
 These are linked to their original hosts rather than copied into this repository. We could not establish an explicit reuse licence for the diagrams from the materials reviewed, so attribution alone is not being treated as permission to redistribute them. The project schematic below is an original supplementary drawing, not a replacement for the source teaching figures.
 
