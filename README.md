@@ -66,7 +66,7 @@ A second foundational example is [point in polygon](algorithms/geometry/point-in
 
 A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests.
 
-Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. A runnable implementation is the next research and engineering step.
+Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. You can also [run the restricted Python teaching implementation](implementations/python/bentley-ottmann/README.md) and follow its [step-by-step walkthrough](implementations/python/bentley-ottmann/implementation-walkthrough.md); its nine tests compare results with the pairwise method.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
