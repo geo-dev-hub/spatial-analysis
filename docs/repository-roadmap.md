@@ -37,7 +37,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add Global Moran's I, Global Geary's C, Local Moran's I, Local Geary and Getis-Ord G/Gi* lessons, PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
-- [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
+- [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
+- [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity, joins and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
@@ -58,8 +59,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Versioned dependencies for current Python examples.
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all six Python examples and execute all six spatial-statistics notebooks.
-- [x] Confirm successful Actions runs for all six Python test suites and all six notebooks.
+- [x] GitHub Actions workflow configured to test all seven Python examples and execute all seven notebooks.
+- [x] Confirm successful Actions runs for all six Python test suites and all seven notebooks.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
