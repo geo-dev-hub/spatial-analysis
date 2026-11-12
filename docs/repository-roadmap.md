@@ -61,7 +61,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all eight Python examples and execute all eight notebooks.
-- [x] Confirm successful Actions runs for all seven Python test suites and all seven notebooks.
+- [x] Confirm successful Actions runs for all eight Python test suites and all eight notebooks.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
@@ -81,6 +81,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods, plus a first spatial-indexing lesson. Seven interactive notebooks and seven Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods, plus two spatial-indexing and query-processing lessons. Eight interactive notebooks and eight Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
