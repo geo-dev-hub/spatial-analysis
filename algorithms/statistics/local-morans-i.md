@@ -24,7 +24,7 @@ The first is the unit's standardised value. The second is its spatial lag: a wei
 The relationship is commonly expressed as:
 
 $$
-I_i = z_i\sum_{j=1}^{n}w_{ij}z_j
+I_i = \frac{n-1}{\sum_{k=1}^{n}z_k^2} z_i\sum_{j=1}^{n}w_{ij}z_j
 $$
 
 where:
