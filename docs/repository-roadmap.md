@@ -11,7 +11,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Learning paths that allow people to start with a problem rather than a fixed sequence.
 - [x] Clear links to algorithms, implementations, exercises, research and benchmarks.
 - [x] Contribution guidance and GitHub issue forms.
-- [ ] Check every internal link and anchor across the repository.
+- [x] Add an automated check for relative links in Markdown files and notebook Markdown cells.
+- [ ] Check heading anchors and rendered navigation across the repository.
 - [ ] Confirm rights to publish the supplied compendium and its transcription.
 - [ ] Choose project licences for original code and documentation; agree contributor sign-off.
 - [ ] Review navigation on a phone-sized screen and with a screen reader.
@@ -34,7 +35,6 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Step-by-step Bentley–Ottmann implementation walkthrough.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
-- [x] Add Global Moran's I and Geary's C lessons, tested dense reference implementations and interactive notebooks.
 - [x] Add Global Moran's I, Global Geary's C, Local Moran's I, Local Geary and Getis-Ord G/Gi* lessons, PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
