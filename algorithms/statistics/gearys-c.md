@@ -62,7 +62,7 @@ Interpretation:
 | Result | What it suggests |
 |---|---|
 | (C < 1) | Neighbours tend to have more similar values than expected under the null |
-| $C \\approx 1$ | The overall neighbour differences are around the null expectation |
+| $C \approx 1$ | The overall neighbour differences are around the null expectation |
 | (C > 1) | Neighbours tend to have more dissimilar values than expected under the null |
 
 These are directions of association, not significance statements. A statistic near 1 is not proof that the data are random; inference requires a reference distribution.
