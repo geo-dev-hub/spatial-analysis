@@ -74,6 +74,19 @@ For a simple ring:
 
 This is the teaching implementation's method. It uses direct floating-point comparisons and is intentionally limited to one simple ring.
 
+```mermaid
+flowchart TD
+    A["Receive point and polygon ring"] --> B{"Is the point on an edge?"}
+    B -- "Yes" --> C["Return boundary"]
+    B -- "No" --> D["Cast a horizontal ray"]
+    D --> E["Count crossings using a half-open edge rule"]
+    E --> F{"Is the crossing count odd?"}
+    F -- "Yes" --> G["Return inside"]
+    F -- "No" --> H["Return outside"]
+```
+
+The separate boundary check is important: parity alone does not tell us whether the point lies exactly on an edge or vertex.
+
 ## 6. Correctness and guarantees
 
 For a simple, non-self-intersecting closed ring, the parity of ray crossings gives the inside/outside classification when edge and vertex cases are handled consistently. The boundary is classified separately by the teaching implementation.
