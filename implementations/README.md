@@ -12,6 +12,7 @@ Each implementation should state:
 
 Examples demonstrate a named software implementation unless they explicitly reimplement an algorithm. Do not describe a library call as a from-scratch implementation of the underlying algorithm.
 
-## First example
+## Examples
 
-[Polygon intersection with Python and Shapely](python/polygon-intersection/README.md) includes a short tutorial, runnable code and tests.
+- [Polygon intersection with Python and Shapely](python/polygon-intersection/README.md): a library-backed overlay operation with nine tests.
+- [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 11 tests.
