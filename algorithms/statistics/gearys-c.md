@@ -62,14 +62,14 @@ Interpretation:
 | Result | What it suggests |
 |---|---|
 | (C < 1) | Neighbours tend to have more similar values than expected under the null |
-| (C \approx 1) | The overall neighbour differences are around the null expectation |
+| $C \\approx 1$ | The overall neighbour differences are around the null expectation |
 | (C > 1) | Neighbours tend to have more dissimilar values than expected under the null |
 
 These are directions of association, not significance statements. A statistic near 1 is not proof that the data are random; inference requires a reference distribution.
 
 ## See the neighbourhood comparison
 
-The graph below uses the same four-area chain as the Moran's I lesson. Each edge contributes a squared difference. In this simple graph, each undirected connection appears twice in the directed matrix sum: once as (w_{ij}) and once as (w_{ji}).
+The graph below uses the same four-area chain as the Moran's I lesson. Each edge contributes a squared difference. In this simple graph, each undirected connection appears twice in the directed matrix sum: once as $w_{ij}$ and once as $w_{ji}$.
 
 ```mermaid
 flowchart LR
@@ -94,11 +94,11 @@ W =
 \end{bmatrix}
 $$
 
-For (x=[1,2,3,4]):
+For $x=[1,2,3,4]$:
 
-- (n=4)
+- $n=4$
 - (ar{x}=2.5)
-- (S_0=6)
+- $S_0=6$
 - (sum_i\sum_j w_{ij}(x_i-x_j)^2=6)
 - (sum_i(x_i-\bar{x})^2=5)
 
