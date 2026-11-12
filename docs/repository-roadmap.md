@@ -56,7 +56,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Versioned dependencies for current Python examples.
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all four Python examples.
+- [x] GitHub Actions workflow configured to test all five Python examples and execute the learning notebook.
 - [ ] Confirm successful Actions runs and repair any failures.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
