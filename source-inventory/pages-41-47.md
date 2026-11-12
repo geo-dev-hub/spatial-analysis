@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 41 / 47>
+`<PARSED TEXT FOR PAGE: 41 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -56,7 +56,7 @@ Thermal and land surface temperature
 
                                                                                           Page 41 of 47
 
-<PARSED TEXT FOR PAGE: 42 / 47>
+`<PARSED TEXT FOR PAGE: 42 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -113,7 +113,7 @@ Information-theoretic and causal methods for spatiotemporal systems
 
                                                                                        Page 42 of 47
 
-<PARSED TEXT FOR PAGE: 43 / 47>
+`<PARSED TEXT FOR PAGE: 43 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -169,7 +169,7 @@ Land change accounting
 
                                                                                       Page 43 of 47
 
-<PARSED TEXT FOR PAGE: 44 / 47>
+`<PARSED TEXT FOR PAGE: 44 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -226,7 +226,7 @@ GNSS integrity and location verification
 
                                                                                         Page 44 of 47
 
-<PARSED TEXT FOR PAGE: 45 / 47>
+`<PARSED TEXT FOR PAGE: 45 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -282,7 +282,7 @@ Covariance functions and basis expansions
 
                                                                                        Page 45 of 47
 
-<PARSED TEXT FOR PAGE: 46 / 47>
+`<PARSED TEXT FOR PAGE: 46 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -338,7 +338,7 @@ Engineering geodesy and structural monitoring
 
                                                                                         Page 46 of 47
 
-<PARSED TEXT FOR PAGE: 47 / 47>
+`<PARSED TEXT FOR PAGE: 47 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
