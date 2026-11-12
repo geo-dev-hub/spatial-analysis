@@ -11,8 +11,8 @@ This map records the original 22 numbered sections in *Spatial Analysis Algorith
 | 5 | Remote sensing, SAR, LiDAR, photogrammetry | 7–9 |
 | 6 | Optimization, location science, mobility, transport | 9–11 |
 | 7 | Domain modeling: environment, hazards, ecology, health, urban, energy, ocean | 12–13 |
-| 8 | GeoAI and geospatial foundation models (GeoFMs) | 14–16 |
-| 9 | Geodesy, cartography, data infrastructure, privacy, text and semantics | 17–20 |
+| 8 | GeoAI and geospatial foundation models (GeoFMs) | 14–18 |
+| 9 | Geodesy, cartography, data infrastructure, privacy, text and semantics | 18–20 |
 | 10 | Additions: classical, statistical and computational methods | 21–22 |
 | 11 | Additions: GeoAI, GeoFMs and computer vision | 22–23 |
 | 12 | Additions: signal processing, GNSS, regional science, resilience | 24–25 |
