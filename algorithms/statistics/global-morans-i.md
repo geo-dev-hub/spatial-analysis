@@ -210,7 +210,7 @@ The teaching implementation uses a dense $n\times n$ matrix.
 
 - **Time:** $O(n^2)$ for the direct double sum.
 - **Weight storage:** $O(n^2)$ for the dense matrix.
-- **Sparse implementations:** can work in proportion to the number of nonzero weights, often written (O(m)) for the statistic once the weights are stored.
+- **Sparse implementations:** can work in proportion to the number of nonzero weights, often written as $O(m)$ for the statistic once the weights are stored.
 
 The dense implementation is intended for learning and small examples. It is not the right tool for a very large sparse spatial graph.
 
