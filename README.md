@@ -56,6 +56,10 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 - [How we reuse and attribute visual sources](docs/visual-sources-and-attribution.md)
 - [How we check technical claims](docs/research-standard.md)
 - [How to contribute](CONTRIBUTING.md)
+- [How we use mathematics and visuals](docs/math-and-visuals.md)
+- [Research notes](research/README.md)
+- [Exercises](exercises/README.md)
+- [Benchmarks](benchmarks/README.md)
 - [The learning and membership experience](docs/publishing-model.md)
 
 ### First examples
