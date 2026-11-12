@@ -13,3 +13,7 @@ These files turn the original compendium into a structured, auditable catalogue 
 - [Section 9 — Geodesy, cartography, data infrastructure, privacy and semantics](09-geodesy-cartography-infrastructure.md): item-level extraction from source pages 18–20.
 
 The remaining sections stay available in the [original section map](../source-sections.md) and [page-by-page transcription](../../source-inventory/README.md). An item-level index will be added only after the relevant source pages have been reviewed; an absent index does not mean the section has been forgotten or discarded.
+
+- [Section 10 — Classical, statistical and computational additions](10-classical-statistical-computational-additions.md): item-level extraction from source pages 21–23.
+- [Section 11 — GeoAI, GeoFMs and computer vision additions](11-geoai-computer-vision-additions.md): item-level extraction from source pages 23–24; names are explicitly unverified in the source.
+- [Section 12 — Signal processing, GNSS, regional science and resilience](12-signal-gnss-regional-science.md): item-level extraction from source pages 24–26; the source describes these as methods borrowed from adjacent fields.
