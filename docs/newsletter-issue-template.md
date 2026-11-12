@@ -12,7 +12,7 @@ Explain the central idea in ordinary language. Give the reader a reason to keep 
 
 ## See it
 
-Use one small map, diagram, dataset or worked example. State what the reader should notice.
+Use the clearest available map, diagram, dataset or worked example. Prefer a properly licensed source figure when it explains the idea better than a new drawing; otherwise link to the original or make an original visual. State what the reader should notice and credit the source directly below the figure.
 
 ## What is happening underneath?
 
@@ -27,7 +27,7 @@ Define technical terms when they first become necessary. Do not hide important c
 
 ## Try it yourself
 
-Give the reader a short exercise or reproducible experiment. Link to the canonical algorithm record and tested code where available.
+Give the reader a short exercise or reproducible experiment. Link to the canonical algorithm record and tested code where available. Let readers predict first, run the example, change an input and compare what happened.
 
 ## Where this is useful
 
@@ -69,4 +69,6 @@ Primary references, evidence quality, unresolved questions and corrections.
 - Are versions, units, CRS and precision choices recorded where relevant?
 - Does the public edition provide real value on its own?
 - Does the member edition add meaningful depth rather than withholding the basic explanation?
+- Do equations render as mathematics, with every symbol explained?
+- Are diagrams legible, accessible and correctly attributed?
 - Are all links and references checked?
