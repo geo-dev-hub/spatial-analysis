@@ -72,10 +72,15 @@ Write down:
 
 Do not compare the raw numerical values directly. The statistics have different formulas and different null expectations.
 
+## 4. Find the places behind the global pattern
+
+[Read Local Moran's I](../algorithms/statistics/local-morans-i.md) and use its [interactive notebook](../notebooks/local-morans-i-lab.ipynb).
+
+This moves from one global summary to a statistic for each spatial unit. Learn the four quadrants (High–High, Low–Low, High–Low and Low–High), conditional permutations and the multiple-testing problem. A quadrant label alone is not evidence of significance.
+
 ## What comes next
 
 The next lessons in this path will cover:
-- local Moran's I and local indicators of spatial association (LISA);
 - local Geary and local contrasts;
 - Getis-Ord statistics for local and global concentrations;
 - multiple testing and false-discovery-rate correction;
