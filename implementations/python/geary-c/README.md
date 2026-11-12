@@ -40,6 +40,10 @@ python -m pytest -q
 
 The 16 tests cover hand-calculated examples, translation and scale invariance, weight scaling, the expected mean over all permutations for a symmetric graph, asymmetric weights and invalid inputs.
 
+## Step-by-step walkthrough
+
+Follow the [implementation walkthrough](implementation-walkthrough.md) to trace the weights validation, squared-difference numerator, total variation and final formula.
+
 ## Limits
 
 - The dense implementation uses (O(n^2)) time and (O(n^2)) weight storage.
