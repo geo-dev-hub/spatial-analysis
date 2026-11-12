@@ -46,7 +46,9 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 ## Another place to begin
 
-If you want to understand whether nearby places have similar values, follow the [global spatial autocorrelation path](global-spatial-autocorrelation.md). It introduces Moran's I and Geary's C, then moves to Local Moran's I, Local Geary and Getis-Ord G/Gi* for overall concentration and local hotspots, with worked examples and interactive notebooks.
+If you want to understand whether nearby places have similar values, follow the [spatial autocorrelation path](global-spatial-autocorrelation.md). It connects global and local Moran, Geary and Getis-Ord methods with worked examples and interactive notebooks.
+
+If you want to understand how a GIS searches large collections of features, start with [spatial indexing](spatial-indexing.md). The first lesson explains bounding boxes and STR-packed R-trees.
 
 ## The collection keeps growing
 
