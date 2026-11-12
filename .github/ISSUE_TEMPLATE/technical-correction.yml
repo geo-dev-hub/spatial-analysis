@@ -1,0 +1,38 @@
+name: Technical correction
+description: Report an error, unclear explanation, missing edge case or implementation issue.
+title: "[Correction] "
+labels: ["correction", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the collection. A small, specific report is useful.
+  - type: input
+    id: page
+    attributes:
+      label: Which page or file?
+      description: Link the relevant explanation, code example or exercise.
+      placeholder: https://github.com/geo-dev-hub/spatial-analysis/...
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should we look at?
+      description: Quote the relevant statement or describe the behaviour you noticed.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What supports the correction?
+      description: Include a paper, specification, official documentation, reproducible example or test case.
+    validations:
+      required: false
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: If you have a proposed correction, share it here.
+    validations:
+      required: false
