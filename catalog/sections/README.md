@@ -26,3 +26,8 @@ The remaining sections stay available in the [original section map](../source-se
 
 - [Section 17 — Geometry, scalable computation, design and siting](17-geometry-scalability-design-siting.md): item-level extraction from source pages 35–37.
 - [Section 18 — Moving objects, routing, transit, water and ice, emissions](18-moving-objects-routing-transit-water.md): item-level extraction from source pages 37–39; source warns that many names are from memory.
+
+- [Section 19 — African applications, addressing, finance, telecom and seismology](19-african-applications-addressing-finance.md): item-level extraction from source pages 39–41; source warns names and tools are from memory.
+- [Section 20 — Indices, microwave and thermal retrieval, event tracking and information theory](20-indices-microwave-events-information.md): item-level extraction from source pages 41–43; source warns names are from memory.
+- [Section 21 — Neural fields, climate ML, accounting, robust geometry and semantic maps](21-neural-fields-climate-accounting-robust-geometry.md): item-level extraction from source pages 43–45; source warns names are from memory.
+- [Section 22 — Inference, covariance, spherical statistics, asset mapping and monitoring](22-inference-covariance-spherical-asset-monitoring.md): item-level extraction from source pages 45–47; source warns names are from memory.
