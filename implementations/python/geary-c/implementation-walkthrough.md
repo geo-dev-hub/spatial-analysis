@@ -74,7 +74,7 @@ C = \frac{n-1}{2S_0}
 {\sum_i(x_i-\bar{x})^2}
 $$
 
-The factor (2S_0) accounts for the sum of weighted pairwise differences in the standard definition.
+The factor $2S_0$ accounts for the sum of weighted pairwise differences in the standard definition.
 
 ## 7. Why the tests include permutations
 
