@@ -35,6 +35,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
+| Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
 ## A growing collection, not a closed course
