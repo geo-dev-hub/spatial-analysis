@@ -26,7 +26,7 @@ You do not have to start at the beginning. You do not have to know everything be
 |---|---|
 | The building blocks of GIS | [Core GIS and geometry](learning-paths/README.md#start-with-a-problem) |
 | How spatial algorithms work | [Algorithm collection](algorithms/) |
-| Working examples and code | [Implementations](implementations/) |
+| Working examples and code | [Implementations](implementations/README.md) |
 | Testing speed and accuracy | [Benchmarks](benchmarks/) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
@@ -60,6 +60,8 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 
 ### First example
 
-[Polygon intersection](algorithms/geometry/polygon-intersection.md) is our first research draft. It looks at how two shapes overlap, why the result can be more complicated than it first appears, and what a geometry engine has to do to produce a reliable answer. It is still awaiting implementation and testing.
+Start with [polygon intersection](algorithms/geometry/polygon-intersection.md): how do we find the part shared by two shapes? Read the explanation, then [run the Python example](implementations/python/polygon-intersection/README.md) and its tests. The example is implemented with Shapely 2.1.2; the test suite has passed in the recorded environment.
+
+The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
 **Current stage:** the source collection and project foundations are in place. We are now turning the inventory into clear explanations, working examples and useful ways to learn.
