@@ -9,10 +9,11 @@ Every topic moves through a visible lifecycle:
 3. **Research** — collect primary and authoritative references; record disagreements and uncertainties.
 4. **Dossier** — write the canonical explanation using the dossier template.
 5. **Verification** — check mathematics, assumptions, examples, complexity statements and citations.
-6. **Implementation** — add a reference implementation or document why one is not appropriate.
-7. **Testing** — test normal cases, boundary cases, invalid inputs and numerical edge cases.
-8. **Publication** — select suitable public and member-facing derivatives; preserve the canonical record.
-9. **Maintenance** — version corrections and update references without erasing publication history.
+6. **Visual teaching** — choose the right diagram, map, plot or source figure; check readability, accessibility, attribution and reuse rights.
+7. **Implementation** — add a reference implementation or document why one is not appropriate.
+8. **Testing** — test normal cases, boundary cases, invalid inputs and numerical edge cases; run the automated checks where configured.
+9. **Publication** — select suitable public and member-facing derivatives; preserve the canonical record.
+10. **Maintenance** — version corrections and update references without erasing publication history.
 
 A topic may be useful before every stage is complete. Status must make its maturity clear.
 
@@ -79,11 +80,15 @@ Every implementation should identify:
 - expected output;
 - tests and known limitations.
 
-## 6. Manual-first production
+## 6. Continuous checks
+
+Where a runnable example has tests, configure automated checks to run them on changes. A green check is evidence that the recorded tests passed in that environment; it is not proof that every input or production workload is correct. Keep the input contract, known limitations and untested cases visible.
+
+## 7. Manual-first production
 
 The production process will initially be run manually and documented. Automate only steps that have become stable and repeatable. This reduces the risk of encoding a flawed editorial or technical process into automation.
 
-## 7. Quality states
+## 8. Quality states
 
 Use these states consistently:
 
