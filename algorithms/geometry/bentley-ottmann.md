@@ -44,9 +44,18 @@ When a segment enters or leaves, only its immediate neighbours can have become n
 
 The sweep does not inspect every pair. It maintains just enough local information to discover the next event.
 
-![A schematic view of the sweep line and the status order](../../assets/bentley-ottmann-sweep.svg)
+### See the original diagrams
 
-*Figure 1. A conceptual snapshot. The dashed vertical line is the sweep line. The two highlighted segments meet at the event point; their vertical order changes as the sweep passes the crossing. The drawing is schematic, not to scale.*
+Before using our schematic, it is worth seeing the algorithm explained visually by people who teach computational geometry:
+
+- **Laura Toma, Bowdoin College — [Bentley–Ottmann sweep lecture slides (PDF)](https://tildesites.bowdoin.edu/~ltoma/teaching/cs3250-CompGeom/spring18/Lectures/cg-bentleyottman.pdf).** The slide sequence shows the active-segment order, neighbour checks, event insertion and status swaps step by step. It is especially useful for following the algorithm through a sequence of events.
+- **Pat Morin, Carleton University — [Plane Sweep lecture notes (PDF)](https://patmorin.me/teaching/2402/notes/planesweep.pdf).** Includes diagrams of the sweep and explains why intersecting segments become adjacent before they cross.
+
+These are linked to their original hosts rather than copied into this repository. We could not establish an explicit reuse licence for the diagrams from the materials reviewed, so attribution alone is not being treated as permission to redistribute them. The project schematic below is an original supplementary drawing, not a replacement for the source teaching figures.
+
+![An original schematic of a sweep line and status order](../../assets/bentley-ottmann-sweep.svg)
+
+*Figure 1. Project-created conceptual illustration. For full event-by-event visual traces, use the linked lecture slides above.*
 
 ## 4. In one minute
 
@@ -271,9 +280,11 @@ The algorithm works in a planar coordinate system. Applying it directly to longi
 
 1. Bentley, J. L. and Ottmann, T. A. (1979). “Algorithms for Reporting and Counting Geometric Intersections.” *IEEE Transactions on Computers*, C-28(9), 643–647. https://doi.org/10.1109/TC.1979.1675432. Original paper introducing the reporting algorithm and its plane-sweep approach.
 2. Boissonnat, J.-D. and Preparata, F. P. (2000). “Robust Plane Sweep for Intersecting Segments.” *SIAM Journal on Computing*, 29(5), 1401–1421. https://doi.org/10.1137/S0097539797329373. Analyses numerical sensitivity and robust variants.
-3. Goodrich, M. T. and Wenk, C. “Line Segment Intersection” lecture notes, University of California, Irvine. https://ics.uci.edu/~goodrich/teach/geom/notes/LineSweep.pdf. Presents the event queue, status structure, assumptions and complexity.
-4. de Berg, M., Cheong, O., van Kreveld, M. and Overmars, M. *Computational Geometry: Algorithms and Applications*. Springer. Standard textbook treatment of plane-sweep algorithms and segment intersection.
-5. User-supplied *Spatial Analysis Algorithms: Complete Compendium*, section 1, page 1. The source inventory identifies Bentley–Ottmann under segment intersection; see [source inventory](../../source-inventory/README.md).
+3. Toma, L. “Line Segment Intersection,” CSCI 3250 Computational Geometry lecture slides, Bowdoin College. https://tildesites.bowdoin.edu/~ltoma/teaching/cs3250-CompGeom/spring18/Lectures/cg-bentleyottman.pdf. A useful visual walkthrough of the event sequence and status changes; linked, not reproduced.
+4. Morin, P. “Plane Sweep,” COMP2402/2002 lecture notes, Carleton University. https://patmorin.me/teaching/2402/notes/planesweep.pdf. Includes sweep-line diagrams and a correctness/complexity explanation; linked, not reproduced.
+5. Goodrich, M. T. and Wenk, C. “Line Segment Intersection” lecture notes, University of California, Irvine. https://ics.uci.edu/~goodrich/teach/geom/notes/LineSweep.pdf. Presents the event queue, status structure, assumptions and complexity.
+6. de Berg, M., Cheong, O., van Kreveld, M. and Overmars, M. *Computational Geometry: Algorithms and Applications*. Springer. Standard textbook treatment of plane-sweep algorithms and segment intersection.
+7. User-supplied *Spatial Analysis Algorithms: Complete Compendium*, section 1, page 1. The source inventory identifies Bentley–Ottmann under segment intersection; see [source inventory](../../source-inventory/README.md).
 
 ## 16. What remains uncertain
 
