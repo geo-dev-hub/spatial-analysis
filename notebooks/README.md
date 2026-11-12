@@ -23,7 +23,18 @@ python -m pip install jupyterlab
 jupyter lab
 ```
 
-Open the notebook from JupyterLab and run the cells in order. You can also open [Moran's I in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb) or [Geary's C in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb), or [Local Moran's I in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb), or [Local Geary in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-geary-lab.ipynb), or [Getis-Ord Gi* in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/getis-ord-gi-star-lab.ipynb), or [Global Getis-Ord G in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-getis-ord-g-lab.ipynb), or [STR-packed R-tree in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/str-packed-rtree-lab.ipynb), or [Spatial join in Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb).
+Open the notebook from JupyterLab and run the cells in order.
+
+### Open a lab in Google Colab
+
+- [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
+- [Global Geary's C](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb)
+- [Local Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb)
+- [Local Geary](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-geary-lab.ipynb)
+- [Global Getis-Ord G](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-getis-ord-g-lab.ipynb)
+- [Getis-Ord Gi*](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/getis-ord-gi-star-lab.ipynb)
+- [STR-packed R-tree](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/str-packed-rtree-lab.ipynb)
+- [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 
 The repository workflow also executes all eight notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
 
