@@ -17,6 +17,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Local Geary](statistics/local-geary.md) — measure local similarity and dissimilarity directly between a unit and its neighbours.
 - [Getis-Ord Gi*](statistics/getis-ord-gi-star.md) — identify local concentrations of high values (hotspots) and low values (coldspots).
 
+### Supplementary companion method
+
+- [Global Getis-Ord G](statistics/global-getis-ord-g.md) — a supplementary global concentration statistic added to explain the source-listed local Gi* method; it is not a separate entry in the original compendium.
+
 ## A connected place to start
 
 The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The [global spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) starts with Moran's I and Geary's C, two complementary ways to measure spatial association.
