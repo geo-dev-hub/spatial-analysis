@@ -1,0 +1,95 @@
+# Geometry foundations: how points, lines and areas relate
+
+<small>Four connected lessons · Start with a map question · Work through the examples in Python</small>
+
+A point falls inside a boundary. Two lines cross. Two areas overlap. A whole network of lines has thousands of crossings.
+
+These sound like separate tasks, but they build on a small set of geometric ideas. This path takes you from one location to a collection of intersecting segments.
+
+You can follow the sequence or jump to the lesson that answers your immediate question.
+
+## Before you begin
+
+You should be comfortable with:
+- reading an x,y coordinate pair;
+- understanding a line segment as two endpoints;
+- recognising a polygon as a closed boundary.
+
+You do not need advanced mathematics or prior experience with computational geometry. Each lesson introduces the ideas it needs.
+
+## Follow the four lessons
+
+### 1. Is the point inside the area?
+
+[Point in polygon](../algorithms/geometry/point-in-polygon.md)
+
+Start with a familiar map question: does this location fall inside a park, service area or administrative boundary?
+
+You will learn:
+- the difference between inside, outside and boundary;
+- how ray crossing counts intersections;
+- why vertex and edge cases need deliberate handling;
+- how winding number offers a related way to describe the interior.
+
+**Try it:** move a point around a square, then test a concave polygon. Run the [Python example](../implementations/python/point-in-polygon/README.md).
+
+### 2. Do these two lines meet?
+
+[Segment intersection](../algorithms/geometry/segment-intersection.md)
+
+Now look at the boundaries themselves. Given two line segments, determine whether they are separate, meet at one point or overlap along part of their length.
+
+You will learn:
+- the orientation test and signed area;
+- how to detect a proper crossing;
+- why endpoint touches and collinear overlaps are separate cases;
+- how exact integer predicates and rational coordinates help in a restricted teaching implementation.
+
+**Try it:** change the endpoints and predict the result before running the [Python example](../implementations/python/segment-intersection/README.md).
+
+### 3. What part of two areas do they share?
+
+[Polygon intersection](../algorithms/geometry/polygon-intersection.md)
+
+Use the ideas from point location and segment intersection to understand a full geometry overlay. The output may be an area, a line, a point or an empty geometry.
+
+You will learn:
+- the difference between an intersection predicate and an intersection operation;
+- how noding turns crossings into explicit vertices;
+- how a geometry engine selects and assembles the shared result;
+- why precision, invalid inputs and dimensional collapse matter.
+
+**Try it:** run the [Shapely example](../implementations/python/polygon-intersection/README.md), then change the rectangles so they overlap, touch or separate.
+
+### 4. How do we find every crossing in a large set?
+
+[Bentley–Ottmann](../algorithms/geometry/bentley-ottmann.md)
+
+The pairwise test works for two segments. But if you have thousands, checking every pair can waste a lot of work. The sweep-line algorithm keeps track of active segments and tests only newly adjacent pairs under its stated assumptions.
+
+You will learn:
+- how an event queue and sweep status work together;
+- why intersecting segments become neighbours before they cross;
+- how the status order changes at an event;
+- why degeneracies and data-structure choices affect real implementations.
+
+**Try it:** follow the [step-by-step implementation walkthrough](../implementations/python/bentley-ottmann/implementation-walkthrough.md), run both implementations and compare them with the all-pairs oracle.
+
+## What connects the lessons?
+
+- Point-in-polygon asks where a point sits relative to a boundary.
+- Segment intersection asks how two boundary pieces meet.
+- Polygon intersection uses those relationships to construct a shared geometry.
+- Bentley–Ottmann scales the search for segment crossings across a set of segments.
+
+The path ends with a useful distinction: knowing how to test one pair is not the same as finding every intersecting pair efficiently.
+
+## Check what you can now explain
+
+1. Why should a point on a polygon edge not be silently treated as an ordinary inside point?
+2. What does the sign of an orientation determinant tell you?
+3. Why can the intersection of two polygons be a line or point rather than an area?
+4. Why does Bentley–Ottmann test neighbouring segments instead of every pair?
+5. Which assumptions would you need to check before using the teaching implementation on real GIS data?
+
+If you can explain those answers and reproduce the examples, you have a solid first foundation. The next part of the Core GIS collection will extend these ideas into spatial indexes, proximity queries and network analysis.
