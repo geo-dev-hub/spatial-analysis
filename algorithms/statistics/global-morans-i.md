@@ -32,7 +32,7 @@ The spatial weights matrix $W$ records the neighbourhood relationships. The valu
 
 ## 4. In one minute
 
-Let $x_i$ be the observed value for unit $i$, and let $z_i=x_i-ar{x}) be its deviation from the overall mean. Let $S_0$ be the sum of all weights:
+Let $x_i$ be the observed value for unit $i$, and let $z_i=x_i-\\bar{x}$ be its deviation from the overall mean. Let $S_0$ be the sum of all weights:
 
 $$
 S_0 = \sum_{i=1}^{n}\sum_{j=1}^{n} w_{ij}
