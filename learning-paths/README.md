@@ -40,6 +40,10 @@ You do not need to memorise everything on the first read. Try this simple cycle:
 
 Some topics benefit from a notebook, map, animation or benchmark. We will use those when they make the idea clearer—not simply to add more tools.
 
+## A first path to follow
+
+[Geometry foundations: how points, lines and areas relate](geometry-foundations.md) connects four lessons—from testing one point against a boundary to finding crossings across a whole set of segments. It includes runnable examples and a step-by-step implementation walkthrough.
+
 ## The collection keeps growing
 
 Each method has its own permanent page. New weekly editions introduce and explore topics, while the learning paths bring those topics together in useful sequences. That means the order in which something was published does not decide the order in which you have to learn it.
