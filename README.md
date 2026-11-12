@@ -79,6 +79,8 @@ A third is [segment intersection](algorithms/geometry/segment-intersection.md): 
 
 Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. You can also [run the restricted Python teaching implementation](implementations/python/bentley-ottmann/README.md) and follow its [step-by-step walkthrough](implementations/python/bentley-ottmann/implementation-walkthrough.md); its nine tests compare results with the pairwise method.
 
+Start exploring spatial patterns with [Global Moran's I](algorithms/statistics/global-morans-i.md). The lesson includes a worked calculation, a tested Python implementation and an [interactive notebook](notebooks/global-morans-i-lab.ipynb) for inspecting spatial weights, the Moran scatterplot and a permutation distribution.
+
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
 **Current stage:** the source collection and project foundations are in place. We are now turning the inventory into clear explanations, working examples and useful ways to learn.
