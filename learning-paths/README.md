@@ -44,6 +44,10 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 [Geometry foundations: how points, lines and areas relate](geometry-foundations.md) connects four lessons—from testing one point against a boundary to finding crossings across a whole set of segments. It includes runnable examples and a step-by-step implementation walkthrough.
 
+## Another place to begin
+
+If you want to understand why similar values appear near one another, start with [Global Moran's I](../algorithms/statistics/global-morans-i.md). It is the first spatial-statistics lesson; related measures and local methods will be added as they are researched.
+
 ## The collection keeps growing
 
 Each method has its own permanent page. New weekly editions introduce and explore topics, while the learning paths bring those topics together in useful sequences. That means the order in which something was published does not decide the order in which you have to learn it.
