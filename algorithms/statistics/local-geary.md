@@ -14,20 +14,20 @@ It is a Local Indicator of Spatial Association (LISA). Small local values point 
 
 ## The local statistic
 
-For location (i), Local Geary uses the weighted squared differences between the focal value and its neighbours:
+For location $i$, Local Geary uses the weighted squared differences between the focal value and its neighbours:
 
 $$
 c_i = \sum_{j=1}^{n} w_{ij}(x_i-x_j)^2
 $$
 
 where:
-- (x_i) is the value at location (i);
-- (x_j) is the value at neighbouring location (j);
-- (w_{ij}) is the spatial weight connecting them.
+- $x_i$ is the value at location $i$;
+- $x_j$ is the value at neighbouring location $j$;
+- $w_{ij}$ is the spatial weight connecting them.
 
 This is the local counterpart to the pairwise-difference idea behind global Geary's C. It does not compare the focal value with the overall mean.
 
-A small (c_i), relative to its reference distribution, suggests the focal location has similar neighbours. A large (c_i) suggests dissimilar neighbours and a possible spatial outlier.
+A small $c_i$, relative to its reference distribution, suggests the focal location has similar neighbours. A large $c_i$ suggests dissimilar neighbours and a possible spatial outlier.
 
 ## What the result can look like
 
