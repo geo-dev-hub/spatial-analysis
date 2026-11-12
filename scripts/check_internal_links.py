@@ -17,9 +17,6 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK_RE = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
-FENCE_RE = re.compile(r"^\s{0,3}(`{3,}|~{3,}).*$", re.MULTILINE)
-
-
 def strip_fenced_code(text: str) -> str:
     """Remove fenced code blocks so example URLs are not treated as links."""
     output: list[str] = []
