@@ -225,11 +225,11 @@ A reliable implementation should be built in stages:
 6. **Test against the oracle:** generate small segment sets, compare the sweep's output with all-pairs output, and retain every discovered failure as a regression test.
 7. **Benchmark separately:** measure sparse and dense intersection cases. Report the actual data structure and its cost.
 
-The first restricted implementation is now available at [Bentley–Ottmann with Python](../../implementations/python/bentley-ottmann/README.md). It uses a heap for events and a Python list for status so the event logic stays visible. It is a teaching implementation, not a production solver, and it does not achieve the abstract balanced-tree time bound.
+The restricted implementation is available at [Bentley–Ottmann with Python](../../implementations/python/bentley-ottmann/README.md), with an [intern-ready walkthrough](../../implementations/python/bentley-ottmann/implementation-walkthrough.md). It uses a heap for events and a Python list for status so the event logic stays visible. It is a teaching implementation, not a production solver, and it does not achieve the abstract balanced-tree time bound.
 
 ## 12. Tests: current coverage and what comes next
 
-The current Python prototype has eight tests, including exact-coordinate assertions, contract checks, changing-status cases and seeded differential tests against the pairwise oracle. The next test expansion should cover:
+The current Python prototype has nine tests, including exact-coordinate assertions, contract checks, changing-status cases and seeded differential tests against the pairwise oracle. The next test expansion should cover:
 
 - no intersections;
 - one proper crossing;
