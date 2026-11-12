@@ -80,6 +80,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods and six interactive notebooks. The six Python example suites and notebook execution are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples, and a first spatial-autocorrelation path with six researched methods, plus a first spatial-indexing lesson. Seven interactive notebooks and seven Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
