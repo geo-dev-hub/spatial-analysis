@@ -45,6 +45,24 @@ If each segment's endpoints lie on opposite sides of the other segment's support
 
 The orientation test is the key building block. The boundary and collinear cases are not optional extras: without them, a segment-intersection routine will fail on ordinary map data.
 
+```mermaid
+flowchart TD
+    A["Given closed segments AB and CD"] --> B["Compute four orientation values"]
+    B --> C{"Are all four zero?"}
+    C -- "Yes" --> D["Project onto one axis and compare intervals"]
+    D --> E["Return none, point or overlap"]
+    C -- "No" --> F{"Does any orientation equal zero?"}
+    F -- "Yes" --> G["Check each collinear endpoint lies on the other segment"]
+    G --> H{"Any endpoint contact?"}
+    H -- "Yes" --> I["Return point"]
+    H -- "No" --> J{"Do both endpoint pairs straddle?"}
+    F -- "No" --> J
+    J -- "Yes" --> K["Return proper crossing point"]
+    J -- "No" --> L["Return none"]
+```
+
+This decision path separates the easy general-position case from the boundary cases that make a complete closed-segment predicate reliable.
+
 ## 4. Formal foundations
 
 For points $A=(x_1,y_1)$, $B=(x_2,y_2)$ and $C=(x_3,y_3)$, define the orientation determinant:
