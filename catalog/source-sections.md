@@ -16,8 +16,8 @@ This map records the original 22 numbered sections in *Spatial Analysis Algorith
 | 10 | Additions: classical, statistical and computational methods | 21–23 |
 | 11 | Additions: GeoAI, GeoFMs and computer vision | 23–24 |
 | 12 | Additions: signal processing, GNSS, regional science, resilience | 24–26 |
-| 13 | Additions: GeoFM workflows, urban and mobility foundation models, geo-LLMs | 26–27 |
-| 14 | Additions: databases, graphics, morphology, hazards, inventory, cartographic math | 28–29 |
+| 13 | Additions: GeoFM workflows, urban and mobility foundation models, geo-LLMs | 26–28 |
+| 14 | Additions: databases, graphics, morphology, hazards, inventory, cartographic math | 28–30 |
 | 15 | Additions: vision backbones, registration, vector extraction, hydrology ML | 30–31 |
 | 16 | Additions: flows, regions, deformation, marine, biodiversity, humanitarian | 32–34 |
 | 17 | Additions: geometry II, scalable computation, design, siting, implementations | 35–36 |
