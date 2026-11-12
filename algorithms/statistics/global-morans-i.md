@@ -177,6 +177,7 @@ Do not interpret the statistic without reporting:
 
 The accompanying reference implementation calculates the statistic from a dense weights matrix and includes a row-standardisation helper. It deliberately does not calculate analytical or permutation (p)-values.
 
+- [Interactive Jupyter lab](../../notebooks/global-morans-i-lab.ipynb)
 - [Python implementation and walkthrough](../../implementations/python/global-morans-i/README.md)
 - [Implementation source](../../implementations/python/global-morans-i/moran_i.py)
 - [Tests](../../implementations/python/global-morans-i/test_moran_i.py)
