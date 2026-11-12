@@ -58,7 +58,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all six Python examples and execute both spatial-statistics notebooks.
-- [ ] Confirm successful Actions runs and repair any failures.
+- [x] Confirm successful Actions runs for all six Python test suites and both notebooks.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
