@@ -31,6 +31,9 @@ jobs:
           - example: bentley-ottmann
             directory: implementations/python/bentley-ottmann
             pythonpath: "../segment-intersection"
+          - example: global-morans-i
+            directory: implementations/python/global-morans-i
+            pythonpath: ""
 
     steps:
       - name: Check out repository
