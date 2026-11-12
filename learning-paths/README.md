@@ -27,6 +27,19 @@ These are starting points, not locked courses.
 
 You can move between paths. You can revisit a topic. You can begin with a practical question and learn the foundations along the way.
 
+## A good way to work through a method
+
+You do not need to memorise everything on the first read. Try this simple cycle:
+
+1. **Read the question.** Make sure you understand what the method is trying to do.
+2. **Look at the picture.** Follow the geometry, data flow or sequence of events.
+3. **Work through a small example.** Predict the answer before looking at the result.
+4. **Run the code.** Change an input and see what happens.
+5. **Check the edge cases.** Use the tests to understand where the simple example stops being enough.
+6. **Explain it in your own words.** If you can describe why the method works and when it might fail, you are ready to go further.
+
+Some topics benefit from a notebook, map, animation or benchmark. We will use those when they make the idea clearer—not simply to add more tools.
+
 ## The collection keeps growing
 
 Each method has its own permanent page. New weekly editions introduce and explore topics, while the learning paths bring those topics together in useful sequences. That means the order in which something was published does not decide the order in which you have to learn it.
