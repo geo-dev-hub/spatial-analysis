@@ -47,7 +47,7 @@ The orientation test is the key building block. The boundary and collinear cases
 
 ## 4. Formal foundations
 
-For points A=(x₁,y₁), B=(x₂,y₂) and C=(x₃,y₃), define the orientation determinant:
+For points $A=(x_1,y_1)$, $B=(x_2,y_2)$ and $C=(x_3,y_3)$, define the orientation determinant:
 
 \[
 \operatorname{orient}(A,B,C) =
@@ -105,7 +105,7 @@ This does not establish a production-grade solution for arbitrary floating-point
 
 For one pair of segments, the algorithm performs a fixed number of arithmetic operations and comparisons: **O(1) time and O(1) auxiliary space**, treating integer arithmetic as constant-cost at the usual algorithm-analysis level. For very large integer coordinates, bit complexity is not constant.
 
-For n segments, testing every unordered pair requires:
+For $n$ segments, testing every unordered pair requires:
 
 \[
 \binom{n}{2} = \frac{n(n-1)}{2} = O(n^2)
