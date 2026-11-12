@@ -18,8 +18,8 @@ This map records the original 22 numbered sections in *Spatial Analysis Algorith
 | 12 | Additions: signal processing, GNSS, regional science, resilience | 24–26 |
 | 13 | Additions: GeoFM workflows, urban and mobility foundation models, geo-LLMs | 26–28 |
 | 14 | Additions: databases, graphics, morphology, hazards, inventory, cartographic math | 28–30 |
-| 15 | Additions: vision backbones, registration, vector extraction, hydrology ML | 30–31 |
-| 16 | Additions: flows, regions, deformation, marine, biodiversity, humanitarian | 32–34 |
+| 15 | Additions: vision backbones, registration, vector extraction, hydrology ML | 31–33 |
+| 16 | Additions: flows, regions, deformation, marine, biodiversity, humanitarian | 33–34 |
 | 17 | Additions: geometry II, scalable computation, design, siting, implementations | 35–36 |
 | 18 | Additions: moving objects, routing, transit, water and ice, emissions, data-quality statistics | 37–38 |
 | 19 | Additions: African applications, addressing, finance, telecom, seismology, pitfalls | 39–40 |
