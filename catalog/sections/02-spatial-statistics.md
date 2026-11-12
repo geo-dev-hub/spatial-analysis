@@ -4,7 +4,7 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md)
+- **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md)
 
 The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
 
