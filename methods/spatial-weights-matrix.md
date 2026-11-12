@@ -34,7 +34,7 @@ $$
 w_{ii}=0
 $$
 
-A spatial lag applies the weights to a variable (y):
+A spatial lag applies the weights to a variable $y$:
 
 $$
 (Wy)_i = \sum_{j=1}^{n}w_{ij}y_j
