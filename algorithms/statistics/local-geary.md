@@ -1,6 +1,6 @@
 # Local Geary: where are neighbouring values alike or different?
 
-Stable ID: `SA-STAT-LOCAL-GEARY` · Draft 0.1 · Source compendium section 2
+Stable ID: `SA-STAT-LOCAL-GEARY` · Draft 0.1 · Supplementary method, added as a companion to the source-listed global Geary's C and Local Moran's I
 
 ## Start with neighbouring differences
 
