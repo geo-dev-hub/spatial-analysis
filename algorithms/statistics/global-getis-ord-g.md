@@ -16,7 +16,7 @@ It does not tell us where the concentrations occur. The local Gi* statistic answ
 
 ## The statistic
 
-For positive values (x_i) and spatial weights (w_{ij}), the global statistic is:
+For positive values $x_i$ and spatial weights $w_{ij}$, the global statistic is:
 
 $$
 G = \frac{\sum_{i=1}^{n}\sum_{j\ne i}w_{ij}x_i x_j}
@@ -25,7 +25,7 @@ $$
 
 The diagonal is excluded: a unit is not paired with itself in this global statistic.
 
-Let (S_0) be the sum of the spatial weights:
+Let $S_0$ be the sum of the spatial weights:
 
 $$
 S_0 = \sum_{i=1}^{n}\sum_{j=1}^{n}w_{ij}
