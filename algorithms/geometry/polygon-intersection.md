@@ -40,6 +40,12 @@ Picture two transparent filled shapes laid over one another. Keep the places cov
 
 The hard part begins when their edges cross, touch, overlap or almost line up. A computer has to decide exactly where the shared region begins and ends, even though coordinates are stored with finite numerical precision.
 
+### See how overlay operations differ
+
+![A comparison of polygon overlay operations including intersection, union, difference and clipping](https://upload.wikimedia.org/wikipedia/commons/c/c2/Vector_Overlay_Operators.png)
+
+*Figure 1. “Vector Overlay Operators,” by Bplewe, Wikimedia Commons. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reproduced unchanged. The figure compares several common overlay operations; focus on the row labelled “intersect” for this lesson. [Source and licence record](https://commons.wikimedia.org/wiki/File:Vector_Overlay_Operators.png).
+
 ## 4. Formal foundations
 
 For point sets A and B, intersection is the greatest set contained in both A and B. It is commutative and associative:
