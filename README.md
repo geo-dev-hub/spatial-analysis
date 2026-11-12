@@ -53,6 +53,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 
 - [How we research and explain a method](docs/project-method.md)
 - [How we write and teach](docs/voice-and-writing.md)
+- [How we reuse and attribute visual sources](docs/visual-sources-and-attribution.md)
 - [How we check technical claims](docs/research-standard.md)
 - [How to contribute](CONTRIBUTING.md)
 - [The writing and teaching principles](docs/voice-and-writing.md)
