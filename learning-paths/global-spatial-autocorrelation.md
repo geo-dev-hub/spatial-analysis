@@ -78,10 +78,15 @@ Do not compare the raw numerical values directly. The statistics have different 
 
 This moves from one global summary to a statistic for each spatial unit. Learn the four quadrants (High–High, Low–Low, High–Low and Low–High), conditional permutations and the multiple-testing problem. A quadrant label alone is not evidence of significance.
 
+## 5. Find local differences between neighbours
+
+[Read Local Geary](../algorithms/statistics/local-geary.md) and use its [interactive notebook](../notebooks/local-geary-lab.ipynb).
+
+Local Geary compares a unit directly with its neighbours through squared differences. It complements Local Moran: one emphasizes local pairwise contrast, while the other uses the focal value and the neighbourhood lag relative to the overall mean.
+
 ## What comes next
 
 The next lessons in this path will cover:
-- local Geary and local contrasts;
 - Getis-Ord statistics for local and global concentrations;
 - multiple testing and false-discovery-rate correction;
 - spatial correlograms and how association changes with distance.
