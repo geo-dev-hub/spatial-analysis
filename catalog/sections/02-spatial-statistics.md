@@ -4,9 +4,9 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Local Geary](../../algorithms/statistics/local-geary.md)
+- **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Local Geary](../../algorithms/statistics/local-geary.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
 
-The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
+The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lesson is a supplementary companion added to explain the source-listed local Gi* method; it is not a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
 
 ## Autocorrelation and local statistics
 
