@@ -1,6 +1,6 @@
 # Bentley–Ottmann with Python
 
-A small, exact-arithmetic teaching implementation for a restricted general-position input.
+A small, exact-arithmetic teaching implementation for a restricted general-position input. Start with the [step-by-step implementation walkthrough](implementation-walkthrough.md) if you want to follow the code as an intern or first-time contributor.
 
 ## Run it
 
