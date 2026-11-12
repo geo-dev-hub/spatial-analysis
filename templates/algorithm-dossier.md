@@ -8,75 +8,79 @@
 - **Related records:** 
 - **Prerequisites:** 
 
-## 1. In one minute
+## 1. Start here
 
-A concise, technically accurate explanation.
+Open with a familiar question, situation or decision that makes the method matter. Avoid jargon in the first paragraph.
 
 ## 2. The problem
 
-What problem does this method solve? What are its inputs and outputs?
+What are we trying to find out or do? What are the inputs and outputs?
 
-## 3. Intuition
+## 3. The simple idea
 
-Explain the idea with a small example or diagram description.
+Explain the central idea in plain language, then use a small example or diagram description.
 
-## 4. Formal foundations
+## 4. In one minute
+
+Give a concise, technically accurate summary that a reader can keep in mind as they go deeper.
+
+## 5. Formal foundations
 
 Definitions, notation, assumptions and mathematical formulation.
 
-## 5. Method
+## 6. Method
 
 Step-by-step algorithm and pseudocode.
 
-## 6. Correctness and guarantees
+## 7. Correctness and guarantees
 
 What is guaranteed? Under which assumptions? Is the method exact, approximate, heuristic or stochastic?
 
-## 7. Complexity
+## 8. Complexity
 
 Time and space complexity. State the input-size variables and computational model. Separate theoretical bounds from observed implementation performance.
 
-## 8. Numerical and geometric considerations
+## 9. Numerical and geometric considerations
 
 Precision model, tolerances, degeneracies, CRS, units, topology and robustness concerns, as applicable.
 
-## 9. Edge cases and failure modes
+## 10. Edge cases and failure modes
 
 | Case | Expected behaviour | Test or evidence |
 |---|---|---|
 | | | |
 
-## 10. Worked example
+## 11. Try a worked example
 
 A small, reproducible example with expected output.
 
-## 11. Implementations
+## 12. Implementations
 
 | Library / implementation | Version | Relevant API | Notes |
 |---|---|---|---|
 | | | | |
 
-## 12. Tests and reproducibility
+## 13. How we test it
 
 Environment, dependencies, commands, fixtures, expected results and test coverage.
 
-## 13. Alternatives and trade-offs
+## 14. Alternatives and trade-offs
 
 Compare methods only on criteria supported by evidence.
 
-## 14. Applications
+## 15. Where it is useful
 
 Practical use cases and domain-specific cautions.
 
-## 15. Exercises
+## 16. Have a go
 
 Beginner, intermediate and advanced exercises. Keep solutions separate where appropriate.
 
-## 16. References
+## 17. References
 
 1. 
 
-## 17. Open questions
+## 18. What remains uncertain
 
 Unverified claims, unresolved trade-offs and future experiments.
 
