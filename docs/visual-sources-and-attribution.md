@@ -46,7 +46,7 @@ The following sources have been checked for the specific figure used in the link
 
 Both licences permit sharing and commercial use with attribution and share-alike obligations. The figures are embedded from their original Wikimedia Commons hosts, not copied into this repository. If we later download, modify, package or redistribute either asset, re-check the file page and preserve the licence requirements for that specific use.
 
-For segment intersection, the [UPC Computational Geometry orientation-test lecture PDF](https://dccg.upc.edu/wp-content/uploads/2021/09/GeoC-Orientation-tests-R.pdf) contains useful diagrams for point-line orientation and segment crossing. We have not verified a reuse licence for those slides, so the repository links to the source rather than embedding or copying its figures.
+For [segment intersection](../algorithms/geometry/segment-intersection.md), the [UPC Computational Geometry orientation-test lecture PDF](https://dccg.upc.edu/wp-content/uploads/2021/09/GeoC-Orientation-tests-R.pdf) contains useful diagrams for point-line orientation and segment crossing. We have not verified a reuse licence for those slides, so the repository links to the source rather than embedding or copying its figures.
 
 ## Before publishing a visual
 
