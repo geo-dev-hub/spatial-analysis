@@ -37,7 +37,26 @@ Each node stores:
 - a parent reference;
 - the size of its subtree.
 
+
 The in-order traversal is the current bottom-to-top status. The node's position is implicit in the shape of the tree.
+
+### Watch the order change at a crossing
+
+Suppose the two middle segments meet. Before the event, the status sequence is:
+
+```mermaid
+flowchart LR
+    A["S1 · lower"] --> B["S2"] --> C["S3"] --> D["S4 · upper"]
+```
+
+Immediately after the crossing, the two middle nodes exchange positions:
+
+```mermaid
+flowchart LR
+    A["S1 · lower"] --> C["S3"] --> B["S2"] --> D["S4 · upper"]
+```
+
+These are status sequences, not diagrams of the treap's internal parent/child links. The implementation changes the sequence with split and merge operations while keeping each segment's node identity intact.
 
 | Operation | How it works | Expected time |
 |---|---|---:|
