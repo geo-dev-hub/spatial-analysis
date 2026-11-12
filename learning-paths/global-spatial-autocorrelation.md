@@ -24,7 +24,7 @@ You do not need to know spatial statistics already. The lessons introduce the ke
 
 ### 1. Decide what counts as a neighbour
 
-Start with the idea of a spatial weights matrix. It turns a map into a set of relationships.
+Start with the [spatial weights matrix lesson](../methods/spatial-weights-matrix.md) and its [interactive notebook](../notebooks/spatial-weights-lab.ipynb). It turns a map into a set of relationships.
 
 Understand:
 - Queen and Rook contiguity;
