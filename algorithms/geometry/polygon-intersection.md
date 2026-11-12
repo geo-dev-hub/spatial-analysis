@@ -136,7 +136,7 @@ Its area is \((4-2)(3-1)=4\) square coordinate units.
 
 This simple example avoids degeneracies. It does not test coincident boundaries, holes, multipart geometries, invalid rings or floating-point robustness.
 
-## 11. Where you can use it
+## 11. Software that provides this operation
 
 | Library / implementation | Relevant API / method | Notes |
 |---|---|---|
