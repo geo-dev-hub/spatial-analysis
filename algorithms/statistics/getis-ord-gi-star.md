@@ -24,12 +24,12 @@ The result is a local statistic and z-score for every location. The z-score and 
 
 ## Why the asterisk matters
 
-Getis-Ord's local (G_i) and (G_i^*) are related, but they do not use the same neighbourhood sum.
+Getis-Ord's local $G_i$ and $G_i^*$ are related, but they do not use the same neighbourhood sum.
 
-- (G_i) excludes the focal observation.
-- (G_i^*) includes the focal observation.
+- $G_i$ excludes the focal observation.
+- $G_i^*$ includes the focal observation.
 
-The star is not decoration. It changes which values contribute to the local sum. This lesson focuses on (G_i^*), the commonly used hotspot statistic.
+The star is not decoration. It changes which values contribute to the local sum. This lesson focuses on $G_i^*$, the commonly used hotspot statistic.
 
 ## Choose the weights deliberately
 
@@ -37,7 +37,7 @@ For the standard Gi* workflow, use binary spatial weights and explicitly include
 
 - A weight of one means the unit contributes to the focal location's neighbourhood sum.
 - A weight of zero means it does not contribute.
-- The focal unit must be included for (G_i^*).
+- The focal unit must be included for $G_i^*$.
 
 The official PySAL example uses a binary contiguity graph and `star=True`. Do not row-standardise the weights by habit. If you change the weight transformation, you change the statistic and its interpretation.
 
