@@ -5,6 +5,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ## Available labs
 
 - [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag and enumerate a small permutation distribution.
+- [Global Geary's C](gearys-c-lab.ipynb): compare squared differences between neighbours, contrast similar and alternating values, and inspect all 24 permutations of a four-unit example.
 
 ## Run a notebook
 
@@ -18,6 +19,6 @@ jupyter lab
 
 Open the notebook from JupyterLab and run the cells in order. You can also use [Google Colab](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb).
 
-The repository workflow also executes the notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
+The repository workflow also executes both notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
