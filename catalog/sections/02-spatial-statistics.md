@@ -4,7 +4,8 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Local Geary](../../algorithms/statistics/local-geary.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
+- **Source-derived records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
+- **Supplementary companions:** [Local Geary](../../algorithms/statistics/local-geary.md); [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md)
 
 The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Local Geary](../../algorithms/statistics/local-geary.md) and [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lessons are supplementary companions added during research; neither is a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
 
