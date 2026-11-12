@@ -47,17 +47,17 @@ A second important approach uses the **winding number**: how many times, and in 
 
 ## 4. Formal foundations
 
-Let the polygon boundary be a closed sequence of vertices (v_0, v_1, \ldots, v_{n-1}), with the final edge connecting (v_{n-1}) to (v_0). A point-location algorithm examines the relationship between (p) and these boundary edges.
+Let the polygon boundary be a closed sequence of vertices $v_0, v_1, \ldots, v_{n-1}$, with the final edge connecting $v_{n-1}$ to $v_0$. A point-location algorithm examines the relationship between the query point $p$ and these boundary edges.
 
-For ray crossing, let (c(p,P)) be the number of valid intersections between a ray from (p) and the polygon boundary. Under the even–odd rule:
+For ray crossing, let $c(p,P)$ be the number of valid intersections between a ray from $p$ and the polygon boundary. Under the even–odd rule:
 
-[
+$
 p \text{ is inside } P \iff c(p,P) \bmod 2 = 1
-]
+$
 
-The boundary test must be performed separately if the desired output distinguishes boundary from interior and exterior.
+In plain language: an odd crossing count means inside; an even count means outside. The boundary test must be performed separately if the desired output distinguishes boundary from interior and exterior.
 
-For the winding-number approach, the oriented angle changes around the test point are accumulated and divided by (2\pi). The resulting integer captures the net number of turns around the point. The nonzero rule classifies nonzero winding as interior.
+For the winding-number approach, accumulate the signed changes in angle around the test point and divide by $2\pi$. The resulting integer is the net number of turns around the point. Under the nonzero winding rule, a nonzero result means inside.
 
 ## 5. Ray-crossing method
 
