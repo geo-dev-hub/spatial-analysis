@@ -183,6 +183,26 @@ The accompanying reference implementation calculates the statistic from a dense 
 
 For production analysis and inference, use a maintained spatial statistics library. The [PySAL `esda` guide](https://pysal.org/esda/stable/user-guide/global_morans_i.html) demonstrates weights construction, spatial lags, global Moran's I, scatterplots and permutation inference.
 
+A minimal PySAL workflow for polygon data looks like this:
+
+```python
+import numpy as np
+from libpysal import graph
+from esda.moran import Moran
+
+# Keep the GeoDataFrame and attribute in the same row order.
+y = gdf["value"].to_numpy()
+w = graph.Graph.build_contiguity(gdf, rook=False).transform("r")
+
+np.random.seed(12345)
+result = Moran(y, w, permutations=999)
+
+print(result.I)
+print(result.p_sim)
+```
+
+Here `rook=False` builds Queen contiguity, and `transform("r")` row-standardises the weights. Choose those settings deliberately; they are not universal defaults for every study.
+
 ## 11. Complexity and implementation limits
 
 The teaching implementation uses a dense (n\times n) matrix.
