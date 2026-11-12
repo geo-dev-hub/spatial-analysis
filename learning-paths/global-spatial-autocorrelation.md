@@ -80,7 +80,7 @@ This moves from one global summary to a statistic for each spatial unit. Learn t
 
 ## 6. Find local differences between neighbours
 
-[Read Local Geary](../algorithms/statistics/local-geary.md) and use its [interactive notebook](../notebooks/local-geary-lab.ipynb).
+[Read Local Geary](../algorithms/statistics/local-geary.md) *(supplementary companion method)* and use its [interactive notebook](../notebooks/local-geary-lab.ipynb).
 
 Local Geary compares a unit directly with its neighbours through squared differences. It complements Local Moran: one emphasizes local pairwise contrast, while the other uses the focal value and the neighbourhood lag relative to the overall mean.
 
