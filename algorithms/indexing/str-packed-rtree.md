@@ -145,10 +145,10 @@ A tree can use the parent rectangles to skip groups that cannot contain any of t
 
 Let (N) be the number of entries and (M) the maximum number of children per node.
 
-- STR packing sorts entries at each level. A typical bulk-loading build is dominated by sorting and is commonly described as (O(N\log N)).
-- A balanced tree has a height on the order of (O(\log_M N)).
-- A selective query often visits a small number of nodes, but the worst case is (O(N)) when bounding boxes overlap heavily.
-- The index stores the entries and the internal nodes, so storage is (O(N)).
+- STR packing sorts entries at each level. A typical bulk-loading build is dominated by sorting and is commonly described as $O(N\\log N)$.
+- A balanced tree has a height on the order of $O(\\log_M N)$.
+- A selective query often visits a small number of nodes, but the worst case is $O(N)$ when bounding boxes overlap heavily.
+- The index stores the entries and the internal nodes, so storage is $O(N)$.
 
 These are structural expectations, not a performance guarantee for every dataset. A large MultiPolygon with widely separated parts can have a large bounding box that overlaps many unrelated objects. Indexing its component polygons separately may produce better selectivity, when that is semantically appropriate.
 
