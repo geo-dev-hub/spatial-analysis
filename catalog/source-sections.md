@@ -35,12 +35,15 @@ The compendium itself flags several later sections as memory-based or representa
 
 The source is intentionally broad. It includes algorithms, operations, statistical models, data structures, metrics, software systems, standards, sensor-processing workflows, applied methods and named datasets/products. The catalogue should retain a `kind` field so that the project does not mislabel every item as an algorithm.
 
-## Next catalogue pass
+## Catalogue intake status
+
+All 22 sections now have item-level indexes under [catalog/sections](sections/README.md). Each index retains the source grouping, adds a provisional kind classification and records the source page. This completes the first extraction and mapping pass; it does **not** mean every entry has been independently verified.
+
+## Next verification pass
 
 For each section:
-1. Extract the original category headings and individual source entries.
-2. Assign a source-page reference to each entry.
-3. Classify the entry kind without changing the source label.
-4. Flag duplicates, variants and cross-domain relationships.
-5. Verify names and claims, especially where the source warns of memory-based additions.
-6. Assign a stable ID only when a canonical record is ready to exist.
+1. Verify names and variants against primary papers, official specifications or maintained documentation.
+2. Record exact source details, publication dates, software versions and licences where relevant.
+3. Identify duplicates, related methods and cross-domain relationships.
+4. Decide whether each entry deserves its own canonical record, belongs within a broader record or should remain a reference.
+5. Assign a stable ID only when the scope of a canonical record is clear.
