@@ -26,7 +26,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
 - [Geary's C](statistics/gearys-c.md) — measure global spatial autocorrelation through squared differences between neighbouring values.
 - [Local Moran's I](statistics/local-morans-i.md) — locate local clusters of similar values and spatial outliers, with conditional permutation inference.
-- [Local Geary](statistics/local-geary.md) — measure local similarity and dissimilarity directly between a unit and its neighbours.
+- [Local Geary](statistics/local-geary.md) *(supplementary)* — measure local similarity and dissimilarity directly between a unit and its neighbours.
 - [Getis-Ord Gi*](statistics/getis-ord-gi-star.md) — identify local concentrations of high values (hotspots) and low values (coldspots).
 
 ### Supplementary companion method
