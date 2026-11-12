@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">Bentley–Ottmann sweep-line concept</title>
+<desc id="desc">Three line segments, a vertical sweep line, a marked crossing event, and a status order that swaps as the sweep passes the event.</desc>
+<rect width="1100" height="560" fill="#fbfaf7"/>
+<text x="55" y="48" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#292724">A crossing changes the order of the active segments</text>
+<text x="55" y="78" font-family="Arial,sans-serif" font-size="15" fill="#66615b">Conceptual geometry and status snapshots — not to scale</text>
+<g transform="translate(65 115)">
+  <rect x="0" y="0" width="610" height="365" rx="12" fill="#fff" stroke="#dedbd5"/>
+  <g stroke="#eeeae4" stroke-width="1">
+    <path d="M45 40H575 M45 100H575 M45 160H575 M45 220H575 M45 280H575 M45 340H575"/>
+    <path d="M45 30V340 M145 30V340 M245 30V340 M345 30V340 M445 30V340 M545 30V340"/>
+  </g>
+  <path d="M75 285 L545 80" stroke="#247a9b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M75 80 L545 285" stroke="#c36b45" stroke-width="5" stroke-linecap="round"/>
+  <path d="M125 250 L495 105" stroke="#6d8b62" stroke-width="5" stroke-linecap="round"/>
+  <path d="M310 25V340" stroke="#292724" stroke-width="2.5" stroke-dasharray="8 7"/>
+  <circle cx="310" cy="182.5" r="8" fill="#292724" stroke="#fff" stroke-width="3"/>
+  <path d="M322 174 L385 132" stroke="#292724" stroke-width="1.5"/>
+  <text x="392" y="128" font-family="Arial,sans-serif" font-size="15" fill="#292724">Intersection event</text>
+  <text x="322" y="355" font-family="Arial,sans-serif" font-size="15" fill="#292724">Sweep line</text>
+  <text x="60" y="25" font-family="Arial,sans-serif" font-size="13" fill="#777">LEFT</text>
+  <text x="530" y="25" font-family="Arial,sans-serif" font-size="13" fill="#777">RIGHT</text>
+  <g font-family="Arial,sans-serif" font-size="14" fill="#292724">
+    <text x="80" y="315">s₁</text><text x="80" y="65">s₂</text><text x="130" y="238">s₃</text>
+  </g>
+</g>
+<g transform="translate(710 115)">
+  <rect x="0" y="0" width="325" height="365" rx="12" fill="#fff" stroke="#dedbd5"/>
+  <text x="24" y="36" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#292724">Status order</text>
+  <text x="24" y="62" font-family="Arial,sans-serif" font-size="13" fill="#777">Bottom to top at the sweep line</text>
+  <text x="24" y="112" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#247a9b">BEFORE CROSSING</text>
+  <rect x="24" y="128" width="277" height="45" rx="7" fill="#e7f1f5"/>
+  <text x="162" y="157" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#245b70">s₁</text>
+  <rect x="24" y="180" width="277" height="45" rx="7" fill="#f7e9e1"/>
+  <text x="162" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#8d4b2e">s₂</text>
+  <path d="M162 235V265 M153 256L162 266L171 256" fill="none" stroke="#777" stroke-width="2"/>
+  <text x="24" y="294" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#247a9b">AFTER CROSSING</text>
+  <rect x="24" y="307" width="277" height="24" rx="5" fill="#f7e9e1"/>
+  <text x="162" y="324" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#8d4b2e">s₂</text>
+  <rect x="24" y="336" width="277" height="24" rx="5" fill="#e7f1f5"/>
+  <text x="162" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#245b70">s₁</text>
+</g>
+</svg>
