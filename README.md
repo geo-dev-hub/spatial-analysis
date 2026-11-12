@@ -64,6 +64,8 @@ Start with [polygon intersection](algorithms/geometry/polygon-intersection.md): 
 
 A second foundational example is [point in polygon](algorithms/geometry/point-in-polygon.md): given a point and a boundary, is it inside, outside or on the edge? It includes a small ray-crossing implementation and 11 tests.
 
+A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests. It also introduces the larger Bentley–Ottmann all-segment problem.
+
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
 **Current stage:** the source collection and project foundations are in place. We are now turning the inventory into clear explanations, working examples and useful ways to learn.
