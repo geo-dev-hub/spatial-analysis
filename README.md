@@ -91,4 +91,4 @@ The [algorithm collection](algorithms/README.md) also includes the foundational 
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the source collection and project foundations are in place. We are now turning the inventory into clear explanations, working examples and useful ways to learn.
+**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path and a first spatial-indexing lesson are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
