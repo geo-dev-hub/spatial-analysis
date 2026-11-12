@@ -141,7 +141,7 @@ Then try a concave polygon. A point can be inside its bounding box and still be 
 | GEOS / JTS | Point-in-area and point-location operations | Library behaviour should be recorded with the exact version |
 | Teaching implementation | Ray crossing in Python | One simple ring; boundary returned separately; exact float comparisons |
 
-The [Python ray-crossing tutorial](../../implementations/python/point-in-polygon/README.md) contains the code and tests. It is a transparent educational implementation, not a replacement for robust production geometry libraries.
+The [Python ray-crossing tutorial](../../implementations/python/point-in-polygon/README.md) contains the code and tests, with a [step-by-step implementation walkthrough](../../implementations/python/point-in-polygon/implementation-walkthrough.md). It is a transparent educational implementation, not a replacement for robust production geometry libraries.
 
 ## 12. How we check the answer
 
