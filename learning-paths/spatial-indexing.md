@@ -1,6 +1,6 @@
 # Spatial indexing: find the places worth checking
 
-**Status:** First lesson available. The path begins with bounding boxes and a packed R-tree; dynamic indexes, nearest-neighbour search and spatial joins will be added as their methods are verified.
+**Status:** First two lessons available. The path begins with bounding boxes and a packed R-tree, then applies the index to a filter-and-refine spatial join. Dynamic indexes and nearest-neighbour search will be added as their methods are verified.
 
 ## Why an index helps
 
@@ -10,7 +10,7 @@ Checking every geometry can be expensive. A spatial index helps narrow the searc
 
 The index does not replace the exact geometry operation. It helps decide which objects are worth checking.
 
-## Follow the first lesson
+## Follow the first lessons
 
 ### 1. Organise bounding boxes into a tree
 
