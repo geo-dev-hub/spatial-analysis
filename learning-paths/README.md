@@ -46,7 +46,7 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 ## Another place to begin
 
-If you want to understand why similar values appear near one another, start with [Global Moran's I](../algorithms/statistics/global-morans-i.md). It is the first spatial-statistics lesson; related measures and local methods will be added as they are researched.
+If you want to understand why similar values appear near one another, start with [Global Moran's I](../algorithms/statistics/global-morans-i.md) and its [interactive notebook](../notebooks/global-morans-i-lab.ipynb). It is the first spatial-statistics lesson; related measures and local methods will be added as they are researched.
 
 ## The collection keeps growing
 
