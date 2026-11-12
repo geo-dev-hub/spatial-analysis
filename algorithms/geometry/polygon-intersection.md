@@ -240,3 +240,10 @@ Useful invariants for valid inputs:
 - Which public implementation will be the first reproducible reference: Python/Shapely, Java/JTS, C++/GEOS or PostGIS SQL?
 - Which CRS and precision examples best expose the practical difference between coordinate units, floating precision and snapping?
 
+
+
+## Change history
+
+| Version | Date | Change | Author / contributor |
+|---|---|---|---|
+| 0.1 | 2026-11-13 | Initial research draft; reader-facing opening and teaching visuals revised | Project draft |
