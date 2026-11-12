@@ -2,7 +2,7 @@
 
 A public repository is not automatically an open-licensed repository. Until a licence is added, copyright remains with the relevant rights holder and others should not assume they can copy, modify or redistribute the material.
 
-This document records the current position and the decisions that must be made before inviting substantial external contributions or packaging the collection for paid learning.
+This document records the current position and the decisions that must be made before inviting substantial external contributions or packaging the collection for paid learning. See the [licensing decision proposal](licensing-decision-proposal.md) for a recommended code, documentation and contribution setup; it has not been applied.
 
 ## Current position
 
