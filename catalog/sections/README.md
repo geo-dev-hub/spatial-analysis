@@ -10,5 +10,6 @@ These files turn the original compendium into a structured, auditable catalogue 
 - [Section 6 — Optimization, location science, mobility and transport](06-optimization-mobility-transport.md): item-level extraction from source pages 9–11.
 - [Section 7 — Domain modeling](07-domain-modeling.md): item-level extraction from source pages 12–14.
 - [Section 8 — GeoAI and geospatial foundation models](08-geoai.md): item-level extraction from source pages 14–18; the source explicitly says model names are representative and unverified.
+- [Section 9 — Geodesy, cartography, data infrastructure, privacy and semantics](09-geodesy-cartography-infrastructure.md): item-level extraction from source pages 18–20.
 
 The remaining sections stay available in the [original section map](../source-sections.md) and [page-by-page transcription](../../source-inventory/README.md). An item-level index will be added only after the relevant source pages have been reviewed; an absent index does not mean the section has been forgotten or discarded.
