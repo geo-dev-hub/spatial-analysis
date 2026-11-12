@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 26 / 47>
+`<PARSED TEXT FOR PAGE: 26 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -58,7 +58,7 @@ verify before citing.
 
                                                                                          Page 26 of 47
 
-<PARSED TEXT FOR PAGE: 27 / 47>
+`<PARSED TEXT FOR PAGE: 27 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -113,7 +113,7 @@ Urban and spatiotemporal foundation models
 
                                                                                         Page 27 of 47
 
-<PARSED TEXT FOR PAGE: 28 / 47>
+`<PARSED TEXT FOR PAGE: 28 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -168,7 +168,7 @@ Spatial database and distributed systems internals
 
                                                                                       Page 28 of 47
 
-<PARSED TEXT FOR PAGE: 29 / 47>
+`<PARSED TEXT FOR PAGE: 29 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -223,7 +223,7 @@ Mass movement and volcanic runout
 
                                                                                          Page 29 of 47
 
-<PARSED TEXT FOR PAGE: 30 / 47>
+`<PARSED TEXT FOR PAGE: 30 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
