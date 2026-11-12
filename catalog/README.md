@@ -1,18 +1,24 @@
 # Algorithm catalogue
 
-This directory is the index of the project's knowledge inventory. It is not the place for full technical explanations; those belong in canonical records under `algorithms/`.
+This directory is the structured index of the project's knowledge inventory. It is not the place for full technical explanations; those belong in canonical records under `algorithms/`.
 
-## Intake rule
+## Intake source
 
-The initial 47-page *Spatial Analysis Algorithms: Complete Compendium* is the source inventory. Intake must preserve:
+The initial 47-page *Spatial Analysis Algorithms: Complete Compendium* has been imported page-by-page under [source-inventory](../source-inventory/README.md). That is the preserved intake record.
+
+The transcription preserves original page boundaries and extracted wording. It is not an independently verified reference work. The next task is a separate, auditable catalogue pass.
+
+## Intake and normalisation rules
+
+For every source entry, preserve:
 
 - original section numbering and headings;
 - original category groupings;
-- each listed method, variant, named algorithm and implementation family;
-- source page or page range where it can be established;
-- ambiguities and apparent duplicates as review notes.
+- source wording for each listed method, variant, named algorithm and implementation family;
+- source page or page range;
+- ambiguities, caveats and possible duplicates.
 
-Normalisation is a second pass. Do not silently delete, rename or merge source entries because they appear redundant. Preserve the source label and record a canonical label or relationship separately.
+Normalisation is a second pass. Do not silently delete, rename or merge source entries because they appear redundant. Preserve the original source label and record a canonical label or relationship separately. The source explicitly marks some later additions as remembered and requiring verification; keep those entries flagged.
 
 ## Stable IDs
 
@@ -33,7 +39,7 @@ Initial domain codes (provisional):
 - `APP` — applied/domain methods;
 - `CART` — cartography and visualisation.
 
-Codes may be extended as the inventory is fully ingested. Once a record is published, its ID is stable.
+Codes may be extended as the inventory is fully audited. Once assigned to a published record, an ID is stable.
 
 ## Suggested inventory fields
 
@@ -42,16 +48,17 @@ Codes may be extended as the inventory is fully ingested. Once a record is publi
 | `source_section` | Original compendium section |
 | `source_heading` | Original category heading |
 | `source_label` | Exact source wording |
+| `source_page` | Original page |
 | `canonical_name` | Normalised name, if established |
 | `algorithm_id` | Stable ID, once assigned |
-| `kind` | Algorithm, operation, data structure, model, method, system or implementation |
+| `kind` | Algorithm, operation, data structure, model, method, system, metric or implementation |
 | `domain` | Main domain |
 | `relationships` | Prerequisites, variants, alternatives and applications |
-| `status` | Lifecycle state from project method |
+| `verification_status` | Whether the item has been independently checked |
 | `notes` | Ambiguity, duplicate candidate or scope note |
 
-## First intake batch
+## First audited record
 
-The first compendium section is **Core GIS: geometry, indexing, proximity, networks, routing**. Its vector/computational geometry subsection includes overlay operations, hulls and tessellations, point location, segment intersection, polygon clipping, simplification, triangulation/decomposition, distance/extent methods, proximity graphs, visibility and Boolean geometry.
+The first canonical draft is [Polygon intersection](../algorithms/geometry/polygon-intersection.md), sourced from section 1, page 1. Its ID is `SA-GEO-POLYGON-INTERSECTION`.
 
-This is an intake description, not a completed record-by-record import. The detailed source inventory will be committed in its own file after page-by-page extraction and checking.
+The full source catalogue has not yet been normalised record-by-record. Do not infer completion from the page transcription alone.
