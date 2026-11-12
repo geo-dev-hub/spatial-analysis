@@ -85,7 +85,7 @@ Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), whi
 
 ## A first look at spatial patterns
 
-Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots.
+Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
