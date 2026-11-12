@@ -6,6 +6,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 - [Point in polygon](geometry/point-in-polygon.md) — classify a point as inside, outside or on a polygon boundary.
 - [Polygon intersection](geometry/polygon-intersection.md) — construct the geometry shared by two inputs.
+- [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 
 ## How to read a record
 
