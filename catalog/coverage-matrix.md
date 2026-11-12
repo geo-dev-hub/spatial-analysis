@@ -36,7 +36,7 @@ This matrix connects the original compendium to the work published in this repos
 
 ## What this tells us
 
-The repository has a useful first set of geometry examples, but it does not yet cover the breadth of the 47-page source. The next stage is not to create hundreds of shallow pages. It is to audit the source section by section, identify the right record type, verify names and references, and build connected explanations with examples.
+The repository now has a connected geometry foundation, a first spatial-index lesson and a researched spatial-autocorrelation sequence. It still does not cover the breadth of the 47-page source. The next stage is not to create hundreds of shallow pages. It is to audit the source section by section, identify the right record type, verify names and references, and build connected explanations with examples.
 
 Sections 11, 13, 15, 18, 19, 20, 21 and 22 carry explicit source warnings about remembered or representative additions. Section 12 also includes methods drawn from adjacent fields. Keep those warnings attached to the relevant intake material until each entry has been checked.
 
