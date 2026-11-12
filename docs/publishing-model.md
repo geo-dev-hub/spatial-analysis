@@ -1,52 +1,62 @@
-# Publishing and access model
+# How the learning and membership experience works
 
-This repository is the public technical foundation for a larger learning and publishing programme. The public knowledge project and the paid learning offer should reinforce each other without confusing their purposes.
+The collection is open to explore. Membership is for people who want to go further, learn with more structure and have the complete material together in one place.
 
-## Public layer
+The idea is straightforward: useful material should be easy to discover, and deeper learning should feel worth coming back for.
 
-Expected public materials include:
+## Read and explore for free
 
-- catalogue entries and stable identifiers;
-- selected complete algorithm dossiers;
-- source links, corrections and project methodology;
-- public implementations, tests and reproducible examples;
-- contribution issues and discussions;
-- public newsletter introductions and selected learning resources.
+Anyone can:
 
-## Member layer
+- explore the public collection and its learning paths;
+- read selected full explanations and weekly introductions;
+- use public examples, code and exercises;
+- ask questions, suggest topics and help improve the work;
+- follow the project as new methods and research are added.
 
-A membership may add structured depth and learning convenience:
+There should be enough here to understand the quality and usefulness of the work before deciding to become a member.
 
-- full weekly learning editions and their complete archive;
-- extended research dossiers and annotated reading guides;
-- guided learning programmes and study schedules;
-- implementation notebooks, worked solutions and practical exercises;
-- curated datasets where licensing permits;
-- benchmark reports and advanced comparisons;
-- member discussions, review sessions and workshops.
+## Go further with membership
 
-The exact tier entitlements and prices are commercial decisions to validate. This document does not promise a specific platform feature or price.
+Membership is designed for people who want the complete learning experience:
 
-## Archive and onboarding
+- the full weekly edition, with the deeper explanation behind the public introduction;
+- the complete eligible archive, available as soon as membership begins;
+- detailed method guides, references and further reading;
+- guided learning paths and practical study plans;
+- notebooks, worked examples, exercises and solutions;
+- datasets and experiments where the licences allow sharing;
+- performance comparisons and implementation notes;
+- opportunities to discuss methods, share work and learn alongside others.
 
-A new member should be able to access the eligible existing archive immediately, while also receiving new weekly editions from the date they join. The archive is organised by topic and learning path, not only by issue number.
+The final membership levels, prices and exact benefits will be tested before they are promised. The aim is not to put a price tag on every useful explanation. It is to offer a genuinely richer way to learn.
 
-## Reuse without duplication
+## Joining later should never mean starting behind
 
-One researched topic can produce several derivatives:
+A person who joins in the second year should not have to wait a year to catch up. They should be able to explore the eligible archive from day one and receive new weekly editions from the date they join.
 
-1. canonical technical record;
-2. public explanation or newsletter introduction;
-3. full member learning edition;
-4. implementation notebook and exercises;
-5. standalone collection or workshop material.
+The archive is organised by topic and learning path as well as by publication date. Someone can follow the original weekly journey, start with a subject they need today, or use the collection as a reference library.
 
-The canonical record remains the source of truth for technical corrections. Derivatives should link back to it and identify material differences.
+## One piece of research, many useful ways to learn
 
-## Open contribution boundary
+A researched method can become:
 
-Do not charge people to report errors, suggest topics or contribute to the public project. Membership pays for additional depth, curation, learning support and convenience—not permission to participate in the underlying public knowledge base.
+1. a clear public explanation;
+2. a complete weekly learning edition;
+3. a detailed technical guide;
+4. a notebook or practical exercise;
+5. part of a subject collection, course or workshop.
 
-## Operational caution
+These are different ways into the same subject, not five disconnected versions that drift apart. Technical corrections are made against the main record and carried into related learning materials.
 
-Keep the workflow low-cost and manual until the editorial process is stable. The membership platform handles payment and member access; GitHub handles public technical collaboration and version history. Avoid making a payment platform the only canonical home for technical knowledge.
+## The community stays open
+
+You do not need a membership to point out an error, suggest a method, share a useful reference or contribute to the public project.
+
+Membership supports the extra depth, organisation and learning experience. It is not a fee for permission to participate.
+
+## How the project is organised
+
+The public technical collection and its contributions live in GitHub. Membership and payment are handled separately. The process starts simply and is improved as we learn what readers actually use.
+
+We would rather make a small number of excellent, useful learning experiences than build a complicated platform before it is needed.
