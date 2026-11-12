@@ -1,6 +1,6 @@
 # Follow the sweep: a Bentley–Ottmann implementation walkthrough
 
-This guide follows the Python code in bentley_ottmann.py. It is written so a new contributor can reproduce the run, understand the data structures and trace each event without relying on prior project knowledge.
+This guide follows two Python implementations of the same event-driven sweep. It is written so a new contributor can reproduce the run, understand the data structures and trace each event without relying on prior project knowledge.
 
 ## 1. What we are trying to do
 
@@ -15,7 +15,7 @@ Use Python 3.10 or later. From this directory, run:
     PYTHONPATH=../segment-intersection python bentley_ottmann.py
     PYTHONPATH=../segment-intersection python -m pytest -q
 
-The first command runs a small example. The second runs the automated tests. The PYTHONPATH setting makes the sibling pairwise module importable without copying its code.
+The first command runs the list-based example. The second runs the complete test suite, including the treap implementation and its data-structure tests. The PYTHONPATH setting makes the sibling pairwise module importable without copying its code.
 
 ## 3. Understand the two structures
 
@@ -34,15 +34,19 @@ The algorithm maintains two things.
 - It leaves at its right endpoint.
 - When two segments cross, their order swaps.
 
-In this first version, status is a Python list. This is intentionally easy to inspect, but insertion and removal can take linear time. A balanced search tree is needed for the classical asymptotic bound.
+The event queue is a heap in both versions. The status structure is different: the first version uses a Python list, while the second uses an implicit treap.
 
-## 4. Read the code in this order
+## 4. Read the list implementation first
+
+Open `bentley_ottmann.py`.
+
+The list version makes the event logic visible without introducing tree rotations or split/merge operations. It is the reference implementation for understanding the sequence of events.
 
 ### Step A — represent a segment
 
 The Segment dataclass stores an integer ID and two integer-coordinate endpoints. Its constructor rejects zero-length and vertical segments, then normalises the endpoints so a is always the left endpoint.
 
-The y_at(x) method evaluates the segment's height at a given sweep coordinate:
+The `y_at(x)` method evaluates the segment's height at a given sweep coordinate:
 
 $$
 y(x)=y_1+\frac{y_2-y_1}{x_2-x_1}(x-x_1)
@@ -52,7 +56,7 @@ The slope is also available. At a crossing, two segments have equal height; comp
 
 ### Step B — calculate a pair intersection
 
-The _intersection(a, b) function delegates to the pairwise implementation. It returns no point when the pair does not meet, an exact pair of rational coordinates when they meet at one point, and an error for collinear overlap, which this sweep does not support.
+The shared `_intersection(a, b)` function delegates to the pairwise implementation. It returns no point when the pair does not meet, an exact pair of rational coordinates when they meet at one point, and an error for collinear overlap, which these sweeps do not support.
 
 This keeps pair geometry separate from event scheduling.
 
@@ -68,7 +72,7 @@ The event kind sorts left endpoints before crossings and right endpoints at a sh
 
 When a left endpoint is removed from the queue:
 
-1. Find the segment's position in the status list.
+1. Find the segment's position in the status.
 2. Insert it in bottom-to-top order.
 3. Identify the segment immediately below and immediately above it.
 4. Ask only those two neighbour pairs whether they have a future intersection.
@@ -109,49 +113,57 @@ The code uses Python's Fraction so the event queue compares exact values rather 
 
 Exact arithmetic is not a complete solution to degeneracies. The algorithm still needs a defined policy for coincident events, multiway intersections, vertical segments and overlaps.
 
-## 6. Understand the tests
+## 6. Why the list version is not enough
 
-The test file has two roles:
+The list is easy to inspect, but insertion, deletion, search and position lookup can take linear time. The algorithm may avoid most geometric pair tests and still spend substantial time maintaining the active status.
 
-- **Example tests** check exact coordinates, no-intersection cases and unsupported input.
-- **Differential tests** compare the sweep's segment-pair set with the result from checking every pair.
+That is why we built a second implementation rather than simply repeating the textbook complexity beside the list code.
 
-The random test uses a fixed seed so another learner can reproduce the same cases. It excludes inputs that violate the general-position contract. As the implementation grows, every discovered failure should become a permanent regression test.
+## 7. Understand the treap status
 
-Run the tests before changing the event logic. After a change, run them again and explain any difference.
+Open `status_treap.py`, then `bentley_ottmann_treap.py`. The companion [status-structure note](status-structure.md) explains the design in detail.
 
-## 7. What this implementation does not prove
+The treap is an *implicit sequence tree*. Its in-order traversal is the bottom-to-top status. Each node stores its subtree size and parent pointer, allowing the implementation to find a node's rank and retrieve its neighbours.
 
-The abstract Bentley–Ottmann algorithm with a priority queue and balanced status tree has the classical output-sensitive bound:
+The important design decision is that the treap does not keep a search-tree ordering based on a geometric comparator that changes continuously with the sweep coordinate.
 
-$$
-O((n+k)\log n)
-$$
+- At a left endpoint, the current event coordinate is used to find the segment's insertion rank in the already-correct status sequence.
+- At a right endpoint, the segment's node identity is used to find its rank and remove it.
+- At a crossing, the two segment nodes are already adjacent. The treap swaps their sequence positions explicitly.
+- The same node objects remain associated with their segment IDs after the swap.
 
-Here, n is the number of segments and k is the number of intersecting pairs.
+The split and merge operations maintain the implicit sequence. Randomized priorities give expected logarithmic height and expected logarithmic operation costs. They do not give the deterministic worst-case guarantee of an AVL or red-black tree.
 
-This Python version uses a list for status. List insertion, deletion and lookup are linear, so this code does not achieve that bound. Its purpose is to make the event logic concrete before introducing a balanced tree with a carefully controlled ordering invariant.
+## 8. Understand the tests
 
-It is also not a production GIS topology engine. Its restricted contract is stated in the implementation README.
+The test suite has three roles:
 
-## 8. First performance experiment
+- **Sweep examples** check exact coordinates, no-intersection cases and supported input.
+- **Data-structure tests** check the treap's sequence order, parent pointers, subtree sizes, ranks, insertions, removals and adjacent swaps.
+- **Differential tests** compare both sweep implementations with the result from checking every pair.
+
+The randomized tests use fixed seeds so another learner can reproduce the same cases. They exclude inputs that violate the general-position contract. As the implementation grows, every discovered failure should become a permanent regression test.
+
+Run the tests before changing the event logic or the tree. After a change, run them again and explain any difference.
+
+## 9. First performance experiment
 
 Run:
 
     PYTHONPATH=../segment-intersection python benchmark.py
 
-The script compares the sweep against the all-pairs oracle on deterministic, parallel, non-intersecting segments. It counts candidate-pair checks as well as elapsed time. The [benchmark report](benchmark-results.md) records the environment, measurements and limitations.
+The script compares the list sweep, treap sweep and all-pairs oracle on deterministic, parallel, non-intersecting segments. It counts candidate-pair checks as well as elapsed time. The [benchmark report](benchmark-results.md) records the environment, measurements and limitations.
 
-The important observation is that fewer geometric pair checks do not automatically mean lower runtime. The list status still has linear-time operations. Read the report, then explain why the sweep can perform fewer pair checks and still take as long as—or longer than—the all-pairs method.
+The important observation is that the two sweeps make the same small number of candidate-pair checks, but their runtimes differ because their status structures have different operation costs. The report is a controlled first experiment, not proof of performance on real GIS data.
 
-## 9. Suggested intern exercises
+## 10. Suggested intern exercises
 
 1. Add a print-only trace that displays each event and the status after processing it.
 2. Draw the same trace by hand and compare it with the program output.
-3. Add a test in which one segment crosses three others at three distinct event coordinates.
-4. Instrument the pairwise routine and count how many candidate pairs the sweep checks.
-5. Compare those checks with n(n-1)/2 for the brute-force oracle.
-6. Research how a balanced status tree can support neighbour lookup and safe swaps without allowing its comparator to invalidate the tree.
+3. Construct a case where one segment crosses three others at three distinct event coordinates.
+4. Trace the treap's in-order sequence before and after one crossing.
+5. Explain why the segment-ID-to-node dictionary remains valid after an adjacent swap.
+6. Instrument the pairwise routine and compare candidate-pair checks with n(n-1)/2.
 7. Propose an explicit output model for three or more segments meeting at one point before attempting grouped-event support.
 
 Do not add vertical or multiway cases by simply changing a comparison or adding an epsilon. First define the event semantics, then design tests that prove the new contract.
