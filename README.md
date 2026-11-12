@@ -27,7 +27,10 @@ You do not have to start at the beginning. You do not have to know everything be
 | The building blocks of GIS | [Core GIS and geometry](learning-paths/README.md#start-with-a-problem) |
 | How spatial algorithms work | [Algorithm collection](algorithms/README.md) |
 | Working examples and code | [Implementations](implementations/README.md) |
-| Testing speed and accuracy | [Benchmarks](benchmarks/) |
+| Testing speed and accuracy | [Benchmarks](benchmarks/README.md) |
+| Practising with exercises | [Exercises](exercises/README.md) |
+| Following research questions | [Research notes](research/README.md) |
+| Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
