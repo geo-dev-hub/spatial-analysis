@@ -30,6 +30,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Testing speed and accuracy | [Benchmarks](benchmarks/README.md) |
 | Practising with exercises | [Exercises](exercises/README.md) |
 | Following research questions | [Research notes](research/README.md) |
+| Exploring calculations interactively | [Notebooks](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
