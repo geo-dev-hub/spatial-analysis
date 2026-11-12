@@ -16,7 +16,7 @@ They are not a neutral setup detail. They are part of the model.
 
 ## The matrix
 
-For (n) spatial units, a spatial weights matrix (W) has (n) rows and (n) columns. The element (w_{ij}) records the weight from unit (i) to unit (j).
+For $n$ spatial units, a spatial weights matrix $W$ has $n$ rows and $n$ columns. The element $w_{ij}$ records the weight from unit $i$ to unit $j$.
 
 For binary weights:
 
@@ -187,7 +187,7 @@ Always record the weights definition alongside the statistic. Reporting “Moran
 2. Row-standardise the Queen graph. Why do the row sums become one?
 3. Add a fifth isolated polygon. How does the graph represent it?
 4. Increase the distance-band threshold. When do previously isolated units gain neighbours?
-5. Build a k-nearest-neighbour graph with (k=1). Is it symmetric?
+5. Build a k-nearest-neighbour graph with $k=1$. Is it symmetric?
 6. Calculate Global Moran's I with both binary and row-standardised weights. Explain why the result can change.
 7. Choose a neighbourhood rule for a transport-access question. Would contiguity or travel time better represent the process?
 
