@@ -26,6 +26,10 @@ def test_multiple_crossings_against_oracle():
         Segment(3,(2,10),(8,2)),Segment(4,(3,5),(9,10))]
     assert pairs(bentley_ottmann(ss)) == oracle(ss)
 
+def test_rational_intersection_coordinates_are_exact():
+    ss=[Segment(1,(0,0),(3,3)),Segment(2,(0,2),(3,0))]
+    assert bentley_ottmann(ss)==[(1,2,(Fraction(6,5),Fraction(6,5)))]
+
 def test_no_intersections():
     assert bentley_ottmann([Segment(1,(0,0),(4,0)),Segment(2,(0,3),(4,3))]) == []
 
@@ -55,13 +59,14 @@ def test_seeded_random_cases_against_oracle():
             y1,y2=rng.sample(range(-30,31),2)
             ss.append(Segment(sid,(x1,y1),(x2,y2)))
         hits=[]; valid=True
+        all_endpoint_x={p[0] for s in ss for p in (s.a,s.b)}
         for i,a in enumerate(ss):
             for b in ss[i+1:]:
                 r=segment_intersection(a.a,a.b,b.a,b.b)
                 if r.kind=="overlap": valid=False
                 elif r.kind=="point":
                     p=r.geometry
-                    if p[0] in (a.a[0],a.b[0],b.a[0],b.b[0]): valid=False
+                    if p[0] in all_endpoint_x: valid=False
                     hits.append(p)
         if not valid or len({p[0] for p in hits}) != len(hits): continue
         assert pairs(bentley_ottmann(ss)) == oracle(ss)
