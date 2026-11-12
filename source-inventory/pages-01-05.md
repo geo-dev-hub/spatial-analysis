@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 1 / 47>
+`<PARSED TEXT FOR PAGE: 1 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -56,7 +56,7 @@ Spatial indexing and query processing
 
                                                                                            Page 1 of 47
 
-<PARSED TEXT FOR PAGE: 2 / 47>
+`<PARSED TEXT FOR PAGE: 2 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -111,7 +111,7 @@ Autocorrelation and local statistics
 
                                                                                           Page 2 of 47
 
-<PARSED TEXT FOR PAGE: 3 / 47>
+`<PARSED TEXT FOR PAGE: 3 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -164,7 +164,7 @@ Regression and spatial econometrics
 
                                                                                            Page 3 of 47
 
-<PARSED TEXT FOR PAGE: 4 / 47>
+`<PARSED TEXT FOR PAGE: 4 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -220,7 +220,7 @@ Kriging and geostatistics
 
                                                                                               Page 4 of 47
 
-<PARSED TEXT FOR PAGE: 5 / 47>
+`<PARSED TEXT FOR PAGE: 5 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
