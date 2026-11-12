@@ -54,6 +54,10 @@ The test suite checks nine behaviours, including lower-dimensional results and e
 - `grid_size` is optional. Do not choose a snapping grid without understanding the coordinate units, data scale and positional accuracy.
 - Shapely delegates geometry operations to GEOS. This example demonstrates the library API; it does not reimplement the internal overlay algorithm.
 
+## Step-by-step implementation walkthrough
+
+Read [how the implementation works](implementation-walkthrough.md) for the input contract, validity checks, precision grid and result inspection.
+
 ## Environment used for the checked example
 
 - Python 3.13.5
