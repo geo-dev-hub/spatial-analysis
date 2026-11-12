@@ -11,11 +11,12 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 ## Spatial statistics
 
-- [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation for a continuous attribute under a stated spatial weights matrix.
+- [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
+- [Geary's C](statistics/gearys-c.md) — measure global spatial autocorrelation through squared differences between neighbouring values.
 
 ## A connected place to start
 
-The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. Global Moran's I is the first researched record in the spatial-statistics collection; a wider path will follow as related methods are verified.
+The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The [global spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) starts with Moran's I and Geary's C, two complementary ways to measure spatial association.
 
 ## How to read a record
 
