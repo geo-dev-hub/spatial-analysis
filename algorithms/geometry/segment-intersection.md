@@ -49,10 +49,10 @@ The orientation test is the key building block. The boundary and collinear cases
 
 For points $A=(x_1,y_1)$, $B=(x_2,y_2)$ and $C=(x_3,y_3)$, define the orientation determinant:
 
-\[
+$$
 \operatorname{orient}(A,B,C) =
 (x_2-x_1)(y_3-y_1) - (y_2-y_1)(x_3-x_1).
-\]
+$$
 
 Its sign gives the orientation:
 
@@ -62,17 +62,17 @@ Its sign gives the orientation:
 
 For non-collinear configurations, a proper crossing occurs when:
 
-\[
+$$
 \operatorname{orient}(A,B,C)\,
 \operatorname{orient}(A,B,D) < 0
-\]
+$$
 
 and
 
-\[
+$$
 \operatorname{orient}(C,D,A)\,
 \operatorname{orient}(C,D,B) < 0.
-\]
+$$
 
 If any orientation is zero, use an on-segment test that checks both collinearity and coordinate bounds. If all four orientations are zero, sort endpoints along the common line and intersect the resulting one-dimensional intervals.
 
@@ -107,9 +107,9 @@ For one pair of segments, the algorithm performs a fixed number of arithmetic op
 
 For $n$ segments, testing every unordered pair requires:
 
-\[
+$$
 \binom{n}{2} = \frac{n(n-1)}{2} = O(n^2)
-\]
+$$
 
 pair tests. This simple method is worst-case optimal when the output itself contains Θ(n²) intersecting pairs, but it can do much more work than necessary when there are few intersections.
 
@@ -126,9 +126,9 @@ At a segment's left endpoint, insert it into the status structure and test its n
 
 Under the algorithm's stated general-position assumptions, the standard reporting bound is:
 
-\[
+$$
 O((n+k)\log n)
-\]
+$$
 
 where n is the number of segments and k is the number of reported intersections. This is output-sensitive: when there are few intersections, it can avoid testing most segment pairs. In the worst case k can be Θ(n²), so the output itself can be quadratic.
 
