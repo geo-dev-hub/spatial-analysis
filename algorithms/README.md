@@ -13,6 +13,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 - [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
 
+## Query processing
+
+- [Filter-and-refine spatial join](query-processing/filter-refine-spatial-join.md) — use a spatial index to find candidate geometry pairs, then apply the exact spatial predicate.
+
 ## Spatial statistics
 
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
