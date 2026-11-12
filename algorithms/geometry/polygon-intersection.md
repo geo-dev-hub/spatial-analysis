@@ -10,8 +10,6 @@
 - **Related records:** polygon union, difference, symmetric difference, segment intersection, point-in-polygon, noding, polygon validity, precision models
 - **Prerequisites:** coordinate geometry, line segments, polygon rings, point-set topology
 
-> Scope note: “intersection” can mean a segment-pair intersection test, an intersection-point construction, a Boolean predicate (`intersects`), or a full geometry overlay operation. This dossier focuses on **set-theoretic intersection of two planar vector geometries**, with polygon-polygon overlay as the main case. Segment intersection and Boolean predicates deserve their own linked records.
-
 ## 1. Start here
 
 You have two mapped areas—perhaps a school catchment and a flood zone. You want to know which places belong to both.
@@ -31,6 +29,8 @@ The output is not necessarily one polygon:
 - mixed-dimensional inputs can produce heterogeneous results, depending on the geometry model and operation semantics.
 
 Do not confuse the overlay operation `intersection(A, B)` with the Boolean predicate `intersects(A, B)`. The predicate answers whether the intersection is non-empty; the overlay constructs the intersection geometry.
+
+> Scope note: “intersection” can mean a segment-pair intersection test, an intersection-point construction, a Boolean predicate (`intersects`), or a full geometry overlay operation. This dossier focuses on **set-theoretic intersection of two planar vector geometries**, with polygon-polygon overlay as the main case. Segment intersection and Boolean predicates deserve their own linked records.
 
 ## 3. The simple idea
 
