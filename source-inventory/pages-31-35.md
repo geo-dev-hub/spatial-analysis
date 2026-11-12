@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 31 / 47>
+`<PARSED TEXT FOR PAGE: 31 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -56,7 +56,7 @@ Image matching and multimodal registration
 
                                                                                        Page 31 of 47
 
-<PARSED TEXT FOR PAGE: 32 / 47>
+`<PARSED TEXT FOR PAGE: 32 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -113,7 +113,7 @@ Renewable energy forecasting
 
                                                                                        Page 32 of 47
 
-<PARSED TEXT FOR PAGE: 33 / 47>
+`<PARSED TEXT FOR PAGE: 33 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -169,7 +169,7 @@ SAR geometry, InSAR time series and crustal deformation
 
                                                                                       Page 33 of 47
 
-<PARSED TEXT FOR PAGE: 34 / 47>
+`<PARSED TEXT FOR PAGE: 34 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -225,7 +225,7 @@ Humanitarian, food security and conflict
 
                                                                                         Page 34 of 47
 
-<PARSED TEXT FOR PAGE: 35 / 47>
+`<PARSED TEXT FOR PAGE: 35 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
