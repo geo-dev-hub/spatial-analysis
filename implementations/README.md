@@ -20,6 +20,8 @@ Examples demonstrate a named software implementation unless they explicitly reim
 - [Bentley–Ottmann with Python](python/bentley-ottmann/README.md): paired list-status and implicit-treap implementations, exact rational event coordinates, differential tests, an intern walkthrough and a reproducible benchmark.
 
 
+- [Global Moran's I in Python](python/global-morans-i/README.md): dependency-free dense-matrix calculation, row-standardisation helper and 13 tests. It computes the statistic only; use a spatial statistics library for inference.
+
 ## Automated checks
 
 The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all five examples on relevant pushes and pull requests, using Python 3.13. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
