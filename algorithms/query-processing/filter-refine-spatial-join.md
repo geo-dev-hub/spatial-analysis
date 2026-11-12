@@ -158,7 +158,8 @@ For a packed tree, the build step is commonly dominated by sorting. A selective 
 
 The accompanying implementation builds a Shapely STRtree over the right-hand collection and returns stable `(left_index, right_index)` pairs.
 
-- [Python implementation and walkthrough](../../implementations/python/spatial-join/README.md)
+- [Python implementation](../../implementations/python/spatial-join/README.md)
+- [Step-by-step implementation walkthrough](../../implementations/python/spatial-join/implementation-walkthrough.md)
 - [Implementation source](../../implementations/python/spatial-join/spatial_join.py)
 - [Tests](../../implementations/python/spatial-join/test_spatial_join.py)
 - [Interactive notebook](../../notebooks/filter-refine-spatial-join-lab.ipynb)
