@@ -49,6 +49,10 @@ The first sequence has similar values next to one another. The second alternates
 python -m pytest -q
 ```
 
+## Step-by-step walkthrough
+
+Follow the [implementation walkthrough](implementation-walkthrough.md) to trace the weights validation, centring, numerator, denominator and final formula.
+
 ## Important limitations
 
 - The implementation uses a dense matrix, so its time and memory requirements grow quadratically with the number of spatial units.
