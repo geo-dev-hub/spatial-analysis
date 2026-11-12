@@ -35,7 +35,7 @@ The squared difference means Geary's C is especially responsive to sharp contras
 
 ## The formula
 
-Let (x_i) be the value at location (i), and let (ar{x}) be the mean across all (n) locations. Let (w_{ij}) be the spatial weight from location (i) to location (j). The sum of all weights is:
+Let $x_i$ be the value at location $i$, and let $\bar{x}$ be the mean across all $n$ locations. Let $w_{ij}$ be the spatial weight from location $i$ to location $j$. The sum of all weights is:
 
 $$
 S_0 = \sum_{i=1}^{n}\sum_{j=1}^{n} w_{ij}
@@ -99,8 +99,8 @@ For $x=[1,2,3,4]$:
 - $n=4$
 - (ar{x}=2.5)
 - $S_0=6$
-- (sum_i\sum_j w_{ij}(x_i-x_j)^2=6)
-- (sum_i(x_i-\bar{x})^2=5)
+- $\sum_i\sum_j w_{ij}(x_i-x_j)^2=6$
+- $\sum_i(x_i-\bar{x})^2=5$
 
 So:
 
@@ -111,7 +111,7 @@ $$
 
 Because (C) is below one, neighbouring values are more similar than expected under the randomisation reference.
 
-For the alternating values (x=[1,4,1,4]):
+For the alternating values $x=[1,4,1,4]$:
 
 - each of the three undirected edges has a difference of three;
 - each directed edge contributes (3^2=9);
@@ -134,7 +134,7 @@ Both statistics use the same spatial units and weights, but they measure similar
 | | Moran's I | Geary's C |
 |---|---|---|
 | What it compares | Deviations from the overall mean | Differences between neighbouring values |
-| Main mathematical term | (z_i z_j) | ((x_i-x_j)^2) |
+| Main mathematical term | $z_i z_j$ | $(x_i-x_j)^2$ |
 | Null expectation | (-1/(n-1)) | (1) |
 | Positive spatial autocorrelation | (I>E[I]) | (C<1) |
 | Negative spatial autocorrelation | (I<E[I]) | (C>1) |
