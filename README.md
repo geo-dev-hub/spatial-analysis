@@ -88,7 +88,7 @@ Start with the [spatial autocorrelation learning path](learning-paths/global-spa
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
-The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons and their tested Python examples.
+The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons, an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
