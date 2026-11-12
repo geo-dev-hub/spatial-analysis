@@ -20,8 +20,8 @@ This map records the original 22 numbered sections in *Spatial Analysis Algorith
 | 14 | Additions: databases, graphics, morphology, hazards, inventory, cartographic math | 28–30 |
 | 15 | Additions: vision backbones, registration, vector extraction, hydrology ML | 31–33 |
 | 16 | Additions: flows, regions, deformation, marine, biodiversity, humanitarian | 33–34 |
-| 17 | Additions: geometry II, scalable computation, design, siting, implementations | 35–36 |
-| 18 | Additions: moving objects, routing, transit, water and ice, emissions, data-quality statistics | 37–38 |
+| 17 | Additions: geometry II, scalable computation, design, siting, implementations | 35–37 |
+| 18 | Additions: moving objects, routing, transit, water and ice, emissions, data-quality statistics | 37–39 |
 | 19 | Additions: African applications, addressing, finance, telecom, seismology, pitfalls | 39–40 |
 | 20 | Additions: indices, microwave and thermal retrieval, event tracking, information theory, surveys | 41–42 |
 | 21 | Additions: neural fields, climate ML, accounting, robust geometry, semantic maps, integrity | 43–44 |
