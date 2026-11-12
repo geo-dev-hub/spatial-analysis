@@ -42,6 +42,8 @@ We want explanations that are approachable without being careless.
 
 ## Credit and reuse
 
+Read the [licensing and reuse note](docs/licensing-and-reuse.md) before contributing material that will be redistributed. The project has not selected blanket licences for code or documentation yet, and the supplied source inventory is not automatically covered by a future project licence.
+
 Substantial contributions will be credited in the relevant material or project notes. Please link to original sources rather than copying large sections of someone else's writing, figures, code or datasets.
 
 The project will publish clear licences for code and documentation. Until those are in place, please ask before assuming a contribution can be reused elsewhere.
