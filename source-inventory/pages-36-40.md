@@ -2,7 +2,7 @@
 
 > Faithful text extraction from the supplied *Spatial Analysis Algorithms: Complete Compendium*. Original page boundaries are retained below. This is an intake transcription, not a technical verification or editorial rewrite.
 
-<PARSED TEXT FOR PAGE: 36 / 47>
+`<PARSED TEXT FOR PAGE: 36 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -60,7 +60,7 @@ Implementation map (representative libraries)
 
                                                                                        Page 36 of 47
 
-<PARSED TEXT FOR PAGE: 37 / 47>
+`<PARSED TEXT FOR PAGE: 37 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -114,7 +114,7 @@ UAV and survey flight planning
 
                                                                                           Page 37 of 47
 
-<PARSED TEXT FOR PAGE: 38 / 47>
+`<PARSED TEXT FOR PAGE: 38 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -171,7 +171,7 @@ Structural geology and directional statistics
 
                                                                                        Page 38 of 47
 
-<PARSED TEXT FOR PAGE: 39 / 47>
+`<PARSED TEXT FOR PAGE: 39 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
@@ -225,7 +225,7 @@ Applications common in East and Sub-Saharan Africa
 
                                                                                           Page 39 of 47
 
-<PARSED TEXT FOR PAGE: 40 / 47>
+`<PARSED TEXT FOR PAGE: 40 / 47>`
 
 Spatial Analysis Algorithms: Complete Compendium
 
