@@ -34,7 +34,9 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Step-by-step Bentley–Ottmann implementation walkthrough.
 - [ ] Complete and review the first geometry learning path as a coherent sequence.
 - [ ] Add worked examples and exercises that connect the four topics.
+- [x] Add the first researched spatial-statistics lesson: Global Moran's I, with a tested dense reference implementation.
 - [ ] Build the next foundations in spatial indexing, proximity, joins and networks.
+- [ ] Extend spatial statistics with Geary's C, local indicators and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
 ## 4. Every lesson uses the right teaching tools
