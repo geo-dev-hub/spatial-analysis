@@ -14,15 +14,17 @@ Examples demonstrate a named software implementation unless they explicitly reim
 
 ## Examples
 
-- [Polygon intersection with Python and Shapely](python/polygon-intersection/README.md): a library-backed overlay operation with nine tests.
-- [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 11 tests.
-- [Segment intersection with Python](python/segment-intersection/README.md): exact integer orientation tests and rational intersection coordinates, with 11 tests.
+- [Polygon intersection with Python and Shapely](python/polygon-intersection/README.md): a library-backed overlay operation with nine tests and a [step-by-step walkthrough](python/polygon-intersection/implementation-walkthrough.md).
+- [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 11 tests and a [step-by-step walkthrough](python/point-in-polygon/implementation-walkthrough.md).
+- [Segment intersection with Python](python/segment-intersection/README.md): exact integer orientation tests and rational intersection coordinates, with 11 tests and a [step-by-step walkthrough](python/segment-intersection/implementation-walkthrough.md).
 - [Bentley–Ottmann with Python](python/bentley-ottmann/README.md): paired list-status and implicit-treap implementations, exact rational event coordinates, differential tests, an intern walkthrough and a reproducible benchmark.
 
-- [Global Moran's I in Python](python/global-morans-i/README.md): dependency-free dense-matrix calculation, row-standardisation helper and 13 tests. It computes the statistic only; use a spatial statistics library for inference.
+- [Global Moran's I in Python](python/global-morans-i/README.md): dependency-free dense-matrix calculation, row-standardisation helper and 13 tests. It computes the statistic only; use a spatial statistics library for inference. See its [step-by-step walkthrough](python/geary-c/implementation-walkthrough.md). See its [step-by-step walkthrough](python/global-morans-i/implementation-walkthrough.md).
 - [Global Geary's C in Python](python/geary-c/README.md): dependency-free dense-matrix calculation and 16 tests. It computes the statistic only; use a spatial statistics library for inference.
-- [STR-packed R-tree in Python](python/str-packed-rtree/README.md): immutable 2D bounding-box index using STR packing, checked against brute force across 300 entries and 60 query windows.
-- [Indexed spatial join with Shapely](python/spatial-join/README.md): filter-and-refine join using STRtree, with tests for predicate direction, boundaries, holes and brute-force equivalence.
+- [STR-packed R-tree in Python](python/str-packed-rtree/README.md): immutable 2D bounding-box index using STR packing, checked against brute force across 300 entries and 60 query windows, with a [step-by-step walkthrough](python/str-packed-rtree/implementation-walkthrough.md).
+- [Indexed spatial join with Shapely](python/spatial-join/README.md): filter-and-refine join using STRtree, with tests for predicate direction, boundaries, holes and brute-force equivalence, plus a [step-by-step walkthrough](python/spatial-join/implementation-walkthrough.md).
+
+The walkthroughs are written for readers who are new to the code. They explain the role of each function, the important decisions, the tests and the limits of the example. They are part of the teaching material, not an optional developer note.
 
 ## Automated checks
 
