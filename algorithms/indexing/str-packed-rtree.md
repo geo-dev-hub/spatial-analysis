@@ -40,24 +40,11 @@ An R-tree groups nearby entries into nodes. Every node stores a bounding rectang
 
 When a query does not intersect a node's rectangle, none of that node's descendants can match. The whole branch can be skipped.
 
-```mermaid
-flowchart TD
-    R["Root bounding rectangle"]
-    A["Internal node A"]
-    B["Internal node B"]
-    A1["Leaf entries 1–3"]
-    A2["Leaf entries 4–6"]
-    B1["Leaf entries 7–9"]
-    B2["Leaf entries 10–12"]
-    R --> A
-    R --> B
-    A --> A1
-    A --> A2
-    B --> B1
-    B --> B2
-```
+![R-tree example showing spatial objects grouped into leaf rectangles and larger parent bounding rectangles.](https://upload.wikimedia.org/wikipedia/commons/6/6f/R-tree.svg)
 
-This is a conceptual tree. The actual grouping depends on the data and the packing strategy.
+*Diagram: “R-tree.svg” by Skinkie and Radim Baca, dedicated to the public domain. [Original file and rights statement](https://commons.wikimedia.org/wiki/File:R-tree.svg). Embedded from Wikimedia Commons without modification.*
+
+The example shows the hierarchy of bounding rectangles. The actual grouping depends on the data and the packing strategy.
 
 ## Why use STR packing?
 
