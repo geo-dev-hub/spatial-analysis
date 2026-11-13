@@ -80,6 +80,17 @@ P(D\mid B_1,\ldots,B_m)
 
 The result is a model-based posterior probability only to the extent that the event labels, evidence definitions, sampling design and assumptions support that interpretation. It is not automatically a calibrated probability of discovery.
 
+```mermaid
+flowchart LR
+    A[Known occurrences and study area] --> C[Count event by evidence]
+    B[Binary evidence themes] --> C
+    C --> D[Estimate positive and negative weights]
+    D --> E[Prior log odds plus evidence weights]
+    E --> F[Posterior probability surface]
+    F --> G[Spatial validation and sensitivity analysis]
+    H[Sampling quality and conditional independence] -.-> E
+```
+
 ## 5. The key assumption: conditional independence
 
 The standard additive model assumes the evidence themes are conditionally independent given the event and given its absence. In practical terms, once we know whether the target event is present, one evidence layer should not provide additional information about another.
