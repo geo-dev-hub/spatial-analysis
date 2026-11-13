@@ -18,7 +18,7 @@ def zonal_statistics(values: Sequence[Sequence[float]]|np.ndarray, zones: Sequen
         raise ValueError("zones must be a 2D array with the same shape as values")
     finite_labels=labels[np.isfinite(labels)]
     if ((finite_labels!=np.floor(finite_labels)).any()
-        or (finite_labels>np.iinfo(np.int64).max).any()
+        or (finite_labels>=float(2**63)).any()
         or (finite_labels<np.iinfo(np.int64).min).any()):
         raise ValueError("finite zone labels must be integers in int64 range")
     result={}
