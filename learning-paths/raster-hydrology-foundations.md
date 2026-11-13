@@ -24,7 +24,11 @@ Read [D8 flow accumulation](../algorithms/raster/d8-flow-accumulation.md) and ru
 
 Accumulation includes the cell itself. It is not discharge unless the input contributions and time basis justify that interpretation.
 
-## 3. Compare routing assumptions
+## 3. Delineate a contributing area
+
+Read [Single-outlet watershed delineation](../algorithms/raster/watershed-delineation.md) and run the [watershed notebook](../notebooks/watershed-delineation-lab.ipynb). It traces upstream cells whose D8 paths reach a selected outlet. The outlet cell is explicit; automatic snapping is deliberately not hidden inside the operation.
+
+## 4. Compare routing assumptions
 
 D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuous direction and distributes flow across adjacent downslope cells. Multiple-flow-direction methods distribute flow among several downslope neighbours according to their gradients.
 
