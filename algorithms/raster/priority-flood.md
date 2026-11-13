@@ -24,7 +24,7 @@ $$
 d_{fill}=z_{filled}-z_{original}
 $$
 
-## Boundary and NoData policy
+## Algorithm at a glance\n\n~~~mermaid\nflowchart TD\n  A[Seed valid raster edges and NoData neighbours] --> B[Pop lowest frontier cell]\n  B --> C[Visit each unvisited valid neighbour]\n  C --> D{Neighbour below spill level?}\n  D -- Yes --> E[Raise neighbour to spill level]\n  D -- No --> F[Keep original elevation]\n  E --> G[Push neighbour into min-heap]\n  F --> G\n  G --> H{Heap empty?}\n  H -- No --> B\n  H -- Yes --> I[Return filled DEM and fill depth]\n~~~\n\n## Boundary and NoData policy
 
 NoData is not assigned an elevation. It is an invalid barrier. Valid cells adjacent to NoData are treated as boundary seeds in this teaching implementation. That is a deliberate policy: an internal data gap may not be a real hydrological outlet, and a clipped raster boundary may omit upstream terrain.
 
