@@ -7,7 +7,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import shapely
-from shapely.geometry import MultiPolygon, Polygon
+from shapely.geometry import GeometryCollection, MultiPolygon, Polygon
+from shapely.geometry.base import BaseGeometry
 
 
 @dataclass(frozen=True)
@@ -19,13 +20,13 @@ class ValidityReport:
     component_count: int
 
 
-def inspect_polygon(geometry: Polygon | MultiPolygon) -> ValidityReport:
+def inspect_polygon(geometry: Polygon | MultiPolygon | GeometryCollection) -> ValidityReport:
     """Report validity without modifying or repairing the input geometry."""
-    if not isinstance(geometry, (Polygon, MultiPolygon)):
-        raise TypeError("geometry must be a Polygon or MultiPolygon")
+    if not isinstance(geometry, (Polygon, MultiPolygon, GeometryCollection)):
+        raise TypeError("geometry must be a Polygon, MultiPolygon or GeometryCollection")
     if geometry.is_empty:
         component_count = 0
-    elif isinstance(geometry, MultiPolygon):
+    elif isinstance(geometry, (MultiPolygon, GeometryCollection)):
         component_count = len(geometry.geoms)
     else:
         component_count = 1
@@ -39,7 +40,7 @@ def inspect_polygon(geometry: Polygon | MultiPolygon) -> ValidityReport:
     )
 
 
-def repair_polygon_explicitly(geometry: Polygon | MultiPolygon) -> Polygon | MultiPolygon | shapely.GeometryCollection:
+def repair_polygon_explicitly(geometry: Polygon | MultiPolygon) -> BaseGeometry:
     """Return Shapely's make_valid result; never replace or mutate the input.
 
     The linework method is Shapely's default. Its output may be a different
