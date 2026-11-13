@@ -128,6 +128,9 @@ jobs:
           - example: owa
             directory: implementations/python/owa
             pythonpath: ""
+          - example: topsis
+            directory: implementations/python/topsis
+            pythonpath: ""
           - example: d8-flow-accumulation
             directory: implementations/python/d8-flow-accumulation
             pythonpath: ""
