@@ -31,6 +31,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Raster analysis
 
 - [Euclidean distance transform lab](raster-distance-transform-lab.ipynb): compare square and rectangular cell spacing and inspect distance to multiple target cells.
+- [Priority-Flood lab](priority-flood-lab.ipynb): fill a synthetic DEM depression, inspect the spill elevation and compare the fill-depth layer.
 - [D8 flow direction lab](d8-flow-direction-lab.ipynb): inspect steepest-descent direction codes, rectangular cell spacing, sinks and NoData.
 - [D8 flow accumulation lab](d8-flow-accumulation-lab.ipynb): trace upstream contributing cells, weighted flow and confluences.
 - [Watershed delineation lab](watershed-delineation-lab.ipynb): select an outlet and map all cells that drain to it.
