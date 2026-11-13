@@ -1,4 +1,4 @@
-# Intern walkthrough: three proximity graph constructions
+# Intern walkthrough: five proximity graph constructions
 
 ## Objective
 
@@ -26,4 +26,4 @@ Run the tests and inspect the square and intermediate-point fixtures. For the st
 
 ## Step 7 — Understand the scale limit
 
-The direct graph routines test O(n²) candidate pairs against up to O(n) blockers, so the simple Gabriel and RNG baselines are O(n³). The MST materialises O(n²) candidate edges and sorts them. These are transparent reference implementations, not scalable geometric construction algorithms.
+The direct Gabriel, RNG and beta-skeleton routines test O(n²) candidate pairs against up to O(n) blockers, so they are O(n³). Yao selects cone neighbours by scanning all other points and is O(n²). The MST materialises O(n²) candidate edges and sorts them. These are transparent reference implementations, not scalable geometric construction algorithms.
