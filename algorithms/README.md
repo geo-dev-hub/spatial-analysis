@@ -34,6 +34,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Euclidean distance transform](raster/euclidean-distance-transform.md) — calculate centre-to-centre distance from every grid cell to the nearest target cell.
 - [D8 flow direction](raster/d8-flow-direction.md) — assign each DEM cell to its steepest downslope neighbour.
 - [D8 flow accumulation](raster/d8-flow-accumulation.md) — propagate upstream cell counts or weighted contributions through an existing D8 direction grid.
+- [Watershed delineation](raster/watershed-delineation.md) — trace the contributing area of a selected outlet through a D8 flow network.
 
 ## Geostatistics
 
