@@ -15,8 +15,8 @@ It is a global statistic: one number summarises the whole study area. It does no
 ## The question it answers
 
 Given:
-- one continuous value for each of (n) spatial units;
-- a spatial weights matrix (W) describing which units are neighbours and how strongly they are connected;
+- one continuous value for each of $n$ spatial units;
+- a spatial weights matrix $W$ describing which units are neighbours and how strongly they are connected;
 
 Geary's C measures whether connected units tend to have similar or dissimilar values.
 
@@ -61,9 +61,9 @@ Interpretation:
 
 | Result | What it suggests |
 |---|---|
-| (C < 1) | Neighbours tend to have more similar values than expected under the null |
+| $C<1$ | Neighbours tend to have more similar values than expected under the null |
 | $C \approx 1$ | The overall neighbour differences are around the null expectation |
-| (C > 1) | Neighbours tend to have more dissimilar values than expected under the null |
+| $C>1$ | Neighbours tend to have more dissimilar values than expected under the null |
 
 These are directions of association, not significance statements. A statistic near 1 is not proof that the data are random; inference requires a reference distribution.
 
@@ -78,7 +78,7 @@ flowchart LR
     C ---|"difference = 1"| D["Area 4: 4"]
 ```
 
-With values ([1,2,3,4]), each connected pair differs by one. If we change the values to ([1,4,1,4]), every connected pair differs by three. The neighbourhood graph stays the same, but the squared differences become nine times larger.
+With values $x=[1,2,3,4]$, each connected pair differs by one. If we change the values to $x=[1,4,1,4]$, every connected pair differs by three. The neighbourhood graph stays the same, but the squared differences become nine times larger.
 
 ## Work through the calculation
 
@@ -97,7 +97,7 @@ $$
 For $x=[1,2,3,4]$:
 
 - $n=4$
-- (ar{x}=2.5)
+- $\bar{x}=2.5$
 - $S_0=6$
 - $\sum_i\sum_j w_{ij}(x_i-x_j)^2=6$
 - $\sum_i(x_i-\bar{x})^2=5$
@@ -109,14 +109,14 @@ C = \frac{4-1}{2\times6}\times\frac{6}{5}
 = 0.3
 $$
 
-Because (C) is below one, neighbouring values are more similar than expected under the randomisation reference.
+Because $C$ is below one, neighbouring values are more similar than expected under the randomisation reference.
 
 For the alternating values $x=[1,4,1,4]$:
 
 - each of the three undirected edges has a difference of three;
-- each directed edge contributes (3^2=9);
-- the directed numerator is (54);
-- the denominator is (9).
+- each directed edge contributes $3^2=9$;
+- the directed numerator is $54$;
+- the denominator is $9$.
 
 Therefore:
 
@@ -135,9 +135,9 @@ Both statistics use the same spatial units and weights, but they measure similar
 |---|---|---|
 | What it compares | Deviations from the overall mean | Differences between neighbouring values |
 | Main mathematical term | $z_i z_j$ | $(x_i-x_j)^2$ |
-| Null expectation | (-1/(n-1)) | (1) |
-| Positive spatial autocorrelation | (I>E[I]) | (C<1) |
-| Negative spatial autocorrelation | (I<E[I]) | (C>1) |
+| Null expectation | $-1/(n-1)$ | $1$ |
+| Positive spatial autocorrelation | $I>E[I]$ | $C<1$ |
+| Negative spatial autocorrelation | $I<E[I]$ | $C>1$ |
 | Useful emphasis | Overall spatial association | Pairwise contrasts between neighbours |
 
 Do not assume that one statistic can be converted directly into the other. Their values, distributions and inference procedures are different.
@@ -154,7 +154,7 @@ A common approach is permutation inference:
 4. Repeat for the chosen number of permutations.
 5. Compare the observed statistic with the simulated reference distribution.
 
-The expected value of the permutation distribution is one under the randomisation null. For Geary's C, values in the lower tail indicate stronger positive autocorrelation; values in the upper tail indicate stronger negative autocorrelation. Use the inference procedure and sidedness documented by the software version you run. Do not assume that a software package's reported pseudo-(p)-value is a generic two-sided test.
+The expected value of the permutation distribution is one under the randomisation null. For Geary's C, values in the lower tail indicate stronger positive autocorrelation; values in the upper tail indicate stronger negative autocorrelation. Use the inference procedure and sidedness documented by the software version you run. Do not assume that a software package's reported pseudo-$p$-value is a generic two-sided test.
 
 The official PySAL guide demonstrates analytical and permutation-based inference and reports the statistic, expected value and simulated reference distribution. Its API documentation should be consulted for the exact output and options in the installed version.
 
@@ -183,7 +183,7 @@ Here `rook=False` constructs Queen contiguity and `transform("r")` row-standardi
 
 ## Try it yourself
 
-- Change the values from ([1,2,3,4]) to ([1,4,1,4]). Explain why Geary's C moves from below one to above one.
+- Change the values from $x=[1,2,3,4]$ to $x=[1,4,1,4]$. Explain why Geary's C moves from below one to above one.
 - Add a fifth unit with no neighbours. How does the weights matrix represent it, and what does your software do with it?
 - Compare binary and row-standardised weights. Does the statistic change for your graph? Why?
 - Use a real polygon dataset and compare Queen with Rook contiguity.
@@ -219,7 +219,7 @@ Always report:
 ## What this lesson does not claim
 
 - Geary's C does not identify the locations of clusters; local statistics answer a different question.
-- (C<1) or (C>1) is not, by itself, a significance result.
+- $C<1$ or $C>1$ is not, by itself, a significance result.
 - There is no universal best spatial weights matrix.
 - The dense Python implementation is not a replacement for tested spatial statistics software.
 
