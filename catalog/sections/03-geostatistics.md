@@ -64,7 +64,11 @@ This section combines surface estimation, stochastic spatial models, simulation,
 | Spatial microsimulation (IPF, simulated annealing), areal interpolation, dasymetric mapping, WorldPop-style random forest population surfaces | Spatial microsimulation / areal estimation / mapping workflows | 6 |
 | Statistical downscaling: quantile mapping, BCSD, delta change, analog methods | Downscaling methods | 6 |
 
-## First audited lesson\n\nThe [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.\n\n## Decisions for the next pass
+## First audited lesson
+
+The [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.
+
+## Decisions for the next pass
 
 1. Separate deterministic interpolation from stochastic geostatistical prediction.
 2. Verify the assumptions behind variograms, stationarity, covariance models and kriging variants.
