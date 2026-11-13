@@ -78,13 +78,13 @@ These direct methods are intentionally not the fastest known algorithms. For lar
 
 ## Runnable baseline
 
-The companion package implements small-data, exact-definition baselines for Gabriel, RNG and Euclidean MST. It is designed for learning and testing, not millions of points.
+The companion package implements small-data baselines for Gabriel, RNG, the lune-based beta-skeleton for 1 ≤ beta ≤ 2, the undirected-union Yao graph and Euclidean MST. It is designed for learning and testing, not millions of points.
 
 - [Implementation](../../implementations/python/proximity-graphs/README.md)
 - [Intern walkthrough](../../implementations/python/proximity-graphs/implementation-walkthrough.md)
 - [Tests](../../implementations/python/proximity-graphs/test_proximity_graphs.py)
 
-Yao and beta-skeleton variants remain research-only in this package; their exact variants and construction guarantees need dedicated implementation dossiers.
+The beta-skeleton implementation is specifically the lune-based family for beta in [1,2], with beta=1 matching the open-disk Gabriel rule and beta=2 matching the open-lune RNG rule. The Yao implementation uses equal-angle cones, nearest-neighbour selection, input-index tie-breaking and undirected union symmetrisation. These conventions are part of the API; other beta-skeleton or Yao variants may produce different graphs.
 
 ## Try it
 
@@ -99,4 +99,4 @@ Then construct a nearly cocircular point set and document how your boundary conv
 - Lingas, A. (1994), [A linear-time construction of the relative neighborhood graph from the Delaunay triangulation](https://doi.org/10.1016/0925-7721(94)90018-3), Computational Geometry, 4(4), 199–208.
 - [Computational Geometry: An Introduction](https://www.cs.rpi.edu/~cutler/classes/computationalgeometry/F23/references/Computational_Geometry_An_Introduction.pdf).
 
-**Scope:** baseline implementations cover Gabriel, RNG and Euclidean MST. Beta-skeleton and Yao graph variants are catalogued but not implemented.
+**Scope:** small-input implementations cover Gabriel, RNG, one lune-based beta-skeleton variant, one explicitly specified Yao graph variant and Euclidean MST. Efficient Delaunay-based construction and proven large-scale bounds are not implemented.
