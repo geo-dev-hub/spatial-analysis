@@ -26,7 +26,7 @@ Compare Gabriel, relative neighbourhood and Euclidean minimum spanning graphs. R
 
 [Planar point location](../algorithms/geometry/point-location.md)
 
-Move beyond point-in-polygon. Learn how slab decompositions and randomized trapezoidal maps answer repeated face-location queries. The dossier is research-ready, but the complete data structure is not yet implemented.
+Move beyond point-in-polygon. Learn how slab decompositions and randomized trapezoidal maps answer repeated face-location queries. Run the [static slab locator](../implementations/python/point-location/README.md), then compare its restricted subdivision contract with the more general randomized trapezoidal-map literature.
 
 ## 5. Find a least-cost route through a graph
 
