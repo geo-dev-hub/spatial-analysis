@@ -81,7 +81,7 @@ You will learn:
 
 Once you can reason about points, segments and polygon boundaries, try a different question: what is the smallest convex boundary that contains a whole set of points? Graham scan introduces the convex hull, polar-angle sorting and the orientation test in one compact algorithm.
 
-Run the [Python example](../implementations/python/graham-scan/README.md) and follow the [step-by-step walkthrough](../implementations/python/graham-scan/implementation-walkthrough.md). The implementation returns only extreme hull vertices; its collinearity and floating-point policies are stated explicitly.
+Run the [Python example](../implementations/python/graham-scan/README.md), follow the [step-by-step walkthrough](../implementations/python/graham-scan/implementation-walkthrough.md), or open the [interactive Graham scan lab](../notebooks/graham-scan-lab.ipynb). The implementation returns only extreme hull vertices; its collinearity and floating-point policies are stated explicitly.
 
 ## What connects the lessons?
 
