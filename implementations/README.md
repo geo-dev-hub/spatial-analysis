@@ -28,6 +28,11 @@ Each implementation should state:
 - [Exact p-median](python/p-median/README.md): exhaustive small-instance facility-location solver with deterministic assignments, tests and an [intern walkthrough](python/p-median/implementation-walkthrough.md).
 - [Two-step floating catchment area](python/two-step-fca/README.md): binary-catchment supply/demand accessibility measure with explicit impedance matrix semantics, tests and an [intern walkthrough](python/two-step-fca/implementation-walkthrough.md).
 
+### Geodesy and georeferencing
+
+- [Affine georeferencing](python/affine-georeferencing/README.md): least-squares six-parameter 2D transform from control points, rank checks, residual diagnostics, tests and an [intern walkthrough](python/affine-georeferencing/implementation-walkthrough.md).
+- [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
+
 ### Geodesy
 
 - [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
