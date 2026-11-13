@@ -36,7 +36,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Step-by-step implementation walkthroughs for all eight Python examples.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
-- [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based interactive notebooks, conditional permutation explanations and FDR treatment.
+- [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
+- [x] Add live ipywidgets controls to compare Moran's I and Geary's C while changing values and weight style.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
@@ -48,21 +49,24 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 ## 4. Every lesson uses the right teaching tools
 
 - [x] Mathematical notation standard and rendered display equations.
+- [x] Add a live widget lab comparing Global Moran's I and Geary's C with adjustable observations and weights.
 - [x] Mermaid diagrams for process and decision logic.
 - [x] SVG for precise geometric illustrations.
 - [x] Source-figure attribution and licence policy.
-- [x] Two verified CC BY-SA 4.0 diagrams linked into relevant lessons.
+- [x] Reuse seven verified Wikimedia Commons figures across lessons: three CC BY-SA 4.0, two CC BY-SA 3.0, one CC0 1.0 and one public-domain figure.
 - [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
+- [x] Add stable cell IDs to all nine notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
-- [ ] Ensure every figure has useful alt text and a caption.
+- [x] Ensure every reused figure has useful alt text and a caption.
 
 ## 5. The examples can be trusted and reproduced
 
 - [x] Versioned dependencies for current Python examples.
 - [x] Tests and documented input contracts.
+- [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all eight Python examples and execute all nine notebooks.
 - [ ] Confirm successful Actions runs for all eight Python test suites and all nine notebooks.

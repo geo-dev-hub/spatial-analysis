@@ -36,7 +36,7 @@ $$
 J = \{(i,j) \mid P(L_i,R_j)\}
 $$
 
-A brute-force join evaluates the predicate for every possible pair. That means (n\times m) exact geometry tests.
+A brute-force join evaluates the predicate for every possible pair. That means $n \times m$ exact geometry tests.
 
 ## Filter first: build a candidate set
 
@@ -141,14 +141,14 @@ The result is a pair of integer indices into the original input sequences. The o
 
 ## How much work does the index save?
 
-Without an index, the join performs (n\times m) exact predicate checks.
+Without an index, the join performs $n \times m$ exact predicate checks.
 
 With a spatial index:
 - build the index on one collection;
 - query it with the other collection;
 - refine only the candidate pairs.
 
-If the index is selective, the candidate count can be much smaller than (n\times m). The actual cost depends on the tree structure, bounding-box overlap, query distribution and exact predicate.
+If the index is selective, the candidate count can be much smaller than $n \times m$. The actual cost depends on the tree structure, bounding-box overlap, query distribution and exact predicate.
 
 The worst case is still $O(nm)$ when many bounding boxes overlap. If both collections contain $N$ geometries, that is $O(N^2)$. An index is not a guarantee of subquadratic performance.
 

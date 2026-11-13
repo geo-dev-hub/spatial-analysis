@@ -301,4 +301,5 @@ The algorithm works in a planar coordinate system. Applying it directly to longi
 
 | Version | Date | Change | Author / contributor |
 |---|---|---|---|
-| 0.2 | 2026-11-13 | Added paired list and implicit-treap implementations, data-structure explanation and benchmark | Project draft |\n| 0.1 | 2026-11-13 | Initial researched algorithm record with sweep-line diagram and rendered equations | Project draft |
+| 0.2 | 2026-11-13 | Added paired list and implicit-treap implementations, data-structure explanation and benchmark | Project draft |
+| 0.1 | 2026-11-13 | Initial researched algorithm record with sweep-line diagram and rendered equations | Project draft |

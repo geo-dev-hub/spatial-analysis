@@ -32,7 +32,7 @@ where:
 - $w_{ij}$ is the spatial weight from location $i$ to location $j$;
 - the weighted sum is the spatial lag of the standardised values.
 
-This is the standardised form used by PySAL's `Moran_Local`: the input is transformed to have zero mean and unit standard deviation, and the factor $(n-1)/\\sum_k z_k^2$ is applied. Since the squared standardised values sum to $n$, this factor is $(n-1)/n$. Other presentations of local Moran statistics may use a different scaling convention. Always identify the convention and implementation used.
+This is the standardised form used by PySAL's `Moran_Local`: the input is transformed to have zero mean and unit standard deviation, and the factor $(n-1)/\sum_k z_k^2$ is applied. Since the squared standardised values sum to $n$, this factor is $(n-1)/n$. Other presentations of local Moran statistics may use a different scaling convention. Always identify the convention and implementation used.
 
 ## Four local patterns
 
