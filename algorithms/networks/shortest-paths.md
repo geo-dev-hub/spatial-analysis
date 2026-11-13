@@ -74,7 +74,7 @@ A turn restriction may require the search state to include the incoming edge, no
 
 ## Runnable baseline
 
-The companion implementation provides Dijkstra and A* over an explicit adjacency mapping. It supports directed graphs, rejects negative or non-finite edge weights, reconstructs a path and returns its total cost.
+The companion implementation provides Dijkstra and A* over non-negative weighted directed graphs, plus Bellman–Ford for negative edges and Floyd–Warshall for all-pairs distances. Dijkstra/A* reject negative or non-finite edge weights; Bellman–Ford detects reachable negative cycles; Floyd–Warshall detects negative cycles anywhere in the represented graph.
 
 - [Implementation](../../implementations/python/shortest-paths/README.md)
 - [Intern walkthrough](../../implementations/python/shortest-paths/implementation-walkthrough.md)
@@ -95,4 +95,4 @@ Finally, add a turn restriction. Explain why the state may need to represent the
 - Geisberger, R., Sanders, P., Schultes, D. and Delling, D. (2008), [Contraction Hierarchies: Faster and Simpler Hierarchical Routing in Road Networks](https://i11www.iti.kit.edu/extra/publications/gssd-chfsh-08.pdf).
 - [OSRM routing algorithms overview](https://github.com/Project-OSRM/osrm-backend/wiki/Algorithms).
 
-**Scope:** Dijkstra and A* have runnable baselines. The remaining algorithms are surveyed with their design roles and assumptions, not claimed as implemented.
+**Scope:** Dijkstra, A*, Bellman–Ford and Floyd–Warshall have runnable baselines. Bidirectional Dijkstra, ALT, contraction hierarchies, hub labels and customizable route planning remain research/survey material, not implemented algorithms.
