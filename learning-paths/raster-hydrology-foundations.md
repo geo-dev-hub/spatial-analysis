@@ -53,4 +53,4 @@ These methods produce different contributing-area patterns. They are not just di
 
 ## What remains
 
-The wider source section also includes priority-flood depression filling, sink breaching, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
+The wider source section also includes sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
