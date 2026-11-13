@@ -52,6 +52,8 @@ A first affine control-point lesson and tested least-squares implementation are 
 
 ## Data infrastructure and computing
 
+A first format-selection guide now separates authoritative storage, analytical layout, discovery metadata and delivery products. It compares COG, Zarr, GeoParquet, FlatGeobuf, STAC, vector tiles and spatial databases by access pattern. It is a decision guide, not a claim that all listed formats are equally mature or interchangeable.
+
 | Source entry | Kind to review | Source page |
 |---|---|---:|
 | Formats and catalogs: COG, Zarr, GeoParquet, FlatGeobuf, STAC, Mapbox Vector Tile, TopoJSON, WKB and WKT, Google polyline, Draco, spatial deduplication | Data formats / catalogue standards / encoding and deduplication methods | 19 |
