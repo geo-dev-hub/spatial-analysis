@@ -118,7 +118,7 @@ The source organises methods by application field. The same statistical, geometr
 
 ## Current reviewed coverage
 
-The weighted linear combination entry now has a canonical method record, a tested numerical aggregation implementation and an interactive synthetic suitability lab. This covers only the weighted-sum decision rule. The other named methods in the multi-criteria group remain separate verification and research tasks.
+Weighted linear combination has a canonical method record, tested numerical aggregation implementation and interactive synthetic suitability lab. Weights of evidence now has a separate Bayesian method record, tested NumPy baseline, intern walkthrough and worked exercise. These methods answer different questions: WLC combines preference scores; weights of evidence estimates associations from labelled occurrences under conditional independence. The remaining multi-criteria methods and wider domain entries still require separate verification.
 
 ## Decisions for the next pass
 
