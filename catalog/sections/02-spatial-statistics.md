@@ -4,7 +4,7 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Source-derived records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
+- **Source-derived records:** [DBSCAN](../../algorithms/statistics/dbscan.md); [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
 - **Supplementary companions:** [Local Geary](../../algorithms/statistics/local-geary.md); [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md)
 
 The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Local Geary](../../algorithms/statistics/local-geary.md) and [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lessons are supplementary companions added during research; neither is a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
@@ -18,6 +18,10 @@ The source groups together descriptive statistics, inferential procedures, point
 | Summary geometry: mean center, median center, standard distance, standard deviational ellipse | Descriptive spatial summaries / geometric measures | 3 |
 | Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3 |
 | Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3 |
+
+## First audited clustering lesson
+
+The [DBSCAN lesson](../../algorithms/statistics/dbscan.md) introduces core, border and noise points, the eps/min_samples parameters and the input-order policy for ambiguous border points. A tested O(n²) planar implementation and interactive notebook provide a small-data baseline; HDBSCAN, OPTICS and indexed large-data search remain open.
 
 ## Point pattern analysis
 
