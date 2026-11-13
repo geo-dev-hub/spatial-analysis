@@ -83,11 +83,13 @@ A second foundational example is [point in polygon](algorithms/geometry/point-in
 
 A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests.
 
+Try the [interactive geometry foundations lab](notebooks/geometry-foundations-lab.ipynb) to move a point, adjust a segment and explore polygon overlays.
+
 Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. You can also [run the restricted Python teaching implementation](implementations/python/bentley-ottmann/README.md) and follow its [step-by-step walkthrough](implementations/python/bentley-ottmann/implementation-walkthrough.md); its nine tests compare results with the pairwise method.
 
 ## A first look at spatial patterns
 
-Try the [interactive geometry foundations lab](notebooks/geometry-foundations-lab.ipynb) to move a point, change a segment and explore polygon overlays. Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
+Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
