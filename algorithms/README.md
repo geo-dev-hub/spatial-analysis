@@ -23,6 +23,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 ## Optimization and location science
 
 - [The p-median problem](optimization/p-median.md) — choose a fixed number of candidate facilities to minimise weighted assignment cost.
+- [Two-step floating catchment area](optimization/two-step-fca.md) — estimate potential service accessibility by combining provider supply and population demand within travel catchments.
 
 ## Remote sensing
 
