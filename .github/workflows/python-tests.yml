@@ -54,6 +54,9 @@ jobs:
           - example: inverse-distance-weighting
             directory: implementations/python/inverse-distance-weighting
             pythonpath: ""
+          - example: empirical-semivariogram
+            directory: implementations/python/empirical-semivariogram
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -125,3 +128,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-weights-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geometry-foundations-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/inverse-distance-weighting-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/empirical-semivariogram-lab.ipynb
