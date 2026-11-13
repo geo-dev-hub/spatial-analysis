@@ -4,6 +4,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
+- [Dijkstra's algorithm](dijkstra-lab.ipynb): step through priority-queue events, inspect tentative distances and reconstruct a least-cost route.
+
 - [D8 flow direction](d8-flow-direction-lab.ipynb): move a synthetic hill and change its tilt to see how D8 assigns one receiving neighbour to each cell.
 
 - [Ordinary kriging](ordinary-kriging-lab.ipynb): compare spherical, exponential and Gaussian variograms, and inspect predictions beside their model-based variance.
@@ -43,6 +45,7 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
 - [Graham scan](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/graham-scan-lab.ipynb)
+- [Dijkstra's algorithm](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/dijkstra-lab.ipynb)
 - [D8 flow direction](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/d8-flow-direction-lab.ipynb)
 - [Ordinary kriging](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/ordinary-kriging-lab.ipynb)
 - [Empirical semivariogram](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/empirical-semivariogram-lab.ipynb)
