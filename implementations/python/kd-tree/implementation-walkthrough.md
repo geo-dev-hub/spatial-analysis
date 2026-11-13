@@ -49,7 +49,7 @@ The current best result is ordered by (squared distance, original index). This m
 
 ## 6. Decide whether the far branch can be skipped
 
-The split plane is a lower bound on the distance to any point in the opposite half-space. Let delta be the query coordinate minus the split coordinate.
+The split plane is a lower bound on the distance to any point in the opposite half-space. The query coordinate must be selected using the node's active split axis: use q_x for an x split and q_y for a y split. Mixing these up can make the lower bound invalid and incorrectly prune the true nearest neighbour. Let delta be the query coordinate minus the split coordinate.
 
 If delta squared is greater than the current best squared distance, every point in the far branch must be farther away. The branch can be skipped.
 
