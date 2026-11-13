@@ -10,15 +10,15 @@ def test_linear_eastward_flow_counts_upstream_cells_including_self():
 
 
 def test_confluence_accumulates_all_upstream_branches():
-    # Top and bottom flow into the centre, which then flows east.
+    # Top and bottom contribute to the centre, which drains out of the valid domain.
     directions = np.array([
         [-1, 4, -1],
         [-1, 1, -1],
         [-1, 64, -1],
     ])
     result = d8_flow_accumulation(directions)
-    assert result[0, 1] == 2
-    assert result[2, 1] == 2
+    assert result[0, 1] == 1
+    assert result[2, 1] == 1
     assert result[1, 1] == 3
 
 
