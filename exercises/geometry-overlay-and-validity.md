@@ -35,12 +35,12 @@ Construct two overlapping polygons $A$ and $B$. Calculate intersection, union, d
 
 Check:
 
-$
+$$
 \operatorname{area}(A \cup B) +
 \operatorname{area}(A \cap B)
 =
 \operatorname{area}(A) + \operatorname{area}(B)
-$
+$$
 
 and
 
