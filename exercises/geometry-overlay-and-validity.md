@@ -40,7 +40,7 @@ $
 \operatorname{area}(A \cap B)
 =
 \operatorname{area}(A) + \operatorname{area}(B)
-]
+$
 
 and
 
@@ -48,7 +48,7 @@ and
 \operatorname{area}(A \setminus B) +
 \operatorname{area}(A \cap B)
 =
-\\operatorname{area}(A)
+\operatorname{area}(A)
 $
 
 Then explain why passing these area checks does not prove that the result boundaries are correct.
