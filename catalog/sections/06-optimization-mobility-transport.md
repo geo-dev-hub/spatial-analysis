@@ -4,11 +4,11 @@
 - **Source pages:** 9–11
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md) and [pages 11–15](../../source-inventory/pages-11-15.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [The p-median problem](../../algorithms/optimization/p-median.md) (first audited facility-location model; remaining entries are still unverified)
 
 This section brings together optimisation problems, logistics, accessibility, transport planning, human mobility, positioning and robotics. It includes exact optimisation methods, heuristics, models, software, metrics and applied workflows. Keep the problem definition visible: many similarly named methods solve different objectives or operate under different constraints.
 
-## Location-allocation and spatial optimization
+## First audited location model\n\nThe [p-median lesson](../../algorithms/optimization/p-median.md) states the uncapacitated facility-location objective and assignment constraints. A tested exact exhaustive solver provides a small-instance oracle, with an interactive notebook. It does not include capacities, maximum service thresholds, stochastic demand or equity constraints.\n\n## Location-allocation and spatial optimization
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
