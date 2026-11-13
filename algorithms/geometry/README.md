@@ -4,7 +4,7 @@
 - [Polygon intersection](polygon-intersection.md)
 - [Segment intersection](segment-intersection.md)
 - [Bentley–Ottmann](bentley-ottmann.md)
-- [Line simplification](simplification.md)
+- [Line simplification](simplification.md)\n- [Polygon coverage simplification](coverage-simplification.md)\n- [Precision models and snap rounding](precision-models.md)
 - [Polygon offsetting](offsetting.md)
 - [Proximity graphs](proximity-graphs.md)
 - [Planar point location](point-location.md)
