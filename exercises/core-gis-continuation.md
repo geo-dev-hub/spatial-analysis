@@ -45,7 +45,25 @@ Draw a planar subdivision with at least six faces. Create queries strictly insid
 
 Do not substitute repeated point-in-polygon tests and call them a trapezoidal map.
 
-## 5. Route on a directed weighted graph
+## 5. Preserve a polygon coverage
+
+Create two adjacent polygons with a wavy shared boundary.
+
+- Simplify each polygon independently and inspect the shared boundary.
+- Run coverage-aware simplification and verify that the output is still a valid coverage.
+- Compare vertex count, area, shared-edge equality and outer-boundary changes.
+- Explain why per-feature topology preservation is not the same as coverage topology preservation.
+
+## 6. Compare precision models
+
+Create two geometries whose edges nearly meet.
+
+- Compare floating-precision overlay with precision-reduced inputs.
+- Repeat with a fixed grid size.
+- Record collapsed components, validity, area and coordinate movement.
+- Explain why coordinate rounding alone is not a full snap-rounding noder.
+
+## 7. Route on a directed weighted graph
 
 Create a directed graph with a short but slow route and a longer but faster route.
 
