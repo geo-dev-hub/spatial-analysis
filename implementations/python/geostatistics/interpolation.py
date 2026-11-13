@@ -162,3 +162,50 @@ def ordinary_kriging_predict(
             raise ArithmeticError("computed kriging variance is negative; inspect model and inputs")
         results.append((estimate, variance))
     return results
+
+
+def empirical_variogram(
+    samples: Sequence[Sample],
+    bin_edges: Sequence[float],
+) -> list[tuple[float, float | None, int]]:
+    """Return (mean pair distance, semivariance, pair count) for distance bins.
+
+    Bins are left-closed and right-open, except that the final bin includes
+    its right edge. Empty bins retain their midpoint with semivariance None.
+    This is an exploratory classical method-of-moments estimate, not a fitted
+    variogram model and not a directional/robust estimator.
+    """
+    from itertools import combinations
+
+    data = _validated_samples(samples)
+    edges = [float(edge) for edge in bin_edges]
+    if len(edges) < 2 or any(not isfinite(edge) for edge in edges):
+        raise ValueError("bin_edges must contain at least two finite values")
+    if edges[0] < 0 or any(right <= left for left, right in zip(edges, edges[1:])):
+        raise ValueError("bin_edges must be non-negative and strictly increasing")
+
+    distances: list[list[float]] = [[] for _ in range(len(edges) - 1)]
+    squared_differences: list[list[float]] = [[] for _ in range(len(edges) - 1)]
+    for first, second in combinations(data, 2):
+        distance = hypot(first[0] - second[0], first[1] - second[1])
+        if distance < edges[0] or distance > edges[-1]:
+            continue
+        bin_index = None
+        for index, (lower, upper) in enumerate(zip(edges, edges[1:])):
+            is_last = index == len(edges) - 2
+            if lower <= distance and (distance < upper or (is_last and distance <= upper)):
+                bin_index = index
+                break
+        if bin_index is not None:
+            distances[bin_index].append(distance)
+            squared_differences[bin_index].append((first[2] - second[2]) ** 2)
+
+    result = []
+    for index, pair_distances in enumerate(distances):
+        if not pair_distances:
+            midpoint = (edges[index] + edges[index + 1]) / 2.0
+            result.append((midpoint, None, 0))
+            continue
+        semivariance = sum(squared_differences[index]) / (2.0 * len(pair_distances))
+        result.append((sum(pair_distances) / len(pair_distances), semivariance, len(pair_distances)))
+    return result
