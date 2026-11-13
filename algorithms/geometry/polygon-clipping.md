@@ -75,6 +75,31 @@ Validate output and preserve provenance
 
 This is a conceptual outline, not pseudocode for every clipping family. Vatti, Weiler–Atherton and Greiner–Hormann have different data structures and event rules.
 
+## Choose the right tool
+
+Start with the object and output you need. The algorithm name alone is not enough.
+
+~~~mermaid
+flowchart TD
+    A["What are you clipping?"]
+    B{"A line segment?"}
+    C["Use a line-clipping method\n(e.g. Liang–Barsky for a rectangle)"]
+    D{"A polygon?"}
+    E{"Both rings convex and one area ring is enough?"}
+    F["Use the scoped Sutherland–Hodgman teaching example"]
+    G["Use a general polygon overlay engine\n(e.g. GEOS through Shapely)"]
+    H["Clarify geometry model and output contract first"]
+    A --> B
+    B -- Yes --> C
+    B -- No --> D
+    D -- No --> H
+    D -- Yes --> E
+    E -- Yes --> F
+    E -- No --> G
+~~~
+
+The chart is a practical starting point, not a complete algorithm taxonomy. If your task needs multiple output components, holes, mixed-dimensional contacts or robust handling of coincident boundaries, a one-ring clipping routine is not enough. If the goal is to learn a named general clipping algorithm, implement and test that algorithm under its own stated assumptions rather than relabelling a library call.
+
 ## The difficult cases
 
 A convincing demonstration should include more than two overlapping rectangles.
