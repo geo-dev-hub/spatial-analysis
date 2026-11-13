@@ -91,3 +91,29 @@ def test_ordinary_kriging_handles_distinct_collinear_samples():
     result = ordinary_kriging_predict(samples, [(1.5, 1)], partial_sill=1, range_scale=2)
     assert math.isfinite(result[0][0])
     assert result[0][1] >= 0
+
+
+def test_empirical_variogram_calculates_classical_pairwise_semivariance():
+    from interpolation import empirical_variogram
+
+    samples = [(0, 0, 1), (1, 0, 2), (2, 0, 3)]
+    result = empirical_variogram(samples, [0, 1.5, 2.5])
+    assert result[0] == pytest.approx((1.0, 0.5, 2))
+    assert result[1] == pytest.approx((2.0, 2.0, 1))
+
+
+def test_empirical_variogram_keeps_empty_bins_visible():
+    from interpolation import empirical_variogram
+
+    result = empirical_variogram([(0, 0, 1), (1, 0, 2)], [0, 0.5, 1.5, 3])
+    assert result[0] == pytest.approx((0.25, None, 0))
+    assert result[1] == pytest.approx((1.0, 0.5, 1))
+    assert result[2] == pytest.approx((2.25, None, 0))
+
+
+@pytest.mark.parametrize("edges", [[0], [0, 0], [1, 0], [-1, 2], [0, math.inf]])
+def test_empirical_variogram_rejects_invalid_bins(edges):
+    from interpolation import empirical_variogram
+
+    with pytest.raises(ValueError, match="bin_edges"):
+        empirical_variogram(SAMPLES, edges)
