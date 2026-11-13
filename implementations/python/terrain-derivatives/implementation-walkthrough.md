@@ -47,3 +47,13 @@ A complete 3×3 neighbourhood is required. The outermost raster row and column r
 Horn's operator is one estimator, not a universal terrain truth. Results depend on DEM resolution, noise, projection, vertical datum and preprocessing. This package does not calculate curvature, sky-view factor or hydrological flow direction.
 
 Tests use planes with known gradients, rectangular cell spacing, unit conversion, flats, NoData and small arrays. Compare with other GIS software only after matching the derivative algorithm, units, aspect convention and edge handling.
+
+## 7. Add local hillshade
+
+Hillshade is a visualization derived from slope, aspect and a hypothetical light source. With sun altitude h, sun azimuth A and terrain slope θ, the normalized local illumination is:
+
+$$I=\sin(h)\cos(\theta)+\cos(h)\sin(\theta)\cos(A-\alpha)$$
+
+where α is downslope aspect, clockwise from north. The implementation clips the result to [0, 1]. A flat surface has no unique aspect; for zero slope it uses I=sin(h). Missing derivative values remain missing.
+
+This is a local illumination model only. It does not determine whether another ridge blocks the light, and it is not a solar-radiation model.

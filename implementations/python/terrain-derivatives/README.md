@@ -20,3 +20,7 @@ python -m pytest -q
 - The method assumes a regular grid in a suitable projected coordinate system. It does not reproject, resample, smooth or condition the DEM.
 
 See the [canonical lesson](../../../algorithms/raster/slope-aspect.md) and [intern walkthrough](implementation-walkthrough.md).
+
+## Local hillshade
+
+The package also includes [hillshade_from_slope_aspect](hillshade.py), which converts slope and downslope aspect into normalized local illumination using a declared sun azimuth and altitude. It assigns flat cells illumination equal to the sine of sun altitude. It does not cast terrain shadows or model atmospheric scattering, multidirectional illumination or solar radiation. See [hillshade.md](../../../algorithms/raster/hillshade.md) and the tests in test_hillshade.py.
