@@ -24,7 +24,7 @@ def test_idw_power_changes_relative_influence():
     samples = [(0, 0, 0), (10, 0, 10)]
     low = idw_predict(samples, [(2, 0)], power=1)[0]
     high = idw_predict(samples, [(2, 0)], power=3)[0]
-    assert low < high
+    assert high < low
 
 
 def test_idw_radius_and_max_neighbours_are_applied():
@@ -85,7 +85,7 @@ def test_ordinary_kriging_rejects_bad_model_and_too_few_samples():
         ordinary_kriging_predict([(0, 0, 1)], [(1, 1)], partial_sill=1, range_scale=1)
 
 
-def test_ordinary_kriging_rejects_singular_geometry():
+def test_ordinary_kriging_handles_distinct_collinear_samples():
     samples = [(0, 0, 1), (1, 0, 2), (2, 0, 3), (3, 0, 4)]
     # The exponential model should remain solvable for distinct collinear points.
     result = ordinary_kriging_predict(samples, [(1.5, 1)], partial_sill=1, range_scale=2)
