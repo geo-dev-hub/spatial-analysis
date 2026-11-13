@@ -4,7 +4,7 @@
 - **Source pages:** 6–7
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [D8 flow direction](../../algorithms/hydrology/d8-flow-direction.md) (teaching implementation, tests, walkthrough and interactive lab available)
 
 The source groups raster operations, terrain analysis, hydrological modelling, geomorphology and coastal methods. The list includes algorithms, physical models, metrics, software packages, data formats and applied workflows. Preserve those differences during research.
 
