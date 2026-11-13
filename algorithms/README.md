@@ -25,6 +25,8 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 - [Inverse distance weighting](interpolation/inverse-distance-weighting.md) — estimate a value at an unmeasured location by giving nearer observations more influence.
 
+- [Ordinary kriging](interpolation/ordinary-kriging.md) — estimate a value using a variogram model and a constrained system of spatial weights.
+
 ## Spatial statistics
 
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
