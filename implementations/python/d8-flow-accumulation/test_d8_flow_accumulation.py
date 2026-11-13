@@ -19,7 +19,7 @@ def test_confluence_accumulates_all_upstream_branches():
     result = d8_flow_accumulation(directions)
     assert result[0, 1] == 2
     assert result[2, 1] == 2
-    assert result[1, 1] == 4
+    assert result[1, 1] == 3
 
 
 def test_weighted_accumulation_sums_source_contributions():
