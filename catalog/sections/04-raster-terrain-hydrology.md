@@ -4,7 +4,7 @@
 - **Source pages:** 6–7
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Euclidean distance transform](../../algorithms/raster/euclidean-distance-transform.md) (first audited raster operation; remaining entries are still unverified)
 
 The source groups raster operations, terrain analysis, hydrological modelling, geomorphology and coastal methods. The list includes algorithms, physical models, metrics, software packages, data formats and applied workflows. Preserve those differences during research.
 
@@ -60,7 +60,7 @@ The source groups raster operations, terrain analysis, hydrological modelling, g
 | Wave runup (Stockdon), longshore transport (CERC, Kamphuis), Bruun rule, Dean profile, coastal vulnerability index | Coastal process models / empirical rules / vulnerability index | 7 |
 | Bathymetry: satellite-derived (ratio, physics-based, ICESat-2 calibrated), multibeam gridding, topo-bathymetric lidar refraction correction | Bathymetric retrieval / gridding / sensor correction | 7 |
 
-## Decisions for the next pass
+## First audited lesson\n\nThe [Euclidean distance transform lesson](../../algorithms/raster/euclidean-distance-transform.md) defines centre-to-centre distance on a regular grid, including non-square cell spacing. A tested SciPy-backed wrapper and interactive notebook expose the CRS, cell-size and NoData decisions. This is not cost-distance or least-cost routing.\n\n## Decisions for the next pass
 
 1. Separate raster algebra and data structures from terrain-specific algorithms.
 2. Document grid resolution, cell alignment, NoData handling and resampling choices in raster examples.
