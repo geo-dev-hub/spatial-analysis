@@ -50,7 +50,7 @@ If you want to understand whether nearby places have similar values, follow the 
 
 If you want to understand how a GIS searches large collections of features, start with [spatial indexing](spatial-indexing.md). The first lessons explain bounding boxes, STR-packed R-trees and indexed spatial joins.
 
-To continue from geometry foundations into simplification, offsets, proximity graphs and planar point location, follow [Core GIS continuation](core-gis-continuation.md). For graph costs, shortest paths and the modelling choices behind a route planner, follow [Network routing foundations](network-routing-foundations.md).
+To understand how to estimate values between measured locations, follow [Spatial interpolation foundations](geostatistics-foundations.md). To continue from geometry foundations into simplification, offsets, proximity graphs and planar point location, follow [Core GIS continuation](core-gis-continuation.md). For graph costs, shortest paths and the modelling choices behind a route planner, follow [Network routing foundations](network-routing-foundations.md).
 
 ## The collection keeps growing
 
