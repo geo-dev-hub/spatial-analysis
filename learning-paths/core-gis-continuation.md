@@ -8,13 +8,13 @@ You can follow the sequence or jump to the problem you need to solve.
 
 [Line simplification](../algorithms/geometry/simplification.md)
 
-Compare Douglas–Peucker and Visvalingam–Whyatt. Work through the [implementation](../implementations/python/line-simplification/README.md), then inspect the differences in the [Core GIS lab](../notebooks/core-gis-algorithms-lab.ipynb).
+Compare Douglas–Peucker and Visvalingam–Whyatt. Work through the [implementation](../implementations/python/line-simplification/README.md), then inspect the differences in the [Core GIS lab](../notebooks/core-gis-algorithms-lab.ipynb). For adjacent polygon faces, continue with [coverage-aware simplification](../algorithms/geometry/coverage-simplification.md) and its [tested implementation](../implementations/python/coverage-simplification/README.md).
 
 ## 2. Move a boundary by a distance
 
 [Polygon offsetting](../algorithms/geometry/offsetting.md)
 
-Understand joins, end caps, miter limits, inward collapse and CRS units. Run the [GEOS-backed example](../implementations/python/polygon-offsetting/README.md). It is deliberately not presented as a Clipper2 binding.
+Understand joins, end caps, miter limits, inward collapse and CRS units. Run the [GEOS-backed example](../implementations/python/polygon-offsetting/README.md), then compare it with the [native Clipper2 C# example](../implementations/clipper2-csharp/README.md).
 
 ## 3. Turn points into a spatial graph
 
@@ -32,7 +32,7 @@ Move beyond point-in-polygon. Learn how slab decompositions and randomized trape
 
 [Shortest paths](../algorithms/networks/shortest-paths.md)
 
-Start with Dijkstra and A*, then compare the roles of ALT, contraction hierarchies and customizable route planning. Run the [tested Python baseline](../implementations/python/shortest-paths/README.md).
+Start with Dijkstra and A*, then run the tested [bidirectional Dijkstra and ALT landmark implementations](../implementations/python/shortest-paths/README.md). Compare the roles of contraction hierarchies and customizable route planning.
 
 ## Practice
 
@@ -40,4 +40,4 @@ Complete the [Core GIS continuation exercises](../exercises/core-gis-continuatio
 
 ## What this path does not claim
 
-The path does not yet provide production implementations of topology-preserving polygon simplification, snap rounding, Clipper2 offsets, Yao/beta-skeleton graphs, trapezoidal-map point location, ALT, contraction hierarchies, turn-aware routing or time-dependent routing. These remain explicit follow-up work rather than hidden gaps.
+The path now includes a tested coverage-aware simplification wrapper and a native Clipper2 offset example, plus bidirectional Dijkstra and directed ALT baselines. A dedicated snap-rounding noder, efficient Delaunay-based Yao/beta-skeleton construction, randomized trapezoidal-map locator, contraction hierarchies, turn-aware routing and time-dependent routing remain open.
