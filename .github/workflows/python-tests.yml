@@ -209,6 +209,9 @@ jobs:
           - example: graph-spectral-covariance
             directory: implementations/python/graph-spectral-covariance
             pythonpath: ""
+          - example: nonseparable-space-time-covariance
+            directory: implementations/python/nonseparable-space-time-covariance
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -315,6 +318,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/covariance-functions-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spherical-covariance-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/graph-spectral-covariance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/nonseparable-space-time-covariance-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
