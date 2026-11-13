@@ -28,7 +28,7 @@ fixtures before using the wrapper on production data.
 
 ## Source and version
 
-- NuGet package: [Clipper2](https://www.nuget.org/packages/Clipper2/), pinned here to 1.5.4.
+- NuGet package: [Clipper2](https://www.nuget.org/packages/Clipper2/), pinned here to 2.0.0.
 - [Clipper2 official documentation](https://www.angusj.com/clipper2/Docs/Overview.htm).
 - [ClipperOffset API](https://www.angusj.com/clipper2/Docs/Units/Clipper/Classes/ClipperOffset/ClipperOffset.htm).
 
