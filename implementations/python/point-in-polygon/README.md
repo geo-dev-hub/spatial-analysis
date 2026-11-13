@@ -35,7 +35,7 @@ Expected output:
 python -m pytest -q
 ```
 
-The test suite covers inside, outside, edge, vertex, concavity and both open and explicitly closed ring representations.
+The test suite covers inside, outside, edge, vertex, concavity, a ray passing through a concave vertex, and both open and explicitly closed ring representations.
 
 ## Follow the code
 
@@ -61,4 +61,4 @@ Read [how the implementation works](implementation-walkthrough.md) for ring norm
 - Python 3.13.5
 - pytest 9.0.2
 
-The 11 tests passed in this environment. Run them again in your own environment before using the code in a project.
+The 12 tests passed in the recorded environment. Run them again in your own environment before using the code in a project.

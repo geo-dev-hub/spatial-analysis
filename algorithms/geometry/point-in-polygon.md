@@ -123,7 +123,7 @@ If many points are tested against the same polygon, preprocessing or spatial ind
 | Concave polygon | Correct parity classification | Unit test |
 | Explicitly closed ring | Same classification as implicitly closed ring | Unit test |
 | Horizontal edge | No false parity toggle; boundary still detected | Test boundary case |
-| Ray through a vertex | Count consistently under half-open convention | Requires dedicated adversarial fixtures |
+| Ray through a concave vertex | The shared vertex is handled without a false toggle | Unit test |
 | Self-intersecting ring | Depends on selected fill rule | Not supported by teaching implementation |
 | Polygon with holes | Depends on ring structure and fill rule | Not supported by teaching implementation |
 
