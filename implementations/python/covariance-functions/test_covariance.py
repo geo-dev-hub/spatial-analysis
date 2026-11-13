@@ -55,7 +55,9 @@ def test_invalid_locations_and_parameters_are_rejected():
     with pytest.raises(ValueError):
         covariance_matrix([[0, float("nan")]])
     with pytest.raises(ValueError):
-        covariance_matrix([[0, 0]], model="spherical")  # valid shape; no exception expected
+        covariance_from_distance([1.0], variance=0)
+    with pytest.raises(ValueError):
+        covariance_from_distance([1.0], range_scale=-1)
 
 
 def test_compact_support_models_reject_dimensions_above_three():
