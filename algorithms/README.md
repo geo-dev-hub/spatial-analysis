@@ -8,6 +8,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Polygon intersection](geometry/polygon-intersection.md) — construct the geometry shared by two inputs.
 - [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
+- [Graham scan](geometry/graham-scan.md) — find the extreme vertices of a planar convex hull using polar-angle sorting and an orientation test.
 
 ## Spatial indexing
 
