@@ -65,6 +65,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 - [How we check technical claims](docs/research-standard.md)
 - [How to contribute](CONTRIBUTING.md)
 - [How we use mathematics and visuals](docs/math-and-visuals.md)
+- [How we choose learning tools and build an effective lesson](docs/learning-experience-standard.md)
 - [What the source compendium covers](catalog/coverage-matrix.md)
 - [Repository roadmap](docs/repository-roadmap.md)
 - [Licensing and reuse](docs/licensing-and-reuse.md)
