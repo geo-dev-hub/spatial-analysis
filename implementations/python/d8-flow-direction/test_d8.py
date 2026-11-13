@@ -8,7 +8,7 @@ def test_selects_steepest_orthogonal_direction():
 
 
 def test_diagonal_gradient_accounts_for_diagonal_distance():
-    dem = [[10, 10, 10], [10, 10, 8], [10, 10, 10]]
+    dem = [[10, 10, 10], [10, 10, 10], [10, 10, 8]]
     assert flow_direction(dem)[1][1] == 2
 
 
