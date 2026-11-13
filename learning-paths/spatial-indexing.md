@@ -1,6 +1,6 @@
 # Spatial indexing: find the places worth checking
 
-**Status:** Four conceptual lessons are now available: a packed R-tree, filter-and-refine spatial joins, point-region quadtrees and k-d tree nearest-neighbour search. The two new index records are drafts and do not yet have tested teaching implementations or notebooks.
+**Status:** Four lesson topics are available: a packed R-tree, filter-and-refine spatial joins, point-region quadtrees and k-d tree nearest-neighbour search. The k-d tree now has a tested static 2D teaching implementation and walkthrough. The quadtree remains a conceptual draft; neither new topic has a dedicated notebook yet.
 
 ## Why an index helps
 
@@ -50,7 +50,7 @@ You will see how an STRtree narrows the possible geometry pairs, how the exact p
 
 The [quadtree lesson](../algorithms/indexing/quadtree.md) introduces recursive spatial subdivision, with a focus on point-region trees and their stopping rules. The [k-d tree lesson](../algorithms/indexing/kd-tree-nearest-neighbour.md) introduces exact nearest-neighbour search by branch-and-bound and explains why coordinate metrics and dimensionality matter.
 
-Use the [quadtrees and k-d trees exercises](../exercises/spatial-indexing-quadtrees-kdtree.md) to compare both structures with brute-force baselines.
+Run the [k-d tree teaching implementation](../implementations/python/kd-tree/README.md) and follow its [step-by-step walkthrough](../implementations/python/kd-tree/implementation-walkthrough.md). Use the [quadtrees and k-d trees exercises](../exercises/spatial-indexing-quadtrees-kdtree.md) to compare both structures with brute-force baselines. The quadtree exercise is currently a design-and-analysis task; a runnable implementation is still to come.
 
 ## What comes next
 
