@@ -45,6 +45,10 @@ Each implementation should state:
 
 - [Spatial block cross-validation](python/spatial-cross-validation/README.md): deterministic grid-block folds with optional distance buffering, explicit projected-coordinate assumptions, tests and an [intern walkthrough](python/spatial-cross-validation/implementation-walkthrough.md).
 
+### Geostatistics and covariance
+
+- [Stationary covariance functions](python/covariance-functions/README.md): five Euclidean covariance models, dense covariance matrices, eigenvalue diagnostics, tests and an [intern walkthrough](python/covariance-functions/implementation-walkthrough.md). The examples do not implement spherical or network covariance models.
+
 ### Remote sensing
 
 - [Marine heatwave detection lab](../notebooks/marine-heatwave-detection-lab.ipynb): a visual synthetic daily series, event intervals, event metrics and missing-observation experiment.
