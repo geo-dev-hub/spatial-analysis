@@ -51,7 +51,7 @@ def test_strict_nodata_propagation():
 
 
 def test_shapes_and_ranges_are_validated():
-    with pytest.raises(ValueError, match="same shape"):
+    with pytest.raises(ValueError, match="aligned 2D arrays"):
         fuzzy_overlay([np.ones((2, 2)), np.ones((1, 2))])
     with pytest.raises(ValueError, match=r"\[0, 1\]"):
         fuzzy_overlay([np.array([[1.2]])])
