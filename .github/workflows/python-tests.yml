@@ -122,6 +122,12 @@ jobs:
           - example: ahp-weights
             directory: implementations/python/ahp-weights
             pythonpath: ""
+          - example: fuzzy-overlay
+            directory: implementations/python/fuzzy-overlay
+            pythonpath: ""
+          - example: ahp-weights
+            directory: implementations/python/ahp-weights
+            pythonpath: ""
           - example: d8-flow-accumulation
             directory: implementations/python/d8-flow-accumulation
             pythonpath: ""
