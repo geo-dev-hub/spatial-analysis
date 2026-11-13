@@ -32,11 +32,12 @@ Road-network modelling adds details that ordinary graph examples omit:
 | A* | Order by f(v)=g(v)+h(v) using a lower-bound heuristic | Optimal with an admissible heuristic under the algorithm's reopening/consistency conditions |
 | Bellman–Ford | Repeatedly relax all edges | Supports negative edges and detects reachable negative cycles |
 | Floyd–Warshall | Dynamic programming over allowed intermediate vertices | All-pairs shortest paths; O(V³) time |
-| Bidirectional Dijkstra | Search forward from source and backward from target | Directed reverse graph and a lower-bound stopping condition; now implemented and tested |
-| ALT | A* with landmark-based triangle-inequality lower bounds | Preprocessing distances to/from selected landmarks; now implemented and tested |
+| Bidirectional Dijkstra | Search forward from source and backward from target | Directed reverse graph and a lower-bound stopping condition; implemented and tested |
+| ALT | A* with landmark-based triangle-inequality lower bounds | Preprocessing distances to/from selected landmarks; implemented and tested |
 | Contraction hierarchies | Contract less important vertices and add shortcut edges | Preprocessing-heavy, fast queries on suitable road networks |
 | Hub labeling | Store selected forward/backward hub distances | Large preprocessing/index trade-off; query intersects labels |
 | Customizable route planning | Separate metric-independent partitioning from metric customization | Useful when topology is stable but edge costs change |
+| Yen's k-shortest loopless paths | Repeated spur-path searches with previously selected path prefixes and edges removed | Returns up to k distinct loopless paths in non-decreasing cost order; now implemented for a simple directed graph model |
 
 These are families, not one universally ranked list. Performance depends on graph structure, query distribution, update frequency, memory budget and cost model.
 
@@ -53,6 +54,12 @@ $$
 For optimality, the heuristic must not overestimate the true remaining cost (admissibility). A consistent heuristic additionally satisfies the triangle inequality across every edge. The implementation must match the heuristic contract; a visually plausible straight-line heuristic is only a lower bound when the edge-cost model supports that relationship.
 
 For example, straight-line distance is not an admissible estimate of travel time unless it is scaled by a valid upper speed bound and the graph's travel-time costs obey the assumptions.
+
+## K loopless alternatives: Yen's algorithm
+
+Some applications need more than one route: a delivery planner may need several alternatives, or an analyst may want to compare detours. Yen's algorithm builds the k shortest loopless paths in order. It begins with the shortest path, then creates candidate deviations by fixing a root prefix, temporarily removing the next edge from accepted paths that share that prefix, and finding a spur path from the deviation point. The lowest-cost unseen candidate becomes the next accepted path.
+
+The teaching implementation represents paths as node sequences and uses the minimum weight when parallel arcs connect the same ordered pair. It does not preserve distinct parallel-edge identities; use an edge-based path model when that distinction matters.
 
 ## Road routing is not just A*
 
@@ -74,13 +81,13 @@ A turn restriction may require the search state to include the incoming edge, no
 
 ## Runnable baseline
 
-The companion implementation provides Dijkstra, A*, bidirectional Dijkstra and a directed ALT landmark heuristic over non-negative weighted directed graphs, plus Bellman–Ford for negative edges and Floyd–Warshall for all-pairs distances. Dijkstra/A* reject negative or non-finite edge weights; Bellman–Ford detects reachable negative cycles; Floyd–Warshall detects negative cycles anywhere in the represented graph.
+The companion implementation provides Dijkstra, A*, bidirectional Dijkstra, a directed ALT landmark heuristic and Yen's k-shortest loopless paths over non-negative weighted directed graphs, plus Bellman–Ford for negative edges and Floyd–Warshall for all-pairs distances. Dijkstra/A* reject negative or non-finite edge weights; Bellman–Ford detects reachable negative cycles; Floyd–Warshall detects negative cycles anywhere in the represented graph.
 
 - [Implementation](../../implementations/python/shortest-paths/README.md)
 - [Intern walkthrough](../../implementations/python/shortest-paths/implementation-walkthrough.md)
 - [Tests](../../implementations/python/shortest-paths/test_shortest_paths.py)
 
-It is a teaching baseline, not a production road router. It does not implement turn-expanded graphs, time-dependent edges, contraction hierarchies, hub labels, customizable route planning or transit routing.
+It is a teaching baseline, not a production road router. It does not implement service-area isochrones, contraction hierarchies, hub labels, customizable route planning or transit routing. The separate [road-routing package](../../implementations/python/road-routing/README.md) adds edge-based turn and FIFO time-dependent baselines.
 
 ## Try it
 
@@ -93,6 +100,7 @@ Finally, add a turn restriction. Explain why the state may need to represent the
 - Dijkstra, E. W. (1959), [A note on two problems in connexion with graphs](https://doi.org/10.1007/BF01386390), Numerische Mathematik, 1, 269–271.
 - Hart, P. E., Nilsson, N. J. and Raphael, B. (1968), [A formal basis for the heuristic determination of minimum cost paths](https://doi.org/10.1109/TSSC.1968.300136), IEEE Transactions on Systems Science and Cybernetics, 4(2), 100–107.
 - Geisberger, R., Sanders, P., Schultes, D. and Delling, D. (2008), [Contraction Hierarchies: Faster and Simpler Hierarchical Routing in Road Networks](https://i11www.iti.kit.edu/extra/publications/gssd-chfsh-08.pdf).
+- Yen, J. Y. (1971), [Finding the K shortest loopless paths in a network](https://doi.org/10.1287/mnsc.17.11.712), Management Science, 17(11), 712–716.
 - [OSRM routing algorithms overview](https://github.com/Project-OSRM/osrm-backend/wiki/Algorithms).
 
 **Scope:** Dijkstra, A*, Bellman–Ford and Floyd–Warshall have runnable baselines. Contraction hierarchies, hub labels and customizable route planning remain research/survey material, not implemented algorithms.
