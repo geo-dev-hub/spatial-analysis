@@ -7,6 +7,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Point in polygon](geometry/point-in-polygon.md) — classify a point as inside, outside or on a polygon boundary.
 - [Polygon intersection](geometry/polygon-intersection.md) — construct the geometry shared by two inputs.
 - [Convex hull](geometry/convex-hull.md) — find the smallest convex set containing a finite planar point set, with a Graham scan implementation.
+- [Voronoi and Delaunay](geometry/voronoi-delaunay.md) — understand nearest-site regions, their Delaunay dual, Fortune's sweep and tessellation degeneracies.
 - [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
 - [Polygon validity](geometry/polygon-validity.md) — check whether rings, shells, holes and multi-part geometries satisfy the chosen geometry model; includes a tested Shapely inspection and explicit-repair workflow.
