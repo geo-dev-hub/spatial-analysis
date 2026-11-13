@@ -21,7 +21,7 @@ $$
 
 Thus, two first-order tributaries produce a second-order downstream link. A first-order tributary joining a second-order link leaves the downstream order at two.
 
-## Shreve magnitude
+## A confluence example\n\n~~~mermaid\nflowchart TD\n  A[Order 1] --> C[Confluence]\n  B[Order 1] --> C\n  C --> D[Order 2]\n  E[Order 1] --> F[Confluence]\n  D --> F\n  F --> G[Order 2]\n~~~\n\nThe second confluence receives an order-two and an order-one tributary, so the downstream order remains two. Shreve magnitude, in contrast, sums all headwater contributions.\n\n## Shreve magnitude
 
 Shreve magnitude assigns one to each headwater link and sums magnitudes at confluences:
 
