@@ -74,6 +74,15 @@ Create a directed graph with a short but slow route and a longer but faster rout
 - Add a negative edge without a negative cycle and compare Bellman–Ford with the non-negative algorithms.
 - Build an all-pairs distance matrix with Floyd–Warshall and add a negative cycle to test detection.
 
+## 8. Model turn-aware and time-dependent routing
+
+- Represent each directed road segment with a stable edge ID.
+- Prohibit a turn at an intersection and show why a node-only search state is insufficient.
+- Add a turn penalty and identify when the preferred route changes.
+- Define edge travel-time functions and calculate absolute arrival time.
+- Check the FIFO property using the arrival function, not travel time alone.
+- Explain why the provided callable-based example cannot prove FIFO for an arbitrary function.
+
 ## Submission checklist
 
 - [ ] State coordinate reference system and units.
