@@ -35,7 +35,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 
 - [x] Geometry starter set: point in polygon, segment intersection, polygon intersection and Bentley–Ottmann.
 - [x] Runnable Python examples and tests for the four topics.
-- [x] Step-by-step implementation walkthroughs for all eight Python examples.
+- [x] Step-by-step implementation walkthroughs for all ten Python examples.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
@@ -64,7 +64,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
 - [x] Add an interactive IDW lab with a movable target, power control and neighbour selection.
 - [x] Add an interactive empirical semivariogram lab with adjustable lag bins and maximum distance.
-- [x] Add stable cell IDs to all ten notebooks and repair missing required code-cell outputs.
+- [x] Add stable cell IDs to all twelve notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
@@ -76,8 +76,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all eight Python examples and execute all ten notebooks.
-- [x] Confirm successful Actions run for all eight Python test suites, all ten notebooks and the internal-link check.
+- [x] GitHub Actions workflow configured to test all ten Python examples and execute all twelve notebooks.
+- [x] Confirm successful Actions run for all ten Python test suites, all twelve notebooks and the internal-link check.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
