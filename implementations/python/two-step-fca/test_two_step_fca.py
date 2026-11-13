@@ -53,3 +53,19 @@ def test_two_step_fca_rejects_invalid_cost_and_weights():
         two_step_fca([[1]], [-1], [10], max_cost=2)
     with pytest.raises(ValueError, match="population_demand"):
         two_step_fca([[1]], [1], [float("nan")], max_cost=2)
+
+
+def test_positive_infinity_represents_an_unreachable_pair():
+    ratios, accessibility = two_step_fca(
+        [[1, float("inf")], [float("inf"), 1]],
+        [10, 20],
+        [100, 100],
+        max_cost=2,
+    )
+    assert ratios == pytest.approx([0.1, 0.2])
+    assert accessibility == pytest.approx([0.1, 0.2])
+
+
+def test_negative_infinity_is_rejected():
+    with pytest.raises(ValueError, match="impedance"):
+        two_step_fca([[-float("inf")]], [1], [1], max_cost=2)
