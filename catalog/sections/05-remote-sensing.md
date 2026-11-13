@@ -8,7 +8,11 @@
 
 The source spans raw imagery correction, spectral transforms, classification, hyperspectral analysis, radar, point clouds, photogrammetry and biophysical retrieval. These methods operate at different stages of a sensor-to-product workflow; do not collapse them into one generic “remote sensing algorithm” category.
 
-## First audited index\n\nThe [NDVI lesson](../../algorithms/remote-sensing/ndvi.md) defines the normalised red/NIR contrast and explains reflectance preprocessing, quality masks and interpretation limits. A tested NumPy implementation preserves invalid pixels, with an interactive lab. Other indices, calibration workflows, classification, SAR, LiDAR and photogrammetry remain open.\n\n## Preprocessing and correction
+## First audited index
+
+The [NDVI lesson](../../algorithms/remote-sensing/ndvi.md) defines the normalised red/NIR contrast and explains reflectance preprocessing, quality masks and interpretation limits. A tested NumPy implementation preserves invalid pixels, with an interactive lab. Other indices, calibration workflows, classification, SAR, LiDAR and photogrammetry remain open.
+
+## Preprocessing and correction
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
