@@ -31,6 +31,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Raster analysis
 
 - [Euclidean distance transform lab](raster-distance-transform-lab.ipynb): compare square and rectangular cell spacing and inspect distance to multiple target cells.
+- [D8 flow direction lab](d8-flow-direction-lab.ipynb): inspect steepest-descent direction codes, rectangular cell spacing, sinks and NoData.
 
 ### Geostatistics and interpolation
 
@@ -77,6 +78,6 @@ The links below point to notebooks already available on the default branch. Newe
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all twenty-two notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all twenty-three notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
