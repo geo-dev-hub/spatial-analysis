@@ -51,7 +51,7 @@ When a count is zero, an unsmoothed conditional probability can be zero, which m
 
 ## 6. Interpret the conditional-independence assumption
 
-The model adds evidence weights. This is not justified merely because layers have different names. Fault proximity and fault density, for example, may be strongly related. If dependent evidence is added as if independent, the model may overstate support.
+The WofE model adds evidence weights under its specialised conditional-independence assumption with respect to the target-event occurrence pattern. This is not justified merely because layers have different names. Fault proximity and fault density, for example, may be strongly related. If dependent evidence is added as if independent, the model may overstate support.
 
 Use domain knowledge, exploratory analysis and an appropriate conditional-independence test. A simple pairwise correlation check is only a screening step. Validate predictions on spatially independent occurrences.
 
