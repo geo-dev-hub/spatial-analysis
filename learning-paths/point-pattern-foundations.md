@@ -42,4 +42,4 @@ The wider point-pattern section includes quadrat analysis, nearest-neighbour sta
 
 ## What remains
 
-Adaptive bandwidths, cross-validated selection, edge correction, network KDE, Ripley's K/L, nearest-neighbour tests and point-process inference require separate lessons and validation.
+Adaptive bandwidths, cross-validated selection, edge correction, network KDE, edge-corrected Ripley's K/L, nearest-neighbour tests and point-process inference require separate lessons and validation.
