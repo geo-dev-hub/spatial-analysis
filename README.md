@@ -34,6 +34,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
+| Estimating values between observations | [Interpolation and geostatistics](learning-paths/interpolation-and-geostatistics.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
@@ -87,6 +88,10 @@ Try the [interactive geometry foundations lab](notebooks/geometry-foundations-la
 
 Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), which finds intersections across a whole set of segments using a sweep line. The guide includes a sweep diagram, event-processing flowchart, rendered equations and an explicit account of the classical algorithm's assumptions. You can also [run the restricted Python teaching implementation](implementations/python/bentley-ottmann/README.md) and follow its [step-by-step walkthrough](implementations/python/bentley-ottmann/implementation-walkthrough.md); its nine tests compare results with the pairwise method.
 
+## Estimating values between observations
+
+If you have measurements at some locations and need an estimate between them, start with [inverse distance weighting](algorithms/interpolation/inverse-distance-weighting.md). The lesson explains the distance weights, works through a numerical example, and links to a tested Python implementation and an interactive lab where you can change the target, power and number of neighbours.
+
 ## A first look at spatial patterns
 
 Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
@@ -97,4 +102,4 @@ The [algorithm collection](algorithms/README.md) also includes the foundational 
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path, and foundational lessons in spatial indexing, spatial joins and spatial weights are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
+**Current stage:** the geometry sequence, spatial-autocorrelation learning path, foundational spatial-indexing and spatial-join lessons, spatial weights foundation, and first interpolation lesson are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
