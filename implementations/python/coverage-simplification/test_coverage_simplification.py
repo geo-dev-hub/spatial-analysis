@@ -10,7 +10,7 @@ def adjacent_coverage():
     # coordinate sequence in opposite directions by the two polygons.
     shared = [(5, 0), (5.2, 2), (4.8, 4), (5.1, 6), (5, 8)]
     left = Polygon([(0, 0), *shared, (0, 8), (0, 0)])
-    right = Polygon([*reversed(shared), (10, 8), (10, 0), (5, 0)])
+    right = Polygon([(5, 0), (10, 0), (10, 8), (5, 8), *reversed(shared[:-1])])
     return [left, right]
 
 
