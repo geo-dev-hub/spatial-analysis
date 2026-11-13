@@ -12,7 +12,11 @@ def topographic_wetness_index(specific_catchment_area, slope_degrees, *, slope_f
     slope=np.asarray(slope_degrees,dtype=float)
     if area.shape!=slope.shape:
         raise ValueError("area and slope arrays must have the same shape")
-    if not np.isfinite(slope_floor_degrees) or not 0<slope_floor_degrees<90:
+    try:
+        slope_floor_degrees = float(slope_floor_degrees)
+    except (TypeError, ValueError):
+        raise ValueError("slope_floor_degrees must be finite and between 0 and 90") from None
+    if not np.isfinite(slope_floor_degrees) or not 0 < slope_floor_degrees < 90:
         raise ValueError("slope_floor_degrees must be finite and between 0 and 90")
     finite_slope=slope[np.isfinite(slope)]
     if ((finite_slope<0)|(finite_slope>=90)).any():
