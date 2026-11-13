@@ -61,6 +61,5 @@ The example is an unweighted square-window mean. It is not a general convolution
 ## References
 
 - Crow, F. C. (1984), *Summed-area tables for texture mapping*, ACM SIGGRAPH Computer Graphics, 18(3), 207–212.
-- H. P. (various authors), integral images are also widely known as summed-area tables; the cited Crow paper establishes their use for constant-time rectangular sum queries in computer graphics.
 
 **Scope:** NoData-aware unweighted square-window mean using two integral images; weighted filters, zonal statistics and raster resampling are not included.
