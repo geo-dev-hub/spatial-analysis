@@ -51,7 +51,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a bucket point-region quadtree with explicit split-boundary, root-extent and duplicate-coordinate rules, brute-force differential tests, an intern walkthrough and an executable notebook. The implementation remains a scoped teaching index, not a production geospatial index.
 - [x] Add line simplification dossiers and tested open-polyline baselines for Douglas–Peucker and Visvalingam–Whyatt.
 - [x] Add an offsetting dossier and a tested Shapely/GEOS wrapper, explicitly distinguished from Clipper2.
-- [x] Add proximity graph definitions and tested small-input baselines for Gabriel, relative neighbourhood and Euclidean MST.
+- [x] Add proximity graph definitions and tested small-input baselines for Gabriel, relative neighbourhood, lune-based beta-skeleton, Yao graph and Euclidean MST.
 - [x] Add a planar point-location dossier and a tested static slab locator for pairwise interior-disjoint polygon faces; randomized trapezoidal-map construction remains open.
 - [x] Add shortest-path family research and tested Dijkstra, A*, Bellman–Ford and Floyd–Warshall baselines.
 - [ ] Implement topology-preserving polygon simplification, snap rounding, Clipper2-specific offsets, Yao and beta-skeleton variants, and a true trapezoidal-map locator.
