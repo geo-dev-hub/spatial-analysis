@@ -6,6 +6,8 @@ This directory holds those foundational methods separately from individual algor
 
 ## Available foundations
 
+- [Helmert seven-parameter transformation](helmert-7-parameter.md) — transform geocentric XYZ coordinates using the explicitly named Position Vector rotation convention.
+
 - [Masked autoencoding](masked-autoencoding.md) — reconstruct hidden patch content through an encoder-decoder pretraining objective; includes a scoped masking mechanics example.
 
 - [Spatial cross-validation](spatial-cross-validation.md) — design geographic holdouts and buffered folds that better match the intended deployment setting.
