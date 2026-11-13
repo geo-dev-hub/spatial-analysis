@@ -74,6 +74,7 @@ def bellman_ford(graph: Graph, start: Node, goal: Node) -> tuple[list[Node] | No
     """Shortest path with negative edges; rejects a reachable negative cycle."""
     edges = []
     nodes = set(graph)
+    nodes.update((start, goal))
     for node, outgoing in graph.items():
         for neighbor, weight in outgoing:
             if not isfinite(weight):
