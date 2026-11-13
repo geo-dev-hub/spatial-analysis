@@ -25,6 +25,9 @@ flowchart TD
   B --> C[Calculate slope and aspect]
   C --> D[Derive D8 flow directions]
   D --> E[Accumulate upstream contributions]
+  E --> J[Convert accumulation to specific catchment area]
+  C --> K[Calculate topographic wetness index]
+  J --> K
   E --> F[Choose a channel-initiation rule]
   F --> G[Build a stream mask]
   G --> H[Calculate stream order]
@@ -50,7 +53,11 @@ Read [D8 flow accumulation](../algorithms/raster/d8-flow-accumulation.md) and ru
 
 Accumulation includes the cell itself. It is not discharge unless the input contributions and time basis justify that interpretation.
 
-## 4. Calculate a topographic wetness index\n\nRead [Topographic wetness index](../algorithms/raster/topographic-wetness-index.md). It combines supplied specific catchment area and slope. The area input must already be converted to specific catchment area in metres; raw flow-accumulation counts are not interchangeable. A positive slope floor handles flat cells and must be reported.\n\n## 5. Delineate a contributing area
+## 4. Calculate a topographic wetness index
+
+Read [Topographic wetness index](../algorithms/raster/topographic-wetness-index.md). It combines supplied specific catchment area and slope. The area input must already be converted to specific catchment area in metres; raw flow-accumulation counts are not interchangeable. A positive slope floor handles flat cells and must be reported.
+
+## 5. Delineate a contributing area
 
 Read [Single-outlet watershed delineation](../algorithms/raster/watershed-delineation.md) and run the [watershed notebook](../notebooks/watershed-delineation-lab.ipynb). It traces upstream cells whose D8 paths reach a selected outlet. The outlet cell is explicit; automatic snapping is deliberately not hidden inside the operation.
 
@@ -64,13 +71,9 @@ D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuou
 
 These methods produce different contributing-area patterns. They are not just different encodings of the same answer.
 
-## 7. Compare Euclidean and least-cost distance
+## 8. Compare Euclidean and least-cost distance
 
 Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time. This differs from the [Euclidean distance transform](../algorithms/raster/euclidean-distance-transform.md), which measures straight-line distance to a target.
-
-## 8. Calculate a topographic wetness index
-
-Read [Topographic wetness index](../algorithms/raster/topographic-wetness-index.md). The formula combines specific catchment area and local slope. The supplied area must already be converted to specific catchment area in metres; raw flow-accumulation counts are not interchangeable. A positive slope floor is required to handle flats.
 
 ## Exercises
 
@@ -84,4 +87,4 @@ Read [Topographic wetness index](../algorithms/raster/topographic-wetness-index.
 
 ## What remains
 
-The wider source section also includes broader local, zonal and global raster algebra, weighted focal filters, sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, curvature and multiscale terrain metrics, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
+The wider source section also includes broader local, zonal and global raster algebra, weighted focal filters, sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, curvature and multiscale terrain metrics, additional stream-network metrics, basin delineation, HAND, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
