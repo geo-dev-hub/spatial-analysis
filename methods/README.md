@@ -24,7 +24,11 @@ This directory holds those foundational methods separately from individual algor
 - [Analytic Hierarchy Process](analytic-hierarchy-process.md) — derive relative criterion priorities from reciprocal pairwise judgements and inspect consistency diagnostics.
 - [Weighted linear combination](weighted-linear-combination.md) — combine standardised spatial criteria using relative weights, while keeping hard constraints and sensitivity analysis explicit.
 
-- [Marine heatwave detection](marine-heatwave-detection.md) — identify prolonged threshold exceedances relative to a seasonal baseline, distinguish point events from spatial tracking and inspect missing-data rules.\n\n- [Exact orientation predicate](exact-orientation-predicate.md) — classify 2D point triples with a rational reference predicate and understand why production geometry kernels use adaptive precision.
-- [Stationary covariance functions](stationary-covariance-functions.md) — compare Euclidean covariance shapes, check finite covariance matrices and understand why geometry-specific validity conditions matter.\n\n## How to use these records
+- [Marine heatwave detection](marine-heatwave-detection.md) — identify prolonged threshold exceedances relative to a seasonal baseline, distinguish point events from spatial tracking and inspect missing-data rules.
+
+- [Exact orientation predicate](exact-orientation-predicate.md) — classify 2D point triples with a rational reference predicate and understand why production geometry kernels use adaptive precision.
+- [Stationary covariance functions](stationary-covariance-functions.md) — compare Euclidean covariance shapes, check finite covariance matrices and understand why geometry-specific validity conditions matter.
+
+## How to use these records
 
 Each record should explain the question the method helps answer, its assumptions, its mathematical form, the choices that affect results, a reproducible example and its limitations. Where a method is a modelling choice rather than a single algorithm, say so explicitly.
