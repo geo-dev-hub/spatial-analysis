@@ -41,6 +41,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
+| Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md) and [weighted linear combination](methods/weighted-linear-combination.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
