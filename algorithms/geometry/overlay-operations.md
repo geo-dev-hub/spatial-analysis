@@ -88,10 +88,10 @@ print("symmetric difference:", a.symmetric_difference(b).area)
 
 For this example, the expected areas are:
 
-- intersection: (4);
-- union: (17);
+- intersection: 4 square units;
+- union: 17 square units;
 - difference (A \setminus B): (8);
-- symmetric difference: (13).
+- symmetric difference: 13 square units;
 
 These values provide a simple arithmetic check, not a complete geometry validation. Add assertions for the output geometry, component count and validity in the implementation suite.
 
