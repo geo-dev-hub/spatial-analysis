@@ -104,4 +104,4 @@ The [algorithm collection](algorithms/README.md) also includes the foundational 
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the geometry sequence, spatial-autocorrelation learning path, foundational spatial-indexing and spatial-join lessons, spatial weights foundation, and first interpolation lesson are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
+**Current stage:** the geometry sequence, spatial-autocorrelation learning path, foundational spatial-indexing and spatial-join lessons, spatial weights foundation, interpolation/geostatistics sequence (IDW, empirical semivariogram and ordinary kriging), and first raster-hydrology lesson (D8 flow direction) are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
