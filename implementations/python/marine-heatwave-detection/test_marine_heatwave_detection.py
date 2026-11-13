@@ -39,10 +39,10 @@ def test_missing_day_breaks_event_and_cannot_be_joined():
 
 
 def test_nonfinite_threshold_breaks_event():
-    temp = np.array([11]*10, dtype=float)
-    threshold = np.full(10, 10.0)
+    temp = np.array([11]*11, dtype=float)
+    threshold = np.full(11, 10.0)
     threshold[5] = np.nan
-    assert len(detect_events(temp, threshold, np.full(10, 8.0))) == 2
+    assert len(detect_events(temp, threshold, np.full(11, 8.0))) == 2
 
 
 def test_rejects_shape_and_length_mismatch():
