@@ -30,6 +30,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Marine heatwave detection](marine-heatwave-detection.md)
 - [Exact orientation](exact-orientation.md)
 - [Covariance functions](covariance-functions.md)
+- [Spherical covariance](spherical-covariance.md)
 
 ## Exercise writing standard
 
