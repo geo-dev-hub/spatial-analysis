@@ -100,6 +100,7 @@ The links below point to notebooks already available on the default branch. The 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
 - [Planar point location — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/point-location-lab.ipynb)
 - [Weighted linear combination — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/weighted-linear-combination-lab.ipynb)
+- [Nonseparable space-time covariance — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/nonseparable-space-time-covariance-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
 - [Global Geary's C](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb)
 - [Local Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb)

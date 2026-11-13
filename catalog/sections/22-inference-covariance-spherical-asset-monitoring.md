@@ -19,7 +19,7 @@
 
 ## Covariance functions and basis expansions
 
-The Euclidean foundation covers five stationary covariance examples and finite-matrix diagnostics. A second canonical record constructs scalar isotropic covariance on the two-sphere from non-negative Legendre coefficients. A third uses non-negative graph-Laplacian spectral variances to construct a positive-semidefinite covariance matrix on finite undirected graphs. Each has a NumPy implementation, tests, intern walkthrough and notebook. The graph model is not a directed flow-network or shortest-path stationary model; the spherical model is not ellipsoidal geodesy, a vector field model or a fitted GP. Geometry-specific stationary network covariance, nonseparable space–time covariance, additional kernels and basis-expansion families still need separate verification and lessons.
+The Euclidean foundation covers five stationary covariance examples and finite-matrix diagnostics. A second canonical record constructs scalar isotropic covariance on the two-sphere from non-negative Legendre coefficients. A third uses non-negative graph-Laplacian spectral variances to construct a positive-semidefinite covariance matrix on finite undirected graphs. Each has a NumPy implementation, tests, intern walkthrough and notebook. The graph model is not a directed flow-network or shortest-path stationary model; the spherical model is not ellipsoidal geodesy, a vector field model or a fitted GP. Geometry-specific stationary network covariance, additional kernels and basis-expansion families still need separate verification and lessons. A fourth covariance record now covers one Gneiting-class nonseparable model on Euclidean space crossed with linear time; it does not claim validity on networks or spheres.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
@@ -90,3 +90,8 @@ The Euclidean foundation covers five stationary covariance examples and finite-m
 3. Treat geodesic and ellipsoidal calculations with explicit reference ellipsoid, units and edge cases.
 4. For asset mapping, state the asset definition, inventory completeness, positional accuracy and update frequency.
 5. Treat monitoring and citizen-science data with clear observation-effort, bias and privacy assumptions.
+
+
+### Nonseparable space-time covariance
+
+A fourth covariance record implements one Gneiting-class construction on Euclidean space crossed with linear time. It has a method lesson, NumPy implementation, tests, intern walkthrough, exercise and executable notebook. It is not a network or spherical covariance model. Primary references: Cressie and Huang (1999), https://doi.org/10.1080/01621459.1999.10473885; Gneiting (2002), https://doi.org/10.1198/016214502760047113.

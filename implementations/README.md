@@ -124,6 +124,7 @@ Each implementation should state:
 - [Clipper2 native offsetting in C#](clipper2-csharp/README.md): an integer-path implementation using the Clipper2 NuGet package, with an executable CI smoke test.
 - [Shortest-path baselines](python/shortest-paths/README.md): Dijkstra, A*, bidirectional Dijkstra, directed ALT landmarks, Yen's k-shortest loopless paths, Bellman–Ford and Floyd–Warshall with tests.
 - [Road-routing baselines](python/road-routing/README.md): edge-based turn restrictions, turn penalties and FIFO time-dependent earliest-arrival search.
+- [Nonseparable space-time covariance](python/nonseparable-space-time-covariance/README.md): a Gneiting-class Euclidean space-time covariance implementation with tests, intern walkthrough and notebook.
 
 ## Automated checks
 

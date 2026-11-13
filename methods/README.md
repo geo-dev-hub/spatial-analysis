@@ -30,6 +30,7 @@ This directory holds those foundational methods separately from individual algor
 - [Stationary covariance functions](stationary-covariance-functions.md) — compare Euclidean covariance shapes, check finite covariance matrices and understand why geometry-specific validity conditions matter.
 - [Isotropic covariance on the two-sphere](isotropic-covariance-on-the-sphere.md) — construct valid scalar isotropic covariance models from non-negative Legendre coefficients and distinguish spherical from planar distance models.
 - [Graph-spectral covariance](graph-spectral-covariance.md) — construct positive-semidefinite covariance matrices on finite undirected graphs from non-negative Laplacian spectral variances, without assuming arbitrary shortest-path kernels are valid.
+- [Nonseparable space-time covariance](nonseparable-space-time-covariance.md) — model spatial and temporal dependence jointly with a valid Gneiting-class construction on Euclidean space and linear time.
 
 ## How to use these records
 

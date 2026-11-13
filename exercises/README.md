@@ -32,6 +32,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Covariance functions](covariance-functions.md)
 - [Spherical covariance](spherical-covariance.md)
 - [Graph-spectral covariance](graph-spectral-covariance.md)
+- [Nonseparable space-time covariance](nonseparable-space-time-covariance.md)
 
 ## Exercise writing standard
 
