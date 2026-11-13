@@ -7,7 +7,7 @@ import numpy as np
 from numpy.typing import ArrayLike, NDArray
 
 
-def orness(order_weights: ArrayLike) -> float:
+def orness(order_weights: ArrayLike) -> float | None:
     """Return Yager ORness for weights applied to descending sorted values."""
     weights = np.asarray(order_weights, dtype=np.float64)
     if weights.ndim != 1 or weights.size == 0:
@@ -17,7 +17,7 @@ def orness(order_weights: ArrayLike) -> float:
     if not np.isclose(weights.sum(), 1.0):
         raise ValueError("order_weights must sum to one")
     if weights.size == 1:
-        return 0.5
+        return None
     positions = np.arange(weights.size, 0, -1, dtype=np.float64)
     return float(np.dot(positions - 1.0, weights) / (weights.size - 1))
 
