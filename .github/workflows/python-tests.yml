@@ -89,6 +89,9 @@ jobs:
           - example: point-location
             directory: implementations/python/point-location
             pythonpath: ""
+          - example: coverage-simplification
+            directory: implementations/python/coverage-simplification
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -164,3 +167,16 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-hull-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/voronoi-delaunay-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/core-gis-algorithms-lab.ipynb
+
+  clipper2:
+    name: Clipper2 C# offset checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Run Clipper2 offset checks
+        run: dotnet run --project implementations/clipper2-csharp/Clipper2Example.csproj --configuration Release
