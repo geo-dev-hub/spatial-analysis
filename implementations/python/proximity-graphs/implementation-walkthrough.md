@@ -20,10 +20,10 @@ For candidate edge uv, a third point blocks it when its distance to both endpoin
 
 Generate every pair with its Euclidean length, sort the candidate edges and apply Kruskal's algorithm with a disjoint-set structure. Stop after n-1 edges.
 
-## Step 5 — Compare and test
+## Step 5 — Extend the neighbourhood model\n\nThe lune-based beta-skeleton moves from the diameter disk at beta=1 to the relative-neighbourhood lune at beta=2. The Yao graph partitions directions into equal-angle cones and selects one nearest neighbour in each cone. This package returns the undirected union of those directed selections.\n\n## Step 6 — Compare and test
 
 Run the tests and inspect the square and intermediate-point fixtures. For the standard Euclidean definitions, RNG edges are a subset of Gabriel edges, and the Euclidean MST is contained in the RNG when ties and degeneracies are treated consistently.
 
-## Step 6 — Understand the scale limit
+## Step 7 — Understand the scale limit
 
 The direct graph routines test O(n²) candidate pairs against up to O(n) blockers, so the simple Gabriel and RNG baselines are O(n³). The MST materialises O(n²) candidate edges and sorts them. These are transparent reference implementations, not scalable geometric construction algorithms.
