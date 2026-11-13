@@ -23,12 +23,13 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Preserve the 47-page source transcription and original page boundaries.
 - [x] Preserve the original 22 section headings and editorial cautions.
 - [x] Publish a coverage matrix that distinguishes captured material from researched material.
-- [x] Extract and classify the source entries across all 22 sections; preserve original groupings and labels.
+- [x] Capture and provisionally classify the grouped source entries across all 22 sections; preserve original groupings and labels.
+- [x] Mark each grouped entry as captured but not individually verified, and label proposed record types as provisional.
 - [ ] Verify names, variants and claims against authoritative sources.
 - [x] Record source-page provenance in the item-level section indexes.
 - [ ] Map duplicates, variants and cross-domain relationships across the full catalogue.
 - [x] Define a primary record-type taxonomy and classification rules.
-- [ ] Apply a primary kind and verification status to every source entry across all 22 sections.
+- [ ] Verify every named method, model, metric, product and implementation; promote provisional types to confirmed primary kinds only when evidence supports them.
 
 ## 3. The first learning paths work end to end
 
@@ -44,6 +45,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
+- [x] Add the first deterministic interpolation record: inverse distance weighting, with a tested Python reference implementation, walkthrough and interactive notebook.
+- [ ] Extend interpolation through natural neighbour, splines, radial basis functions, variograms and kriging.
 - [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
@@ -58,6 +61,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Reuse seven verified Wikimedia Commons figures across lessons: three CC BY-SA 4.0, two CC BY-SA 3.0, one CC0 1.0 and one public-domain figure.
 - [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
+- [x] Add an interactive IDW lab with a movable target, power control and neighbour selection.
 - [x] Add stable cell IDs to all ten notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
@@ -91,6 +95,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Ten notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. The previous recorded Actions run verified ten notebooks and eight Python example suites, alongside the internal-link check. The new IDW implementation and eleventh notebook have been added to the workflow; the expanded run is awaiting confirmation. The source indexes now mark each grouped entry as captured but not individually verified, and proposed record types are explicitly provisional. The catalogue still needs item-by-item verification, duplicate and variant mapping, licensing decisions, and substantial researched learning material across most subject areas.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
