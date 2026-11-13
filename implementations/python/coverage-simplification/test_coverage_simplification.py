@@ -18,7 +18,10 @@ def test_simplification_keeps_coverage_valid():
     source = adjacent_coverage()
     result = simplify_coverage(source, 1.5)
     assert len(result) == 2
-    assert coverage_is_valid(result)\n    assert len(result[0].exterior.coords) < len(source[0].exterior.coords)\n    assert len(result[1].exterior.coords) < len(source[1].exterior.coords)\n
+    assert coverage_is_valid(result)
+    assert len(result[0].exterior.coords) < len(source[0].exterior.coords)
+    assert len(result[1].exterior.coords) < len(source[1].exterior.coords)
+
 
 def test_simplification_preserves_total_covered_area_reasonably():
     source = adjacent_coverage()
