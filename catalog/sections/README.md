@@ -1,6 +1,6 @@
 # Section indexes
 
-All 22 original sections now have an item-level intake index. Each index preserves the source grouping, records the source page and adds a provisional “kind to review” classification. These are **catalogue intake records**, not independent verification of every named method, model, software package or dataset.
+All 22 original sections now have an item-level intake index. Each index preserves the source grouping, records the source page, proposes a provisional record type and marks every grouped entry as captured but not individually verified. These are **catalogue intake records**, not independent verification of every named method, model, software package or dataset.
 
 | Section | Item-level index | Source pages |
 |---:|---|---:|
@@ -30,7 +30,9 @@ All 22 original sections now have an item-level intake index. Each index preserv
 ## How to use these indexes
 
 - The original wording is preserved as source-entry labels; line breaks have been joined where needed for tables.
-- “Kind to review” is a provisional classification, not a claim that the entry has been technically verified.
+- “Proposed type (unverified)” is a working classification, not a confirmed primary type.
+- “Captured; names not individually verified” means the grouped source label is preserved, but the named methods, variants and products inside it have not all been checked separately.
+- A grouped row may need to be split into several canonical records; one row does not imply one algorithm.
 - Source page references point back to the [page-by-page transcription](../../source-inventory/README.md).
 - Canonical records, implementations and learning paths are linked only where they already exist.
 - Source warnings about memory-based or representative names remain visible in the relevant indexes.
