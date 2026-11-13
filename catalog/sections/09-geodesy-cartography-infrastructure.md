@@ -10,6 +10,8 @@ This section contains the supporting systems and concepts that make spatial work
 
 ## First implemented learning record\n\nThe [Geodesy foundations learning path](../../learning-paths/geodesy-foundations.md) begins with point-coordinate transformation and explicit axis order. It does not claim to cover advanced datum, vertical or dynamic reference-frame transformations.\n\n## Geodesy and coordinate systems
 
+The first additional geocentric datum-operation lesson covers the seven-parameter Helmert Position Vector convention, parameter units, the rotation-sign trap and its relationship to a complete geographic/geocentric/geographic CRS operation. See the [method lesson](../../methods/helmert-7-parameter.md) and [tested implementation](../../implementations/python/helmert-7-parameter/README.md).
+
 | Source entry | Kind to review | Source page |
 |---|---|---:|
 | Projections: Transverse Mercator (Gauss-Krüger), UTM, Lambert conformal, Web Mercator, Tobler hyperelliptical, adaptive composite projections | Map projections / projection families | 18 |
