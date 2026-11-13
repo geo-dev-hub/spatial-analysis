@@ -42,6 +42,10 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 - [Spatial interpolation lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.
 
+### Point-pattern analysis
+
+- [Point-pattern KDE lab](point-pattern-kde-lab.ipynb): compare Gaussian bandwidths and weighted event intensity on a synthetic point pattern.
+
 ### Spatial clustering
 
 - [DBSCAN lab](dbscan-clustering-lab.ipynb): inspect core, border and noise points and compare the effect of eps and min_samples.
