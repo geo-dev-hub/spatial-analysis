@@ -65,6 +65,7 @@ Each implementation should state:
 
 ### Decision support
 
+- [TOPSIS](python/topsis/README.md): vector-normalised multi-criteria ranking with benefit/cost direction, ideal and anti-ideal distances, tests and an [intern walkthrough](python/topsis/implementation-walkthrough.md).
 - [Ordered Weighted Averaging](python/owa/README.md): standard OWA and GIS weighted OWA with per-cell sorting, ORness, strict NoData semantics, tests and an [intern walkthrough](python/owa/implementation-walkthrough.md).
 - [Boolean and fuzzy overlay](python/fuzzy-overlay/README.md): logical AND/OR and fuzzy min, product, max, probabilistic-sum and gamma operators, with strict NoData semantics, tests and an [intern walkthrough](python/fuzzy-overlay/implementation-walkthrough.md).
 - [AHP priority weights](python/ahp-weights/README.md): principal-eigenvector priorities from a validated reciprocal comparison matrix, with consistency diagnostics, tests and an [intern walkthrough](python/ahp-weights/implementation-walkthrough.md).
