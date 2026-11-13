@@ -34,8 +34,9 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 ## 3. The first learning paths work end to end
 
 - [x] Geometry starter set: point in polygon, segment intersection, polygon intersection and Bentley–Ottmann.
+- [x] Add Graham scan as a convex-hull extension, with a researched lesson, original SVG, Python implementation, edge-case tests and intern walkthrough.
 - [x] Runnable Python examples and tests for the four topics.
-- [x] Step-by-step implementation walkthroughs for all twelve Python examples.
+- [x] Step-by-step implementation walkthroughs for all thirteen Python examples.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
@@ -74,12 +75,12 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 
 ## 5. The examples can be trusted and reproduced
 
-- [x] Versioned dependencies for current Python examples.
+- [x] Versioned dependencies for current Python examples, including Graham scan.
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all twelve Python examples and execute all fourteen notebooks.
-- [ ] Confirm successful Actions run for all twelve Python test suites, all fourteen notebooks and the internal-link check.
+- [ ] Confirm successful Actions run for all thirteen Python test suites, all fourteen notebooks and the internal-link check.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
@@ -99,6 +100,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons, a spatial-weights foundation, an interpolation/geostatistics sequence (IDW, empirical semivariogram and ordinary kriging), and the first raster-hydrology lesson (D8 flow direction). The previous recorded Actions run verified ten notebooks and eight Python example suites, alongside the internal-link check. The IDW, empirical semivariogram, ordinary kriging and D8 implementations and their notebooks have been added to the workflow; the expanded run now covers twelve test suites and fourteen notebooks and is awaiting confirmation. The source indexes now mark each grouped entry as captured but not individually verified, and proposed record types are explicitly provisional. The catalogue still needs item-by-item verification, duplicate and variant mapping, licensing decisions, and substantial researched learning material across most subject areas.
+The repository now has item-level intake indexes for all 22 source sections, a geometry foundations path with four core runnable examples plus a Graham scan convex-hull extension, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons, a spatial-weights foundation, an interpolation/geostatistics sequence (IDW, empirical semivariogram and ordinary kriging), and the first raster-hydrology lesson (D8 flow direction). The previous recorded Actions run verified ten notebooks and eight Python example suites, alongside the internal-link check. The IDW, empirical semivariogram, ordinary kriging and D8 implementations and their notebooks have been added to the workflow; the expanded run now covers twelve test suites and fourteen notebooks and is awaiting confirmation. The source indexes now mark each grouped entry as captured but not individually verified, and proposed record types are explicitly provisional. Graham scan has now been added to the catalogue and CI matrix; its GitHub Actions result still needs confirmation. The catalogue still needs item-by-item verification, duplicate and variant mapping, licensing decisions, and substantial researched learning material across most subject areas.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
