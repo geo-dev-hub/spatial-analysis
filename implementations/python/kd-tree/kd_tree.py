@@ -89,7 +89,8 @@ class KDTree2D:
             if best is None or candidate < best:
                 best = candidate
 
-            delta = (qx - node.point[node.axis])
+            query_coordinate = (qx, qy)[node.axis]
+            delta = query_coordinate - node.point[node.axis]
             near, far = (
                 (node.left, node.right) if delta <= 0
                 else (node.right, node.left)
