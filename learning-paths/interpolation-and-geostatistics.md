@@ -5,11 +5,12 @@ You have measurements at some locations and need to understand what may be happe
 ## The route through the subject
 
 1. **Start with a weighted average.** [Inverse distance weighting](../algorithms/interpolation/inverse-distance-weighting.md) shows how nearby observations can contribute more strongly than distant ones. **Available**
-2. **Compare deterministic surfaces.** Natural neighbour, splines, radial basis functions and trend surfaces use different geometric or mathematical ideas. These records are planned.
-3. **Understand spatial variation.** Learn how an empirical variogram describes how differences between observations change with separation distance. A dedicated lesson is planned.
-4. **Build an ordinary kriging estimate.** See how a variogram model and a constrained system of equations determine the weights. A dedicated lesson is planned.
-5. **Look at uncertainty.** Distinguish prediction variance, prediction error and validation accuracy.
-6. **Move through time.** Explore spatiotemporal models, data assimilation and change analysis after the spatial foundations are clear.
+2. **Understand spatial variation.** The [empirical semivariogram](../methods/empirical-semivariogram.md) measures how differences between observations change with separation distance. It includes a tested estimator and an interactive lab. **Available**
+3. **Compare deterministic surfaces.** Natural neighbour, splines, radial basis functions and trend surfaces use different geometric or mathematical ideas. These records are planned.
+4. **Fit a theoretical variogram.** Learn how a model represents the empirical pattern and how nugget, sill, range and anisotropy are assessed. A dedicated lesson is planned.
+5. **Build an ordinary kriging estimate.** See how a variogram model and a constrained system of equations determine the weights. A dedicated lesson is planned.
+6. **Look at uncertainty.** Distinguish prediction variance, prediction error and validation accuracy.
+7. **Move through time.** Explore spatiotemporal models, data assimilation and change analysis after the spatial foundations are clear.
 
 ## How to use this path
 
