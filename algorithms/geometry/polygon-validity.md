@@ -141,6 +141,10 @@ For each one:
 
 Explain why the repaired result is a modelling decision rather than proof that the original geometry had one uniquely correct interpretation.
 
+## Runnable example
+
+The repository includes a [Shapely-backed validity inspection and explicit repair example](../../implementations/python/polygon-validity/README.md), with a [step-by-step walkthrough](../../implementations/python/polygon-validity/implementation-walkthrough.md). The example preserves the original geometry, reports the validity reason and makes repair a separate user decision. Its tests cover invalid rings, holes, overlapping MultiPolygon components and repair outputs.
+
 ## References
 
 - [OGC Simple Feature Access — Part 1: Common Architecture](https://www.ogc.org/standards/sfa/). The standard defines the common geometry model and validity concepts; consult the normative document version used by the project.
