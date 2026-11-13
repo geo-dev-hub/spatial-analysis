@@ -75,6 +75,16 @@ You will learn:
 
 **Try it:** follow the [step-by-step implementation walkthrough](../implementations/python/bentley-ottmann/implementation-walkthrough.md), run both implementations and compare them with the all-pairs oracle.
 
+## Continue into polygon geometry
+
+The four foundations above lead into a second set of practical questions: is the boundary valid, how should one polygon be clipped by another, and how do we combine or subtract whole areas?
+
+1. [Check polygon validity](../algorithms/geometry/polygon-validity.md), then inspect the [Shapely validity workflow](../implementations/python/polygon-validity/README.md). Treat repair as an explicit modelling decision.
+2. [Understand polygon clipping](../algorithms/geometry/polygon-clipping.md), then run the [convex Sutherland–Hodgman teaching implementation](../implementations/python/polygon-clipping/README.md). Its deliberate convex-input limit is part of the lesson.
+3. [Study polygon overlay](../algorithms/geometry/overlay-operations.md), run the [four-operation Shapely/GEOS package](../implementations/python/polygon-overlay/README.md), and explore the [visual overlay lab](../notebooks/polygon-overlay-lab.ipynb).
+
+This continuation distinguishes a narrow algorithm implementation (convex clipping) from a library-backed general overlay workflow. It also reinforces a key habit: inspect the geometry type and validity of every result rather than assuming that polygon inputs always produce polygon outputs.
+
 ## What connects the lessons?
 
 - Point-in-polygon asks where a point sits relative to a boundary.
