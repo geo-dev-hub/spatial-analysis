@@ -29,6 +29,7 @@ This directory holds those foundational methods separately from individual algor
 - [Exact orientation predicate](exact-orientation-predicate.md) — classify 2D point triples with a rational reference predicate and understand why production geometry kernels use adaptive precision.
 - [Stationary covariance functions](stationary-covariance-functions.md) — compare Euclidean covariance shapes, check finite covariance matrices and understand why geometry-specific validity conditions matter.
 - [Isotropic covariance on the two-sphere](isotropic-covariance-on-the-sphere.md) — construct valid scalar isotropic covariance models from non-negative Legendre coefficients and distinguish spherical from planar distance models.
+- [Graph-spectral covariance](graph-spectral-covariance.md) — construct positive-semidefinite covariance matrices on finite undirected graphs from non-negative Laplacian spectral variances, without assuming arbitrary shortest-path kernels are valid.
 
 ## How to use these records
 
