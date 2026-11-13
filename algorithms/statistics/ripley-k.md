@@ -60,4 +60,4 @@ The CSR reference assumes a homogeneous Poisson process. Inhomogeneous intensity
 - Ripley, B. D. (1976), *The second-order analysis of stationary point processes*, Journal of Applied Probability, 13(2), 255–266.
 - Ripley, B. D. (1977), *Modelling spatial patterns*, Journal of the Royal Statistical Society: Series B, 39(2), 172–212.
 
-**Scope:** uncorrected K and L summaries for planar point patterns; no edge correction, confidence envelope or inferential test is implemented.
+**Scope:** uncorrected and translation-corrected K/L summaries for planar point patterns; no isotropic/border correction, confidence envelope or inferential test is implemented.
