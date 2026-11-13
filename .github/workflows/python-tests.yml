@@ -125,6 +125,9 @@ jobs:
           - example: stream-order
             directory: implementations/python/stream-order
             pythonpath: ""
+          - example: priority-flood
+            directory: implementations/python/priority-flood
+            pythonpath: ""
           - example: d8-flow
             directory: implementations/python/d8-flow
             pythonpath: ""
@@ -214,6 +217,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-accumulation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/watershed-delineation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/stream-order-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/priority-flood-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
