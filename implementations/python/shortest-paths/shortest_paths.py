@@ -28,9 +28,12 @@ def shortest_path(graph: Graph, start: Node, goal: Node,
     _validate_graph(graph)
     h = heuristic or (lambda _node, _goal: 0.0)
     serial = count()
+    initial_estimate = float(h(start, goal))
+    if not isfinite(initial_estimate) or initial_estimate < 0:
+        raise ValueError("heuristic values must be finite and non-negative")
     best = {start: 0.0}
     previous: dict[Node, Node] = {}
-    queue = [(float(h(start, goal)), next(serial), 0.0, start)]
+    queue = [(initial_estimate, next(serial), 0.0, start)]
 
     while queue:
         _priority, _order, cost, node = heappop(queue)
