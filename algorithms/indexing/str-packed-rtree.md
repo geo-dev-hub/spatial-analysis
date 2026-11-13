@@ -118,19 +118,19 @@ Suppose the tree contains these rectangles:
 
 | Entry | Bounds |
 |---|---|
-| A | ((0,0,1,1)) |
-| B | ((2,0,3,1)) |
-| C | ((4,0,5,1)) |
-| D | ((0,2,1,3)) |
-| E | ((2,2,3,3)) |
+| A | `(0, 0, 1, 1)` |
+| B | `(2, 0, 3, 1)` |
+| C | `(4, 0, 5, 1)` |
+| D | `(0, 2, 1, 3)` |
+| E | `(2, 2, 3, 3)` |
 
-A query window from ((0.5,0.5)) to ((2.5,2.5)) intersects A, B, D and E. It does not intersect C.
+A query window from `(0.5, 0.5)` to `(2.5, 2.5)` intersects A, B, D and E. It does not intersect C.
 
 A tree can use the parent rectangles to skip groups that cannot contain any of those four results. The final answer must still be checked against the original geometry if the stored bounds are only envelopes.
 
 ## Complexity and what affects performance
 
-Let (N) be the number of entries and (M) the maximum number of children per node.
+Let $N$ be the number of entries and $M$ the maximum number of children per node.
 
 - STR packing sorts entries at each level. A typical bulk-loading build is dominated by sorting and is commonly described as $O(N\\log N)$.
 - A balanced tree has a height on the order of $O(\\log_M N)$.

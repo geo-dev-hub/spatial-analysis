@@ -18,7 +18,7 @@ The task sounds simple, but there is an important detail: a point can be inside,
 
 ## 2. The problem
 
-Given a point (p) and a polygon (P), determine the location of (p) relative to (P).
+Given a point $p$ and a polygon $P$, determine the location of $p$ relative to $P$.
 
 For a simple polygon, a useful result model is:
 
@@ -129,7 +129,7 @@ If many points are tested against the same polygon, preprocessing or spatial ind
 
 ## 10. Try it
 
-Use the square with corners (0,0), (4,0), (4,4), (0,4). Test points (2,2), (5,2) and (4,2). Before running the code, decide which should be inside, outside and boundary.
+Use the square with corners `(0,0)`, `(4,0)`, `(4,4)` and `(0,4)`. Test points `(2,2)`, `(5,2)` and `(4,2)`. Before running the code, decide which should be inside, outside and boundary.
 
 Then try a concave polygon. A point can be inside its bounding box and still be outside the polygon.
 

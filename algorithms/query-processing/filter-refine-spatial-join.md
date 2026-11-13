@@ -16,19 +16,19 @@ The result is a set of matching pairs. The index makes the search more selective
 
 ## The two collections
 
-Let the left collection contain (n) geometries:
+Let the left collection contain $n$ geometries:
 
 $$
 L = \{L_1, L_2, \ldots, L_n\}
 $$
 
-Let the right collection contain (m) geometries:
+Let the right collection contain $m$ geometries:
 
 $$
 R = \{R_1, R_2, \ldots, R_m\}
 $$
 
-Choose an exact spatial predicate (P), such as intersects, within or contains.
+Choose an exact spatial predicate $P$, such as `intersects`, `within` or `contains`.
 
 The spatial join result is:
 
@@ -42,7 +42,7 @@ A brute-force join evaluates the predicate for every possible pair. That means (
 
 An index such as an STR-packed R-tree stores bounding boxes. It can quickly identify pairs whose bounding boxes intersect.
 
-Let (B(G)) be the bounding box of geometry (G). The candidate set is:
+Let $B(G)$ be the bounding box of geometry $G$. The candidate set is:
 
 $$
 C = \{(i,j) \mid B(L_i)\cap B(R_j)\ne\emptyset\}
@@ -150,7 +150,7 @@ With a spatial index:
 
 If the index is selective, the candidate count can be much smaller than (n\times m). The actual cost depends on the tree structure, bounding-box overlap, query distribution and exact predicate.
 
-The worst case is still quadratic when many bounding boxes overlap. An index is not a guarantee of subquadratic performance.
+The worst case is still $O(nm)$ when many bounding boxes overlap. If both collections contain $N$ geometries, that is $O(N^2)$. An index is not a guarantee of subquadratic performance.
 
 For a packed tree, the build step is commonly dominated by sorting. A selective query often visits a small number of nodes, but benchmark the real workload rather than assuming every spatial join will be fast.
 
