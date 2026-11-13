@@ -21,11 +21,11 @@ def test_preserves_dem_that_already_drains_to_boundary():
 
 def test_fills_depression_to_its_spill_level_not_global_maximum():
     dem = np.array([
-        [9, 9, 9, 9, 9],
-        [9, 8, 8, 8, 9],
-        [9, 8, 2, 7, 9],
-        [9, 8, 8, 8, 9],
-        [9, 9, 9, 9, 9],
+        [9, 9, 9, 9, 7],
+        [9, 8, 8, 8, 7],
+        [9, 8, 2, 7, 7],
+        [9, 8, 8, 8, 7],
+        [9, 9, 9, 9, 7],
     ], dtype=float)
     filled, depth = priority_flood(dem)
     assert filled[2, 2] == 7
