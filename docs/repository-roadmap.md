@@ -62,6 +62,12 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Extend network routing with contraction hierarchies, non-FIFO routing, transit algorithms and multimodal transfers.
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
+- [x] Add a first geostatistics lesson comparing IDW and ordinary kriging, with an empirical semivariogram estimator, tests, intern walkthrough and interactive notebook.
+- [x] Add a first raster lesson for the Euclidean distance transform, including non-square cell spacing, tests, intern walkthrough and interactive notebook.
+- [x] Add a first remote-sensing lesson for NDVI, with explicit NoData/quality-mask handling, tests, intern walkthrough and interactive notebook.
+- [x] Add a first location-science lesson for uncapacitated p-median, with an exact small-instance solver, tests, intern walkthrough and interactive notebook.
+- [x] Add a DBSCAN density-clustering lesson, deterministic border-point policy, tests, intern walkthrough and interactive notebook.
+- [ ] Continue the source-derived coverage in sections 2–6: point patterns, variogram fitting and uncertainty, terrain/hydrology, sensor processing, location models and transport analysis.
 - [ ] Add domain paths only when their methods and examples are ready.
 
 ## 4. Every lesson uses the right teaching tools
@@ -72,8 +78,9 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] SVG for precise geometric illustrations.
 - [x] Source-figure attribution and licence policy.
 - [x] Reuse seven verified Wikimedia Commons figures across lessons: three CC BY-SA 4.0, two CC BY-SA 3.0, one CC0 1.0 and one public-domain figure.
-- [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
+- [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*; add DBSCAN as a separate density-clustering lab.
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
+- [x] Add interactive notebooks for empirical geostatistical interpolation, raster distance transforms, NDVI and p-median facility location.
 - [x] Add stable cell IDs to all ten notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [x] Add a visual polygon-overlay notebook showing operation outputs, lower-dimensional contacts, holes, multipart results and precision-grid experiments.
@@ -89,8 +96,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all fifteen Python examples and execute all fourteen notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree notebook is included in notebook execution.
-- [x] Confirm a previous successful Actions run for the eight established Python test suites, all ten notebooks and the internal-link check. The new k-d tree suite has been added to CI but has not yet been observed passing.
+- [x] GitHub Actions workflow configured to test all twenty-eight Python implementation packages and execute all twenty-one notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree notebook is included in notebook execution.
+- [x] Confirm a successful Actions run for all twenty-eight Python implementation suites, the Clipper2 C# smoke test, internal links and all twenty-one notebook executions. A later DBSCAN ambiguous-border regression case is being revalidated in a follow-up run.
 - [x] Add regression tests for polygon validity, clipping, overlay topology and precision-grid input contracts.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
@@ -111,6 +118,8 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. The indexing material now includes an STR-packed R-tree, filter-and-refine spatial join, a static 2D k-d tree and a bucket point-region quadtree, connected by a workload-oriented index selection guide. A Shapely-backed polygon-validity inspection and explicit-repair example has also been added. The k-d tree and quadtree each have Python teaching implementations, brute-force differential tests and intern walkthroughs; the quadtree also has an executable notebook. The k-d tree's first CI run exposed an incorrect split-axis coordinate in its pruning bound. The implementation has been corrected, a dedicated regression test added, and the corrected algorithm independently checked against a brute-force oracle over the regression case and 600 deterministic random queries. GitHub Actions run 43492209324 passed all fifteen Python test suites, the internal-link check and all fourteen learning notebooks on the current pull-request head. The polygon-validity lesson now has a tested Shapely-backed workflow; convex polygon clipping has a dependency-free Sutherland–Hodgman teaching implementation; and polygon overlay has a tested Shapely/GEOS package covering four operations, topology edge cases and precision-grid controls. A Graham scan convex-hull lesson, dependency-free implementation and visual lab extend the geometry material. The overlay, hull and Voronoi/Delaunay notebooks are included in CI. These are teaching packages with explicit limits, not a from-scratch GEOS replacement. The quadtree is specifically a point-region tree for point-window queries, not a region quadtree or general geometry index. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository has item-level intake indexes for all 22 source sections, but intake is not the same as verification. Section 1 now has a substantial geometry, indexing and routing learning set, with explicit open work including a true snap-rounding noder, randomized trapezoidal maps, scalable proximity-graph construction and advanced transit/network routing. Section 2 has Global and Local Moran/Geary/Getis-Ord material plus DBSCAN; point-process methods, broader clustering, spatial regression and econometrics remain open. Section 3 has an audited IDW/ordinary-kriging lesson, empirical semivariogram estimator, tests and notebook; model fitting, anisotropy, co-kriging and scalable approximations remain open. Section 4 has a scoped Euclidean raster distance transform, and Section 5 has an NDVI lesson with explicit reflectance and quality-mask caveats. Section 6 has an uncapacitated p-median model and exact small-instance solver; capacity, robust and equity constraints and the wider mobility/transport methods remain open. Sections 7–22 are still primarily indexed source intake, not complete technical chapters.
+
+The branch currently contains twenty-eight Python implementation packages, twenty-one executable notebooks and a Clipper2 C# smoke check. [Actions run 43506436902](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43506436902) passed all twenty-eight Python suites, the C# check, internal links and all twenty-one notebook executions. A follow-up run is checking a newly added DBSCAN border-point regression. The repository is still a draft: source entries need item-by-item verification, licensing decisions remain open, and many subject areas have not yet received researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
