@@ -54,6 +54,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 - [Covariance functions lab](covariance-functions-lab.ipynb): compare five Euclidean covariance shapes, inspect matrix eigenvalues, vary the range and examine duplicate sites.
 - [Spherical covariance lab](spherical-covariance-lab.ipynb): convert global coordinates to unit vectors, compare non-negative Legendre spectra and inspect a valid spherical covariance matrix.
+- [Graph-spectral covariance lab](graph-spectral-covariance-lab.ipynb): build a graph Laplacian, inspect spectral modes and compare heat-kernel covariance across path, star and cycle graphs.
 
 ### Geostatistics and interpolation
 
@@ -109,6 +110,6 @@ The links below point to notebooks already available on the default branch. The 
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all forty-five notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all forty-six notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
