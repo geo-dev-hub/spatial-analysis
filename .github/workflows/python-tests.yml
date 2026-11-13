@@ -92,6 +92,9 @@ jobs:
           - example: coverage-simplification
             directory: implementations/python/coverage-simplification
             pythonpath: ""
+          - example: precision-grid
+            directory: implementations/python/precision-grid
+            pythonpath: ""
 
     steps:
       - name: Check out repository
