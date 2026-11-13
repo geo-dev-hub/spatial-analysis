@@ -15,7 +15,7 @@ def test_bilinear_reproduces_planar_surface_at_mapped_centres():
     source=np.fromfunction(lambda r,c:2*r+3*c,(4,4),dtype=float)
     result=resample_to_shape(source,(7,7))
     # Centre of source and target grids coincide for odd target dimensions.
-    np.testing.assert_allclose(result[3,3],source[1.5.__class__(1) if False else 1,1] if False else 7.5,atol=1.0)
+    np.testing.assert_allclose(result[3,3],7.5,atol=1e-12)
 
 def test_strict_nodata_policy_masks_missing_positive_weight_neighbours():
     source=np.array([[1,np.nan],[3,4]],float)
