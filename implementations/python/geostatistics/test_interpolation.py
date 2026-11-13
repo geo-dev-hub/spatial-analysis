@@ -106,9 +106,9 @@ def test_empirical_variogram_keeps_empty_bins_visible():
     from interpolation import empirical_variogram
 
     result = empirical_variogram([(0, 0, 1), (1, 0, 2)], [0, 0.5, 1.5, 3])
-    assert result[0] == pytest.approx((0.25, None, 0))
+    assert result[0][0] == pytest.approx(0.25) and result[0][1:] == (None, 0)
     assert result[1] == pytest.approx((1.0, 0.5, 1))
-    assert result[2] == pytest.approx((2.25, None, 0))
+    assert result[2][0] == pytest.approx(2.25) and result[2][1:] == (None, 0)
 
 
 @pytest.mark.parametrize("edges", [[0], [0, 0], [1, 0], [-1, 2], [0, math.inf]])
