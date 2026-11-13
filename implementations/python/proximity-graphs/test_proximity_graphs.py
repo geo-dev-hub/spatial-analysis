@@ -1,9 +1,11 @@
 import pytest
 
 from proximity_graphs import (
+    beta_skeleton,
     euclidean_mst,
     gabriel_graph,
     relative_neighborhood_graph,
+    yao_graph,
 )
 
 
@@ -55,3 +57,27 @@ def test_duplicate_points_rejected(function):
 def test_non_finite_points_rejected(function):
     with pytest.raises(ValueError):
         function([(0, 0), (1, float("inf"))])
+
+
+def test_beta_skeleton_endpoints_match_gabriel_and_rng_definitions():
+    assert beta_skeleton(SQUARE, 1.0) == gabriel_graph(SQUARE)
+    assert beta_skeleton(SQUARE, 2.0) == relative_neighborhood_graph(SQUARE)
+
+
+def test_beta_skeleton_rejects_out_of_scope_beta():
+    with pytest.raises(ValueError):
+        beta_skeleton(SQUARE, 2.5)
+
+
+def test_yao_graph_returns_valid_undirected_edges():
+    points = [(0, 0), (2, 0), (2, 2), (0, 2), (1, 1)]
+    edges = yao_graph(points, cones=4)
+    assert edges
+    assert all(i < j and 0 <= i < len(points) and 0 <= j < len(points)
+               for i, j in edges)
+    assert edges == sorted(set(edges))
+
+
+def test_yao_graph_rejects_invalid_cone_count():
+    with pytest.raises(ValueError):
+        yao_graph(SQUARE, cones=2)
