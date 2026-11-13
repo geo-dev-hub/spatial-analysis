@@ -16,6 +16,7 @@ These are starting points, not locked courses.
 4. **I want to find patterns in data.** Explore sampling, spatial autocorrelation, point patterns, clustering, interpolation and uncertainty.
 5. **I work with satellite or raster data.** Explore raster foundations, image processing, classification, change detection and data fusion.
 6. **I work with cities, places or transport.** Explore networks, accessibility, flows, location, land use and simulation.
+7. **I work with elevation or drainage data.** Start with the [raster hydrology path](raster-hydrology.md), from DEM basics to flow direction and catchments.
 
 ## Learn in the way that works for you
 
