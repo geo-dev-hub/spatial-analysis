@@ -56,6 +56,9 @@ jobs:
           - example: kd-tree
             directory: implementations/python/kd-tree
             pythonpath: ""
+          - example: quadtree
+            directory: implementations/python/quadtree
+            pythonpath: ""
 
     steps:
       - name: Check out repository
