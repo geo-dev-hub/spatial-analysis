@@ -24,6 +24,8 @@ The first additional geocentric datum-operation lesson covers the seven-paramete
 
 ## Georeferencing and transformation
 
+A first affine control-point lesson and tested least-squares implementation are available. It covers the six-parameter 2D model, rank deficiency, residual vectors and pixel-corner/centre conventions; polynomial and thin-plate-spline transformations remain open.
+
 | Source entry | Kind to review | Source page |
 |---|---|---:|
 | Affine, polynomial and rubber-sheeting transforms; thin plate spline rectification; co-registration | Geometric transformations / image registration | 19 |
