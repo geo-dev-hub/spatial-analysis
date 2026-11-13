@@ -30,6 +30,8 @@ Each implementation should state:
 
 ### GeoAI and model validation
 
+- [Masked patch selection and restoration](python/masked-autoencoding/README.md): NumPy-only MAE sequence masking mechanics, deterministic per-sample masks, inverse permutation, tests and an [intern walkthrough](python/masked-autoencoding/implementation-walkthrough.md). This is not a trained model.
+
 - [Spatial block cross-validation](python/spatial-cross-validation/README.md): deterministic grid-block folds with optional distance buffering, explicit projected-coordinate assumptions, tests and an [intern walkthrough](python/spatial-cross-validation/implementation-walkthrough.md).
 
 ### Remote sensing
