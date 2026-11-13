@@ -65,6 +65,9 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 ## Spatial statistics
 
+- [Kernel density estimation for point patterns](statistics/point-pattern-kde.md) — estimate a fixed-bandwidth planar Gaussian intensity surface and understand bandwidth and edge effects.
+
+
 - [DBSCAN](statistics/dbscan.md) — identify density-connected clusters and noise in planar point data.
 
 
