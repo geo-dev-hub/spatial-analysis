@@ -4,7 +4,7 @@
 - **Source pages:** 4–6 (the small-area and survey estimation subsection continues onto page 6)
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md) and [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Spatial interpolation: IDW and ordinary kriging](../../algorithms/geostatistics/interpolation.md) (first audited record; remaining entries are still unverified)
 
 This section combines surface estimation, stochastic spatial models, simulation, time-dependent analysis, data assimilation, uncertainty measures and small-area estimation. Some entries are model families, some are computational procedures and some are evaluation measures.
 
@@ -64,7 +64,7 @@ This section combines surface estimation, stochastic spatial models, simulation,
 | Spatial microsimulation (IPF, simulated annealing), areal interpolation, dasymetric mapping, WorldPop-style random forest population surfaces | Spatial microsimulation / areal estimation / mapping workflows | 6 |
 | Statistical downscaling: quantile mapping, BCSD, delta change, analog methods | Downscaling methods | 6 |
 
-## Decisions for the next pass
+## First audited lesson\n\nThe [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.\n\n## Decisions for the next pass
 
 1. Separate deterministic interpolation from stochastic geostatistical prediction.
 2. Verify the assumptions behind variograms, stationarity, covariance models and kriging variants.
