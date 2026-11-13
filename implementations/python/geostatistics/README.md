@@ -1,6 +1,6 @@
 # Spatial interpolation: IDW and ordinary kriging
 
-This package compares two ways to estimate a continuous surface from point observations:
+This package compares two ways to estimate a continuous surface from point observations and includes an exploratory empirical semivariogram:
 
 - **Inverse distance weighting (IDW):** a deterministic weighted average. Nearby observations receive greater weight.
 - **Ordinary kriging:** a linear predictor whose weights are derived from a specified stationary isotropic variogram and the unbiasedness constraint.
@@ -40,7 +40,7 @@ predictions = ordinary_kriging_predict(
 print(predictions)  # (prediction, kriging variance)
 ~~~
 
-The exponential semivariogram is
+The empirical semivariogram reports mean pair distance, classical semivariance and pair count for caller-defined distance bins. It is not a fitted model.\n\nThe exponential semivariogram is
 
 $$
 \gamma(h)=c\left(1-e^{-h/a}\right), \quad h>0,
