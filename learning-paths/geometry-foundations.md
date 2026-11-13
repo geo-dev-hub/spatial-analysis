@@ -85,6 +85,8 @@ The four foundations above lead into a second set of practical questions: is the
 
 This continuation distinguishes a narrow algorithm implementation (convex clipping) from a library-backed general overlay workflow. It also reinforces a key habit: inspect the geometry type and validity of every result rather than assuming that polygon inputs always produce polygon outputs.
 
+A related construction problem is the [convex hull](../algorithms/geometry/convex-hull.md): find the smallest convex boundary containing a set of points. Run the [Graham scan implementation](../implementations/python/convex-hull/README.md) and explore its [visual lab](../notebooks/convex-hull-lab.ipynb) to see how interior and collinear points are handled.
+
 ## What connects the lessons?
 
 - Point-in-polygon asks where a point sits relative to a boundary.
