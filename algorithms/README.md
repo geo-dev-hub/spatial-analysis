@@ -18,6 +18,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
 - [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps.
 
+## Networks and routing
+
+- [Shortest paths](networks/shortest-paths.md) — understand graph cost models and shortest-path families, with tested Dijkstra and A* baselines.
+
 ## Spatial indexing
 
 - [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
