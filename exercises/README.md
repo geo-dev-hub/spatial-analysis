@@ -22,6 +22,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Bentley–Ottmann](../implementations/python/bentley-ottmann/implementation-walkthrough.md#10-suggested-intern-exercises)
 - [Geometry overlay and validity](geometry-overlay-and-validity.md)
 - [Core GIS continuation](core-gis-continuation.md)
+- [Spatial decision support](spatial-decision-support.md)
 
 ## Exercise writing standard
 
