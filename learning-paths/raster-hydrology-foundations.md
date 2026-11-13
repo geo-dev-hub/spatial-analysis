@@ -75,6 +75,10 @@ These methods produce different contributing-area patterns. They are not just di
 
 Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time. This differs from the [Euclidean distance transform](../algorithms/raster/euclidean-distance-transform.md), which measures straight-line distance to a target.
 
+## 9. Choose a raster resampling method
+
+Read [Raster resampling](../algorithms/raster/resampling.md) and run the [resampling notebook](../notebooks/raster-resampling-lab.ipynb). Nearest neighbour preserves class labels; bilinear interpolation estimates continuous values from four neighbours. The teaching example changes array shape over a fixed extent and is not a CRS-aware warp.
+
 ## Exercises
 
 1. Create a simple plane and predict the Horn slope, aspect and D8 directions.

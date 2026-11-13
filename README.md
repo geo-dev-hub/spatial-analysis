@@ -38,6 +38,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Working with raster distances | [Raster distance foundations](learning-paths/raster-distance-foundations.md) |
 | Summarising raster neighbourhoods | [Focal raster statistics](algorithms/raster/focal-statistics.md) |
 | Understanding how terrain drains | [Raster hydrology foundations](learning-paths/raster-hydrology-foundations.md) |
+| Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |

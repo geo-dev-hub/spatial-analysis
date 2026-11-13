@@ -36,6 +36,7 @@ Each implementation should state:
 
 - [Horn slope and aspect](python/terrain-derivatives/README.md): a NumPy implementation of 3×3 Horn derivatives, local analytical hillshade and topographic wetness index, with explicit units, sun-angle conventions, specific-area and slope-floor contracts, aspect convention, NoData policy, tests and an [intern walkthrough](python/terrain-derivatives/implementation-walkthrough.md).
 - [Raster least-cost distance](python/cost-distance/README.md): multi-source Dijkstra on a weighted 4/8-neighbour grid, with explicit edge-cost integration, corner policy, NoData barriers, tests and an [intern walkthrough](python/cost-distance/implementation-walkthrough.md).
+- [Raster resampling](python/raster-resampling/README.md): same-extent nearest-neighbour and bilinear interpolation, explicit NoData policies, tests and an [intern walkthrough](python/raster-resampling/implementation-walkthrough.md).
 
 - [Euclidean distance transform](python/raster-distance/README.md): a SciPy-backed exact Euclidean distance wrapper with anisotropic cell spacing, tests and an [intern walkthrough](python/raster-distance/implementation-walkthrough.md).
 - [Focal raster statistics](python/focal-statistics/README.md): NoData-aware square-window means using value and count integral images, with tests and an [intern walkthrough](python/focal-statistics/implementation-walkthrough.md).
@@ -83,7 +84,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all forty Python example packages and the Clipper2 C# smoke test, and execute all thirty-three learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all forty-one Python example packages and the Clipper2 C# smoke test, and execute all thirty-four learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 

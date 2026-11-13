@@ -149,6 +149,9 @@ jobs:
           - example: cost-distance
             directory: implementations/python/cost-distance
             pythonpath: ""
+          - example: raster-resampling
+            directory: implementations/python/raster-resampling
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -242,6 +245,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ripley-k-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/slope-aspect-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/cost-distance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-resampling-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
