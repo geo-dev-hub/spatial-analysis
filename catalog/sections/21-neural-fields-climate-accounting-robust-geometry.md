@@ -4,7 +4,7 @@
 - **Source pages:** 43–45
 - **Source transcription:** [pages 41–47](../../source-inventory/pages-41-47.md)
 - **Review state:** intake extracted; source says names are from memory and should be verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Exact orientation predicate](../../methods/exact-orientation-predicate.md), with a rational-arithmetic reference implementation, near-degenerate regression test, intern walkthrough, exercise and visual notebook. This is not an implementation of Shewchuk's adaptive expansion predicates; exact/adaptive production kernels and robust constructions remain open.\n\n- **Current canonical records:** none yet
 
 **Source caution:** the source describes these as narrower variants and adjacent fields. Verify named models, standards and software before citation.
 
