@@ -8,7 +8,11 @@
 
 This section brings together optimisation problems, logistics, accessibility, transport planning, human mobility, positioning and robotics. It includes exact optimisation methods, heuristics, models, software, metrics and applied workflows. Keep the problem definition visible: many similarly named methods solve different objectives or operate under different constraints.
 
-## First audited location model\n\nThe [p-median lesson](../../algorithms/optimization/p-median.md) states the uncapacitated facility-location objective and assignment constraints. A tested exact exhaustive solver provides a small-instance oracle, with an interactive notebook. It does not include capacities, maximum service thresholds, stochastic demand or equity constraints.\n\n## Location-allocation and spatial optimization
+## First audited location model
+
+The [p-median lesson](../../algorithms/optimization/p-median.md) states the uncapacitated facility-location objective and assignment constraints. A tested exact exhaustive solver provides a small-instance oracle, with an interactive notebook. It does not include capacities, maximum service thresholds, stochastic demand or equity constraints.
+
+## Location-allocation and spatial optimization
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
