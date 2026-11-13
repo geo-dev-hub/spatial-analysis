@@ -1,7 +1,7 @@
 import math
 import pytest
 
-from shortest_paths import astar, dijkstra
+from shortest_paths import astar, bellman_ford, dijkstra, floyd_warshall
 
 
 GRAPH = {
@@ -55,3 +55,35 @@ def test_invalid_heuristic_rejected_when_node_is_expanded():
 def test_invalid_start_heuristic_rejected_even_when_start_is_goal():
     with pytest.raises(ValueError):
         astar({"A": []}, "A", "A", lambda _node, _goal: float("nan"))
+
+
+def test_bellman_ford_supports_negative_edges_without_negative_cycles():
+    graph = {
+        "A": [("B", 4), ("C", 5)],
+        "B": [("D", 2)],
+        "C": [("B", -3)],
+        "D": [],
+    }
+    path, cost = bellman_ford(graph, "A", "D")
+    assert path == ["A", "C", "B", "D"]
+    assert cost == pytest.approx(4.0)
+
+
+def test_bellman_ford_detects_reachable_negative_cycle():
+    graph = {"A": [("B", 1)], "B": [("A", -2)]}
+    with pytest.raises(ValueError, match="negative-weight cycle"):
+        bellman_ford(graph, "A", "B")
+
+
+def test_floyd_warshall_computes_all_pairs_distances():
+    graph = {"A": [("B", 3), ("C", 10)], "B": [("C", 2)], "C": []}
+    distance = floyd_warshall(graph)
+    assert distance[("A", "C")] == pytest.approx(5)
+    assert distance[("C", "A")] == float("inf")
+    assert distance[("B", "B")] == 0
+
+
+def test_floyd_warshall_detects_negative_cycle():
+    graph = {"A": [("B", 1)], "B": [("A", -2)]}
+    with pytest.raises(ValueError, match="negative-weight cycle"):
+        floyd_warshall(graph)
