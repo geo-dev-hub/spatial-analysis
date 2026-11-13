@@ -1,6 +1,6 @@
 # Point-pattern foundations: from event locations to spatial intensity
 
-**Status:** First fixed-bandwidth planar KDE lesson published; inferential point-pattern statistics and edge correction remain open.
+**Status:** Fixed-bandwidth planar KDE and a descriptive Clark–Evans nearest-neighbour index now have tested implementations and notebooks; edge correction, formal inference and broader point-process methods remain open.
 
 ## Start with the observation process
 
