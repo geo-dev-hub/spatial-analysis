@@ -16,7 +16,23 @@ A basic raster drainage workflow has several distinct stages. Do not collapse th
 
 Read [Priority-Flood depression filling](../algorithms/raster/priority-flood.md) and run the [Priority-Flood notebook](../notebooks/priority-flood-lab.ipynb). It raises depressions to their lowest spill level and returns a separate fill-depth layer. The example uses valid raster-edge and NoData-adjacent cells as outlets. Filling is not breaching, and it does not resolve the flats that may remain.
 
-### The stages fit together\n\n~~~mermaid\nflowchart TD\n  A[Original DEM] --> B[Condition depressions]\n  B --> C[Derive D8 flow directions]\n  C --> D[Accumulate upstream contributions]\n  D --> E[Choose a channel-initiation rule]\n  E --> F[Build a stream mask]\n  F --> G[Calculate stream order]\n  C --> H[Select a pour point]\n  H --> I[Delineate contributing area]\n~~~\n\nThe diagram shows dependencies, not a single mandatory software command. The stream threshold, outlet and conditioning policy are analytical choices.\n\n## 1. Understand D8 direction
+### The stages fit together
+
+~~~mermaid
+flowchart TD
+  A[Original DEM] --> B[Condition depressions]
+  B --> C[Derive D8 flow directions]
+  C --> D[Accumulate upstream contributions]
+  D --> E[Choose a channel-initiation rule]
+  E --> F[Build a stream mask]
+  F --> G[Calculate stream order]
+  C --> H[Select a pour point]
+  H --> I[Delineate contributing area]
+~~~
+
+The diagram shows dependencies, not a single mandatory software command. The stream threshold, outlet and conditioning policy are analytical choices.
+
+## 1. Understand D8 direction
 
 Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [direction notebook](../notebooks/d8-flow-direction-lab.ipynb). It chooses the steepest positive slope among eight neighbours, with rectangular cell spacing.
 
@@ -53,4 +69,4 @@ These methods produce different contributing-area patterns. They are not just di
 
 ## What remains
 
-The wider source section also includes sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
+The wider source section also includes broader local, zonal and global raster algebra, weighted focal filters, sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
