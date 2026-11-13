@@ -1,6 +1,6 @@
 # Shortest-path teaching implementation
 
-Implements Dijkstra and A* for an explicit directed adjacency mapping.
+Implements four shortest-path baselines for explicit weighted graphs: Dijkstra and A* for non-negative edge weights, Bellman–Ford for negative edges, and Floyd–Warshall for all-pairs shortest distances.
 
 ## Run
 
@@ -24,6 +24,6 @@ print(dijkstra(graph, "A", "D"))
 print(astar(graph, "A", "D", lambda node, goal: 0))
 ~~~
 
-A* requires an admissible heuristic for optimality. A consistent heuristic is recommended. The graph must contain finite non-negative edge weights. The caller is responsible for representing one-way edges, access rules, turn restrictions and the chosen cost model.
+A* requires an admissible heuristic for optimality. A consistent heuristic is recommended. Dijkstra and A* require finite non-negative edge weights. Bellman–Ford and Floyd–Warshall accept finite negative edges but detect and reject negative cycles. The caller is responsible for representing one-way edges, access rules, turn restrictions and the chosen cost model.
 
-This is a teaching implementation, not a production routing engine. It does not include ALT, bidirectional search, contraction hierarchies, time-dependent costs or transit routing.
+This is a teaching implementation, not a production routing engine. It does not include bidirectional search, ALT, contraction hierarchies, hub labels, customizable route planning, time-dependent costs or transit routing.
