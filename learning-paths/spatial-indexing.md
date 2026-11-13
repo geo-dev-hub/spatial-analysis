@@ -2,6 +2,10 @@
 
 **Status:** First two lessons available. The path begins with bounding boxes and a packed R-tree, then applies the index to a filter-and-refine spatial join. Dynamic indexes and nearest-neighbour search will be added as their methods are verified.
 
+## Choose an index that fits the job
+
+Before choosing a tree or grid, describe the objects, query types, update pattern and data distribution. The [spatial index selection guide](../guides/choosing-a-spatial-index.md) compares R-trees, STR-packed trees, quadtrees, k-d trees, grids, octrees and global cell systems, with a practical decision route and a benchmark checklist.
+
 ## Why an index helps
 
 A spatial query often starts with a simple question: which features might overlap this window? Which buildings could be within a search area? Which roads could intersect a proposed corridor?
