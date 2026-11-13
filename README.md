@@ -41,7 +41,8 @@ You do not have to start at the beginning. You do not have to know everything be
 | Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
 | Summarizing raster values by zone | [Zonal statistics](algorithms/raster/zonal-statistics.md) |
 | Labeling connected raster regions | [Connected-component labeling](algorithms/raster/connected-components.md) |
-| Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |\n| Understanding coordinate reference systems | [Coordinate transformation](algorithms/geodesy/crs-transformation.md) |
+| Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |
+| Understanding coordinate reference systems | [Coordinate transformation](algorithms/geodesy/crs-transformation.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
 | Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md) and [weighted linear combination](methods/weighted-linear-combination.md) |
@@ -110,4 +111,4 @@ A native [Clipper2 offsetting example](implementations/clipper2-csharp/README.md
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path, and foundational lessons in spatial indexing, spatial joins and spatial weights are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
+**Current stage:** the compendium now has tested learning material across geometry, routing, spatial statistics, geostatistics, raster and terrain analysis, remote sensing, location science, decision support, GeoAI and geodesy. The repository inventory and CI status are tracked in the [roadmap](docs/repository-roadmap.md). All 22 source sections are indexed, but each source entry still needs appropriate verification, and many methods remain to be researched and implemented.
