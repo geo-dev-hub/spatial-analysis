@@ -45,6 +45,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a Graham scan visual lab with a step slider for the candidate sequence and stack changes.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
+- [x] Add a workload-led selection guide comparing R-trees, quadtrees, k-d trees, grids, octrees and global cell systems, with a decision flow and benchmark protocol.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
 - [x] Add the first deterministic interpolation record: inverse distance weighting, with a tested Python reference implementation, walkthrough and interactive notebook.
