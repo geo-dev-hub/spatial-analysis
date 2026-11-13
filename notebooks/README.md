@@ -12,7 +12,11 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ### Spatial indexing
 
+- [STR-packed R-tree](str-packed-rtree-lab.ipynb): compare bounding-box candidates with exact geometry intersections and inspect how node capacity affects grouping.
+- [Filter-and-refine spatial join](filter-refine-spatial-join-lab.ipynb): join points to polygons, inspect candidate pairs and compare exact predicates with a brute-force result.
 - [Point-region quadtree](quadtree-lab.ipynb): explore recursive cell subdivision and compare inclusive rectangular window queries with brute force.
+
+### Spatial statistics and weights
 
 - [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag, enumerate a small permutation distribution, and use sliders to compare Moran's I with Geary's C as the values change.
 - [Global Geary's C](gearys-c-lab.ipynb): compare squared differences between neighbours, contrast similar and alternating values, and inspect all 24 permutations of a four-unit example.
@@ -20,23 +24,23 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Local Geary](local-geary-lab.ipynb): compare each unit with its neighbours, inspect local squared-difference values and compare raw labels with an FDR-filtered classification.
 - [Global Getis-Ord G](global-getis-ord-g-lab.ipynb): test overall concentration of positive values and inspect the permutation reference distribution.
 - [Getis-Ord Gi*](getis-ord-gi-star-lab.ipynb): calculate local hotspot and coldspot z-scores, inspect permutation p-values and apply FDR control.
-- [STR-packed R-tree](str-packed-rtree-lab.ipynb): compare bounding-box candidates with exact geometry intersections and inspect how the node capacity affects grouping.
-- [Filter-and-refine spatial join](filter-refine-spatial-join-lab.ipynb): join points to polygons, inspect candidate pairs and compare exact predicates with a brute-force result.
 - [Spatial weights](spatial-weights-lab.ipynb): compare Rook and Queen contiguity, distance bands, kNN, row standardisation and isolates.
 
 ## Run a notebook
 
 Install the dependencies from the repository root. The spatial-weights lab uses GeoPandas GeoSeries as input to the libpysal Graph builders:
 
-```bash
+~~~bash
 python -m pip install -r notebooks/requirements.txt
 python -m pip install jupyterlab
 jupyter lab
-```
+~~~
 
-Open the notebook from JupyterLab and run the cells in order. The Global Moran's I lab includes live controls built with ipywidgets; change the four area values or the weights style to update the statistics and scatterplot. The other notebooks are editable labs: change an input in a code cell and rerun it to inspect the result.
+Open a notebook from JupyterLab and run the cells in order. The Global Moran's I lab includes live controls built with ipywidgets; change the four area values or the weights style to update the statistics and scatterplot. The other notebooks are editable labs: change an input in a code cell and rerun it to inspect the result.
 
 ### Open a lab in Google Colab
+
+The links below point to notebooks already available on the default branch. Newer labs on the current pull request can be opened directly from the branch's notebook directory once the branch is checked out.
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
@@ -49,6 +53,6 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow also executes all thirteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
+The repository workflow executes all thirteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
