@@ -1,6 +1,6 @@
 # Point-pattern foundations: from event locations to spatial intensity
 
-**Status:** Fixed-bandwidth planar KDE and a descriptive Clark–Evans nearest-neighbour index now have tested implementations and notebooks; edge correction, formal inference and broader point-process methods remain open.
+**Status:** Fixed-bandwidth planar KDE, a descriptive Clark–Evans nearest-neighbour index and an uncorrected Ripley's K/L summary now have tested implementations and notebooks; edge correction, formal inference and broader point-process methods remain open.
 
 ## Start with the observation process
 
@@ -24,9 +24,13 @@ The first implementation does not apply edge correction. Kernels near the study 
 
 Read [Clark–Evans nearest-neighbour index](../algorithms/statistics/clark-evans.md) and run the [Clark–Evans notebook](../notebooks/clark-evans-lab.ipynb). It compares the observed mean nearest-neighbour distance with a homogeneous Poisson reference. The lesson is deliberately descriptive: edge correction and a significance test remain separate work.
 
-## 5. Move from description to inference
+## 5. Compare pair counts across distance scales
 
-The wider point-pattern section includes quadrat analysis, nearest-neighbour statistics, Ripley's K/L, G/F/J functions, pair correlation, stochastic point-process models and scan statistics. These answer different questions and require explicit null models and assumptions.
+Read [Ripley's K and L](../algorithms/statistics/ripley-k.md) and run the [Ripley K/L notebook](../notebooks/ripley-k-lab.ipynb). It compares pair counts across several radii with the homogeneous Poisson reference. The first implementation is uncorrected and descriptive; edge correction and simulation envelopes remain separate work.
+
+## 6. Move from description to inference
+
+The wider point-pattern section includes quadrat analysis, nearest-neighbour statistics, edge-corrected Ripley's K/L, G/F/J functions, pair correlation, stochastic point-process models and scan statistics. These answer different questions and require explicit null models and assumptions.
 
 ## Exercises
 
