@@ -1,6 +1,6 @@
 # Moran's I: do similar values sit near one another?
 
-<text>Stable ID: `SA-STAT-GLOBAL-MORANS-I` · Draft 0.1 · Source compendium section 2, pages 2–3</text>
+Stable ID: `SA-STAT-GLOBAL-MORANS-I` · Draft 0.1 · Source compendium section 2, pages 2–3
 
 ## 1. Start here
 

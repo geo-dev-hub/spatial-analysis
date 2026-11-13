@@ -9,7 +9,7 @@ This document records the current position and the decisions that must be made b
 - **No project-wide code or documentation licence has been selected yet.**
 - The supplied *Spatial Analysis Algorithms: Complete Compendium* and its page-by-page transcription are preserved as source intake. They are not automatically covered by any future project licence. Confirm the right to publish and redistribute the source material before assigning it a licence or treating it as reusable project content.
 - Third-party papers, diagrams, datasets, software documentation and code retain their own rights and licence terms.
-- Six Wikimedia Commons figures are currently embedded in lessons: three under CC BY-SA 4.0, one under CC BY-SA 3.0 (also offered under GFDL 1.2+), one dedicated under CC0 1.0 and one dedicated to the public domain. Each is separately identified in the [visual-source register](visual-sources-and-attribution.md). Their licences do not automatically apply to the surrounding project text.
+- Seven Wikimedia Commons figures are currently embedded in lessons: three under CC BY-SA 4.0, two under CC BY-SA 3.0 (one also offered under GFDL 1.2+), one dedicated under CC0 1.0 and one dedicated to the public domain. Each is separately identified in the [visual-source register](visual-sources-and-attribution.md). Their licences do not automatically apply to the surrounding project text.
 - Contributors should not submit material they do not have permission to share.
 
 ## Recommended licence structure to decide
