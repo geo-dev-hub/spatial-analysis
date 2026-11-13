@@ -45,7 +45,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
 - [ ] Review and verify the new polygon-validity, polygon-clipping and overlay-operation drafts; add edge-case tests and runnable examples.
-- [ ] Turn the quadtree and k-d tree drafts into tested teaching implementations, edge-case suites and notebooks.
+- [x] Add a static 2D k-d tree teaching implementation, deterministic tie handling, brute-force differential tests and an intern walkthrough.
+- [ ] Implement a point-region quadtree with explicit split-boundary and duplicate-coordinate rules; add adversarial tests and a notebook. The conceptual quadtree record and exercises are drafted.
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees, space-filling curves, advanced nearest-neighbour queries, proximity and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
@@ -72,8 +73,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all eight Python examples and execute all ten notebooks.
-- [x] Confirm successful Actions run for all eight Python test suites, all ten notebooks and the internal-link check.
+- [x] GitHub Actions workflow configured to test all nine Python examples and execute all ten notebooks. The k-d tree test suite is included in the matrix.
+- [x] Confirm a previous successful Actions run for the eight established Python test suites, all ten notebooks and the internal-link check. The new k-d tree suite has been added to CI but has not yet been observed passing.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
