@@ -15,6 +15,8 @@ Each record explains one method or operation, its assumptions, where it is usefu
 ## Spatial indexing
 
 - [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
+- [Quadtree](indexing/quadtree.md) — recursively partition a two-dimensional space; this record focuses on bucket point-region trees and distinguishes them from region and other variants.
+- [k-d tree nearest-neighbour search](indexing/kd-tree-nearest-neighbour.md) — partition point data along coordinate axes and prune branches using distance lower bounds.
 
 ## Methods and analytical foundations
 
