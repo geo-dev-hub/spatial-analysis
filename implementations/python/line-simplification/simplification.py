@@ -13,9 +13,9 @@ Point = tuple[float, float]
 
 
 def _points(values: Sequence[Sequence[float]]) -> list[Point]:
-    result = [(float(p[0]), float(p[1])) for p in values]
     if any(len(p) != 2 for p in values):
         raise ValueError("Each point must contain exactly two coordinates")
+    result = [(float(p[0]), float(p[1])) for p in values]
     if any(not isfinite(x) or not isfinite(y) for x, y in result):
         raise ValueError("Coordinates must be finite")
     return result
