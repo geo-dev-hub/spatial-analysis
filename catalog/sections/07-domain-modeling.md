@@ -4,7 +4,7 @@
 - **Source pages:** 12–14
 - **Source transcription:** [pages 11–15](../../source-inventory/pages-11-15.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Weighted linear combination](../../methods/weighted-linear-combination.md) — researched decision-rule lesson with a tested Python aggregation baseline and interactive suitability lab
 
 The source organises methods by application field. The same statistical, geometric, network and machine-learning methods can appear in several domains. Keep domain context, input data, scale and validation requirements visible rather than treating each application label as a separate algorithm.
 
@@ -115,6 +115,10 @@ The source organises methods by application field. The same statistical, geometr
 |---|---|---:|
 | Spatial transcriptomics (SpatialDE, cell neighborhood analysis), histopathology point patterns, materials grain boundary analysis | Spatial omics / microscopy and materials analysis | 14 |
 | Astronomy: two-point correlation, friends-of-friends, HEALPix cross-matching; microscopy particle tracking and Voronoi analysis | Spatial statistics / graph clustering / spherical indexing / particle tracking | 14 |
+
+## Current reviewed coverage
+
+The weighted linear combination entry now has a canonical method record, a tested numerical aggregation implementation and an interactive synthetic suitability lab. This covers only the weighted-sum decision rule. The other named methods in the multi-criteria group remain separate verification and research tasks.
 
 ## Decisions for the next pass
 
