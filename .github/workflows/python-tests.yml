@@ -60,6 +60,9 @@ jobs:
           - example: ordinary-kriging
             directory: implementations/python/ordinary-kriging
             pythonpath: ""
+          - example: d8-flow-direction
+            directory: implementations/python/d8-flow-direction
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -133,3 +136,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/inverse-distance-weighting-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/empirical-semivariogram-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ordinary-kriging-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/d8-flow-direction-lab.ipynb
