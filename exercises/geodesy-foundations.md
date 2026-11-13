@@ -53,3 +53,13 @@ Use the GDAL geotransform convention in the lesson.
 Write a short georeferencing report that records the source and target CRS, transformation method, parameter convention, units, control-point source, residual vectors, independent checkpoints, pixel convention, area of use and limitations.
 
 Do not report fitting RMSE as independent positional accuracy. Use independent checkpoints for that claim.
+
+## 7. Choose a data delivery architecture
+
+For a city-scale building layer, a national elevation mosaic, a monthly climate cube and a live editable road network, choose candidate storage and delivery formats.
+
+- State the dominant query pattern for each dataset.
+- Identify which format or standard describes the data encoding and which describes discovery metadata.
+- Explain when a database is preferable to a static file.
+- Describe how derived tiles and previews remain traceable to authoritative data.
+- Propose one representative benchmark query for each format choice.
