@@ -8,7 +8,7 @@ It is easy to confuse polygon clipping with every kind of polygon overlay. They 
 
 Imagine a parcel boundary extending beyond a project area. We want the part of the parcel inside the project boundary. That is an intersection:
 
-[
+$
 P_{\mathrm{out}} = P_{\mathrm{subject}} \cap P_{\mathrm{clip}}
 ]
 
@@ -26,18 +26,18 @@ Sutherland–Hodgman processes the subject polygon against the clipping polygon 
 
 For each subject edge from (S) to (E), classify the endpoints relative to the current clipping boundary:
 
-| Start (S) | End (E) | Output |
+| Start ($S$) | End ($E$) | Output |
 |---|---|---|
-| inside | inside | (E) |
+| inside | inside | $E$ |
 | inside | outside | intersection |
-| outside | inside | intersection, then (E) |
+| outside | inside | intersection, then $E$ |
 | outside | outside | nothing |
 
 The algorithm is elegant because each stage is local and can be implemented as a pipeline. Its classical use assumes a convex clipping window. Do not present it as a general solution for arbitrary polygon–polygon Boolean overlay.
 
 ### Boundary intersection
 
-For a subject segment (S + t(E-S)) and a clipping line, the crossing parameter (t) can be found by solving the line equation. A robust implementation must still define how points exactly on the clipping boundary are classified and how parallel or coincident edges are handled.
+For a subject segment $S + t(E-S)$ and a clipping line, the crossing parameter $t$ can be found by solving the line equation. A robust implementation must still define how points exactly on the clipping boundary are classified and how parallel or coincident edges are handled.
 
 ## Other algorithm families
 
