@@ -1,6 +1,6 @@
 # Raster hydrology foundations: from elevation to contributing area
 
-**Status:** D8 flow direction, accumulation and single-outlet watershed delineation now have tested teaching implementations; terrain conditioning, stream extraction and alternative flow-routing methods remain open.
+**Status:** D8 flow direction, accumulation, single-outlet watershed delineation, and Strahler/Shreve stream ordering now have tested teaching implementations; terrain conditioning, channel extraction and alternative flow-routing methods remain open.
 
 ## The workflow
 
@@ -49,4 +49,4 @@ These methods produce different contributing-area patterns. They are not just di
 
 ## What remains
 
-The wider source section includes priority-flood depression filling, sink breaching, D-infinity, multiple-flow direction, flow accumulation, stream ordering, watershed and basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
+The wider source section also includes priority-flood depression filling, sink breaching, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
