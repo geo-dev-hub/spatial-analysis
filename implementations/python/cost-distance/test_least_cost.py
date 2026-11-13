@@ -11,7 +11,7 @@ def test_uniform_cost_surface_matches_euclidean_path_lengths():
 
 def test_rectangular_cell_spacing_changes_diagonal_cost():
     result=least_cost_distance(np.ones((3,3)),[(1,1)],cell_size_x=2,cell_size_y=1)
-    np.testing.assert_allclose(result[0,2],4)
+    np.testing.assert_allclose(result[0,2],np.hypot(2,1))
     np.testing.assert_allclose(result[0,0],np.hypot(2,1))
 
 def test_high_cost_cells_are_avoided_when_detour_is_cheaper():
