@@ -212,6 +212,9 @@ jobs:
           - example: nonseparable-space-time-covariance
             directory: implementations/python/nonseparable-space-time-covariance
             pythonpath: ""
+          - example: weights-of-evidence
+            directory: implementations/python/weights-of-evidence
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -319,6 +322,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spherical-covariance-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/graph-spectral-covariance-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/nonseparable-space-time-covariance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weights-of-evidence-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
