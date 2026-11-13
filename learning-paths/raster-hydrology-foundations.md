@@ -28,7 +28,11 @@ Accumulation includes the cell itself. It is not discharge unless the input cont
 
 Read [Single-outlet watershed delineation](../algorithms/raster/watershed-delineation.md) and run the [watershed notebook](../notebooks/watershed-delineation-lab.ipynb). It traces upstream cells whose D8 paths reach a selected outlet. The outlet cell is explicit; automatic snapping is deliberately not hidden inside the operation.
 
-## 4. Compare routing assumptions
+## 4. Describe the channel network
+
+Read [Stream ordering](../algorithms/raster/stream-order.md) and run the [stream-order notebook](../notebooks/stream-order-lab.ipynb). It compares Strahler order, which increases only when equal highest-order tributaries meet, with Shreve magnitude, which sums headwater contributions. The stream mask is an explicit input; channel extraction and threshold selection are separate modelling decisions.
+
+## 5. Compare routing assumptions
 
 D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuous direction and distributes flow across adjacent downslope cells. Multiple-flow-direction methods distribute flow among several downslope neighbours according to their gradients.
 
