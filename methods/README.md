@@ -7,6 +7,7 @@ This directory holds those foundational methods separately from individual algor
 ## Available foundations
 
 - [Spatial weights matrix](spatial-weights-matrix.md) — define which spatial units are neighbours, how strongly they are connected and how those relationships are transformed.
+- [Analytic Hierarchy Process](analytic-hierarchy-process.md) — derive relative criterion priorities from reciprocal pairwise judgements and inspect consistency diagnostics.
 - [Weighted linear combination](weighted-linear-combination.md) — combine standardised spatial criteria using relative weights, while keeping hard constraints and sensitivity analysis explicit.
 
 ## How to use these records
