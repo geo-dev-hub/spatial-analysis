@@ -25,8 +25,8 @@ def two_step_fca(
 
     if costs.ndim != 2 or costs.shape[0] == 0 or costs.shape[1] == 0:
         raise ValueError("impedance must be a non-empty 2D matrix")
-    if not np.isfinite(costs).all() or (costs < 0).any():
-        raise ValueError("impedance values must be finite and non-negative")
+    if np.isnan(costs).any() or np.isneginf(costs).any() or (costs < 0).any():
+        raise ValueError("impedance values must be non-negative and cannot be NaN or negative infinity")
     if supply.shape != (costs.shape[1],):
         raise ValueError("provider_supply must have one value per provider column")
     if demand.shape != (costs.shape[0],):
