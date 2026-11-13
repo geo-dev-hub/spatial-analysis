@@ -65,7 +65,12 @@ def fuzzy_overlay(
             if not np.isfinite(gamma) or not 0.0 <= gamma <= 1.0:
                 raise ValueError("gamma must be finite and in [0, 1]")
             product = np.prod(stack, axis=0)
-            combined = np.power(summed, gamma) * np.power(product, 1.0 - gamma)
+            if gamma == 0.0:
+                combined = product
+            elif gamma == 1.0:
+                combined = summed
+            else:
+                combined = np.power(summed, gamma) * np.power(product, 1.0 - gamma)
     else:
         raise ValueError("unknown fuzzy overlay operator")
     result = np.full(stack.shape[1:], np.nan, dtype=np.float64)
