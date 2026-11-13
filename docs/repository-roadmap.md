@@ -35,7 +35,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 
 - [x] Geometry starter set: point in polygon, segment intersection, polygon intersection and Bentley–Ottmann.
 - [x] Runnable Python examples and tests for the four topics.
-- [x] Step-by-step implementation walkthroughs for all ten Python examples.
+- [x] Step-by-step implementation walkthroughs for all eleven Python examples.
 - [x] Complete the geometry foundations path as a coherent four-lesson sequence.
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
@@ -65,7 +65,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
 - [x] Add an interactive IDW lab with a movable target, power control and neighbour selection.
 - [x] Add an interactive empirical semivariogram lab with adjustable lag bins and maximum distance.
-- [x] Add stable cell IDs to all twelve notebooks and repair missing required code-cell outputs.
+- [x] Add stable cell IDs to all thirteen notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
