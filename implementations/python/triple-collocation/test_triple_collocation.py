@@ -27,11 +27,14 @@ def test_uses_one_common_complete_case_sample():
 
 
 def test_negative_estimates_are_not_clipped():
-    # Three valid arrays with a deliberately inconsistent covariance structure.
-    x = np.array([0., 1., 2., 3., 4., 5.])
-    y = np.array([0., 1., 2., 3., 4., 5.])
-    z = np.array([5., 0., 4., 1., 3., 2.])
-    result = triple_collocation(x, y, z)
+    rng = np.random.default_rng(7)
+    target_covariance = np.array([
+        [1.0, 0.5, 0.5],
+        [0.5, 1.0, 0.1],
+        [0.5, 0.1, 1.0],
+    ])
+    sample = rng.multivariate_normal(np.zeros(3), target_covariance, size=20_000)
+    result = triple_collocation(sample[:, 0], sample[:, 1], sample[:, 2])
     assert result.error_variances[0] < 0
 
 
