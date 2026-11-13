@@ -10,7 +10,7 @@ Imagine a parcel boundary extending beyond a project area. We want the part of t
 
 $
 P_{\mathrm{out}} = P_{\mathrm{subject}} \cap P_{\mathrm{clip}}
-]
+$
 
 The result may be empty, one polygon, or multiple polygon components. A clipping routine that assumes a single connected output may not represent every valid case.
 
@@ -24,7 +24,7 @@ This matters because some classic algorithms clip against a sequence of half-pla
 
 Sutherland–Hodgman processes the subject polygon against the clipping polygon one edge at a time. Each clipping edge defines an inside half-plane. The output vertex list from one stage becomes the input to the next.
 
-For each subject edge from (S) to (E), classify the endpoints relative to the current clipping boundary:
+For each subject edge from $S$ to $E$, classify the endpoints relative to the current clipping boundary:
 
 | Start ($S$) | End ($E$) | Output |
 |---|---|---|
