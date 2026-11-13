@@ -8,7 +8,7 @@ from coverage_simplification import simplify_coverage
 def adjacent_coverage():
     # The shared boundary is deliberately wavy and represented by the same
     # coordinate sequence in opposite directions by the two polygons.
-    shared = [(5, 0), (5.2, 2), (4.8, 4), (5.1, 6), (5, 8)]
+    shared = [(5, 0), (6, 1), (4, 2), (6, 3), (4, 4), (6, 5), (4, 6), (6, 7), (5, 8)]
     left = Polygon([(0, 0), *shared, (0, 8), (0, 0)])
     right = Polygon([(5, 0), (10, 0), (10, 8), (5, 8), *reversed(shared[:-1])])
     return [left, right]
@@ -16,14 +16,13 @@ def adjacent_coverage():
 
 def test_simplification_keeps_coverage_valid():
     source = adjacent_coverage()
-    result = simplify_coverage(source, 0.5)
+    result = simplify_coverage(source, 1.5)
     assert len(result) == 2
-    assert coverage_is_valid(result)
-
+    assert coverage_is_valid(result)\n    assert len(result[0].exterior.coords) < len(source[0].exterior.coords)\n    assert len(result[1].exterior.coords) < len(source[1].exterior.coords)\n
 
 def test_simplification_preserves_total_covered_area_reasonably():
     source = adjacent_coverage()
-    result = simplify_coverage(source, 0.25)
+    result = simplify_coverage(source, 1.5)
     assert sum(g.area for g in result) == pytest.approx(
         sum(g.area for g in source), abs=1.0
     )
