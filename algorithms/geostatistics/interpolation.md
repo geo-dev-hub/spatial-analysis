@@ -80,7 +80,7 @@ The variance is conditional on the selected variogram and its parameters. It doe
 
 The semivariogram describes how expected squared differences change with separation. The nugget, partial sill, range and anisotropy determine different aspects of the spatial dependence. This baseline intentionally fixes a zero nugget and isotropic exponential form so the linear system can be studied without hiding the model behind a fitting routine.
 
-Before applying kriging, inspect an empirical variogram, check whether the stationarity assumption is plausible, assess directional structure, and justify the model and parameters. Do not infer these from a single attractive map.
+The [implementation](../../implementations/python/geostatistics/README.md) also calculates a classical empirical semivariogram from distance bins, reporting mean pair distance, semivariance and pair count. Empty bins remain visible. This is an exploratory isotropic method-of-moments summary, not a variogram fit.\n\nBefore applying kriging, inspect an empirical variogram, check whether the stationarity assumption is plausible, assess directional structure, and justify the model and parameters. Do not infer these from a single attractive map.
 
 ## Coordinate reference system and validation
 
@@ -98,7 +98,7 @@ The [Python implementation](../../implementations/python/geostatistics/README.md
 2. Add a distant high-valued sample. Compare unrestricted IDW with a finite search radius.
 3. Keep the observations fixed and change the kriging range scale. Explain how the weights and variance change.
 4. Move the target toward an observed sample. Plot prediction and kriging variance along the path.
-5. Design a spatial-block cross-validation split. Explain why a random split answers a different generalisation question.
+5. Plot the empirical semivariogram and annotate pair counts. Which lag bins are poorly supported?\n6. Design a spatial-block cross-validation split. Explain why a random split answers a different generalisation question.
 
 ## References
 
