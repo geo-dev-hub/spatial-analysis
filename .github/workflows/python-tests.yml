@@ -57,6 +57,9 @@ jobs:
           - example: empirical-semivariogram
             directory: implementations/python/empirical-semivariogram
             pythonpath: ""
+          - example: ordinary-kriging
+            directory: implementations/python/ordinary-kriging
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -129,3 +132,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geometry-foundations-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/inverse-distance-weighting-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/empirical-semivariogram-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ordinary-kriging-lab.ipynb
