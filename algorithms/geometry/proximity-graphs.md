@@ -84,7 +84,7 @@ The companion package implements small-data baselines for Gabriel, RNG, the lune
 - [Intern walkthrough](../../implementations/python/proximity-graphs/implementation-walkthrough.md)
 - [Tests](../../implementations/python/proximity-graphs/test_proximity_graphs.py)
 
-The beta-skeleton implementation is specifically the lune-based family for beta in [1,2], with beta=1 matching the open-disk Gabriel rule and beta=2 matching the open-lune RNG rule. The Yao implementation uses equal-angle cones, nearest-neighbour selection, input-index tie-breaking and undirected union symmetrisation. These conventions are part of the API; other beta-skeleton or Yao variants may produce different graphs.
+The beta-skeleton implementation is specifically the lune-based family for beta in [1,2], with beta=1 matching the open-disk Gabriel rule and beta=2 matching the open-lune RNG rule. For intermediate beta values, a small relative floating-point tolerance treats near-boundary points as ties; the scale and tolerance must be considered when using coordinates with very different magnitudes. The Yao implementation uses equal-angle cones, nearest-neighbour selection, input-index tie-breaking and undirected union symmetrisation. These conventions are part of the API; other beta-skeleton or Yao variants may produce different graphs.
 
 ## Try it
 
