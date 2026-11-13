@@ -25,3 +25,5 @@ def test_shape_slope_and_floor_contracts():
         topographic_wetness_index([[1]],[[90]])
     with pytest.raises(ValueError,match="slope_floor"):
         topographic_wetness_index([[1]],[[10]],slope_floor_degrees=0)
+    with pytest.raises(ValueError,match="slope_floor"):
+        topographic_wetness_index([[1]],[[10]],slope_floor_degrees="flat")
