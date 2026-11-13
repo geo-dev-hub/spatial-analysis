@@ -12,6 +12,10 @@ A basic raster drainage workflow has several distinct stages. Do not collapse th
 4. Accumulate upstream contributions.
 5. Extract a channel network or delineate a watershed only after specifying the relevant thresholds and outlet.
 
+## Before flow direction: condition the DEM
+
+Read [Priority-Flood depression filling](../algorithms/raster/priority-flood.md) and run the [Priority-Flood notebook](../notebooks/priority-flood-lab.ipynb). It raises depressions to their lowest spill level and returns a separate fill-depth layer. The example uses valid raster-edge and NoData-adjacent cells as outlets. Filling is not breaching, and it does not resolve the flats that may remain.
+
 ## 1. Understand D8 direction
 
 Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [direction notebook](../notebooks/d8-flow-direction-lab.ipynb). It chooses the steepest positive slope among eight neighbours, with rectangular cell spacing.
