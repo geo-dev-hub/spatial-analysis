@@ -36,6 +36,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) and [spatial clustering](learning-paths/spatial-clustering-foundations.md) |
 | Estimating values between observations | [Spatial interpolation foundations](learning-paths/geostatistics-foundations.md) |
 | Working with raster distances | [Raster distance foundations](learning-paths/raster-distance-foundations.md) |
+| Understanding how terrain drains | [Raster hydrology foundations](learning-paths/raster-hydrology-foundations.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
@@ -99,6 +100,8 @@ You can read the individual lessons or open their [interactive notebooks](notebo
 
 The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons, [coverage-aware polygon simplification](algorithms/geometry/coverage-simplification.md), [precision models and snap rounding](algorithms/geometry/precision-models.md), an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
 
-A native [Clipper2 offsetting example](implementations/clipper2-csharp/README.md) complements the Shapely/GEOS route. A [coverage and advanced-routing lab](notebooks/coverage-simplification-routing-lab.ipynb) lets you inspect shared-edge simplification and compare directed shortest-path searches.\n\nThe weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
+A native [Clipper2 offsetting example](implementations/clipper2-csharp/README.md) complements the Shapely/GEOS route. A [coverage and advanced-routing lab](notebooks/coverage-simplification-routing-lab.ipynb) lets you inspect shared-edge simplification and compare directed shortest-path searches.
+
+The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
 **Current stage:** the first geometry sequence, a spatial-autocorrelation learning path, and foundational lessons in spatial indexing, spatial joins and spatial weights are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
