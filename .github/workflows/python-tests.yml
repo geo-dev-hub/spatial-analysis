@@ -16,6 +16,8 @@ on:
     paths:
       - "implementations/python/**"
       - "notebooks/**"
+      - "scripts/**"
+      - "**.md"
       - ".github/workflows/python-tests.yml"
   workflow_dispatch:
 
