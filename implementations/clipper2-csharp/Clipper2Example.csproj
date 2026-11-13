@@ -6,6 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Clipper2" Version="1.5.4" />
+    <PackageReference Include="Clipper2" Version="2.0.0" />
   </ItemGroup>
 </Project>
