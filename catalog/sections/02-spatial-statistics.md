@@ -4,7 +4,7 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Source-derived records:** [DBSCAN](../../algorithms/statistics/dbscan.md); [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
+- **Source-derived records:** [Planar Gaussian KDE](../../algorithms/statistics/point-pattern-kde.md); [DBSCAN](../../algorithms/statistics/dbscan.md); [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
 - **Supplementary companions:** [Local Geary](../../algorithms/statistics/local-geary.md); [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md)
 
 The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Local Geary](../../algorithms/statistics/local-geary.md) and [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lessons are supplementary companions added during research; neither is a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
@@ -33,6 +33,10 @@ The [DBSCAN lesson](../../algorithms/statistics/dbscan.md) introduces core, bord
 | Cluster tests: Besag-Newell, Tango, SaTScan scan statistics, elliptic and flexible shapes (FleXScan) | Cluster-detection tests / scan statistics | 3 |
 | Kernel density estimation: adaptive and variable bandwidth, Silverman and cross-validated bandwidth selection | Density estimation / bandwidth-selection methods | 3 |
 | Network K-function, network KDE (NKDE), SANET methods | Network-constrained point-pattern methods / software-method families | 3 |
+
+## First audited point-pattern lesson
+
+The [planar Gaussian KDE lesson](../../algorithms/statistics/point-pattern-kde.md) explains the fixed-bandwidth Gaussian kernel, intensity units, projected-coordinate requirement and uncorrected study-window edge effect. A tested NumPy implementation and interactive notebook compare bandwidths and weighted events. Ripley's K/L, nearest-neighbour inference, adaptive bandwidths and network KDE remain open.
 
 ## Clustering and regionalization
 
