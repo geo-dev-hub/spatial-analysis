@@ -20,7 +20,11 @@ Compare a narrow and broad bandwidth. Explain which spatial scales are smoothed 
 
 The first implementation does not apply edge correction. Kernels near the study boundary extend beyond the observed window, which can bias the estimated intensity downward. The window and its boundary treatment are part of the model.
 
-## 4. Move from description to inference
+## 4. Compare nearest-neighbour spacing
+
+Read [Clark–Evans nearest-neighbour index](../algorithms/statistics/clark-evans.md) and run the [Clark–Evans notebook](../notebooks/clark-evans-lab.ipynb). It compares the observed mean nearest-neighbour distance with a homogeneous Poisson reference. The lesson is deliberately descriptive: edge correction and a significance test remain separate work.
+
+## 5. Move from description to inference
 
 The wider point-pattern section includes quadrat analysis, nearest-neighbour statistics, Ripley's K/L, G/F/J functions, pair correlation, stochastic point-process models and scan statistics. These answer different questions and require explicit null models and assumptions.
 
