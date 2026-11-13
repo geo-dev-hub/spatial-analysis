@@ -51,6 +51,9 @@ jobs:
           - example: spatial-join
             directory: implementations/python/spatial-join
             pythonpath: ""
+          - example: inverse-distance-weighting
+            directory: implementations/python/inverse-distance-weighting
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -121,3 +124,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/filter-refine-spatial-join-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-weights-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geometry-foundations-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/inverse-distance-weighting-lab.ipynb
