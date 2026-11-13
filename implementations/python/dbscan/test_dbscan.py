@@ -48,3 +48,13 @@ def test_dbscan_rejects_invalid_coordinates():
         dbscan([1, 2, 3], eps=1, min_samples=1)
     with pytest.raises(ValueError, match="finite"):
         dbscan([[0, 0], [np.nan, 1]], eps=1, min_samples=1)
+
+
+def test_ambiguous_border_point_is_assigned_to_first_expanded_cluster():
+    points = [
+        (0, 0), (0, 0.05), (0, -0.05),  # first core component
+        (0.1, 0),                       # border: reachable from both components
+        (0.2, 0), (0.2, 0.05), (0.2, -0.05),  # second core component
+    ]
+    labels = dbscan(points, eps=0.1, min_samples=4)
+    assert labels == [0, 0, 0, 0, 1, 1, 1]
