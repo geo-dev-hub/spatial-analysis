@@ -13,15 +13,15 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Overlay: buffer, clip, intersect, union, difference, dissolve, centroid, minimum bounding geometry | Operations / geometry processing | 1 | [Polygon intersection](../../algorithms/geometry/polygon-intersection.md) covers the intersection operation only |
+| Overlay: buffer, clip, intersect, union, difference, dissolve, centroid, minimum bounding geometry | Operations / geometry processing | 1 | [Polygon intersection](../../algorithms/geometry/polygon-intersection.md) covers the intersection operation; [overlay operations](../../algorithms/geometry/overlay-operations.md) is a draft overview of Boolean operations |
 | Hulls and tessellations: convex hull (Graham scan, Jarvis march, Quickhull), concave hull (alpha shapes), Voronoi (Fortune sweep), Delaunay (Bowyer-Watson, incremental, divide and conquer), constrained Delaunay, Ruppert refinement | Algorithm families / geometric structures | 1 | Not yet catalogued as individual records |
 | Point-in-polygon (ray casting, winding number) | Geometric predicate / point-location methods | 1 | [Point in polygon](../../algorithms/geometry/point-in-polygon.md) |
 | Point location (slab method, trapezoid map) | Point-location algorithms / data structures | 1 | Not yet catalogued as individual records |
 | Segment intersection (Bentley-Ottmann) | Geometric predicate / all-segment reporting algorithm | 1 | [Segment intersection](../../algorithms/geometry/segment-intersection.md); [Bentley–Ottmann](../../algorithms/geometry/bentley-ottmann.md) |
-| Polygon clipping: Sutherland-Hodgman, Weiler-Atherton, Vatti, Greiner-Hormann | Polygon clipping algorithms | 1 | Not yet catalogued as individual records |
+| Polygon clipping: Sutherland-Hodgman, Weiler-Atherton, Vatti, Greiner-Hormann | Polygon clipping algorithms | 1 | [Polygon clipping](../../algorithms/geometry/polygon-clipping.md) is a comparative draft; individual implementations remain unverified |
 | Offsetting (Clipper) | Geometry operation / software implementation name in source | 1 | Needs name and scope verification |
 | Cascaded union | Geometry operation / implementation strategy | 1 | Not yet catalogued |
-| Self-intersection repair; validity checking | Geometry repair / validation operations | 1 | Not yet catalogued |
+| Self-intersection repair; validity checking | Geometry repair / validation operations | 1 | [Polygon validity](../../algorithms/geometry/polygon-validity.md) is a draft; repair methods need separate verification |
 | Simplification and generalization: Douglas-Peucker, Visvalingam, topology-preserving simplification, snap rounding | Generalisation algorithms / precision operation | 1 | Not yet catalogued as individual records |
 | Triangulation and decomposition: ear clipping, trapezoidal and convex decomposition, medial axis, straight skeleton, Minkowski sum | Algorithm families / geometric structures and operations | 1 | Not yet catalogued as individual records |
 | Distance and extent: Hausdorff and Fréchet distance, rotating calipers, smallest enclosing circle (Welzl), largest empty circle, pole of inaccessibility (polylabel), oriented minimum bounding rectangle | Metrics / geometric algorithms | 1 | Not yet catalogued as individual records |
@@ -75,5 +75,8 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 4. Add stable IDs only after scope is clear.
 5. Link prerequisites and related methods instead of forcing the section into a single sequence.
 6. Add examples, tests and visuals only when they materially help explain the method.
+7. Keep the new validity, clipping and overlay records in draft status until their edge cases, mathematical claims, implementation versions and rendered references have been reviewed.
+
+Related practice: [geometry overlay and validity exercises](../../exercises/geometry-overlay-and-validity.md).
 
 The source is broad by design. Do not force every operation, metric, model, data structure or software name into the category “algorithm.”
