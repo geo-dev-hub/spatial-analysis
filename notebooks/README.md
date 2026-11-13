@@ -4,6 +4,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
+- [Ordinary kriging](ordinary-kriging-lab.ipynb): compare spherical, exponential and Gaussian variograms, and inspect predictions beside their model-based variance.
+
 - [Empirical semivariogram](empirical-semivariogram-lab.ipynb): inspect pairwise differences, change lag bins and maximum distance, and see how pair counts affect the empirical curve.
 
 - [Inverse distance weighting](inverse-distance-weighting-lab.ipynb): change the target location, distance power and neighbourhood size to see how each choice changes an estimated surface.
@@ -37,6 +39,7 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 ### Open a lab in Google Colab
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
+- [Ordinary kriging](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/ordinary-kriging-lab.ipynb)
 - [Empirical semivariogram](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/empirical-semivariogram-lab.ipynb)
 - [Inverse distance weighting](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/inverse-distance-weighting-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
@@ -49,6 +52,6 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow also executes all twelve notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
+The repository workflow also executes all thirteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
