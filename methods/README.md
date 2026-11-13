@@ -6,6 +6,8 @@ This directory holds those foundational methods separately from individual algor
 
 ## Available foundations
 
+- [Spatial data formats and delivery](spatial-data-formats.md) — choose raster, array, vector, catalogue and tile formats by workload and access pattern.
+
 - [Affine georeferencing](affine-georeferencing.md) — estimate a six-parameter 2D transformation from ground control points and inspect residuals.
 
 - [Helmert seven-parameter transformation](helmert-7-parameter.md) — transform geocentric XYZ coordinates using the explicitly named Position Vector rotation convention.
