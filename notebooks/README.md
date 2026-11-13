@@ -50,6 +50,10 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Contrastive learning lab](contrastive-info-nce-lab.ipynb): inspect paired embeddings, cosine similarity, temperature and negative samples.
 - [CRS transformation lab](crs-transformation-lab.ipynb): transform longitude/latitude to Web Mercator and UTM with explicit axis order.
 
+### Geostatistics and covariance
+
+- [Covariance functions lab](covariance-functions-lab.ipynb): compare five Euclidean covariance shapes, inspect matrix eigenvalues, vary the range and examine duplicate sites.
+
 ### Geostatistics and interpolation
 
 - [Spatial interpolation lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.
@@ -104,6 +108,6 @@ The links below point to notebooks already available on the default branch. The 
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all forty notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all forty-four notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
