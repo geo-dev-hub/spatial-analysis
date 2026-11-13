@@ -113,6 +113,9 @@ jobs:
           - example: dbscan
             directory: implementations/python/dbscan
             pythonpath: ""
+          - example: two-step-fca
+            directory: implementations/python/two-step-fca
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -194,6 +197,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ndvi-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-median-facility-location-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/dbscan-clustering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/two-step-fca-accessibility-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
