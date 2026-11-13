@@ -19,35 +19,35 @@ def test_two_first_order_streams_form_second_order_confluence():
 
 
 def test_unequal_order_confluence_keeps_maximum_strahler_order():
-    # Two first-order tributaries meet, then their second-order stream meets a
-    # separate first-order tributary: the downstream order remains two.
+    # Two first-order tributaries form order two; that stream meets one
+    # first-order tributary, so the downstream order remains two.
     directions = np.array([
-        [-1, 4, -1, -1, -1],
-        [-1, 1, 1, 4, -1],
-        [-1, -1, -1, 64, -1],
+        [-1, -1, 4, -1, -1],
+        [-1, 1, 1, 1, 0],
         [-1, -1, -1, 64, -1],
     ])
     mask = directions != -1
     order, magnitude = stream_order(directions, mask)
-    assert order[1, 1] == 2
+    assert order[1, 2] == 2
     assert order[1, 3] == 2
     assert magnitude[1, 3] == 3
 
 
 def test_two_equal_second_order_tributaries_create_third_order():
-    # Four headwaters form two second-order tributaries, which meet downstream.
+    # Two separate pairs of headwaters form second-order tributaries,
+    # which then meet at a third-order confluence.
     directions = np.array([
-        [-1, 4, -1, -1, -1],
-        [-1, 1, -1, 4, -1],
-        [-1, -1, 1, 1, -1],
-        [-1, -1, -1, 64, -1],
+        [-1, -1, -1, 4, -1],
+        [-1, 4, -1, 2, 16],
+        [1, 1, 1, -1, -1],
+        [-1, -1, 0, -1, -1],
     ])
-    # Build a deliberately simple stream network mask for the directed paths.
     mask = directions != -1
     order, magnitude = stream_order(directions, mask)
-    assert order[1, 1] == 2
-    assert order[2, 3] == 2
-    assert order[3, 3] == 2
+    assert order[2, 1] == 2
+    assert order[1, 3] == 2
+    assert order[2, 2] == 3
+    assert magnitude[2, 2] == 4
 
 
 def test_nonstream_cells_are_zero_and_invalid_cells_are_minus_one():
