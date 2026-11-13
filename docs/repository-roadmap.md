@@ -52,7 +52,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add line simplification dossiers and tested open-polyline baselines for Douglas–Peucker and Visvalingam–Whyatt.
 - [x] Add an offsetting dossier and a tested Shapely/GEOS wrapper, explicitly distinguished from Clipper2.
 - [x] Add proximity graph definitions and tested small-input baselines for Gabriel, relative neighbourhood and Euclidean MST.
-- [x] Add a planar point-location dossier for slab and trapezoidal-map structures; implementation remains open.
+- [x] Add a planar point-location dossier and a tested static slab locator for pairwise interior-disjoint polygon faces; randomized trapezoidal-map construction remains open.
 - [x] Add shortest-path family research and tested Dijkstra/A* baselines.
 - [ ] Implement topology-preserving polygon simplification, snap rounding, Clipper2-specific offsets, Yao and beta-skeleton variants, and a true trapezoidal-map locator.
 - [ ] Extend network routing with bidirectional Dijkstra, ALT, contraction hierarchies, turn restrictions, time-dependent routing and transit algorithms.
