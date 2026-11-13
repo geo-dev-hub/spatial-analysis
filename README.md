@@ -40,6 +40,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Understanding how terrain drains | [Raster hydrology foundations](learning-paths/raster-hydrology-foundations.md) |
 | Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
 | Summarizing raster values by zone | [Zonal statistics](algorithms/raster/zonal-statistics.md) |
+| Labeling connected raster regions | [Connected-component labeling](algorithms/raster/connected-components.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
 | Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md) and [weighted linear combination](methods/weighted-linear-combination.md) |
