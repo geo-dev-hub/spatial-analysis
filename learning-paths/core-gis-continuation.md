@@ -46,4 +46,4 @@ Complete the [Core GIS continuation exercises](../exercises/core-gis-continuatio
 
 ## What this path does not claim
 
-The path now includes a tested coverage-aware simplification wrapper and a native Clipper2 offset example, plus bidirectional Dijkstra and directed ALT baselines. A dedicated snap-rounding noder, efficient Delaunay-based Yao/beta-skeleton construction, randomized trapezoidal-map locator, contraction hierarchies, turn-aware routing and time-dependent routing remain open.
+The path now includes tested coverage-aware simplification and fixed-grid precision wrappers, a native Clipper2 offset example, bidirectional Dijkstra, directed ALT, Yen's k-shortest loopless paths, edge-based turn restrictions and FIFO time-dependent earliest-arrival search. A dedicated snap-rounding noder, efficient Delaunay-based Yao/beta-skeleton construction, randomized trapezoidal-map locator, contraction hierarchies, non-FIFO routing and transit routing remain open.
