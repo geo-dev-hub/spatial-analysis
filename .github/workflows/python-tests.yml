@@ -95,6 +95,9 @@ jobs:
           - example: precision-grid
             directory: implementations/python/precision-grid
             pythonpath: ""
+          - example: road-routing
+            directory: implementations/python/road-routing
+            pythonpath: ""
 
     steps:
       - name: Check out repository
