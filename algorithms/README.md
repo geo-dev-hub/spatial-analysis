@@ -20,7 +20,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
 - [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps, with a tested restricted static slab locator.
 
-## Networks and routing
+## Geostatistics\n\n- [Spatial interpolation](geostatistics/interpolation.md) — compare inverse-distance weighting with ordinary kriging, a variogram model and conditional prediction variance.\n\n## Networks and routing
 
 - [Shortest paths](networks/shortest-paths.md) — understand graph cost models and shortest-path families, with tested Dijkstra, A*, bidirectional Dijkstra and ALT baselines.
 - [Turn-aware and time-dependent routing](networks/turn-aware-time-dependent-routing.md) — model prohibited turns, turn penalties and FIFO travel-time functions, with tested edge-based and earliest-arrival examples.
