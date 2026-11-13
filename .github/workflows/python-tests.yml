@@ -167,6 +167,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-hull-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/voronoi-delaunay-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/core-gis-algorithms-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/coverage-simplification-routing-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
