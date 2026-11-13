@@ -12,7 +12,7 @@ Run the [shortest-path package](../implementations/python/shortest-paths/README.
 
 ## 3. Add road-network constraints
 
-Extend the model with one-way streets, access rules, turn penalties and turn restrictions. Decide whether a node-based graph is sufficient or whether the search state must include the incoming edge.
+Study [turn-aware and time-dependent routing](../algorithms/networks/turn-aware-time-dependent-routing.md). Run the [edge-based and FIFO time-dependent examples](../implementations/python/road-routing/README.md). Extend the model with one-way streets, access rules, turn penalties and turn restrictions. Decide whether a node-based graph is sufficient or whether the search state must include the incoming edge.
 
 ## 4. Scale repeated queries
 
