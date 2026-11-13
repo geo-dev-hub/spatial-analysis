@@ -3,8 +3,8 @@
 - **Original source section:** 22
 - **Source pages:** 45–47
 - **Source transcription:** [pages 41–47](../../source-inventory/pages-41-47.md)
-- **Review state:** intake extracted; source says names are from memory and mostly narrower variants or supporting machinery
-- **Current canonical records:** none yet
+- **Review state:** intake extracted; covariance foundation researched and scoped; remaining entries require item-level verification
+- **Current canonical records:** [Stationary covariance functions](../../methods/stationary-covariance-functions.md); [tested Euclidean covariance baseline](../../implementations/python/covariance-functions/README.md); [interactive lab](../../notebooks/covariance-functions-lab.ipynb)
 
 **Source caution:** the compendium says these are memory-based and mostly narrower variants or supporting machinery. Verify exact names, software versions and mathematical conditions before creating canonical records.
 
@@ -18,6 +18,8 @@
 | Probabilistic programming: Stan, NIMBLE, PyMC, INLA-style nested approximations | Probabilistic programming systems / inference frameworks | 45 |
 
 ## Covariance functions and basis expansions
+
+The first canonical record now covers five Euclidean stationary covariance examples and the finite-matrix positive-semidefinite condition. It deliberately does not claim to implement spherical, network or space–time covariance. The source's remaining covariance entries and basis-expansion families still need separate verification and lessons.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
