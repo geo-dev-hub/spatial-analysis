@@ -51,7 +51,7 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Shortest path: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, bidirectional Dijkstra, ALT, contraction hierarchies, hub labeling, customizable route planning | Shortest-path algorithms / preprocessing and labelling methods | 2 | [Shortest paths](../../algorithms/networks/shortest-paths.md) surveys the family and links tested Dijkstra/A* baselines; advanced methods remain survey-only |
+| Shortest path: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, bidirectional Dijkstra, ALT, contraction hierarchies, hub labeling, customizable route planning | Shortest-path algorithms / preprocessing and labelling methods | 2 | [Shortest paths](../../algorithms/networks/shortest-paths.md) surveys the family and links tested Dijkstra, A*, Bellman–Ford and Floyd–Warshall baselines; bidirectional and preprocessing-based methods remain survey-only |
 | Service areas and isochrones, many-to-many routing, Yen's k-shortest paths, alternative routes | Network operations / routing algorithms | 2 | Not yet catalogued |
 | Centrality: betweenness, closeness, PageRank; space syntax (axial, integration); street network metrics (orientation, circuity, intersection density) | Graph metrics / spatial network measures | 2 | Not yet catalogued |
 | Community detection: Louvain, Leiden, Infomap, label propagation; partitioning: Kernighan-Lin, spectral, METIS | Graph clustering / partitioning algorithms and software | 2 | Not yet catalogued |
