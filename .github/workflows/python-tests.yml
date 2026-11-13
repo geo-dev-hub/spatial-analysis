@@ -176,6 +176,9 @@ jobs:
           - example: info-nce
             directory: implementations/python/info-nce
             pythonpath: ""
+          - example: spatial-cross-validation
+            directory: implementations/python/spatial-cross-validation
+            pythonpath: ""
           - example: crs-transform
             directory: implementations/python/crs-transform
             pythonpath: ""
