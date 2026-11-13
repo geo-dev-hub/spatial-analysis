@@ -35,7 +35,7 @@ $$
 T(n)=O(n),\qquad S(n)=O(n)
 $$
 
-## Boundary and NoData policy
+## Algorithm at a glance\n\n~~~mermaid\nflowchart TD\n  A[Build downstream links and indegrees] --> B[Queue valid cells with indegree zero]\n  B --> C[Pop an upstream-ready cell]\n  C --> D[Add its accumulation to downstream cell]\n  D --> E[Decrease downstream indegree]\n  E --> F{Indegree is zero?}\n  F -- Yes --> G[Queue downstream cell]\n  F -- No --> H[Continue]\n  G --> H\n  H --> I{Queue empty?}\n  I -- No --> C\n  I -- Yes --> J[Check processed cell count]\n  J --> K[Return accumulation or report cycle]\n~~~\n\n## Boundary and NoData policy
 
 The [Python implementation](../../implementations/python/d8-flow-accumulation/README.md) uses the same ESRI power-of-two D8 codes as the direction lesson. Code 0 is a valid terminal cell; -1 marks invalid/NoData.
 
