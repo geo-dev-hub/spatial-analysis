@@ -8,9 +8,9 @@ It is easy to confuse polygon clipping with every kind of polygon overlay. They 
 
 Imagine a parcel boundary extending beyond a project area. We want the part of the parcel inside the project boundary. That is an intersection:
 
-$
+$$
 P_{\mathrm{out}} = P_{\mathrm{subject}} \cap P_{\mathrm{clip}}
-$
+$$
 
 The result may be empty, one polygon, or multiple polygon components. A clipping routine that assumes a single connected output may not represent every valid case.
 
