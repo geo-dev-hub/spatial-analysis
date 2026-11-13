@@ -16,7 +16,8 @@ def test_douglas_peucker_retains_peak_above_tolerance():
 
 def test_douglas_peucker_uses_distance_to_finite_segment():
     line = [(0, 0), (3, 0), (1, 0)]
-    assert douglas_peucker(line, 0) == [line[0], line[-1]]
+    # The middle point lies beyond the endpoint segment, so its distance is 2.
+    assert douglas_peucker(line, 0) == line
 
 
 def test_douglas_peucker_handles_duplicate_endpoints():
