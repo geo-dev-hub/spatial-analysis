@@ -64,6 +64,7 @@ Each implementation should state:
 
 ### Decision support
 
+- [AHP priority weights](python/ahp-weights/README.md): principal-eigenvector priorities from a validated reciprocal comparison matrix, with consistency diagnostics, tests and an [intern walkthrough](python/ahp-weights/implementation-walkthrough.md).
 - [Weighted linear combination](python/weighted-overlay/README.md): combine aligned, standardised raster criteria with relative weights and an explicit eligibility mask; includes strict NoData handling, tests, an [intern walkthrough](python/weighted-overlay/implementation-walkthrough.md) and an [interactive suitability lab](../notebooks/weighted-linear-combination-lab.ipynb).
 
 ### Spatial statistics
