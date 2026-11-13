@@ -68,3 +68,68 @@ def astar(graph: Graph, start: Node, goal: Node,
           heuristic: Callable[[Node, Node], float]
           ) -> tuple[list[Node] | None, float]:
     return shortest_path(graph, start, goal, heuristic)
+
+
+def bellman_ford(graph: Graph, start: Node, goal: Node) -> tuple[list[Node] | None, float]:
+    """Shortest path with negative edges; rejects a reachable negative cycle."""
+    edges = []
+    nodes = set(graph)
+    for node, outgoing in graph.items():
+        for neighbor, weight in outgoing:
+            if not isfinite(weight):
+                raise ValueError("edge weights must be finite")
+            nodes.add(neighbor)
+            edges.append((node, neighbor, float(weight)))
+    distance = {node: float("inf") for node in nodes}
+    previous: dict[Node, Node] = {}
+    distance[start] = 0.0
+
+    for _ in range(max(0, len(nodes) - 1)):
+        changed = False
+        for u, v, weight in edges:
+            if distance[u] != float("inf") and distance[u] + weight < distance[v]:
+                distance[v] = distance[u] + weight
+                previous[v] = u
+                changed = True
+        if not changed:
+            break
+
+    for u, v, weight in edges:
+        if distance[u] != float("inf") and distance[u] + weight < distance[v]:
+            raise ValueError("reachable negative-weight cycle")
+
+    if distance.get(goal, float("inf")) == float("inf"):
+        return None, float("inf")
+    path = [goal]
+    while path[-1] != start:
+        path.append(previous[path[-1]])
+    path.reverse()
+    return path, distance[goal]
+
+
+def floyd_warshall(graph: Graph) -> dict[tuple[Node, Node], float]:
+    """Return all-pairs shortest distances; supports negative edges, not cycles."""
+    nodes = list(dict.fromkeys(
+        list(graph) + [neighbor for outgoing in graph.values() for neighbor, _ in outgoing]
+    ))
+    distance = {(u, v): (0.0 if u == v else float("inf"))
+                for u in nodes for v in nodes}
+    for u, outgoing in graph.items():
+        for v, weight in outgoing:
+            if not isfinite(weight):
+                raise ValueError("edge weights must be finite")
+            distance[(u, v)] = min(distance[(u, v)], float(weight))
+
+    for k in nodes:
+        for i in nodes:
+            dik = distance[(i, k)]
+            if dik == float("inf"):
+                continue
+            for j in nodes:
+                candidate = dik + distance[(k, j)]
+                if candidate < distance[(i, j)]:
+                    distance[(i, j)] = candidate
+
+    if any(distance[(node, node)] < 0 for node in nodes):
+        raise ValueError("negative-weight cycle detected")
+    return distance
