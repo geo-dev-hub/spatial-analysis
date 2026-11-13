@@ -1,6 +1,6 @@
 # Raster hydrology foundations: from elevation to contributing area
 
-**Status:** First D8 flow-direction and accumulation sequence published; terrain conditioning and watershed delineation remain open.
+**Status:** D8 flow direction, accumulation and single-outlet watershed delineation now have tested teaching implementations; terrain conditioning, stream extraction and alternative flow-routing methods remain open.
 
 ## The workflow
 
