@@ -48,6 +48,10 @@ def gaussian_kde(
     for value in (rows, cols):
         if isinstance(value, (bool, np.bool_)) or not isinstance(value, (int, np.integer)) or value <= 0:
             raise ValueError("grid_shape values must be positive integers")
+    try:
+        bandwidth = float(bandwidth)
+    except (TypeError, ValueError):
+        raise ValueError("bandwidth must be finite and greater than zero") from None
     if not isfinite(bandwidth) or bandwidth <= 0:
         raise ValueError("bandwidth must be finite and greater than zero")
     if isinstance(chunk_size, (bool, np.bool_)) or not isinstance(chunk_size, (int, np.integer)) or chunk_size <= 0:
