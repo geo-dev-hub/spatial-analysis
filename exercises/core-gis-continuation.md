@@ -30,6 +30,8 @@ Use a point set with a cluster, an outlier and a nearly cocircular group.
 - Check that RNG edges are contained in Gabriel edges for the selected convention.
 - Check the MST has n−1 edges for n>0.
 - Compare total edge length, degree distribution and connected components.
+- Evaluate the lune-based beta-skeleton at beta=1, 1.5 and 2; verify the endpoint equivalences with Gabriel and RNG.
+- Construct a Yao graph with four and eight cones; explain how orientation and symmetrisation affect the result.
 - Explain the strict open-region tie convention.
 
 ## 4. Design a point-location fixture
