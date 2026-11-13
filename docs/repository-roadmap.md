@@ -66,6 +66,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a first raster lesson for the Euclidean distance transform, including non-square cell spacing, tests, intern walkthrough and interactive notebook.
 - [x] Add a first remote-sensing lesson for NDVI, with explicit NoData/quality-mask handling, tests, intern walkthrough and interactive notebook.
 - [x] Add a first location-science lesson for uncapacitated p-median, with an exact small-instance solver, tests, intern walkthrough and interactive notebook.
+- [x] Add a first 2SFCA accessibility lesson and binary-catchment implementation with explicit supply/demand and unreachable-pair contracts, tests, intern walkthrough and interactive notebook.
 - [x] Add a DBSCAN density-clustering lesson, deterministic border-point policy, tests, intern walkthrough and interactive notebook.
 - [ ] Continue the source-derived coverage in sections 2–6: point patterns, variogram fitting and uncertainty, terrain/hydrology, sensor processing, location models and transport analysis.
 - [ ] Add domain paths only when their methods and examples are ready.
@@ -80,7 +81,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Reuse seven verified Wikimedia Commons figures across lessons: three CC BY-SA 4.0, two CC BY-SA 3.0, one CC0 1.0 and one public-domain figure.
 - [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*; add DBSCAN as a separate density-clustering lab.
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
-- [x] Add interactive notebooks for empirical geostatistical interpolation, raster distance transforms, NDVI and p-median facility location.
+- [x] Add interactive notebooks for empirical geostatistical interpolation, raster distance transforms, NDVI, p-median facility location and 2SFCA accessibility.
 - [x] Add stable cell IDs to all ten notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [x] Add a visual polygon-overlay notebook showing operation outputs, lower-dimensional contacts, holes, multipart results and precision-grid experiments.
@@ -96,7 +97,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all twenty-eight Python implementation packages and execute all twenty-one notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree notebook is included in notebook execution.
+- [x] GitHub Actions workflow configured to test all twenty-nine Python implementation packages and execute all twenty-two notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree notebook is included in notebook execution.
 - [x] Confirm a successful Actions run for all twenty-eight Python implementation suites, the Clipper2 C# smoke test, internal links and all twenty-one notebook executions. A later DBSCAN ambiguous-border regression case is being revalidated in a follow-up run.
 - [x] Add regression tests for polygon validity, clipping, overlay topology and precision-grid input contracts.
 - [ ] Add regression tests whenever a real edge case is discovered.
@@ -120,6 +121,6 @@ Before moving to the membership and Patreon work, check that:
 
 The repository has item-level intake indexes for all 22 source sections, but intake is not the same as verification. Section 1 now has a substantial geometry, indexing and routing learning set, with explicit open work including a true snap-rounding noder, randomized trapezoidal maps, scalable proximity-graph construction and advanced transit/network routing. Section 2 has Global and Local Moran/Geary/Getis-Ord material plus DBSCAN; point-process methods, broader clustering, spatial regression and econometrics remain open. Section 3 has an audited IDW/ordinary-kriging lesson, empirical semivariogram estimator, tests and notebook; model fitting, anisotropy, co-kriging and scalable approximations remain open. Section 4 has a scoped Euclidean raster distance transform, and Section 5 has an NDVI lesson with explicit reflectance and quality-mask caveats. Section 6 has an uncapacitated p-median model and exact small-instance solver; capacity, robust and equity constraints and the wider mobility/transport methods remain open. Sections 7–22 are still primarily indexed source intake, not complete technical chapters.
 
-The branch currently contains twenty-eight Python implementation packages, twenty-one executable notebooks and a Clipper2 C# smoke check. [Actions run 43506436902](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43506436902) passed all twenty-eight Python suites, the C# check, internal links and all twenty-one notebook executions. A follow-up run is checking a newly added DBSCAN border-point regression. The repository is still a draft: source entries need item-by-item verification, licensing decisions remain open, and many subject areas have not yet received researched learning material.
+The branch currently contains twenty-nine Python implementation packages, twenty-two executable notebooks and a Clipper2 C# smoke check. [Actions run 43506787574](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43506787574) passed all twenty-eight Python suites, the C# check, internal links and all twenty-one notebook executions, including the DBSCAN border-point regression. A follow-up run is validating the new 2SFCA package and twenty-second notebook. The repository is still a draft: source entries need item-by-item verification, licensing decisions remain open, and many subject areas have not yet received researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
