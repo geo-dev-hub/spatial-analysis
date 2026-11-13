@@ -23,6 +23,7 @@ This directory holds those foundational methods separately from individual algor
 - [Boolean and fuzzy overlay](boolean-and-fuzzy-overlay.md) — distinguish hard logical constraints from graded membership and compare fuzzy combination operators.
 - [Analytic Hierarchy Process](analytic-hierarchy-process.md) — derive relative criterion priorities from reciprocal pairwise judgements and inspect consistency diagnostics.
 - [Weighted linear combination](weighted-linear-combination.md) — combine standardised spatial criteria using relative weights, while keeping hard constraints and sensitivity analysis explicit.
+- [Weights of evidence](weights-of-evidence.md) — estimate positive and negative associations for binary spatial evidence and combine them in log-odds space under a conditional-independence assumption.
 
 - [Marine heatwave detection](marine-heatwave-detection.md) — identify prolonged threshold exceedances relative to a seasonal baseline, distinguish point events from spatial tracking and inspect missing-data rules.
 
