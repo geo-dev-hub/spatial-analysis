@@ -94,3 +94,72 @@ def euclidean_mst(points: Sequence[Sequence[float]]) -> list[tuple[int, int, flo
         if len(result) == n - 1:
             break
     return result
+
+
+def beta_skeleton(points: Sequence[Sequence[float]], beta: float = 2.0
+                  ) -> list[tuple[int, int]]:
+    """Lune-based beta-skeleton for 1 <= beta <= 2.
+
+    beta=1 is the open-disk Gabriel definition; beta=2 is the open-lune
+    relative-neighbourhood definition. Points strictly inside both defining
+    disks block an edge; boundary ties do not.
+    """
+    if not isfinite(beta) or not 1.0 <= beta <= 2.0:
+        raise ValueError("this lune-based implementation requires beta in [1, 2]")
+    pts = _normalise(points)
+    edges = []
+    for i in range(len(pts)):
+        for j in range(i + 1, len(pts)):
+            u, v = pts[i], pts[j]
+            dx, dy = v[0] - u[0], v[1] - u[1]
+            distance = hypot(dx, dy)
+            radius = beta * distance / 2.0
+            c1 = (u[0] + beta * dx / 2.0, u[1] + beta * dy / 2.0)
+            c2 = (v[0] - beta * dx / 2.0, v[1] - beta * dy / 2.0)
+            radius2 = radius * radius
+            blocked = False
+            for k, w in enumerate(pts):
+                if k in (i, j):
+                    continue
+                d1 = (w[0] - c1[0]) ** 2 + (w[1] - c1[1]) ** 2
+                d2 = (w[0] - c2[0]) ** 2 + (w[1] - c2[1]) ** 2
+                if d1 < radius2 and d2 < radius2:
+                    blocked = True
+                    break
+            if not blocked:
+                edges.append((i, j))
+    return edges
+
+
+def yao_graph(points: Sequence[Sequence[float]], cones: int = 8,
+              orientation: float = 0.0) -> list[tuple[int, int]]:
+    """Return the undirected union of each point's nearest-neighbour cone choices.
+
+    Each vertex selects at most one nearest point in each equal-angle cone.
+    Ties are broken by input index. The output is the undirected union of
+    directed selections, not the mutual-choice intersection.
+    """
+    from math import atan2, pi
+
+    if not isinstance(cones, int) or cones < 3:
+        raise ValueError("cones must be an integer of at least 3")
+    if not isfinite(orientation):
+        raise ValueError("orientation must be finite")
+    pts = _normalise(points)
+    width = 2.0 * pi / cones
+    selected = set()
+    for i, origin in enumerate(pts):
+        best: dict[int, tuple[float, int]] = {}
+        for j, target in enumerate(pts):
+            if i == j:
+                continue
+            dx, dy = target[0] - origin[0], target[1] - origin[1]
+            angle = (atan2(dy, dx) - orientation) % (2.0 * pi)
+            cone = min(cones - 1, int(angle / width))
+            distance2 = dx * dx + dy * dy
+            candidate = (distance2, j)
+            if cone not in best or candidate < best[cone]:
+                best[cone] = candidate
+        for _distance2, j in best.values():
+            selected.add((min(i, j), max(i, j)))
+    return sorted(selected)
