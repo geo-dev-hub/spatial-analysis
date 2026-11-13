@@ -32,10 +32,11 @@ Each implementation should state:
 - [STR-packed R-tree in Python](python/str-packed-rtree/README.md): an immutable 2D bounding-box index using STR packing, checked against brute force across 300 entries and 60 query windows, with a [step-by-step walkthrough](python/str-packed-rtree/implementation-walkthrough.md).
 - [Indexed spatial join with Shapely](python/spatial-join/README.md): filter-and-refine join using STRtree, with tests for predicate direction, boundaries, holes and brute-force equivalence, plus a [step-by-step walkthrough](python/spatial-join/implementation-walkthrough.md).
 - [2D k-d tree in Python](python/kd-tree/README.md): a static median-built tree for exact planar Euclidean nearest-neighbour search, with brute-force differential tests and a [step-by-step walkthrough](python/kd-tree/implementation-walkthrough.md).
+- [Point-region quadtree in Python](python/quadtree/README.md): a bucket PR quadtree for inclusive rectangular window queries, with explicit midpoint, root-boundary and stopping rules, brute-force differential tests and a [step-by-step walkthrough](python/quadtree/implementation-walkthrough.md).
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all nine examples and execute all ten learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all ten examples and execute all eleven learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
