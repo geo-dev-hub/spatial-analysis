@@ -1,6 +1,6 @@
 # Raster distance: how far is each cell from a target?
 
-**Status:** First raster foundation lesson published; the broader raster, terrain and hydrology path is still being developed.
+**Status:** First raster distance and flow-direction lessons published; the broader raster, terrain and hydrology path is still being developed.
 
 ## The question
 
@@ -32,7 +32,7 @@ Euclidean distance ignores barriers and movement costs. A least-cost path answer
 
 The teaching wrapper does not infer NoData semantics. Decide whether invalid cells should be ignored, masked or treated as barriers before interpreting a real raster.
 
-## 4. Follow terrain downhill with D8
+## 5. Follow terrain downhill with D8
 
 Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [interactive lab](../notebooks/d8-flow-direction-lab.ipynb). The method chooses the steepest downslope neighbour among eight adjacent cells. Pay attention to cell dimensions, sinks, flats and NoData. This baseline does not perform depression filling or flow accumulation.
 
@@ -43,7 +43,9 @@ Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the 
 3. Add a second target and explain which one determines the output at a given cell.
 4. Explain why a road network or a river channel cannot be represented by this Euclidean transform alone.
 5. Write down the CRS, cell size, target definition and NoData policy for a real analysis.
+6. Predict the D8 direction for a cell with a diagonal neighbour that has a larger elevation drop but a smaller slope.
+7. Explain why a pit needs a separate depression-filling or breaching policy.
 
 ## What comes next
 
-The wider source section includes local/focal/zonal map algebra, connected components, cost-distance, least-cost paths, slope and aspect, terrain indices, visibility, flow routing, watershed delineation, hydrological models, flood analysis and coastal methods. Each needs its own assumptions, tests and learning materials.
+The wider source section includes local/focal/zonal map algebra, connected components, cost-distance, least-cost paths, slope and aspect, terrain indices, visibility, depression filling, flow accumulation, watershed delineation and hydrological models, flood analysis and coastal methods. Each needs its own assumptions, tests and learning materials.
