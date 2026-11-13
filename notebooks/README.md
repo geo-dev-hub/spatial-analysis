@@ -12,7 +12,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Voronoi and Delaunay lab](voronoi-delaunay-lab.ipynb): compare nearest-site regions with their Delaunay dual, inspect equidistant Voronoi vertices and check empty circumcircles.
 - [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare line simplifiers, inspect offsets and proximity graphs, and compare Dijkstra with A*.
 
-- [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.\n- [Coverage simplification and advanced routing lab](coverage-simplification-routing-lab.ipynb): simplify a shared-edge polygon coverage, inspect fixed-grid precision changes, then compare Dijkstra, bidirectional Dijkstra and ALT A* on a directed graph.
+- [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.
+- [Coverage simplification and advanced routing lab](coverage-simplification-routing-lab.ipynb): simplify a shared-edge polygon coverage, inspect fixed-grid precision changes, then compare Dijkstra, bidirectional Dijkstra, ALT A*, turn restrictions and FIFO time-dependent arrival on directed graphs.
 
 ### Spatial indexing
 
