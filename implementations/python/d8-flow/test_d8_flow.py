@@ -16,7 +16,7 @@ def test_d8_uses_steepest_slope_not_largest_elevation_drop():
     ])
     # From the upper-left, south drops 0.3 over 1; east drops 0.5 over 2.
     result = d8_flow_direction(dem, cell_size=(1, 2))
-    assert result[0, 0] == 2
+    assert result[0, 0] == 4
 
 
 def test_d8_diagonal_distance_uses_both_cell_dimensions():
@@ -29,7 +29,7 @@ def test_d8_invalid_and_nodata_cells_are_marked_and_ignored():
     dem = np.array([[5, -9999], [4, 3]], dtype=float)
     result = d8_flow_direction(dem, nodata=-9999)
     assert result[0, 1] == -1
-    assert result[0, 0] == 4
+    assert result[0, 0] == 2
 
 
 def test_d8_valid_mask_excludes_cells_and_checks_shape():
