@@ -21,6 +21,10 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 - [Filter-and-refine spatial join](query-processing/filter-refine-spatial-join.md) — use a spatial index to find candidate geometry pairs, then apply the exact spatial predicate.
 
+## Interpolation
+
+- [Inverse distance weighting](interpolation/inverse-distance-weighting.md) — estimate a value at an unmeasured location by giving nearer observations more influence.
+
 ## Spatial statistics
 
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
