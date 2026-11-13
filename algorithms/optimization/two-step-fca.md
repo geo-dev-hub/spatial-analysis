@@ -46,7 +46,7 @@ The method does not prescribe how $d_{ij}$ is calculated. It may be:
 
 Those choices describe different opportunities. A radius on a map is not automatically equivalent to a travel-time catchment.
 
-The [teaching implementation](../../implementations/python/two-step-fca/README.md) takes a matrix with population locations in rows and providers in columns. It uses a binary inclusive threshold: values less than or equal to $d_0$ are inside the catchment.
+The [teaching implementation](../../implementations/python/two-step-fca/README.md) takes a matrix with population locations in rows and providers in columns. It uses a binary inclusive threshold: values less than or equal to $d_0$ are inside the catchment. Positive infinity can represent an unreachable pair; NaN and negative impedance are invalid.
 
 ## A small example
 
