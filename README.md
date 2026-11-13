@@ -37,7 +37,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Estimating values between observations | [Interpolation and geostatistics](learning-paths/interpolation-and-geostatistics.md) |
 | Understanding spatial variation | [Empirical semivariogram](methods/empirical-semivariogram.md) |
 | Working with elevation and drainage | [Raster hydrology](learning-paths/raster-hydrology.md) |
-| Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
+| Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) and [choosing an index](guides/choosing-a-spatial-index.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
