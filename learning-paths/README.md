@@ -50,6 +50,8 @@ If you want to understand whether nearby places have similar values, follow the 
 
 If you want to understand how a GIS searches large collections of features, start with [spatial indexing](spatial-indexing.md). The first lessons explain bounding boxes, STR-packed R-trees and indexed spatial joins.
 
+To continue from geometry foundations into simplification, offsets, proximity graphs and planar point location, follow [Core GIS continuation](core-gis-continuation.md). For graph costs, shortest paths and the modelling choices behind a route planner, follow [Network routing foundations](network-routing-foundations.md).
+
 ## The collection keeps growing
 
 Each method has its own permanent page. New weekly editions introduce and explore topics, while the learning paths bring those topics together in useful sequences. That means the order in which something was published does not decide the order in which you have to learn it.
