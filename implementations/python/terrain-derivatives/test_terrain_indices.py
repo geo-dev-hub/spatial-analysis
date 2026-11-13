@@ -6,11 +6,13 @@ def test_matches_conventional_log_area_over_tangent_slope():
     area=np.array([[10.0]])
     slope=np.array([[30.0]])
     result=topographic_wetness_index(area,slope)
-    np.testing.assert_allclose(result,[[np.log(10/np.tan(np.radians(30)))])
+    expected = np.log(10 / np.tan(np.radians(30)))
+    np.testing.assert_allclose(result, np.array([[expected]]))
 
 def test_flat_slope_uses_declared_positive_floor():
     result=topographic_wetness_index([[10]],[[0]],slope_floor_degrees=1)
-    np.testing.assert_allclose(result,[[np.log(10/np.tan(np.radians(1)))])
+    expected = np.log(10 / np.tan(np.radians(1)))
+    np.testing.assert_allclose(result, np.array([[expected]]))
 
 def test_nonpositive_area_and_nodata_are_masked():
     result=topographic_wetness_index([[0,np.nan,10]],[[20,20,np.nan]])
