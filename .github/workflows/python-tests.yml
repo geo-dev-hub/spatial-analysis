@@ -62,6 +62,9 @@ jobs:
           - example: polygon-validity
             directory: implementations/python/polygon-validity
             pythonpath: ""
+          - example: polygon-clipping
+            directory: implementations/python/polygon-clipping
+            pythonpath: ""
 
     steps:
       - name: Check out repository
