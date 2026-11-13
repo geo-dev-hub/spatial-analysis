@@ -40,6 +40,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) and [choosing an index](guides/choosing-a-spatial-index.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
+| Finding least-cost routes through a network | [Network analysis](learning-paths/network-analysis.md) and [Dijkstra's algorithm](algorithms/network/dijkstra.md) |
 | Helping improve the project | [Contributing](CONTRIBUTING.md) |
 
 ## A growing collection, not a closed course
