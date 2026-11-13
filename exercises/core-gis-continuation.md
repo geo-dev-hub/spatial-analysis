@@ -51,6 +51,8 @@ Create a directed graph with a short but slow route and a longer but faster rout
 - Add an admissible heuristic expressed in the same cost units.
 - Add a one-way edge and an unreachable goal.
 - Add a turn restriction and explain why a node-only state may be insufficient.
+- Add a negative edge without a negative cycle and compare Bellman–Ford with the non-negative algorithms.
+- Build an all-pairs distance matrix with Floyd–Warshall and add a negative cycle to test detection.
 
 ## Submission checklist
 
