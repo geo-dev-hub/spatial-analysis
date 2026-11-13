@@ -54,8 +54,12 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add proximity graph definitions and tested small-input baselines for Gabriel, relative neighbourhood, lune-based beta-skeleton, Yao graph and Euclidean MST.
 - [x] Add a planar point-location dossier and a tested static slab locator for pairwise interior-disjoint polygon faces; randomized trapezoidal-map construction remains open.
 - [x] Add shortest-path family research and tested Dijkstra, A*, Bellman–Ford and Floyd–Warshall baselines.
-- [x] Add coverage-aware polygon simplification through Shapely/GEOS with validity checks and tests.\n- [x] Add a native Clipper2 C# offset example with a CI smoke test.\n- [x] Extend shortest-path teaching code with bidirectional Dijkstra and directed ALT landmarks.\n- [ ] Implement a dedicated snap-rounding noder, efficient Delaunay-based Yao/beta-skeleton constructions, and a true randomized trapezoidal-map locator.
-- [ ] Extend network routing with contraction hierarchies, turn restrictions, time-dependent routing and transit algorithms.
+- [x] Add coverage-aware polygon simplification through Shapely/GEOS with validity checks and tests.
+- [x] Add a native Clipper2 C# offset example with a CI smoke test.
+- [x] Extend shortest-path teaching code with bidirectional Dijkstra and directed ALT landmarks.
+- [ ] Implement a dedicated snap-rounding noder, efficient Delaunay-based Yao/beta-skeleton constructions, and a true randomized trapezoidal-map locator.
+- [x] Add tested edge-based turn-aware and FIFO time-dependent earliest-arrival baselines.
+- [ ] Extend network routing with contraction hierarchies, non-FIFO routing, transit algorithms and multimodal transfers.
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
