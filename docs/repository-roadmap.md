@@ -39,6 +39,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add worked examples, runnable examples and a final review exercise connecting the four topics.
 - [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
 - [x] Add live ipywidgets controls to compare Moran's I and Geary's C while changing values and weight style.
+- [x] Add an interactive geometry lab for point-in-polygon, segment intersection and polygon overlay.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
@@ -57,7 +58,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Reuse seven verified Wikimedia Commons figures across lessons: three CC BY-SA 4.0, two CC BY-SA 3.0, one CC0 1.0 and one public-domain figure.
 - [x] Add six spatial-statistics notebooks for Global Moran's I, Global Geary's C, Local Moran's I, Local Geary, Global Getis-Ord G and Getis-Ord Gi*.
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
-- [x] Add stable cell IDs to all nine notebooks and repair missing required code-cell outputs.
+- [x] Add stable cell IDs to all ten notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
@@ -90,6 +91,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Nine notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Ten notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.

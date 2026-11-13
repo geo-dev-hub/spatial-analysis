@@ -6,7 +6,7 @@ A point falls inside a boundary. Two lines cross. Two areas overlap. A whole net
 
 These sound like separate tasks, but they build on a small set of geometric ideas. This path takes you from one location to a collection of intersecting segments.
 
-You can follow the sequence or jump to the lesson that answers your immediate question.
+You can follow the sequence or jump to the lesson that answers your immediate question. The [interactive geometry foundations lab](../notebooks/geometry-foundations-lab.ipynb) lets you move a point, change a segment and adjust polygon overlap in one place.
 
 ## Before you begin
 

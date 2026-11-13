@@ -30,7 +30,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Testing speed and accuracy | [Benchmarks](benchmarks/README.md) |
 | Practising with exercises | [Exercises](exercises/README.md) |
 | Following research questions | [Research notes](research/README.md) |
-| Exploring calculations interactively | [Notebooks](notebooks/README.md) |
+| Exploring calculations interactively | [Notebooks and labs](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
@@ -66,6 +66,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 - [How to contribute](CONTRIBUTING.md)
 - [How we use mathematics and visuals](docs/math-and-visuals.md)
 - [How we choose learning tools and build an effective lesson](docs/learning-experience-standard.md)
+- [How the catalogue distinguishes algorithms, operations, models and other record types](catalog/record-types.md)
 - [What the source compendium covers](catalog/coverage-matrix.md)
 - [Repository roadmap](docs/repository-roadmap.md)
 - [Licensing and reuse](docs/licensing-and-reuse.md)
@@ -78,7 +79,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 
 Start with [polygon intersection](algorithms/geometry/polygon-intersection.md): how do we find the part shared by two shapes? Read the explanation, then [run the Python example](implementations/python/polygon-intersection/README.md) and its tests. The example is implemented with Shapely 2.1.2; the test suite has passed in the recorded environment.
 
-A second foundational example is [point in polygon](algorithms/geometry/point-in-polygon.md): given a point and a boundary, is it inside, outside or on the edge? It includes a small ray-crossing implementation and 11 tests.
+A second foundational example is [point in polygon](algorithms/geometry/point-in-polygon.md): given a point and a boundary, is it inside, outside or on the edge? It includes a small ray-crossing implementation and 12 tests.
 
 A third is [segment intersection](algorithms/geometry/segment-intersection.md): do two lines cross, touch or overlap? Its pairwise Python implementation uses exact integer orientation tests and rational coordinates, with 11 tests.
 
@@ -86,7 +87,7 @@ Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), whi
 
 ## A first look at spatial patterns
 
-Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
+Try the [interactive geometry foundations lab](notebooks/geometry-foundations-lab.ipynb) to move a point, change a segment and explore polygon overlays. Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
