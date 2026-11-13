@@ -30,6 +30,7 @@ print(ratios, accessibility)
 
 - The impedance matrix has one row per population location and one column per provider.
 - Supply and demand must use documented, compatible units.
+- Positive infinity may represent an unreachable population-provider pair; NaN and negative impedance are rejected.
 - The catchment includes costs less than or equal to max_cost.
 - A provider with no demand inside its catchment receives a ratio of zero.
 - A population location with no reachable provider receives accessibility zero.
