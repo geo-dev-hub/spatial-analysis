@@ -33,11 +33,11 @@ def test_equal_gradient_uses_documented_direction_order():
 
 
 def test_rectangular_cells_change_diagonal_distance():
-    dem = [[10, 10, 10], [10, 10, 8], [10, 10, 10]]
+    dem = [[10, 10, 10], [10, 10, 10], [10, 9, 8]]
     square = flow_direction(dem, cell_width=1, cell_height=1)
-    tall = flow_direction(dem, cell_width=1, cell_height=3)
+    short_cells = flow_direction(dem, cell_width=1, cell_height=0.5)
     assert square[1][1] == 2
-    assert tall[1][1] == 4
+    assert short_cells[1][1] == 4
 
 
 def test_rectangular_grid_is_supported():
