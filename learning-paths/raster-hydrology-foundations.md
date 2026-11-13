@@ -83,6 +83,10 @@ Read [Raster resampling](../algorithms/raster/resampling.md) and run the [resamp
 
 Read [Zonal statistics](../algorithms/raster/zonal-statistics.md) and run the [zonal statistics notebook](../notebooks/zonal-statistics-lab.ipynb). The operation groups values by an aligned integer zone raster; it is distinct from focal statistics, which use moving neighbourhoods.
 
+## 11. Label connected raster regions
+
+Read [Connected-component labeling](../algorithms/raster/connected-components.md) and run the [connected-components notebook](../notebooks/raster-connected-components-lab.ipynb). Four- and eight-neighbour connectivity can produce different region counts; an explicit validity mask treats NoData as a barrier.
+
 ## Exercises
 
 1. Create a simple plane and predict the Horn slope, aspect and D8 directions.
