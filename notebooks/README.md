@@ -4,7 +4,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
-- [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag and enumerate a small permutation distribution.
+- [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag, enumerate a small permutation distribution, and use sliders to compare Moran's I with Geary's C as the values change.
 - [Global Geary's C](gearys-c-lab.ipynb): compare squared differences between neighbours, contrast similar and alternating values, and inspect all 24 permutations of a four-unit example.
 - [Local Moran's I](local-morans-i-lab.ipynb): build a synthetic neighbour graph, inspect High–High and Low–Low clusters and spatial outliers, and apply an FDR cutoff to conditional permutation results.
 - [Local Geary](local-geary-lab.ipynb): compare each unit with its neighbours, inspect local squared-difference values and compare raw labels with an FDR-filtered classification.
@@ -24,7 +24,7 @@ python -m pip install jupyterlab
 jupyter lab
 ```
 
-Open the notebook from JupyterLab and run the cells in order.
+Open the notebook from JupyterLab and run the cells in order. The Global Moran's I lab includes live controls built with ipywidgets; change the four area values or the weights style to update the statistics and scatterplot. The other notebooks are editable labs: change an input in a code cell and rerun it to inspect the result.
 
 ### Open a lab in Google Colab
 
