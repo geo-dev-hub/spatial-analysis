@@ -28,6 +28,10 @@ Each implementation should state:
 - [Exact p-median](python/p-median/README.md): exhaustive small-instance facility-location solver with deterministic assignments, tests and an [intern walkthrough](python/p-median/implementation-walkthrough.md).
 - [Two-step floating catchment area](python/two-step-fca/README.md): binary-catchment supply/demand accessibility measure with explicit impedance matrix semantics, tests and an [intern walkthrough](python/two-step-fca/implementation-walkthrough.md).
 
+### GeoAI and model validation
+
+- [Spatial block cross-validation](python/spatial-cross-validation/README.md): deterministic grid-block folds with optional distance buffering, explicit projected-coordinate assumptions, tests and an [intern walkthrough](python/spatial-cross-validation/implementation-walkthrough.md).
+
 ### Remote sensing
 
 - [NDVI](python/spectral-indices/README.md): NumPy-based Normalised Difference Vegetation Index with explicit NoData and quality-mask handling, tests and an [intern walkthrough](python/spectral-indices/implementation-walkthrough.md).
