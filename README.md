@@ -33,7 +33,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Exploring calculations interactively | [Notebooks and labs](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
-| Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) and [spatial clustering](learning-paths/spatial-clustering-foundations.md) |
+| Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md), [point-pattern analysis](learning-paths/point-pattern-foundations.md) and [spatial clustering](learning-paths/spatial-clustering-foundations.md) |
 | Estimating values between observations | [Spatial interpolation foundations](learning-paths/geostatistics-foundations.md) |
 | Working with raster distances | [Raster distance foundations](learning-paths/raster-distance-foundations.md) |
 | Summarising raster neighbourhoods | [Focal raster statistics](algorithms/raster/focal-statistics.md) |
