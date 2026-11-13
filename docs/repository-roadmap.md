@@ -79,7 +79,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all twelve Python examples and execute all fourteen notebooks.
-- [x] Confirm successful Actions run for all twelve Python test suites, all fourteen notebooks and the internal-link check.
+- [ ] Confirm successful Actions run for all twelve Python test suites, all fourteen notebooks and the internal-link check.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
