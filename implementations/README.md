@@ -28,6 +28,10 @@ Each implementation should state:
 - [Exact p-median](python/p-median/README.md): exhaustive small-instance facility-location solver with deterministic assignments, tests and an [intern walkthrough](python/p-median/implementation-walkthrough.md).
 - [Two-step floating catchment area](python/two-step-fca/README.md): binary-catchment supply/demand accessibility measure with explicit impedance matrix semantics, tests and an [intern walkthrough](python/two-step-fca/implementation-walkthrough.md).
 
+### Geodesy
+
+- [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
+
 ### GeoAI and model validation
 
 - [Masked patch selection and restoration](python/masked-autoencoding/README.md): NumPy-only MAE sequence masking mechanics, deterministic per-sample masks, inverse permutation, tests and an [intern walkthrough](python/masked-autoencoding/implementation-walkthrough.md). This is not a trained model.
