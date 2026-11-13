@@ -23,11 +23,11 @@ def test_translation_correction_weights_pair_by_window_overlap():
     # Window area 4; shifted overlap area 2; ordered-pair count 2.
     np.testing.assert_allclose(result.k_values,[4])
 
-def test_translation_correction_increases_weight_for_pairs_near_window_edge():
-    central=[(1,1),(2,1)]
-    near_edge=[(0.1,1),(1.1,1)]
-    a=ripley_k(central,bounds=(0,4,0,4),radii=[1],edge_correction="translation")
-    b=ripley_k(near_edge,bounds=(0,4,0,4),radii=[1],edge_correction="translation")
+def test_translation_weight_increases_as_shifted_window_overlap_shrinks():
+    short_shift=[(0.5,1),(1.5,1)]
+    long_shift=[(0.5,1),(3.5,1)]
+    a=ripley_k(short_shift,bounds=(0,4,0,4),radii=[3],edge_correction="translation")
+    b=ripley_k(long_shift,bounds=(0,4,0,4),radii=[3],edge_correction="translation")
     assert b.k_values[0]>a.k_values[0]
 
 def test_translation_correction_rejects_zero_overlap_pairs():
