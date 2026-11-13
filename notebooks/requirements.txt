@@ -5,3 +5,4 @@ libpysal==4.14.1
 shapely==2.1.2
 ipywidgets>=8.1,<9
 geopandas>=1.1,<2
+pykrige==1.7.3
