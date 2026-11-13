@@ -4,7 +4,7 @@
 - **Source pages:** 4–6 (the small-area and survey estimation subsection continues onto page 6)
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md) and [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md); [Empirical semivariogram](../../methods/empirical-semivariogram.md) (both have tested Python examples, walkthroughs and interactive notebooks)
+- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md); [Empirical semivariogram](../../methods/empirical-semivariogram.md); [Ordinary kriging](../../algorithms/interpolation/ordinary-kriging.md) (tested examples, walkthroughs and interactive notebooks are available for all three)
 
 This section combines surface estimation, stochastic spatial models, simulation, time-dependent analysis, data assimilation, uncertainty measures and small-area estimation. Some entries are model families, some are computational procedures and some are evaluation measures.
 
