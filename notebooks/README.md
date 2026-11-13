@@ -20,6 +20,10 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Filter-and-refine spatial join](filter-refine-spatial-join-lab.ipynb): join points to polygons, inspect candidate pairs and compare exact predicates with a brute-force result.
 - [Point-region quadtree](quadtree-lab.ipynb): explore recursive cell subdivision and compare inclusive rectangular window queries with brute force.
 
+### Decision support
+
+- [Weighted linear combination lab](weighted-linear-combination-lab.ipynb): explore standardised criteria, relative weights, hard exclusions, sensitivity and strict NoData handling using a synthetic suitability surface.
+
 ### Optimization and location science
 
 - [p-median facility-location lab](p-median-facility-location-lab.ipynb): select candidate facilities, assign demand and inspect the effect of demand weights.
@@ -81,10 +85,11 @@ Open a notebook from JupyterLab and run the cells in order. The Global Moran's I
 
 ### Open a lab in Google Colab
 
-The links below point to notebooks already available on the default branch. The planar point-location lab is available on the current continuation branch and can be opened directly in Colab.
+The links below point to notebooks already available on the default branch. The planar point-location and weighted suitability labs are available on the current continuation branch and can be opened directly in Colab.
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
 - [Planar point location — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/point-location-lab.ipynb)
+- [Weighted linear combination — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/weighted-linear-combination-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
 - [Global Geary's C](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb)
 - [Local Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb)
@@ -95,6 +100,6 @@ The links below point to notebooks already available on the default branch. The 
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all thirty-five notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all thirty-six notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
