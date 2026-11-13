@@ -4,11 +4,11 @@
 - **Source pages:** 14–18
 - **Source transcription:** [pages 11–15](../../source-inventory/pages-11-15.md) and [pages 16–20](../../source-inventory/pages-16-20.md)
 - **Review state:** source entries extracted into this index; names and claims not yet individually verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Contrastive representation learning with NT-Xent](../../algorithms/geoai/contrastive-info-nce.md) (first scoped objective lesson; not a foundation-model catalogue)
 
-The source explicitly says that model names are representative examples, not an exhaustive or verified catalogue. Preserve that warning. This section changes quickly: model names, benchmark results, datasets and deployment claims must be checked against original papers, official model cards and maintained project documentation before publication.
+The source explicitly says that model names are representative examples, not an exhaustive or verified catalogue. The first canonical record is a general contrastive objective lesson; it does not verify or reproduce any named geospatial foundation model. Preserve that warning. This section changes quickly: model names, benchmark results, datasets and deployment claims must be checked against original papers, official model cards and maintained project documentation before publication.
 
-## Pretraining objectives
+## First implemented learning record\n\nThe [GeoAI foundations learning path](../../learning-paths/geoai-foundations.md) begins with paired-view contrastive learning and NT-Xent. It makes spatial split leakage and geospatial augmentation assumptions explicit.\n\n## Pretraining objectives
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|

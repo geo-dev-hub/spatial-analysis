@@ -39,6 +39,7 @@ Each implementation should state:
 - [Raster resampling](python/raster-resampling/README.md): same-extent nearest-neighbour and bilinear interpolation, explicit NoData policies, tests and an [intern walkthrough](python/raster-resampling/implementation-walkthrough.md).
 - [Zonal raster statistics](python/zonal-statistics/README.md): NoData-aware summaries by aligned integer zone labels, with explicit population standard deviation and empty-zone semantics, tests and an [intern walkthrough](python/zonal-statistics/implementation-walkthrough.md).
 - [Raster connected components](python/raster-components/README.md): breadth-first labeling with 4/8-connectivity, explicit validity barriers, deterministic labels, tests and an [intern walkthrough](python/raster-components/implementation-walkthrough.md).
+- [InfoNCE contrastive loss](python/info-nce/README.md): symmetric NT-Xent for paired embedding batches, with normalized cosine similarity, temperature scaling, stable log-sum-exp, tests and an [intern walkthrough](python/info-nce/implementation-walkthrough.md).
 
 - [Euclidean distance transform](python/raster-distance/README.md): a SciPy-backed exact Euclidean distance wrapper with anisotropic cell spacing, tests and an [intern walkthrough](python/raster-distance/implementation-walkthrough.md).
 - [Focal raster statistics](python/focal-statistics/README.md): NoData-aware square-window means using value and count integral images, with tests and an [intern walkthrough](python/focal-statistics/implementation-walkthrough.md).
@@ -94,7 +95,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all forty-eight Python example packages and the Clipper2 C# smoke test, and execute all thirty-eight learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all forty-nine Python example packages and the Clipper2 C# smoke test, and execute all thirty-eight learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 

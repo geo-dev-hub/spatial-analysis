@@ -173,6 +173,9 @@ jobs:
           - example: raster-components
             directory: implementations/python/raster-components
             pythonpath: ""
+          - example: info-nce
+            directory: implementations/python/info-nce
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -269,6 +272,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-resampling-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/zonal-statistics-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-connected-components-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/contrastive-info-nce-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-location-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weighted-linear-combination-lab.ipynb
 
