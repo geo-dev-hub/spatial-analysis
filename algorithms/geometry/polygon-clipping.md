@@ -137,4 +137,8 @@ Compare the predictions with a library overlay result. Explain why the second ca
 - [A Brief Survey of Clipping and Intersection Algorithms](https://doi.org/10.15388/23-INFOR508), a review of polygon clipping and intersection families.
 - [GEOS OverlayNG documentation](https://libgeos.org/doxygen/classgeos_1_1operation_1_1overlayng_1_1OverlayNG.html), for modern geometry overlay semantics and precision behaviour.
 
+## Runnable teaching implementation
+
+The repository includes a deliberately scoped, dependency-free [Sutherland–Hodgman implementation for convex polygons](../../implementations/python/polygon-clipping/README.md), with [regression tests](../../implementations/python/polygon-clipping/test_polygon_clipping.py) and a [step-by-step intern walkthrough](../../implementations/python/polygon-clipping/implementation-walkthrough.md). Both subject and clip window must be convex; the API returns one area ring and rejects unsupported concave inputs. It is a learning implementation, not a general GIS overlay engine.
+
 **Evidence state:** the convex-window scope of Sutherland–Hodgman and the arbitrary-polygon scope of Greiner–Hormann are supported by the cited primary literature. Vatti's exact guarantees and degenerate-case behaviour require a dedicated review of the original paper and the chosen implementation before a comparative claim is published.
