@@ -53,6 +53,9 @@ jobs:
           - example: spatial-join
             directory: implementations/python/spatial-join
             pythonpath: ""
+          - example: kd-tree
+            directory: implementations/python/kd-tree
+            pythonpath: ""
 
     steps:
       - name: Check out repository
