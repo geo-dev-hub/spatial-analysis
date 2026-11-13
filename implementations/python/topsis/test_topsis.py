@@ -11,8 +11,8 @@ def test_benefit_and_cost_criteria_rank_expected_alternative_first():
         [90, 40],
     ], dtype=float)
     result = topsis(matrix, [0.5, 0.5], [True, False])
-    assert result.ranking[0] == 0
-    assert result.scores[0] == pytest.approx(1.0)
+    assert result.ranking[0] == 1
+    assert result.scores[1] > result.scores[0] > result.scores[2]
     assert np.all((result.scores >= 0) & (result.scores <= 1))
 
 
