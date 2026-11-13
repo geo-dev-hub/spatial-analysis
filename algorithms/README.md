@@ -27,6 +27,10 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 - [Ordinary kriging](interpolation/ordinary-kriging.md) — estimate a value using a variogram model and a constrained system of spatial weights.
 
+## Hydrology
+
+- [D8 flow direction](hydrology/d8-flow-direction.md) — direct each raster cell to the steepest downslope neighbour.
+
 ## Spatial statistics
 
 - [Global Moran's I](statistics/global-morans-i.md) — measure global spatial autocorrelation by comparing deviations from the mean across neighbouring units.
