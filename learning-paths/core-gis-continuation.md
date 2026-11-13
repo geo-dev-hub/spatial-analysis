@@ -22,7 +22,13 @@ Understand joins, end caps, miter limits, inward collapse and CRS units. Run the
 
 Compare Gabriel, relative neighbourhood and Euclidean minimum spanning graphs. Run the [small-input implementations](../implementations/python/proximity-graphs/README.md) and examine the strict open-region tie convention.
 
-## 4. Choose a precision model\n\n[Precision models and snap rounding](../algorithms/geometry/precision-models.md)\n\nCompare coordinate precision reduction, fixed-grid overlay and full snap-rounding noding. Run the [tested fixed-grid operations](../implementations/python/precision-grid/README.md), then explain which guarantees are—and are not—provided.\n\n## 5. Locate a point in a subdivision
+## 4. Choose a precision model
+
+[Precision models and snap rounding](../algorithms/geometry/precision-models.md)
+
+Compare coordinate precision reduction, fixed-grid overlay and full snap-rounding noding. Run the [tested fixed-grid operations](../implementations/python/precision-grid/README.md), then explain which guarantees are—and are not—provided.
+
+## 5. Locate a point in a subdivision
 
 [Planar point location](../algorithms/geometry/point-location.md)
 
