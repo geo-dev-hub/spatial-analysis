@@ -13,6 +13,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Polygon validity](geometry/polygon-validity.md) — check whether rings, shells, holes and multi-part geometries satisfy the chosen geometry model; includes a tested Shapely inspection and explicit-repair workflow.
 - [Polygon clipping](geometry/polygon-clipping.md) — compare clipping algorithm families, choose an appropriate tool and study a tested convex Sutherland–Hodgman teaching implementation.
 - [Polygon overlay operations](geometry/overlay-operations.md) — understand intersection, union, difference, symmetric difference and precision, with a tested Shapely/GEOS package and visual notebook.
+- [Line simplification](geometry/simplification.md) — compare Douglas–Peucker maximum-deviation and Visvalingam–Whyatt effective-area generalisation, with tested baselines.
+- [Polygon offsetting](geometry/offsetting.md) — distinguish geometric offsets from clipping and compare join, cap and precision behaviour.
+- [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
+- [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps.
 
 ## Spatial indexing
 
