@@ -37,7 +37,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [D8 flow accumulation lab](d8-flow-accumulation-lab.ipynb): trace upstream contributing cells, weighted flow and confluences.
 - [Watershed delineation lab](watershed-delineation-lab.ipynb): select an outlet and map all cells that drain to it.
 - [Stream order lab](stream-order-lab.ipynb): compare Strahler order and Shreve magnitude at headwaters and confluences.
-- [Slope and aspect lab](slope-aspect-lab.ipynb): calculate Horn slope and downslope aspect, derive local hillshade, and inspect cell spacing, flat cells and NoData masking.
+- [Slope and aspect lab](slope-aspect-lab.ipynb): calculate Horn slope and downslope aspect, derive local hillshade and topographic wetness index, and inspect cell spacing, flat cells and NoData masking.
 - [Raster cost-distance lab](cost-distance-lab.ipynb): compare 4/8-neighbour Dijkstra, weighted barriers, cell spacing and unreachable cells.
 
 ### Geostatistics and interpolation
