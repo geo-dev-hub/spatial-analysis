@@ -21,7 +21,7 @@ def test_single_outlet_includes_all_upstream_contributors():
 
 
 def test_cells_draining_to_another_sink_are_not_in_basin():
-    directions = [[1, 0, 16, 0]]
+    directions = [[1, 0, 1, 0]]
     result = delineate_watershed(directions, outlet=(0, 1))
     np.testing.assert_array_equal(result, [[True, True, False, False]])
 
