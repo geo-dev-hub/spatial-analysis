@@ -125,6 +125,9 @@ jobs:
           - example: fuzzy-overlay
             directory: implementations/python/fuzzy-overlay
             pythonpath: ""
+          - example: owa
+            directory: implementations/python/owa
+            pythonpath: ""
           - example: d8-flow-accumulation
             directory: implementations/python/d8-flow-accumulation
             pythonpath: ""
