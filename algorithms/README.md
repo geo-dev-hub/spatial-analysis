@@ -32,6 +32,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 ## Raster operations
 
 - [Euclidean distance transform](raster/euclidean-distance-transform.md) — calculate centre-to-centre distance from every grid cell to the nearest target cell.
+- [Focal raster statistics](raster/focal-statistics.md) — calculate NoData-aware square-window means efficiently using integral images.
 - [Priority-Flood](raster/priority-flood.md) — fill DEM depressions to their lowest spill elevation and inspect the fill-depth surface.
 - [D8 flow direction](raster/d8-flow-direction.md) — assign each DEM cell to its steepest downslope neighbour.
 - [D8 flow accumulation](raster/d8-flow-accumulation.md) — propagate upstream cell counts or weighted contributions through an existing D8 direction grid.
