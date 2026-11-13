@@ -8,6 +8,9 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Polygon intersection](geometry/polygon-intersection.md) — construct the geometry shared by two inputs.
 - [Segment intersection](geometry/segment-intersection.md) — determine whether two line segments cross, touch or overlap.
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
+- [Polygon validity](geometry/polygon-validity.md) — check whether rings, shells, holes and multi-part geometries satisfy the chosen geometry model. **Draft; review required.**
+- [Polygon clipping](geometry/polygon-clipping.md) — compare clipping algorithm families and their input assumptions. **Draft; review required.**
+- [Polygon overlay operations](geometry/overlay-operations.md) — understand intersection, union, difference, symmetric difference and precision. **Draft; review required.**
 
 ## Spatial indexing
 
@@ -35,7 +38,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 ## A connected place to start
 
-The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The [spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) connects global and local Moran, Geary and Getis-Ord methods, with six interactive notebooks. The [spatial indexing path](../learning-paths/spatial-indexing.md) starts with bounding boxes and the STR-packed R-tree.
+The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons in a practical sequence, from point location to all-segment intersection. The follow-on drafts cover validity, clipping and the broader overlay operation family; they are not yet part of the verified path. The [spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) connects global and local Moran, Geary and Getis-Ord methods, with six interactive notebooks. The [spatial indexing path](../learning-paths/spatial-indexing.md) starts with bounding boxes and the STR-packed R-tree.
 
 ## How to read a record
 
