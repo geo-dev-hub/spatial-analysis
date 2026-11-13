@@ -17,6 +17,6 @@ python -m pytest -q
 - Non-finite raster values are skipped within each zone.
 - Zones with no valid values remain in the output with count zero, sum zero and undefined (NaN) descriptive statistics.
 - Standard deviation uses population convention (ddof=0).
-- This implementation does not align rasters, reproject, resample, calculate polygon zones or produce zonal histograms.
+- This implementation does not align rasters, reproject, resample or calculate polygon zones. The companion zonal_histogram function returns counts for caller-supplied bin edges; values outside the bin range are not counted.
 
 Read the [canonical lesson](../../../algorithms/raster/zonal-statistics.md) and [intern walkthrough](implementation-walkthrough.md).

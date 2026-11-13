@@ -33,3 +33,7 @@ Zonal statistics are not focal statistics: focal operations use neighbourhoods a
 ## 5. Validation
 
 Tests cover multiple zones, descriptive statistics, NoData values, empty zones, missing zone labels, shape mismatch and non-integer labels. They do not validate the geospatial alignment of source rasters.
+
+## 6. Build a zonal histogram
+
+The zonal_histogram function uses explicit, strictly increasing bin edges. It returns one count array per zone, including all-zero arrays for zones with no valid values. Non-finite values are skipped and values outside the supplied edge range are not counted. Histogram bins are a modelling choice: use meaningful class boundaries for categorical data or defensible intervals for continuous data.

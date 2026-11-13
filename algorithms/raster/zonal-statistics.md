@@ -39,7 +39,7 @@ Non-finite zone labels are excluded. Non-finite values are skipped inside each z
 
 - This baseline does not align, reproject or resample input rasters.
 - It does not construct zones from vector polygons.
-- It does not implement zonal histograms or categorical frequency tables.
+- Histogram counts are supported only for explicit caller-supplied bin edges; the method does not derive optimal bins or categorical class definitions.
 - It is a clear teaching implementation, not an optimized large-raster grouping engine.
 
 ## Exercises
