@@ -27,7 +27,11 @@ Read [Affine georeferencing](../methods/affine-georeferencing.md) and run its [l
 
 A CRS operation may include a map projection and a datum/reference-frame transformation. High-accuracy work may require grid-shift files, a coordinate epoch, vertical datum and a specific operation. Record the operation and its resources so results can be reproduced.
 
-## 6. What comes next
+## 6. Understand spatial data delivery
+
+Read [Choosing spatial data formats and delivery patterns](../methods/spatial-data-formats.md). Compare the workload fit of COG, Zarr, GeoParquet, FlatGeobuf, STAC, vector tiles and spatial databases. Treat discovery metadata, analytical storage and delivery products as separate architectural concerns.
+
+## 7. What comes next
 
 The source section also includes Helmert and Molodensky transformations, Bursa-Wolf parameters, NTv2 grids, ECEF/ENU conversions, geoid models, spherical geometry, GNSS, satellite orbits and network adjustment. These need dedicated methods, assumptions, reference data and validation.
 
