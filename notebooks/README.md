@@ -23,6 +23,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Decision support
 
 - [Weighted linear combination lab](weighted-linear-combination-lab.ipynb): explore standardised criteria, relative weights, hard exclusions, sensitivity and strict NoData handling using a synthetic suitability surface.
+- [Weights-of-evidence lab](weights-of-evidence-lab.ipynb): estimate binary evidence weights, map model-based posterior odds and inspect how duplicated evidence and pseudocount choices affect results.
 
 ### Optimization and location science
 
