@@ -49,7 +49,14 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a Shapely-backed polygon-validity inspection and explicit-repair example with tests and an intern walkthrough. This demonstrates the API workflow, not a from-scratch validity algorithm.
 - [x] Add a static 2D k-d tree teaching implementation, deterministic tie handling, brute-force differential tests and an intern walkthrough.
 - [x] Add a bucket point-region quadtree with explicit split-boundary, root-extent and duplicate-coordinate rules, brute-force differential tests, an intern walkthrough and an executable notebook. The implementation remains a scoped teaching index, not a production geospatial index.
-- [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees, space-filling curves, advanced nearest-neighbour queries, proximity and networks.
+- [x] Add line simplification dossiers and tested open-polyline baselines for Douglas–Peucker and Visvalingam–Whyatt.
+- [x] Add an offsetting dossier and a tested Shapely/GEOS wrapper, explicitly distinguished from Clipper2.
+- [x] Add proximity graph definitions and tested small-input baselines for Gabriel, relative neighbourhood and Euclidean MST.
+- [x] Add a planar point-location dossier for slab and trapezoidal-map structures; implementation remains open.
+- [x] Add shortest-path family research and tested Dijkstra/A* baselines.
+- [ ] Implement topology-preserving polygon simplification, snap rounding, Clipper2-specific offsets, Yao and beta-skeleton variants, and a true trapezoidal-map locator.
+- [ ] Extend network routing with bidirectional Dijkstra, ALT, contraction hierarchies, turn restrictions, time-dependent routing and transit algorithms.
+- [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
 
