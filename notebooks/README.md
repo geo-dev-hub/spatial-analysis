@@ -12,7 +12,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Voronoi and Delaunay lab](voronoi-delaunay-lab.ipynb): compare nearest-site regions with their Delaunay dual, inspect equidistant Voronoi vertices and check empty circumcircles.
 - [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare line simplifiers, inspect offsets and proximity graphs, and compare Dijkstra with A*.
 
-- [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.
+- [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.\n- [Coverage simplification and advanced routing lab](coverage-simplification-routing-lab.ipynb): simplify a shared-edge polygon coverage, then compare Dijkstra, bidirectional Dijkstra and ALT A* on a directed graph.
 
 ### Spatial indexing
 
@@ -57,6 +57,6 @@ The links below point to notebooks already available on the default branch. Newe
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all fifteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all sixteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
