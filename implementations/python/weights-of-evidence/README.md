@@ -35,6 +35,6 @@ This package estimates positive and negative weights for binary spatial evidence
 
 ## Important limitations
 
-The additive evidence model assumes conditional independence of evidence themes given event presence and given event absence. This package does not test that assumption, correct biased exploration effort, derive binary thresholds, resample spatial layers or perform spatial cross-validation. It is not a production prospectivity system and should not be used to claim calibrated discovery probabilities without further validation.
+The additive WofE model requires evidence themes to be approximately conditionally independent with respect to the target-event occurrence pattern, as defined in the WofE literature. This is not a claim of ordinary mutual independence in both event and non-event populations. This package does not test that assumption, correct biased exploration effort, derive binary thresholds, resample spatial layers or perform spatial cross-validation. It is not a production prospectivity system and should not be used to claim calibrated discovery probabilities without further validation.
 
 See the [method lesson](../../../methods/weights-of-evidence.md) and [intern walkthrough](implementation-walkthrough.md).
