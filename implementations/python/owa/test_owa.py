@@ -32,6 +32,7 @@ def test_orness_endpoints_and_neutral_vector():
     assert orness([1, 0, 0]) == pytest.approx(1)
     assert orness([0, 0, 1]) == pytest.approx(0)
     assert orness([1/3]*3) == pytest.approx(0.5)
+    assert orness([1]) is None
 
 
 def test_strict_nodata_and_invalid_inputs():
