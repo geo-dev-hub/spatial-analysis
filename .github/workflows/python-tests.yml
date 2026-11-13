@@ -191,6 +191,9 @@ jobs:
           - example: crs-transform
             directory: implementations/python/crs-transform
             pythonpath: ""
+          - example: triple-collocation
+            directory: implementations/python/triple-collocation
+            pythonpath: ""
 
     steps:
       - name: Check out repository
