@@ -32,6 +32,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 ## Raster operations
 
 - [Euclidean distance transform](raster/euclidean-distance-transform.md) — calculate centre-to-centre distance from every grid cell to the nearest target cell.
+- [D8 flow direction](raster/d8-flow-direction.md) — assign each DEM cell to its steepest downslope neighbour.
 
 ## Geostatistics
 
