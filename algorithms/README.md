@@ -65,6 +65,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 ## Spatial statistics
 
+- [Clark–Evans nearest-neighbour index](statistics/clark-evans.md) — compare observed mean nearest-neighbour spacing with a homogeneous Poisson reference.
 - [Kernel density estimation for point patterns](statistics/point-pattern-kde.md) — estimate a fixed-bandwidth planar Gaussian intensity surface and understand bandwidth and edge effects.
 
 
