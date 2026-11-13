@@ -45,6 +45,8 @@ Each implementation should state:
 
 ### Remote sensing
 
+- [Marine heatwave detection lab](../notebooks/marine-heatwave-detection-lab.ipynb): a visual synthetic daily series, event intervals, event metrics and missing-observation experiment.
+
 - [NDVI](python/spectral-indices/README.md): NumPy-based Normalised Difference Vegetation Index with explicit NoData and quality-mask handling, tests and an [intern walkthrough](python/spectral-indices/implementation-walkthrough.md).
 
 ### Raster analysis
