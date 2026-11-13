@@ -107,6 +107,10 @@ def beta_skeleton(points: Sequence[Sequence[float]], beta: float = 2.0
     if not isfinite(beta) or not 1.0 <= beta <= 2.0:
         raise ValueError("this lune-based implementation requires beta in [1, 2]")
     pts = _normalise(points)
+    if beta == 1.0:
+        return gabriel_graph(pts)
+    if beta == 2.0:
+        return relative_neighborhood_graph(pts)
     edges = []
     for i in range(len(pts)):
         for j in range(i + 1, len(pts)):
@@ -117,13 +121,14 @@ def beta_skeleton(points: Sequence[Sequence[float]], beta: float = 2.0
             c1 = (u[0] + beta * dx / 2.0, u[1] + beta * dy / 2.0)
             c2 = (v[0] - beta * dx / 2.0, v[1] - beta * dy / 2.0)
             radius2 = radius * radius
+            boundary_epsilon = 1e-12 * max(1.0, radius2)
             blocked = False
             for k, w in enumerate(pts):
                 if k in (i, j):
                     continue
                 d1 = (w[0] - c1[0]) ** 2 + (w[1] - c1[1]) ** 2
                 d2 = (w[0] - c2[0]) ** 2 + (w[1] - c2[1]) ** 2
-                if d1 < radius2 and d2 < radius2:
+                if d1 < radius2 - boundary_epsilon and d2 < radius2 - boundary_epsilon:
                     blocked = True
                     break
             if not blocked:
