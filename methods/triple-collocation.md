@@ -14,7 +14,7 @@ By the end of this lesson, you should be able to:
 - interpret negative or unstable estimates as diagnostics, not values to clip;
 - explain why shared retrieval inputs can invalidate the independence assumption.
 
-## 1. The measurement model
+## How the calculation fits together\n\n```mermaid\nflowchart TD\n  A[Three products] --> B[Match space and time]\n  B --> C[Apply quality masks]\n  C --> D[One common complete-case sample]\n  D --> E[Sample covariance matrix]\n  E --> F[Three error-variance estimates]\n  F --> G[Inspect assumptions and diagnostics]\n```\n\nThe workflow is only as defensible as the matching and error-independence assumptions.\n\n## 1. The measurement model
 
 For three systems, write
 
