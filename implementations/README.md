@@ -36,6 +36,7 @@ Each implementation should state:
 
 - [Euclidean distance transform](python/raster-distance/README.md): a SciPy-backed exact Euclidean distance wrapper with anisotropic cell spacing, tests and an [intern walkthrough](python/raster-distance/implementation-walkthrough.md).
 - [D8 flow direction](python/d8-flow/README.md): a tested strict steepest-descent raster method with ESRI direction codes, rectangular cell spacing and an [intern walkthrough](python/d8-flow/implementation-walkthrough.md).
+- [D8 flow accumulation](python/d8-flow-accumulation/README.md): a topological O(n) accumulation routine with weighted contributions, explicit NoData/domain-exit policy, cycle detection, tests and an [intern walkthrough](python/d8-flow-accumulation/implementation-walkthrough.md).
 
 ### Geostatistics and interpolation
 
