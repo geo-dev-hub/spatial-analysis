@@ -8,27 +8,27 @@ Let $A$ and $B$ be two geometries in the same coordinate space.
 
 **Intersection** keeps what belongs to both:
 
-$
+$$
 A \cap B
-$
+$$
 
 **Union** keeps what belongs to either:
 
-$
+$$
 A \cup B
-$
+$$
 
 **Difference** keeps what belongs to the first geometry but not the second:
 
-$
+$$
 A \setminus B
-$
+$$
 
 **Symmetric difference** keeps what belongs to one geometry but not both:
 
-$
+$$
 (A \setminus B) \cup (B \setminus A)
-$
+$$
 
 These are set-theoretic definitions. They do not by themselves specify how a computer should construct a valid output geometry.
 
@@ -99,21 +99,21 @@ These values provide a simple arithmetic check, not a complete geometry validati
 
 For valid planar polygon inputs with ordinary area semantics, useful checks include:
 
-$
+$$
 \operatorname{area}(A \cup B) +
 \operatorname{area}(A \cap B)
 =
 \operatorname{area}(A) + \operatorname{area}(B)
-$
+$$
 
 and
 
-$
+$$
 \operatorname{area}(A \setminus B) +
 \operatorname{area}(A \cap B)
 =
 \operatorname{area}(A)
-$
+$$
 
 These identities are useful tests for area, but they are not sufficient to prove that the output geometry is topologically correct. Different incorrect geometries can have the same area.
 
