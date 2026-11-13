@@ -44,6 +44,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
+- [ ] Review and verify the new polygon-validity, polygon-clipping and overlay-operation drafts; add edge-case tests and runnable examples.
 - [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [ ] Add domain paths only when their methods and examples are ready.
@@ -91,6 +92,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Ten notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Ten notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. Three follow-on geometry drafts now address validity, clipping families and overlay operations, with a connected exercise set; these drafts still require technical review, implementation tests and rendered-page checks. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
