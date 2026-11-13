@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+<title id="title">Inverse distance weighting gives nearer observations greater influence</title>
+<desc id="desc">Three observed points at distances one, one and three from a target. The first two have larger influence circles and the farthest has a smaller influence circle.</desc>
+<rect width="760" height="300" fill="#ffffff"/>
+<text x="380" y="32" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">Nearby observations carry more weight</text>
+<line x1="135" y1="150" x2="625" y2="150" stroke="#777" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="180" cy="150" r="43" fill="#dcece8" stroke="#237a68" stroke-width="2"/>
+<circle cx="380" cy="150" r="43" fill="#dcece8" stroke="#237a68" stroke-width="2"/>
+<circle cx="580" cy="150" r="21" fill="#f4e3d7" stroke="#b55c36" stroke-width="2"/>
+<circle cx="280" cy="150" r="8" fill="#222"/>
+<text x="180" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#173c34">10</text>
+<text x="380" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#173c34">20</text>
+<text x="580" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#713b25">40</text>
+<text x="280" y="183" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#222">Target</text>
+<text x="180" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#333">Distance 1</text>
+<text x="380" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#333">Distance 1</text>
+<text x="580" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#333">Distance 3</text>
+<text x="380" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555">Illustrative influence; not a map scale or exact weight-area encoding</text>
+</svg>
