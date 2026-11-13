@@ -50,3 +50,8 @@ def test_invalid_heuristic_rejected_when_node_is_expanded():
     with pytest.raises(ValueError):
         astar({"A": [("B", 1)], "B": []}, "A", "B",
               lambda node, _goal: -1 if node == "B" else 0)
+
+
+def test_invalid_start_heuristic_rejected_even_when_start_is_goal():
+    with pytest.raises(ValueError):
+        astar({"A": []}, "A", "A", lambda _node, _goal: float("nan"))
