@@ -38,7 +38,7 @@ def test_two_equal_second_order_tributaries_create_third_order():
     # which then meet at a third-order confluence.
     directions = np.array([
         [-1, -1, -1, 4, -1],
-        [-1, 4, -1, 2, 16],
+        [-1, 4, -1, 8, 16],
         [1, 1, 1, -1, -1],
         [-1, -1, 0, -1, -1],
     ])
