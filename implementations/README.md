@@ -35,6 +35,7 @@ Each implementation should state:
 ### Raster analysis
 
 - [Euclidean distance transform](python/raster-distance/README.md): a SciPy-backed exact Euclidean distance wrapper with anisotropic cell spacing, tests and an [intern walkthrough](python/raster-distance/implementation-walkthrough.md).
+- [D8 flow direction](python/d8-flow/README.md): a tested strict steepest-descent raster method with ESRI direction codes, rectangular cell spacing and an [intern walkthrough](python/d8-flow/implementation-walkthrough.md).
 
 ### Geostatistics and interpolation
 
@@ -67,7 +68,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all twenty-nine Python example packages and the Clipper2 C# smoke test, and execute all twenty-two learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all thirty Python example packages and the Clipper2 C# smoke test, and execute all twenty-three learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
