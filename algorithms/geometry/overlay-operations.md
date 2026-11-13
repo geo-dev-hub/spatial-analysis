@@ -95,6 +95,12 @@ For this example, the expected areas are:
 
 These values provide a simple arithmetic check, not a complete geometry validation. Add assertions for the output geometry, component count and validity in the implementation suite.
 
+## Runnable implementation and visual lab
+
+The repository includes a [tested Shapely/GEOS overlay package](../../implementations/python/polygon-overlay/README.md), with an [intern walkthrough](../../implementations/python/polygon-overlay/implementation-walkthrough.md) and a [visual notebook](../../notebooks/polygon-overlay-lab.ipynb). The package checks valid non-empty Polygon and MultiPolygon inputs, exposes all four operations, allows an explicit precision grid, and reports the actual output type and dimension. It deliberately delegates noding and topology construction to GEOS; it is not a from-scratch overlay algorithm.
+
+The test suite includes overlap, disjointness, containment with a hole, MultiPolygon inputs, shared-edge and shared-point contacts, invalid inputs, and precision-grid validation.
+
 ## Invariants worth checking
 
 For valid planar polygon inputs with ordinary area semantics, useful checks include:
