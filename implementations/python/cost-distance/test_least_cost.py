@@ -25,6 +25,14 @@ def test_nodata_is_a_barrier_and_unreachable_valid_cells_are_infinite():
     assert np.isinf(result[1,2])
     assert np.isnan(result[1,1])
 
+def test_nonuniform_endpoint_costs_are_integrated_by_arithmetic_mean():
+    result=least_cost_distance([[1,3,1]],[(0,0)],connectivity=4)
+    np.testing.assert_allclose(result,[[0,2,4]])
+
+def test_non_finite_cells_are_barriers():
+    result=least_cost_distance([[1,np.inf,1]],[(0,0)],connectivity=4)
+    assert np.isinf(result[0,2])
+
 def test_multiple_sources_choose_lowest_accumulated_cost():
     result=least_cost_distance(np.ones((1,5)),[(0,0),(0,4)],connectivity=4)
     np.testing.assert_allclose(result,[[0,1,2,1,0]])

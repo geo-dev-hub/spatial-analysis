@@ -1,6 +1,6 @@
 # Raster least-cost distance
 
-This implementation runs multi-source Dijkstra on a regular raster grid. Each valid cell stores a non-negative cost per horizontal distance unit. NaN cells are barriers.
+This implementation runs multi-source Dijkstra on a regular raster grid. Each valid cell stores a non-negative cost per horizontal distance unit. All non-finite cells (NaN and positive/negative infinity) are barriers.
 
 For adjacent cells u and v, the edge cost is the mean endpoint cost multiplied by the physical step length:
 

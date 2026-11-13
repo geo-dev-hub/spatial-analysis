@@ -1,16 +1,17 @@
-# Raster hydrology foundations: from elevation to contributing area
+# Raster terrain and hydrology foundations: from elevation to contributing area
 
-**Status:** D8 flow direction, accumulation, single-outlet watershed delineation, and Strahler/Shreve stream ordering now have tested teaching implementations; terrain conditioning, channel extraction and alternative flow-routing methods remain open.
+**Status:** First audited terrain and drainage methods now have tested teaching implementations: Horn slope/aspect, D8 direction and accumulation, single-outlet watershed delineation, stream ordering, depression filling, Euclidean distance and raster least-cost distance. Terrain conditioning, channel extraction and alternative flow-routing methods remain open.
 
 ## The workflow
 
-A basic raster drainage workflow has several distinct stages. Do not collapse them into a single black-box operation:
+A raster terrain workflow has distinct stages. Do not collapse them into a single black-box operation:
 
 1. Inspect the DEM, its coordinate system, vertical units, cell dimensions, alignment and NoData mask.
 2. Decide how to handle depressions, flats and boundary cells. A raw DEM may contain both real closed basins and artefacts.
-3. Derive a flow-direction raster using a declared routing model.
-4. Accumulate upstream contributions.
-5. Extract a channel network or delineate a watershed only after specifying the relevant thresholds and outlet.
+3. Derive local terrain derivatives such as slope and aspect.
+4. Derive a flow-direction raster using a declared routing model.
+5. Accumulate upstream contributions.
+6. Extract a channel network or delineate a watershed only after specifying thresholds and an outlet.
 
 ## Before flow direction: condition the DEM
 
@@ -21,38 +22,43 @@ Read [Priority-Flood depression filling](../algorithms/raster/priority-flood.md)
 ~~~mermaid
 flowchart TD
   A[Original DEM] --> B[Condition depressions]
-  B --> C[Derive D8 flow directions]
-  C --> D[Accumulate upstream contributions]
-  D --> E[Choose a channel-initiation rule]
-  E --> F[Build a stream mask]
-  F --> G[Calculate stream order]
-  C --> H[Select a pour point]
-  H --> I[Delineate contributing area]
+  B --> C[Calculate slope and aspect]
+  C --> D[Derive D8 flow directions]
+  D --> E[Accumulate upstream contributions]
+  E --> F[Choose a channel-initiation rule]
+  F --> G[Build a stream mask]
+  G --> H[Calculate stream order]
+  D --> I[Select a pour point]
+  I --> J[Delineate contributing area]
 ~~~
 
-The diagram shows dependencies, not a single mandatory software command. The stream threshold, outlet and conditioning policy are analytical choices.
+The diagram shows dependencies, not a single mandatory software command. Stream thresholds, pour points and conditioning policies are analytical choices.
 
-## 1. Understand D8 direction
+## 1. Derive terrain slope and aspect
+
+Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The method estimates local derivatives; D8 routing makes a separate discrete choice of one downstream raster neighbour. The Horn baseline requires a regular projected grid, explicit horizontal spacing and a vertical-unit conversion factor.
+
+## 2. Understand D8 direction
 
 Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [direction notebook](../notebooks/d8-flow-direction-lab.ipynb). It chooses the steepest positive slope among eight neighbours, with rectangular cell spacing.
 
 The teaching baseline does not resolve flats or fill depressions. A code of zero can therefore indicate a pit or a flat cell, not necessarily a real hydrological outlet.
 
-## 2. Understand accumulation
+## 3. Understand accumulation
 
 Read [D8 flow accumulation](../algorithms/raster/d8-flow-accumulation.md) and run the [accumulation notebook](../notebooks/d8-flow-accumulation-lab.ipynb). It propagates cell counts or supplied weights through an existing D8 direction graph in topological order.
 
 Accumulation includes the cell itself. It is not discharge unless the input contributions and time basis justify that interpretation.
 
-## 3. Delineate a contributing area
+## 4. Delineate a contributing area
 
 Read [Single-outlet watershed delineation](../algorithms/raster/watershed-delineation.md) and run the [watershed notebook](../notebooks/watershed-delineation-lab.ipynb). It traces upstream cells whose D8 paths reach a selected outlet. The outlet cell is explicit; automatic snapping is deliberately not hidden inside the operation.
 
-## 4. Describe the channel network
+## 5. Describe the channel network
 
 Read [Stream ordering](../algorithms/raster/stream-order.md) and run the [stream-order notebook](../notebooks/stream-order-lab.ipynb). It compares Strahler order, which increases only when equal highest-order tributaries meet, with Shreve magnitude, which sums headwater contributions. The stream mask is an explicit input; channel extraction and threshold selection are separate modelling decisions.
 
-## 5. Compare routing assumptions
+## 6. Compare routing assumptions
 
 D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuous direction and distributes flow across adjacent downslope cells. Multiple-flow-direction methods distribute flow among several downslope neighbours according to their gradients.
 
@@ -60,20 +66,17 @@ These methods produce different contributing-area patterns. They are not just di
 
 ## 7. Compare Euclidean and least-cost distance
 
-Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time.
-
-## 6. Derive terrain slope and aspect
-
-Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The derivative calculation is distinct from D8 flow routing: it estimates local gradient and downslope direction, while D8 chooses one downstream raster neighbour.
+Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time. This differs from the [Euclidean distance transform](../algorithms/raster/euclidean-distance-transform.md), which measures straight-line distance to a target.
 
 ## Exercises
 
-1. Create a simple plane and predict the D8 directions.
-2. Make a pit and a flat. Explain why the baseline leaves both unresolved.
+1. Create a simple plane and predict the Horn slope, aspect and D8 directions.
+2. Make a pit and a flat. Explain why the baseline does not resolve either automatically.
 3. Draw a confluence and calculate accumulation by hand.
 4. Supply weighted contributions and state their units.
 5. Explain how a clipped raster boundary differs from a true basin outlet.
-6. Describe why geographic-coordinate cell areas vary spatially.
+6. Compare Euclidean distance and least-cost distance on a surface with a high-cost barrier.
+7. Describe why geographic-coordinate cell areas and distances vary spatially.
 
 ## What remains
 
