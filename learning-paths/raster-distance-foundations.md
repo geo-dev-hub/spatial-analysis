@@ -32,6 +32,10 @@ Euclidean distance ignores barriers and movement costs. A least-cost path answer
 
 The teaching wrapper does not infer NoData semantics. Decide whether invalid cells should be ignored, masked or treated as barriers before interpreting a real raster.
 
+## 4. Follow terrain downhill with D8
+
+Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [interactive lab](../notebooks/d8-flow-direction-lab.ipynb). The method chooses the steepest downslope neighbour among eight adjacent cells. Pay attention to cell dimensions, sinks, flats and NoData. This baseline does not perform depression filling or flow accumulation.
+
 ## Exercises
 
 1. Calculate the distance to a target for a cell two rows and three columns away.
