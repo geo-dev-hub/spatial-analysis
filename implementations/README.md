@@ -17,6 +17,8 @@ Each implementation should state:
 
 ### Geometry and computational geometry
 
+- [Exact orientation predicate](python/exact-orientation/README.md): rational-arithmetic reference sign test for 2D orientation, including near-degenerate float regression tests and an [intern walkthrough](python/exact-orientation/implementation-walkthrough.md). This is an exact reference implementation, not adaptive expansion arithmetic; the [visual lab](../notebooks/exact-orientation-lab.ipynb) compares it with a naive determinant.
+
 - [Polygon intersection with Python and Shapely](python/polygon-intersection/README.md): a library-backed overlay operation with nine tests and a [step-by-step walkthrough](python/polygon-intersection/implementation-walkthrough.md).
 - [Point in polygon with Python](python/point-in-polygon/README.md): a transparent ray-crossing implementation with 12 tests and a [step-by-step walkthrough](python/point-in-polygon/implementation-walkthrough.md).
 - [Segment intersection with Python](python/segment-intersection/README.md): exact integer orientation tests and rational intersection coordinates, with 11 tests and a [step-by-step walkthrough](python/segment-intersection/implementation-walkthrough.md).
