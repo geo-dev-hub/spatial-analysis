@@ -16,7 +16,7 @@ A basic raster drainage workflow has several distinct stages. Do not collapse th
 
 Read [Priority-Flood depression filling](../algorithms/raster/priority-flood.md) and run the [Priority-Flood notebook](../notebooks/priority-flood-lab.ipynb). It raises depressions to their lowest spill level and returns a separate fill-depth layer. The example uses valid raster-edge and NoData-adjacent cells as outlets. Filling is not breaching, and it does not resolve the flats that may remain.
 
-## 1. Understand D8 direction
+### The stages fit together\n\n~~~mermaid\nflowchart TD\n  A[Original DEM] --> B[Condition depressions]\n  B --> C[Derive D8 flow directions]\n  C --> D[Accumulate upstream contributions]\n  D --> E[Choose a channel-initiation rule]\n  E --> F[Build a stream mask]\n  F --> G[Calculate stream order]\n  C --> H[Select a pour point]\n  H --> I[Delineate contributing area]\n~~~\n\nThe diagram shows dependencies, not a single mandatory software command. The stream threshold, outlet and conditioning policy are analytical choices.\n\n## 1. Understand D8 direction
 
 Read [D8 flow direction](../algorithms/raster/d8-flow-direction.md) and run the [direction notebook](../notebooks/d8-flow-direction-lab.ipynb). It chooses the steepest positive slope among eight neighbours, with rectangular cell spacing.
 
