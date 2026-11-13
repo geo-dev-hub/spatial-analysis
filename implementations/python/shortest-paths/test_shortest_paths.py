@@ -87,3 +87,7 @@ def test_floyd_warshall_detects_negative_cycle():
     graph = {"A": [("B", 1)], "B": [("A", -2)]}
     with pytest.raises(ValueError, match="negative-weight cycle"):
         floyd_warshall(graph)
+
+
+def test_bellman_ford_handles_missing_source_and_target_keys():
+    assert bellman_ford({}, "source", "target") == (None, float("inf"))
