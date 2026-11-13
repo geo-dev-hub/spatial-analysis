@@ -36,6 +36,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) and [spatial clustering](learning-paths/spatial-clustering-foundations.md) |
 | Estimating values between observations | [Spatial interpolation foundations](learning-paths/geostatistics-foundations.md) |
 | Working with raster distances | [Raster distance foundations](learning-paths/raster-distance-foundations.md) |
+| Summarising raster neighbourhoods | [Focal raster statistics](algorithms/raster/focal-statistics.md) |
 | Understanding how terrain drains | [Raster hydrology foundations](learning-paths/raster-hydrology-foundations.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
