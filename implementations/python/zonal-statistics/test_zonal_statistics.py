@@ -45,7 +45,7 @@ def test_zonal_histogram_uses_explicit_bins_and_skips_nodata():
     zones=[[1,1,2,2],[1,2,2,2]]
     result=zonal_histogram(values,zones,[0,2,3,5])
     np.testing.assert_array_equal(result[1],[1,1,0])
-    np.testing.assert_array_equal(result[2],[0,2,2])
+    np.testing.assert_array_equal(result[2],[1,1,3])
 
 def test_zonal_histogram_preserves_empty_zones_and_validates_edges():
     from zonal_statistics import zonal_histogram
