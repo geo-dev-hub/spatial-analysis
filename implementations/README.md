@@ -61,6 +61,10 @@ Each implementation should state:
 
 - [Planar Gaussian KDE](python/point-pattern-kde/README.md): fixed-bandwidth intensity estimation with explicit units, bounds and edge-effect caveats, tests and an [intern walkthrough](python/point-pattern-kde/implementation-walkthrough.md).
 
+### Decision support
+
+- [Weighted linear combination](python/weighted-overlay/README.md): combine aligned, standardised raster criteria with relative weights and an explicit eligibility mask; includes strict NoData handling, tests, an [intern walkthrough](python/weighted-overlay/implementation-walkthrough.md) and an [interactive suitability lab](../notebooks/weighted-linear-combination-lab.ipynb).
+
 ### Spatial statistics
 
 - [Global Moran's I in Python](python/global-morans-i/README.md): a dependency-free dense-matrix calculation, row-standardisation helper and 13 tests. It computes the statistic only; use a spatial statistics library for inference. Follow the [Global Moran's I walkthrough](python/global-morans-i/implementation-walkthrough.md).
