@@ -4,7 +4,7 @@
 - **Source pages:** 6–7
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Euclidean distance transform](../../algorithms/raster/euclidean-distance-transform.md) (first audited raster operation; remaining entries are still unverified)
+- **Current canonical records:** [Euclidean distance transform](../../algorithms/raster/euclidean-distance-transform.md); [D8 flow direction](../../algorithms/raster/d8-flow-direction.md) (first audited raster distance and flow-direction operations; remaining entries are still unverified)
 
 The source groups raster operations, terrain analysis, hydrological modelling, geomorphology and coastal methods. The list includes algorithms, physical models, metrics, software packages, data formats and applied workflows. Preserve those differences during research.
 
@@ -62,7 +62,7 @@ The source groups raster operations, terrain analysis, hydrological modelling, g
 
 ## First audited lesson
 
-The [Euclidean distance transform lesson](../../algorithms/raster/euclidean-distance-transform.md) defines centre-to-centre distance on a regular grid, including non-square cell spacing. A tested SciPy-backed wrapper and interactive notebook expose the CRS, cell-size and NoData decisions. This is not cost-distance or least-cost routing.
+The [Euclidean distance transform lesson](../../algorithms/raster/euclidean-distance-transform.md) defines centre-to-centre distance on a regular grid, including non-square cell spacing. The [D8 flow-direction lesson](../../algorithms/raster/d8-flow-direction.md) adds strict steepest-descent assignment with explicit direction codes, cell spacing and NoData rules. Both have tested implementations and interactive notebooks. These are scoped baselines: Euclidean distance is not cost-distance, and the D8 example does not fill depressions or resolve flats.
 
 ## Decisions for the next pass
 
