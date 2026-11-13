@@ -16,7 +16,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Line simplification](geometry/simplification.md) — compare Douglas–Peucker maximum-deviation and Visvalingam–Whyatt effective-area generalisation, with tested baselines.
 - [Polygon offsetting](geometry/offsetting.md) — distinguish geometric offsets from clipping and compare join, cap and precision behaviour.
 - [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
-- [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps.
+- [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps, with a tested restricted static slab locator.
 
 ## Networks and routing
 
