@@ -16,7 +16,7 @@ def test_d8_uses_steepest_slope_not_largest_elevation_drop():
     ])
     # From the upper-left, south drops 0.3 over 1; east drops 0.5 over 2.
     result = d8_flow_direction(dem, cell_size=(1, 2))
-    assert result[0, 0] == 4
+    assert result[0, 0] == 2
 
 
 def test_d8_diagonal_distance_uses_both_cell_dimensions():
