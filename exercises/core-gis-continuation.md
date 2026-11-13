@@ -73,6 +73,7 @@ Create a directed graph with a short but slow route and a longer but faster rout
 - Add a turn restriction and explain why a node-only state may be insufficient.
 - Add a negative edge without a negative cycle and compare Bellman–Ford with the non-negative algorithms.
 - Build an all-pairs distance matrix with Floyd–Warshall and add a negative cycle to test detection.
+- Use Yen's algorithm to find up to four distinct loopless alternatives; verify path uniqueness, cost ordering and behaviour when fewer than k paths exist.
 
 ## 8. Model turn-aware and time-dependent routing
 
