@@ -68,6 +68,10 @@ These methods produce different contributing-area patterns. They are not just di
 
 Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time. This differs from the [Euclidean distance transform](../algorithms/raster/euclidean-distance-transform.md), which measures straight-line distance to a target.
 
+## 8. Calculate a topographic wetness index
+
+Read [Topographic wetness index](../algorithms/raster/topographic-wetness-index.md). The formula combines specific catchment area and local slope. The supplied area must already be converted to specific catchment area in metres; raw flow-accumulation counts are not interchangeable. A positive slope floor is required to handle flats.
+
 ## Exercises
 
 1. Create a simple plane and predict the Horn slope, aspect and D8 directions.

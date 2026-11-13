@@ -24,3 +24,7 @@ See the [canonical lesson](../../../algorithms/raster/slope-aspect.md) and [inte
 ## Local hillshade
 
 The package also includes [hillshade_from_slope_aspect](hillshade.py), which converts slope and downslope aspect into normalized local illumination using a declared sun azimuth and altitude. It assigns flat cells illumination equal to the sine of sun altitude. It does not cast terrain shadows or model atmospheric scattering, multidirectional illumination or solar radiation. See [hillshade.md](../../../algorithms/raster/hillshade.md) and the tests in test_hillshade.py.
+
+## Topographic wetness index
+
+The companion terrain_indices module calculates the conventional logarithmic TWI from supplied specific catchment area (metres) and slope (degrees). It requires an explicit positive slope floor for flats and masks invalid/non-positive areas. This is a terrain index, not a soil-moisture model. See [the canonical lesson](../../../algorithms/raster/topographic-wetness-index.md).

@@ -94,6 +94,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Stream ordering](raster/stream-order.md) — compare Strahler order and Shreve magnitude.
 - [Terrain slope and aspect](raster/slope-aspect.md) — estimate local derivatives with Horn's 3×3 operator.
 - [Local hillshade](raster/hillshade.md) — derive normalized illumination from slope, aspect and a declared sun position.
+- [Topographic wetness index](raster/topographic-wetness-index.md) — combine specific catchment area and slope into a relative terrain index.
 - [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
 ## A connected place to start

@@ -57,3 +57,13 @@ $$I=\sin(h)\cos(\theta)+\cos(h)\sin(\theta)\cos(A-\alpha)$$
 where α is downslope aspect, clockwise from north. The implementation clips the result to [0, 1]. A flat surface has no unique aspect; for zero slope it uses I=sin(h). Missing derivative values remain missing.
 
 This is a local illumination model only. It does not determine whether another ridge blocks the light, and it is not a solar-radiation model.
+
+## 8. Calculate the topographic wetness index
+
+The terrain_indices module applies:
+
+$$\mathrm{TWI}=\ln\left(\frac{a}{\tan\beta}\right)$$
+
+where a is specific catchment area in metres and β is slope in radians. It accepts area and slope as aligned arrays. The input area is not raw cell-count accumulation: it must already be converted to specific catchment area using a declared cell geometry and flow-routing convention.
+
+A zero slope makes the denominator zero. The function therefore uses a positive, caller-declared slope floor (default 0.1°). This parameter affects flat and near-flat cells and must be reported. The index is not a direct soil-moisture measurement.
