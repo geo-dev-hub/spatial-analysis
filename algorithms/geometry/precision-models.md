@@ -43,9 +43,13 @@ Use a geometry pair whose boundaries nearly meet. Compare:
 
 Record validity, area, component count, coordinate movement and whether the result matches the intended model. Do not assume one result is universally correct.
 
+## Runnable fixed-grid example
+
+The [precision-grid package](../../implementations/python/precision-grid/README.md) wraps Shapely/GEOS coordinate precision reduction and fixed-grid intersection. Its tests cover coordinate quantisation, fixed-grid intersection at a crossing and collapse of a narrow polygon. The [intern walkthrough](../../implementations/python/precision-grid/implementation-walkthrough.md) explains the precision contract.
+
 ## Status
 
-This dossier distinguishes the concepts and gives a reproducible research plan. A dedicated implementation of a snap-rounding noder, including its hot-pixel construction and correctness tests, remains open. The current polygon overlay package uses GEOS overlay and precision-grid options; it is not a from-scratch snap-rounding implementation.
+This dossier distinguishes the concepts and gives a reproducible research plan. Fixed-grid precision operations now have a tested teaching wrapper. A dedicated implementation of a snap-rounding noder, including its hot-pixel construction and arrangement-level correctness tests, remains open. The current wrapper is not a from-scratch snap-rounding implementation.
 
 ## References
 
