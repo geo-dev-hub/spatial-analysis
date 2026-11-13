@@ -74,6 +74,18 @@ jobs:
           - example: voronoi-delaunay
             directory: implementations/python/voronoi-delaunay
             pythonpath: ""
+          - example: line-simplification
+            directory: implementations/python/line-simplification
+            pythonpath: ""
+          - example: polygon-offsetting
+            directory: implementations/python/polygon-offsetting
+            pythonpath: ""
+          - example: proximity-graphs
+            directory: implementations/python/proximity-graphs
+            pythonpath: ""
+          - example: shortest-paths
+            directory: implementations/python/shortest-paths
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -148,3 +160,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/polygon-overlay-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-hull-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/voronoi-delaunay-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/core-gis-algorithms-lab.ipynb
