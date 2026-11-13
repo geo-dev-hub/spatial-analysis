@@ -18,7 +18,7 @@ $$
 
 An implementation can build reverse adjacency lists and perform a depth-first or breadth-first traversal. Every cell is visited at most once, so the traversal is O(n) in the number of valid cells, with O(n) storage.
 
-## Direction codes and domain boundaries
+## Algorithm at a glance\n\n~~~mermaid\nflowchart TD\n  A[Choose valid outlet cell] --> B[Build reverse flow links]\n  B --> C[Push outlet onto traversal stack]\n  C --> D[Visit upstream neighbours]\n  D --> E[Add unseen neighbours to basin]\n  E --> F{Stack empty?}\n  F -- No --> D\n  F -- Yes --> G[Return contributing-area mask]\n~~~\n\n## Direction codes and domain boundaries
 
 The [Python implementation](../../implementations/python/watershed-delineation/README.md) uses ESRI D8 codes: E=1, SE=2, S=4, SW=8, W=16, NW=32, N=64, NE=128, terminal=0 and invalid/NoData=-1.
 
