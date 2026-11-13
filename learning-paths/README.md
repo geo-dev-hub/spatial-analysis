@@ -51,6 +51,8 @@ If you want to understand whether nearby places have similar values, follow the 
 
 If you want to understand how a GIS searches large collections of features, start with [spatial indexing](spatial-indexing.md). The first lessons explain bounding boxes, STR-packed R-trees and indexed spatial joins.
 
+If you want to understand how routes and other network problems are solved, start with [network analysis](network-analysis.md). The first available lesson is Dijkstra's algorithm, with a tested implementation and an interactive priority-queue lab.
+
 ## The collection keeps growing
 
 Each method has its own permanent page. New weekly editions introduce and explore topics, while the learning paths bring those topics together in useful sequences. That means the order in which something was published does not decide the order in which you have to learn it.
