@@ -96,6 +96,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Local hillshade](raster/hillshade.md) — derive normalized illumination from slope, aspect and a declared sun position.
 - [Topographic wetness index](raster/topographic-wetness-index.md) — combine specific catchment area and slope into a relative terrain index.
 - [Raster resampling](raster/resampling.md) — compare nearest-neighbour and bilinear interpolation, including NoData policies.
+- [Zonal statistics](raster/zonal-statistics.md) — summarize aligned raster values by integer zone labels.
 - [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
 ## A connected place to start

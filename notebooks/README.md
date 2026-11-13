@@ -45,6 +45,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Slope and aspect lab](slope-aspect-lab.ipynb): calculate Horn slope and downslope aspect, derive local hillshade and topographic wetness index, and inspect cell spacing, flat cells and NoData masking.
 - [Raster cost-distance lab](cost-distance-lab.ipynb): compare 4/8-neighbour Dijkstra, weighted barriers, cell spacing and unreachable cells.
 - [Raster resampling lab](raster-resampling-lab.ipynb): compare nearest neighbour and bilinear interpolation for categorical and continuous surfaces, including NoData policies.
+- [Zonal statistics lab](zonal-statistics-lab.ipynb): summarize raster values by zone and inspect NoData and empty-zone behavior.
 
 ### Geostatistics and interpolation
 

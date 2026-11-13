@@ -79,6 +79,10 @@ Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [
 
 Read [Raster resampling](../algorithms/raster/resampling.md) and run the [resampling notebook](../notebooks/raster-resampling-lab.ipynb). Nearest neighbour preserves class labels; bilinear interpolation estimates continuous values from four neighbours. The teaching example changes array shape over a fixed extent and is not a CRS-aware warp.
 
+## 10. Summarize raster values by zone
+
+Read [Zonal statistics](../algorithms/raster/zonal-statistics.md) and run the [zonal statistics notebook](../notebooks/zonal-statistics-lab.ipynb). The operation groups values by an aligned integer zone raster; it is distinct from focal statistics, which use moving neighbourhoods.
+
 ## Exercises
 
 1. Create a simple plane and predict the Horn slope, aspect and D8 directions.
