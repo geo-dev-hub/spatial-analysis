@@ -35,6 +35,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
 | Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
 | Estimating values between observations | [Interpolation and geostatistics](learning-paths/interpolation-and-geostatistics.md) |
+| Understanding spatial variation | [Empirical semivariogram](methods/empirical-semivariogram.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
@@ -90,7 +91,7 @@ Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), whi
 
 ## Estimating values between observations
 
-If you have measurements at some locations and need an estimate between them, start with [inverse distance weighting](algorithms/interpolation/inverse-distance-weighting.md). The lesson explains the distance weights, works through a numerical example, and links to a tested Python implementation and an interactive lab where you can change the target, power and number of neighbours.
+If you have measurements at some locations and need an estimate between them, start with [inverse distance weighting](algorithms/interpolation/inverse-distance-weighting.md). The lesson explains the distance weights, works through a numerical example, and links to a tested Python implementation and an interactive lab where you can change the target, power and number of neighbours. Before moving to kriging, explore the [empirical semivariogram](methods/empirical-semivariogram.md), which shows how differences between observations change with distance.
 
 ## A first look at spatial patterns
 
