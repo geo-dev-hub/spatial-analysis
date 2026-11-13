@@ -32,7 +32,7 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | [STR-packed R-tree](../../algorithms/indexing/str-packed-rtree.md) covers the static STR bulk-loading variant; other structures remain unverified |
+| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | [STR-packed R-tree](../../algorithms/indexing/str-packed-rtree.md), [point-region quadtree](../../algorithms/indexing/quadtree.md) and [k-d tree nearest-neighbour search](../../algorithms/indexing/kd-tree-nearest-neighbour.md) have separate teaching records; other structures remain unverified |
 | Space-filling curves and grids: Z-order (Morton), Hilbert, Geohash, H3, S2, quadkeys, HEALPix | Spatial encodings / grid systems / indexing schemes | 1 | Not yet catalogued as individual records |
 | Queries: range, kNN, reverse kNN, closest pair, spatial skyline, top-k spatial keyword, geofencing | Query types / spatial operations | 1 | Not yet catalogued |
 | Joins: filter-and-refine, plane-sweep, PBSM, TOUCH, partition-based, kNN joins | Join algorithms / query-processing strategies | 2 | Not yet catalogued as individual records |
@@ -43,7 +43,7 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 | Source entry | Kind to review | Source page | Current record |
 |---|---|---:|---|
-| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | [Filter-and-refine spatial join](../../algorithms/query-processing/filter-refine-spatial-join.md) covers indexed spatial joins; nearest-neighbour and distance-matrix methods remain unverified |
+| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | [Filter-and-refine spatial join](../../algorithms/query-processing/filter-refine-spatial-join.md) covers indexed spatial joins; [k-d tree nearest-neighbour search](../../algorithms/indexing/kd-tree-nearest-neighbour.md) is a foundational point-search draft; distance matrices and geodesic nearest-neighbour methods remain unverified |
 | DE-9IM topological relations, RCC-8, cardinal direction relations | Formal relation models / qualitative spatial relations | 2 | Not yet catalogued |
 | Spatial weights: contiguity, distance band, kNN | Weight-matrix construction methods | 2 | [Spatial weights matrix](../../methods/spatial-weights-matrix.md) covers Rook, Queen, distance-band and kNN definitions, transformations and isolates |
 
