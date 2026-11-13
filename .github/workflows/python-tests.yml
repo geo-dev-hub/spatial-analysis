@@ -134,6 +134,9 @@ jobs:
           - example: point-pattern-kde
             directory: implementations/python/point-pattern-kde
             pythonpath: ""
+          - example: clark-evans
+            directory: implementations/python/clark-evans
+            pythonpath: ""
           - example: d8-flow
             directory: implementations/python/d8-flow
             pythonpath: ""
@@ -226,6 +229,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/priority-flood-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/focal-raster-statistics-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-pattern-kde-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/clark-evans-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
