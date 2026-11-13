@@ -32,6 +32,12 @@ def test_gamma_endpoints_are_product_and_probabilistic_sum():
     np.testing.assert_allclose(fuzzy_overlay(layers, gamma=1), fuzzy_overlay(layers, "probabilistic_sum"))
 
 
+def test_gamma_endpoints_handle_zero_memberships_exactly():
+    layers = [np.array([[0.0, 0.4]]), np.array([[0.5, 0.0]])]
+    np.testing.assert_allclose(fuzzy_overlay(layers, gamma=0), [[0.0, 0.0]])
+    np.testing.assert_allclose(fuzzy_overlay(layers, gamma=1), [[0.5, 0.4]])
+
+
 def test_gamma_must_be_bounded():
     with pytest.raises(ValueError, match="gamma"):
         fuzzy_overlay([np.ones((1, 1))], gamma=1.1)
