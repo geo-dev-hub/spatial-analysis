@@ -11,61 +11,61 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 
 ## Vector and computational geometry
 
-| Source entry | Kind to review | Source page | Current record |
-|---|---|---:|---|
-| Overlay: buffer, clip, intersect, union, difference, dissolve, centroid, minimum bounding geometry | Operations / geometry processing | 1 | [Polygon intersection](../../algorithms/geometry/polygon-intersection.md) covers the intersection operation only |
-| Hulls and tessellations: convex hull (Graham scan, Jarvis march, Quickhull), concave hull (alpha shapes), Voronoi (Fortune sweep), Delaunay (Bowyer-Watson, incremental, divide and conquer), constrained Delaunay, Ruppert refinement | Algorithm families / geometric structures | 1 | Not yet catalogued as individual records |
-| Point-in-polygon (ray casting, winding number) | Geometric predicate / point-location methods | 1 | [Point in polygon](../../algorithms/geometry/point-in-polygon.md) |
-| Point location (slab method, trapezoid map) | Point-location algorithms / data structures | 1 | Not yet catalogued as individual records |
-| Segment intersection (Bentley-Ottmann) | Geometric predicate / all-segment reporting algorithm | 1 | [Segment intersection](../../algorithms/geometry/segment-intersection.md); [Bentley–Ottmann](../../algorithms/geometry/bentley-ottmann.md) |
-| Polygon clipping: Sutherland-Hodgman, Weiler-Atherton, Vatti, Greiner-Hormann | Polygon clipping algorithms | 1 | Not yet catalogued as individual records |
-| Offsetting (Clipper) | Geometry operation / software implementation name in source | 1 | Needs name and scope verification |
-| Cascaded union | Geometry operation / implementation strategy | 1 | Not yet catalogued |
-| Self-intersection repair; validity checking | Geometry repair / validation operations | 1 | Not yet catalogued |
-| Simplification and generalization: Douglas-Peucker, Visvalingam, topology-preserving simplification, snap rounding | Generalisation algorithms / precision operation | 1 | Not yet catalogued as individual records |
-| Triangulation and decomposition: ear clipping, trapezoidal and convex decomposition, medial axis, straight skeleton, Minkowski sum | Algorithm families / geometric structures and operations | 1 | Not yet catalogued as individual records |
-| Distance and extent: Hausdorff and Fréchet distance, rotating calipers, smallest enclosing circle (Welzl), largest empty circle, pole of inaccessibility (polylabel), oriented minimum bounding rectangle | Metrics / geometric algorithms | 1 | Not yet catalogued as individual records |
-| Proximity graphs: Gabriel, relative neighborhood, beta-skeleton, Yao, Euclidean minimum spanning tree | Graph constructions / spatial structures | 1 | Not yet catalogued as individual records |
-| Visibility polygons, funnel algorithm, CSG and BSP Boolean operations, DCEL overlay, arrangements, planarization | Algorithms / operations / data structures; split before canonicalisation | 1 | Not yet catalogued as individual records |
+| Source entry | Proposed type (unverified) | Source page | Review status | Current record |
+| --- | --- | ---: | --- | --- |
+| Overlay: buffer, clip, intersect, union, difference, dissolve, centroid, minimum bounding geometry | Operations / geometry processing | 1 | Captured; names not individually verified | [Polygon intersection](../../algorithms/geometry/polygon-intersection.md) covers the intersection operation only |
+| Hulls and tessellations: convex hull (Graham scan, Jarvis march, Quickhull), concave hull (alpha shapes), Voronoi (Fortune sweep), Delaunay (Bowyer-Watson, incremental, divide and conquer), constrained Delaunay, Ruppert refinement | Algorithm families / geometric structures | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Point-in-polygon (ray casting, winding number) | Geometric predicate / point-location methods | 1 | Captured; names not individually verified | [Point in polygon](../../algorithms/geometry/point-in-polygon.md) |
+| Point location (slab method, trapezoid map) | Point-location algorithms / data structures | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Segment intersection (Bentley-Ottmann) | Geometric predicate / all-segment reporting algorithm | 1 | Captured; names not individually verified | [Segment intersection](../../algorithms/geometry/segment-intersection.md); [Bentley–Ottmann](../../algorithms/geometry/bentley-ottmann.md) |
+| Polygon clipping: Sutherland-Hodgman, Weiler-Atherton, Vatti, Greiner-Hormann | Polygon clipping algorithms | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Offsetting (Clipper) | Geometry operation / software implementation name in source | 1 | Captured; names not individually verified | Needs name and scope verification |
+| Cascaded union | Geometry operation / implementation strategy | 1 | Captured; names not individually verified | Not yet catalogued |
+| Self-intersection repair; validity checking | Geometry repair / validation operations | 1 | Captured; names not individually verified | Not yet catalogued |
+| Simplification and generalization: Douglas-Peucker, Visvalingam, topology-preserving simplification, snap rounding | Generalisation algorithms / precision operation | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Triangulation and decomposition: ear clipping, trapezoidal and convex decomposition, medial axis, straight skeleton, Minkowski sum | Algorithm families / geometric structures and operations | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Distance and extent: Hausdorff and Fréchet distance, rotating calipers, smallest enclosing circle (Welzl), largest empty circle, pole of inaccessibility (polylabel), oriented minimum bounding rectangle | Metrics / geometric algorithms | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Proximity graphs: Gabriel, relative neighborhood, beta-skeleton, Yao, Euclidean minimum spanning tree | Graph constructions / spatial structures | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Visibility polygons, funnel algorithm, CSG and BSP Boolean operations, DCEL overlay, arrangements, planarization | Algorithms / operations / data structures; split before canonicalisation | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
 
 ## Spatial indexing and query processing
 
-| Source entry | Kind to review | Source page | Current record |
-|---|---|---:|---|
-| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | [STR-packed R-tree](../../algorithms/indexing/str-packed-rtree.md) covers the static STR bulk-loading variant; other structures remain unverified |
-| Space-filling curves and grids: Z-order (Morton), Hilbert, Geohash, H3, S2, quadkeys, HEALPix | Spatial encodings / grid systems / indexing schemes | 1 | Not yet catalogued as individual records |
-| Queries: range, kNN, reverse kNN, closest pair, spatial skyline, top-k spatial keyword, geofencing | Query types / spatial operations | 1 | Not yet catalogued |
-| Joins: filter-and-refine, plane-sweep, PBSM, TOUCH, partition-based, kNN joins | Join algorithms / query-processing strategies | 2 | Not yet catalogued as individual records |
-| Approximate search: locality-sensitive hashing, HNSW, IVF-PQ, ScaNN | Approximate search methods / index systems | 2 | Not yet catalogued as individual records |
-| Learned indexes (ZM index, RSMI, LISA), selectivity estimation, spatial histograms | Learned index methods / query estimation / statistics | 2 | Names and scope need individual verification |
+| Source entry | Proposed type (unverified) | Source page | Review status | Current record |
+| --- | --- | ---: | --- | --- |
+| Trees: R-tree (R*, R+, Hilbert, STR bulk loading), quadtree, octree, k-d tree, ball tree, VP-tree, BSP tree, KD-B-tree, Grid File | Index structures / variants / bulk-loading method | 1 | Captured; names not individually verified | [STR-packed R-tree](../../algorithms/indexing/str-packed-rtree.md) covers the static STR bulk-loading variant; other structures remain unverified |
+| Space-filling curves and grids: Z-order (Morton), Hilbert, Geohash, H3, S2, quadkeys, HEALPix | Spatial encodings / grid systems / indexing schemes | 1 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Queries: range, kNN, reverse kNN, closest pair, spatial skyline, top-k spatial keyword, geofencing | Query types / spatial operations | 1 | Captured; names not individually verified | Not yet catalogued |
+| Joins: filter-and-refine, plane-sweep, PBSM, TOUCH, partition-based, kNN joins | Join algorithms / query-processing strategies | 2 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Approximate search: locality-sensitive hashing, HNSW, IVF-PQ, ScaNN | Approximate search methods / index systems | 2 | Captured; names not individually verified | Not yet catalogued as individual records |
+| Learned indexes (ZM index, RSMI, LISA), selectivity estimation, spatial histograms | Learned index methods / query estimation / statistics | 2 | Captured; names not individually verified | Names and scope need individual verification |
 
 ## Proximity, topology and relations
 
-| Source entry | Kind to review | Source page | Current record |
-|---|---|---:|---|
-| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | [Filter-and-refine spatial join](../../algorithms/query-processing/filter-refine-spatial-join.md) covers indexed spatial joins; nearest-neighbour and distance-matrix methods remain unverified |
-| DE-9IM topological relations, RCC-8, cardinal direction relations | Formal relation models / qualitative spatial relations | 2 | Not yet catalogued |
-| Spatial weights: contiguity, distance band, kNN | Weight-matrix construction methods | 2 | [Spatial weights matrix](../../methods/spatial-weights-matrix.md) covers Rook, Queen, distance-band and kNN definitions, transformations and isolates |
+| Source entry | Proposed type (unverified) | Source page | Review status | Current record |
+| --- | --- | ---: | --- | --- |
+| Nearest neighbor, distance matrices (Euclidean, geodesic), spatial joins | Spatial queries / distance operations | 2 | Captured; names not individually verified | [Filter-and-refine spatial join](../../algorithms/query-processing/filter-refine-spatial-join.md) covers indexed spatial joins; nearest-neighbour and distance-matrix methods remain unverified |
+| DE-9IM topological relations, RCC-8, cardinal direction relations | Formal relation models / qualitative spatial relations | 2 | Captured; names not individually verified | Not yet catalogued |
+| Spatial weights: contiguity, distance band, kNN | Weight-matrix construction methods | 2 | Captured; names not individually verified | [Spatial weights matrix](../../methods/spatial-weights-matrix.md) covers Rook, Queen, distance-band and kNN definitions, transformations and isolates |
 
 ## Network analysis
 
-| Source entry | Kind to review | Source page | Current record |
-|---|---|---:|---|
-| Shortest path: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, bidirectional Dijkstra, ALT, contraction hierarchies, hub labeling, customizable route planning | Shortest-path algorithms / preprocessing and labelling methods | 2 | Not yet catalogued |
-| Service areas and isochrones, many-to-many routing, Yen's k-shortest paths, alternative routes | Network operations / routing algorithms | 2 | Not yet catalogued |
-| Centrality: betweenness, closeness, PageRank; space syntax (axial, integration); street network metrics (orientation, circuity, intersection density) | Graph metrics / spatial network measures | 2 | Not yet catalogued |
-| Community detection: Louvain, Leiden, Infomap, label propagation; partitioning: Kernighan-Lin, spectral, METIS | Graph clustering / partitioning algorithms and software | 2 | Not yet catalogued |
-| Flows and trees: max flow and min cut, minimum spanning tree, Steiner tree, k-core decomposition | Graph algorithms / graph structures | 2 | Not yet catalogued |
-| Map matching: HMM, ST-Matching, IVMM, Fast Map Matching, neural | Probabilistic methods / algorithms / model families | 2 | Not yet catalogued |
-| Transit routing: RAPTOR, Connection Scan; time-dependent, stochastic, multimodal and turn-restricted routing | Public transport and time-dependent routing algorithms / problem variants | 2 | Not yet catalogued |
-| Road network generalization and stroke generation | Network generalisation methods | 2 | Not yet catalogued |
+| Source entry | Proposed type (unverified) | Source page | Review status | Current record |
+| --- | --- | ---: | --- | --- |
+| Shortest path: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, bidirectional Dijkstra, ALT, contraction hierarchies, hub labeling, customizable route planning | Shortest-path algorithms / preprocessing and labelling methods | 2 | Captured; names not individually verified | Not yet catalogued |
+| Service areas and isochrones, many-to-many routing, Yen's k-shortest paths, alternative routes | Network operations / routing algorithms | 2 | Captured; names not individually verified | Not yet catalogued |
+| Centrality: betweenness, closeness, PageRank; space syntax (axial, integration); street network metrics (orientation, circuity, intersection density) | Graph metrics / spatial network measures | 2 | Captured; names not individually verified | Not yet catalogued |
+| Community detection: Louvain, Leiden, Infomap, label propagation; partitioning: Kernighan-Lin, spectral, METIS | Graph clustering / partitioning algorithms and software | 2 | Captured; names not individually verified | Not yet catalogued |
+| Flows and trees: max flow and min cut, minimum spanning tree, Steiner tree, k-core decomposition | Graph algorithms / graph structures | 2 | Captured; names not individually verified | Not yet catalogued |
+| Map matching: HMM, ST-Matching, IVMM, Fast Map Matching, neural | Probabilistic methods / algorithms / model families | 2 | Captured; names not individually verified | Not yet catalogued |
+| Transit routing: RAPTOR, Connection Scan; time-dependent, stochastic, multimodal and turn-restricted routing | Public transport and time-dependent routing algorithms / problem variants | 2 | Captured; names not individually verified | Not yet catalogued |
+| Road network generalization and stroke generation | Network generalisation methods | 2 | Captured; names not individually verified | Not yet catalogued |
 
 ## Classic routing
 
-| Source entry | Kind to review | Source page | Current record |
-|---|---|---:|---|
-| TSP: 2-opt, Lin-Kernighan, Christofides; VRP: Clarke-Wright savings, sweep; Chinese postman and arc routing | Combinatorial optimisation problems / heuristics / algorithms | 2 | Not yet catalogued |
-| CVRP, VRPTW, pickup-and-delivery, dial-a-ride, ALNS, column generation, branch-and-price | Routing problem variants / metaheuristics / exact optimisation methods | 2 | Not yet catalogued |
+| Source entry | Proposed type (unverified) | Source page | Review status | Current record |
+| --- | --- | ---: | --- | --- |
+| TSP: 2-opt, Lin-Kernighan, Christofides; VRP: Clarke-Wright savings, sweep; Chinese postman and arc routing | Combinatorial optimisation problems / heuristics / algorithms | 2 | Captured; names not individually verified | Not yet catalogued |
+| CVRP, VRPTW, pickup-and-delivery, dial-a-ride, ALNS, column generation, branch-and-price | Routing problem variants / metaheuristics / exact optimisation methods | 2 | Captured; names not individually verified | Not yet catalogued |
 
 ## Decisions for the next pass
 
