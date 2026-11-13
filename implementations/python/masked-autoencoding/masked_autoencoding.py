@@ -38,9 +38,13 @@ def random_patch_masking(
 
     batch, patches, _ = x.shape
     keep_count = max(1, int(patches * (1.0 - float(mask_ratio))))
-    rng = np.random.default_rng(int(seed))
-    noise = rng.random((batch, patches))
-    shuffled_indices = np.argsort(noise, axis=1)
+    if keep_count == patches:
+        # With no masked tokens there is no reason to permute the sequence.
+        shuffled_indices = np.broadcast_to(np.arange(patches), (batch, patches)).copy()
+    else:
+        rng = np.random.default_rng(int(seed))
+        noise = rng.random((batch, patches))
+        shuffled_indices = np.argsort(noise, axis=1)
     restore_indices = np.argsort(shuffled_indices, axis=1)
     kept_indices = shuffled_indices[:, :keep_count]
     visible = np.take_along_axis(x, kept_indices[:, :, None], axis=1)
