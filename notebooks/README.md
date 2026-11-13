@@ -9,6 +9,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Geometry foundations lab](geometry-foundations-lab.ipynb): move a point, adjust a segment and change two rectangles to inspect point location, segment intersection and polygon overlay.
 - [Polygon overlay lab](polygon-overlay-lab.ipynb): visualise intersection, union, difference and symmetric difference; inspect lower-dimensional contacts, holes, multipart output and precision-grid effects.
 - [Convex hull lab](convex-hull-lab.ipynb): see Graham scan build a hull, inspect orientation and collinear policies, and experiment with degenerate point sets.
+- [Voronoi and Delaunay lab](voronoi-delaunay-lab.ipynb): compare nearest-site regions with their Delaunay dual, inspect equidistant Voronoi vertices and check empty circumcircles.
 
 ### Spatial indexing
 
@@ -53,6 +54,6 @@ The links below point to notebooks already available on the default branch. Newe
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all thirteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all fourteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
