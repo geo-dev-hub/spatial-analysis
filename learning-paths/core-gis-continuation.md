@@ -32,7 +32,7 @@ Compare coordinate precision reduction, fixed-grid overlay and full snap-roundin
 
 [Planar point location](../algorithms/geometry/point-location.md)
 
-Move beyond point-in-polygon. Learn how slab decompositions and randomized trapezoidal maps answer repeated face-location queries. Run the [static slab locator](../implementations/python/point-location/README.md), then compare its restricted subdivision contract with the more general randomized trapezoidal-map literature.
+Move beyond point-in-polygon. Learn how slab decompositions and randomized trapezoidal maps answer repeated face-location queries. Run the [static slab locator](../implementations/python/point-location/README.md) and inspect it in the [interactive point-location lab](../notebooks/point-location-lab.ipynb), then compare its restricted subdivision contract with the more general randomized trapezoidal-map literature.
 
 ## 6. Find a least-cost route through a graph
 
