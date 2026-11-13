@@ -86,6 +86,9 @@ jobs:
           - example: shortest-paths
             directory: implementations/python/shortest-paths
             pythonpath: ""
+          - example: point-location
+            directory: implementations/python/point-location
+            pythonpath: ""
 
     steps:
       - name: Check out repository
