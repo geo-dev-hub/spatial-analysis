@@ -51,7 +51,7 @@ def test_bounds_must_contain_events():
         gaussian_kde([(2, 2)], bounds=(0, 1, 0, 1), bandwidth=1)
 
 
-@pytest.mark.parametrize("bandwidth", [0, -1, float("inf"), float("nan")])
+@pytest.mark.parametrize("bandwidth", [0, -1, float("inf"), float("nan"), "wide"])
 def test_invalid_bandwidth_is_rejected(bandwidth):
     with pytest.raises(ValueError, match="bandwidth"):
         gaussian_kde([(0.5, 0.5)], bounds=(0, 1, 0, 1), bandwidth=bandwidth)
