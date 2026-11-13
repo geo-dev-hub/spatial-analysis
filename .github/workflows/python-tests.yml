@@ -104,6 +104,9 @@ jobs:
           - example: raster-distance
             directory: implementations/python/raster-distance
             pythonpath: ""
+          - example: spectral-indices
+            directory: implementations/python/spectral-indices
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -182,6 +185,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/coverage-simplification-routing-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geostatistics-interpolation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-distance-transform-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ndvi-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
