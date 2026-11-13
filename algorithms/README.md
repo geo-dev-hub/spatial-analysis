@@ -10,6 +10,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Bentley–Ottmann](geometry/bentley-ottmann.md) — find intersecting pairs across a set of segments using a plane sweep.
 - [Graham scan](geometry/graham-scan.md) — find the extreme vertices of a planar convex hull using polar-angle sorting and an orientation test.
 
+## Network analysis
+
+- [Dijkstra's algorithm](network/dijkstra.md) — find least-cost paths from one source through a weighted graph with non-negative edge weights.
+
 ## Spatial indexing
 
 - [STR-packed R-tree](indexing/str-packed-rtree.md) — organise geometry bounding boxes into a packed hierarchy so queries can skip groups that cannot match.
