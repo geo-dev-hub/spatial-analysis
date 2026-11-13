@@ -71,6 +71,9 @@ jobs:
           - example: convex-hull
             directory: implementations/python/convex-hull
             pythonpath: ""
+          - example: voronoi-delaunay
+            directory: implementations/python/voronoi-delaunay
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -144,3 +147,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/quadtree-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/polygon-overlay-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-hull-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/voronoi-delaunay-lab.ipynb
