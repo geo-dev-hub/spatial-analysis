@@ -8,15 +8,15 @@ def test_exact_p_median_finds_best_two_facilities():
     costs = np.array([[2, 8, 5, 9], [7, 3, 4, 8], [6, 7, 2, 4]])
     facilities, objective, assignment = solve_p_median(costs, 2)
     assert facilities == (0, 2)
-    assert objective == pytest.approx(7)
+    assert objective == pytest.approx(8)
     assert assignment == (0, 2, 2)
 
 
 def test_demand_weights_change_the_selected_facilities():
-    costs = [[0, 5, 9], [5, 0, 9], [9, 9, 0]]
+    costs = [[0, 100, 20], [100, 0, 20], [10, 10, 0]]
     unweighted = solve_p_median(costs, 1)
     weighted = solve_p_median(costs, 1, demand_weights=[10, 1, 1])
-    assert unweighted[0] == (0,)
+    assert unweighted[0] == (2,)
     assert weighted[0] == (0,)
 
 
