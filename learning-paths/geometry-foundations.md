@@ -87,6 +87,8 @@ This continuation distinguishes a narrow algorithm implementation (convex clippi
 
 A related construction problem is the [convex hull](../algorithms/geometry/convex-hull.md): find the smallest convex boundary containing a set of points. Run the [Graham scan implementation](../implementations/python/convex-hull/README.md) and explore its [visual lab](../notebooks/convex-hull-lab.ipynb) to see how interior and collinear points are handled.
 
+The [Voronoi and Delaunay lesson](../algorithms/geometry/voronoi-delaunay.md) then connects nearest-site regions to triangulations. Explore both structures in the [visual tessellation lab](../notebooks/voronoi-delaunay-lab.ipynb) and inspect the [SciPy/Qhull implementation](../implementations/python/voronoi-delaunay/README.md).
+
 ## What connects the lessons?
 
 - Point-in-polygon asks where a point sits relative to a boundary.
