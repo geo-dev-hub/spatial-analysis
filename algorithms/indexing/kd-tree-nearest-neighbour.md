@@ -108,6 +108,10 @@ Then repeat with:
 
 Record build time, query time, visited nodes, exact distance calculations and memory. Do not report a single timing as a general performance claim.
 
+## Reproduce the teaching example
+
+The [Python k-d tree implementation](../../implementations/python/kd-tree/README.md) demonstrates exact 2D Euclidean nearest-neighbour search, deterministic tie handling and brute-force differential tests. Follow its [step-by-step walkthrough](../../implementations/python/kd-tree/implementation-walkthrough.md).
+
 ## References
 
 - Bentley, J. L. (1975), [Multidimensional binary search trees used for associative searching](https://doi.org/10.1145/361002.361007), Communications of the ACM. The foundational k-d tree paper.
