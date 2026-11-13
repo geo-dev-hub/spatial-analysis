@@ -282,3 +282,75 @@ def _single_source_distances(graph: Graph, start: Node) -> dict[Node, float]:
                 distances[neighbor] = candidate
                 heappush(queue, (candidate, next(serial), neighbor))
     return distances
+
+
+def k_shortest_paths(
+    graph: Graph, start: Node, goal: Node, k: int
+) -> list[tuple[list[Node], float]]:
+    """Return up to k loopless shortest paths using Yen's algorithm.
+
+    Paths are represented by node sequences. For parallel arcs between the
+    same ordered node pair, the minimum edge weight is used in this model.
+    """
+    if not isinstance(k, int) or isinstance(k, bool) or k < 1:
+        raise ValueError("k must be a positive integer")
+    _validate_graph(graph)
+    first_path, first_cost = dijkstra(graph, start, goal)
+    if first_path is None:
+        return []
+    accepted: list[tuple[list[Node], float]] = [(first_path, first_cost)]
+    accepted_keys = {tuple(first_path)}
+    candidate_keys: set[tuple[Node, ...]] = set()
+    candidates = []
+    serial = count()
+
+    def path_cost(path: list[Node]) -> float:
+        total = 0.0
+        for u, v in zip(path, path[1:]):
+            weights = [weight for neighbor, weight in graph.get(u, ()) if neighbor == v]
+            if not weights:
+                raise ValueError("path contains an edge absent from the original graph")
+            total += min(weights)
+        return total
+
+    while len(accepted) < k:
+        previous_path = accepted[-1][0]
+        for spur_index in range(len(previous_path) - 1):
+            root = previous_path[: spur_index + 1]
+            banned_edges: set[tuple[Node, Node]] = set()
+            for known_path, _cost in accepted:
+                if len(known_path) > spur_index and known_path[: spur_index + 1] == root:
+                    banned_edges.add((known_path[spur_index], known_path[spur_index + 1]))
+
+            banned_nodes = set(root[:-1])
+            spur_node = root[-1]
+            modified: dict[Node, list[tuple[Node, float]]] = {}
+            for node, outgoing in graph.items():
+                if node in banned_nodes:
+                    continue
+                modified[node] = [
+                    (neighbor, weight)
+                    for neighbor, weight in outgoing
+                    if neighbor not in banned_nodes and (node, neighbor) not in banned_edges
+                ]
+
+            spur_path, spur_cost = dijkstra(modified, spur_node, goal)
+            if spur_path is None:
+                continue
+            total_path = root[:-1] + spur_path
+            key = tuple(total_path)
+            if key in accepted_keys or key in candidate_keys:
+                continue
+            total_cost = path_cost(root) + spur_cost
+            heappush(candidates, (total_cost, next(serial), total_path))
+            candidate_keys.add(key)
+
+        if not candidates:
+            break
+        cost, _order, path = heappop(candidates)
+        key = tuple(path)
+        candidate_keys.remove(key)
+        accepted_keys.add(key)
+        accepted.append((path, cost))
+
+    return accepted
