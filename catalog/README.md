@@ -1,6 +1,6 @@
-# Algorithm catalogue
+# Spatial analysis catalogue
 
-This directory is the structured index of the project's knowledge inventory. It is not the place for full technical explanations; those belong in canonical records under `algorithms/`.
+This directory is the structured index of the project's knowledge inventory. It includes algorithms, operations, data structures, models, statistics, standards, workflows, systems and applied methods. Full technical explanations belong in canonical records in their relevant directories.
 
 ## Coverage
 
@@ -10,7 +10,7 @@ See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest
 
 The initial 47-page *Spatial Analysis Algorithms: Complete Compendium* has been imported page-by-page under [source-inventory](../source-inventory/README.md). That is the preserved intake record.
 
-The transcription preserves original page boundaries and extracted wording. It is not an independently verified reference work. The next task is a separate, auditable catalogue pass.
+The transcription preserves original page boundaries and extracted wording. It is not an independently verified reference work. The next task is a separate, auditable catalogue pass. A source entry is not automatically an algorithm or a verified canonical record.
 
 ## Intake and normalisation rules
 
@@ -43,7 +43,7 @@ Initial domain codes (provisional):
 - `APP` — applied/domain methods;
 - `CART` — cartography and visualisation.
 
-Codes may be extended as the inventory is fully audited. Once assigned to a published record, an ID is stable.
+Codes may be extended as the inventory is fully audited. Once assigned to a published record, an ID is stable. See the [record-type taxonomy](record-types.md) before creating or classifying a canonical record.
 
 ## Suggested inventory fields
 
@@ -54,8 +54,8 @@ Codes may be extended as the inventory is fully audited. Once assigned to a publ
 | `source_label` | Exact source wording |
 | `source_page` | Original page |
 | `canonical_name` | Normalised name, if established |
-| `algorithm_id` | Stable ID, once assigned |
-| `kind` | Algorithm, operation, data structure, model, method, system, metric or implementation |
+| `record_id` | Stable ID, once assigned |
+| `kind` | Algorithm, operation, data structure, model, statistic, metric, method, workflow, system, standard, implementation, dataset or application |
 | `domain` | Main domain |
 | `relationships` | Prerequisites, variants, alternatives and applications |
 | `verification_status` | Whether the item has been independently checked |

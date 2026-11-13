@@ -1,14 +1,16 @@
-# [Method, operation or model name]
+# [Canonical record name]
 
 - **Stable ID:** `SA-DOMAIN-SLUG`
-- **Kind:** algorithm / operation / data structure / model / method / system / metric / workflow
+- **Kind:** algorithm / operation / data_structure / model / statistic / metric / method / workflow / system / standard / implementation / dataset / application
 - **Domain:**
-- **Status:** captured / under research / researched / implemented / tested / reviewed
+- **Status:** captured / name-checked / source-verified / researched / implemented / tested / reviewed
 - **Version:** 0.1
 - **Last reviewed:** YYYY-MM-DD
 - **Source inventory location:**
 - **Related records:**
 - **Prerequisites:**
+
+Choose the primary kind using the [record-type taxonomy](../catalog/record-types.md). The record describes one subject; link related algorithms, operations, models, datasets and implementations rather than combining unrelated topics into one page.
 
 ## Start with the question
 

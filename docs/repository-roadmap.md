@@ -27,7 +27,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Verify names, variants and claims against authoritative sources.
 - [x] Record source-page provenance in the item-level section indexes.
 - [ ] Map duplicates, variants and cross-domain relationships across the full catalogue.
-- [ ] Keep algorithms distinct from operations, models, data structures, systems, metrics, standards and workflows.
+- [x] Define a primary record-type taxonomy and classification rules.
+- [ ] Apply a primary kind and verification status to every source entry across all 22 sections.
 
 ## 3. The first learning paths work end to end
 
@@ -69,7 +70,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
 - [x] GitHub Actions workflow configured to test all eight Python examples and execute all nine notebooks.
-- [ ] Confirm successful Actions runs for all eight Python test suites and all nine notebooks.
+- [x] Confirm successful Actions run for all eight Python test suites, all nine notebooks and the internal-link check.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
@@ -89,6 +90,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Nine interactive notebooks and eight Python example suites are covered by GitHub Actions. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
+The repository now has item-level intake indexes for all 22 source sections, a complete geometry foundations path with four runnable examples and intern walkthroughs, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons and a spatial-weights foundation. Nine notebooks and eight Python example suites pass in GitHub Actions, alongside the internal-link check. The full run caught and helped resolve an STR traversal indentation error, notebook schema omissions and a version-specific PySAL input issue. The work is still early: the source catalogue has not been audited item by item, licensing decisions remain open, and most subject areas do not yet have researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
