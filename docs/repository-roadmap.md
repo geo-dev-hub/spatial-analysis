@@ -47,6 +47,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a spatial weights foundation lesson and notebook covering contiguity, distance bands, kNN, transformations and isolates.
 - [x] Add the first deterministic interpolation record: inverse distance weighting, with a tested Python reference implementation, walkthrough and interactive notebook.
 - [x] Add the empirical semivariogram foundation, with a tested Matheron estimator, pair-count diagnostics, walkthrough and interactive lab.
+- [x] Add ordinary kriging with PyKrige, point/grid tests, a step-by-step walkthrough and an interactive prediction/variance lab.
 - [ ] Extend interpolation through natural neighbour, splines, radial basis functions, variograms and kriging.
 - [ ] Extend spatial indexing into dynamic trees, quadtrees, nearest-neighbour search, proximity and networks.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
@@ -76,8 +77,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all ten Python examples and execute all twelve notebooks.
-- [x] Confirm successful Actions run for all ten Python test suites, all twelve notebooks and the internal-link check.
+- [x] GitHub Actions workflow configured to test all eleven Python examples and execute all thirteen notebooks.
+- [x] Confirm successful Actions run for all eleven Python test suites, all thirteen notebooks and the internal-link check.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
 - [ ] Publish data provenance and licence notes for every shared dataset.
