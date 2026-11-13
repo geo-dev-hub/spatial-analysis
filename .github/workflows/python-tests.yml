@@ -107,6 +107,9 @@ jobs:
           - example: spectral-indices
             directory: implementations/python/spectral-indices
             pythonpath: ""
+          - example: p-median
+            directory: implementations/python/p-median
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -186,6 +189,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geostatistics-interpolation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-distance-transform-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ndvi-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-median-facility-location-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
