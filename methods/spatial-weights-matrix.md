@@ -60,11 +60,16 @@ The distance must use meaningful units. A threshold of 1,000 means something dif
 
 ### 4. k-nearest neighbours
 
-Each location is connected to its (k) nearest locations. This guarantees a chosen number of outgoing neighbours for each unit, but the relationship may be asymmetric: A may choose B even when B does not choose A.
+Each location is connected to its $k$ nearest locations. This guarantees a chosen number of outgoing neighbours for each unit, but the relationship may be asymmetric: A may choose B even when B does not choose A.
 
-The value of (k), distance metric and any symmetrisation rule should be recorded.
+The value of $k$, distance metric and any symmetrisation rule should be recorded.
 
 ## A small example
+
+![Queen spatial weights matrix illustration](https://commons.wikimedia.org/wiki/Special:FilePath/Queen_Spatial_Weight_Matrix.png)
+
+*Figure 1. “Queen Spatial Weight Matrix,” by Batsan Biarda (6 June 2026), Wikimedia Commons. Dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Reproduced unchanged. [File page and licence](https://commons.wikimedia.org/wiki/File:Queen_Spatial_Weight_Matrix.png).*
+
 
 Four square cells form a 2-by-2 grid. Rook contiguity connects cells that share an edge. Queen contiguity also connects the two diagonal pairs that touch at the centre point.
 
