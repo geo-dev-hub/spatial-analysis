@@ -1,7 +1,7 @@
 import math
 import pytest
 
-from shortest_paths import astar, bellman_ford, dijkstra, floyd_warshall
+from shortest_paths import (ALTHeuristic, astar, bellman_ford, bidirectional_dijkstra, dijkstra, floyd_warshall)
 
 
 GRAPH = {
@@ -91,3 +91,38 @@ def test_floyd_warshall_detects_negative_cycle():
 
 def test_bellman_ford_handles_missing_source_and_target_keys():
     assert bellman_ford({}, "source", "target") == (None, float("inf"))
+
+
+def test_bidirectional_dijkstra_matches_dijkstra_on_directed_graph():
+    path, cost = bidirectional_dijkstra(GRAPH, "A", "D")
+    assert path == ["A", "C", "B", "D"]
+    assert cost == pytest.approx(dijkstra(GRAPH, "A", "D")[1])
+
+
+def test_bidirectional_dijkstra_respects_direction():
+    graph = {"A": [("B", 1)], "B": [], "C": [("B", 1)]}
+    assert bidirectional_dijkstra(graph, "B", "A") == (None, float("inf"))
+    assert bidirectional_dijkstra(graph, "A", "B") == (["A", "B"], 1.0)
+
+
+def test_bidirectional_dijkstra_start_equals_goal():
+    assert bidirectional_dijkstra(GRAPH, "A", "A") == (["A"], 0.0)
+
+
+def test_alt_heuristic_is_admissible_and_astar_optimal():
+    graph = {
+        "A": [("B", 2), ("C", 1)],
+        "B": [("D", 2)],
+        "C": [("B", 0.5), ("D", 8)],
+        "D": [],
+    }
+    heuristic = ALTHeuristic(graph, ["A", "D"])
+    assert heuristic("C", "D") <= dijkstra(graph, "C", "D")[1]
+    assert astar(graph, "A", "D", heuristic)[1] == pytest.approx(3.5)
+
+
+def test_alt_heuristic_handles_unreachable_landmark_distances():
+    graph = {"A": [("B", 1)], "B": [], "X": [("Y", 1)], "Y": []}
+    heuristic = ALTHeuristic(graph, ["A", "X"])
+    assert heuristic("A", "B") >= 0
+    assert astar(graph, "A", "B", heuristic)[1] == pytest.approx(1.0)
