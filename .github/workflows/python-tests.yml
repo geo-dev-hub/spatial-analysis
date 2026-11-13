@@ -66,6 +66,9 @@ jobs:
           - example: graham-scan
             directory: implementations/python/graham-scan
             pythonpath: ""
+          - example: dijkstra
+            directory: implementations/python/dijkstra
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -141,3 +144,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ordinary-kriging-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/d8-flow-direction-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/graham-scan-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/dijkstra-lab.ipynb
