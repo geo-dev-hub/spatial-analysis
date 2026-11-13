@@ -31,11 +31,11 @@ Explain the input assumptions that make your choice appropriate. Do not select a
 
 ## Exercise 3 — Overlay identities
 
-Construct two overlapping polygons (A) and (B). Calculate intersection, union, difference and symmetric difference.
+Construct two overlapping polygons $A$ and $B$. Calculate intersection, union, difference and symmetric difference.
 
 Check:
 
-[
+$
 \operatorname{area}(A \cup B) +
 \operatorname{area}(A \cap B)
 =
@@ -48,8 +48,8 @@ and
 \operatorname{area}(A \setminus B) +
 \operatorname{area}(A \cap B)
 =
-\operatorname{area}(A)
-]
+\\operatorname{area}(A)
+$
 
 Then explain why passing these area checks does not prove that the result boundaries are correct.
 
