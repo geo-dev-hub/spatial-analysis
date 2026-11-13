@@ -42,6 +42,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add four source-derived spatial-statistics lessons and two supplementary companions, with PySAL-based runnable notebooks, conditional permutation explanations and FDR treatment.
 - [x] Add live ipywidgets controls to compare Moran's I and Geary's C while changing values and weight style.
 - [x] Add an interactive geometry lab for point-in-polygon, segment intersection and polygon overlay.
+- [x] Add a Graham scan visual lab with a step slider for the candidate sequence and stack changes.
 - [x] Add a learning path connecting global and local autocorrelation methods, including Getis-Ord hotspot analysis.
 - [x] Add the first spatial-index foundation: STR-packed R-tree, a tested teaching implementation and interactive notebook.
 - [x] Add filter-and-refine spatial join with a Shapely implementation, tests and an interactive notebook.
@@ -67,7 +68,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add three further notebooks for STR-packed R-tree, filter-and-refine spatial join and spatial weights.
 - [x] Add an interactive IDW lab with a movable target, power control and neighbour selection.
 - [x] Add an interactive empirical semivariogram lab with adjustable lag bins and maximum distance.
-- [x] Add stable cell IDs to all fourteen notebooks and repair missing required code-cell outputs.
+- [x] Add stable cell IDs to all fifteen notebooks and repair missing required code-cell outputs.
 - [x] Reuse a verified public-domain R-tree diagram, with creator credit and source rights recorded.
 - [ ] Add maps and real datasets where geographic context is essential.
 - [ ] Check diagrams, formulas and examples in GitHub's rendered view before release.
@@ -100,6 +101,6 @@ Before moving to the membership and Patreon work, check that:
 
 ## Current position
 
-The repository now has item-level intake indexes for all 22 source sections, a geometry foundations path with four core runnable examples plus a Graham scan convex-hull extension, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons, a spatial-weights foundation, an interpolation/geostatistics sequence (IDW, empirical semivariogram and ordinary kriging), and the first raster-hydrology lesson (D8 flow direction). The previous recorded Actions run verified ten notebooks and eight Python example suites, alongside the internal-link check. The IDW, empirical semivariogram, ordinary kriging and D8 implementations and their notebooks have been added to the workflow; the expanded run now covers twelve test suites and fourteen notebooks and is awaiting confirmation. The source indexes now mark each grouped entry as captured but not individually verified, and proposed record types are explicitly provisional. Graham scan has now been added to the catalogue and CI matrix; its GitHub Actions result still needs confirmation. The catalogue still needs item-by-item verification, duplicate and variant mapping, licensing decisions, and substantial researched learning material across most subject areas.
+The repository now has item-level intake indexes for all 22 source sections, a geometry foundations path with four core runnable examples plus a Graham scan convex-hull extension, and a spatial-autocorrelation path with four source-derived methods plus two supplementary companions. It also has two spatial-indexing/query-processing lessons, a spatial-weights foundation, an interpolation/geostatistics sequence (IDW, empirical semivariogram and ordinary kriging), and the first raster-hydrology lesson (D8 flow direction). The previous recorded Actions run verified ten notebooks and eight Python example suites, alongside the internal-link check. The IDW, empirical semivariogram, ordinary kriging, D8 and Graham scan implementations and their notebooks have been added to the workflow; the expanded run now covers thirteen test suites and fifteen notebooks and is awaiting confirmation. The source indexes now mark each grouped entry as captured but not individually verified, and proposed record types are explicitly provisional. Graham scan has now been added to the catalogue and CI matrix; its GitHub Actions result still needs confirmation. The catalogue still needs item-by-item verification, duplicate and variant mapping, licensing decisions, and substantial researched learning material across most subject areas.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
