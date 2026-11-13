@@ -197,6 +197,9 @@ jobs:
           - example: marine-heatwave-detection
             directory: implementations/python/marine-heatwave-detection
             pythonpath: ""
+          - example: exact-orientation
+            directory: implementations/python/exact-orientation
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -299,6 +302,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weighted-linear-combination-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/triple-collocation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/marine-heatwave-detection-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/exact-orientation-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
