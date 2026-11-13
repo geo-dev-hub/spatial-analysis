@@ -16,7 +16,7 @@ Study [turn-aware and time-dependent routing](../algorithms/networks/turn-aware-
 
 ## 4. Scale repeated queries
 
-Study the implemented [ALT landmark heuristic and bidirectional search](../implementations/python/shortest-paths/README.md), then compare contraction hierarchies, hub labels and customizable route planning. Compare their preprocessing, memory, query and metric-update trade-offs.
+Study the implemented [ALT landmark heuristic, bidirectional search and Yen's k-shortest loopless paths](../implementations/python/shortest-paths/README.md), then compare contraction hierarchies, hub labels and customizable route planning. Compare their preprocessing, memory, query and metric-update trade-offs.
 
 ## 5. Move toward transit and time-dependent networks
 
