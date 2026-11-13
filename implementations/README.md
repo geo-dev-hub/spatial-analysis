@@ -53,6 +53,10 @@ Each implementation should state:
 
 - [Isotropic spherical covariance](python/spherical-covariance/README.md): a finite non-negative Legendre-series model on the unit two-sphere, coordinate conversion, covariance matrices, tests and an [intern walkthrough](python/spherical-covariance/implementation-walkthrough.md). This is a scalar isotropic S2 model, not ellipsoidal geodesy or network covariance.
 
+### Graph and network statistics
+
+- [Graph-spectral covariance](python/graph-spectral-covariance/README.md): positive-semidefinite covariance construction from an undirected graph Laplacian, heat-kernel spectral variances, tests and an [intern walkthrough](python/graph-spectral-covariance/implementation-walkthrough.md). It is not a directed flow-network or shortest-path stationary model.
+
 ### Remote sensing
 
 - [Marine heatwave detection lab](../notebooks/marine-heatwave-detection-lab.ipynb): a visual synthetic daily series, event intervals, event metrics and missing-observation experiment.
