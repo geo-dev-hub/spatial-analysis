@@ -92,6 +92,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Watershed delineation](raster/watershed-delineation.md) — trace cells draining to a selected outlet.
 - [Stream ordering](raster/stream-order.md) — compare Strahler order and Shreve magnitude.
 - [Terrain slope and aspect](raster/slope-aspect.md) — estimate local derivatives with Horn's 3×3 operator.
+- [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
 ## A connected place to start
 

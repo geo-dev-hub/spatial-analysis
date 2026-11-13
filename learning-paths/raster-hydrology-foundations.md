@@ -58,6 +58,10 @@ D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuou
 
 These methods produce different contributing-area patterns. They are not just different encodings of the same answer.
 
+## 7. Compare Euclidean and least-cost distance
+
+Read [Raster cost distance](../algorithms/raster/cost-distance.md) and run the [cost-distance notebook](../notebooks/cost-distance-lab.ipynb). The method converts a cost surface into a weighted 4/8-neighbour graph and applies multi-source Dijkstra. Its output is accumulated cost under an explicit edge-integration rule, not automatically travel time.
+
 ## 6. Derive terrain slope and aspect
 
 Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The derivative calculation is distinct from D8 flow routing: it estimates local gradient and downslope direction, while D8 chooses one downstream raster neighbour.

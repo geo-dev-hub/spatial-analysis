@@ -143,6 +143,9 @@ jobs:
           - example: terrain-derivatives
             directory: implementations/python/terrain-derivatives
             pythonpath: ""
+          - example: cost-distance
+            directory: implementations/python/cost-distance
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -234,6 +237,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-pattern-kde-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/clark-evans-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/slope-aspect-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/cost-distance-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
