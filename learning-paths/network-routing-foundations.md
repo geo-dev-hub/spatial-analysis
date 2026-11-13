@@ -8,7 +8,7 @@ Start with [Shortest paths](../algorithms/networks/shortest-paths.md). Decide wh
 
 ## 2. Implement the baseline
 
-Run the [Dijkstra and A* package](../implementations/python/shortest-paths/README.md). Compare path cost, predecessor reconstruction and the effect of an admissible heuristic.
+Run the [shortest-path package](../implementations/python/shortest-paths/README.md), which now includes Dijkstra, A*, Bellman–Ford and Floyd–Warshall. Compare path cost, predecessor reconstruction and the effect of an admissible heuristic.
 
 ## 3. Add road-network constraints
 
