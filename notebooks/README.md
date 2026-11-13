@@ -4,8 +4,6 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
-- [Graham scan](graham-scan-lab.ipynb): step through polar-angle order, inspect the hull stack and see which points are removed by the orientation test.
-
 - [D8 flow direction](d8-flow-direction-lab.ipynb): move a synthetic hill and change its tilt to see how D8 assigns one receiving neighbour to each cell.
 
 - [Ordinary kriging](ordinary-kriging-lab.ipynb): compare spherical, exponential and Gaussian variograms, and inspect predictions beside their model-based variance.
