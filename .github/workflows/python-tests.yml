@@ -116,6 +116,9 @@ jobs:
           - example: two-step-fca
             directory: implementations/python/two-step-fca
             pythonpath: ""
+          - example: d8-flow-accumulation
+            directory: implementations/python/d8-flow-accumulation
+            pythonpath: ""
           - example: d8-flow
             directory: implementations/python/d8-flow
             pythonpath: ""
@@ -202,6 +205,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/dbscan-clustering-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/two-step-fca-accessibility-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-direction-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-accumulation-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
