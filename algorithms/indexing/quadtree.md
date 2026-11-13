@@ -109,6 +109,10 @@ Record:
 
 Repeat with different bucket capacities and root extents. Explain why the results can change even though the correct query answer must not.
 
+## Reproduce the teaching example
+
+The [Python point-region quadtree](../../implementations/python/quadtree/README.md) implements the bucket model described here, including explicit split-line and stopping rules. Follow its [intern walkthrough](../../implementations/python/quadtree/implementation-walkthrough.md) and run the [quadtree lab notebook](../../notebooks/quadtree-lab.ipynb) to compare window queries with brute force.
+
 ## References
 
 - Samet, H. (1984), [The quadtree and related hierarchical data structures](https://doi.org/10.1145/356924.356930), ACM Computing Surveys. A foundational survey of quadtree families and applications.
