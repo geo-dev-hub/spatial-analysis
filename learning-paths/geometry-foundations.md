@@ -1,6 +1,6 @@
 # Geometry foundations: how points, lines and areas relate
 
-<small>Four connected lessons · Start with a map question · Work through the examples in Python</small>
+<small>Four core lessons and a computational-geometry extension · Start with a map question · Work through the examples in Python</small>
 
 A point falls inside a boundary. Two lines cross. Two areas overlap. A whole network of lines has thousands of crossings.
 
@@ -75,6 +75,14 @@ You will learn:
 
 **Try it:** follow the [step-by-step implementation walkthrough](../implementations/python/bentley-ottmann/implementation-walkthrough.md), run both implementations and compare them with the all-pairs oracle.
 
+## Take the next step: find the convex hull
+
+[Graham scan](../algorithms/geometry/graham-scan.md)
+
+Once you can reason about points, segments and polygon boundaries, try a different question: what is the smallest convex boundary that contains a whole set of points? Graham scan introduces the convex hull, polar-angle sorting and the orientation test in one compact algorithm.
+
+Run the [Python example](../implementations/python/graham-scan/README.md) and follow the [step-by-step walkthrough](../implementations/python/graham-scan/implementation-walkthrough.md). The implementation returns only extreme hull vertices; its collinearity and floating-point policies are stated explicitly.
+
 ## What connects the lessons?
 
 - Point-in-polygon asks where a point sits relative to a boundary.
@@ -82,7 +90,7 @@ You will learn:
 - Polygon intersection uses those relationships to construct a shared geometry.
 - Bentley–Ottmann scales the search for segment crossings across a set of segments.
 
-The path ends with a useful distinction: knowing how to test one pair is not the same as finding every intersecting pair efficiently.
+The four core lessons end with a useful distinction: knowing how to test one pair is not the same as finding every intersecting pair efficiently. Graham scan is an optional next step into computational geometry, where the same orientation test helps construct a global boundary.
 
 ## Check what you can now explain
 
