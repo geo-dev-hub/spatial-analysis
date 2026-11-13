@@ -185,6 +185,9 @@ jobs:
           - example: helmert-7-parameter
             directory: implementations/python/helmert-7-parameter
             pythonpath: ""
+          - example: affine-georeferencing
+            directory: implementations/python/affine-georeferencing
+            pythonpath: ""
           - example: crs-transform
             directory: implementations/python/crs-transform
             pythonpath: ""
