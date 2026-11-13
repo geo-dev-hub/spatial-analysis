@@ -4,6 +4,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
+- [Graham scan](graham-scan-lab.ipynb): step through polar-angle order, inspect the hull stack and see which points are removed by the orientation test.
+
 - [D8 flow direction](d8-flow-direction-lab.ipynb): move a synthetic hill and change its tilt to see how D8 assigns one receiving neighbour to each cell.
 
 - [Ordinary kriging](ordinary-kriging-lab.ipynb): compare spherical, exponential and Gaussian variograms, and inspect predictions beside their model-based variance.
@@ -15,6 +17,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Geometry foundations
 
 - [Geometry foundations lab](geometry-foundations-lab.ipynb): move a point, adjust a segment and change two rectangles to inspect point location, segment intersection and polygon overlay.
+- [Graham scan lab](graham-scan-lab.ipynb): step through the convex-hull scan and compare the changing stack with the final boundary.
 
 - [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag, enumerate a small permutation distribution, and use sliders to compare Moran's I with Geary's C as the values change.
 - [Global Geary's C](gearys-c-lab.ipynb): compare squared differences between neighbours, contrast similar and alternating values, and inspect all 24 permutations of a four-unit example.
@@ -41,6 +44,7 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 ### Open a lab in Google Colab
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
+- [Graham scan](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/graham-scan-lab.ipynb)
 - [D8 flow direction](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/d8-flow-direction-lab.ipynb)
 - [Ordinary kriging](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/ordinary-kriging-lab.ipynb)
 - [Empirical semivariogram](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/empirical-semivariogram-lab.ipynb)
