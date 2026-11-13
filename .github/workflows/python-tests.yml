@@ -140,6 +140,9 @@ jobs:
           - example: d8-flow
             directory: implementations/python/d8-flow
             pythonpath: ""
+          - example: terrain-derivatives
+            directory: implementations/python/terrain-derivatives
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -230,6 +233,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/focal-raster-statistics-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-pattern-kde-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/clark-evans-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/slope-aspect-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks

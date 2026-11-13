@@ -37,6 +37,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [D8 flow accumulation lab](d8-flow-accumulation-lab.ipynb): trace upstream contributing cells, weighted flow and confluences.
 - [Watershed delineation lab](watershed-delineation-lab.ipynb): select an outlet and map all cells that drain to it.
 - [Stream order lab](stream-order-lab.ipynb): compare Strahler order and Shreve magnitude at headwaters and confluences.
+- [Slope and aspect lab](slope-aspect-lab.ipynb): calculate Horn slope and downslope aspect, then inspect cell spacing, flat cells and NoData masking.
 
 ### Geostatistics and interpolation
 
@@ -89,6 +90,6 @@ The links below point to notebooks already available on the default branch. Newe
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all twenty-three notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all thirty-one notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.

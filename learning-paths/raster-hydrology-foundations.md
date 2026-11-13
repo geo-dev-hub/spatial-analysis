@@ -58,6 +58,10 @@ D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuou
 
 These methods produce different contributing-area patterns. They are not just different encodings of the same answer.
 
+## 6. Derive terrain slope and aspect
+
+Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The derivative calculation is distinct from D8 flow routing: it estimates local gradient and downslope direction, while D8 chooses one downstream raster neighbour.
+
 ## Exercises
 
 1. Create a simple plane and predict the D8 directions.
@@ -69,4 +73,4 @@ These methods produce different contributing-area patterns. They are not just di
 
 ## What remains
 
-The wider source section also includes broader local, zonal and global raster algebra, weighted focal filters, sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.
+The wider source section also includes broader local, zonal and global raster algebra, weighted focal filters, sink breaching, flat resolution, D-infinity, multiple-flow direction, channel extraction, curvature and multiscale terrain metrics, additional stream-network metrics, basin delineation, HAND, topographic wetness, rainfall-runoff models and hydrodynamic methods. Each needs its own assumptions, validation and reproducible example.

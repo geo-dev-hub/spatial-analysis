@@ -82,6 +82,17 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 - [Global Getis-Ord G](statistics/global-getis-ord-g.md) — a supplementary global concentration statistic added to explain the source-listed local Gi* method; it is not a separate entry in the original compendium.
 
+## Raster and terrain analysis
+
+- [Focal raster statistics](raster/focal-statistics.md) — calculate NoData-aware neighbourhood summaries.
+- [Priority-Flood](raster/priority-flood.md) — fill DEM depressions to their lowest spill elevation.
+- [Euclidean distance transform](raster/euclidean-distance-transform.md) — calculate centre-to-centre distance on a regular raster grid.
+- [D8 flow direction](raster/d8-flow-direction.md) — assign each cell to its steepest downslope neighbour.
+- [D8 flow accumulation](raster/d8-flow-accumulation.md) — propagate upstream contributions through a D8 grid.
+- [Watershed delineation](raster/watershed-delineation.md) — trace cells draining to a selected outlet.
+- [Stream ordering](raster/stream-order.md) — compare Strahler order and Shreve magnitude.
+- [Terrain slope and aspect](raster/slope-aspect.md) — estimate local derivatives with Horn's 3×3 operator.
+
 ## A connected place to start
 
 The [geometry foundations path](../learning-paths/geometry-foundations.md) connects the first four geometry lessons and continues into validity, clipping and overlay. The [Core GIS continuation path](../learning-paths/core-gis-continuation.md) adds simplification, offsetting, proximity graphs and point location; [network routing foundations](../learning-paths/network-routing-foundations.md) connects graph models with shortest-path methods. The [spatial indexing path](../learning-paths/spatial-indexing.md) connects the packed R-tree, spatial joins, quadtree and k-d tree, with a new selection guide to help match an index to a workload. The [spatial autocorrelation path](../learning-paths/global-spatial-autocorrelation.md) connects global and local Moran, Geary and Getis-Ord methods, with six interactive notebooks. The [spatial indexing path](../learning-paths/spatial-indexing.md) starts with bounding boxes and the STR-packed R-tree.
