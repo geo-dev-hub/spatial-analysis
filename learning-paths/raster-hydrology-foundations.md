@@ -1,6 +1,6 @@
 # Raster terrain and hydrology foundations: from elevation to contributing area
 
-**Status:** First audited terrain and drainage methods now have tested teaching implementations: Horn slope/aspect, D8 direction and accumulation, single-outlet watershed delineation, stream ordering, depression filling, Euclidean distance and raster least-cost distance. Terrain conditioning, channel extraction and alternative flow-routing methods remain open.
+**Status:** First audited terrain and drainage methods now have tested teaching implementations: Horn slope/aspect, local hillshade, topographic wetness index, D8 direction and accumulation, single-outlet watershed delineation, stream ordering, depression filling, Euclidean distance and raster least-cost distance. Terrain conditioning, channel extraction and alternative flow-routing methods remain open.
 
 ## The workflow
 
@@ -50,15 +50,15 @@ Read [D8 flow accumulation](../algorithms/raster/d8-flow-accumulation.md) and ru
 
 Accumulation includes the cell itself. It is not discharge unless the input contributions and time basis justify that interpretation.
 
-## 4. Delineate a contributing area
+## 4. Calculate a topographic wetness index\n\nRead [Topographic wetness index](../algorithms/raster/topographic-wetness-index.md). It combines supplied specific catchment area and slope. The area input must already be converted to specific catchment area in metres; raw flow-accumulation counts are not interchangeable. A positive slope floor handles flat cells and must be reported.\n\n## 5. Delineate a contributing area
 
 Read [Single-outlet watershed delineation](../algorithms/raster/watershed-delineation.md) and run the [watershed notebook](../notebooks/watershed-delineation-lab.ipynb). It traces upstream cells whose D8 paths reach a selected outlet. The outlet cell is explicit; automatic snapping is deliberately not hidden inside the operation.
 
-## 5. Describe the channel network
+## 6. Describe the channel network
 
 Read [Stream ordering](../algorithms/raster/stream-order.md) and run the [stream-order notebook](../notebooks/stream-order-lab.ipynb). It compares Strahler order, which increases only when equal highest-order tributaries meet, with Shreve magnitude, which sums headwater contributions. The stream mask is an explicit input; channel extraction and threshold selection are separate modelling decisions.
 
-## 6. Compare routing assumptions
+## 7. Compare routing assumptions
 
 D8 sends all flow from a cell to one neighbour. D-infinity estimates a continuous direction and distributes flow across adjacent downslope cells. Multiple-flow-direction methods distribute flow among several downslope neighbours according to their gradients.
 
