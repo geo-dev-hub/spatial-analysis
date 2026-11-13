@@ -19,7 +19,7 @@ def test_multiple_targets_use_nearest_euclidean_distance():
     targets[0, 0] = True
     targets[3, 4] = True
     result = distance_to_targets(targets)
-    assert result[0, 4] == pytest.approx(4)
+    assert result[0, 4] == pytest.approx(3)
     assert result[3, 0] == pytest.approx(3)
 
 
