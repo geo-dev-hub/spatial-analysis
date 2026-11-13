@@ -160,7 +160,7 @@ print(queen.summary())
 print("Islands:", queen.isolates)
 ```
 
-In the current Graph API, `rook=True` means shared-edge contiguity; `rook=False` means Queen contiguity. The Graph API is the newer libpysal interface and is currently documented as experimental, so its API may change. Pin and record the libpysal version used in a reproducible project. The migration guide explains how it relates to the older `W` weights class.
+In the current Graph API, `rook=True` means shared-edge contiguity; `rook=False` means Queen contiguity. The builders accept a GeoPandas `GeoSeries` or `GeoDataFrame`, not a plain Python list of Shapely geometries. For a synthetic example, a GeoSeries may have `crs=None` when its coordinates are deliberately abstract. For real distance-based weights, use a suitable projected CRS and record its units. The Graph API is the newer libpysal interface and is currently documented as experimental, so its API may change. Pin and record the libpysal version used in a reproducible project. See the [Graph API reference](https://pysal.org/libpysal/stable/generated/libpysal.graph.Graph.html) and migration guide for how it relates to the older `W` weights class.
 
 The contiguity builder assumes polygon coverage: neighbouring polygons should share boundary segments or points. Gaps, overlaps and mismatched digitising can affect the result. The `strict` option changes how contiguity is detected; consult the API before using it on imperfect geometries.
 

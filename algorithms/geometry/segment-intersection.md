@@ -158,7 +158,7 @@ $$
 O((n+k)\log n)
 $$
 
-where $n$ is the number of segments and $k$ is the number of reported intersections. This is output-sensitive: when there are few intersections, it can avoid testing most segment pairs. In the worst case k can be Θ(n²), so the output itself can be quadratic.
+where $n$ is the number of segments and $k$ is the number of reported intersections. This is output-sensitive: when there are few intersections, it can avoid testing most segment pairs. In the worst case $k$ can be $\Theta(n^2)$, so the output itself can be quadratic.
 
 The original presentation assumes away difficult degeneracies such as vertical segments, multiple segments meeting at one point and certain coincident events. A practical implementation must define event ordering and handle these cases explicitly. Do not present the clean general-position algorithm as a complete robust implementation for arbitrary GIS linework.
 

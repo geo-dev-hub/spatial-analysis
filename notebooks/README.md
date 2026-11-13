@@ -16,7 +16,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Run a notebook
 
-Install the dependencies from the repository root:
+Install the dependencies from the repository root. The spatial-weights lab uses GeoPandas GeoSeries as input to the libpysal Graph builders:
 
 ```bash
 python -m pip install -r notebooks/requirements.txt
