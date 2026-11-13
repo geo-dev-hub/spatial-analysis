@@ -34,5 +34,7 @@ def test_shape_and_zone_label_contracts():
         zonal_statistics([[1,2]],[[1]])
     with pytest.raises(ValueError,match="integers"):
         zonal_statistics([[1,2]],[[1,1.5]])
+    with pytest.raises(ValueError,match="int64 range"):
+        zonal_statistics([[1]],[[float(2**63)]])
     with pytest.raises(ValueError,match="2D"):
         zonal_statistics([1,2],[[1,1]])
