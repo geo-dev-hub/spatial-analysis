@@ -10,11 +10,12 @@ from proximity_graphs import (
 SQUARE = [(0, 0), (1, 0), (1, 1), (0, 1)]
 
 
-def test_gabriel_graph_keeps_square_sides_not_diagonals():
+def test_gabriel_graph_open_disk_convention_keeps_square_diagonal_ties():
     edges = gabriel_graph(SQUARE)
-    assert len(edges) == 4
+    # The other square corners lie on the diameter-circle boundary, not inside it.
+    assert len(edges) == 6
     assert (0, 1) in edges and (0, 3) in edges
-    assert (0, 2) not in edges
+    assert (0, 2) in edges
 
 
 def test_rng_is_subset_of_gabriel_graph_for_fixture():
