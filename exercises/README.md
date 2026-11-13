@@ -27,7 +27,8 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [GeoAI foundations](geoai-foundations.md)
 - [Geodesy foundations](geodesy-foundations.md)
 - [Triple collocation](triple-collocation.md)
-- [Marine heatwave detection](marine-heatwave-detection.md)\n- [Exact orientation](exact-orientation.md)
+- [Marine heatwave detection](marine-heatwave-detection.md)
+- [Exact orientation](exact-orientation.md)
 
 ## Exercise writing standard
 
