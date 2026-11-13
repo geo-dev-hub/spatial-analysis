@@ -8,7 +8,7 @@ Start with [Shortest paths](../algorithms/networks/shortest-paths.md). Decide wh
 
 ## 2. Implement the baseline
 
-Run the [shortest-path package](../implementations/python/shortest-paths/README.md), which now includes Dijkstra, A*, Bellman–Ford and Floyd–Warshall. Compare path cost, predecessor reconstruction and the effect of an admissible heuristic.
+Run the [shortest-path package](../implementations/python/shortest-paths/README.md), which now includes Dijkstra, A*, bidirectional Dijkstra, directed ALT landmarks, Bellman–Ford and Floyd–Warshall. Compare path cost, predecessor reconstruction, the bidirectional stopping condition and the effect of an admissible landmark heuristic.
 
 ## 3. Add road-network constraints
 
@@ -16,7 +16,7 @@ Extend the model with one-way streets, access rules, turn penalties and turn res
 
 ## 4. Scale repeated queries
 
-Study ALT landmarks, bidirectional search, contraction hierarchies, hub labels and customizable route planning. Compare their preprocessing, memory, query and metric-update trade-offs.
+Study the implemented [ALT landmark heuristic and bidirectional search](../implementations/python/shortest-paths/README.md), then compare contraction hierarchies, hub labels and customizable route planning. Compare their preprocessing, memory, query and metric-update trade-offs.
 
 ## 5. Move toward transit and time-dependent networks
 
