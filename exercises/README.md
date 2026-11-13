@@ -23,6 +23,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Geometry overlay and validity](geometry-overlay-and-validity.md)
 - [Core GIS continuation](core-gis-continuation.md)
 - [Spatial decision support](spatial-decision-support.md)
+- [Spatial cross-validation](spatial-cross-validation.md)
 
 ## Exercise writing standard
 
