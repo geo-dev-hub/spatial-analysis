@@ -4,7 +4,7 @@
 
 The model has population locations and service providers. Each provider has a supply measure—such as beds, staff or service capacity—and each population location has a demand measure.
 
-An impedance matrix links the two: rows are population locations, columns are providers. Its values may be travel time, distance or another documented cost.
+An impedance matrix links the two: rows are population locations, columns are providers. Its values may be travel time, distance or another documented cost. Positive infinity can represent a pair with no route; NaN and negative values are rejected.
 
 ## 2. Step one: calculate provider supply-to-demand ratios
 
