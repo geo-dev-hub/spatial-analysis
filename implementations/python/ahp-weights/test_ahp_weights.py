@@ -40,6 +40,6 @@ def test_invalid_matrices_are_rejected(matrix):
 
 def test_criteria_names_must_be_unique_and_complete():
     with pytest.raises(ValueError, match="one non-empty name"):
-        ahp_weights(np.eye(2), ["only_one"])
+        ahp_weights([[1, 2], [0.5, 1]], ["only_one"])
     with pytest.raises(ValueError, match="unique"):
-        ahp_weights(np.eye(2), ["same", "same"])
+        ahp_weights([[1, 2], [0.5, 1]], ["same", "same"])
