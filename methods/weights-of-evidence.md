@@ -93,7 +93,7 @@ flowchart LR
 
 ## 5. The key assumption: conditional independence
 
-The standard additive model assumes the evidence themes are conditionally independent given the event and given its absence. In practical terms, once we know whether the target event is present, one evidence layer should not provide additional information about another.
+The standard additive WofE model requires the evidence themes to be approximately conditionally independent with respect to the target-event occurrence pattern, as defined in the WofE literature. Agterberg and Cheng formalise this condition for the deposit-pattern indicators used in the model and develop an omnibus test based on the expected sum of posterior probabilities. Do not casually replace this specialised assumption with the stronger-sounding claim that the evidence layers are mutually independent in both event and non-event populations.
 
 That assumption is often difficult to defend. For example, distance to a mapped fault and a fault-density layer may encode overlapping information. Adding both as if they were independent can count the same signal more than once and produce overconfident posterior odds.
 
@@ -101,7 +101,7 @@ Before combining themes:
 
 1. Explain the geological or domain rationale for each evidence layer.
 2. Inspect pairwise associations and spatial overlap.
-3. Test conditional independence using an appropriate method and sampling design.
+3. Test the WofE conditional-independence assumption using a method appropriate to the event-pattern model; the Agterberg–Cheng omnibus test is a primary reference.
 4. Remove, combine or model dependent themes when justified.
 5. Compare predictions with spatially independent validation data.
 
@@ -129,7 +129,7 @@ The counts are only meaningful relative to the study-area definition and samplin
 - Report the prior event prevalence and the evidence weights alongside any map.
 - Do not interpret a high score as a discovery guarantee or as a causal explanation.
 
-The included NumPy implementation is a small, auditable baseline for aligned 2D binary arrays. It does not construct evidence themes, georeference data, test conditional independence, correct sampling bias or perform spatial cross-validation.
+Classical WofE treatments can represent a missing evidence theme as a third state and leave the prior logit unchanged for that cell. This package deliberately uses a stricter complete-case policy: a cell is scored only when the event and every evidence theme are present. The included NumPy implementation is a small, auditable baseline for aligned 2D binary arrays. It does not construct evidence themes, georeference data, test conditional independence, correct sampling bias or perform spatial cross-validation.
 
 ## 8. Worked calculation
 
@@ -181,8 +181,9 @@ For preference-driven suitability, compare [weighted linear combination](weighte
 
 ## References
 
-- Bonham-Carter, G. F. (1994). *Geographic Information Systems for Geoscientists: Modelling with GIS*. Pergamon. A foundational treatment of GIS-based weights-of-evidence modelling.
-- Agterberg, F. P., & Cheng, Q. (2002). Conditional independence test for weights-of-evidence modeling. *Natural Resources Research*, 11, 249–255. https://doi.org/10.1023/A:1021117600320
-- Raines, G. L. (1999). Evaluation of weights of evidence to predict epithermal-gold deposits in the Great Basin of the western United States. *Natural Resources Research*, 8, 257–276.
+- Bonham-Carter, G. F. (1994). *Geographic Information Systems for Geoscientists: Modelling with GIS*. Pergamon. https://doi.org/10.1016/C2013-0-03864-9. A foundational treatment of GIS-based weights-of-evidence modelling.
+- Agterberg, F. P., & Cheng, Q. (2002). Conditional independence test for weights-of-evidence modeling. *Natural Resources Research*, 11(4), 249–255. https://doi.org/10.1023/A:1021193827501
+- Raines, G. L. (1999). Evaluation of weights of evidence to predict epithermal-gold deposits in the Great Basin of the western United States. *Natural Resources Research*, 8, 257–276. https://doi.org/10.1023/A:1021602316101.
+- Agterberg, F. P., Bonham-Carter, G. F., & Wright, D. F. (1990). Statistical pattern integration for mineral exploration. In *Computer Applications in Resource Estimation: Prediction and Assessment for Metals and Petroleum*, 1–21. https://doi.org/10.1016/B978-0-08-037245-7.50006-8.
 
 The implementation and walkthrough are linked from [the Python package](../implementations/python/weights-of-evidence/README.md).
