@@ -48,7 +48,7 @@ You will see how an STRtree narrows the possible geometry pairs, how the exact p
 
 ## Compare the structures
 
-The [quadtree lesson](../algorithms/indexing/quadtree.md) introduces recursive spatial subdivision, with a focus on point-region trees and their stopping rules. The [k-d tree lesson](../algorithms/indexing/kd-tree-nearest-neighbour.md) introduces exact nearest-neighbour search by branch-and-bound and explains why coordinate metrics and dimensionality matter.
+The [quadtree lesson](../algorithms/indexing/quadtree.md) introduces recursive spatial subdivision, with a focus on point-region trees and their stopping rules. The [k-d tree lesson](../algorithms/indexing/kd-tree-nearest-neighbour.md) introduces exact nearest-neighbour search by branch-and-bound and explains why coordinate metrics and dimensionality matter. Use the new [spatial index selection guide](../algorithms/indexing/choosing-spatial-index.md) to decide which structure matches your data model, query, update pattern and metric.
 
 Run the [k-d tree teaching implementation](../implementations/python/kd-tree/README.md) and follow its [step-by-step walkthrough](../implementations/python/kd-tree/implementation-walkthrough.md). For the quadtree, run the [Python implementation](../implementations/python/quadtree/README.md), follow its [intern walkthrough](../implementations/python/quadtree/implementation-walkthrough.md) and explore the [quadtree notebook](../notebooks/quadtree-lab.ipynb). Use the [quadtrees and k-d trees exercises](../exercises/spatial-indexing-quadtrees-kdtree.md) to compare both structures with brute-force baselines.
 
