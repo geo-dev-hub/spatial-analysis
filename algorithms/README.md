@@ -97,6 +97,7 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Topographic wetness index](raster/topographic-wetness-index.md) — combine specific catchment area and slope into a relative terrain index.
 - [Raster resampling](raster/resampling.md) — compare nearest-neighbour and bilinear interpolation, including NoData policies.
 - [Zonal statistics](raster/zonal-statistics.md) — summarize aligned raster values by integer zone labels.
+- [Connected-component labeling](raster/connected-components.md) — identify connected foreground regions under 4/8-neighbour rules.
 - [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
 ## A connected place to start
