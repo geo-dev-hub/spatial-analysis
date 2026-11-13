@@ -62,6 +62,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Extend network routing with contraction hierarchies, non-FIFO routing, transit algorithms and multimodal transfers.
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
+- [x] Add a spatial cross-validation lesson and tested grid-block/buffered-fold baseline with an intern walkthrough; keep block-size selection and deployment-specific design as explicit research decisions.
 - [x] Add a first geostatistics lesson comparing IDW and ordinary kriging, with an empirical semivariogram estimator, tests, intern walkthrough and interactive notebook.
 - [x] Add a first raster lesson for the Euclidean distance transform, including non-square cell spacing, tests, intern walkthrough and interactive notebook.
 - [x] Add a D8 flow-direction lesson with explicit direction codes, rectangular cell spacing, NoData handling, tests, intern walkthrough and interactive notebook.
