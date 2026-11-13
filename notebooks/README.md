@@ -44,6 +44,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ### Point-pattern analysis
 
+- [Clark–Evans lab](clark-evans-lab.ipynb): compare nearest-neighbour spacing in clustered, random and regular synthetic patterns.
+
 - [Point-pattern KDE lab](point-pattern-kde-lab.ipynb): compare Gaussian bandwidths and weighted event intensity on a synthetic point pattern.
 
 ### Spatial clustering
