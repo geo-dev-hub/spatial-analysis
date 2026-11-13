@@ -1,7 +1,7 @@
 import math
 import pytest
 
-from shortest_paths import (ALTHeuristic, astar, bellman_ford, bidirectional_dijkstra, dijkstra, floyd_warshall)
+from shortest_paths import (ALTHeuristic, astar, bellman_ford, bidirectional_dijkstra, dijkstra, floyd_warshall, k_shortest_paths)
 
 
 GRAPH = {
@@ -126,3 +126,33 @@ def test_alt_heuristic_handles_unreachable_landmark_distances():
     heuristic = ALTHeuristic(graph, ["A", "X"])
     assert heuristic("A", "B") >= 0
     assert astar(graph, "A", "B", heuristic)[1] == pytest.approx(1.0)
+
+
+def test_yens_k_shortest_paths_returns_loopless_paths_in_cost_order():
+    graph = {
+        "A": [("B", 1), ("C", 2)],
+        "B": [("D", 2), ("C", 1)],
+        "C": [("D", 2), ("B", 1)],
+        "D": [],
+    }
+    paths = k_shortest_paths(graph, "A", "D", 4)
+    assert [cost for _path, cost in paths] == sorted(cost for _path, cost in paths)
+    assert len(paths) == 4
+    assert len({tuple(path) for path, _cost in paths}) == 4
+    assert all(len(path) == len(set(path)) for path, _cost in paths)
+
+
+def test_yens_k_shortest_paths_returns_fewer_when_not_enough_exist():
+    graph = {"A": [("B", 1)], "B": []}
+    assert k_shortest_paths(graph, "A", "B", 5) == [(["A", "B"], 1.0)]
+
+
+def test_yens_k_shortest_paths_unreachable_and_same_node():
+    assert k_shortest_paths({"A": []}, "A", "Z", 3) == []
+    assert k_shortest_paths({"A": []}, "A", "A", 3) == [(["A"], 0.0)]
+
+
+@pytest.mark.parametrize("k", [0, -1, 1.5, True])
+def test_yens_k_shortest_paths_rejects_invalid_k(k):
+    with pytest.raises(ValueError, match="k must"):
+        k_shortest_paths({"A": []}, "A", "A", k)
