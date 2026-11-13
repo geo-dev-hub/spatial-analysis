@@ -3,11 +3,11 @@ import pytest
 from connected_components import connected_components
 
 def test_separate_regions_receive_distinct_row_major_labels():
-    mask=np.array([[1,1,0,0],[1,0,0,1],[0,0,1,1]],dtype=bool)
+    mask=np.array([[1,1,0,0],[1,0,0,1],[0,1,0,1]],dtype=bool)
     labels,sizes=connected_components(mask,connectivity=4)
     assert list(sizes)==[1,2,3]
-    assert sizes=={1:3,2:1,3:2}
-    assert labels[0,0]==1 and labels[1,3]==2 and labels[2,2]==3
+    assert sizes=={1:3,2:2,3:1}
+    assert labels[0,0]==1 and labels[1,3]==2 and labels[2,1]==3
 
 def test_diagonal_contact_depends_on_connectivity():
     mask=np.array([[1,0],[0,1]],dtype=bool)
@@ -36,3 +36,7 @@ def test_invalid_shapes_and_connectivity_are_rejected():
         connected_components([[1,0]],valid=[[1]])
     with pytest.raises(ValueError,match="connectivity"):
         connected_components([[1]],connectivity=6)
+    with pytest.raises(ValueError,match="finite boolean"):
+        connected_components([[np.nan]])
+    with pytest.raises(ValueError,match="finite boolean"):
+        connected_components([[1]],valid=[[np.nan]])
