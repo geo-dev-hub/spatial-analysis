@@ -69,7 +69,7 @@ An R-tree can help find candidate polygons, but candidate filtering is not the s
 
 ## Implementation status
 
-This is a research and design dossier, not yet a production implementation. We should not label a repeated point-in-polygon scan as a trapezoidal map. The next implementation should use a precisely specified planar subdivision, explicit face labels and degeneracy fixtures, then compare every query against a brute-force face oracle.
+A tested [static slab point locator](../../implementations/python/point-location/README.md) now covers a deliberately restricted model: valid, pairwise interior-disjoint polygon faces with linear rings. It stores edge crossing groups per x-slab and uses binary search for interior-slab queries. Event-line queries use an explicit boundary-aware fallback. This is not a randomized trapezoidal map and does not claim Seidel's expected bounds; the advanced structure remains a separate implementation target.
 
 ## Try it
 
