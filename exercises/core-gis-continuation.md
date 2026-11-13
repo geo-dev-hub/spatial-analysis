@@ -43,7 +43,7 @@ Draw a planar subdivision with at least six faces. Create queries strictly insid
 - Sketch the x-slabs and the order of edges in each open slab.
 - Explain what additional search structure is needed to obtain logarithmic query time.
 
-Do not substitute repeated point-in-polygon tests and call them a trapezoidal map.
+Do not substitute repeated point-in-polygon tests and call them a trapezoidal map. Then run the [point-location lab](../notebooks/point-location-lab.ipynb) and compare its slab-event representation with your hand-drawn decomposition.
 
 ## 5. Preserve a polygon coverage
 
