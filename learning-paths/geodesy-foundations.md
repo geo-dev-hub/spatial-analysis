@@ -15,11 +15,15 @@ A projection maps the curved Earth to a plane. It cannot preserve every geometri
 - local distance and engineering tasks need an appropriate local projected CRS;
 - web-map display often uses Web Mercator, but its distortion makes it unsuitable for many measurements.
 
-## 3. Separate projection from datum transformation
+## 3. Learn a geocentric datum transformation
+
+Read [Helmert seven-parameter transformation](../methods/helmert-7-parameter.md) and run its [tested Position Vector implementation](../implementations/python/helmert-7-parameter/README.md). The example uses geocentric XYZ coordinates and explicitly names the rotation convention. It is one step in a datum operation, not a replacement for source/target ellipsoid conversions, grid shifts or epoch-aware operations.
+
+## 4. Separate projection from datum transformation
 
 A CRS operation may include a map projection and a datum/reference-frame transformation. High-accuracy work may require grid-shift files, a coordinate epoch, vertical datum and a specific operation. Record the operation and its resources so results can be reproduced.
 
-## 4. What comes next
+## 5. What comes next
 
 The source section also includes Helmert and Molodensky transformations, Bursa-Wolf parameters, NTv2 grids, ECEF/ENU conversions, geoid models, spherical geometry, GNSS, satellite orbits and network adjustment. These need dedicated methods, assumptions, reference data and validation.
 
