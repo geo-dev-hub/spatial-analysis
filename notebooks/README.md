@@ -4,6 +4,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
+- [Inverse distance weighting](inverse-distance-weighting-lab.ipynb): change the target location, distance power and neighbourhood size to see how each choice changes an estimated surface.
+
 ### Geometry foundations
 
 - [Geometry foundations lab](geometry-foundations-lab.ipynb): move a point, adjust a segment and change two rectangles to inspect point location, segment intersection and polygon overlay.
@@ -33,6 +35,7 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 ### Open a lab in Google Colab
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
+- [Inverse distance weighting](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/inverse-distance-weighting-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
 - [Global Geary's C](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb)
 - [Local Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb)
@@ -43,6 +46,6 @@ Open the notebook from JupyterLab and run the cells in order. The Global Moran's
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow also executes all ten notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
+The repository workflow also executes all eleven notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
