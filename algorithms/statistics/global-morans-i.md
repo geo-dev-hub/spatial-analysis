@@ -30,6 +30,14 @@ For each area, compare its value with the values in its neighbourhood.
 
 The spatial weights matrix $W$ records the neighbourhood relationships. The value $w_{ij}$ describes the weight assigned from unit $i$ to unit $j$. A zero means that the pair does not contribute to the neighbourhood comparison.
 
+
+
+### See how spatial patterns differ
+
+![A hexagonal-grid illustration comparing spatial patterns and their Global Moran's I values](https://commons.wikimedia.org/wiki/Special:FilePath/Moran%27s_I_example.png)
+
+*Figure 1. “Moran's I example,” by WikiNukalito (17 April 2024), Wikimedia Commons, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reproduced unchanged. The figure compares Moran's I values for different spatial patterns using Rook neighbours. [File page and licence](https://commons.wikimedia.org/wiki/File:Moran%27s_I_example.png).*
+
 ## 4. In one minute
 
 Let $x_i$ be the observed value for unit $i$, and let $z_i=x_i-\bar{x}$ be its deviation from the overall mean. Let $S_0$ be the sum of all weights:
@@ -103,7 +111,7 @@ $$
 For $x=[1,2,3,4]$:
 
 - $n=4$
-- (ar{x}=2.5)
+- $\bar{x}=2.5$
 - $z=[-1.5,-0.5,0.5,1.5]$
 - $S_0=6$
 - $\sum_i\sum_j w_{ij}z_i z_j=2.5$
@@ -119,7 +127,7 @@ $$
 
 The statistic is positive: neighbouring values tend to be similar in this example.
 
-Now change the values to ([1,4,1,4]), keeping exactly the same weights. The result is (-1): each unit is next to units with the opposite value.
+Now change the values to $x=[1,4,1,4]$, keeping exactly the same weights. The result is (-1): each unit is next to units with the opposite value.
 
 These are demonstrations of the statistic, not significance tests. We have not yet compared either value with a reference distribution.
 
@@ -137,23 +145,23 @@ The slope of the fitted line is global Moran's I under the corresponding standar
 
 ## 8. How to assess statistical significance
 
-A value of (I) by itself does not tell us whether the observed pattern is unusual. We need a reference distribution under a stated null hypothesis.
+A value of $I$ by itself does not tell us whether the observed pattern is unusual. We need a reference distribution under a stated null hypothesis.
 
 A common approach is a permutation test:
 
 1. Calculate $I_{obs}$ from the observed values and fixed weights.
 2. Shuffle the observed values across the spatial units, keeping $W$ fixed.
 3. Recalculate Moran's I for the shuffled values.
-4. Repeat this (M) times.
+4. Repeat this $M$ times.
 5. Compare the observed statistic with the simulated distribution.
 
-For a pre-specified one-sided test for positive spatial autocorrelation, a common pseudo-(p)-value is:
+For a pre-specified one-sided test for positive spatial autocorrelation, a common pseudo-$p$-value is:
 
 $$
 p = \frac{C+1}{M+1}
 $$
 
-Here $C$ is the number of simulated statistics at least as large as the observed statistic. The added one prevents a zero pseudo-(p)-value. With $M=999$, the smallest attainable value is $0.001$.
+Here $C$ is the number of simulated statistics at least as large as the observed statistic. The added one prevents a zero pseudo-$p$-value. With $M=999$, the smallest attainable value is $0.001$.
 
 Choose the alternative hypothesis before running the test. A right-tailed test for clustering, a left-tailed test for dispersion and a two-tailed test answer different questions.
 
@@ -217,12 +225,12 @@ The dense implementation is intended for learning and small examples. It is not 
 
 ## 12. Have a go
 
-1. Change ([1,2,3,4]) to ([1,4,1,4]). Explain why the sign changes.
+1. Change $x=[1,2,3,4]$ to $x=[1,4,1,4]$. Explain why the sign changes.
 2. Row-standardise the chain weights. Why does the numerical value change?
 3. Add an isolated fifth unit. What happens to the weights row and what should be reported?
 4. Replace the chain with a ring where the first and last units are also neighbours. Recalculate the statistic.
 5. Compare rook and queen contiguity on a polygon dataset. Explain how the neighbour graph changes before interpreting the new statistic.
-6. Run a permutation test with a fixed random seed. Explain what the pseudo-(p)-value means and what it does not mean.
+6. Run a permutation test with a fixed random seed. Explain what the pseudo-$p$-value means and what it does not mean.
 
 ## 13. References and further reading
 
