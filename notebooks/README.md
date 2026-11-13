@@ -19,7 +19,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Filter-and-refine spatial join](filter-refine-spatial-join-lab.ipynb): join points to polygons, inspect candidate pairs and compare exact predicates with a brute-force result.
 - [Point-region quadtree](quadtree-lab.ipynb): explore recursive cell subdivision and compare inclusive rectangular window queries with brute force.
 
-### Raster analysis\n\n- [Euclidean distance transform lab](raster-distance-transform-lab.ipynb): compare square and rectangular cell spacing and inspect distance to multiple target cells.\n\n### Geostatistics and interpolation\n\n- [Spatial interpolation lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.\n\n### Spatial statistics and weights
+### Remote sensing\n\n- [NDVI lab](ndvi-lab.ipynb): calculate a synthetic vegetation index and inspect NoData, non-finite values and quality masking.\n\n### Raster analysis\n\n- [Euclidean distance transform lab](raster-distance-transform-lab.ipynb): compare square and rectangular cell spacing and inspect distance to multiple target cells.\n\n### Geostatistics and interpolation\n\n- [Spatial interpolation lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.\n\n### Spatial statistics and weights
 
 - [Global Moran's I](global-morans-i-lab.ipynb): build a four-area neighbourhood graph, compare binary and row-standardised weights, inspect the spatial lag, enumerate a small permutation distribution, and use sliders to compare Moran's I with Geary's C as the values change.
 - [Global Geary's C](gearys-c-lab.ipynb): compare squared differences between neighbours, contrast similar and alternating values, and inspect all 24 permutations of a four-unit example.
@@ -56,6 +56,6 @@ The links below point to notebooks already available on the default branch. Newe
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all eighteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all nineteen notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
