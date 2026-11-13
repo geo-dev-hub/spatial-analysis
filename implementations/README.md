@@ -37,10 +37,11 @@ Each implementation should state:
 - [Sutherland–Hodgman polygon clipping](python/polygon-clipping/README.md): a dependency-free convex-polygon intersection implementation, with explicit input limits, edge-case tests and a [step-by-step walkthrough](python/polygon-clipping/implementation-walkthrough.md).
 - [Polygon overlay operations with Shapely](python/polygon-overlay/README.md): validated intersection, union, difference and symmetric difference, with topology and precision tests, an [intern walkthrough](python/polygon-overlay/implementation-walkthrough.md) and a [visual notebook](../notebooks/polygon-overlay-lab.ipynb).
 - [Graham scan convex hull](python/convex-hull/README.md): a dependency-free convex hull implementation with duplicate, collinear and degenerate-input tests, an [intern walkthrough](python/convex-hull/implementation-walkthrough.md) and a [visual notebook](../notebooks/convex-hull-lab.ipynb).
+- [Voronoi and Delaunay with SciPy](python/voronoi-delaunay/README.md): a validated Qhull-backed workflow with equidistance and empty-circumcircle tests, an [intern walkthrough](python/voronoi-delaunay/implementation-walkthrough.md) and a [visual notebook](../notebooks/voronoi-delaunay-lab.ipynb).
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all fourteen examples and execute all thirteen learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all fifteen examples and execute all fourteen learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
