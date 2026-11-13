@@ -10,17 +10,25 @@ def connected_components(foreground: Sequence[Sequence[bool]]|np.ndarray, *, con
     Label zero means background or invalid. A supplied valid mask marks cells
     participating in the analysis; invalid cells are barriers.
     """
-    mask=np.asarray(foreground,dtype=bool)
-    if mask.ndim!=2 or mask.size==0:
+    raw=np.asarray(foreground)
+    if raw.ndim!=2 or raw.size==0:
         raise ValueError("foreground must be a non-empty 2D array")
+    if not (np.issubdtype(raw.dtype,np.bool_) or np.issubdtype(raw.dtype,np.number)):
+        raise ValueError("foreground must be boolean or numeric 0/1")
+    if not np.isfinite(raw).all() or not np.isin(raw,[0,1]).all():
+        raise ValueError("foreground must contain only finite boolean/0/1 values")
+    mask=raw.astype(bool)
     if connectivity not in (4,8):
         raise ValueError("connectivity must be 4 or 8")
     if valid is None:
         valid_mask=np.ones(mask.shape,dtype=bool)
     else:
-        valid_mask=np.asarray(valid,dtype=bool)
-        if valid_mask.ndim!=2 or valid_mask.shape!=mask.shape:
+        raw_valid=np.asarray(valid)
+        if raw_valid.ndim!=2 or raw_valid.shape!=mask.shape:
             raise ValueError("valid mask must have the same 2D shape as foreground")
+        if not (np.issubdtype(raw_valid.dtype,np.bool_) or np.issubdtype(raw_valid.dtype,np.number)) or not np.isfinite(raw_valid).all() or not np.isin(raw_valid,[0,1]).all():
+            raise ValueError("valid mask must contain only finite boolean/0/1 values")
+        valid_mask=raw_valid.astype(bool)
     rows,cols=mask.shape
     labels=np.zeros(mask.shape,dtype=np.int32)
     if connectivity==4:
