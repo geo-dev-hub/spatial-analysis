@@ -49,6 +49,10 @@ Each implementation should state:
 
 - [Stationary covariance functions](python/covariance-functions/README.md): five Euclidean covariance models, dense covariance matrices, eigenvalue diagnostics, tests and an [intern walkthrough](python/covariance-functions/implementation-walkthrough.md). The examples do not implement spherical or network covariance models.
 
+### Geostatistics and covariance
+
+- [Isotropic spherical covariance](python/spherical-covariance/README.md): a finite non-negative Legendre-series model on the unit two-sphere, coordinate conversion, covariance matrices, tests and an [intern walkthrough](python/spherical-covariance/implementation-walkthrough.md). This is a scalar isotropic S2 model, not ellipsoidal geodesy or network covariance.
+
 ### Remote sensing
 
 - [Marine heatwave detection lab](../notebooks/marine-heatwave-detection-lab.ipynb): a visual synthetic daily series, event intervals, event metrics and missing-observation experiment.
