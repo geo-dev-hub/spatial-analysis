@@ -75,7 +75,7 @@ Common choices include:
 | Rook contiguity | Two polygons share an edge | A shared corner alone does not count |
 | Queen contiguity | Two polygons share an edge or vertex | Usually creates at least as many links as rook contiguity |
 | Distance band | Units within a chosen distance are neighbours | The distance and coordinate units must be appropriate |
-| k-nearest neighbours | Each unit is linked to its (k) nearest units | Can create asymmetric relationships before symmetrisation |
+| k-nearest neighbours | Each unit is linked to its $k$ nearest units | Can create asymmetric relationships before symmetrisation |
 
 A common transformation is row standardisation: divide each nonzero row by its row sum so that its weights sum to one. This makes the spatial lag a weighted neighbourhood average. It also changes the statistic, so record the transformation used.
 
@@ -183,7 +183,7 @@ Do not interpret the statistic without reporting:
 
 ## 10. A small Python implementation
 
-The accompanying reference implementation calculates the statistic from a dense weights matrix and includes a row-standardisation helper. It deliberately does not calculate analytical or permutation (p)-values.
+The accompanying reference implementation calculates the statistic from a dense weights matrix and includes a row-standardisation helper. It deliberately does not calculate analytical or permutation $p$-values.
 
 - [Interactive Jupyter lab](../../notebooks/global-morans-i-lab.ipynb)
 - [Python implementation](../../implementations/python/global-morans-i/README.md)
