@@ -6,6 +6,8 @@ This directory holds those foundational methods separately from individual algor
 
 ## Available foundations
 
+- [Masked autoencoding](masked-autoencoding.md) — reconstruct hidden patch content through an encoder-decoder pretraining objective; includes a scoped masking mechanics example.
+
 - [Spatial cross-validation](spatial-cross-validation.md) — design geographic holdouts and buffered folds that better match the intended deployment setting.
 
 - [Spatial weights matrix](spatial-weights-matrix.md) — define which spatial units are neighbours, how strongly they are connected and how those relationships are transformed.
