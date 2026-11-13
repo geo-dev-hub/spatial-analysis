@@ -6,6 +6,8 @@ This directory holds those foundational methods separately from individual algor
 
 ## Available foundations
 
+- [Spatial cross-validation](spatial-cross-validation.md) — design geographic holdouts and buffered folds that better match the intended deployment setting.
+
 - [Spatial weights matrix](spatial-weights-matrix.md) — define which spatial units are neighbours, how strongly they are connected and how those relationships are transformed.
 - [ELECTRE outranking](electre-outranking.md) — compare discrete alternatives through concordance, discordance and outranking relations; this is a method-family overview, not an implementation.
 - [TOPSIS](topsis.md) — rank a finite set of alternatives by distance from positive and negative ideal solutions.
