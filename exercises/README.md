@@ -24,6 +24,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Core GIS continuation](core-gis-continuation.md)
 - [Spatial decision support](spatial-decision-support.md)
 - [Spatial cross-validation](spatial-cross-validation.md)
+- [GeoAI foundations](geoai-foundations.md)
 
 ## Exercise writing standard
 
