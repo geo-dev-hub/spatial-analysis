@@ -123,6 +123,10 @@ Geometric anisotropy can often be represented by transforming directions or dist
 | Estimator | Matheron's estimator is sensitive to extreme squared differences; robust alternatives make different trade-offs |
 | Duplicate coordinates | Zero-distance pairs may reveal replicate variation, data errors or microscale effects |
 
+## Computational cost
+
+The teaching implementation visits every unordered pair of observations. For $n$ locations, it performs $n(n-1)/2$ distance calculations, so its time complexity is $O(n^2+B)$ for $B$ lag bins. It stores one running sum and count per bin, using $O(B)$ additional space. Large datasets need sampling, pair subsampling, spatial indexing or specialised algorithms; changing the implementation can also change the sampling behaviour of the empirical estimate.
+
 ## What this record calculates
 
 The reference implementation computes the omnidirectional Matheron estimator from Euclidean distances and user-supplied lag-bin edges. It returns each bin's midpoint, semivariance and pair count. Empty bins are retained with a missing semivariance so the gap is visible.
