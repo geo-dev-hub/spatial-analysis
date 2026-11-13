@@ -19,7 +19,7 @@
 
 ## Covariance functions and basis expansions
 
-The first canonical record now covers five Euclidean stationary covariance examples and the finite-matrix positive-semidefinite condition. It deliberately does not claim to implement spherical, network or space–time covariance. The source's remaining covariance entries and basis-expansion families still need separate verification and lessons.
+The Euclidean foundation covers five stationary covariance examples and finite-matrix diagnostics. A second canonical record now constructs scalar isotropic covariance on the two-sphere from non-negative Legendre coefficients, with a NumPy implementation, tests, intern walkthrough and notebook. This spherical model is not ellipsoidal geodesy, a vector field model or a fitted GP. Network validity, nonseparable space–time covariance, additional kernels and basis-expansion families still need separate verification and lessons.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
