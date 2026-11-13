@@ -32,8 +32,8 @@ Road-network modelling adds details that ordinary graph examples omit:
 | A* | Order by f(v)=g(v)+h(v) using a lower-bound heuristic | Optimal with an admissible heuristic under the algorithm's reopening/consistency conditions |
 | Bellman–Ford | Repeatedly relax all edges | Supports negative edges and detects reachable negative cycles |
 | Floyd–Warshall | Dynamic programming over allowed intermediate vertices | All-pairs shortest paths; O(V³) time |
-| Bidirectional Dijkstra | Search forward from source and backward from target | Directed reverse graph needed; stopping condition must be correct |
-| ALT | A* with landmark-based triangle-inequality lower bounds | Preprocessing distances to/from selected landmarks |
+| Bidirectional Dijkstra | Search forward from source and backward from target | Directed reverse graph and a lower-bound stopping condition; now implemented and tested |
+| ALT | A* with landmark-based triangle-inequality lower bounds | Preprocessing distances to/from selected landmarks; now implemented and tested |
 | Contraction hierarchies | Contract less important vertices and add shortcut edges | Preprocessing-heavy, fast queries on suitable road networks |
 | Hub labeling | Store selected forward/backward hub distances | Large preprocessing/index trade-off; query intersects labels |
 | Customizable route planning | Separate metric-independent partitioning from metric customization | Useful when topology is stable but edge costs change |
@@ -74,13 +74,13 @@ A turn restriction may require the search state to include the incoming edge, no
 
 ## Runnable baseline
 
-The companion implementation provides Dijkstra and A* over non-negative weighted directed graphs, plus Bellman–Ford for negative edges and Floyd–Warshall for all-pairs distances. Dijkstra/A* reject negative or non-finite edge weights; Bellman–Ford detects reachable negative cycles; Floyd–Warshall detects negative cycles anywhere in the represented graph.
+The companion implementation provides Dijkstra, A*, bidirectional Dijkstra and a directed ALT landmark heuristic over non-negative weighted directed graphs, plus Bellman–Ford for negative edges and Floyd–Warshall for all-pairs distances. Dijkstra/A* reject negative or non-finite edge weights; Bellman–Ford detects reachable negative cycles; Floyd–Warshall detects negative cycles anywhere in the represented graph.
 
 - [Implementation](../../implementations/python/shortest-paths/README.md)
 - [Intern walkthrough](../../implementations/python/shortest-paths/implementation-walkthrough.md)
 - [Tests](../../implementations/python/shortest-paths/test_shortest_paths.py)
 
-It is a teaching baseline, not a production road router. It does not implement turn-expanded graphs, time-dependent edges, ALT, contraction hierarchies, hub labels or transit routing.
+It is a teaching baseline, not a production road router. It does not implement turn-expanded graphs, time-dependent edges, contraction hierarchies, hub labels, customizable route planning or transit routing.
 
 ## Try it
 
@@ -95,4 +95,4 @@ Finally, add a turn restriction. Explain why the state may need to represent the
 - Geisberger, R., Sanders, P., Schultes, D. and Delling, D. (2008), [Contraction Hierarchies: Faster and Simpler Hierarchical Routing in Road Networks](https://i11www.iti.kit.edu/extra/publications/gssd-chfsh-08.pdf).
 - [OSRM routing algorithms overview](https://github.com/Project-OSRM/osrm-backend/wiki/Algorithms).
 
-**Scope:** Dijkstra, A*, Bellman–Ford and Floyd–Warshall have runnable baselines. Bidirectional Dijkstra, ALT, contraction hierarchies, hub labels and customizable route planning remain research/survey material, not implemented algorithms.
+**Scope:** Dijkstra, A*, Bellman–Ford and Floyd–Warshall have runnable baselines. Contraction hierarchies, hub labels and customizable route planning remain research/survey material, not implemented algorithms.
