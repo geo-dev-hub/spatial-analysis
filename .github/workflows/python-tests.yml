@@ -65,6 +65,9 @@ jobs:
           - example: polygon-clipping
             directory: implementations/python/polygon-clipping
             pythonpath: ""
+          - example: polygon-overlay
+            directory: implementations/python/polygon-overlay
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -136,3 +139,4 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-weights-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geometry-foundations-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/quadtree-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/polygon-overlay-lab.ipynb
