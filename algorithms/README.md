@@ -100,6 +100,10 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 - [Connected-component labeling](raster/connected-components.md) — identify connected foreground regions under 4/8-neighbour rules.
 - [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
+## Geodesy and coordinate systems
+
+- [Coordinate transformation and CRS axis order](geodesy/crs-transformation.md) — transform point coordinates with explicit longitude/latitude and x/y conventions.
+
 ## GeoAI
 
 - [Contrastive representation learning with NT-Xent](geoai/contrastive-info-nce.md) — derive a self-supervised objective and examine geospatial positive-pair design.

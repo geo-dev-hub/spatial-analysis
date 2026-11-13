@@ -41,7 +41,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
 | Summarizing raster values by zone | [Zonal statistics](algorithms/raster/zonal-statistics.md) |
 | Labeling connected raster regions | [Connected-component labeling](algorithms/raster/connected-components.md) |
-| Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |
+| Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |\n| Understanding coordinate reference systems | [Coordinate transformation](algorithms/geodesy/crs-transformation.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
 | Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
 | Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md) and [weighted linear combination](methods/weighted-linear-combination.md) |
