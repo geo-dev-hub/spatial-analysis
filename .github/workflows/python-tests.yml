@@ -63,6 +63,9 @@ jobs:
           - example: d8-flow-direction
             directory: implementations/python/d8-flow-direction
             pythonpath: ""
+          - example: graham-scan
+            directory: implementations/python/graham-scan
+            pythonpath: ""
 
     steps:
       - name: Check out repository
