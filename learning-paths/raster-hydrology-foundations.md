@@ -36,7 +36,7 @@ The diagram shows dependencies, not a single mandatory software command. Stream 
 
 ## 1. Derive terrain slope and aspect
 
-Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The method estimates local derivatives; D8 routing makes a separate discrete choice of one downstream raster neighbour. The Horn baseline requires a regular projected grid, explicit horizontal spacing and a vertical-unit conversion factor.
+Read [Horn slope and aspect](../algorithms/raster/slope-aspect.md) and run the [slope/aspect notebook](../notebooks/slope-aspect-lab.ipynb). The method estimates local derivatives; D8 routing makes a separate discrete choice of one downstream raster neighbour. The Horn baseline requires a regular projected grid, explicit horizontal spacing and a vertical-unit conversion factor. The same lab derives local hillshade from a selected sun azimuth and altitude; this is illumination, not shadow casting.
 
 ## 2. Understand D8 direction
 
