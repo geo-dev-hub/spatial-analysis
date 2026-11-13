@@ -13,7 +13,9 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Polygon validity](geometry/polygon-validity.md) — check whether rings, shells, holes and multi-part geometries satisfy the chosen geometry model; includes a tested Shapely inspection and explicit-repair workflow.
 - [Polygon clipping](geometry/polygon-clipping.md) — compare clipping algorithm families, choose an appropriate tool and study a tested convex Sutherland–Hodgman teaching implementation.
 - [Polygon overlay operations](geometry/overlay-operations.md) — understand intersection, union, difference, symmetric difference and precision, with a tested Shapely/GEOS package and visual notebook.
-- [Line simplification](geometry/simplification.md) — compare Douglas–Peucker maximum-deviation and Visvalingam–Whyatt effective-area generalisation, with tested baselines.\n- [Polygon coverage simplification](geometry/coverage-simplification.md) — preserve shared boundaries when simplifying an edge-matched polygon coverage.\n- [Precision models and snap rounding](geometry/precision-models.md) — distinguish coordinate precision reduction, fixed-grid overlay and snap-rounding noding.
+- [Line simplification](geometry/simplification.md) — compare Douglas–Peucker maximum-deviation and Visvalingam–Whyatt effective-area generalisation, with tested baselines.
+- [Polygon coverage simplification](geometry/coverage-simplification.md) — preserve shared boundaries when simplifying an edge-matched polygon coverage.
+- [Precision models and snap rounding](geometry/precision-models.md) — distinguish coordinate precision reduction, fixed-grid overlay and snap-rounding noding.
 - [Polygon offsetting](geometry/offsetting.md) — distinguish geometric offsets from clipping and compare join, cap and precision behaviour.
 - [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
 - [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps, with a tested restricted static slab locator.
@@ -21,6 +23,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 ## Networks and routing
 
 - [Shortest paths](networks/shortest-paths.md) — understand graph cost models and shortest-path families, with tested Dijkstra, A*, bidirectional Dijkstra and ALT baselines.
+- [Turn-aware and time-dependent routing](networks/turn-aware-time-dependent-routing.md) — model prohibited turns, turn penalties and FIFO travel-time functions, with tested edge-based and earliest-arrival examples.
 
 ## Spatial indexing
 
