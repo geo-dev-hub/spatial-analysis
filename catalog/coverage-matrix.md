@@ -41,3 +41,8 @@ The repository now has a connected geometry foundation, a spatial-index foundati
 Sections 11, 13, 15, 18, 19, 20, 21 and 22 carry explicit source warnings about remembered or representative additions. Section 12 also includes methods drawn from adjacent fields. Keep those warnings attached to the relevant intake material until each entry has been checked.
 
 See the [original section map](source-sections.md) and [page-by-page source transcription](../source-inventory/README.md).
+
+
+## Section 7 implementation note
+
+The ELECTRE I-style package now contains two deliberately separate stages: pairwise relation construction and exact small-instance kernel enumeration. The kernel enumerator checks internal and external stability, reports every kernel, and explicitly reports when no kernel exists. It is exhaustive and capped at 20 alternatives by default; it does not perform cycle reduction or produce a total ranking. See the [method record](../methods/electre-outranking.md), [implementation contract](../implementations/python/electre-i/README.md), [kernel exercise](../exercises/electre-i-kernel.md) and [kernel lab](../notebooks/electre-i-kernel-lab.ipynb).
