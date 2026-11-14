@@ -57,13 +57,13 @@ Outranking relations may be incomplete or non-transitive. A method can leave alt
 
 ## Implementation status
 
-This repository currently provides a researched conceptual lesson, not a tested ELECTRE implementation. The family is too broad to represent responsibly with a few lines of generic concordance code. A future implementation must name its variant, threshold semantics, exploitation procedure and validation examples. Do not label a simplified crisp concordance/discordance screen as “ELECTRE” without qualification.
+The repository now includes a narrowly scoped [ELECTRE I-style outranking relation implementation](../implementations/python/electre-i/README.md), with tests, an intern walkthrough, an exercise and a visual lab. It calculates crisp weighted concordance, range-normalised discordance and the resulting pairwise relation. It does **not** extract the ELECTRE I kernel/choice set, produce a complete ranking, or implement ELECTRE III/TRI. The range-normalised discordance index is an explicit teaching convention; thresholds and assumptions must be documented. Do not mistake this relation-building component for a complete ELECTRE decision procedure.
 
 ## References
 
 - Roy, B. (1968). Classement et choix en présence de points de vue multiples (la méthode ELECTRE). Revue française d'informatique et de recherche opérationnelle, 2(V8), 57–75.
 - Figueira, J. R., Greco, S., Roy, B. & Słowiński, R. (2013). An Overview of ELECTRE Methods and their Recent Extensions. Journal of Multi-Criteria Decision Analysis, 20, 61–85. https://doi.org/10.1002/mcda.1482
 - Govindan, K. & Jepsen, M. B. (2016). ELECTRE: A comprehensive literature review on methodologies and applications. European Journal of Operational Research, 250(1), 1–29. https://doi.org/10.1016/j.ejor.2015.07.019
-- UK Department for Communities and Local Government (2009). Multi-criteria analysis: a manual, Section 6.
+- UK Department for Communities and Local Government (2009). *Multi-criteria analysis: a manual*, Section 6.3, ELECTRE I. https://assets.publishing.service.gov.uk/media/5a790545e5274a2acd18b975/1132618.pdf
 
 This is a method-family overview. Choose and document a specific ELECTRE variant before applying it.
