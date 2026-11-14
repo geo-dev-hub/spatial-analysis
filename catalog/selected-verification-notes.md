@@ -93,3 +93,16 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new spline or Kalman implementation is claimed.
 - **Rights:** DOI and institutional links only; no source figures or text reproduced.
 - **Remaining work:** verify the Schneider fitting method as its own algorithm; expand NURBS basis and knot multiplicity treatment; build separate spline and state-space implementations with numerical and geometry-specific tests.
+
+
+## Section 10 — Geodesics on triangle meshes
+
+**Source entry:** “Geodesics on meshes: MMP exact geodesics, Chen-Han, fast marching on triangle meshes” (source page 21).
+
+- **Identity and bibliography — MMP:** Mitchell, J. S. B., Mount, D. M. and Papadimitriou, C. H. (1987), “The Discrete Geodesic Problem,” *SIAM Journal on Computing*, 16(4), 647–668, DOI [10.1137/0216045](https://doi.org/10.1137/0216045). The SIAM record confirms authors, venue, volume, issue, pages and the polyhedral shortest-path problem.
+- **Identity and bibliography — Chen–Han:** Chen, J. and Han, Y. (1990), “Shortest Paths on a Polyhedron, Part I: Computing Shortest Paths,” *Proceedings of the Sixth Annual Symposium on Computational Geometry*, DOI [10.1145/98524.98601](https://doi.org/10.1145/98524.98601). The conference record and available paper identify the alternative exact algorithm for possibly nonconvex polyhedra.
+- **Identity and bibliography — fast marching:** Kimmel, R. and Sethian, J. A. (1998), “Computing Geodesic Paths on Manifolds,” *Proceedings of the National Academy of Sciences*, 95(15), 8431–8435, DOI [10.1073/pnas.95.15.8431](https://doi.org/10.1073/pnas.95.15.8431). The paper extends fast marching to triangulated domains and uses it to compute geodesic distances and paths.
+- **Technical-claim status:** the lesson distinguishes graph-edge shortest paths, exact polyhedral surface geodesics and numerical Eikonal/fast-marching solutions. Complexity claims are tied to the cited algorithm papers and are not attributed to arbitrary software implementations.
+- **Implementation:** no new geodesic implementation is claimed. The lesson specifies reference geometries and a validation plan.
+- **Rights:** DOI, publisher, institutional and author-hosted links only; no third-party paper text or figures reproduced.
+- **Remaining work:** inspect exact algorithm variants and mesh degeneracies in greater depth; build a graph-Dijkstra baseline first, then evaluate a validated exact geodesic library and a separate fast-marching implementation.
