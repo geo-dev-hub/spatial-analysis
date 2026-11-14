@@ -125,3 +125,13 @@ The companion Python package now evaluates polynomial B-splines and rational NUR
 - [Spline lab notebook](../notebooks/bspline-nurbs-lab.ipynb)
 
 This is evaluation, not curve fitting. Schneider's cubic Bezier fitting and Kalman/RTS state estimation remain separate open tasks.
+
+
+## Reproducible Kalman filtering and RTS smoothing
+
+A NumPy-based companion module now implements a general linear-Gaussian state model with a forward Kalman filter and backward Rauch–Tung–Striebel smoother. It supports vector states, scalar or vector observations, missing measurement components, covariance validation and Joseph-form covariance updates. The initial state/covariance are interpreted as the prior before the first transition. This is a bounded linear model; it is not an EKF/UKF, particle smoother or map matcher.
+
+- [Kalman/RTS implementation](../implementations/python/curves-smoothing/kalman_smoothing.py)
+- [Tests](../implementations/python/curves-smoothing/test_kalman_smoothing.py)
+- [Intern walkthrough](../implementations/python/curves-smoothing/kalman-smoothing-walkthrough.md)
+- [Synthetic trajectory lab](../notebooks/kalman-rts-smoothing-lab.ipynb)
