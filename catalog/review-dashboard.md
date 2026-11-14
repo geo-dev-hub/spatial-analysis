@@ -9,8 +9,8 @@ This dashboard counts the source-entry review labels in the 22 item-level sectio
 | Measure | Entries | Meaning |
 |---|---:|---|
 | Source-entry rows counted | 694 | Rows with a source-entry review status in the section indexes |
-| Partial | 51 | A related canonical record or selected citation check exists, but the grouped source entry remains unverified |
-| Not checked — intake only | 643 | The source wording is preserved, but no independent review is recorded |
+| Partial | 52 | A related canonical record or selected citation check exists, but the grouped source entry remains unverified |
+| Not checked — intake only | 642 | The source wording is preserved, but no independent review is recorded |
 | Fully verified | 0 | No row is currently labelled fully verified across the independent review dimensions |
 
 Note: the 22 indexes also contain implementation inventories and explanatory tables. Those are not source-entry rows and are excluded from these counts.
@@ -28,7 +28,7 @@ Note: the 22 indexes also contain implementation inventories and explanatory tab
 | 7 — Domain modeling | 48 | 1 | 47 |
 | 8 — GeoAI | 54 | 2 | 52 |
 | 9 — Geodesy, cartography and infrastructure | 39 | 1 | 38 |
-| 10 — Classical statistical and computational additions | 30 | 12 | 18 |
+| 10 — Classical statistical and computational additions | 30 | 13 | 17 |
 | 11 — GeoAI and computer-vision additions | 26 | 0 | 26 |
 | 12 — Signal, GNSS and regional science | 28 | 0 | 28 |
 | 13 — GeoFM workflows, urban mobility and LLMs | 29 | 0 | 29 |
@@ -41,7 +41,7 @@ Note: the 22 indexes also contain implementation inventories and explanatory tab
 | 20 — Indices, microwave, events and information | 25 | 2 | 23 |
 | 21 — Neural fields, climate accounting and robust geometry | 26 | 2 | 24 |
 | 22 — Inference, covariance, spherical methods and asset monitoring | 28 | 2 | 26 |
-| **Total** | **694** | **51** | **643** |
+| **Total** | **694** | **52** | **642** |
 
 ## How to interpret this
 
