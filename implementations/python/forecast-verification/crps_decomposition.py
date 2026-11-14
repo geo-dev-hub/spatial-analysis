@@ -63,7 +63,7 @@ def crps_brier_decomposition(observations, ensemble, *, thresholds=None,
         probability=np.mean(x>z,axis=1)
         part=_brier_decomposition(event,probability)
         for key in components: components[key].append(part[key])
-    integrated={key:float(np.trapezoid(values,grid)) for key,values in components.items()}
+    integrated={key:float(np.trapz(values,grid)) for key,values in components.items()}
     return {"crps":integrated["reliability"]-integrated["resolution"]+integrated["uncertainty"],
             "direct_integrated_brier":integrated["brier_score"],
             "reliability":integrated["reliability"],
