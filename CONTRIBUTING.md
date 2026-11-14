@@ -21,10 +21,11 @@ Small contributions matter. A clear issue report can be just as useful as a larg
 
 1. Check whether the topic or issue is already in the collection.
 2. Tell us what you changed and why.
-3. Include a source for technical claims.
-4. If you share code, include the versions and steps needed to run it.
-5. For spatial examples, state the coordinate reference system, units and any important assumptions.
-6. Only share data, code and images that you have permission to redistribute.
+3. Include a primary or authoritative source for technical claims; check the title, authors, publication venue, year and DOI/URL against that source rather than copying a citation from another bibliography.
+4. If a source entry is uncertain or only partly checked, say so explicitly instead of marking it verified.
+5. If you share code, include the versions and steps needed to run it.
+6. For spatial examples, state the coordinate reference system, units and any important assumptions.
+7. Only share data, code and images that you have permission to redistribute.
 
 If you're unsure how to contribute, open an issue and describe what you have in mind. GitHub offers short forms for technical corrections, topic suggestions and visual sources. You can start a conversation before preparing a full change.
 
@@ -49,6 +50,8 @@ The GitHub Actions workflow runs all seventy-eight Python implementation package
 ## Help us keep it trustworthy
 
 We want explanations that are approachable without being careless.
+
+Use the [source-entry verification protocol](catalog/verification-protocol.md) to distinguish identity, bibliographic metadata, technical claims, implementation status and reuse rights. A passing test suite does not verify a literature claim, and a citation does not establish redistribution permission.
 
 - Tell readers when a method is exact, approximate, heuristic or stochastic.
 - Separate what the mathematics guarantees from what a particular software package does.

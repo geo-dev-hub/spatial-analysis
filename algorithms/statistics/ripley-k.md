@@ -106,8 +106,8 @@ The null model is homogeneous CSR conditional on n. It does not model an inhomog
 
 ## References
 
-- Ripley, B. D. (1976), *The second-order analysis of stationary point processes*, Journal of Applied Probability, 13(2), 255–266.
-- Ripley, B. D. (1977), *Modelling spatial patterns*, Journal of the Royal Statistical Society: Series B, 39(2), 172–212.
+- Ripley, B. D. (1976), “The second-order analysis of stationary point processes,” *Journal of Applied Probability*, 13(2), 255–266. https://doi.org/10.2307/3212829.
+- Ripley, B. D. (1977), “Modelling spatial patterns,” *Journal of the Royal Statistical Society: Series B (Methodological)*, 39(2), 172–192. https://doi.org/10.1111/j.2517-6161.1977.tb01615.x.
 - Baddeley, A., Diggle, P. J., Hardegen, A., Lawrence, T., Milne, R. K. and Nair, G. (2014), *On tests of spatial pattern based on simulation envelopes*, Ecological Monographs, 84, 477–489. https://doi.org/10.1890/13-2042.1
 - Myllymäki, M., Mrkvička, T., Grabarnik, P., Seijo, H. and Hahn, U. (2017), *Global envelope tests for spatial processes*, Journal of the Royal Statistical Society: Series B, 79(2), 381–404. https://doi.org/10.1111/rssb.12172
 

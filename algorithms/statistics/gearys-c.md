@@ -212,6 +212,7 @@ Always report:
 
 ## References
 
+- Geary, R. C. (1954). “The contiguity ratio and statistical mapping.” *The Incorporated Statistician*, 5(3). [https://doi.org/10.2307/2986645](https://doi.org/10.2307/2986645). Original paper introducing the contiguity ratio that became Geary's C.
 - PySAL `esda`. [Global Spatial Autocorrelation with Geary's C](https://pysal.org/esda/stable/user-guide/geary.html). The formula, interpretation and inference discussion in this lesson are paraphrased from this official guide.
 - PySAL `esda`. [Geary API reference](https://pysal.org/esda/v2.9.0/source/generated/esda.Geary.html). Check the current stable API for the version you install.
 - Cliff, A. D., and Ord, J. K. (1981). *Spatial Processes: Models & Applications*. Pion.

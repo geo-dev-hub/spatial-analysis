@@ -82,3 +82,16 @@ The [planar Gaussian KDE lesson](../../algorithms/statistics/point-pattern-kde.m
 4. Distinguish clustering algorithms from regionalisation objectives and constraints.
 5. Do not treat a model acronym as a complete specification; document its likelihood, spatial structure, estimation and assumptions.
 6. Use synthetic data only when it makes the statistical property easier to see, and state how the data were generated.
+
+## Bibliographic checks on selected spatial-statistics foundations
+
+Publisher or authoritative bibliographic records were checked for these core references:
+
+- Moran (1950), “Notes on continuous stochastic phenomena,” *Biometrika*, 37(1–2), 17–23, [10.1093/biomet/37.1-2.17](https://doi.org/10.1093/biomet/37.1-2.17).
+- Geary (1954), “The contiguity ratio and statistical mapping,” *The Incorporated Statistician*, 5(3), [10.2307/2986645](https://doi.org/10.2307/2986645).
+- Getis and Ord (1992), “The analysis of spatial association by use of distance statistics,” *Geographical Analysis*, 24(3), 189–206, [10.1111/j.1538-4632.1992.tb00261.x](https://doi.org/10.1111/j.1538-4632.1992.tb00261.x).
+- Anselin (1995), “Local Indicators of Spatial Association—LISA,” *Geographical Analysis*, 27(2), 93–115, [10.1111/j.1538-4632.1995.tb00338.x](https://doi.org/10.1111/j.1538-4632.1995.tb00338.x).
+- Ripley (1976), “The second-order analysis of stationary point processes,” *Journal of Applied Probability*, 13(2), 255–266, [10.2307/3212829](https://doi.org/10.2307/3212829).
+- Ripley (1977), “Modelling spatial patterns,” *Journal of the Royal Statistical Society: Series B (Methodological)*, 39(2), 172–192, [10.1111/j.2517-6161.1977.tb01615.x](https://doi.org/10.1111/j.2517-6161.1977.tb01615.x).
+
+This is a bibliographic metadata check for selected foundations, not a complete verification of all Section 2 source entries, inferential assumptions or software behaviour.
