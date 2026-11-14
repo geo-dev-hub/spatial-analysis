@@ -65,7 +65,12 @@ def cyrus_beck(start:Sequence[float],end:Sequence[float],vertices:Sequence[Seque
  if len(ring)<3 or len(set(ring))<3:raise ValueError('clip window needs at least three distinct vertices')
  area=sum(ring[i][0]*ring[(i+1)%len(ring)][1]-ring[(i+1)%len(ring)][0]*ring[i][1] for i in range(len(ring)))
  if area==0:raise ValueError('clip window has zero signed area')
- orient=1.0 if area>0 else -1.0; dx,dy=p1[0]-p0[0],p1[1]-p0[1]; lo,hi=0.0,1.0
+ orient=1.0 if area>0 else -1.0
+ for i in range(len(ring)):
+  a,b,c=ring[i-1],ring[i],ring[(i+1)%len(ring)]
+  turn=(b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0])
+  if orient*turn < 0: raise ValueError('Cyrus-Beck requires a convex clip window')
+ dx,dy=p1[0]-p0[0],p1[1]-p0[1]; lo,hi=0.0,1.0
  for i,a in enumerate(ring):
   b=ring[(i+1)%len(ring)]; ex,ey=b[0]-a[0],b[1]-a[1]
   c0=orient*(ex*(p0[1]-a[1])-ey*(p0[0]-a[0])); cd=orient*(ex*dy-ey*dx)
