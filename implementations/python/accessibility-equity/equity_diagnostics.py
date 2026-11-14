@@ -25,7 +25,7 @@ def weighted_lorenz_curve(values, weights=None):
         cw += b
         cx += a*b
         pop.append(cw/tw)
-        access.append(0.0 if tx == 0 else cx/tx)
+        access.append(cw/tw if tx == 0 else cx/tx)
     return pop, access
 
 
