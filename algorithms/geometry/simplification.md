@@ -115,3 +115,17 @@ These extended-local algorithms should not be merged into one generic simplifier
 The Opheim method is described in the cartographic generalisation literature as a constrained search region based on the Reumann–Witkam corridor with minimum and maximum distance constraints. See Clayton's NOAA review and the later road-network study by Guo et al. The latter's improved Opheim variant adds semantic critical-point and topology handling; those additions are not part of this implementation.
 
 - [Opheim implementation and tests](../../implementations/python/line-simplification/README.md)
+
+
+## Zhao–Saalfeld sleeve fitting
+
+Zhao and Saalfeld (1997) convert the perpendicular-distance tolerance into a variable angular interval. For a current anchor p and a sleeve point q at distance d>epsilon, the admissible directions for a simplified line through p are:
+
+\[
+\alpha(p,q)\pm\arcsin(\epsilon/d).
+\]
+
+Intersect these sector bounds as consecutive vertices arrive. A candidate endpoint is accepted only when its bearing lies in the current intersection. When the intersection cannot admit the next candidate, commit the last accepted original vertex and restart. The narrow-sleeve version implemented here retains original vertices and maintains the supporting-line tolerance; the paper's other variants allow perturbation or perform additional sleeve trimming.
+
+- [Implementation and tests](../../implementations/python/line-simplification/README.md)
+- [Primary paper: Zhao & Saalfeld (1997), AutoCarto 13, pp. 214–223](https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/linear-time-sleeve-fitting-polyline-simplification-algorithms.pdf)
