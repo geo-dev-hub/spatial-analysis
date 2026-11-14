@@ -24,8 +24,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Line clipping | Liang–Barsky | Same package, tests and lab | Implemented / tested |
 | Line clipping | Cyrus–Beck | Same package; convex polygon window contract | Implemented / tested |
 | Line clipping | Nicholl–Lee–Nicholl | Section 10 lesson mentions it as further reading; no implementation or dedicated test suite verified | Open |
-| Line simplification | Reumann–Witkam | Family lesson exists; no implementation verified | Open |
-| Line simplification | Lang | Family lesson exists; no implementation verified | Open |
+| Line simplification | Reumann–Witkam | Moving infinite-strip teaching implementation, tests and walkthrough added; variant contract stated | Implemented / tested candidate; independent reference comparison pending |
+| Line simplification | Lang | Bounded look-ahead teaching implementation, tests and walkthrough added; vertex-count lookahead contract stated | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Opheim | Family lesson exists; no implementation verified | Open |
 | Line simplification | Zhao–Saalfeld | Family lesson exists; no implementation verified | Open |
 | Line simplification | Visvalingam–Whyatt effective area | `implementations/python/line-simplification/` implementation and tests | Implemented / tested |
@@ -49,9 +49,9 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 | Source family | Child algorithm / method | Verified repository treatment | Status |
 |---|---|---|---|
-| Change points | CUSUM | Family comparison guide; no matching implementation verified | Research / lesson only |
-| Change points | Binary segmentation | Family comparison guide; no matching implementation verified | Research / lesson only |
-| Change points | PELT | Family comparison guide; no matching implementation verified | Research / lesson only |
+| Change points | CUSUM | Two-sided Page-style mean-shift implementation, tests and walkthrough added | Implemented / tested candidate; threshold calibration and reference review pending |
+| Change points | Binary segmentation | Greedy SSE split implementation and tests added | Implemented / tested candidate; comparison review pending |
+| Change points | PELT | Pruned exact SSE mean-shift implementation, brute-force partition test and walkthrough added | Implemented / tested candidate; independent reference review pending |
 | Change points | BEAST | Family comparison guide; no matching implementation verified | Research / lesson only |
 | Change points | Bayesian online change-point detection | Family comparison guide; no matching implementation verified | Research / lesson only |
 | Trend / seasonality | STL decomposition | Family guide; no matching implementation verified | Research / lesson only |
@@ -103,7 +103,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 ## What this audit says right now
 
-1. **There is real executable work already present.** The strongest verified Section 10 implementation clusters are rasterisation, three line-clipping algorithms, Visvalingam–Whyatt, three curve constructors, Viterbi decoding, forecast metrics and FSS.
+1. **There is real executable work already present.** The strongest Section 10 implementation clusters include rasterisation, three line-clipping algorithms, four line simplifiers (Douglas–Peucker, Visvalingam–Whyatt, Reumann–Witkam and Lang), three curve constructors, Viterbi decoding, CUSUM, binary segmentation, PELT mean-shift segmentation, forecast metrics and FSS.
 2. **Several family guides are not algorithm completion.** Mesh geodesics, discrete global grids, change points, trend/seasonality, optical flow, adaptive sampling and distribution shift still need child-level development.
 3. **Some apparent matches are deliberately marked partial.** Bezier evaluation is not Schneider fitting; Viterbi decoding is not a complete HMM estimation package; spatial cross-validation baselines are not NNDM/kNNDM.
 4. **This is not yet a complete Section 10 ledger.** The original source also includes geophysical processing, microclimate, environmental monitoring, population methods and other families on pages 22–23. Those will be split into child records next. Sections 1–9 and 11–22 still need the same reconciliation.
@@ -111,9 +111,9 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 ## Immediate algorithm-first queue
 
 1. Nicholl–Lee–Nicholl: recover the complete case classification from the original paper, implement only the documented 2D rectangular-window algorithm, and test it against a trusted clipping oracle.
-2. Reumann–Witkam, Lang and Opheim: develop and compare each simplification algorithm separately rather than treating them as one generic simplifier.
+2. Opheim and Zhao–Saalfeld: develop and compare each simplification algorithm separately rather than treating them as one generic simplifier.
 3. B-splines and NURBS: derive basis evaluation and knot/weight behaviour before adding code.
-4. PELT and binary segmentation: specify objective functions, pruning assumptions and stopping rules before implementation.
+4. BOCPD and BEAST: specify the probabilistic model, priors/hazard and computational strategy before implementation.
 5. Mesh geodesics: choose a bounded reference reproduction and state the exact mesh assumptions before coding.
 
 ## Evidence consulted for the first reconciliation
@@ -121,3 +121,13 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 - Original source transcription: [pages 21–25](../../source-inventory/pages-21-25.md).
 - Repository implementation and test files are linked in the corresponding package READMEs and test modules.
 - Nicholl–Lee–Nicholl identity and scope: Nicholl, Lee & Nicholl (1987), “An efficient new algorithm for 2-D line clipping: Its development and analysis,” SIGGRAPH '87, DOI [10.1145/37401.37432](https://doi.org/10.1145/37401.37432); see also the [2022 line-clipping survey](https://www.mdpi.com/2313-433X/8/10/286) and [Brown University graphics notes](https://cs.brown.edu/media/filer_public/88/9c/889c4b64-6979-4d31-a4fe-3904a681b978/dasilva.pdf).
+
+
+## 14 November 2026 — implementation update
+
+Two additional algorithm families now have executable teaching baselines and learning artefacts:
+
+- Line simplification: Reumann–Witkam and Lang added beside Douglas–Peucker and Visvalingam–Whyatt; package tests and intern walkthrough updated; comparison notebook added.
+- Change points: CUSUM, binary segmentation and PELT for piecewise-constant mean/SSE added; tests include brute-force partition comparison for PELT; walkthrough and synthetic lab notebook added.
+
+These are implementation candidates, not independently verified release completions. Reference-equivalence checks, notebook execution in CI, rights review and technical review remain open. Opheim, Zhao–Saalfeld, BOCPD and BEAST remain open algorithm tasks.
