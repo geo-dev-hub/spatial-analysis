@@ -35,6 +35,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Spatial cross-validation](spatial-cross-validation.md)
 - [GeoAI foundations](geoai-foundations.md)
 - [Geodesy foundations](geodesy-foundations.md)
+- [Geodetic, ECEF and ENU coordinates](ecef-enu.md)
 - [Triple collocation](triple-collocation.md)
 - [Marine heatwave detection](marine-heatwave-detection.md)
 - [Exact orientation](exact-orientation.md)
