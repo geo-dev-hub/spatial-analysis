@@ -34,6 +34,9 @@ jobs:
           - example: rasterization
             directory: implementations/python/rasterization
             pythonpath: ""
+          - example: line-clipping
+            directory: implementations/python/line-clipping
+            pythonpath: ""
           - example: polygon-intersection
             directory: implementations/python/polygon-intersection
             pythonpath: ""
@@ -399,6 +402,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-kernel-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ecef-enu-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/rasterization-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/line-clipping-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
