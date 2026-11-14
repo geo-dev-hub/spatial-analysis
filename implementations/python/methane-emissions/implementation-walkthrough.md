@@ -24,7 +24,7 @@ For a cross-section discretised into strips, each strip transports C_i u_i ds_i 
 
 ## 4. What is not implemented
 
-Raw spectral retrieval, cloud screening, background estimation, wind retrieval, plume segmentation, Gaussian plume inversion, uncertainty propagation and operational quality control are distinct tasks. A matched-filter score alone is not an emission estimate.
+Raw spectral retrieval, cloud screening, wind retrieval, uncertainty propagation and operational quality control remain distinct tasks. Local median/MAD background estimation, classical hysteresis segmentation and fixed-geometry Gaussian column-plume inversion have bounded teaching implementations, but they do not replace physical retrieval or operational validation. A matched-filter score alone is not an emission estimate.
 
 
 ## 5. Hysteresis segmentation
