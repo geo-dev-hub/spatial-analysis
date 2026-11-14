@@ -149,3 +149,5 @@ Records may have different evidence and implementation status. Check the status 
 - [Inverse distance weighting](interpolation/inverse-distance-weighting.md) — estimate values at unsampled locations with normalized inverse-distance weights and explicit neighbourhood choices.
 
 - [Location set covering](optimization/set-covering.md) — minimize the number of facilities needed to reach every demand location within a service threshold.
+
+- [Backup coverage (r-covering)](optimization/backup-coverage.md) — maximize demand with at least r distinct selected facilities within a service threshold; a deterministic redundancy screen, not a reliability probability.
