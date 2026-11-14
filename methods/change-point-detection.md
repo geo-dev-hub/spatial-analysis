@@ -156,3 +156,18 @@ Evaluate more than exact-date accuracy. Report detection probability, false alar
 ## Scope
 
 This guide compares method families and states their modelling assumptions. It does not claim to implement CUSUM, binary segmentation, PELT, BOCPD or BEAST. A practical package should begin with one explicitly chosen cost model, simulated known-change tests, missing-data rules and uncertainty reporting before scaling to spatial image collections.
+
+
+## Reproducible mean-shift implementations
+
+The companion teaching package now implements three distinct baselines for a univariate, finite, equally weighted sequence:
+
+- **CUSUM:** two-sided Page-style sequential accumulation against a supplied reference mean, allowance and threshold. Threshold calibration is the analyst's responsibility.
+- **Binary segmentation:** greedy recursive splitting by reduction in within-segment sum of squares (SSE), accepting a split only when its gain exceeds the supplied penalty.
+- **PELT mean:** dynamic programming with pruning for the additive objective consisting of segment SSE plus a penalty per change point. The implementation supports a minimum segment length and is exact for this stated objective up to floating-point arithmetic. Worst-case runtime is quadratic; a universal linear-time claim is not made.
+
+The segmentation algorithms detect piecewise-constant mean changes, not arbitrary distributional changes. They assume finite numeric observations in temporal order. Seasonal structure, serial dependence, irregular time steps, missingness and spatial multiplicity need explicit treatment before operational use.
+
+- [Runnable Python package and tests](../implementations/python/change-point-detection/README.md)
+- [Intern walkthrough](../implementations/python/change-point-detection/implementation-walkthrough.md)
+- [Synthetic change-point lab](../notebooks/change-point-detection-lab.ipynb)
