@@ -4,13 +4,13 @@
 - **Source pages:** 18–20
 - **Source transcription:** [pages 16–20](../../source-inventory/pages-16-20.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Coordinate transformation and CRS axis order](../../algorithms/geodesy/crs-transformation.md) (first scoped geodesy lesson)
+- **Current canonical records:** [Coordinate transformation and CRS axis order](../../algorithms/geodesy/crs-transformation.md), [Geodetic, ECEF and local ENU coordinates](../../algorithms/geodesy/ecef-enu.md), and [Helmert seven-parameter transformation](../../methods/helmert-7-parameter.md)
 
 This section contains the supporting systems and concepts that make spatial work possible: coordinate reference systems, georeferencing, geocoding, map design, data infrastructure, quality assurance, privacy and geographic language. It also includes graph, topology and causal-analysis methods. These should become connected topic families rather than one oversized “GIS tools” lesson.
 
 ## First implemented learning record\n\nThe [Geodesy foundations learning path](../../learning-paths/geodesy-foundations.md) begins with point-coordinate transformation and explicit axis order. It does not claim to cover advanced datum, vertical or dynamic reference-frame transformations.\n\n## Geodesy and coordinate systems
 
-The first additional geocentric datum-operation lesson covers the seven-parameter Helmert Position Vector convention, parameter units, the rotation-sign trap and its relationship to a complete geographic/geocentric/geographic CRS operation. See the [method lesson](../../methods/helmert-7-parameter.md) and [tested implementation](../../implementations/python/helmert-7-parameter/README.md).
+The geodetic/ECEF/ENU lesson now covers ellipsoidal geodetic-to-ECEF conversion, the ECEF-to-local tangent-frame rotation and its inverse, with an EPSG:9836 reference test, intern walkthrough and visual lab. It does not perform vertical datum or geoid conversion. The first additional geocentric datum-operation lesson covers the seven-parameter Helmert Position Vector convention, parameter units, the rotation-sign trap and its relationship to a complete geographic/geocentric/geographic CRS operation. See the [method lesson](../../methods/helmert-7-parameter.md) and [tested implementation](../../implementations/python/helmert-7-parameter/README.md).
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
