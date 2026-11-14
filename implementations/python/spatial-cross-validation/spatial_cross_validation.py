@@ -110,3 +110,77 @@ def spatial_block_folds(
         folds.append(SpatialFold(train, test, excluded))
 
     return folds
+
+
+def buffered_leave_one_out_folds(coordinates: ArrayLike, buffer_distance: float = 0.0) -> list[SpatialFold]:
+    """One-observation test folds with nearby candidate training points excluded."""
+    xy = np.asarray(coordinates, dtype=np.float64)
+    if xy.ndim != 2 or xy.shape[1] != 2 or xy.shape[0] < 2:
+        raise ValueError("coordinates must be an (n, 2) array with n >= 2")
+    if not np.all(np.isfinite(xy)):
+        raise ValueError("coordinates must be finite")
+    if not np.isfinite(buffer_distance) or buffer_distance < 0:
+        raise ValueError("buffer_distance must be finite and non-negative")
+    all_indices = np.arange(xy.shape[0], dtype=np.int64)
+    folds = []
+    for test_index in all_indices:
+        test = np.array([test_index], dtype=np.int64)
+        candidates = all_indices[all_indices != test_index]
+        distances = np.linalg.norm(xy[candidates] - xy[test_index], axis=1)
+        keep = distances >= buffer_distance
+        train, excluded = candidates[keep], candidates[~keep]
+        if train.size == 0:
+            raise ValueError("buffer removed every training observation for a leave-one-out fold")
+        folds.append(SpatialFold(train, test, excluded))
+    return folds
+
+
+def spatial_kfold_by_clustering(coordinates: ArrayLike, n_splits: int, *, max_iter: int = 100) -> list[SpatialFold]:
+    """Deterministic farthest-first k-means on coordinates; each cluster is a test fold."""
+    xy = np.asarray(coordinates, dtype=np.float64)
+    if xy.ndim != 2 or xy.shape[1] != 2 or xy.shape[0] < 2:
+        raise ValueError("coordinates must be an (n, 2) array with n >= 2")
+    if not np.all(np.isfinite(xy)):
+        raise ValueError("coordinates must be finite")
+    if not isinstance(n_splits, (int, np.integer)) or isinstance(n_splits, bool) or not 2 <= n_splits <= len(xy):
+        raise ValueError("n_splits must be an integer between 2 and n")
+    if not isinstance(max_iter, int) or isinstance(max_iter, bool) or max_iter < 1:
+        raise ValueError("max_iter must be a positive integer")
+    if np.unique(xy, axis=0).shape[0] < n_splits:
+        raise ValueError("need at least n_splits distinct coordinate locations")
+    n = len(xy)
+    first = min(range(n), key=lambda i: (xy[i, 0], xy[i, 1], i))
+    centres = [xy[first].copy()]
+    min_dist2 = np.sum((xy - centres[0]) ** 2, axis=1)
+    for _ in range(1, n_splits):
+        chosen = int(np.argmax(min_dist2))
+        centres.append(xy[chosen].copy())
+        min_dist2 = np.minimum(min_dist2, np.sum((xy - centres[-1]) ** 2, axis=1))
+    centres = np.asarray(centres)
+    labels = np.full(n, -1, dtype=np.int64)
+    for _ in range(max_iter):
+        distances = np.sum((xy[:, None, :] - centres[None, :, :]) ** 2, axis=2)
+        new_labels = np.argmin(distances, axis=1)
+        counts = np.bincount(new_labels, minlength=n_splits)
+        for empty in np.flatnonzero(counts == 0):
+            eligible = np.flatnonzero(counts[new_labels] > 1)
+            if eligible.size == 0:
+                raise RuntimeError("could not repair an empty spatial cluster")
+            point = int(eligible[np.argmax(distances[eligible, new_labels[eligible]])])
+            counts[new_labels[point]] -= 1
+            new_labels[point] = int(empty)
+            counts[empty] += 1
+        new_centres = np.vstack([xy[new_labels == k].mean(axis=0) for k in range(n_splits)])
+        converged = np.array_equal(new_labels, labels)
+        labels, centres = new_labels, new_centres
+        if converged:
+            break
+    all_indices = np.arange(n, dtype=np.int64)
+    folds = []
+    for cluster in range(n_splits):
+        test = all_indices[labels == cluster]
+        train = all_indices[labels != cluster]
+        if test.size == 0 or train.size == 0:
+            raise RuntimeError("clustering produced an empty fold")
+        folds.append(SpatialFold(train, test, np.empty(0, dtype=np.int64)))
+    return folds

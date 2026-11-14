@@ -111,3 +111,12 @@ The implementation provides a deterministic grid-block split for compact planar 
 - Milà, C., Mateu, J., Pebesma, E. and Meyer, H. (2022). Nearest neighbour distance matching Leave-One-Out Cross-Validation for map validation. *Methods in Ecology and Evolution*, 13(6), 1304–1316. https://doi.org/10.1111/2041-210X.13851\n- Linnenbrink, J., Milà, C., Ludwig, M. and Meyer, H. (2024). kNNDM CV: k-fold nearest-neighbour distance matching cross-validation for map accuracy estimation. *Geoscientific Model Development*, 17, 5897–5912. https://doi.org/10.5194/gmd-17-5897-2024\n- Li, W. et al. (2024). GeoAI for Science and the Science of GeoAI. *Journal of Spatial Information Science*, 29, 1–17. https://doi.org/10.5311/JOSIS.2024.29.349
 
 Passing the code tests proves the splitter contract, not the suitability of a split for a particular study.
+
+
+## Buffered leave-one-out and cluster-based folds
+
+**Buffered leave-one-out** holds out one observation at a time and excludes every other observation whose Euclidean distance to that test point is below the specified buffer. The implementation is O(n²).
+
+**Spatial k-fold by clustering** applies deterministic farthest-first k-means to projected coordinates and assigns each resulting cluster to one test fold. It does not guarantee equal fold sizes, contiguous geographic regions or alignment with ecological/administrative units. It is not NNDM or kNNDM.
+
+Use these as baselines only after defining the deployment question. Compare fold maps, distances, sample sizes and covariate distributions before interpreting validation scores.

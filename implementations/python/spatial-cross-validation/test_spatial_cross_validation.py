@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from spatial_cross_validation import grid_block_ids, spatial_block_folds
+from spatial_cross_validation import (grid_block_ids, spatial_block_folds, buffered_leave_one_out_folds, spatial_kfold_by_clustering)
 
 
 def test_grid_blocks_group_points_in_same_cell():
@@ -84,3 +84,37 @@ def test_too_large_buffer_is_reported():
     points = [[1, 1], [11, 1], [21, 1]]
     with pytest.raises(ValueError, match="buffer removed every"):
         spatial_block_folds(points, 3, 10, buffer_distance=100)
+
+
+def test_buffered_leave_one_out_excludes_nearby_observations():
+    points=np.array([[0,0],[1,0],[10,0],[20,0]],dtype=float)
+    folds=buffered_leave_one_out_folds(points,buffer_distance=2)
+    assert len(folds)==4
+    assert folds[0].test_indices.tolist()==[0]
+    assert folds[0].excluded_indices.tolist()==[1]
+    assert folds[0].train_indices.tolist()==[2,3]
+
+def test_buffered_leave_one_out_tests_each_point_once():
+    points=np.array([[0,0],[3,0],[7,0],[12,0]],dtype=float)
+    folds=buffered_leave_one_out_folds(points)
+    np.testing.assert_array_equal(np.sort(np.concatenate([f.test_indices for f in folds])),np.arange(4))
+    for fold in folds:
+        assert len(fold.train_indices)==3 and len(fold.excluded_indices)==0
+
+def test_spatial_kfold_by_clustering_partitions_points():
+    points=np.array([[x,y] for x in (0,1,10,11,20,21) for y in (0,1)],dtype=float)
+    folds=spatial_kfold_by_clustering(points,3)
+    np.testing.assert_array_equal(np.sort(np.concatenate([f.test_indices for f in folds])),np.arange(len(points)))
+    assert all(len(f.test_indices)>0 and len(f.train_indices)>0 for f in folds)
+
+def test_spatial_kfold_by_clustering_is_deterministic():
+    points=np.array([[0,0],[1,0],[10,0],[11,0],[20,0],[21,0]],dtype=float)
+    a=spatial_kfold_by_clustering(points,3);b=spatial_kfold_by_clustering(points,3)
+    for fa,fb in zip(a,b):np.testing.assert_array_equal(fa.test_indices,fb.test_indices)
+
+def test_spatial_kfold_by_clustering_rejects_too_few_unique_locations():
+    with pytest.raises(ValueError):spatial_kfold_by_clustering([[0,0],[0,0],[1,1]],3)
+
+def test_buffered_loo_rejects_too_large_buffer():
+    with pytest.raises(ValueError,match="buffer removed every"):
+        buffered_leave_one_out_folds([[0,0],[1,0],[2,0]],10)

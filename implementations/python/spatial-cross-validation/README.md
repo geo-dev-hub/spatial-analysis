@@ -57,3 +57,10 @@ Test observations are assigned exactly once across returned folds. Whole grid bl
 - This is a splitter, not a complete model-validation pipeline. Fit preprocessing and tune hyperparameters inside training folds only.
 
 Read the [spatial cross-validation lesson](../../../methods/spatial-cross-validation.md) and [intern walkthrough](implementation-walkthrough.md).
+
+
+## Additional splitters
+
+The package also includes buffered leave-one-out (one test observation per fold, with nearby candidate training observations excluded) and spatial k-fold by clustering (deterministic farthest-first k-means on projected coordinates, with each cluster held out as one fold).
+
+Cluster folds need not be equal-sized, contiguous or aligned with meaningful administrative/ecological regions. They are a reproducible grouping baseline, not NNDM/kNNDM. Buffered leave-one-out is O(n²) and intended for teaching-sized samples.

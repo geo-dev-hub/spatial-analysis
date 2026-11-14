@@ -89,8 +89,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 |---|---|---|---|
 | Spatial validation | NNDM | Research discussion distinguishes it from the implemented baselines; no NNDM implementation verified | Research / lesson only |
 | Spatial validation | kNNDM | Research discussion distinguishes it from the implemented baselines; no kNNDM implementation verified | Research / lesson only |
-| Spatial validation | Buffered leave-one-out | Related validation guide; no dedicated implementation verified | Partial |
-| Spatial validation | Spatial k-fold by clustering | Tested spatial cross-validation package covers selected fold/block baselines; exact clustering design needs confirmation | Partial |
+| Spatial validation | Buffered leave-one-out | One-test-point-per-fold implementation with exclusion tests added | Implemented / tested candidate; distance-design review pending |
+| Spatial validation | Spatial k-fold by clustering | Deterministic farthest-first k-means grouping with whole-cluster folds and tests added | Implemented / tested candidate; geographic grouping review pending |
 | Spatial validation | blockCV | External R package / method reference, not a Python algorithm to clone | Research / lesson only |
 | Spatial validation | Spatial + temporal leave-out | Guide-level discussion; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Bayesian optimisation on spatial fields | Family guide only; no matching implementation verified | Research / lesson only |
@@ -253,3 +253,6 @@ Schneider fitting update: a piecewise-cubic fitter is now added with chord-lengt
 ## Population diversity and segregation update — source page 23
 
 Shannon entropy, Simpson concentration, the Reardon–Firebaugh multigroup entropy index and an areal-unit group exposure matrix are now implemented with tests, derivation, walkthrough and synthetic notebook. The exposure statistic is not distance-weighted; spatially explicit exposure remains a separate task.
+
+
+Spatial validation update: buffered leave-one-out and deterministic cluster-based k-fold splitters are now executable in the existing spatial-cross-validation package. Neither is NNDM/kNNDM; distance-matching methods remain open.
