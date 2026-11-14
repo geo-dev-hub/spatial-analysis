@@ -99,6 +99,9 @@ A maintained implementation is available in the R package `blockCV` (`cv_nndm`),
 ## Practical lab
 
 - [Python spatial block and buffered-fold implementation](../implementations/python/spatial-cross-validation/README.md)
+- [NNDM LOO projected-Euclidean teaching implementation](../implementations/python/nndm/README.md)
+- [NNDM LOO implementation walkthrough](../implementations/python/nndm/implementation-walkthrough.md)
+- [NNDM LOO visual lab](../notebooks/nndm-spatial-validation-lab.ipynb)
 - [kNNDM KMeans/Euclidean teaching implementation](../implementations/python/knndm/README.md)
 - [kNNDM implementation walkthrough](../implementations/python/knndm/implementation-walkthrough.md)
 - [kNNDM visual lab](../notebooks/knndm-spatial-validation-lab.ipynb)
