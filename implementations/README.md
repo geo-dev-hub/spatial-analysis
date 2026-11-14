@@ -29,6 +29,12 @@ Each implementation should state:
 
 - [Exact p-median](python/p-median/README.md): exhaustive small-instance facility-location solver with deterministic assignments, tests and an [intern walkthrough](python/p-median/implementation-walkthrough.md).
 - [Capacitated p-median](python/capacitated-p-median/README.md): exact tiny-instance assignment solver with indivisible demand, scalar capacity constraints, tests and an [intern walkthrough](python/capacitated-p-median/implementation-walkthrough.md).
+- [Maximal covering location](python/maximal-covering/README.md): exact small-instance solver that maximises weighted demand reached by at least one selected facility.
+- [Deterministic backup coverage](python/backup-coverage/README.md): exact small-instance r-covering solver that requires multiple distinct selected facilities to reach demand.
+- [MEXCLP expected coverage](python/mexclp/README.md): exact small-instance expected-coverage solver with equal, independent unit busy probabilities and possible co-location.
+- [Equity-constrained maximal covering](python/equity-covering/README.md): exact small-instance facility selection with explicit group coverage floors and separate demand/objective weights.
+- [Accessibility equity diagnostics](python/accessibility-equity/README.md): distribution, group summaries, weighted gaps, Gini and Lorenz diagnostics for an existing accessibility surface.
+- [M/M/c queue metrics](python/mmc-queue/README.md): steady-state Erlang-C waiting and system metrics for one FCFS queue feeding identical parallel servers.
 - [Two-step floating catchment area](python/two-step-fca/README.md): binary-catchment supply/demand accessibility measure with explicit impedance matrix semantics, tests and an [intern walkthrough](python/two-step-fca/implementation-walkthrough.md).
 
 ### Geodesy and georeferencing
