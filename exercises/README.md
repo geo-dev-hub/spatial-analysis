@@ -59,3 +59,5 @@ Every exercise should state:
 Do not make an exercise depend on an unavailable dataset, paid software or unexplained setup. Where a solution is provided, explain the reasoning rather than only showing the final answer.
 
 - [Maximal covering location](maximal-covering.md) — optimize covered demand within a stated service threshold and compare with p-median.
+
+- [Discrete p-center](p-center.md) — minimize worst-case assignment cost and compare with p-median and maximal covering.
