@@ -24,3 +24,4 @@ These records are part of the broader [algorithm collection](../README.md). The 
 - [Straight skeleton](straight-skeleton.md) — trace wavefront vertices as polygon edges move inward in parallel.
 
 - [Convex Minkowski-sum implementation](../../implementations/python/minkowski-convex/README.md) — exact rational edge merge, tests and intern walkthrough.
+\n- [Convex decomposition implementation](../../implementations/python/convex-decomposition/README.md) — exact-predicate greedy triangle merging, tests and walkthrough.\n
