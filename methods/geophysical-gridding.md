@@ -70,3 +70,12 @@ Kriging is not automatically superior to deterministic interpolation. Its useful
 - [Comparison lab](../notebooks/geophysical-gridding-lab.ipynb)
 
 **Coordinate contract:** use projected planar coordinates in consistent linear units. Interpolation is not a substitute for survey design, outlier handling, uncertainty modelling or geological interpretation.
+
+
+## References and method distinction
+
+- Briggs, I. C. (1974). [Machine contouring using minimum curvature](https://doi.org/10.1190/1.1440410). *Geophysics*, 39(1), 39–48. The paper derives finite-difference equations from minimum total curvature and outlines an iterative solution for scattered observations.
+- U.S. Geological Survey. (1981). [A program for minimum-curvature gridding of randomly spaced data](https://pubs.usgs.gov/of/1981/1224/report.pdf). Open-File Report 81-1224. Describes the biharmonic difference equation and iterative solution associated with Briggs.
+- Smith, W. H. F., and Wessel, P. (1990). [Gridding with continuous curvature splines in tension](https://doi.org/10.1190/1.1442835). *Geophysics*, 55(3), 293–305.
+
+These references describe why the thin-plate spline is mathematically related to minimum-curvature ideas, but the current RBF implementation is not claimed to reproduce Briggs's grid-based iterative algorithm. The distinction is retained in the ledger until a reference-matched Briggs implementation and convergence tests are added.
