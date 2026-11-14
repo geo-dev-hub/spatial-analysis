@@ -120,3 +120,5 @@ Start with the practical question, then follow the explanation into the formal d
 Records may have different evidence and implementation status. Check the status and version before relying on them.
 
 - [Ear clipping](geometry/ear-clipping.md) — triangulate one simple polygon ring, with a tested exact-predicate teaching baseline.
+
+- [Convex decomposition](geometry/convex-decomposition.md) — compare triangulation-based merging, optimal partitioning and approximate convex decomposition.
