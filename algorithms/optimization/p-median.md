@@ -91,7 +91,7 @@ The basic p-median model is uncapacitated. It does not limit how much demand a f
 
 ## References
 
-- Hakimi, S. L. (1964), [Optimum locations of switching centers and the absolute centers and medians of a graph](https://doi.org/10.1002/nav.3800110303), *Operations Research*, 12(3), 450–459.
+- Hakimi, S. L. (1964), [Optimum locations of switching centers and the absolute centers and medians of a graph](https://doi.org/10.1287/opre.12.3.450), *Operations Research*, 12(3), 450–459.
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
 
 **Scope:** uncapacitated p-median with a finite candidate set and an exhaustive exact teaching solver; not a general facility-location library.

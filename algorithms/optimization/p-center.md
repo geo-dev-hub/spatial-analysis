@@ -74,7 +74,7 @@ Rows are demand locations and columns candidate facilities. Values can represent
 
 ## References
 
-- Hakimi, S. L. (1964), “Optimum locations of switching centers and the absolute centers and medians of a graph,” *Operations Research*, 12(3), 450–459. https://doi.org/10.1002/nav.3800110303
+- Hakimi, S. L. (1964), “Optimum locations of switching centers and the absolute centers and medians of a graph,” *Operations Research*, 12(3), 450–459. https://doi.org/10.1287/opre.12.3.450
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
 
 **Scope:** uncapacitated discrete p-center with exactly p facilities, finite candidates and a supplied non-negative cost matrix; no capacity, uncertainty or equity constraints.

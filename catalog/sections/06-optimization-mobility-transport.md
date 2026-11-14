@@ -100,3 +100,16 @@ The [backup-coverage lesson](../../algorithms/optimization/backup-coverage.md) a
 ## Service queueing extension
 
 The [M/M/c lesson](../../algorithms/optimization/mmc-queue.md) and [implementation](../../implementations/python/mmc-queue/README.md) introduce Erlang-C steady-state waiting for one FCFS queue feeding identical parallel servers. Tests, an intern walkthrough, an exercise and an executable notebook accompany the package. The assumptions are explicit: Poisson arrivals, exponential service, stationarity, an infinite queue and identical servers. It is an operations model, not a geographic accessibility measure.
+
+## Bibliographic checks on the scoped location models
+
+The following foundational citation metadata has been checked against publisher or authoritative bibliographic records and corrected where necessary:
+
+- **p-median and p-center:** Hakimi (1964), *Operations Research*, 12(3), 450–459, [10.1287/opre.12.3.450](https://doi.org/10.1287/opre.12.3.450).
+- **Location set covering:** Toregas, Swain, ReVelle and Bergman (1971), *Operations Research*, 19(6), 1363–1373, [10.1287/opre.19.6.1363](https://doi.org/10.1287/opre.19.6.1363).
+- **Maximal covering:** Church and ReVelle (1974), *Papers of the Regional Science Association*, 32(1), 101–118, [10.1111/j.1435-5597.1974.tb00902.x](https://doi.org/10.1111/j.1435-5597.1974.tb00902.x); and their distinct 1976 theoretical-links paper, *Geographical Analysis*, 8(4), 406–415, [10.1111/j.1538-4632.1976.tb00547.x](https://doi.org/10.1111/j.1538-4632.1976.tb00547.x).
+- **Backup coverage:** Hogan and ReVelle (1986), *Management Science*, 32(11), 1434–1444, [10.1287/mnsc.32.11.1434](https://doi.org/10.1287/mnsc.32.11.1434).
+- **MEXCLP:** Daskin (1983), *Transportation Science*, 17(1), 48–70, [10.1287/trsc.17.1.48](https://doi.org/10.1287/trsc.17.1.48); Batta, Dolan and Krishnamurthy (1989), *Transportation Science*, 23(4), 277–287, [10.1287/trsc.23.4.277](https://doi.org/10.1287/trsc.23.4.277).
+- **2SFCA and E2SFCA:** Radke and Mu (2000), *Geographic Information Sciences*, 6(2), 105–112, [10.1080/10824000009480538](https://doi.org/10.1080/10824000009480538); Luo and Wang (2003), *Environment and Planning B: Planning and Design*, 30(6), 865–884, [10.1068/b29120](https://doi.org/10.1068/b29120); Luo and Qi (2009), *Health & Place*, 15(4), 1100–1107, [10.1016/j.healthplace.2009.06.002](https://doi.org/10.1016/j.healthplace.2009.06.002), with its [2011 erratum](https://doi.org/10.1016/j.healthplace.2010.10.006).
+
+This pass checks bibliographic identity and metadata for these cited foundations. It does not verify every technical claim, every model variant or every grouped source entry in Section 6.
