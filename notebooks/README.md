@@ -150,3 +150,5 @@ These notebooks are learning materials. For production analysis, check the input
 
 - [M/M/c queueing lab](mmc-queue-lab.ipynb) — vary arrival rate, service rate and server count; inspect Erlang-C waiting and Little's law.
 - [MEXCLP expected-coverage lab](mexclp-lab.ipynb) — vary unit busy probability and inspect how availability changes the best small facility placement.
+
+- [Rasterisation lab](rasterization-lab.ipynb) — compare DDA, Bresenham, Wu anti-aliasing, supercover traversal and scanline polygon fill using the repository's tested teaching implementation.
