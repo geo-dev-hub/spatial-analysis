@@ -60,3 +60,30 @@ def test_invalid_capacity_or_demand_inputs_are_rejected(kwargs):
 def test_invalid_p_is_rejected(p):
     with pytest.raises(ValueError, match="p must"):
         solve_capacitated_p_median([[1, 2]], p, capacities=[1, 1], demand_quantities=[1])
+
+
+@pytest.mark.parametrize("costs", [
+    [],
+    [[1, float("nan")]],
+    [[1, -1]],
+    [[1, float("inf")]],
+])
+def test_invalid_cost_matrices_are_rejected(costs):
+    with pytest.raises(ValueError, match="costs"):
+        solve_capacitated_p_median(
+            costs, 1, capacities=[1, 1], demand_quantities=[1]
+        )
+
+
+@pytest.mark.parametrize("weights", [
+    [1, 2],
+    [-1],
+    [float("nan")],
+    [0],
+])
+def test_invalid_demand_weights_are_rejected(weights):
+    with pytest.raises(ValueError, match="demand_weights"):
+        solve_capacitated_p_median(
+            [[1, 2]], 1, capacities=[1, 1],
+            demand_quantities=[1], demand_weights=weights,
+        )
