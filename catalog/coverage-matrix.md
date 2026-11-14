@@ -81,3 +81,6 @@ The Section 6 accessibility-equity addition provides a descriptive diagnostics p
 
 
 The Section 6 equity-constrained maximal-covering addition provides an exact tiny-instance model that maximises covered objective weight subject to population-weighted minimum coverage floors for each caller-defined group. It includes separate demand and objective weights, infeasibility handling, tests, an intern walkthrough, exercise and executable lab. The group definitions and floors remain explicit policy choices; this is not a general fairness optimiser.
+
+
+The Section 6 backup-coverage extension adds an exact small-instance r-covering solver, tests, intern walkthrough, exercise and executable notebook. It reports how many selected candidate facilities lie within the threshold for each demand row. It does not estimate failure probabilities or operational reliability, and shared dependencies must be examined separately.
