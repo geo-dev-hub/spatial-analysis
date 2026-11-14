@@ -80,3 +80,5 @@ This is the first item-level catalogue pass. The catalogue distinguishes a broad
 Related practice: [geometry overlay and validity exercises](../../exercises/geometry-overlay-and-validity.md).
 
 The source is broad by design. Do not force every operation, metric, model, data structure or software name into the category “algorithm.”
+
+- [Ear clipping](../../algorithms/geometry/ear-clipping.md) — triangulate a simple polygon ring; the current exact-predicate teaching implementation is intentionally transparent and has an O(n^3) worst-case bound.
