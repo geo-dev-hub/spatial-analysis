@@ -89,4 +89,4 @@ The companion package provides horizontal derivatives, the radial-wavenumber ver
 - Miller, H. G., and Singh, V. (1994). Potential field tilt—a new concept for location of potential field sources. *Journal of Applied Geophysics*, 32, 213–217.
 - Blakely, R. J. (1995). *Potential Theory in Gravity and Magnetic Applications*. Cambridge University Press.
 
-**Scope:** this is a regular-grid derivative/attribute baseline. Downward continuation, Werner deconvolution, matched filtering, inversion and source-geometry estimation remain distinct algorithms and are not implemented here.
+**Scope:** this is a regular-grid derivative/attribute baseline. Downward continuation, Werner deconvolution and matched filtering remain unimplemented. Full potential-field inversion and geological source interpretation remain distinct tasks; Euler deconvolution supplies a model-dependent source-location estimate, not a complete inversion.
