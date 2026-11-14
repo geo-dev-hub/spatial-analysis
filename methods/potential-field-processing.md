@@ -60,6 +60,16 @@ The FFT implementation assumes:
 
 A real survey grid is rarely periodic. Edge mismatch creates spectral ringing. Pad and taper where appropriate, compare alternative edge treatments, inspect the border, and avoid interpreting artefacts as geological contacts. Do not apply these operators to geographic degrees without a suitable projection or local metric treatment.
 
+## 3. Regularized downward continuation
+
+Downward continuation attempts to invert upward continuation. Since the forward operator attenuates a Fourier mode by \(A(k)=e^{-kh}\), its direct inverse \(e^{kh}\) amplifies high-wavenumber noise exponentially. The teaching implementation uses a Tikhonov inverse for non-zero modes:
+
+\[
+H_\lambda(k)=\frac{A(k)}{A(k)^2+\lambda}=\frac{e^{kh}}{1+\lambda e^{2kh}}.
+\]
+
+The zero-frequency mean is preserved separately. The positive regularisation parameter controls the stability–resolution trade-off; it is not selected automatically. Compare residuals, noise amplification and sensitivity to \(\lambda\), and do not interpret the output as a uniquely recovered field.
+
 ## 6. Euler deconvolution
 
 Euler deconvolution uses the homogeneity equation for a potential field and a chosen structural index N:
