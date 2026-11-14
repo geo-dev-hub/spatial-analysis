@@ -188,6 +188,9 @@ jobs:
           - example: affine-georeferencing
             directory: implementations/python/affine-georeferencing
             pythonpath: ""
+          - example: ecef-enu
+            directory: implementations/python/ecef-enu
+            pythonpath: ""
           - example: crs-transform
             directory: implementations/python/crs-transform
             pythonpath: ""
@@ -345,6 +348,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-decomposition-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/proximity-graphs-delaunay-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-kernel-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ecef-enu-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
