@@ -95,6 +95,10 @@ These are useful invariants, but a matching area or bounding box is not proof of
 | Polygon plus disc | Dedicated offset/dilation operation |
 | Robot and obstacles | Configuration-space construction using a reflected footprint |
 
+## Runnable convex-polygon baseline
+
+The repository includes a tested [Python convex Minkowski-sum implementation](../../implementations/python/minkowski-convex/README.md), an [intern walkthrough](../../implementations/python/minkowski-convex/implementation-walkthrough.md), and a [visual lab](../../notebooks/minkowski-convex-lab.ipynb). It uses rational coordinates and merges the two cyclic edge-direction sequences in (O(m+n)) time. The contract is deliberately limited to one non-degenerate convex ring per input; it does not handle holes or non-convex polygons.
+
 ## Follow the learning sequence
 
 - [Convex decomposition](convex-decomposition.md) explains why the partition affects the pairwise-sum approach.
