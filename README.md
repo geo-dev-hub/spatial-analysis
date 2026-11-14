@@ -71,6 +71,7 @@ The initial scope comes from the supplied *Spatial Analysis Algorithms: Complete
 
 ### How the work is made
 
+- [Compendium completion standard and release gates](docs/compendium-completion-standard.md)
 - [How we research and explain a method](docs/project-method.md)
 - [How we write and teach](docs/voice-and-writing.md)
 - [How we reuse and attribute visual sources](docs/visual-sources-and-attribution.md)
