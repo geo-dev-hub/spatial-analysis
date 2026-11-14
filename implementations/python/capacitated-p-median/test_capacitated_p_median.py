@@ -21,8 +21,8 @@ def test_capacity_can_force_a_higher_cost_assignment():
 
 def test_demand_weights_change_assignment_cost_not_capacity_load():
     # Both demand rows prefer facility 0, but its capacity is one unit.
-    # With equal weights, row 1 is assigned to facility 0; prioritising row 1
-    # makes it worth sending row 0 to facility 1 instead.
+    # With equal weights, row 0 goes to facility 0 and row 1 to facility 1.
+    # Prioritising row 1 makes it worth reversing those assignments.
     costs = [[0, 2], [0, 1]]
     unweighted = solve_capacitated_p_median(
         costs, 2, capacities=[1, 1], demand_quantities=[1, 1],
