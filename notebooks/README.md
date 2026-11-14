@@ -26,6 +26,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Weighted linear combination lab](weighted-linear-combination-lab.ipynb): explore standardised criteria, relative weights, hard exclusions, sensitivity and strict NoData handling using a synthetic suitability surface.
 - [Weights-of-evidence lab](weights-of-evidence-lab.ipynb): estimate binary evidence weights, map model-based posterior odds and inspect how duplicated evidence and pseudocount choices affect results.
 - [ELECTRE I-style outranking lab](electre-i-outranking-lab.ipynb): inspect pairwise concordance, discordance, the outranking relation and threshold sensitivity for discrete alternatives.
+- [ELECTRE I kernel lab](electre-i-kernel-lab.ipynb): visualise internal and external stability, a unique kernel, a cycle with no kernel and a relation with multiple kernels.
 - [Snap-rounding noder lab](snap-rounding-noder-lab.ipynb): inspect arrangement vertices, hot pixels, snapped polylines, grid-size changes and precision edge cases.
 
 ### Optimization and location science
