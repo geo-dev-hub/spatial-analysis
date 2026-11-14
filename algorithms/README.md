@@ -27,6 +27,10 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Capacitated p-median](optimization/capacitated-p-median.md) — minimise assignment cost while respecting finite facility capacities and indivisible demand.
 - [Accessibility equity diagnostics](optimization/accessibility-equity.md) — inspect population-weighted accessibility distributions, lower-tail outcomes and group gaps without treating one metric as a fairness verdict.
 - [Equity-constrained maximal covering](optimization/equity-constrained-covering.md) — maximise covered demand while enforcing explicit minimum coverage shares for caller-defined groups.
+- [Maximal covering location](optimization/maximal-covering.md) — maximise weighted demand reached by at least one selected facility within a service threshold.
+- [Backup coverage (r-covering)](optimization/backup-coverage.md) — require demand to have multiple distinct selected facilities within the threshold.
+- [Maximum expected covering (MEXCLP)](optimization/mexclp.md) — discount coverage according to the probability that nearby units are busy.
+- [M/M/c queueing](optimization/mmc-queue.md) — estimate waiting and system performance for a stable multi-server FCFS queue.
 - [Two-step floating catchment area](optimization/two-step-fca.md) — estimate potential service accessibility by combining provider supply and population demand within travel catchments.
 - [Maximum expected covering (MEXCLP)](optimization/mexclp.md) — account for the probability that nearby service units are busy when demand arrives.
 
