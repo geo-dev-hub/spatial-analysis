@@ -81,6 +81,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Optical flow | Lucas–Kanade | Single-scale dense local implementation, tests, walkthrough and synthetic translation notebook added | Implemented / tested candidate; benchmark/reference review pending |
 | Optical flow | Farnebäck | OpenCV-backed dense wrapper, parameter contract and synthetic translation test in `implementations/python/optical-flow/` | Implemented via reference dependency; broader benchmark and independent validation pending |
 | Optical flow | DIS | OpenCV DISOpticalFlow wrapper with preset/refinement parameters and synthetic translation test in `implementations/python/optical-flow/` | Implemented via reference dependency; broader benchmark and independent validation pending |
+| Optical flow | TV-L1 variational flow | scikit-image TV-L1 wrapper with exposed data/regularisation controls and synthetic translation test | Implemented via reference dependency; broader benchmark and independent validation pending |
 | Optical flow | Variational optical flow | Family guide; no matching implementation verified | Research / lesson only |
 
 ## Spatial validation and adaptive sampling — source pages 21–22
@@ -238,7 +239,7 @@ Ensemble verification update: empirical ensemble CRPS and an expected rank histo
 Nearest-neighbour gridding and Delaunay piecewise-linear triangulation gridding now have a NumPy/SciPy teaching package, tests (including affine-plane reproduction), walkthrough and comparison notebook. These are not minimum-curvature gridding and do not extrapolate beyond their stated support.
 
 
-Optical-flow update: a single-scale dense local Lucas–Kanade teaching implementation is now added with a known-translation test and notebook. Farnebäck, DIS and variational flow remain separate algorithm tasks.
+Optical-flow update: the package now includes single-scale dense local Lucas–Kanade plus OpenCV-backed Farnebäck and DIS and scikit-image TV-L1 wrappers. Synthetic translation tests and a shared lab are present; broader benchmark and independent validation remain open.
 
 
 Distribution-shift update: unbiased Gaussian-kernel MMD, energy distance and a reproducible exchangeability-based permutation test now have executable implementations, tests, walkthrough and a lab. The permutation procedure is explicitly not spatially valid under autocorrelation; block-aware inference remains open.
