@@ -30,7 +30,7 @@ For a potential field continued upward by height h, each Fourier component is mu
 
 High wavenumbers are attenuated more strongly, so upward continuation smooths the field and suppresses short-wavelength features. The implementation assumes a regular grid and periodic FFT boundaries; height and grid spacing must share a unit. Downward continuation multiplies high frequencies by an exponentially growing factor and is unstable without explicit regularisation, so it is not treated as the inverse of this routine.
 
-## 3. Analytic-signal amplitude
+## 4. Analytic-signal amplitude
 
 The 3D analytic-signal amplitude is
 
@@ -40,7 +40,7 @@ A=\sqrt{T_x^2+T_y^2+T_z^2}.
 
 It combines the horizontal and vertical derivative magnitudes. It can help delineate edges of magnetic sources, but it does not uniquely identify source depth, geometry or lithology. Noise is amplified by differentiation, especially at high wavenumbers.
 
-## 4. Tilt derivative
+## 5. Tilt derivative
 
 The tilt angle is
 
@@ -50,7 +50,7 @@ The tilt angle is
 
 implemented with the two-argument arctangent to preserve quadrant information. It normalises the vertical derivative by the total horizontal gradient and returns values in \([-\pi/2,\pi/2]\). The zero-gradient case and noise floor require care.
 
-## 5. Grid and boundary assumptions
+## 6. Grid and boundary assumptions
 
 The FFT implementation assumes:
 - a regular, uniformly spaced Cartesian grid;
@@ -70,7 +70,7 @@ H_\lambda(k)=\frac{A(k)}{A(k)^2+\lambda}=\frac{e^{kh}}{1+\lambda e^{2kh}}.
 
 The zero-frequency mean is preserved separately. The positive regularisation parameter controls the stability–resolution trade-off; it is not selected automatically. Compare residuals, noise amplification and sensitivity to \(\lambda\), and do not interpret the output as a uniquely recovered field.
 
-## 6. Euler deconvolution
+## 7. Euler deconvolution
 
 Euler deconvolution uses the homogeneity equation for a potential field and a chosen structural index N:
 
@@ -82,7 +82,7 @@ Rearrangement produces a linear least-squares system for source coordinates (x0,
 
 Euler estimates are not unique geological answers. They can be unstable or misleading when the structural index is wrong, regional field is not removed, multiple sources overlap, the window is poorly conditioned, or noise dominates derivatives. Inspect residuals, solution stability across window sizes and structural indices, and geological plausibility. Do not report a single solution without those checks.
 
-## 7. Runnable teaching implementation
+## 8. Runnable teaching implementation
 
 The companion package provides horizontal derivatives, the radial-wavenumber vertical derivative, upward continuation, analytic-signal amplitude and tilt angle, plus windowed Euler deconvolution. Tests compare the spectral operators with a periodic cosine of known wavenumber.
 
@@ -91,6 +91,7 @@ The companion package provides horizontal derivatives, the radial-wavenumber ver
 - [Walkthrough](../implementations/python/potential-field/implementation-walkthrough.md)
 - [Synthetic grid lab](../notebooks/potential-field-derivatives-lab.ipynb)
 - [Upward-continuation lab](../notebooks/potential-field-upward-continuation-lab.ipynb)
+- [Regularized downward-continuation lab](../notebooks/potential-field-downward-continuation-lab.ipynb)
 - [Euler deconvolution synthetic-recovery lab](../notebooks/euler-deconvolution-lab.ipynb)
 
 ## References
