@@ -205,7 +205,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Carbon accounting | REDD+ MRV | standard / workflow | Must identify normative framework and measurement components | Research required |
 | Carbon accounting | Soil carbon mapping | model / workflow | No verified implementation | Research required |
 | Carbon accounting | Additionality and leakage analysis | causal / accounting method | No verified implementation | Research required |
-| Methane detection | Matched-filter plume detection | algorithm | `implementations/python/methane-emissions/` Gaussian template bank, normalized correlation score, amplitude estimate, synthetic injection tests and lab | Implemented / tested candidate; correlated-noise and operational retrieval validation pending |
+| Methane detection | Matched-filter plume detection | algorithm | `implementations/python/methane-emissions/` Gaussian template bank, normalized correlation score and amplitude estimate; robust local median/MAD background estimation; low/high-threshold hysteresis segmentation; synthetic tests and lab | Implemented / tested candidate; correlated-noise and operational retrieval validation pending |
 | Methane detection | Deep plume segmentation | model / workflow | No trained deep model claimed; `hysteresis_plume_segmentation` adds a classical low/high-threshold connected-component segmentation baseline with tests and lab | Classical baseline implemented; learned model, training data and independent plume validation remain open |
 | Methane quantification | Integrated mass enhancement (IME) | estimator / method | `ime_emission_rate` implements Q = IME × wind speed / characteristic length with unit-contract tests | Implemented / tested arithmetic baseline; physical input/retrieval validation pending |
 | Methane quantification | Cross-sectional flux | estimator / method | `cross_sectional_flux` integrates concentration × signed normal wind × segment width; tests include reversed flow | Implemented / tested numerical baseline; sampling and uncertainty review pending |
@@ -231,7 +231,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 This is the explicit remaining Section 10 backlog, not a claim that the listed software, models, metrics and workflows should all be cloned. Their correct deliverable may be a validated integration, derivation, metric implementation or research dossier according to the record-type and completion standards.
 
 
-Ensemble verification update: empirical ensemble CRPS and an expected rank histogram with deterministic fractional tie handling are implemented, tested and documented in a dedicated lab. CRPS decomposition remains open; the CRPS score itself must not be mistaken for a full reliability-resolution-uncertainty decomposition.
+Ensemble verification update: empirical ensemble CRPS and an expected rank histogram with deterministic fractional tie handling are implemented, tested and documented in a dedicated lab. A finite-threshold CRPS reliability-resolution-uncertainty decomposition is now implemented; it is not the exact Hersbach bin-width estimator.
 
 
 ## Geophysical gridding update — source page 22
