@@ -88,3 +88,17 @@ Then simplify the two polygons on either side of a shared boundary independently
 - [UCGIS GIS&T Body of Knowledge: Point, Line, and Area Generalization](https://gistbok-ltb.ucgis.org/current/concept/DM-06-085).
 
 **Scope:** this record covers open-line simplification. Polygon topology preservation, Wang–Müller, weighted effective area, simplification hierarchies and snap rounding require separate records.
+
+
+## Additional algorithms in the teaching package
+
+The package now also includes two separately named simplifiers:
+
+- **Reumann–Witkam:** a moving-strip method. The implementation documents its infinite-strip distance, restart and endpoint conventions; these details must be matched when comparing with another software implementation.
+- **Lang:** a look-ahead method. At each retained anchor it tests candidate endpoints within a configured number of vertices and chooses the furthest candidate for which all intervening points remain within the distance tolerance of the finite baseline segment.
+
+These methods have different decision rules from Douglas–Peucker and Visvalingam–Whyatt. Lang's look-ahead is a vertex count, not a map distance. The package remains limited to open planar lines and does not preserve topology across coverages.
+
+- [Runnable implementations and tests](../../implementations/python/line-simplification/README.md)
+- [Four-algorithm walkthrough](../../implementations/python/line-simplification/implementation-walkthrough.md)
+- [Simplification comparison lab](../../notebooks/line-simplification-lab.ipynb)
