@@ -4,6 +4,8 @@ import numpy as np
 
 def _xy(values,name,allow_empty=False):
     a=np.asarray(values,dtype=float)
+    if allow_empty and a.size==0:
+        return np.empty((0,2),dtype=float)
     if a.ndim!=2 or a.shape[1]!=2 or (not allow_empty and a.shape[0]<1) or not np.all(np.isfinite(a)):
         raise ValueError(f"{name} must be a finite (n,2) coordinate array")
     return a
