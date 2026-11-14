@@ -90,7 +90,7 @@ The input model matters too: one simple ring, a polygon with holes, a polygonal 
 ## Follow the learning sequence
 
 - [Ear clipping](ear-clipping.md) explains how a simple polygon can first be triangulated.
-- [Ear-clipping implementation](../../implementations/python/ear-clipping/README.md) is a transparent teaching baseline; it does not yet implement the Hertel–Mehlhorn merge pass.
+- [Ear-clipping implementation](../../implementations/python/ear-clipping/README.md) supplies the initial triangulation. A separate [greedy merge baseline](../../implementations/python/convex-decomposition/README.md) demonstrates the next step, but it is not an optimized Hertel–Mehlhorn implementation.
 - [Convex decomposition exercise](../../exercises/convex-decomposition.md) asks you to derive and validate a partition.
 - [Minkowski sums](minkowski-sum.md) shows why the choice of convex decomposition affects downstream geometry operations.
 
