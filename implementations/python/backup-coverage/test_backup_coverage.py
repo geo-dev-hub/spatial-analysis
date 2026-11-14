@@ -28,10 +28,10 @@ def test_demand_needs_distinct_selected_candidates():
         [[1, 1, 9], [1, 9, 1]], p=2, service_threshold=1,
         required_cover_count=2, demand_weights=[5, 7]
     )
-    assert sites == (0, 1)
-    assert value == 5
-    assert covered == (True, False)
-    assert counts == (2, 1)
+    assert sites == (0, 2)
+    assert value == 7
+    assert covered == (False, True)
+    assert counts == (1, 2)
 
 
 def test_at_most_budget_and_deterministic_tie_breaking():
