@@ -1,5 +1,5 @@
 import unittest
-from line_clipping import cohen_sutherland, liang_barsky, cyrus_beck
+from line_clipping import cohen_sutherland, liang_barsky, cyrus_beck, nicholl_lee_nicholl
 R=(0,0,10,10)
 class LineClippingTests(unittest.TestCase):
  def test_crossing_segment(self):
@@ -29,3 +29,45 @@ class LineClippingTests(unittest.TestCase):
   with self.assertRaises(ValueError): cyrus_beck((0,0),(1,1),[(0,0),(1,1)])
   with self.assertRaises(ValueError): liang_barsky((0,0),(1,1),(2,0,1,1))
 if __name__=='__main__':unittest.main()
+
+
+def test_nicholl_lee_nicholl_matches_other_clippers_on_basic_cases():
+    square=(0,0,10,10)
+    cases=[
+        ((-5,5),(15,5)), ((5,-5),(5,15)), ((-5,-5),(15,15)),
+        ((-5,12),(12,-5)), ((5,5),(15,5)), ((-5,5),(5,5)),
+        ((-5,15),(5,5)), ((-5,-5),(5,5)), ((5,5),(-5,-5)),
+        ((0,0),(10,10)), ((-5,0),(15,0)), ((-5,10),(15,10)),
+    ]
+    for a,b in cases:
+        expected=liang_barsky(a,b,square)
+        got=nicholl_lee_nicholl(a,b,square)
+        if expected is None:
+            assert got is None
+        else:
+            assert got is not None
+            for p,q in zip(got,expected):
+                assert p==pytest.approx(q,abs=1e-9)
+
+
+def test_nicholl_lee_nicholl_randomized_against_liang_barsky():
+    import random
+    rng=random.Random(42)
+    rect=(-3.0,-2.0,7.0,5.0)
+    for _ in range(2000):
+        a=(rng.uniform(-10,12),rng.uniform(-9,10))
+        b=(rng.uniform(-10,12),rng.uniform(-9,10))
+        expected=liang_barsky(a,b,rect)
+        got=nicholl_lee_nicholl(a,b,rect)
+        if expected is None:
+            assert got is None, (a,b,got)
+        else:
+            assert got is not None, (a,b,expected)
+            for p,q in zip(got,expected):
+                assert p==pytest.approx(q,abs=1e-8)
+
+
+def test_nicholl_lee_nicholl_handles_vertical_and_horizontal_segments():
+    r=(0,0,10,10)
+    assert nicholl_lee_nicholl((5,-2),(5,12),r)==pytest.approx(((5,0),(5,10)))
+    assert nicholl_lee_nicholl((-2,5),(12,5),r)==pytest.approx(((0,5),(10,5)))
