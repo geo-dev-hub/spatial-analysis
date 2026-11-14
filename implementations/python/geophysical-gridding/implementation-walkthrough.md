@@ -20,3 +20,16 @@ J[f]=\iint\left(f_{xx}^2+2f_{xy}^2+f_{yy}^2\right)\,dx\,dy.
 \]
 
 With zero smoothing it interpolates the observations; positive smoothing trades exact fit for a smoother surface. This is a minimum-bending-energy thin-plate spline, not a reproduction of the classic Briggs iterative minimum-curvature scheme. It can extrapolate outside the convex hull, so edge values need particular scrutiny.
+
+
+## 4. Ordinary kriging with a fixed exponential covariance
+
+The implementation builds the ordinary-kriging system from the supplied exponential covariance model
+
+\[
+C(h)=s^2\exp(-h/a),
+\]
+
+where \(a\) is the range parameter and \(s^2\) is the structured sill. The nugget is added to the observation covariance diagonal. For each query location, solve the augmented system enforcing weights that sum to one. The result includes both the weighted prediction and the model-based kriging variance.
+
+The covariance parameters are inputs, not estimated outputs. A poor variogram model produces poor predictions and misleading variances. The dense inverse is pedagogical and intended for small sample sets; production systems need numerically stable factorisation, neighbourhood selection and scalable solvers. The returned variance is conditional on the supplied covariance model and does not include variogram-parameter uncertainty.
