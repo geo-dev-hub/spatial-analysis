@@ -39,3 +39,8 @@ A fixed-geometry, vertically integrated Gaussian model now estimates a non-negat
 ## Hysteresis plume segmentation
 
 The `hysteresis_plume_segmentation` routine optionally smooths the retrieved enhancement field, labels connected components above a low threshold, and retains only components containing at least one high-threshold seed. This is useful for preserving connected weak plume tails while discarding isolated low-enhancement patches. Component attributes are measured on the original, unsmoothed input. The method is threshold- and connectivity-sensitive; it does not distinguish plume from structured background without additional physical or contextual information. See [tests](test_methane_emissions.py) and [lab](../../../notebooks/methane-plume-detection-and-flux-lab.ipynb).
+
+
+## Robust local background and enhancement
+
+`robust_local_background` estimates a local median background, subtracts it from the retrieved enhancement image, and standardizes residuals by 1.4826 times a local median absolute deviation. A positive scale floor prevents division by zero. The window should be wider than the plume cross-section and smaller than the background-variation scale. This is a robust local filter, not a physical atmospheric-background retrieval: broad plumes can be absorbed into the baseline and correlated noise remains.
