@@ -103,6 +103,9 @@ jobs:
           - example: geophysical-gridding
             directory: implementations/python/geophysical-gridding
             pythonpath: ""
+          - example: optical-flow
+            directory: implementations/python/optical-flow
+            pythonpath: ""
           - example: polygon-offsetting
             directory: implementations/python/polygon-offsetting
             pythonpath: ""
@@ -433,6 +436,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/potential-field-derivatives-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ensemble-forecast-verification-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geophysical-gridding-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/lucas-kanade-optical-flow-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
