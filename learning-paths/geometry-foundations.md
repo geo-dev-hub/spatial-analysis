@@ -120,3 +120,7 @@ These are follow-on topics, not prerequisites for the four-lesson foundation. Th
 ## Triangulate a polygon
 
 A simple polygon can be divided into triangles by repeatedly removing an ear. Read the [ear-clipping lesson](../algorithms/geometry/ear-clipping.md), run the [Python teaching implementation](../implementations/python/ear-clipping/README.md), and explore the [visual triangulation lab](../notebooks/ear-clipping-lab.ipynb). This extension assumes one simple ring; holes and constrained Delaunay refinement are separate topics.
+
+## Partition into convex pieces
+
+After triangulating a simple polygon, ask whether adjacent triangles can be merged without introducing a reflex corner. The [convex decomposition lesson](../algorithms/geometry/convex-decomposition.md) compares this approach with optimal dynamic programming and tolerance-based approximate decomposition. Complete the [convex decomposition exercise](../exercises/convex-decomposition.md) before attempting the Hertel–Mehlhorn merge implementation.
