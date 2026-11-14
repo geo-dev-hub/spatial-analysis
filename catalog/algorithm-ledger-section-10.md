@@ -150,7 +150,8 @@ Bayesian online change-point detection has now been added as a bounded conjugate
 | 22 | Spectral first vertical derivative | Radial-wavenumber operator under explicit potential-field sign convention | Implemented / tested candidate |
 | 22 | Analytic-signal amplitude | Derived from x, y and vertical derivatives; synthetic lab | Implemented / tested candidate |
 | 22 | Tilt derivative | atan2(vertical derivative, total horizontal gradient); synthetic lab | Implemented / tested candidate |
-| 22 | Euler / Werner deconvolution | No implementation verified | Open |
+| 22 | Euler deconvolution | Windowed least-squares homogeneity-equation solver; synthetic exact-recovery and rank-deficiency tests | Implemented / tested candidate; structural-index and field-model review pending |
+| 22 | Werner deconvolution | No implementation verified | Open |
 | 22 | Upward continuation | Spectral exponential attenuation `exp(-kh)` with known-mode attenuation tests and explicit periodic-grid contract | Implemented / tested candidate |
 | 22 | Downward continuation | No stable regularised implementation verified; high-wavenumber amplification requires explicit regularisation | Open |
 | 22 | Matched filtering | No implementation verified | Open |
@@ -172,7 +173,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Potential fields | Tilt derivative | metric / attribute | Spectral derivative package and tests added | Implemented / tested candidate |
 | Potential fields | Horizontal derivatives | numerical operation | Spectral x/y derivatives and periodic-cosine test added | Implemented / tested candidate |
 | Potential fields | First vertical derivative | numerical operation | Radial-wavenumber spectral operator and periodic-cosine test added | Implemented / tested candidate |
-| Potential fields | Euler deconvolution | algorithm / estimator | No implementation verified | Open |
+| Potential fields | Euler deconvolution | algorithm / estimator | Windowed least-squares homogeneity equation with synthetic parameter-recovery tests | Implemented / tested candidate; model assumptions and structural-index sensitivity review pending |
 | Potential fields | Werner deconvolution | algorithm / estimator | No implementation verified | Open |
 | Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
 | Potential fields | Upward continuation | spectral operation | `implementations/python/potential-field/` Fourier multiplier `exp(-kh)`; exact periodic-mode attenuation test | Implemented / tested candidate; boundary/reference review pending |
