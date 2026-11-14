@@ -129,4 +129,7 @@ Records may have different evidence and implementation status. Check the status 
 - [Straight skeleton](geometry/straight-skeleton.md) — construct the polygon skeleton from inward parallel wavefronts.
 
 - [Convex Minkowski-sum implementation](../implementations/python/minkowski-convex/README.md) — a tested linear-time edge merge for convex rings.
-\n- [Convex decomposition implementation](../implementations/python/convex-decomposition/README.md) — a tested greedy triangulate-and-merge teaching baseline.\n
+
+- [Convex decomposition implementation](../implementations/python/convex-decomposition/README.md) — a tested greedy triangulate-and-merge teaching baseline.
+
+- [Delaunay-filtered proximity graphs](../implementations/python/proximity-graphs/README.md) — compare sparse candidate filtering with all-pairs reference methods.
