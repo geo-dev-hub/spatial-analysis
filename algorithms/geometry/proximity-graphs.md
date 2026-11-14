@@ -121,7 +121,7 @@ The beta-skeleton implementation is specifically the lune-based family for beta 
 
 Use a point set with a dense cluster and several outliers. Plot all three implemented graphs on the same points. Compare edge counts, total edge length, connected components and the effect of adding one point.
 
-Then construct a nearly cocircular point set and document how your boundary convention affects ties.
+Then construct a nearly cocircular point set and document how your boundary convention affects ties. Complete the [proximity-graph scaling exercise](../../exercises/proximity-graph-scaling.md) to compare the small-input baseline with Delaunay-based and Yao construction routes.
 
 ## References
 
