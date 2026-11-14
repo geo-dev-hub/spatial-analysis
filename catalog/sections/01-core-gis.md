@@ -87,3 +87,15 @@ The source is broad by design. Do not force every operation, metric, model, data
 ## Proximity graph implementation continuation
 
 The [proximity graph lesson](../../algorithms/geometry/proximity-graphs.md) now links to a Delaunay-filtered reference implementation for Gabriel and relative-neighbourhood graphs. It reduces the candidate set to planar triangulation edges but retains an explicit O(n) blocker scan per candidate, giving O(n²) overall. The [visual lab](../../notebooks/proximity-graphs-delaunay-lab.ipynb) compares it with all-pairs reference methods and demonstrates why cocircular boundary ties need separate treatment. This is not the specialised linear-time RNG post-processing algorithm.
+
+## Bibliographic checks on selected geometry foundations
+
+Publisher or authoritative bibliographic records were checked for the core sources used by the current geometry learning set:
+
+- Graham (1972), “An efficient algorithm for determining the convex hull of a finite planar set,” *Information Processing Letters*, 1(4), 132–133, [10.1016/0020-0190(72)90045-2](https://doi.org/10.1016/0020-0190(72)90045-2).
+- Fortune (1987), “A sweepline algorithm for Voronoi diagrams,” *Algorithmica*, 2, 153–174, [10.1007/BF01840357](https://doi.org/10.1007/BF01840357).
+- Aurenhammer (1991), “Voronoi diagrams—a survey of a fundamental geometric data structure,” *ACM Computing Surveys*, 23(3), 345–405, [10.1145/116873.116880](https://doi.org/10.1145/116873.116880).
+- Bentley and Ottmann (1979), “Algorithms for reporting and counting geometric intersections,” *IEEE Transactions on Computers*, C-28(9), 643–647, [10.1109/TC.1979.1675432](https://doi.org/10.1109/TC.1979.1675432).
+- Boissonnat and Preparata (2000), “Robust plane sweep for intersecting segments,” *SIAM Journal on Computing*, 29(5), 1401–1421, [10.1137/S0097539797329373](https://doi.org/10.1137/S0097539797329373).
+
+This pass confirms citation metadata for these selected sources. It does not verify every Section 1 source entry, all algorithmic claims or the correctness of third-party software.

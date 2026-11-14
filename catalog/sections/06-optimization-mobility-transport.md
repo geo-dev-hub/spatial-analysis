@@ -105,7 +105,7 @@ The [M/M/c lesson](../../algorithms/optimization/mmc-queue.md) and [implementati
 
 The following foundational citation metadata has been checked against publisher or authoritative bibliographic records and corrected where necessary:
 
-- **p-median and p-center:** Hakimi (1964), *Operations Research*, 12(3), 450–459, [10.1287/opre.12.3.450](https://doi.org/10.1287/opre.12.3.450).
+- **p-center:** Hakimi (1964), *Operations Research*, 12(3), 450–459, [10.1287/opre.12.3.450](https://doi.org/10.1287/opre.12.3.450). **p-median:** Hakimi (1964), same paper, and Hakimi (1965), *Operations Research*, 13(3), 462–475, [10.1287/opre.13.3.462](https://doi.org/10.1287/opre.13.3.462), which directly treats the distribution of p switching centres.
 - **Location set covering:** Toregas, Swain, ReVelle and Bergman (1971), *Operations Research*, 19(6), 1363–1373, [10.1287/opre.19.6.1363](https://doi.org/10.1287/opre.19.6.1363).
 - **Maximal covering:** Church and ReVelle (1974), *Papers of the Regional Science Association*, 32(1), 101–118, [10.1111/j.1435-5597.1974.tb00902.x](https://doi.org/10.1111/j.1435-5597.1974.tb00902.x); and their distinct 1976 theoretical-links paper, *Geographical Analysis*, 8(4), 406–415, [10.1111/j.1538-4632.1976.tb00547.x](https://doi.org/10.1111/j.1538-4632.1976.tb00547.x).
 - **Backup coverage:** Hogan and ReVelle (1986), *Management Science*, 32(11), 1434–1444, [10.1287/mnsc.32.11.1434](https://doi.org/10.1287/mnsc.32.11.1434).
