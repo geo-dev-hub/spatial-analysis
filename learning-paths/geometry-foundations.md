@@ -128,3 +128,7 @@ After triangulating a simple polygon, ask whether adjacent triangles can be merg
 ## Combine shapes with Minkowski sums
 
 The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects convex polygon edge merging with non-convex decomposition and convolution. It also shows how a reflected robot footprint turns collision checking into a configuration-space obstacle. Work through the [Minkowski sum exercise](../exercises/minkowski-sum.md) and compare the identities against a geometry library.
+
+## Read a shape's internal skeleton
+
+Two different structures can describe the inside of a polygon. The [medial axis](../algorithms/geometry/medial-axis.md) follows points with multiple nearest boundary contacts and encodes maximal inscribed discs. The [straight skeleton](../algorithms/geometry/straight-skeleton.md) follows the vertices of inward-moving parallel wavefronts. Work through the [medial-axis exercise](../exercises/medial-axis.md) and [straight-skeleton exercise](../exercises/straight-skeleton.md) before selecting a construction library.
