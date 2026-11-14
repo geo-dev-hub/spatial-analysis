@@ -17,6 +17,10 @@ Inputs are equally shaped, finite, single-channel 2D image frames on the same pi
 
 For a georeferenced raster, convert (u,v) using the raster affine linear transform. Do not interpret apparent image motion as physical ground motion without accounting for platform motion, orthorectification, terrain parallax, acquisition interval and image formation.
 
+## TV-L1 variational flow
+
+The TV-L1 wrapper calls scikit-image's `optical_flow_tvl1`, returning horizontal (u/column) and vertical (v/row) displacement fields. It rescales the uint8 frame inputs to [0,1] and exposes attachment, tightness, warping and iteration controls. This is a library-backed implementation, not a from-scratch solver.
+
 ## Farnebäck
 
 The wrapper calls OpenCV's calcOpticalFlowFarneback and exposes pyramid scale, levels, window size, iterations, polynomial neighbourhood and sigma. It is a library-backed implementation, not a from-scratch reproduction of the polynomial expansion method.
