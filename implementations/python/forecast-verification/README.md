@@ -14,3 +14,12 @@ The object_verification module implements a bounded sequence: optional Gaussian 
 This is not a full MODE reproduction. It omits within-field merging and cluster objects, the official fuzzy-interest formulation, multi-threshold hierarchies and temporal tracking. The implementation is a transparent teaching candidate intended for parameter-sensitivity experiments.
 
 Reference: Davis, Brown & Bullock (2006), “Object-Based Verification of Precipitation Forecasts. Part I: Methodology and Application to Mesoscale Rain Areas,” *Monthly Weather Review*, 134, 1772–1784. https://doi.org/10.1175/MWR3145.1
+
+
+## SAL structure-amplitude-location verification
+
+The sal_verification module computes the amplitude component from domain means, the structure component from precipitation-mass-weighted scaled object volumes, and location as L1 centroid displacement plus L2 difference in object scatter. Forecast and observation objects are identified independently using a fraction of each field's own maximum. The implementation does not match objects between fields, consistent with the SAL method.
+
+The connected-component object finder is a bounded teaching choice, not a claim of exact parity with the original coherent-object identification. Dry-field edge cases are explicit. See [implementation](sal_verification.py), [tests](test_sal_verification.py) and [lab](../../../notebooks/sal-precipitation-verification-lab.ipynb).
+
+Reference: Wernli, Paulat, Hagen & Frei (2008), “SAL—A Novel Quality Measure for the Verification of Quantitative Precipitation Forecasts,” *Monthly Weather Review*, 136, 4470–4487. https://doi.org/10.1175/2008MWR2415.1
