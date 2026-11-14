@@ -27,3 +27,34 @@ def test_triangulation_fills_outside_convex_hull():
 def test_invalid_and_degenerate_samples_rejected():
     with pytest.raises(ValueError):nearest_neighbor_grid([[0,0],[0,0]],[1,2],[0],[0])
     with pytest.raises(ValueError):triangulation_grid([[0,0],[1,1],[2,2]],[1,2,3],[0],[0])
+
+
+def test_thin_plate_spline_reproduces_affine_plane_and_sample_values():
+    from geophysical_gridding import thin_plate_spline_grid
+    p = np.array([[0, 0], [2, 0], [0, 2], [2, 2], [1, .5]], dtype=float)
+    v = 2 * p[:, 0] - 3 * p[:, 1] + 1
+    out = thin_plate_spline_grid(p, v, [0, 1, 2], [0, 1, 2])
+    x, y = np.meshgrid([0, 1, 2], [0, 1, 2])
+    np.testing.assert_allclose(out, 2 * x - 3 * y + 1, atol=1e-9)
+
+
+def test_thin_plate_spline_smoothing_is_finite_and_shape_preserving():
+    from geophysical_gridding import thin_plate_spline_grid
+    p = np.array([[0, 0], [2, 0], [0, 2], [2, 2], [1, .5]], dtype=float)
+    v = np.array([0, 1, 1, 0, 2], dtype=float)
+    out = thin_plate_spline_grid(p, v, np.linspace(0, 2, 9), np.linspace(0, 2, 7), smoothing=.1)
+    assert out.shape == (7, 9)
+    assert np.all(np.isfinite(out))
+
+
+@pytest.mark.parametrize("smoothing", [-1, float("nan"), float("inf")])
+def test_thin_plate_spline_rejects_invalid_smoothing(smoothing):
+    from geophysical_gridding import thin_plate_spline_grid
+    with pytest.raises(ValueError):
+        thin_plate_spline_grid(POINTS, VALUES, [0, 1], [0, 1], smoothing=smoothing)
+
+
+def test_thin_plate_spline_rejects_collinear_samples():
+    from geophysical_gridding import thin_plate_spline_grid
+    with pytest.raises(ValueError, match="non-degenerate"):
+        thin_plate_spline_grid([[0, 0], [1, 1], [2, 2]], [0, 1, 2], [0, 1], [0, 1])
