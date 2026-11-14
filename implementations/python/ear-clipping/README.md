@@ -29,7 +29,7 @@ print(sum((triangle_area(t) for t in triangles), start=0))
 
 ## Scope and limitations
 
-This is the straightforward (O(n^2)) ear-clipping method: each clipping step searches candidate vertices and checks the remaining vertices against a candidate triangle. It is intended for small teaching examples. It does not support holes, multipolygons, constrained segments, mesh quality optimization, or automatic repair. The (O(n^2)) bound assumes the simple-ring input and the stated exact-predicate operations; large coordinate fractions can increase arithmetic cost.
+This deliberately straightforward version recomputes candidate ears and scans the active vertices for each candidate. Its conservative worst-case bound is O(n^3), so it is intended for small teaching examples. A maintained ear queue with carefully scoped updates can achieve O(n^2); that optimization is a useful next exercise. This package does not support holes, multipolygons, constrained segments, mesh quality optimization, or automatic repair. Large coordinate fractions can also increase arithmetic cost.
 
 A production workflow should use a maintained triangulation library, validate coordinate reference systems and topology, and decide explicitly how holes and constraints are represented. A triangulation is not automatically a constrained Delaunay triangulation and does not promise good-shaped triangles.
 
