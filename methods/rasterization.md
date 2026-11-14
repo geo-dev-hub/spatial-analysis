@@ -156,4 +156,4 @@ For a supercover implementation, compare returned cells against a slower cell-by
 
 ## Scope
 
-This is a method-selection and algorithm-contract lesson. It does not claim to implement DDA, Bresenham, Wu, scanline fill, supercover traversal or exact fractional coverage. The next implementation unit should choose one task and make its cell, edge, corner and NoData semantics executable in tests.
+**Implemented teaching baseline:** [Python rasterisation package](../implementations/python/rasterization/README.md), [tests](../implementations/python/rasterization/test_rasterization.py), [step-by-step walkthrough](../implementations/python/rasterization/implementation-walkthrough.md) and [executable lab notebook](../notebooks/rasterization-lab.ipynb). The package implements DDA, all-octant integer Bresenham, Wu line intensities, closed-cell supercover traversal and centre-sampled even-odd scanline filling. It does not implement exact fractional-area coverage, holes/multiple rings, an affine geospatial wrapper or Amanatides–Woo voxel traversal. Read the implementation contract before applying it to map data.
