@@ -61,3 +61,5 @@ Do not make an exercise depend on an unavailable dataset, paid software or unexp
 - [Maximal covering location](maximal-covering.md) — optimize covered demand within a stated service threshold and compare with p-median.
 
 - [Discrete p-center](p-center.md) — minimize worst-case assignment cost and compare with p-median and maximal covering.
+
+- [Location set covering](set-covering.md) — minimize the number of facilities required to reach all demand within a stated service standard.
