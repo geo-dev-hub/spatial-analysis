@@ -151,3 +151,17 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new time-series implementation is claimed.
 - **Rights:** DOI, publisher and official documentation links only; no third-party figures or text reproduced.
 - **Remaining work:** build separate tested implementations; verify the STL parameter conventions and Prophet changepoint priors; evaluate ARIMA and Kalman models against baselines using rolling-origin and spatial holdout designs.
+
+
+## Section 10 — Forecast verification and probabilistic scoring
+
+**Source entries:** “Fractions Skill Score, neighborhood verification, SAL (structure, amplitude, location), object-based verification (MODE)” and “ETS, POD, FAR, CSI, Brier skill score, ROC and AUC, CRPS decomposition, rank histograms” (source page 21).
+
+- **Fractions Skill Score:** Roberts, N. (2008), “Assessing the spatial and temporal variation in the skill of precipitation forecasts from an NWP model,” *Meteorological Applications*, 15, 163–169, DOI [10.1002/met.57](https://doi.org/10.1002/met.57). Publisher abstract confirms scale-selective FSS evaluation.
+- **SAL:** Wernli, H., Paulat, M., Hagen, M. and Frei, C. (2008), “SAL—A Novel Quality Measure for the Verification of Quantitative Precipitation Forecasts,” *Monthly Weather Review*, 136, 4470–4487, DOI [10.1175/2008MWR2415.1](https://doi.org/10.1175/2008MWR2415.1). The publisher abstract identifies the structure, amplitude and location components.
+- **MODE:** Davis, C., Brown, B. and Bullock, R. (2006), “Object-Based Verification of Precipitation Forecasts. Part I: Methodology and Application to Mesoscale Rain Areas,” *Monthly Weather Review*, 134, 1772–1784, DOI [10.1175/MWR3145.1](https://doi.org/10.1175/MWR3145.1).
+- **Proper scoring rules:** Gneiting, T. and Raftery, A. E. (2007), “Strictly Proper Scoring Rules, Prediction, and Estimation,” *Journal of the American Statistical Association*, 102(477), 359–378, DOI [10.1198/016214506000001437](https://doi.org/10.1198/016214506000001437). The paper develops the theory of proper scoring rules, including CRPS.
+- **Technical-claim status:** the lesson separates event contingency metrics, probability calibration/discrimination, full-distribution scoring, spatial neighbourhood verification and object-based diagnostics. It explicitly warns that AUC does not measure calibration and that FSS/SAL/MODE depend on spatial and object-definition choices.
+- **Implementation:** no new forecast-verification implementation is claimed.
+- **Rights:** DOI and publisher links only; no third-party text or figures reproduced.
+- **Remaining work:** implement scores with hand-calculated fixtures; validate edge cases such as zero denominators, event prevalence and ensemble ties; add spatially aware uncertainty intervals and reproducible forecast/observation examples.
