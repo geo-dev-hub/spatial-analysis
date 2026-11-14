@@ -141,3 +141,13 @@ Use them together where appropriate; none substitutes for the others.
 ## Scope
 
 This is a method-selection and study-design guide. It does not claim to provide a tested MMD implementation, a spatial permutation engine, a KMM optimiser or a complete AOA implementation. Those are separate implementation targets with different assumptions and validation requirements.
+
+
+## Executable two-sample baselines
+
+A companion package now implements unbiased squared MMD with a Gaussian RBF kernel, an unbiased sample energy-distance statistic and an exchangeability-based MMD permutation test. The notebook demonstrates the statistics on synthetic feature distributions. The permutation test is not spatial-block aware: naive row permutations are invalid under spatial autocorrelation, so a spatial study must design an appropriate null procedure.
+
+- [Implementation](../implementations/python/distribution-shift/distribution_shift.py)
+- [Tests](../implementations/python/distribution-shift/test_distribution_shift.py)
+- [Walkthrough](../implementations/python/distribution-shift/implementation-walkthrough.md)
+- [Lab](../notebooks/spatial-distribution-shift-lab.ipynb)

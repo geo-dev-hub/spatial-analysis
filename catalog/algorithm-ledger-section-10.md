@@ -97,8 +97,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Adaptive sampling | Multi-armed bandits for survey design | Family guide only; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Adaptive cluster sampling | Family guide only; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Active learning for map validation | Family guide only; no matching implementation verified | Research / lesson only |
-| Distribution shift | Kernel two-sample tests / MMD | Family guide only; no matching implementation verified | Research / lesson only |
-| Distribution shift | Energy distance | Family guide only; no matching implementation verified | Research / lesson only |
+| Distribution shift | Kernel two-sample tests / MMD | Unbiased Gaussian-kernel MMD, tests, walkthrough and notebook added | Implemented / tested candidate; spatial null design remains open |
+| Distribution shift | Energy distance | Unbiased sample energy-distance statistic and tests added | Implemented / tested candidate; spatial null design remains open |
 | Distribution shift | Domain-classifier divergence | Family guide only; no matching implementation verified | Research / lesson only |
 
 ## What this audit says right now
@@ -233,3 +233,6 @@ Nearest-neighbour gridding and Delaunay piecewise-linear triangulation gridding 
 
 
 Optical-flow update: a single-scale dense local Lucas–Kanade teaching implementation is now added with a known-translation test and notebook. Farnebäck, DIS and variational flow remain separate algorithm tasks.
+
+
+Distribution-shift update: unbiased Gaussian-kernel MMD, energy distance and a reproducible exchangeability-based permutation test now have executable implementations, tests, walkthrough and a lab. The permutation procedure is explicitly not spatially valid under autocorrelation; block-aware inference remains open.
