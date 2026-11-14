@@ -90,7 +90,7 @@ def test_invalid_demand_weights_are_rejected(weights):
 
 
 def test_priority_weights_can_change_selected_sites_without_changing_load_units():
-    costs = [[0, 5, 9], [1, 4, 8], [8, 1, 4], [9, 0, 3]]
+    costs = [[3, 8, 6], [6, 1, 5], [5, 0, 2], [7, 7, 5]]
     quantities = [2, 1, 2, 1]
     capacities = [2, 2, 4]
     plain = solve_capacitated_p_median(
