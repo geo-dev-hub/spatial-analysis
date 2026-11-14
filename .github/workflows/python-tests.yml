@@ -121,6 +121,9 @@ jobs:
           - example: accessibility-equity
             directory: implementations/python/accessibility-equity
             pythonpath: ""
+          - example: equity-covering
+            directory: implementations/python/equity-covering
+            pythonpath: ""
           - example: p-center
             directory: implementations/python/p-center
             pythonpath: ""
@@ -336,6 +339,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-median-facility-location-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/capacitated-p-median-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/accessibility-equity-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/equity-constrained-covering-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-center-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/set-covering-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/maximal-covering-lab.ipynb
