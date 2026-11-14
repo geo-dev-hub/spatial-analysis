@@ -74,3 +74,16 @@ Your implementation must label itself as an approximation unless it implements a
 ## Submission
 
 Submit a diagram of the original triangulation and merged pieces, a table of candidate diagonals and decisions, your validation results, and a short explanation of the difference between exact convex partitioning and approximate convex decomposition.
+
+
+## Part 4 — Run the greedy merge baseline
+
+Run the [convex decomposition package](../implementations/python/convex-decomposition/README.md) and its [visual lab](../notebooks/convex-decomposition-lab.ipynb).
+
+1. Start with the supplied L-shaped polygon and identify its reflex corner.
+2. Record the initial triangle count.
+3. For each attempted merge, identify the shared edge and test the turns of the candidate boundary.
+4. Confirm that every returned piece is convex and that the exact sum of piece areas equals the original area.
+5. Change the order of candidate pairs. Does the final partition change? Explain why this is not an optimality proof.
+
+**Submission:** a diagram of the final partition, a merge trace, and an exact area-conservation check.
