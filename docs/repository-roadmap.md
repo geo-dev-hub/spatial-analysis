@@ -319,3 +319,9 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - Implementation inventories and explanatory tables are excluded from the source-entry count.
 - This is an honest workload baseline, not a quality score. Partial means a related lesson or selected citation check exists; it does not verify every member of a grouped source row.
 - The catalogue README now links the dashboard. Recalculate it when row-level review labels change.
+
+## Selected bibliography evidence notes — 14 November 2026
+
+- Added [catalog/selected-verification-notes.md](../catalog/selected-verification-notes.md) to record the publisher/institutional metadata checks for Visvalingam and Whyatt (1993), Cressie and Huang (1999), and Gneiting (2002).
+- Corrected/confirmed scope is deliberately narrow: these notes confirm bibliographic identity and metadata; they do not promote the full grouped source entries to verified status or claim that all mathematical assumptions have been independently audited.
+- Linked the notes from the corresponding Section 10 and Section 22 source rows. Rights remain link-only; no third-party paper text or figures are reproduced.
