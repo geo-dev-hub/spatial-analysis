@@ -158,3 +158,5 @@ These notebooks are learning materials. For production analysis, check the input
 - [HMM Viterbi lab](hmm-viterbi-lab.ipynb) — decode a discrete hidden-state sequence and experiment with transition and emission probabilities.
 
 - [Curve construction lab](curves-smoothing-lab.ipynb) — compare Chaikin corner cutting, Catmull–Rom interpolation and Bezier evaluation, and distinguish geometric curve construction from trajectory filtering.
+
+- [Forecast verification lab](forecast-verification-lab.ipynb) — calculate categorical event scores, Brier score/skill, reliability-bin summaries and ROC AUC, and investigate their different interpretations.
