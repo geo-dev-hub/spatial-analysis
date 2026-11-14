@@ -17,6 +17,8 @@ Each implementation should state:
 
 ### Geometry and computational geometry
 
+- [Curve construction](python/curves-smoothing/README.md): Chaikin corner cutting, Catmull–Rom interpolation and de Casteljau Bézier evaluation, with tests, an [intern walkthrough](python/curves-smoothing/implementation-walkthrough.md) and a [lab notebook](../notebooks/curves-smoothing-lab.ipynb). B-splines, NURBS, curve fitting and Kalman/RTS smoothing are separate open topics.
+
 - [Line clipping](python/line-clipping/README.md): Cohen–Sutherland and Liang–Barsky rectangle clipping plus Cyrus–Beck convex-window clipping, with tests, an [intern walkthrough](python/line-clipping/implementation-walkthrough.md) and a [lab notebook](../notebooks/line-clipping-lab.ipynb).
 
 - [Exact orientation predicate](python/exact-orientation/README.md): rational-arithmetic reference sign test for 2D orientation, including near-degenerate float regression tests and an [intern walkthrough](python/exact-orientation/implementation-walkthrough.md). This is an exact reference implementation, not adaptive expansion arithmetic; the [visual lab](../notebooks/exact-orientation-lab.ipynb) compares it with a naive determinant.
@@ -139,7 +141,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty-one Python example packages and the Clipper2 C# smoke test, and execute all seventy-three learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty-two Python example packages and the Clipper2 C# smoke test, and execute all seventy-four learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
