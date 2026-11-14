@@ -121,3 +121,17 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new DGGS or HTM implementation is claimed.
 - **Rights:** standards, DOI, institutional and author-hosted links only; no third-party figures or text reproduced.
 - **Remaining work:** independently test one named implementation, inspect the exact DGGRID version and supported operations, and benchmark cell assignment, hierarchy, neighbour traversal, polygon covering and query performance on the intended data.
+
+
+## Section 10 — Change-point detection
+
+**Source entry:** “Change-point detection: CUSUM, PELT, binary segmentation, BEAST, Bayesian online change-point detection” (source page 21).
+
+- **CUSUM bibliography:** Page, E. S. (1954), “Continuous Inspection Schemes,” *Biometrika*, 41(1–2), 100–115, DOI [10.1093/biomet/41.1-2.100](https://doi.org/10.1093/biomet/41.1-2.100).
+- **PELT bibliography:** Killick, R., Fearnhead, P. and Eckley, I. A. (2012), “Optimal Detection of Changepoints With a Linear Computational Cost,” *Journal of the American Statistical Association*, 107(500), 1590–1598, DOI [10.1080/01621459.2012.737745](https://doi.org/10.1080/01621459.2012.737745). The publisher abstract describes the penalised segmentation objective and linear cost under mild conditions.
+- **BOCPD bibliography:** Adams, R. P. and MacKay, D. J. C. (2007), “Bayesian Online Changepoint Detection,” arXiv:0710.3742. The author-hosted paper describes online inference over the run-length distribution.
+- **BEAST bibliography:** Zhao, K. et al. (2019), “Detecting change-point, trend, and seasonality in satellite time series data to track abrupt changes and nonlinear dynamics: A Bayesian ensemble algorithm,” *Remote Sensing of Environment*, DOI [10.1016/j.rse.2019.04.034](https://doi.org/10.1016/j.rse.2019.04.034). The publisher record describes Bayesian model averaging for joint change, trend and seasonal decomposition.
+- **Technical-claim status:** the lesson distinguishes online monitoring, greedy recursive segmentation, penalised offline optimisation, Bayesian run-length inference and Bayesian ensemble decomposition. It qualifies PELT's linear-time claim and warns about seasonality, autocorrelation, missing observations and spatial multiple testing.
+- **Implementation:** no new detector implementation is claimed.
+- **Rights:** DOI and author-hosted paper links only; no source text or figures reproduced.
+- **Remaining work:** verify binary segmentation's exact variant and stopping rule; add executable baseline implementations and calibrate false alarms, boundary error and detection delay on simulated and spatially structured series.
