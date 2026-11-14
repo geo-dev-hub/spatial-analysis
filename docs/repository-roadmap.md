@@ -311,3 +311,11 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - Linked the Section 22 space-time covariance family to the existing nonseparable space-time covariance lesson and added it to the section's canonical-record summary. The lesson implements one Euclidean-space-by-linear-time Gneiting-class construction; Cressie–Huang, product-sum, metric and non-Euclidean variants remain outside that implementation.
 - Existing partial links in Sections 7–9 and 20 were reviewed and retained. A linked canonical record is not evidence that every member of its grouped source row has been verified.
 - The prior full validation run 43577080531 passed on commit 0327318db91c31d190169fec5111644a18f5ad3b. The catalogue edits above are later commits and require their own full-head validation.
+
+## Source catalogue progress dashboard — 14 November 2026
+
+- Added [catalog/review-dashboard.md](../catalog/review-dashboard.md), a dated count of all 694 source-entry rows across the 22 section indexes.
+- The current labels are 41 partial and 653 intake-only; no entry is labelled fully verified across identity, bibliography, technical claims, implementation and rights.
+- Implementation inventories and explanatory tables are excluded from the source-entry count.
+- This is an honest workload baseline, not a quality score. Partial means a related lesson or selected citation check exists; it does not verify every member of a grouped source row.
+- The catalogue README now links the dashboard. Recalculate it when row-level review labels change.
