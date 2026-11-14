@@ -1,4 +1,4 @@
-# Optical flow for image sequences: Lucas–Kanade, Farnebäck and DIS
+# Optical flow for image sequences: Lucas–Kanade, Farnebäck, DIS and TV-L1
 
 Optical flow estimates apparent motion between consecutive images. The output is a displacement vector field: for each pixel or feature, it estimates where the corresponding image content moved between frames.
 
@@ -47,7 +47,11 @@ Lucas–Kanade is commonly used as a sparse feature-tracking method. Pyramidal v
 
 **Limitations:** local constant-motion assumption, dependence on texture, sensitivity to large motion without pyramids, and track loss under occlusion or appearance change.
 
-## 3. Farnebäck: dense motion from polynomial expansion
+## 3. TV-L1: variational dense flow
+
+The TV-L1 method combines a robust data term with total-variation regularisation. The implementation in this repository calls scikit-image's `optical_flow_tvl1`; it is a library-backed wrapper rather than an independent solver. Its attachment and tightness parameters control the balance between matching image evidence and spatial regularity. The output is a dense pixel-displacement field.
+
+## 4. Farnebäck: dense motion from polynomial expansion
 
 Farnebäck approximates local image neighbourhoods with quadratic polynomials. It estimates how the polynomial coefficients change under translation and uses that relationship to infer displacement. Refinement across scales produces a dense flow field.
 
@@ -55,7 +59,7 @@ Compared with sparse Lucas–Kanade tracking, Farnebäck estimates motion for a 
 
 Implementation parameters such as pyramid scale, number of levels, window size, iterations and polynomial neighbourhood affect the accuracy/runtime trade-off. Record them with the result.
 
-## 4. DIS: Dense Inverse Search
+## 5. DIS: Dense Inverse Search
 
 Dense Inverse Search (DIS) was designed to balance dense-flow accuracy and computational efficiency. The method combines inverse search for patch correspondences, multi-scale aggregation to create a dense displacement field, and variational refinement.
 
@@ -71,6 +75,7 @@ The OpenCV implementation exposes presets for different speed/quality trade-offs
 |---|---|---|---|
 | Lucas–Kanade | Usually sparse tracks; dense variants exist | Local constant motion, gradient least squares | Feature tracking and local displacement |
 | Farnebäck | Dense flow | Polynomial expansion and multi-scale refinement | Dense displacement between image pairs |
+| TV-L1 | Variational dense flow | Robust data attachment with total-variation regularisation | Dense flow with edge-preserving regularisation |
 | DIS | Dense flow | Patch inverse search, aggregation and refinement | Fast dense flow with tunable speed/quality |
 
 These methods estimate apparent image motion. They are not interchangeable with geodesic paths, physical wind fields, object tracking or image registration, although their outputs may be inputs to those workflows.
@@ -139,12 +144,12 @@ For advection nowcasting, evaluate the downstream forecast, not only optical-flo
 
 ## Scope
 
-This guide is paired with a tested teaching package: [Lucas–Kanade, Farnebäck and DIS implementations](../implementations/python/optical-flow/README.md), [Lucas–Kanade source](../implementations/python/optical-flow/lucas_kanade.py), [Farnebäck/DIS wrappers](../implementations/python/optical-flow/dense_optical_flow.py) and synthetic translation tests. Farnebäck and DIS call OpenCV; they are not reimplementations of the underlying papers. The package currently provides translation fixtures rather than a full benchmark. It distinguishes sparse/local tracking from dense-flow methods and explains conversion from pixel motion to map displacement. A future implementation should include synthetic ground-truth sequences, validity masks and georeferencing tests before applying the method to Earth-observation time series.
+This guide is paired with a tested teaching package: [Lucas–Kanade, TV-L1, Farnebäck and DIS implementations](../implementations/python/optical-flow/README.md), [Lucas–Kanade source](../implementations/python/optical-flow/lucas_kanade.py), [Farnebäck/DIS wrappers](../implementations/python/optical-flow/dense_optical_flow.py) and synthetic translation tests. Farnebäck and DIS call OpenCV, while TV-L1 calls scikit-image; these are reference-library wrappers, not independent reimplementations of the underlying methods. The package currently provides translation fixtures rather than a full benchmark. It distinguishes sparse/local tracking from dense-flow methods and explains conversion from pixel motion to map displacement. A future implementation should include synthetic ground-truth sequences, validity masks and georeferencing tests before applying the method to Earth-observation time series.
 
 
 ## Executable Lucas–Kanade baseline
 
-The companion package implements a single-scale dense local Lucas–Kanade estimator for small motion. It forms local normal equations from spatial and temporal image gradients and marks low-texture windows invalid rather than returning unstable flow. A synthetic subpixel translation lab and tests are included. This does not implement Farnebäck, DIS or variational optical flow.
+The companion package implements a single-scale dense local Lucas–Kanade estimator for small motion. It forms local normal equations from spatial and temporal image gradients and marks low-texture windows invalid rather than returning unstable flow. A synthetic subpixel translation lab and tests are included. This is distinct from Farnebäck, DIS and TV-L1.
 
 - [Implementation](../implementations/python/optical-flow/lucas_kanade.py)
 - [Tests](../implementations/python/optical-flow/test_lucas_kanade.py)
