@@ -68,7 +68,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Add a spatial cross-validation lesson and tested grid-block/buffered-fold baseline with an intern walkthrough; keep block-size selection and deployment-specific design as explicit research decisions.
 - [x] Add a line-clipping lesson and tested Python implementations of Cohen–Sutherland, Liang–Barsky and Cyrus–Beck, with tests, walkthrough and executable notebook; Nicholl–Lee–Nicholl remains unimplemented.
 - [x] Add a rasterisation lesson and tested Python implementations of DDA, Bresenham, Wu, scanline fill and supercover traversal, with tests, walkthrough and executable notebook; exact fractional-area coverage remains open.
-- [x] Add a curve and smoothing guide separating Chaikin subdivision, Catmull–Rom interpolation, Bézier/B-spline/NURBS design curves and Kalman/RTS trajectory smoothing; implementations remain open.
+- [x] Add a curve and smoothing guide plus tested Chaikin, Catmull–Rom and de Casteljau Bézier teaching implementations, walkthrough and notebook; B-splines, NURBS, curve fitting and Kalman/RTS remain open.
 - [x] Add a masked-autoencoding method lesson and tested NumPy patch masking/restoration baseline with an intern walkthrough; do not present it as a trained foundation model.
 - [x] Add a seven-parameter Helmert Position Vector lesson and tested geocentric XYZ implementation, including a published IOGP example and inverse-transform tests.
 - [x] Add an affine georeferencing lesson and tested least-squares control-point fit, including rank checks, residual diagnostics and pixel-coordinate convention notes.
