@@ -34,3 +34,18 @@ A summed-area table (integral image) makes each rectangular event-count query co
 A one-cell window reduces FSS to gridpoint comparison. Larger windows test agreement at broader neighbourhood scales, so a displaced feature can receive more credit. Window size is in cells, not metres: the same 5-by-5 window has different physical meaning on 1 km and 10 km grids. The implementation returns None when both thresholded fields contain no events because the denominator is zero.
 
 The code cannot choose a scientifically meaningful threshold, projection, grid spacing, resampling method, mask or neighbourhood scale. Forecast and observation must refer to the same valid time and accumulation period. A scale curve across several neighbourhood sizes is often more informative than one selected value.
+
+
+## CRPS decomposition by threshold integration
+
+The CRPS has the threshold-integral identity
+
+`CRPS(F,y) = ∫ BS_z dz`, where `BS_z` is the Brier score for the event `Y > z`.
+
+At every threshold, an ensemble gives an event probability equal to the fraction of members exceeding that threshold. Grouping cases by forecast probability gives the Murphy decomposition:
+
+`BS = REL - RES + UNC`
+
+with reliability `Σ w_k(p_k-o_k)^2`, resolution `Σ w_k(o_k-ō)^2`, and uncertainty `ō(1-ō)`. Integrating these three terms over the threshold axis gives an additive CRPS decomposition.
+
+The implementation uses finite trapezoidal quadrature and a fixed threshold grid. It is a clear approximation to the integral identity, not the exact ensemble-bin-width formula derived by Hersbach (2000). The quadrature residual is returned so the additive identity can be checked numerically.
