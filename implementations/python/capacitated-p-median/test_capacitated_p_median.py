@@ -19,18 +19,22 @@ def test_capacity_can_force_a_higher_cost_assignment():
     assert objective == pytest.approx(2)
     assert assignment == (0, 1, 1)
 
-def test_demand_weights_change_cost_not_capacity_load():
-    costs = [[0, 5], [1, 0]]
+def test_demand_weights_change_assignment_cost_not_capacity_load():
+    # Both demand rows prefer facility 0, but its capacity is one unit.
+    # With equal weights, row 1 is assigned to facility 0; prioritising row 1
+    # makes it worth sending row 0 to facility 1 instead.
+    costs = [[0, 2], [0, 1]]
     unweighted = solve_capacitated_p_median(
         costs, 2, capacities=[1, 1], demand_quantities=[1, 1],
     )
     weighted = solve_capacitated_p_median(
-        costs, 2, capacities=[1, 1], demand_quantities=[1, 1], demand_weights=[10, 1],
+        costs, 2, capacities=[1, 1], demand_quantities=[1, 1], demand_weights=[1, 10],
     )
     assert unweighted[1] == pytest.approx(1)
+    assert unweighted[2] == (1, 0)
     assert weighted[0] == (0, 1)
-    assert weighted[1] == pytest.approx(0)
-    assert weighted[2] == (0, 1)
+    assert weighted[1] == pytest.approx(2)
+    assert weighted[2] == (1, 0)
 
 def test_infeasible_total_capacity_is_reported():
     with pytest.raises(ValueError, match="no feasible assignment"):
