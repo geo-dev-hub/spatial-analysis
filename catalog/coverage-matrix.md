@@ -51,3 +51,8 @@ The ELECTRE I-style package now contains two deliberately separate stages: pairw
 ## Section 9 implementation note
 
 The first local-frame package now connects geodetic longitude/latitude/ellipsoidal height to ECEF XYZ and local East-North-Up coordinates, including the inverse ENU-to-ECEF rotation. It reproduces the published EPSG:9836 example, has tests, an intern walkthrough, an exercise and a visual lab. Geoid/vertical-datum conversion, dynamic reference frames and epoch propagation remain outside scope. See the [lesson](../algorithms/geodesy/ecef-enu.md) and [package](../implementations/python/ecef-enu/README.md).
+
+
+## Section 2 implementation note
+
+Ripley's K/L now includes the rectangular-window translation correction and a conditional homogeneous-CSR simulation workflow. The latter returns pointwise quantile bands and a separate global studentised maximum-deviation Monte Carlo p-value across a preselected radius interval. Pointwise bands are not simultaneous global envelopes. Isotropic/border corrections, inhomogeneous point-process models, network KDE and specialist rank-envelope procedures remain open. See the [lesson](../algorithms/statistics/ripley-k.md), [package](../implementations/python/ripley-k/README.md), [exercise](../exercises/ripley-k-envelopes.md) and [lab](../notebooks/ripley-k-lab.ipynb).
