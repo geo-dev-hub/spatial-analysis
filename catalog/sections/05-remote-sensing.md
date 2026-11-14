@@ -96,8 +96,13 @@ The [NDVI lesson](../../algorithms/remote-sensing/ndvi.md) defines the normalise
 4. Verify recent neural architectures and product names against original papers and maintainer sources.
 5. Include conventional baselines and independent validation when evaluating learned methods.
 
-## Bibliographic check on the NDVI foundation
+## Bibliographic checks on selected spectral-index foundations
 
-Rouse, J. W., Jr., Haas, R. H., Schell, J. A., Deering, D. W. and Harlan, J. C. (1974, November), *Monitoring the vernal advancement and retrogradation (green wave effect) of natural vegetation*. Type III final report for September 1972–November 1974, Texas A&M University Remote Sensing Center, prepared for NASA Goddard Space Flight Center; NASA-CR-144661 (RSC-1978-4). [NASA NTRS record](https://ntrs.nasa.gov/citations/19750020419).
+- Rouse, J. W., Jr., Haas, R. H., Schell, J. A., Deering, D. W. and Harlan, J. C. (1974, November), *Monitoring the vernal advancement and retrogradation (green wave effect) of natural vegetation*. Type III final report for September 1972–November 1974, Texas A&M University Remote Sensing Center, prepared for NASA Goddard Space Flight Center; NASA-CR-144661 (RSC-1978-4). [NASA NTRS record](https://ntrs.nasa.gov/citations/19750020419).
+- Huete (1988), “A soil-adjusted vegetation index (SAVI),” *Remote Sensing of Environment*, 25(3), 295–309, [10.1016/0034-4257(88)90106-X](https://doi.org/10.1016/0034-4257(88)90106-X).
+- Huete, Didan, Miura, Rodriguez, Gao and Ferreira (2002), “Overview of the radiometric and biophysical performance of the MODIS vegetation indices,” *Remote Sensing of Environment*, 83(1–2), 195–213, [10.1016/S0034-4257(02)00096-2](https://doi.org/10.1016/S0034-4257(02)00096-2).
+- McFeeters (1996), “The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features,” *International Journal of Remote Sensing*, 17(7), 1425–1432, [10.1080/01431169608948714](https://doi.org/10.1080/01431169608948714).
+- Xu (2006), “Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery,” *International Journal of Remote Sensing*, 27(14), 3025–3033, [10.1080/01431160600589179](https://doi.org/10.1080/01431160600589179).
+- Huete, Liu, Batchily and van Leeuwen (1997), “A comparison of vegetation indices over a global set of TM images for EOS-MODIS,” *Remote Sensing of Environment*, 59(3), 440–451, [10.1016/S0034-4257(96)00112-5](https://doi.org/10.1016/S0034-4257(96)00112-5).
 
-The report identity, author list and report number were checked against the NASA record and report title page. This is a selected source check, not an audit of all Section 5 spectral indices or preprocessing workflows.
+The NDVI report identity, author list and report number were checked against the NASA record and report title page. The journal metadata for SAVI, EVI, NDWI and MNDWI was checked against publisher records. This is a selected bibliography pass, not a technical audit of all Section 5 indices, preprocessing workflows or remote-sensing source entries.
