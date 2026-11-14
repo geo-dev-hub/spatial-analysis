@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from math import isfinite
+from numbers import Integral
 from typing import Iterable, Sequence
 
 
@@ -27,7 +28,7 @@ def _binary(values: Iterable[int], name: str) -> list[int]:
     for value in values:
         if isinstance(value, bool):
             result.append(int(value))
-        elif isinstance(value, int) and value in (0, 1):
+        elif isinstance(value, Integral) and value in (0, 1):
             result.append(value)
         else:
             raise ValueError(f"{name} values must be boolean or integer 0/1")
@@ -57,7 +58,7 @@ def categorical_scores(table: ContingencyTable) -> dict[str, float | None]:
     None denotes a mathematically undefined ratio for the supplied sample.
     """
     h, m, f, c = table.hits, table.misses, table.false_alarms, table.correct_negatives
-    if any(not isinstance(v, int) or isinstance(v, bool) or v < 0 for v in (h, m, f, c)):
+    if any(not isinstance(v, Integral) or isinstance(v, bool) or v < 0 for v in (h, m, f, c)):
         raise ValueError("contingency counts must be non-negative integers")
     if table.total == 0:
         raise ValueError("contingency table must contain at least one case")
