@@ -221,6 +221,9 @@ jobs:
           - example: snap-rounding-noder
             directory: implementations/python/snap-rounding-noder
             pythonpath: ""
+          - example: ear-clipping
+            directory: implementations/python/ear-clipping
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -331,6 +334,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weights-of-evidence-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-outranking-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/snap-rounding-noder-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ear-clipping-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
