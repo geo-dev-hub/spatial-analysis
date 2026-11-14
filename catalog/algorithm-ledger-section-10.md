@@ -78,7 +78,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Probabilistic verification | ROC and AUC | Tested forecast-verification package; tied-rank ROC AUC | Implemented / tested |
 | Probabilistic verification | CRPS decomposition | Not implemented; ensemble CRPS score is now separate and tested | Open |
 | Probabilistic verification | Rank histograms | Expected rank histogram with fractional tie handling, tests and notebook added | Implemented / tested candidate; calibration review pending |
-| Optical flow | Lucas–Kanade | Family guide; no matching implementation verified | Research / lesson only |
+| Optical flow | Lucas–Kanade | Single-scale dense local implementation, tests, walkthrough and synthetic translation notebook added | Implemented / tested candidate; benchmark/reference review pending |
 | Optical flow | Farnebäck | Family guide; no matching implementation verified | Research / lesson only |
 | Optical flow | DIS | Family guide; no matching implementation verified | Research / lesson only |
 | Optical flow | Variational optical flow | Family guide; no matching implementation verified | Research / lesson only |
@@ -230,3 +230,6 @@ Ensemble verification update: empirical ensemble CRPS and an expected rank histo
 ## Geophysical gridding update — source page 22
 
 Nearest-neighbour gridding and Delaunay piecewise-linear triangulation gridding now have a NumPy/SciPy teaching package, tests (including affine-plane reproduction), walkthrough and comparison notebook. These are not minimum-curvature gridding and do not extrapolate beyond their stated support.
+
+
+Optical-flow update: a single-scale dense local Lucas–Kanade teaching implementation is now added with a known-translation test and notebook. Farnebäck, DIS and variational flow remain separate algorithm tasks.

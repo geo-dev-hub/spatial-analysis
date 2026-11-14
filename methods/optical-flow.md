@@ -140,3 +140,13 @@ For advection nowcasting, evaluate the downstream forecast, not only optical-flo
 ## Scope
 
 This is a method-selection guide, not an optical-flow implementation. It distinguishes sparse/local tracking from dense-flow methods and explains conversion from pixel motion to map displacement. A future implementation should include synthetic ground-truth sequences, validity masks and georeferencing tests before applying the method to Earth-observation time series.
+
+
+## Executable Lucas–Kanade baseline
+
+The companion package implements a single-scale dense local Lucas–Kanade estimator for small motion. It forms local normal equations from spatial and temporal image gradients and marks low-texture windows invalid rather than returning unstable flow. A synthetic subpixel translation lab and tests are included. This does not implement Farnebäck, DIS or variational optical flow.
+
+- [Implementation](../implementations/python/optical-flow/lucas_kanade.py)
+- [Tests](../implementations/python/optical-flow/test_lucas_kanade.py)
+- [Walkthrough](../implementations/python/optical-flow/implementation-walkthrough.md)
+- [Lab](../notebooks/lucas-kanade-optical-flow-lab.ipynb)
