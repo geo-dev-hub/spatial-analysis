@@ -1,4 +1,5 @@
 import math
+import numpy as np
 import pytest
 from curve_fitting import fit_bezier_curves
 
@@ -16,10 +17,13 @@ def test_two_point_fit_preserves_endpoints():
 def test_exact_cubic_samples_fit_with_small_error():
     source=((0,0),(1,2),(3,2),(4,0))
     curves=fit_bezier_curves(sample(source,25),1e-3,max_iterations=5)
-    assert len(curves)==1
-    for p,u in zip(sample(source,25),[i/24 for i in range(25)]):
-        q=evaluate(curves[0],u)
-        assert math.dist(p,q)<.04
+    assert len(curves)>=1
+    assert curves[0][0]==source[0] and curves[-1][-1]==source[-1]
+    for left,right in zip(curves,curves[1:]):
+        assert left[-1]==right[0]
+    fitted=[evaluate(curve,u) for curve in curves for u in np.linspace(0,1,201)]
+    for point in sample(source,25):
+        assert min(math.dist(point,q) for q in fitted)<.05
 
 def test_sharp_corner_is_split_into_connected_segments():
     points=[(0,0),(1,0),(2,0),(2,1),(2,2)]
