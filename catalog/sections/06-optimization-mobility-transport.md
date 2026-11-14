@@ -92,3 +92,7 @@ The [capacitated p-median lesson](../../algorithms/optimization/capacitated-p-me
 ## Backup coverage extension
 
 The [backup-coverage lesson](../../algorithms/optimization/backup-coverage.md) and [Python package](../../implementations/python/backup-coverage/README.md) introduce deterministic r-covering: demand is counted only when at least r distinct selected candidate facilities are within the service threshold. The package includes tests, an intern walkthrough, exercise and executable notebook. This is a redundancy screen, not a reliability probability; shared infrastructure, correlated failures, capacity and queues are outside scope.
+
+## Service queueing extension
+
+The [M/M/c lesson](../../algorithms/optimization/mmc-queue.md) and [implementation](../../implementations/python/mmc-queue/README.md) introduce Erlang-C steady-state waiting for one FCFS queue feeding identical parallel servers. Tests, an intern walkthrough, an exercise and an executable notebook accompany the package. The assumptions are explicit: Poisson arrivals, exponential service, stationarity, an infinite queue and identical servers. It is an operations model, not a geographic accessibility measure.
