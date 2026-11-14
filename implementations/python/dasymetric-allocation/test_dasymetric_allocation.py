@@ -61,7 +61,7 @@ def test_invalid_zero_weight_policy_is_rejected():
 def test_building_allocation_uses_residential_floor_area_and_conserves_zone_totals():
     from dasymetric_allocation import building_based_allocate
     result = building_based_allocate([100, 60], [0, 0, 0, 1, 1], [20, 60, 20, 10, 30],
-        residential=[True, True, False, True, True], occupancy_factor=[1, 1, 1, 2, 1])
+        residential=[True, True, False, True, True], occupancy_factor=[1, 1, 1, 3, 1])
     np.testing.assert_allclose(result["building_population"], [25, 75, 0, 30, 30])
     np.testing.assert_allclose(result["zone_totals_reconstructed"], [100, 60])
 
