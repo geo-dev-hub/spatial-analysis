@@ -44,6 +44,10 @@ Each implementation should state:
 - [Affine georeferencing](python/affine-georeferencing/README.md): least-squares six-parameter 2D transform from control points, rank checks, residual diagnostics, tests and an [intern walkthrough](python/affine-georeferencing/implementation-walkthrough.md).
 - [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
 
+### Sequence models
+
+- [Discrete HMM and Viterbi decoding](python/hmm-viterbi/README.md): log-space maximum-probability state-sequence decoding with validated probability tables, tests, an [intern walkthrough](python/hmm-viterbi/implementation-walkthrough.md) and a [lab notebook](../notebooks/hmm-viterbi-lab.ipynb).
+
 ### GeoAI and model validation
 
 - [Masked patch selection and restoration](python/masked-autoencoding/README.md): NumPy-only MAE sequence masking mechanics, deterministic per-sample masks, inverse permutation, tests and an [intern walkthrough](python/masked-autoencoding/implementation-walkthrough.md). This is not a trained model.
@@ -135,7 +139,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty Python example packages and the Clipper2 C# smoke test, and execute all seventy-two learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty-one Python example packages and the Clipper2 C# smoke test, and execute all seventy-three learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
