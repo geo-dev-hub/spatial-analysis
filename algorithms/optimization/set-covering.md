@@ -12,17 +12,17 @@ The location set-covering problem minimizes the number of open facilities while 
 
 Let I be demand locations and J candidate facility sites. Let d_ij be the cost from demand i to candidate j, S the service threshold, and x_j indicate whether candidate j is opened. Define N_i = {j : d_ij <= S}.
 
-[
+$
 \min \sum_{j\in J}x_j
-]
+$
 
 subject to:
 
-[
+$
 \sum_{j\in N_i}x_j\ge1 \quad \forall i\in I,
 \qquad
 x_j\in\{0,1\}.
-]
+$
 
 Every demand point must have at least one selected candidate within the threshold. Each facility has equal opening cost in this basic model, so the objective is the facility count.
 
