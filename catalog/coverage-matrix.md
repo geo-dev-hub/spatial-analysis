@@ -75,3 +75,6 @@ The location set-covering package adds an exact small-instance solver that minim
 
 
 The capacitated p-median addition includes a small exact enumerator, capacity-feasibility tests, a step-by-step intern walkthrough, an exercise and a visual lab comparing the unconstrained and constrained assignments. Demand quantities consume capacity; separate objective weights affect assignment cost. The implementation requires indivisible demand and deterministic scalar capacity and makes no queueing or service-level claim.
+
+
+The Section 6 accessibility-equity addition provides a tested descriptive diagnostics package and visual notebook: population-weighted Lorenz curves and Gini, lower-tail quantiles, minimum-standard shortfall and group mean gaps. It explicitly distinguishes inequality measurement from normative judgments about fairness; the chosen groups, opportunities and minimum standard remain policy decisions.
