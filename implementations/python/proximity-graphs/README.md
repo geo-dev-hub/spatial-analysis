@@ -19,3 +19,10 @@ Points are distinct finite planar x,y pairs. Edges are returned as input-index p
 The strict interior tests implement open-region conventions. Points exactly on a Gabriel disk or RNG lune boundary do not block an edge. Tie conventions should be documented when comparing to another library.
 
 The implementations are O(n³) for Gabriel/RNG/beta-skeleton and O(n²) for Yao/MST candidate generation. They are transparent small-data baselines, not the efficient Delaunay-based constructions from the literature.
+
+
+## Delaunay-filtered variants
+
+The package also exposes `delaunay_filtered_gabriel_graph` and `delaunay_filtered_rng`. They construct a SciPy/Qhull Delaunay triangulation, then apply the corresponding open-region blocker test only to triangulation edges. This reduces the candidate set from all O(n²) pairs to O(n) planar edges, and the straightforward blocker scan gives an O(n²) total baseline.
+
+These functions are intended for non-degenerate, general-position Euclidean point sets. Qhull selects one triangulation in cocircular cases, so boundary-tie edges omitted by that triangulation may also be absent from the filtered graph. The implementation is not the specialised linear-time RNG post-processing algorithm in Lingas (1994). Compare the Delaunay-filtered results with the all-pairs reference functions on general-position fixtures.
