@@ -29,11 +29,11 @@ def test_over_budget_release_is_rejected_transactionally():
     assert len(accountant.releases) == 1
 
 
-def test_duplicate_release_names_are_rejected():
+def test_duplicate_release_names_are_rejected_after_normalization():
     accountant = SequentialPrivacyAccountant(1)
     accountant.add_release("daily-count", 0.2)
     with pytest.raises(ValueError, match="unique"):
-        accountant.add_release("daily-count", 0.1)
+        accountant.add_release(" daily-count ", 0.1)
 
 
 @pytest.mark.parametrize("eps,delta", [(0, 0), (-1, 0), (float("nan"), 0), (0.1, -0.1), (0.1, 1)])
