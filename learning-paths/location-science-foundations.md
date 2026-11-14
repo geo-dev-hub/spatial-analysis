@@ -50,11 +50,15 @@ Read [Equity-constrained maximal covering](../algorithms/optimization/equity-con
 
 Read [Backup coverage (r-covering)](../algorithms/optimization/backup-coverage.md) and run the [backup-coverage lab](../notebooks/backup-coverage-lab.ipynb). Compare the share of demand reached by at least one facility with the share reached by at least two distinct facilities. Inspect the per-demand counts and challenge the independence assumption: two nearby facilities may share a bridge, power source, hazard zone or staff pool. This deterministic model does not calculate outage probabilities or guarantee spare capacity.
 
-### 9. Model service queues after geographic access
+### 9. Account for busy service units
+
+Read [Maximum expected covering (MEXCLP)](../algorithms/optimization/mexclp.md) and run the [MEXCLP lab](../notebooks/mexclp-lab.ipynb). Compare the probability that at least one nearby unit is available as the number of covering units and the common busy fraction change. The equal independent availability assumptions are deliberately simplified; compare them with the deterministic backup-coverage screen and do not interpret expected coverage as a service guarantee.
+
+### 10. Model service queues after geographic access
 
 Read the [M/M/c queueing lesson](../algorithms/optimization/mmc-queue.md) and run the [queueing lab](../notebooks/mmc-queue-lab.ipynb). A location can meet a travel-time threshold and still provide poor service when arrivals approach total capacity. Compare staffing levels and waiting times, check stability and verify Little's law. Keep queue performance distinct from geographic accessibility: the M/M/c model assumes stationary Poisson arrivals, exponential service, identical servers and one FCFS queue.
 
-### 10. Connect location to transport
+### 11. Connect location to transport
 
 A real cost matrix may require a directed road or transit network, mode restrictions, time-dependent travel times and access rules. Straight-line distance is only an initial approximation.
 
@@ -70,6 +74,7 @@ A real cost matrix may require a directed road or transit network, mode restrict
 8. Add minimum coverage floors to the maximal-covering model. Explain the effect on total covered demand and group outcomes.
 9. Compare one-cover and two-cover demand. Explain why two eligible sites do not necessarily provide independent backup.
 10. Compare queue wait under different server counts. Explain why a geographic access score cannot reveal operational waiting time.
+11. Compare deterministic backup coverage with MEXCLP. Identify the assumptions that convert a count of eligible units into an expected availability probability.
 
 ## What comes next
 
