@@ -1,6 +1,6 @@
 """Teaching implementations for univariate mean-shift detection."""
 from __future__ import annotations
-from math import isfinite
+from math import exp, isfinite
 from typing import Iterable
 
 def _series(values: Iterable[float])->list[float]:
@@ -117,7 +117,7 @@ def pettitt_test(values):
         if abs(u) > best_k:
             best_k, best_u, best_split = abs(u), u, split
 
-    p_value = min(1.0, 2.0 * __import__("math").exp(
+    p_value = min(1.0, 2.0 * exp(
         -6.0 * best_k * best_k / (n ** 3 + n ** 2)
     ))
     return {
