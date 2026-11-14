@@ -138,3 +138,14 @@ The repository has item-level intake indexes for all 22 source sections, but int
 The branch currently contains sixty-four Python implementation packages, fifty executable notebooks and a Clipper2 C# smoke check. The workflow matrix includes all sixty-four packages and the notebook job executes all fifty notebooks. The latest settled-head Actions run must pass before the new weights-of-evidence and ELECTRE I-style packages and notebooks are marked validated. The repository is still a draft: source entries need item-by-item verification, licensing decisions remain open, and many subject areas have not yet received researched learning material.
 
 We will keep working through those gaps before designing the membership tiers, archive packaging or Patreon publishing workflow.
+
+
+## 4. Continuation work recorded on 14 November 2026
+
+- [x] Complete the ELECTRE I-style choice stage for small decision sets: exact kernel enumeration, multiple/no-kernel reporting, tests, intern walkthrough, exercise and visual lab. The relation builder's range-normalised discordance convention remains explicitly scoped.
+- [x] Add a geodetic → ECEF → local ENU learning package with an explicit WGS 84 default, ellipsoidal-height contract, inverse rotation, published EPSG:9836 reference test, walkthrough, exercise and visual lab.
+- [x] Extend Ripley's K/L from pair-count summaries to rectangular-window translation correction and conditional homogeneous-CSR simulation. Add pointwise quantile bands and a separate global studentised maximum-deviation Monte Carlo test, with caveats, tests, walkthrough, exercise and updated notebook.
+- [x] Add the new Python package and notebook to CI rather than leaving them as unexecuted examples.
+- [ ] Review the latest full CI run on the current branch head; local tests are not a substitute for the complete matrix and notebook execution.
+- [ ] Continue the source verification and implementation passes across the remaining entries in Sections 1–22. In particular, randomized trapezoidal-map construction, efficient Yao/beta-skeleton methods, inhomogeneous point-process models, advanced routing, dynamic geodetic reference frames, and the majority of domain-specific Section 7–22 methods remain open.
+- [ ] Complete a full rendered-content review, licence decision and contributor workflow review before declaring the compendium ready for public membership distribution.
