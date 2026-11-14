@@ -35,8 +35,8 @@ The source groups raster operations, terrain analysis, hydrological modelling, g
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Flow routing: D8, D-infinity, MFD, priority-flood depression filling, sink breaching | Flow-direction algorithms / terrain conditioning | 6–7 | Not checked — intake only |
-| Flow accumulation, watershed and basin delineation, stream ordering (Strahler, Shreve), HAND, topographic wetness index | Hydrological operations / network metrics / terrain indices | 7 | Not checked — intake only |
+| Flow routing: [D8](../../algorithms/raster/d8-flow-direction.md), D-infinity, MFD, [priority-flood depression filling](../../algorithms/raster/priority-flood.md), sink breaching | Flow-direction algorithms / terrain conditioning | 6–7 | Partial — related record exists; source-entry review pending |
+| [Flow accumulation](../../algorithms/raster/d8-flow-accumulation.md), [watershed and basin delineation](../../algorithms/raster/watershed-delineation.md), [stream ordering](../../algorithms/raster/stream-order.md) (Strahler, Shreve), HAND, topographic wetness index | Hydrological operations / network metrics / terrain indices | 7 | Partial — related record exists; source-entry review pending |
 | Rainfall-runoff: SCS curve number, unit hydrograph, Green-Ampt, TOPMODEL, SWAT, HEC-HMS, LISFLOOD, VIC | Hydrological models / software systems | 7 | Not checked — intake only |
 | Routing and hydrodynamics: Muskingum, Manning, Saint-Venant, kinematic wave, 2D shallow water equations, SPH | Flow-routing methods / physical equations / numerical methods | 7 | Not checked — intake only |
 | Flood: frequency analysis (GEV, Gumbel, return periods), bathtub versus hydrodynamic inundation, SAR flood mapping | Statistical methods / inundation models / remote-sensing workflow | 7 | Not checked — intake only |

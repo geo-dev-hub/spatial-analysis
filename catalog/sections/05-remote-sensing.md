@@ -27,7 +27,7 @@ The [NDVI lesson](../../algorithms/remote-sensing/ndvi.md) defines the normalise
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Vegetation and soil: NDVI, EVI, SAVI, NDRE, NDMI, LSWI, tasseled cap (Kauth-Thomas) | Spectral indices / transforms | 8 | Not checked — intake only |
+| Vegetation and soil: [NDVI](../../algorithms/remote-sensing/ndvi.md), EVI, SAVI, NDRE, NDMI, LSWI, tasseled cap (Kauth-Thomas) | Spectral indices / transforms | 8 | Partial — related record exists; source-entry review pending |
 | Water, burn, snow, urban: NDWI, MNDWI, AWEI, NBR, dNBR, NDSI, NDBI | Spectral indices | 8 | Not checked — intake only |
 | Transforms: PCA, minimum noise fraction (MNF), Fourier, wavelet, Hough, Radon | Statistical and signal transforms | 8 | Not checked — intake only |
 | Texture and edges: GLCM, Gabor, Sobel, Canny, mathematical morphology, SIFT, SURF | Texture measures / filters / feature detectors and descriptors | 8 | Not checked — intake only |

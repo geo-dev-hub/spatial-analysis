@@ -28,7 +28,7 @@ The [MEXCLP lesson](../../algorithms/optimization/mexclp.md) adds an availabilit
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Covering and median: p-median, p-center, p-dispersion, set covering, maximal covering (MCLP), MEXCLP, MALP, BACOP, hypercube queuing | Facility-location models / optimisation problems / queueing models | 10 | Not checked — intake only |
+| Covering and median: [p-median](../../algorithms/optimization/p-median.md), [p-center](../../algorithms/optimization/p-center.md), p-dispersion, [set covering](../../algorithms/optimization/set-covering.md), [maximal covering (MCLP)](../../algorithms/optimization/maximal-covering.md), [MEXCLP](../../algorithms/optimization/mexclp.md), MALP, BACOP, hypercube queuing, [M/M/c queue](../../algorithms/optimization/mmc-queue.md) | Facility-location models / optimisation problems / queueing models | 10 | Partial — related record exists; source-entry review pending |
 | Capacitated and hub location, p-hub median, hierarchical, stochastic and robust facility location | Facility-location problem variants / optimisation models | 10 | Not checked — intake only |
 | Districting: redistricting, ReCom, MCMC and Flip, compactness scores (Polsby-Popper, Reock, Schwartzberg), territory design, set partitioning | Districting and partitioning methods / sampling methods / compactness metrics | 10 | Not checked — intake only |
 | Land-use allocation, spatial reserve design (Marxan), art gallery problem, sensor and camera placement, cell tower siting | Spatial allocation / reserve design / coverage and placement problems | 10 | Not checked — intake only |
@@ -47,8 +47,8 @@ The [MEXCLP lesson](../../algorithms/optimization/mexclp.md) adds an availabilit
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Gravity models, Huff model, Hansen accessibility, Reilly's law, 2SFCA and variants, cumulative opportunities, impedance decay | Spatial interaction models / accessibility measures | 10 | Not checked — intake only |
-| Radiation model, intervening opportunities, origin-destination flow models, equity accessibility (Gini, Lorenz) | Interaction and flow models / equity measures | 10 | Not checked — intake only |
+| Gravity models, Huff model, Hansen accessibility, Reilly's law, [2SFCA and variants](../../algorithms/optimization/two-step-fca.md), cumulative opportunities, impedance decay | Spatial interaction models / accessibility measures | 10 | Partial — related record exists; source-entry review pending |
+| Radiation model, intervening opportunities, origin-destination flow models, [equity accessibility (Gini, Lorenz)](../../algorithms/optimization/accessibility-equity.md), [equity-constrained covering](../../algorithms/optimization/equity-constrained-covering.md) | Interaction and flow models / equity measures | 10 | Partial — related record exists; source-entry review pending |
 | Trade area analysis (drive-time, Huff, analog), cannibalization, retail gravity, 15-minute city metrics | Retail and urban analysis methods / spatial indicators | 10 | Not checked — intake only |
 
 ## Transport planning

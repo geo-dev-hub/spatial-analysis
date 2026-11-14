@@ -28,7 +28,7 @@ The [DBSCAN lesson](../../algorithms/statistics/dbscan.md) introduces core, bord
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
 | Quadrat analysis, Clark-Evans, nearest neighbor index | Exploratory methods / spatial statistics | 3 | Not checked — intake only |
-| Ripley's K and L; G, F and J functions; pair correlation function | Point-pattern summary functions | 3 | Not checked — intake only |
+| [Ripley's K and L](../../algorithms/statistics/ripley-k.md); G, F and J functions; pair correlation function | Point-pattern summary functions | 3 | Partial — related record exists; source-entry review pending |
 | Models: Poisson, Cox, Neyman-Scott, Gibbs and Strauss processes, log-Gaussian Cox processes, marked patterns | Stochastic point-process models | 3 | Not checked — intake only |
 | Cluster tests: Besag-Newell, Tango, SaTScan scan statistics, elliptic and flexible shapes (FleXScan) | Cluster-detection tests / scan statistics | 3 | Not checked — intake only |
 | Kernel density estimation: adaptive and variable bandwidth, Silverman and cross-validated bandwidth selection | Density estimation / bandwidth-selection methods | 3 | Not checked — intake only |
