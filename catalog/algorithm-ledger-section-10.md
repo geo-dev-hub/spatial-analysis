@@ -225,3 +225,8 @@ This is the explicit remaining Section 10 backlog, not a claim that the listed s
 
 
 Ensemble verification update: empirical ensemble CRPS and an expected rank histogram with deterministic fractional tie handling are implemented, tested and documented in a dedicated lab. CRPS decomposition remains open; the CRPS score itself must not be mistaken for a full reliability-resolution-uncertainty decomposition.
+
+
+## Geophysical gridding update — source page 22
+
+Nearest-neighbour gridding and Delaunay piecewise-linear triangulation gridding now have a NumPy/SciPy teaching package, tests (including affine-plane reproduction), walkthrough and comparison notebook. These are not minimum-curvature gridding and do not extrapolate beyond their stated support.

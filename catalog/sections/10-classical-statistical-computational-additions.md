@@ -50,7 +50,7 @@ A first reproducible point-data baseline is now available: [spatial cross-valida
 
 | Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
 |---|---|---:|---|---|
-| Minimum curvature gridding, nearest-neighbor and triangulation gridding, kriging versus minimum curvature comparison | Gridding methods / interpolation comparison | 22 | — | Not checked — intake only |
+| Minimum curvature gridding, nearest-neighbor and triangulation gridding, kriging versus minimum curvature comparison | Gridding methods / interpolation comparison | 22 | [Nearest-neighbour and Delaunay gridding package](../../implementations/python/geophysical-gridding/README.md), [tests](../../implementations/python/geophysical-gridding/test_geophysical_gridding.py) and [lab](../../notebooks/geophysical-gridding-lab.ipynb); minimum curvature remains open | Partial — two gridding algorithms implemented; minimum curvature and comparison remain open |
 | Potential fields: analytic signal, tilt derivative, Euler and Werner deconvolution, matched filtering, continuation, vertical and horizontal derivatives | Potential-field processing / geophysical interpretation methods | 22 | [Spectral derivatives, analytic-signal amplitude and tilt](../../methods/potential-field-processing.md), with [tested Python package](../../implementations/python/potential-field/README.md) and [lab](../../notebooks/potential-field-derivatives-lab.ipynb) | Partial — four derivative/attribute algorithms implemented; Euler/Werner, matched filtering and continuation remain open |
 | Airborne EM and magnetotelluric inversion, seismic attribute analysis, receiver functions | Geophysical inversion and signal-analysis workflows | 22 | — | Not checked — intake only |
 
