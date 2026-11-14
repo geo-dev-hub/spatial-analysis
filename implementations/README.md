@@ -15,6 +15,10 @@ Each implementation should state:
 
 ## Examples
 
+### Forecast verification
+
+- [Binary-event forecast verification](python/forecast-verification/README.md): contingency-table counts and scores, Brier score/skill, reliability bins and tied-rank ROC AUC, with tests and an [intern walkthrough](python/forecast-verification/implementation-walkthrough.md). CRPS, ensemble and spatial/object-based metrics remain separate open work.
+
 ### Geometry and computational geometry
 
 - [Curve construction](python/curves-smoothing/README.md): Chaikin corner cutting, Catmull–Rom interpolation and de Casteljau Bézier evaluation, with tests, an [intern walkthrough](python/curves-smoothing/implementation-walkthrough.md) and a [lab notebook](../notebooks/curves-smoothing-lab.ipynb). B-splines, NURBS, curve fitting and Kalman/RTS smoothing are separate open topics.
@@ -141,7 +145,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty-two Python example packages and the Clipper2 C# smoke test, and execute all seventy-four learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all eighty-three Python example packages and the Clipper2 C# smoke test, and execute all seventy-four learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
