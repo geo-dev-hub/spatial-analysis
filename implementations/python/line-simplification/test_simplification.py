@@ -71,3 +71,61 @@ def test_zhao_saalfeld_rejects_negative_tolerance():
     from simplification import zhao_saalfeld_narrow_sleeve
     with pytest.raises(ValueError):
         zhao_saalfeld_narrow_sleeve([(0,0),(1,1)],-1)
+
+
+def test_douglas_peucker_retains_deviation_above_threshold():
+    line = [(0, 0), (1, 1), (2, 0)]
+    out = douglas_peucker(line, 0.9)
+    assert out == [(0.0, 0.0), (1.0, 1.0), (2.0, 0.0)]
+
+
+def test_douglas_peucker_discards_deviation_at_threshold():
+    # The implementation splits only when maximum deviation is strictly > tolerance.
+    line = [(0, 0), (1, 1), (2, 0)]
+    assert douglas_peucker(line, 1.0) == [(0.0, 0.0), (2.0, 0.0)]
+
+
+def test_douglas_peucker_handles_coincident_endpoints():
+    line = [(0, 0), (1, 0), (0, 0)]
+    assert douglas_peucker(line, 0.5) == [
+        (0.0, 0.0), (1.0, 0.0), (0.0, 0.0)
+    ]
+
+
+def test_douglas_peucker_preserves_endpoints_and_order():
+    line = [(0, 0), (1, 0.02), (2, 0.01), (3, 1), (4, 1)]
+    out = douglas_peucker(line, 0.1)
+    assert out[0] == (0.0, 0.0)
+    assert out[-1] == (4.0, 1.0)
+    positions = [line.index(point) for point in out]
+    assert positions == sorted(positions)
+
+
+def test_visvalingam_threshold_uses_triangle_area_units():
+    triangle = [(0, 0), (1, 1), (2, 0)]
+    assert visvalingam_whyatt(triangle, 0.5) == [
+        (0.0, 0.0), (2.0, 0.0)
+    ]
+    assert visvalingam_whyatt(triangle, 0.49) == [
+        (0.0, 0.0), (1.0, 1.0), (2.0, 0.0)
+    ]
+
+
+def test_visvalingam_preserves_endpoints_for_repeated_vertices():
+    line = [(0, 0), (0, 0), (1, 0), (2, 0)]
+    out = visvalingam_whyatt(line, 0.0)
+    assert out[0] == (0.0, 0.0)
+    assert out[-1] == (2.0, 0.0)
+
+
+def test_simplifiers_return_empty_and_singleton_inputs():
+    for fn, args in (
+        (douglas_peucker, (0.1,)),
+        (visvalingam_whyatt, (0.1,)),
+        (reumann_witkam, (0.1,)),
+        (lang, (0.1, 3)),
+        (opheim, (0.1, 0.5, 2.0)),
+        (zhao_saalfeld_narrow_sleeve, (0.1,)),
+    ):
+        assert fn([], *args) == []
+        assert fn([(2, 3)], *args) == [(2.0, 3.0)]
