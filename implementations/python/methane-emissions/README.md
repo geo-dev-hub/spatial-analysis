@@ -1,6 +1,6 @@
 # Methane plume detection and emission-rate baselines
 
-This package starts after retrieval: the input is a finite 2D enhancement field or a sampled cross-section in physical units. It does not process raw satellite radiance, perform atmospheric correction, retrieve methane columns, estimate wind, or validate operational plume products.
+This package starts after retrieval: the input is a finite 2D enhancement field or a sampled cross-section in physical units. It does not process raw satellite radiance, perform atmospheric correction, retrieve methane columns, estimate wind, or validate operational plume products. The package includes classical local-background and hysteresis segmentation baselines, not a trained deep-learning model.
 
 ## Matched-filter plume detection
 
