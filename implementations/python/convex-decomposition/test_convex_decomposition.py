@@ -55,7 +55,7 @@ def test_triangle_is_already_convex():
 
 
 @pytest.mark.parametrize("invalid", [
-    [(0, 0), (2, 0), (1, 1), (2, 2), (0, 2)],
+    [(0, 0), (2, 2), (0, 2), (2, 0)],
     [(0, 0), (1, 0), (2, 0)],
 ])
 def test_invalid_polygon_is_rejected(invalid):
