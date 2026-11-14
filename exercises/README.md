@@ -23,6 +23,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Randomized trapezoidal-map construction](randomized-trapezoidal-map.md)
 - [Proximity-graph scaling](proximity-graph-scaling.md)
 - [Ear-clipping triangulation](ear-clipping-triangulation.md)
+- [Convex decomposition](convex-decomposition.md)
 - [Bentley–Ottmann](../implementations/python/bentley-ottmann/implementation-walkthrough.md#10-suggested-intern-exercises)
 - [Geometry overlay and validity](geometry-overlay-and-validity.md)
 - [Core GIS continuation](core-gis-continuation.md)
