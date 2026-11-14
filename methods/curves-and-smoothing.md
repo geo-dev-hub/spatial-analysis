@@ -113,3 +113,15 @@ Report input point count, output sampling interval, coordinate units, method and
 ## Scope
 
 **Implemented teaching baseline:** [Chaikin corner cutting, centripetal/uniform/chordal Catmull–Rom interpolation and arbitrary-degree Bézier evaluation](../implementations/python/curves-smoothing/README.md), with [tests](../implementations/python/curves-smoothing/test_curves_smoothing.py), an [intern walkthrough](../implementations/python/curves-smoothing/implementation-walkthrough.md) and an [executable lab notebook](../notebooks/curves-smoothing-lab.ipynb). B-spline and NURBS evaluation/fitting, Schneider-style Bezier fitting, Kalman filtering and RTS smoothing remain unimplemented and require separate numerical contracts and validation.
+
+
+## Reproducible spline evaluation
+
+The companion Python package now evaluates polynomial B-splines and rational NURBS using de Boor's algorithm. It accepts planar control points, degree, a nondecreasing knot vector and a parameter in the closed spline domain. NURBS evaluation lifts weighted controls into homogeneous coordinates, applies the same de Boor recursion, then projects back to the plane. Tests include polynomial Bezier equivalence and an exact rational quadratic quarter-circle midpoint.
+
+- [B-spline and NURBS implementation](../implementations/python/curves-smoothing/splines.py)
+- [Tests](../implementations/python/curves-smoothing/test_splines.py)
+- [Intern walkthrough](../implementations/python/curves-smoothing/implementation-walkthrough.md)
+- [Spline lab notebook](../notebooks/bspline-nurbs-lab.ipynb)
+
+This is evaluation, not curve fitting. Schneider's cubic Bezier fitting and Kalman/RTS state estimation remain separate open tasks.
