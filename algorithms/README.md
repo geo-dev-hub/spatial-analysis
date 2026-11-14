@@ -151,3 +151,5 @@ Records may have different evidence and implementation status. Check the status 
 - [Location set covering](optimization/set-covering.md) — minimize the number of facilities needed to reach every demand location within a service threshold.
 
 - [Backup coverage (r-covering)](optimization/backup-coverage.md) — maximize demand with at least r distinct selected facilities within a service threshold; a deterministic redundancy screen, not a reliability probability.
+
+- [M/M/c queueing model](optimization/mmc-queue.md) — estimate steady-state waiting and queue lengths for one FCFS queue feeding identical parallel servers under Erlang-C assumptions.
