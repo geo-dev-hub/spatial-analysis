@@ -118,3 +118,5 @@ The links below point to notebooks already available on the default branch. The 
 The repository workflow executes all forty-seven notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
+
+- [Delaunay-filtered proximity graphs](proximity-graphs-delaunay-lab.ipynb) — compare all-pairs and sparse Delaunay candidate construction, including cocircular tie behaviour.
