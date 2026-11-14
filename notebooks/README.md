@@ -54,6 +54,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Connected-components lab](raster-connected-components-lab.ipynb): compare 4/8-connectivity and invalid-cell barriers.
 - [Contrastive learning lab](contrastive-info-nce-lab.ipynb): inspect paired embeddings, cosine similarity, temperature and negative samples.
 - [CRS transformation lab](crs-transformation-lab.ipynb): transform longitude/latitude to Web Mercator and UTM with explicit axis order.
+- [ECEF and local ENU lab](ecef-enu-lab.ipynb): convert a geodetic origin and target into ECEF and local ENU, inspect the tangent axes and verify the inverse rotation.
 
 ### Geostatistics and covariance
 
