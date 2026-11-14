@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** First facility-location model published; the wider optimisation and mobility path is still being developed.
+**Status:** Five distinct facility-location and accessibility models now have scoped lessons; the wider optimisation and mobility path is still being developed.
 
 ## The question
 
@@ -26,15 +26,19 @@ Read [The p-median problem](../algorithms/optimization/p-median.md). Demand poin
 
 Run the [p-median lab](../notebooks/p-median-facility-location-lab.ipynb). Inspect the selected facilities, objective and assignment of every demand point.
 
-### 3. Change the objective
+### 3. Add a capacity constraint
+
+Read [Capacitated p-median](../algorithms/optimization/capacitated-p-median.md) and run the [capacitated p-median lab](../notebooks/capacitated-p-median-lab.ipynb). Compare the unconstrained assignment with one that respects finite facility capacities. Keep demand quantities (capacity load) separate from demand weights (objective importance). This baseline assumes indivisible demand zones and deterministic scalar capacity; it is not a queueing model.
+
+### 4. Change the objective
 
 Read [Location set covering](../algorithms/optimization/set-covering.md) and run the [set-covering lab](../notebooks/set-covering-lab.ipynb) to find the minimum number of sites needed to reach every demand point. Then read [Maximal covering location](../algorithms/optimization/maximal-covering.md) and run the [MCLP visual lab](../notebooks/maximal-covering-lab.ipynb). It selects at most p sites to maximize weighted demand reached within a stated service threshold. Change the budget and threshold and inspect who remains uncovered. Compare with p-median, which minimizes total weighted assignment cost, and [discrete p-center](../algorithms/optimization/p-center.md), which minimizes the maximum assignment cost. Run the [p-center lab](../notebooks/p-center-lab.ipynb) and inspect which demand point determines the service radius. These models answer different planning questions.
 
-### 4. Measure potential service accessibility
+### 5. Measure potential service accessibility
 
 Read [Two-step floating catchment area](../algorithms/optimization/two-step-fca.md) and run the [2SFCA notebook](../notebooks/two-step-fca-accessibility-lab.ipynb). It compares provider supply with population demand in a travel catchment, then calculates an accessibility score for each population location. The notebook compares the binary baseline with a separately named E2SFCA-style distance-decay extension, applying analyst-supplied travel-time-band weights in both steps. Change the band edges and weights and inspect how provider ratios and population scores respond.
 
-### 5. Connect location to transport
+### 6. Connect location to transport
 
 A real cost matrix may require a directed road or transit network, mode restrictions, time-dependent travel times and access rules. Straight-line distance is only an initial approximation.
 
@@ -49,4 +53,4 @@ A real cost matrix may require a directed road or transit network, mode restrict
 
 ## What comes next
 
-The wider source section includes p-center, maximal covering, capacitated and hub location, districting, metaheuristics, assignment, vehicle routing, enhanced 2SFCA, traffic assignment, transit planning, trajectory analysis, GNSS and robotics. Each requires a distinct problem definition and validation strategy.
+The wider source section also includes capacitated variants with split demand, hub location, districting, metaheuristics, assignment, vehicle routing, enhanced 2SFCA, traffic assignment, transit planning, trajectory analysis, GNSS and robotics. Each requires a distinct problem definition and validation strategy.
