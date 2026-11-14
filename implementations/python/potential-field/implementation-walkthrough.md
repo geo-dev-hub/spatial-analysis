@@ -11,3 +11,16 @@ A=sqrt((dT/dx)^2+(dT/dy)^2+(dT/dz)^2).
 The tilt derivative is atan2(dT/dz, sqrt((dT/dx)^2+(dT/dy)^2)).
 
 The FFT assumes periodic boundaries. A discontinuity between opposite grid edges creates ringing, so real survey grids need suitable padding, tapering and boundary checks. The tests compare spectral derivatives against an exact periodic cosine and check attribute ranges.
+
+
+## Windowed Euler deconvolution
+
+For a chosen structural index N, the homogeneity equation is
+
+\[(x-x_0)T_x+(y-y_0)T_y+(z-z_0)T_z=N(B-T).\]
+
+Rearranging gives a linear system in the unknown source coordinates and base level:
+
+\[ [T_x,T_y,T_z,N]\,[x_0,y_0,z_0,B]^T=xT_x+yT_y+zT_z+NT.\]
+
+The implementation solves this system by least squares for one supplied window and rejects rank-deficient designs. The synthetic test constructs a field that exactly satisfies the equation and checks recovery of all four unknowns. In practice, source estimates are sensitive to structural-index choice, window size, regional-field removal, noise, multiple sources and the assumption that the field is homogeneous over the window. A low residual is not proof that the geological model is correct.
