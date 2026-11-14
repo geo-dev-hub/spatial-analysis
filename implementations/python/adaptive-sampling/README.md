@@ -1,7 +1,11 @@
-# Adaptive cluster sampling
+# Adaptive and Bayesian spatial sampling algorithms
 
-A transparent network-expansion implementation of adaptive cluster sampling. Start from an initial sample; every observed unit meeting the threshold recruits all of its neighbours. Recruited units are observed and may recruit further neighbours. The result is the realised sample set and the distinction between initial and recruited units.
+This package includes:
+- network-based adaptive cluster sampling expansion from an initial sample;
+- Gaussian-process upper-confidence-bound (GP-UCB) selection over candidate spatial survey sites.
 
-The function does not calculate a design-unbiased estimator or inclusion probabilities. Those depend on the initial probability-sampling design, network definition, threshold rule and adaptive sampling estimator. Do not treat the expanded sample as a simple random sample.
+The GP-UCB baseline assumes an isotropic stationary RBF kernel, known hyperparameters, a constant prior mean and independent Gaussian observation noise. It selects from a supplied finite candidate set. It is not a spatially nonstationary or constrained Bayesian optimiser; hyperparameter fitting, anisotropy, barriers, costs, batch selection and design-based survey inference remain outside scope.
 
-Run python -m pytest -q.
+The adaptive cluster sampler returns the realised sample set, not a population estimator. Valid inclusion probabilities and estimators depend on the initial probability-sampling design and adaptive network structure.
+
+Run python -m pip install -r requirements.txt and python -m pytest -q.

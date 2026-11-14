@@ -93,7 +93,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Spatial validation | Spatial k-fold by clustering | Deterministic farthest-first k-means grouping with whole-cluster folds and tests added | Implemented / tested candidate; geographic grouping review pending |
 | Spatial validation | blockCV | External R package / method reference, not a Python algorithm to clone | Research / lesson only |
 | Spatial validation | Spatial + temporal leave-out | Guide-level discussion; no matching implementation verified | Research / lesson only |
-| Adaptive sampling | Bayesian optimisation on spatial fields | Family guide only; no matching implementation verified | Research / lesson only |
+| Adaptive sampling | Bayesian optimisation on spatial fields | GP-UCB candidate-site selection with stationary RBF GP, tests, walkthrough and notebook added | Implemented / tested candidate; hyperparameter and spatial-model review pending |
 | Adaptive sampling | Multi-armed bandits for survey design | Family guide only; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Adaptive cluster sampling | Network expansion from initial sample, tests, walkthrough and notebook added; estimator/inclusion probabilities remain separate | Implemented / tested candidate; design-based estimator review pending |
 | Adaptive sampling | Active learning for map validation | Family guide only; no matching implementation verified | Research / lesson only |
@@ -259,3 +259,6 @@ Spatial validation update: buffered leave-one-out and deterministic cluster-base
 
 
 Adaptive sampling update: adaptive cluster-sample network expansion is now implemented and tested. The realised sample is not a population estimator; inclusion probabilities and a valid design-based estimator remain separate open work.
+
+
+Bayesian optimisation update: GP-UCB candidate-site selection is now implemented with a fixed-hyperparameter isotropic RBF Gaussian process. This is a bounded baseline; nonstationary kernels, barriers, costs, batch acquisition and model fitting remain open.

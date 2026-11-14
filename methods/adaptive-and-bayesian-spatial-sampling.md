@@ -102,3 +102,12 @@ The package now implements network expansion from an initial sample: a unit meet
 - [Implementation and tests](../implementations/python/adaptive-sampling/README.md)
 - [Intern walkthrough](../implementations/python/adaptive-sampling/implementation-walkthrough.md)
 - [Lab](../notebooks/adaptive-cluster-sampling-lab.ipynb)
+
+
+## Executable Gaussian-process UCB baseline
+
+The companion package now includes candidate-site selection with a Gaussian-process upper-confidence-bound acquisition, using a stationary isotropic RBF kernel, fixed hyperparameters and Gaussian observation noise. It is a transparent baseline rather than a full constrained Bayesian optimiser. The notebook visualises posterior mean, uncertainty-driven UCB and the selected candidate.
+
+- [Implementation and tests](../implementations/python/adaptive-sampling/README.md)
+- [GP-UCB walkthrough](../implementations/python/adaptive-sampling/bayesian-optimization-walkthrough.md)
+- [Lab](../notebooks/gp-ucb-spatial-survey-lab.ipynb)
