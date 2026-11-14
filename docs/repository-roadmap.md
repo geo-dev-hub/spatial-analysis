@@ -184,7 +184,7 @@ The current GitHub state has been checked directly rather than inferred from ear
 - Pull request: [#1 — Continue the spatial analysis compendium](https://github.com/geo-dev-hub/spatial-analysis/pull/1).
 - State: open, draft and unmerged.
 - Branch: `compendium/section-01-geometry-continuation`; base: `main`.
-- Current comparison: **1,432 commits ahead and 129 behind** the base; GitHub reports the comparison as diverged and the pull request as not mergeable.
+- Current comparison: **1,434 commits ahead and 129 behind** the base; GitHub reports the comparison as diverged and the pull request as not mergeable.
 - Merge base: `e7a3600f8b2dd6cbede1486935b69b64cc01fcb7`.
 - The branch contains a large body of work, but the divergence must be reconciled deliberately. Do not force-push, merge, or rebase blindly.
 - The configured validation inventory is **78 Python package suites and 66 notebook executions**, with internal-link and Clipper2 checks. No full-head green CI result is currently confirmed; missing status data is not a pass.
