@@ -28,7 +28,7 @@ Run the [p-median lab](../notebooks/p-median-facility-location-lab.ipynb). Inspe
 
 ### 3. Change the objective
 
-Read [Maximal covering location](../algorithms/optimization/maximal-covering.md) and run the [MCLP visual lab](../notebooks/maximal-covering-lab.ipynb). It selects at most p sites to maximize weighted demand reached within a stated service threshold. Change the budget and threshold and inspect who remains uncovered. Compare with p-median, which minimizes total weighted assignment cost, and [discrete p-center](../algorithms/optimization/p-center.md), which minimizes the maximum assignment cost. Run the [p-center lab](../notebooks/p-center-lab.ipynb) and inspect which demand point determines the service radius. These models answer different planning questions.
+Read [Location set covering](../algorithms/optimization/set-covering.md) and run the [set-covering lab](../notebooks/set-covering-lab.ipynb) to find the minimum number of sites needed to reach every demand point. Then read [Maximal covering location](../algorithms/optimization/maximal-covering.md) and run the [MCLP visual lab](../notebooks/maximal-covering-lab.ipynb). It selects at most p sites to maximize weighted demand reached within a stated service threshold. Change the budget and threshold and inspect who remains uncovered. Compare with p-median, which minimizes total weighted assignment cost, and [discrete p-center](../algorithms/optimization/p-center.md), which minimizes the maximum assignment cost. Run the [p-center lab](../notebooks/p-center-lab.ipynb) and inspect which demand point determines the service radius. These models answer different planning questions.
 
 ### 4. Measure potential service accessibility
 
