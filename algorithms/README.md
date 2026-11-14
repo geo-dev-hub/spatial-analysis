@@ -144,3 +144,5 @@ Records may have different evidence and implementation status. Check the status 
 - [Discrete p-center](optimization/p-center.md) — minimize the maximum nearest-facility cost when exactly p candidate sites must open.
 
 - [Inverse distance weighting](interpolation/inverse-distance-weighting.md) — estimate values at unsampled locations with normalized inverse-distance weights and explicit neighbourhood choices.
+
+- [Location set covering](optimization/set-covering.md) — minimize the number of facilities needed to reach every demand location within a service threshold.
