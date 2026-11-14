@@ -6,7 +6,7 @@
 - **Status:** researched; reference implementation and tests added; independent review pending
 - **Version:** 0.1
 - **Source inventory:** Section 3, page 4 — deterministic interpolation
-- **Related records:** [Spatial weights matrix](../../methods/spatial-weights-matrix.md); ordinary kriging (planned)
+- **Related records:** [Spatial weights matrix](../../methods/spatial-weights-matrix.md); [ordinary kriging and empirical semivariogram](../geostatistics/interpolation.md)
 - **Learning path:** [Interpolation and geostatistics](../../learning-paths/interpolation-and-geostatistics.md)
 
 ## You know a few places. What about the places in between?
@@ -132,7 +132,7 @@ These methods are not interchangeable. Choose by the question, assumptions, data
 ## References
 
 1. Shepard, D. (1968). “A two-dimensional interpolation function for irregularly-spaced data.” *Proceedings of the 1968 23rd ACM National Conference*, 517–524. [https://doi.org/10.1145/800186.810616](https://doi.org/10.1145/800186.810616). The original paper introduces an interpolation function for irregularly spaced observations.
-2. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. European Commission, Joint Research Centre. [Open PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Section 1.2.1 describes inverse-distance interpolation and compares deterministic and statistical prediction.
+2. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. EUR 22904 EN, Joint Research Centre, Institute for Environment and Sustainability, European Commission. Luxembourg: Office for Official Publications of the European Communities, 143 pp., ISBN 978-92-79-06904-8. [Official JRC record](https://publications.jrc.ec.europa.eu/repository/handle/JRC38153) · [PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Section 1.2.1 describes inverse-distance interpolation and compares deterministic and statistical prediction.
 3. SciPy documentation. [Interpolation overview](https://docs.scipy.org/doc/scipy/tutorial/interpolate.html) and [scattered-data interpolation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.griddata.html). These document alternatives; they are not an IDW implementation reference.
 
 ## What remains to be checked

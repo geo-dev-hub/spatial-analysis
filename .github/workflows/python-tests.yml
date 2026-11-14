@@ -1,5 +1,7 @@
 name: Python examples
 
+# Keep the package matrix and explicit notebook execution list in sync with the public learning catalogue.
+
 concurrency:
   group: spatial-analysis-ci-${{ github.ref }}
   cancel-in-progress: true
@@ -16,6 +18,8 @@ on:
     paths:
       - "implementations/python/**"
       - "notebooks/**"
+      - "scripts/**"
+      - "**.md"
       - ".github/workflows/python-tests.yml"
   workflow_dispatch:
 
@@ -51,24 +55,216 @@ jobs:
           - example: spatial-join
             directory: implementations/python/spatial-join
             pythonpath: ""
+          - example: kd-tree
+            directory: implementations/python/kd-tree
+            pythonpath: ""
+          - example: quadtree
+            directory: implementations/python/quadtree
+            pythonpath: ""
+          - example: polygon-validity
+            directory: implementations/python/polygon-validity
+            pythonpath: ""
+          - example: polygon-clipping
+            directory: implementations/python/polygon-clipping
+            pythonpath: ""
+          - example: polygon-overlay
+            directory: implementations/python/polygon-overlay
+            pythonpath: ""
+          - example: convex-hull
+            directory: implementations/python/convex-hull
+            pythonpath: ""
+          - example: voronoi-delaunay
+            directory: implementations/python/voronoi-delaunay
+            pythonpath: ""
+          - example: line-simplification
+            directory: implementations/python/line-simplification
+            pythonpath: ""
+          - example: polygon-offsetting
+            directory: implementations/python/polygon-offsetting
+            pythonpath: ""
+          - example: proximity-graphs
+            directory: implementations/python/proximity-graphs
+            pythonpath: ""
+          - example: shortest-paths
+            directory: implementations/python/shortest-paths
+            pythonpath: ""
+          - example: point-location
+            directory: implementations/python/point-location
+            pythonpath: ""
+          - example: coverage-simplification
+            directory: implementations/python/coverage-simplification
+            pythonpath: ""
+          - example: precision-grid
+            directory: implementations/python/precision-grid
+            pythonpath: ""
+          - example: road-routing
+            directory: implementations/python/road-routing
+            pythonpath: ""
+          - example: geostatistics
+            directory: implementations/python/geostatistics
+            pythonpath: ""
           - example: inverse-distance-weighting
             directory: implementations/python/inverse-distance-weighting
             pythonpath: ""
-          - example: empirical-semivariogram
-            directory: implementations/python/empirical-semivariogram
+          - example: raster-distance
+            directory: implementations/python/raster-distance
             pythonpath: ""
-          - example: ordinary-kriging
-            directory: implementations/python/ordinary-kriging
+          - example: spectral-indices
+            directory: implementations/python/spectral-indices
             pythonpath: ""
-          - example: d8-flow-direction
-            directory: implementations/python/d8-flow-direction
+          - example: p-median
+            directory: implementations/python/p-median
             pythonpath: ""
-          - example: graham-scan
-            directory: implementations/python/graham-scan
+          - example: capacitated-p-median
+            directory: implementations/python/capacitated-p-median
             pythonpath: ""
-          - example: dijkstra
-            directory: implementations/python/dijkstra
+          - example: accessibility-equity
+            directory: implementations/python/accessibility-equity
             pythonpath: ""
+          - example: equity-covering
+            directory: implementations/python/equity-covering
+            pythonpath: ""
+          - example: p-center
+            directory: implementations/python/p-center
+            pythonpath: ""
+          - example: set-covering
+            directory: implementations/python/set-covering
+            pythonpath: ""
+          - example: maximal-covering
+            directory: implementations/python/maximal-covering
+            pythonpath: ""
+          - example: backup-coverage
+            directory: implementations/python/backup-coverage
+            pythonpath: ""
+          - example: mmc-queue
+            directory: implementations/python/mmc-queue
+            pythonpath: ""
+          - example: mexclp
+            directory: implementations/python/mexclp
+            pythonpath: ""
+          - example: dbscan
+            directory: implementations/python/dbscan
+            pythonpath: ""
+          - example: two-step-fca
+            directory: implementations/python/two-step-fca
+            pythonpath: ""
+          - example: weighted-overlay
+            directory: implementations/python/weighted-overlay
+            pythonpath: ""
+          - example: ahp-weights
+            directory: implementations/python/ahp-weights
+            pythonpath: ""
+          - example: fuzzy-overlay
+            directory: implementations/python/fuzzy-overlay
+            pythonpath: ""
+          - example: owa
+            directory: implementations/python/owa
+            pythonpath: ""
+          - example: topsis
+            directory: implementations/python/topsis
+            pythonpath: ""
+          - example: d8-flow-accumulation
+            directory: implementations/python/d8-flow-accumulation
+            pythonpath: ""
+          - example: watershed-delineation
+            directory: implementations/python/watershed-delineation
+            pythonpath: ""
+          - example: stream-order
+            directory: implementations/python/stream-order
+            pythonpath: ""
+          - example: priority-flood
+            directory: implementations/python/priority-flood
+            pythonpath: ""
+          - example: focal-statistics
+            directory: implementations/python/focal-statistics
+            pythonpath: ""
+          - example: point-pattern-kde
+            directory: implementations/python/point-pattern-kde
+            pythonpath: ""
+          - example: clark-evans
+            directory: implementations/python/clark-evans
+            pythonpath: ""
+          - example: ripley-k
+            directory: implementations/python/ripley-k
+            pythonpath: ""
+          - example: d8-flow
+            directory: implementations/python/d8-flow
+            pythonpath: ""
+          - example: terrain-derivatives
+            directory: implementations/python/terrain-derivatives
+            pythonpath: ""
+          - example: cost-distance
+            directory: implementations/python/cost-distance
+            pythonpath: ""
+          - example: raster-resampling
+            directory: implementations/python/raster-resampling
+            pythonpath: ""
+          - example: zonal-statistics
+            directory: implementations/python/zonal-statistics
+            pythonpath: ""
+          - example: raster-components
+            directory: implementations/python/raster-components
+            pythonpath: ""
+          - example: info-nce
+            directory: implementations/python/info-nce
+            pythonpath: ""
+          - example: spatial-cross-validation
+            directory: implementations/python/spatial-cross-validation
+            pythonpath: ""
+          - example: masked-autoencoding
+            directory: implementations/python/masked-autoencoding
+            pythonpath: ""
+          - example: helmert-7-parameter
+            directory: implementations/python/helmert-7-parameter
+            pythonpath: ""
+          - example: affine-georeferencing
+            directory: implementations/python/affine-georeferencing
+            pythonpath: ""
+          - example: ecef-enu
+            directory: implementations/python/ecef-enu
+            pythonpath: ""
+          - example: crs-transform
+            directory: implementations/python/crs-transform
+            pythonpath: ""
+          - example: triple-collocation
+            directory: implementations/python/triple-collocation
+            pythonpath: ""
+          - example: marine-heatwave-detection
+            directory: implementations/python/marine-heatwave-detection
+            pythonpath: ""
+          - example: exact-orientation
+            directory: implementations/python/exact-orientation
+            pythonpath: ""
+          - example: covariance-functions
+            directory: implementations/python/covariance-functions
+            pythonpath: ""
+          - example: spherical-covariance
+            directory: implementations/python/spherical-covariance
+            pythonpath: ""
+          - example: graph-spectral-covariance
+            directory: implementations/python/graph-spectral-covariance
+            pythonpath: ""
+          - example: nonseparable-space-time-covariance
+            directory: implementations/python/nonseparable-space-time-covariance
+            pythonpath: ""
+          - example: weights-of-evidence
+            directory: implementations/python/weights-of-evidence
+            pythonpath: ""
+          - example: electre-i
+            directory: implementations/python/electre-i
+            pythonpath: ""
+          - example: snap-rounding-noder
+            directory: implementations/python/snap-rounding-noder
+            pythonpath: ""
+          - example: ear-clipping
+            directory: implementations/python/ear-clipping
+            pythonpath: ""
+          - example: minkowski-convex
+            directory: implementations/python/minkowski-convex
+            pythonpath: ""
+          - example: convex-decomposition
+            directory: implementations/python/convex-decomposition
+            pythonpath: "../ear-clipping"
 
     steps:
       - name: Check out repository
@@ -139,9 +335,76 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/filter-refine-spatial-join-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-weights-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geometry-foundations-lab.ipynb
-          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/inverse-distance-weighting-lab.ipynb
-          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/empirical-semivariogram-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/quadtree-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/polygon-overlay-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-hull-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/graham-scan-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/voronoi-delaunay-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/core-gis-algorithms-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/dijkstra-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/coverage-simplification-routing-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/geostatistics-interpolation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/empirical-semivariogram-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ordinary-kriging-lab.ipynb
-          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/d8-flow-direction-lab.ipynb
-          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/graham-scan-lab.ipynb
-          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=120 notebooks/dijkstra-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/inverse-distance-weighting-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-distance-transform-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ndvi-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-median-facility-location-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/capacitated-p-median-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/accessibility-equity-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/equity-constrained-covering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-center-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/set-covering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/maximal-covering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/backup-coverage-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/mmc-queue-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/mexclp-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/dbscan-clustering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/two-step-fca-accessibility-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-direction-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-accumulation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/watershed-delineation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/stream-order-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/priority-flood-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/focal-raster-statistics-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-pattern-kde-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/clark-evans-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ripley-k-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/slope-aspect-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/cost-distance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-resampling-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/zonal-statistics-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/raster-connected-components-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/contrastive-info-nce-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/crs-transformation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/point-location-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weighted-linear-combination-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/triple-collocation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/marine-heatwave-detection-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/exact-orientation-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/covariance-functions-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spherical-covariance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/graph-spectral-covariance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/nonseparable-space-time-covariance-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weights-of-evidence-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-outranking-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/snap-rounding-noder-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ear-clipping-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/minkowski-convex-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/convex-decomposition-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/proximity-graphs-delaunay-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-kernel-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ecef-enu-lab.ipynb
+
+  clipper2:
+    name: Clipper2 C# offset checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Run Clipper2 offset checks
+        run: dotnet run --project implementations/clipper2-csharp/Clipper2Example.csproj --configuration Release

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">M/M/c queue structure</title>
+  <desc id="desc">Poisson arrivals at rate lambda join one first-come first-served queue, then receive service from one of c identical parallel servers, each with exponential service rate mu.</desc>
+  <rect x="20" y="20" width="860" height="320" rx="18" fill="#f7f7f5" stroke="#bbb"/>
+  <text x="55" y="65" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#222">One queue feeding c parallel servers</text>
+  <rect x="60" y="145" width="145" height="100" rx="12" fill="#e8e8e4" stroke="#666" stroke-width="2"/>
+  <text x="132" y="185" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#222">Arrivals</text>
+  <text x="132" y="216" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">rate λ</text>
+  <path d="M205 195 H285" stroke="#444" stroke-width="3" fill="none"/>
+  <path d="M275 187 L287 195 L275 203" stroke="#444" stroke-width="3" fill="none"/>
+  <rect x="290" y="120" width="150" height="150" rx="12" fill="#e6edf3" stroke="#39749b" stroke-width="2"/>
+  <text x="365" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#222">FCFS</text>
+  <text x="365" y="208" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">queue</text>
+  <path d="M440 195 H495 M495 195 V105 H535 M495 195 H535 M495 195 V285 H535" stroke="#444" stroke-width="3" fill="none"/>
+  <rect x="540" y="80" width="155" height="58" rx="10" fill="#e7efe9" stroke="#4c8068" stroke-width="2"/>
+  <rect x="540" y="166" width="155" height="58" rx="10" fill="#e7efe9" stroke="#4c8068" stroke-width="2"/>
+  <rect x="540" y="252" width="155" height="58" rx="10" fill="#e7efe9" stroke="#4c8068" stroke-width="2"/>
+  <text x="617" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">Server 1 · μ</text>
+  <text x="617" y="202" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">Server 2 · μ</text>
+  <text x="617" y="288" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">Server c · μ</text>
+  <text x="760" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#555">Departures</text>
+  <path d="M695 109 H735 V195 H745 M695 195 H745 M695 281 H735 V195" stroke="#444" stroke-width="2.5" fill="none"/>
+  <text x="55" y="315" font-family="Arial,sans-serif" font-size="16" fill="#555">Assumptions: Poisson arrivals · exponential service · identical servers · stable steady state</text>
+</svg>

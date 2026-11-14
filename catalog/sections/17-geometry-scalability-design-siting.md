@@ -10,75 +10,75 @@ This section extends computational geometry and adds scalable statistics, fast d
 
 ## Computational geometry II
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Voronoi variants: weighted (additively and multiplicatively weighted, Apollonius), order-k, farthest-point, line-segment Voronoi | Voronoi diagram variants | 35 | Captured; names not individually verified |
-| Triangulation variants: regular triangulation, alpha complexes, 3D Delaunay refinement and tetrahedralization (TetGen-style) | Triangulation and mesh-generation methods | 35 | Captured; names not individually verified |
-| Polygon decomposition: Seidel and Chazelle triangulation, monotone partition, Hertel-Mehlhorn, optimal convex partition | Polygon triangulation and decomposition algorithms | 35 | Captured; names not individually verified |
-| Boolean operations: Martinez-Rueda polygon clipping, 3D mesh Booleans; watchman route problem | Polygon and mesh Boolean operations / visibility path problem | 35 | Captured; names not individually verified |
-| Approximate geometry: geometric hashing, BBD-trees for approximate nearest neighbor, coresets for k-means | Geometric hashing / spatial index / approximation methods | 35 | Captured; names not individually verified |
-| Mesh processing: Laplacian and Taubin smoothing, remeshing, mesh repair, ball pivoting, half-edge, winged-edge and quad-edge data structures | Mesh-processing algorithms / mesh data structures | 35 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Voronoi variants: weighted (additively and multiplicatively weighted, Apollonius), order-k, farthest-point, line-segment Voronoi | Voronoi diagram variants | 35 | Not checked — intake only |
+| Triangulation variants: regular triangulation, alpha complexes, 3D Delaunay refinement and tetrahedralization (TetGen-style) | Triangulation and mesh-generation methods | 35 | Not checked — intake only |
+| Polygon decomposition: Seidel and Chazelle triangulation, monotone partition, Hertel-Mehlhorn, optimal convex partition | Polygon triangulation and decomposition algorithms | 35 | Not checked — intake only |
+| Boolean operations: Martinez-Rueda polygon clipping, 3D mesh Booleans; watchman route problem | Polygon and mesh Boolean operations / visibility path problem | 35 | Not checked — intake only |
+| Approximate geometry: geometric hashing, BBD-trees for approximate nearest neighbor, coresets for k-means | Geometric hashing / spatial index / approximation methods | 35 | Not checked — intake only |
+| Mesh processing: Laplacian and Taubin smoothing, remeshing, mesh repair, ball pivoting, half-edge, winged-edge and quad-edge data structures | Mesh-processing algorithms / mesh data structures | 35 | Not checked — intake only |
 
 ## Scalable computation for spatial statistics
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Log-determinant approximation: Chebyshev, Monte Carlo trace estimators, Lanczos, Pace-Barry, sparse Cholesky | Numerical approximation / sparse matrix methods | 35 | Captured; names not individually verified |
-| Gaussian Markov random field sampling, conjugate gradient solvers, Kronecker-structured covariances, circulant embedding with FFT on regular grids | Spatial stochastic simulation / numerical solvers / covariance structures | 35 | Captured; names not individually verified |
-| Sparse GP methods: inducing points, SVGP, Nystrom, structured kernel interpolation (KISS-GP), random Fourier features, hierarchical matrices, fast multipole | Scalable Gaussian-process approximations | 35 | Captured; names not individually verified |
-| Variogram estimation: Matheron, Cressie-Hawkins and Genton robust estimators, REML, composite likelihood, cross-validation-based fitting | Variogram estimators / model-fitting methods | 35 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Log-determinant approximation: Chebyshev, Monte Carlo trace estimators, Lanczos, Pace-Barry, sparse Cholesky | Numerical approximation / sparse matrix methods | 35 | Not checked — intake only |
+| Gaussian Markov random field sampling, conjugate gradient solvers, Kronecker-structured covariances, circulant embedding with FFT on regular grids | Spatial stochastic simulation / numerical solvers / covariance structures | 35 | Not checked — intake only |
+| Sparse GP methods: inducing points, SVGP, Nystrom, structured kernel interpolation (KISS-GP), random Fourier features, hierarchical matrices, fast multipole | Scalable Gaussian-process approximations | 35 | Not checked — intake only |
+| Variogram estimation: Matheron, Cressie-Hawkins and Genton robust estimators, REML, composite likelihood, cross-validation-based fitting | Variogram estimators / model-fitting methods | 35 | Not checked — intake only |
 
 ## Fast density and sketching
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Fast KDE: binned KDE with FFT, dual-tree KDE, random Fourier feature KDE, quantized and grid-based DBSCAN | Scalable density estimation / clustering | 35 | Captured; names not individually verified |
-| Streaming sketches for grids and tiles: HyperLogLog for distinct counts, count-min sketch, Bloom filters for tile existence, reservoir sampling for spatial streams | Streaming summaries / probabilistic data structures / sampling | 35 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Fast KDE: binned KDE with FFT, dual-tree KDE, random Fourier feature KDE, quantized and grid-based DBSCAN | Scalable density estimation / clustering | 35 | Not checked — intake only |
+| Streaming sketches for grids and tiles: HyperLogLog for distinct counts, count-min sketch, Bloom filters for tile existence, reservoir sampling for spatial streams | Streaming summaries / probabilistic data structures / sampling | 35 | Not checked — intake only |
 
 ## Optimal sampling and experimental design
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Space-filling designs: maximin, coffee-house, spatial coverage design (k-means based), Latin hypercube | Spatial sampling and experimental design | 35 | Captured; names not individually verified |
-| Model-based design: kriging variance minimization, Bayesian optimal design, sequential and adaptive designs, mutual information sensor selection (submodular greedy) | Model-based and adaptive experimental design | 36 | Captured; names not individually verified |
-| Robotic sampling: adaptive sampling with AUVs and drones, informative path planning | Mobile sensing / robotic path planning | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Space-filling designs: maximin, coffee-house, spatial coverage design (k-means based), Latin hypercube | Spatial sampling and experimental design | 35 | Not checked — intake only |
+| Model-based design: kriging variance minimization, Bayesian optimal design, sequential and adaptive designs, mutual information sensor selection (submodular greedy) | Model-based and adaptive experimental design | 36 | Not checked — intake only |
+| Robotic sampling: adaptive sampling with AUVs and drones, informative path planning | Mobile sensing / robotic path planning | 36 | Not checked — intake only |
 
 ## 3D formats and level-of-detail
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Point cloud storage: LAZ compression, COPC, Entwine EPT, Potree octrees | Point-cloud formats / storage and indexing systems | 36 | Captured; names not individually verified |
-| City and terrain streaming: OGC 3D Tiles with screen-space-error refinement, I3S, quantized-mesh terrain, CityGML levels of detail (LoD0 to LoD3) | 3D geospatial formats / streaming and LOD methods | 36 | Captured; names not individually verified |
-| Data models: Simple Features, arc-node topology, TIN model, TopoJSON, GeoSPARQL | Data models / standards and encodings | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Point cloud storage: LAZ compression, COPC, Entwine EPT, Potree octrees | Point-cloud formats / storage and indexing systems | 36 | Not checked — intake only |
+| City and terrain streaming: OGC 3D Tiles with screen-space-error refinement, I3S, quantized-mesh terrain, CityGML levels of detail (LoD0 to LoD3) | 3D geospatial formats / streaming and LOD methods | 36 | Not checked — intake only |
+| Data models: Simple Features, arc-node topology, TIN model, TopoJSON, GeoSPARQL | Data models / standards and encodings | 36 | Not checked — intake only |
 
 ## Competitive location and matching
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Competitive facility location: Huff-based, Stackelberg and Nash formulations, Voronoi games | Competitive location models / game-theoretic formulations | 36 | Captured; names not individually verified |
-| Stable matching (Gale-Shapley), auction algorithms, school choice and spatial assignment with preferences | Matching and assignment algorithms / allocation problems | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Competitive facility location: Huff-based, Stackelberg and Nash formulations, Voronoi games | Competitive location models / game-theoretic formulations | 36 | Not checked — intake only |
+| Stable matching (Gale-Shapley), auction algorithms, school choice and spatial assignment with preferences | Matching and assignment algorithms / allocation problems | 36 | Not checked — intake only |
 
 ## EV charging and refueling siting
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Flow-capturing location model (FCLM), flow-refueling location model (FRLM), charging demand estimation from trajectories | Flow-based facility location / demand estimation | 36 | Captured; names not individually verified |
-| Charging coverage with queuing, grid-capacity-aware siting, hydrogen station siting, V2G scheduling | Infrastructure siting / queueing and energy scheduling | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Flow-capturing location model (FCLM), flow-refueling location model (FRLM), charging demand estimation from trajectories | Flow-based facility location / demand estimation | 36 | Not checked — intake only |
+| Charging coverage with queuing, grid-capacity-aware siting, hydrogen station siting, V2G scheduling | Infrastructure siting / queueing and energy scheduling | 36 | Not checked — intake only |
 
 ## Surveillance and anomaly detection
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Syndromic surveillance: CUSUM, EARS, Farrington, spatial and space-time variants | Surveillance and outbreak detection methods | 36 | Captured; names not individually verified |
-| Event detection from sensor networks, graph-based anomaly detection, spatial scan on counts with covariates | Event and anomaly detection methods | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Syndromic surveillance: CUSUM, EARS, Farrington, spatial and space-time variants | Surveillance and outbreak detection methods | 36 | Not checked — intake only |
+| Event detection from sensor networks, graph-based anomaly detection, spatial scan on counts with covariates | Event and anomaly detection methods | 36 | Not checked — intake only |
 
 ## Infrastructure and land-use mapping from imagery
 
-| Source entry | Proposed type (unverified) | Source page | Review status |
-| --- | --- | ---: | --- |
-| Solar farm and wind turbine detection, hydropower and mine detection, illegal mining mapping | Infrastructure and land-use detection workflows | 36 | Captured; names not individually verified |
-| Aquaculture ponds, greenhouses, rice paddies (SAR phenology), oil palm and tree crop mapping, shade coffee and agroforestry mapping | Agricultural and land-use mapping workflows | 36 | Captured; names not individually verified |
-| Building age, roof material and building height estimation from imagery and shadows | Building attribute estimation methods | 36 | Captured; names not individually verified |
+| Source entry | Provisional kind | Source page | Verification status |
+|---|---|---:|--- |
+| Solar farm and wind turbine detection, hydropower and mine detection, illegal mining mapping | Infrastructure and land-use detection workflows | 36 | Not checked — intake only |
+| Aquaculture ponds, greenhouses, rice paddies (SAR phenology), oil palm and tree crop mapping, shade coffee and agroforestry mapping | Agricultural and land-use mapping workflows | 36 | Not checked — intake only |
+| Building age, roof material and building height estimation from imagery and shadows | Building attribute estimation methods | 36 | Not checked — intake only |
 
 ## Implementation map (representative libraries)
 

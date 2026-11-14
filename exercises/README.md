@@ -19,7 +19,32 @@ Not every topic needs six exercises. Choose the progression that fits the method
 
 - [Point in polygon](../algorithms/geometry/point-in-polygon.md#have-a-go)
 - [Segment intersection](../algorithms/geometry/segment-intersection.md#have-a-go)
+- [Snap-rounding noder](snap-rounding-noder.md)
+- [Randomized trapezoidal-map construction](randomized-trapezoidal-map.md)
+- [Proximity-graph scaling](proximity-graph-scaling.md)
+- [Ear-clipping triangulation](ear-clipping-triangulation.md)
+- [Convex decomposition](convex-decomposition.md) — includes a runnable greedy merge trace and visual lab.
+- [Minkowski sum](minkowski-sum.md) — includes a runnable convex edge-merge trace and visual lab.
+- [Medial axis](medial-axis.md)
+- [Straight skeleton](straight-skeleton.md)
 - [Bentley–Ottmann](../implementations/python/bentley-ottmann/implementation-walkthrough.md#10-suggested-intern-exercises)
+- [Geometry overlay and validity](geometry-overlay-and-validity.md)
+- [Core GIS continuation](core-gis-continuation.md)
+- [ELECTRE I kernel](electre-i-kernel.md) — test internal and external stability and inspect cycles and multiple kernels.
+- [Spatial decision support](spatial-decision-support.md)
+- [Ripley's K/L simulation envelopes](ripley-k-envelopes.md) — distinguish edge correction, pointwise envelopes and a global Monte Carlo deviation test.
+- [Spatial cross-validation](spatial-cross-validation.md)
+- [Empirical semivariogram](empirical-semivariogram.md) — calculate pairwise semivariance, inspect binning and distinguish an empirical estimate from a fitted model.
+- [GeoAI foundations](geoai-foundations.md)
+- [Geodesy foundations](geodesy-foundations.md)
+- [Geodetic, ECEF and ENU coordinates](ecef-enu.md)
+- [Triple collocation](triple-collocation.md)
+- [Marine heatwave detection](marine-heatwave-detection.md)
+- [Exact orientation](exact-orientation.md)
+- [Covariance functions](covariance-functions.md)
+- [Spherical covariance](spherical-covariance.md)
+- [Graph-spectral covariance](graph-spectral-covariance.md)
+- [Nonseparable space-time covariance](nonseparable-space-time-covariance.md)
 
 ## Exercise writing standard
 
@@ -33,3 +58,14 @@ Every exercise should state:
 - whether a solution is public or held back for a guided edition.
 
 Do not make an exercise depend on an unavailable dataset, paid software or unexplained setup. Where a solution is provided, explain the reasoning rather than only showing the final answer.
+
+- [Maximal covering location](maximal-covering.md) — optimize covered demand within a stated service threshold and compare with p-median.
+
+- [Discrete p-center](p-center.md) — minimize worst-case assignment cost and compare with p-median and maximal covering.
+
+- [Location set covering](set-covering.md) — minimize the number of facilities required to reach all demand within a stated service standard.
+
+- [Backup coverage](backup-coverage.md) — distinguish ordinary coverage from r-covering and explain why deterministic redundancy is not a reliability probability.
+
+- [M/M/c queueing](mmc-queue.md) — calculate waiting under a stable multi-server queue and challenge the Poisson and exponential assumptions.
+- [MEXCLP expected coverage](mexclp.md) — compare deterministic coverage with availability-adjusted expected demand.

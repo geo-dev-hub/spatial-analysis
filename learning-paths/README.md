@@ -16,7 +16,6 @@ These are starting points, not locked courses.
 4. **I want to find patterns in data.** Explore sampling, spatial autocorrelation, point patterns, clustering, interpolation and uncertainty.
 5. **I work with satellite or raster data.** Explore raster foundations, image processing, classification, change detection and data fusion.
 6. **I work with cities, places or transport.** Explore networks, accessibility, flows, location, land use and simulation.
-7. **I work with elevation or drainage data.** Start with the [raster hydrology path](raster-hydrology.md), from DEM basics to flow direction and catchments.
 
 ## Learn in the way that works for you
 
@@ -47,11 +46,11 @@ Some topics benefit from a notebook, map, animation or benchmark. We will use th
 
 ## Another place to begin
 
-If you want to understand whether nearby places have similar values, follow the [spatial autocorrelation path](global-spatial-autocorrelation.md). It connects global and local Moran, Geary and Getis-Ord methods with worked examples and interactive notebooks.
+If you want to understand event concentrations and nearest-neighbour spacing, follow [Point-pattern foundations](point-pattern-foundations.md). If you want to group point observations by density and distinguish clusters from noise, follow [Spatial clustering foundations](spatial-clustering-foundations.md). If you want to understand whether nearby places have similar values, follow the [spatial autocorrelation path](global-spatial-autocorrelation.md). It connects global and local Moran, Geary and Getis-Ord methods with worked examples and interactive notebooks.
 
 If you want to understand how a GIS searches large collections of features, start with [spatial indexing](spatial-indexing.md). The first lessons explain bounding boxes, STR-packed R-trees and indexed spatial joins.
 
-If you want to understand how routes and other network problems are solved, start with [network analysis](network-analysis.md). The first available lesson is Dijkstra's algorithm, with a tested implementation and an interactive priority-queue lab.
+To understand spatial criteria, suitability models and decision trade-offs, start with [Spatial decision support](spatial-decision-support.md). To understand facility location and potential service accessibility, start with [Location science foundations](location-science-foundations.md). To calculate and interpret a first vegetation spectral index, start with [Remote sensing index foundations](remote-sensing-indices.md). To understand raster distance and cell-size effects, start with [Raster distance foundations](raster-distance-foundations.md). To follow elevation through DEM conditioning, D8 flow direction, accumulation, watershed delineation and stream ordering, use [Raster hydrology foundations](raster-hydrology-foundations.md). To understand how to estimate values between measured locations, follow [Spatial interpolation foundations](geostatistics-foundations.md) and the [interpolation and geostatistics path](interpolation-and-geostatistics.md). To continue from geometry foundations into simplification, offsets, proximity graphs and planar point location, follow [Core GIS continuation](core-gis-continuation.md). For graph costs, shortest paths and the modelling choices behind a route planner, follow [Network routing foundations](network-routing-foundations.md). To begin geospatial self-supervised learning with a concrete contrastive objective, follow [GeoAI foundations](geoai-foundations.md). To understand coordinate systems and point transformations, follow [Geodesy foundations](geodesy-foundations.md).
 
 ## The collection keeps growing
 

@@ -1,19 +1,32 @@
 # From scattered observations to a surface
 
-You have measurements at some locations and need to understand what may be happening between them. This path connects the ways we estimate those missing values, from simple distance-based methods to statistical models that describe spatial dependence and uncertainty.
+This path connects a simple distance-weighted estimate to spatially modelled interpolation. Work through the assumptions before choosing a method for a real dataset.
 
-## The route through the subject
+## 1. Start with inverse distance weighting
 
-1. **Start with a weighted average.** [Inverse distance weighting](../algorithms/interpolation/inverse-distance-weighting.md) shows how nearby observations can contribute more strongly than distant ones. **Available**
-2. **Understand spatial variation.** The [empirical semivariogram](../methods/empirical-semivariogram.md) measures how differences between observations change with separation distance. It includes a tested estimator and an interactive lab. **Available**
-3. **Compare deterministic surfaces.** Natural neighbour, splines, radial basis functions and trend surfaces use different geometric or mathematical ideas. These records are planned.
-4. **Fit a theoretical variogram.** Learn how a model represents the empirical pattern and how nugget, sill, range and anisotropy are assessed. A dedicated lesson is planned.
-5. **Build an ordinary kriging estimate.** [Ordinary kriging](../algorithms/interpolation/ordinary-kriging.md) uses the variogram model and a constrained system of equations to determine its weights. The PyKrige example and interactive prediction/variance lab are available. **Available**
-6. **Look at uncertainty.** Distinguish prediction variance, prediction error and validation accuracy.
-7. **Move through time.** Explore spatiotemporal models, data assimilation and change analysis after the spatial foundations are clear.
+Read [Inverse distance weighting](../algorithms/interpolation/inverse-distance-weighting.md) and run the [IDW visual lab](../notebooks/inverse-distance-weighting-lab.ipynb). Change the power parameter and neighbourhood size. IDW is deterministic and does not provide a model-based prediction variance.
 
-## How to use this path
+## 2. Build an empirical semivariogram
 
-Begin with the first lesson, then compare the assumptions behind each method. Do not choose an interpolation method because it creates the smoothest-looking map. Check the input data, coordinate system, spatial support and validation results.
+Read [Empirical semivariogram](../methods/empirical-semivariogram.md) and inspect the pair counts as well as the plotted semivariances. Use the [interactive binning lab](../notebooks/empirical-semivariogram-lab.ipynb) to change maximum lag and bin count. An empirical curve is a noisy summary of the sample pairs, not a fitted model.
 
-The path is being built. Only lessons explicitly linked as available should be treated as completed material.
+## 3. Understand ordinary kriging
+
+Continue with [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md) and run the [ordinary-kriging sensitivity lab](../notebooks/ordinary-kriging-lab.ipynb). Follow the specified variogram through the kriging system and distinguish the model-based variance from observed prediction error. The teaching baseline does not fit variogram parameters or cover the full kriging family.
+
+## 4. Validate away from sampled locations
+
+Read [Spatial cross-validation](../methods/spatial-cross-validation.md). Compare random splits with spatially separated folds and record how the validation design changes the interpretation of predictive performance.
+
+## 5. Extend carefully
+
+Natural-neighbour interpolation, splines, radial basis functions, anisotropy, co-kriging, large-data Gaussian processes, simulation and spatiotemporal models require separate assumptions and validation.
+
+## Working checklist
+
+- State the coordinate reference system and distance units.
+- Inspect duplicate locations, missing values and sampling density.
+- Record neighbourhood and parameter choices.
+- Distinguish interpolation from extrapolation.
+- Validate using a design that reflects where predictions will be made.
+- Report prediction uncertainty only when the method actually estimates it.

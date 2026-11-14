@@ -3,10 +3,10 @@
 - **Stable ID:** `SA-GEOSTATISTICS-EMPIRICAL-SEMIVARIOGRAM`
 - **Kind:** method
 - **Domain:** geostatistics
-- **Status:** researched; reference implementation and tests added; independent review pending
+- **Status:** researched; implemented and tested within the shared geostatistics package; independent review pending
 - **Version:** 0.1
 - **Source inventory:** Section 3, page 4 — variogram modelling
-- **Related records:** [Inverse distance weighting](../algorithms/interpolation/inverse-distance-weighting.md); ordinary kriging (planned)
+- **Related records:** [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md); [Spatial cross-validation](spatial-cross-validation.md)
 
 ## Are nearby measurements more alike?
 
@@ -40,16 +40,20 @@ $$
 
 Here $\mathbf{s}$ is a location and $\mathbf{h}$ is a separation vector. The semivariogram describes the expected half-squared difference between values separated by that vector.
 
-From observed data, the classical Matheron empirical estimator for a lag class is
+For a non-empty lag bin, the classical Matheron empirical estimator is
 
 $$
-\widehat{\gamma}(\mathbf{h})=
-\frac{1}{2N(\mathbf{h})}
-\sum_{(i,j)\in N(\mathbf{h})}
-\left[z(\mathbf{s}_i)-z(\mathbf{s}_j)\right]^2.
+\widehat{\gamma}_k=
+\frac{1}{2|N_k|}
+\sum_{(i,j)\in N_k}
+\left[z(\mathbf{s}_i)-z(\mathbf{s}_j)\right]^2,
+\qquad
+\bar h_k=
+\frac{1}{|N_k|}
+\sum_{(i,j)\in N_k} d_{ij}.
 $$
 
-$N(\mathbf{h})$ is the set of observation pairs assigned to the lag class, and $N(\mathbf{h})$ is also used for its number of pairs in the denominator. In practice, exact separation vectors are rare, so distances are grouped into bins or lag classes. The implementation below uses distance intervals and reports their midpoint as the representative lag.
+$N_k$ is the set of observation pairs assigned to bin $k$, and $|N_k|$ is its pair count. The mean pair distance $\bar h_k$ is the horizontal coordinate reported for a non-empty bin. In practice, exact separation vectors are rare, so distances are grouped into bins or lag classes. The repository implementation uses left-closed, right-open intervals (with the final upper edge included). For a non-empty bin, it reports the **mean observed pair distance** as the representative lag; an empty bin retains its midpoint so the gap remains visible.
 
 ## A small example
 
@@ -98,6 +102,7 @@ The terms are useful summaries, not universal properties of every variogram.
 3. Calculate pairwise separation distances and value differences.
 4. Choose a maximum lag distance and bin edges.
 5. Inspect the number of pairs in each bin; sparse bins are unstable.
+6. Record the bin-edge convention and representative lag statistic (mean pair distance here).
 6. Plot the empirical semivariogram and inspect possible directional differences.
 7. Fit a permissible theoretical model appropriate to the intended use.
 8. Check the fitted model, residual behaviour and predictive performance.
@@ -125,11 +130,11 @@ Geometric anisotropy can often be represented by transforming directions or dist
 
 ## Computational cost
 
-The teaching implementation visits every unordered pair of observations. For $n$ locations, it performs $n(n-1)/2$ distance calculations, so its time complexity is $O(n^2+B)$ for $B$ lag bins. It stores one running sum and count per bin, using $O(B)$ additional space. Large datasets need sampling, pair subsampling, spatial indexing or specialised algorithms; changing the implementation can also change the sampling behaviour of the empirical estimate.
+The teaching implementation visits every unordered pair of observations. For $n$ locations, it performs $n(n-1)/2$ distance calculations and uses binary search to assign each pair to one of $B$ bins. Its time complexity is $O(n^2\log(B+1)+B)$ and its auxiliary memory is $O(B)$: it accumulates distance sums, squared-difference sums and pair counts without retaining every pair. Large datasets still need pair subsampling, spatial indexing or specialised algorithms; changing the sampling design can change the empirical estimate.
 
 ## What this record calculates
 
-The reference implementation computes the omnidirectional Matheron estimator from Euclidean distances and user-supplied lag-bin edges. It returns each bin's midpoint, semivariance and pair count. Empty bins are retained with a missing semivariance so the gap is visible.
+The shared [geostatistics package](../implementations/python/geostatistics/README.md) exposes `empirical_variogram(samples, bin_edges)`. It computes the omnidirectional Matheron estimator from planar Euclidean distances and caller-supplied lag edges. For non-empty bins it returns mean pair distance, semivariance and pair count; empty bins return their midpoint, `None` and zero. Bins are left-closed/right-open except the final bin, which includes its upper edge. The implementation accumulates summaries online and uses $O(B)$ auxiliary memory. Its shared input validator rejects duplicate coordinates; replicate observations need an explicit aggregation or measurement-error policy before they are passed to this function.
 
 It does not:
 - fit a theoretical variogram;
@@ -141,6 +146,8 @@ It does not:
 
 ## Try it
 
+Complete the [empirical semivariogram exercise](../exercises/empirical-semivariogram.md) to calculate lag summaries by hand and verify the bin-edge contract in Python.
+
 - **Predict:** Which lag class should have the largest semivariance in the four-point example?
 - **Change:** Widen the lag bins. How do the pair counts and semivariances change?
 - **Investigate:** Add an outlying observation. Which bins change most?
@@ -149,15 +156,17 @@ It does not:
 
 ## Runnable material
 
-- [Python implementation, tests and walkthrough](../implementations/python/empirical-semivariogram/README.md)
-- [Interactive semivariogram lab](../notebooks/empirical-semivariogram-lab.ipynb)
+- [Shared Python implementation, tests and walkthrough](../implementations/python/geostatistics/README.md)
+- [Interactive empirical-semivariogram binning lab](../notebooks/empirical-semivariogram-lab.ipynb)
+- [Combined interpolation and semivariogram lab](../notebooks/geostatistics-interpolation-lab.ipynb)
 
 ## References
 
-1. Matheron, G. (1963). “Principles of geostatistics.” *Economic Geology*, 58(8), 1246–1266. Foundational reference for the geostatistical framework.
-2. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. European Commission, Joint Research Centre. [Open PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Provides an applied introduction to variograms and spatial prediction.
-3. PyKrige documentation. [Variogram models](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/variogram_models.html). Documents model parameter conventions and supported functional forms in PyKrige; conventions can differ between packages.
-4. SciKit-GStat documentation. [Variography](https://scikit-gstat.readthedocs.io/en/latest/userguide/variogram.html). Describes lag grouping and the Matheron estimator in a maintained Python geostatistics package.
+1. Matheron, G. (1963). “Principles of geostatistics.” *Economic Geology*, 58(8), 1246–1266. https://doi.org/10.2113/gsecongeo.58.8.1246. Foundational reference for the geostatistical framework.
+2. Cressie, N. (1993). *Statistics for Spatial Data*, revised edition. Wiley. A standard treatment of empirical variograms and spatial statistical inference.
+3. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. EUR 22904 EN, Joint Research Centre, Institute for Environment and Sustainability, European Commission. Luxembourg: Office for Official Publications of the European Communities, 143 pp., ISBN 978-92-79-06904-8. [Official JRC record](https://publications.jrc.ec.europa.eu/repository/handle/JRC38153) · [PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Provides an applied introduction to variograms and spatial prediction.
+4. PyKrige documentation. [Variogram models](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/variogram_models.html). Documents model parameter conventions and supported functional forms in PyKrige; conventions can differ between packages.
+5. SciKit-GStat documentation. [Variography](https://scikit-gstat.readthedocs.io/en/latest/userguide/variogram.html). Describes lag grouping and the Matheron estimator in a maintained Python geostatistics package.
 
 ## What remains to be checked
 

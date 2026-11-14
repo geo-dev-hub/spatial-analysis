@@ -4,7 +4,7 @@ This directory is the structured index of the project's knowledge inventory. It 
 
 ## Coverage
 
-See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest view of what is captured, what has been researched and where work remains. The matrix deliberately does not count a source transcription as verified coverage.
+See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest view of what is captured, what has been researched and where work remains. The matrix deliberately does not count a source transcription as verified coverage. See the [source review dashboard](review-dashboard.md) for a dated count of all 694 source-entry rows and their current review labels.
 
 ## Intake source
 
@@ -23,6 +23,8 @@ For every source entry, preserve:
 - ambiguities, caveats and possible duplicates.
 
 Normalisation is a second pass. Do not silently delete, rename or merge source entries because they appear redundant. Preserve the original source label and record a canonical label or relationship separately. The source explicitly marks some later additions as remembered and requiring verification; keep those entries flagged.
+
+Use the [source-entry verification protocol](verification-protocol.md) to record identity, bibliography, technical claims, implementation and rights as separate dimensions. Do not use one blanket “verified” status. The [selected verification notes](selected-verification-notes.md) demonstrate the level of evidence recorded for a small number of bibliography checks.
 
 ## Stable IDs
 
@@ -58,15 +60,20 @@ Codes may be extended as the inventory is fully audited. Once assigned to a publ
 | `kind` | Algorithm, operation, data structure, model, statistic, metric, method, workflow, system, standard, implementation, dataset or application |
 | `domain` | Main domain |
 | `relationships` | Prerequisites, variants, alternatives and applications |
-| `verification_status` | Whether the item has been independently checked |
+| `identity_status` | Whether the named item has been resolved |
+| `bibliography_status` | Whether citation metadata has been checked |
+| `claim_status` | Whether specific technical claims have been checked |
+| `implementation_status` | Whether a reproducible implementation exists and has been tested |
+| `rights_status` | Whether reuse rights have been checked for the intended use |
+| `evidence` | Primary or authoritative evidence and review date |
 | `notes` | Ambiguity, duplicate candidate or scope note |
 
 ## Item-level section indexes
 
-The [section index](sections/README.md) links to source entries extracted and classified section by section. [Section 1](sections/01-core-gis.md) is the first completed intake pass; it is not yet a fully verified technical catalogue.
+The [section index](sections/README.md) links to source entries extracted and provisionally classified section by section. [Section 1](sections/01-core-gis.md) is the first completed intake pass; it is not yet a fully verified technical catalogue.
 
-## First audited record
+## Canonical records already developed
 
-The first canonical draft is [Polygon intersection](../algorithms/geometry/polygon-intersection.md), sourced from section 1, page 1. Its ID is `SA-GEO-POLYGON-INTERSECTION`.
+The repository contains a growing set of scoped canonical records, including geometry algorithms and operations, spatial statistics, raster and hydrology methods, geostatistics, geodesy, decision-support methods and location-science models. Each record should state its own evidence and implementation scope. The existence of a canonical page does not automatically verify every grouped source entry that mentions the same family.
 
-The full source catalogue has not yet been normalised record-by-record. Do not infer completion from the page transcription alone.
+The full source catalogue has not yet been normalised record-by-record. Do not infer completion from the page transcription or the presence of related learning materials alone.
