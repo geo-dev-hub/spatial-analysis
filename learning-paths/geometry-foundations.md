@@ -116,3 +116,7 @@ Once you can recognise intersections, two deeper questions follow: how do we mak
 - [Planar point location](../algorithms/geometry/point-location.md) compares static slab decomposition with randomized trapezoidal maps. Use the [point-location lab](../notebooks/point-location-lab.ipynb) for the implemented slab model, then complete the [randomized trapezoidal-map exercise](../exercises/randomized-trapezoidal-map.md) to trace the more advanced construction.
 
 These are follow-on topics, not prerequisites for the four-lesson foundation. The snap-rounding package is a transparent teaching baseline; the randomized trapezoidal-map exercise is conceptual and does not claim a complete implementation.
+
+## Triangulate a polygon
+
+A simple polygon can be divided into triangles by repeatedly removing an ear. Read the [ear-clipping lesson](../algorithms/geometry/ear-clipping.md), run the [Python teaching implementation](../implementations/python/ear-clipping/README.md), and explore the [visual triangulation lab](../notebooks/ear-clipping-lab.ipynb). This extension assumes one simple ring; holes and constrained Delaunay refinement are separate topics.
