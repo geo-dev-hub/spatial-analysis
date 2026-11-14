@@ -44,7 +44,7 @@ def test_brier_skill_against_climatology_reference():
     obs = [1, 0, 1, 0]
     forecast = [0.8, 0.2, 0.8, 0.2]
     reference = [0.5] * 4
-    assert brier_skill_score(obs, forecast, reference) == pytest.approx(0.36)
+    assert brier_skill_score(obs, forecast, reference) == pytest.approx(0.84)
     assert brier_skill_score([1, 0], [1, 0], [1, 0]) is None
 
 def test_reliability_bins_keep_empty_bins_and_close_last_edge():
