@@ -79,7 +79,7 @@ The second location has more potential provider capacity within its catchment un
 - An isolated provider with no demand in its catchment receives ratio zero in the teaching implementation; a population location with no reachable provider receives accessibility zero.
 - The model is sensitive to the impedance definition and threshold.
 
-Enhanced 2SFCA variants introduce distance decay, multiple catchments or other refinements. They should be documented as distinct variants rather than silently added to the binary baseline.
+A distance-decay extension is included separately below. Multiple catchments, variable catchment sizes, provider choice and dynamic capacity remain outside this teaching implementation.
 
 ## Exercises
 
@@ -95,3 +95,56 @@ Enhanced 2SFCA variants introduce distance decay, multiple catchments or other r
 - Luo, W. and Wang, F. (2003), [Measures of spatial accessibility to health care in a GIS environment: synthesis and a case study in the Chicago region](https://doi.org/10.1016/S0038-0121(02)00032-8), *Environment and Planning B*, 30(6), 865–884.
 
 **Scope:** binary-catchment 2SFCA with supplied impedance costs; no distance decay, provider choice or dynamic capacity model is included.
+
+
+## Distance-decay extension: E2SFCA-style weighting
+
+The binary method creates a sharp edge: a provider just inside the threshold contributes fully, while one just outside contributes nothing. Enhanced 2SFCA (E2SFCA) addresses uniform access within the catchment by applying weights to travel-time zones in both calculation steps (Luo and Qi, 2009).
+
+Let \(w_{ij}\) be a non-negative, non-increasing impedance weight for the pair of population location \(i\) and provider \(j\). The weighted provider ratio is:
+
+\[
+R_j=\frac{S_j}{\sum_i P_i w_{ij}}
+\]
+
+and population accessibility becomes:
+
+\[
+A_i=\sum_j R_j w_{ij}.
+\]
+
+The teaching implementation uses a piecewise-constant schedule. The analyst supplies strictly increasing band upper bounds \(b_1,\ldots,b_K\) and non-increasing weights \(w_1,\ldots,w_K\). A pair is assigned to the first band whose upper bound is greater than or equal to its impedance. A pair beyond the final bound receives weight zero. The same weights are applied in both steps.
+
+For example, bounds \([10,20]\) and weights \([1,0.5]\) mean that a cost up to and including 10 receives weight 1; a cost above 10 and up to and including 20 receives weight 0.5; and a cost above 20 receives zero. These are illustrative values, not recommended universal parameters.
+
+### Worked example
+
+For:
+
+\[
+D=\begin{bmatrix}5&15\\25&5\end{bmatrix},
+\qquad
+W=\begin{bmatrix}1&0.5\\0&1\end{bmatrix},
+\]
+
+with supply \(S=[10,20]\) and demand \(P=[100,100]\), weighted demand is \([100,150]\). Therefore:
+
+\[
+R=[0.1,0.1333\ldots],
+\qquad
+A=[0.1667,0.1333\ldots].
+\]
+
+### Modelling cautions
+
+- The analyst must justify travel-cost units, band edges and weights for the service and mode being studied.
+- Weights are assumptions about impedance, not empirically observed individual choices unless calibrated with suitable data.
+- This zonal implementation is not a continuous Gaussian decay model.
+- A fixed maximum catchment still excludes all pairs beyond its final band.
+- Test multiple plausible schedules and report sensitivity; do not present one schedule as objectively correct.
+
+The [distance-decay implementation](../../implementations/python/two-step-fca/README.md) includes tests and a reproducible worked example.
+
+## References
+
+- Luo, W. and Qi, Y. (2009), [An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians](https://doi.org/10.1016/j.healthplace.2009.06.002), *Health & Place*, 15(4), 1100–1107.
