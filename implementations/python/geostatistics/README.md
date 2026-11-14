@@ -40,7 +40,9 @@ predictions = ordinary_kriging_predict(
 print(predictions)  # (prediction, kriging variance)
 ~~~
 
-The empirical semivariogram reports mean pair distance, classical semivariance and pair count for caller-defined distance bins. It is not a fitted model.\n\nThe exponential semivariogram is
+The empirical semivariogram reports mean pair distance, classical semivariance and pair count for caller-defined distance bins. It is not a fitted model.
+
+The exponential semivariogram is
 
 $$
 \gamma(h)=c\left(1-e^{-h/a}\right), \quad h>0,

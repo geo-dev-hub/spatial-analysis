@@ -23,7 +23,17 @@ The implementation calculates Euclidean distance, optionally filters by a search
 
 IDW is a local weighted average. It has no stochastic spatial model and does not produce a kriging variance.
 
-## 3. Estimate an empirical semivariogram\n\nFor every unique sample pair, calculate separation distance $h_{ij}$ and half the squared value difference. Group pairs into caller-defined lag bins:\n\n$\n\\hat\\gamma(h)=\\frac{1}{2N(h)}\\sum_{(i,j)\\in B(h)}(z_i-z_j)^2\n$\n\nThe implementation reports the mean pair distance, semivariance and number of pairs in each bin. Empty bins are retained rather than silently disappearing. Sparse bins are uncertain, and this isotropic summary can hide directional structure. It is a diagnostic, not a model fit.\n\n## 4. State the variogram before solving kriging
+## 3. Estimate an empirical semivariogram
+
+For every unique sample pair, calculate separation distance $h_{ij}$ and half the squared value difference. Group pairs into caller-defined lag bins:
+
+\[
+\hat{\gamma}(h)=\frac{1}{2N(h)}\sum_{(i,j)\in B(h)}(z_i-z_j)^2
+\]
+
+The implementation reports the mean pair distance, semivariance and number of pairs in each bin. Empty bins are retained rather than silently disappearing. Sparse bins are uncertain, and this isotropic summary can hide directional structure. It is a diagnostic, not a model fit.
+
+## 4. State the variogram before solving kriging
 
 Ordinary kriging assumes an unknown constant mean and a specified covariance or semivariogram model. This teaching implementation uses an isotropic exponential semivariogram with zero nugget:
 
