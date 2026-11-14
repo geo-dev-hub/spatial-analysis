@@ -103,15 +103,15 @@ The binary method creates a sharp edge: a provider just inside the threshold con
 
 Let $w_{ij}$ be a non-negative, non-increasing impedance weight for the pair of population location $i$ and provider $j$. The weighted provider ratio is:
 
-$
+$$
 R_j=\frac{S_j}{\sum_i P_i w_{ij}}
-$
+$$
 
 and population accessibility becomes:
 
-$
+$$
 A_i=\sum_j R_j w_{ij}.
-$
+$$
 
 The teaching implementation uses a piecewise-constant schedule. The analyst supplies strictly increasing band upper bounds $b_1,\ldots,b_K$ and non-increasing weights $w_1,\ldots,w_K$. A pair is assigned to the first band whose upper bound is greater than or equal to its impedance. A pair beyond the final bound receives weight zero. The same weights are applied in both steps.
 
@@ -121,19 +121,19 @@ For example, bounds $[10,20]$ and weights $[1,0.5]$ mean that a cost up to and i
 
 For:
 
-$
+$$
 D=\begin{bmatrix}5&15\\25&5\end{bmatrix},
 \qquad
 W=\begin{bmatrix}1&0.5\\0&1\end{bmatrix},
-$
+$$
 
 with supply $S=[10,20]$ and demand $P=[100,100]$, weighted demand is $[100,150]$. Therefore:
 
-$
+$$
 R=[0.1,0.1333\ldots],
 \qquad
 A=[0.1667,0.1333\ldots].
-$
+$$
 
 ### Modelling cautions
 
