@@ -12,19 +12,19 @@ The maximal covering location problem (MCLP) answers this question. It differs f
 
 Let I be demand locations and J candidate sites. Let a_i be non-negative demand weight, d_ij the cost from demand i to candidate j, S the service threshold, and p the maximum number of facilities. Let x_j indicate whether candidate j is selected and y_i whether demand i is covered. Define N_i = {j : d_ij <= S}.
 
-[
+$
 \max \sum_{i\in I} a_i y_i
-]
+$
 
 subject to
 
-[
+$
 \sum_{j\in N_i}x_j \ge y_i \quad \forall i\in I,
 \qquad
 \sum_{j\in J}x_j \le p,
 \qquad
 x_j,y_i\in\{0,1\}.
-]
+$
 
 A demand point counts as covered when at least one selected facility is within the threshold. It is counted once, even if several selected sites can reach it.
 
@@ -40,9 +40,9 @@ The threshold is a planning standard, not a parameter to tune merely to make cov
 
 The [Python package](../../implementations/python/maximal-covering/README.md) enumerates all subsets of size zero through p. For m candidate sites it examines:
 
-[
+$
 \sum_{k=0}^{p}\binom{m}{k}.
-]
+$
 
 This is exact and transparent but grows combinatorially. Use it for learning and as a small-instance oracle, not as a metropolitan-scale solver.
 
