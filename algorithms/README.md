@@ -127,3 +127,5 @@ Records may have different evidence and implementation status. Check the status 
 
 - [Medial axis](geometry/medial-axis.md) — represent a region through centres of maximal inscribed discs.
 - [Straight skeleton](geometry/straight-skeleton.md) — construct the polygon skeleton from inward parallel wavefronts.
+
+- [Convex Minkowski-sum implementation](../implementations/python/minkowski-convex/README.md) — a tested linear-time edge merge for convex rings.
