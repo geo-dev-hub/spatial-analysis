@@ -82,3 +82,8 @@ Related practice: [geometry overlay and validity exercises](../../exercises/geom
 The source is broad by design. Do not force every operation, metric, model, data structure or software name into the category “algorithm.”
 
 - [Ear clipping](../../algorithms/geometry/ear-clipping.md) — triangulate a simple polygon ring; the current exact-predicate teaching implementation is intentionally transparent and has an O(n^3) worst-case bound.
+
+
+## Proximity graph implementation continuation
+
+The [proximity graph lesson](../../algorithms/geometry/proximity-graphs.md) now links to a Delaunay-filtered reference implementation for Gabriel and relative-neighbourhood graphs. It reduces the candidate set to planar triangulation edges but retains an explicit O(n) blocker scan per candidate, giving O(n²) overall. The [visual lab](../../notebooks/proximity-graphs-delaunay-lab.ipynb) compares it with all-pairs reference methods and demonstrates why cocircular boundary ties need separate treatment. This is not the specialised linear-time RNG post-processing algorithm.
