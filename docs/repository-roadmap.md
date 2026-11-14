@@ -236,7 +236,7 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - Corrected the Radke and Mu (2000) 2SFCA precursor citation to *Geographic Information Sciences*, 6(2), 105–112, DOI `10.1080/10824000009480538`.
 - Corrected the Luo and Wang (2003) 2SFCA citation to *Environment and Planning B: Planning and Design*, 30(6), 865–884, DOI `10.1068/b29120`.
 - Added the Luo and Qi (2009) E2SFCA erratum reference and clarified that the notebook's zonal weights are illustrative, analyst-supplied values.
-- Corrected the Church and ReVelle location-model references in the equity-constrained covering lesson: the 1974 MCLP paper and the distinct 1976 theoretical-links paper now have their own correct metadata and DOI.
+- Corrected the Church and ReVelle location-model references in the covering lessons: the 1974 MCLP paper uses DOI `10.1007/BF01942293`; the distinct 1976 theoretical-links paper retains DOI `10.1111/j.1538-4632.1976.tb00547.x`.
 - The source-entry verification protocol and row-level review labels now distinguish intake, partial canonical coverage and actual evidence review. These corrections do not imply that all Section 6 source entries are verified.
 
 ## Section 1–2 bibliography audit — 14 November 2026

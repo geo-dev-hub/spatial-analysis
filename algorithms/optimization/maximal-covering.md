@@ -75,7 +75,7 @@ MCLP is not an assignment or capacity model. It does not guarantee that a facili
 
 ## References
 
-- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers in Regional Science*, 32(1), 101–118. https://doi.org/10.1111/j.1435-5597.1974.tb00902.x
+- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers of the Regional Science Association*, 32(1), 101–118. https://doi.org/10.1007/BF01942293
 - Church, R. and ReVelle, C. (1976), “Theoretical and computational links between the p-median, location set-covering, and the maximal covering location problem,” *Geographical Analysis*, 8(4), 406–415. https://doi.org/10.1111/j.1538-4632.1976.tb00547.x
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
 

@@ -67,7 +67,7 @@ Set covering treats the service threshold as a requirement. MCLP treats it as th
 ## References
 
 - Toregas, C., Swain, R., ReVelle, C. and Bergman, L. (1971), “The location of emergency service facilities,” *Operations Research*, 19(6), 1363–1373. https://doi.org/10.1287/opre.19.6.1363
-- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers in Regional Science*, 32(1), 101–118. https://doi.org/10.1111/j.1435-5597.1974.tb00902.x
+- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers of the Regional Science Association*, 32(1), 101–118. https://doi.org/10.1007/BF01942293
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
 
 **Scope:** uncapacitated discrete location set covering with equal facility costs, a finite candidate set and a supplied cost matrix/service threshold. No capacity, backup coverage, stochastic reliability or equity constraints.

@@ -82,7 +82,7 @@ subsets. This is an exact teaching baseline and a small-instance test oracle, no
 ## References
 
 - Hogan, K. and ReVelle, C. (1986), “Concepts and Applications of Backup Coverage,” *Management Science*, 32(11), 1434–1444. https://doi.org/10.1287/mnsc.32.11.1434
-- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers in Regional Science*, 32(1), 101–118. https://doi.org/10.1111/j.1435-5597.1974.tb00902.x
+- Church, R. and ReVelle, C. (1974), “The maximal covering location problem,” *Papers of the Regional Science Association*, 32(1), 101–118. https://doi.org/10.1007/BF01942293
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
 - Snyder, L. V. (2006), “Facility location under uncertainty: a review,” *IIE Transactions*, 38(7), 547–564. https://doi.org/10.1080/07408170500216480
 

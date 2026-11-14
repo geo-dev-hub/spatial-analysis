@@ -61,7 +61,7 @@ Use the [equity-constrained covering exercise](../../exercises/equity-constraine
 
 ## References
 
-- Church, R. L., & ReVelle, C. S. (1974). The maximal covering location problem. *Papers of the Regional Science Association*, 32(1), 101–118. https://doi.org/10.1111/j.1435-5597.1974.tb00902.x
+- Church, R. L., & ReVelle, C. S. (1974). The maximal covering location problem. *Papers of the Regional Science Association*, 32(1), 101–118. https://doi.org/10.1007/BF01942293
 - Church, R. L., & ReVelle, C. S. (1976). Theoretical and computational links between the p-median, location set-covering, and the maximal covering location problem. *Geographical Analysis*, 8(4), 406–415. https://doi.org/10.1111/j.1538-4632.1976.tb00547.x
 - Pereira, R. H. M., Schwanen, T., & Banister, D. (2017). [Distributive justice and equity in transportation](https://doi.org/10.1080/01441647.2016.1257660). Transport Reviews, 37(2), 170–191.
 
