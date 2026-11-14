@@ -195,4 +195,4 @@ Check that:
 
 ## Scope
 
-This is a method-selection and mathematical guide, not a forecasting package. It does not claim to implement STL, Theil–Sen, Pettitt, ARIMA, Prophet or Kalman filtering. These methods have different objectives and assumptions; a future practical module should implement and validate them separately rather than hiding them behind a single generic “time-series” function.
+This is a method-selection and mathematical guide supported by separate executable teaching packages for STL (statsmodels-backed), Theil–Sen (native pairwise-median estimator), Pettitt (native rank statistic) and ARIMA/SARIMA (statsmodels-backed). Prophet remains an external model discussed here rather than an implementation in this repository. Kalman/RTS filtering and smoothing have a separate tested implementation in the curves-and-smoothing package; an EO-specific observation/state model remains a distinct modelling task. These methods have different objectives and assumptions and must not be hidden behind a single generic time-series function.
