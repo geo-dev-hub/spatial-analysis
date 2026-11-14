@@ -6,7 +6,7 @@ Four scattered-point gridding methods for regular output grids:
 - thin-plate-spline radial-basis interpolation, the minimum-bending-energy surface with an affine polynomial tail and optional smoothing;
 - ordinary kriging with an explicitly supplied exponential covariance model, returning both prediction and kriging variance.
 
-The thin-plate spline is a minimum-bending-energy (thin-plate) surface and a minimum-curvature-style interpolant. It is not the classic Briggs iterative minimum-curvature gridding algorithm; exact algorithm equivalence is not claimed. They assume planar coordinates in consistent units. Nearest-neighbour creates Voronoi regions; triangulation interpolation is continuous across shared edges but has piecewise-constant gradients within each triangle. Sparse or uneven sampling can create artefacts and extrapolation is not performed.
+The thin-plate spline is a minimum-bending-energy (thin-plate) surface and a minimum-curvature-style interpolant. It is not the classic Briggs iterative minimum-curvature gridding algorithm; exact algorithm equivalence is not claimed. All methods assume planar coordinates in consistent units. Nearest-neighbour creates Voronoi regions; Delaunay interpolation is limited to the convex hull and has piecewise-constant gradients within each triangle; thin-plate splines and covariance-based kriging can return values beyond the convex hull, where model assumptions dominate. Sparse or uneven sampling can create artefacts.
 
 Run python -m pip install -r requirements.txt and python -m pytest -q.
 
