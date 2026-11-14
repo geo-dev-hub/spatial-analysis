@@ -215,6 +215,9 @@ jobs:
           - example: weights-of-evidence
             directory: implementations/python/weights-of-evidence
             pythonpath: ""
+          - example: electre-i
+            directory: implementations/python/electre-i
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -323,6 +326,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/graph-spectral-covariance-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/nonseparable-space-time-covariance-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/weights-of-evidence-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-outranking-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
