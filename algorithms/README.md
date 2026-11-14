@@ -124,3 +124,6 @@ Records may have different evidence and implementation status. Check the status 
 - [Convex decomposition](geometry/convex-decomposition.md) — compare triangulation-based merging, optimal partitioning and approximate convex decomposition.
 
 - [Minkowski sums](geometry/minkowski-sum.md) — combine geometric sets through pointwise addition and apply the result to offsets and collision planning.
+
+- [Medial axis](geometry/medial-axis.md) — represent a region through centres of maximal inscribed discs.
+- [Straight skeleton](geometry/straight-skeleton.md) — construct the polygon skeleton from inward parallel wavefronts.
