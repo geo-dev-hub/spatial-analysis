@@ -99,7 +99,10 @@ A maintained implementation is available in the R package `blockCV` (`cv_nndm`),
 ## Practical lab
 
 - [Python spatial block and buffered-fold implementation](../implementations/python/spatial-cross-validation/README.md)
-- [Step-by-step intern walkthrough](../implementations/python/spatial-cross-validation/implementation-walkthrough.md)
+- [kNNDM KMeans/Euclidean teaching implementation](../implementations/python/knndm/README.md)
+- [kNNDM implementation walkthrough](../implementations/python/knndm/implementation-walkthrough.md)
+- [kNNDM visual lab](../notebooks/knndm-spatial-validation-lab.ipynb)
+- [Step-by-step spatial block and buffered-fold walkthrough](../implementations/python/spatial-cross-validation/implementation-walkthrough.md)
 
 The implementation provides a deterministic grid-block split for compact planar point datasets. It does not infer a scientifically correct block size, perform temporal grouping, construct polygons, or replace a full validation design review.
 
