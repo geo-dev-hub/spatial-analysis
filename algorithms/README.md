@@ -138,3 +138,5 @@ Records may have different evidence and implementation status. Check the status 
 ### Geodesy
 
 - [Geodetic, ECEF and local ENU coordinates](geodesy/ecef-enu.md) — move between ellipsoidal longitude/latitude/height, Earth-centred Cartesian coordinates and a local East-North-Up frame.
+
+- [Maximal covering location](optimization/maximal-covering.md) — choose at most p facilities to maximize demand reached within a defined service threshold.
