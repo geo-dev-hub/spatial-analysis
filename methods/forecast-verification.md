@@ -202,3 +202,10 @@ The companion package now also provides empirical ensemble CRPS per case and its
 ## MODE-inspired object verification baseline
 
 The [teaching implementation](../implementations/python/forecast-verification/object_verification.py), with [tests](../implementations/python/forecast-verification/test_object_verification.py) and a [lab notebook](../notebooks/mode-inspired-object-verification-lab.ipynb), performs optional Gaussian smoothing, thresholding, connected-component extraction, object-attribute measurement and minimum-cost one-to-one matching. It is a bounded MODE-inspired baseline, not a full MET/MODE reproduction: within-field merging, fuzzy-interest matching, cluster objects and temporal tracking are not implemented.
+
+
+## 8. CRPS reliability, resolution and uncertainty decomposition
+
+The CRPS can be interpreted as the integral of Brier scores over all thresholds. At each threshold, turn ensemble members into an exceedance probability and observations into a binary exceedance event. Decompose the Brier score into reliability minus resolution plus uncertainty, then integrate the three components over the threshold axis.
+
+A [tested teaching implementation](../implementations/python/forecast-verification/crps_decomposition.py), [walkthrough](../implementations/python/forecast-verification/implementation-walkthrough.md), and [lab](../notebooks/crps-decomposition-lab.ipynb) use finite trapezoidal quadrature. This is an additive finite-grid approximation, not the exact ensemble-bin-width estimator in Hersbach (2000). Always report the threshold grid and compare the integrated score with the direct empirical-ensemble CRPS.
