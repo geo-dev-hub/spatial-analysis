@@ -23,7 +23,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Randomized trapezoidal-map construction](randomized-trapezoidal-map.md)
 - [Proximity-graph scaling](proximity-graph-scaling.md)
 - [Ear-clipping triangulation](ear-clipping-triangulation.md)
-- [Convex decomposition](convex-decomposition.md)
+- [Convex decomposition](convex-decomposition.md) — includes a runnable greedy merge trace and visual lab.
 - [Minkowski sum](minkowski-sum.md) — includes a runnable convex edge-merge trace and visual lab.
 - [Medial axis](medial-axis.md)
 - [Straight skeleton](straight-skeleton.md)
