@@ -51,3 +51,16 @@ List at least four failure modes that can affect a practical GIS implementation.
 ## Submission
 
 Provide your edge-vector table, resulting polygon, configuration-space sketch, algorithm choices and validation identities.
+
+
+## Part 4 — Run and inspect the teaching implementation
+
+Run the [convex Minkowski-sum package](../implementations/python/minkowski-convex/README.md) and its [visual lab](../notebooks/minkowski-convex-lab.ipynb).
+
+1. Confirm that the rectangle example returns the vertices of a 5-by-3 rectangle.
+2. Reverse one input ring and explain why the result is unchanged.
+3. Use a pair of convex polygons with parallel edges. Identify where the merge advances both edge lists in one step.
+4. Try a concave polygon and explain why the implementation rejects it.
+5. Compare the exact rational output with a geometry library. If the library returns a different starting vertex, compare the cyclic boundary rather than raw list order.
+
+**Submission:** a short trace table with the two current edge vectors, the cross-product comparison, the chosen step, and the accumulated output vertex for each merge iteration.
