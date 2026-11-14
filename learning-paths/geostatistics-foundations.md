@@ -26,7 +26,7 @@ Change the power, search radius and number of neighbours. Notice that IDW is a w
 
 ### 2. Calculate an empirical semivariogram
 
-Read [Empirical semivariogram](../methods/empirical-semivariogram.md). Work through pairwise distances, squared differences, lag bins and pair counts. The empirical estimate describes the sample; it is not yet a fitted covariance model.
+Read [Empirical semivariogram](../methods/empirical-semivariogram.md) and run the [interactive binning lab](../notebooks/empirical-semivariogram-lab.ipynb). Work through pairwise distances, squared differences, lag bins and pair counts. The empirical estimate describes the sample; it is not yet a fitted covariance model.
 
 ### 3. Understand the variogram assumption
 
@@ -34,7 +34,7 @@ Return to [Spatial interpolation](../algorithms/geostatistics/interpolation.md).
 
 ### 4. Solve the ordinary-kriging system
 
-Work through the augmented matrix and its sum-of-weights constraint. Inspect the prediction and model-based variance separately.
+Work through the augmented matrix and its sum-of-weights constraint. Inspect the prediction and model-based variance separately in the [ordinary-kriging sensitivity lab](../notebooks/ordinary-kriging-lab.ipynb).
 
 ### 5. Validate in space
 

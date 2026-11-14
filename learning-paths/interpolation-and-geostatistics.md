@@ -8,11 +8,11 @@ Read [Inverse distance weighting](../algorithms/interpolation/inverse-distance-w
 
 ## 2. Build an empirical semivariogram
 
-Read [Empirical semivariogram](../methods/empirical-semivariogram.md) and inspect the pair counts as well as the plotted semivariances. Change the lag edges and see how the summary changes. An empirical curve is a noisy summary of the sample pairs, not a fitted model.
+Read [Empirical semivariogram](../methods/empirical-semivariogram.md) and inspect the pair counts as well as the plotted semivariances. Use the [interactive binning lab](../notebooks/empirical-semivariogram-lab.ipynb) to change maximum lag and bin count. An empirical curve is a noisy summary of the sample pairs, not a fitted model.
 
 ## 3. Understand ordinary kriging
 
-Continue with [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md). Follow the specified variogram through the kriging system and distinguish the model-based variance from observed prediction error. The teaching baseline does not fit variogram parameters or cover the full kriging family.
+Continue with [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md) and run the [ordinary-kriging sensitivity lab](../notebooks/ordinary-kriging-lab.ipynb). Follow the specified variogram through the kriging system and distinguish the model-based variance from observed prediction error. The teaching baseline does not fit variogram parameters or cover the full kriging family.
 
 ## 4. Validate away from sampled locations
 

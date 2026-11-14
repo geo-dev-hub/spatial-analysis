@@ -9,8 +9,10 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Geometry foundations lab](geometry-foundations-lab.ipynb): move a point, adjust a segment and change two rectangles to inspect point location, segment intersection and polygon overlay.
 - [Polygon overlay lab](polygon-overlay-lab.ipynb): visualise intersection, union, difference and symmetric difference; inspect lower-dimensional contacts, holes, multipart output and precision-grid effects.
 - [Convex hull lab](convex-hull-lab.ipynb): see Graham scan build a hull, inspect orientation and collinear policies, and experiment with degenerate point sets.
+- [Graham scan interactive trace](graham-scan-lab.ipynb): step through polar ordering, stack updates and removed points, then compare the final stack with the tested implementation.
 - [Voronoi and Delaunay lab](voronoi-delaunay-lab.ipynb): compare nearest-site regions with their Delaunay dual, inspect equidistant Voronoi vertices and check empty circumcircles.
 - [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.
+- [Dijkstra priority-queue trace](dijkstra-lab.ipynb): inspect tentative distances, predecessor updates, stale heap entries and the final least-cost route.
 - [Coverage simplification and advanced routing lab](coverage-simplification-routing-lab.ipynb): simplify a shared-edge polygon coverage, inspect fixed-grid precision changes, then compare Dijkstra, bidirectional Dijkstra, ALT A*, turn restrictions and FIFO time-dependent arrival on directed graphs.
 - [Planar point-location lab](point-location-lab.ipynb): inspect x-event lines, open slabs, face transitions, holes and boundary queries using the tested static slab locator.
 - [Ear-clipping lab](ear-clipping-lab.ipynb): inspect a concave polygon, its triangle partition, triangle count and area invariant.
@@ -44,7 +46,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Euclidean distance transform lab](raster-distance-transform-lab.ipynb): compare square and rectangular cell spacing and inspect distance to multiple target cells.
 - [Focal raster statistics lab](focal-raster-statistics-lab.ipynb): compare focal means, edge-window counts and NoData handling.
 - [Priority-Flood lab](priority-flood-lab.ipynb): fill a synthetic DEM depression, inspect the spill elevation and compare the fill-depth layer.
-- [D8 flow direction lab](d8-flow-direction-lab.ipynb): inspect steepest-descent direction codes, rectangular cell spacing, sinks and NoData.
+- [D8 flow direction lab](d8-flow-direction-lab.ipynb): move a synthetic hill with sliders, change rectangular cell spacing, and inspect direction codes, sinks and NoData.
 - [D8 flow accumulation lab](d8-flow-accumulation-lab.ipynb): trace upstream contributing cells, weighted flow and confluences.
 - [Watershed delineation lab](watershed-delineation-lab.ipynb): select an outlet and map all cells that drain to it.
 - [Stream order lab](stream-order-lab.ipynb): compare Strahler order and Shreve magnitude at headwaters and confluences.
@@ -66,6 +68,8 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Geostatistics and interpolation
 
 - [Spatial interpolation and empirical semivariogram lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.
+- [Empirical semivariogram binning lab](empirical-semivariogram-lab.ipynb): change maximum lag and bin count, inspect mean pair distances, semivariances and pair counts using the shared tested estimator.
+- [Ordinary-kriging sensitivity lab](ordinary-kriging-lab.ipynb): vary the exponential variogram's partial sill and range scale and compare prediction with model-based variance.
 
 ### Point-pattern analysis
 
@@ -102,12 +106,16 @@ Open a notebook from JupyterLab and run the cells in order. The Global Moran's I
 
 ### Open a lab in Google Colab
 
-The links below point to notebooks already available on the default branch. The planar point-location and weighted suitability labs are available on the current continuation branch and can be opened directly in Colab.
+The links below include notebooks on the default branch and selected interactive labs on the current continuation branch; branch-only links can be opened directly in Colab.
 
 - [Geometry foundations](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/geometry-foundations-lab.ipynb)
 - [Planar point location — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/point-location-lab.ipynb)
 - [Weighted linear combination — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/weighted-linear-combination-lab.ipynb)
 - [Nonseparable space-time covariance — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/nonseparable-space-time-covariance-lab.ipynb)
+- [Dijkstra priority-queue trace — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/dijkstra-lab.ipynb)
+- [Graham scan interactive trace — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/graham-scan-lab.ipynb)
+- [Empirical semivariogram binning — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/empirical-semivariogram-lab.ipynb)
+- [Ordinary-kriging sensitivity — continuation branch](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/compendium/section-01-geometry-continuation/notebooks/ordinary-kriging-lab.ipynb)
 - [Global Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/global-morans-i-lab.ipynb)
 - [Global Geary's C](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/gearys-c-lab.ipynb)
 - [Local Moran's I](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/local-morans-i-lab.ipynb)
@@ -118,7 +126,7 @@ The links below point to notebooks already available on the default branch. The 
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all sixty-six notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all seventy notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
 

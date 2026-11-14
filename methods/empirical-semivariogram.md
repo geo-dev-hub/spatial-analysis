@@ -157,7 +157,8 @@ Complete the [empirical semivariogram exercise](../exercises/empirical-semivario
 ## Runnable material
 
 - [Shared Python implementation, tests and walkthrough](../implementations/python/geostatistics/README.md)
-- [Interactive interpolation and semivariogram lab](../notebooks/geostatistics-interpolation-lab.ipynb)
+- [Interactive empirical-semivariogram binning lab](../notebooks/empirical-semivariogram-lab.ipynb)
+- [Combined interpolation and semivariogram lab](../notebooks/geostatistics-interpolation-lab.ipynb)
 
 ## References
 

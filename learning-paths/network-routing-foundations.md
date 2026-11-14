@@ -10,6 +10,8 @@ Start with [Shortest paths](../algorithms/networks/shortest-paths.md). Decide wh
 
 Run the [shortest-path package](../implementations/python/shortest-paths/README.md), which now includes Dijkstra, A*, bidirectional Dijkstra, directed ALT landmarks, Bellman–Ford and Floyd–Warshall. Compare path cost, predecessor reconstruction, the bidirectional stopping condition and the effect of an admissible landmark heuristic.
 
+Step through the queue in the [interactive Dijkstra lab](../notebooks/dijkstra-lab.ipynb) and compare its trace with the tested package result.
+
 ## 3. Add road-network constraints
 
 Study [turn-aware and time-dependent routing](../algorithms/networks/turn-aware-time-dependent-routing.md). Run the [edge-based and FIFO time-dependent examples](../implementations/python/road-routing/README.md). Extend the model with one-way streets, access rules, turn penalties and turn restrictions. Decide whether a node-based graph is sufficient or whether the search state must include the incoming edge.

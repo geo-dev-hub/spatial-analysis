@@ -79,6 +79,8 @@ You will learn:
 
 The four foundations above lead into a second set of practical questions: is the boundary valid, how should one polygon be clipped by another, and how do we combine or subtract whole areas?
 
+For the convex-hull extension, read the [convex hull lesson](../algorithms/geometry/convex-hull.md) and use the [Graham scan trace lab](../notebooks/graham-scan-lab.ipynb) to watch the candidate stack change.
+
 1. [Check polygon validity](../algorithms/geometry/polygon-validity.md), then inspect the [Shapely validity workflow](../implementations/python/polygon-validity/README.md). Treat repair as an explicit modelling decision.
 2. [Understand polygon clipping](../algorithms/geometry/polygon-clipping.md), then run the [convex Sutherland–Hodgman teaching implementation](../implementations/python/polygon-clipping/README.md). Its deliberate convex-input limit is part of the lesson.
 3. [Study polygon overlay](../algorithms/geometry/overlay-operations.md), run the [four-operation Shapely/GEOS package](../implementations/python/polygon-overlay/README.md), and explore the [visual overlay lab](../notebooks/polygon-overlay-lab.ipynb).
