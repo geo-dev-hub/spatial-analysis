@@ -94,6 +94,12 @@ The input model matters too: one simple ring, a polygon with holes, a polygonal 
 - [Convex decomposition exercise](../../exercises/convex-decomposition.md) asks you to derive and validate a partition.
 - [Minkowski sums](minkowski-sum.md) shows why the choice of convex decomposition affects downstream geometry operations.
 
+## Runnable teaching baseline
+
+A [Python triangulate-and-merge baseline](../../implementations/python/convex-decomposition/README.md) is now available with exact predicates, area-conservation checks, tests and an [intern walkthrough](../../implementations/python/convex-decomposition/implementation-walkthrough.md). The [visual lab](../../notebooks/convex-decomposition-lab.ipynb) shows a concave polygon becoming convex pieces.
+
+This is a deliberately straightforward greedy merge, not an optimized Hertel–Mehlhorn implementation. It does not claim the published approximation guarantee or a minimum-piece partition. Its initial ear-clipping stage and repeated pair scans are teaching baselines with higher worst-case cost.
+
 ## Further reading
 
 - Hertel, S. and Mehlhorn, K. (1983), *Fast triangulation of simple polygons*, in the context of approximation algorithms for convex partitioning. The edge-removal idea is described in the computational-geometry literature and implemented by CGAL.
