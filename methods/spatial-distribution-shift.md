@@ -138,9 +138,15 @@ Use them together where appropriate; none substitutes for the others.
 - Roberts, D. R. et al. (2017). “Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure.” *Ecography*, 40(8), 913–929. [DOI 10.1111/ecog.02881](https://doi.org/10.1111/ecog.02881).
 - Serov, E., Koldasbayeva, D. and Zaytsev, A. (2026). “Kernel mean matching enhances risk estimation under spatial distribution shifts.” *Scientific Reports*, 16, 6921. [DOI 10.1038/s41598-026-36740-7](https://doi.org/10.1038/s41598-026-36740-7).
 
+## Domain-classifier divergence
+
+A domain classifier predicts whether a row came from the source or target sample. Out-of-fold ROC AUC near 0.5 indicates that the selected classifier has difficulty distinguishing the samples; higher AUC indicates greater distinguishability under that representation. This is a diagnostic rather than a calibrated two-sample p-value. The [tested logistic-regression baseline](../implementations/python/domain-classifier-shift/README.md) puts scaling inside the cross-validation pipeline and supports caller-supplied groups through stratified group folds. Its [walkthrough](../implementations/python/domain-classifier-shift/walkthrough.md) and [lab](../notebooks/domain-classifier-shift-lab.ipynb) demonstrate both ungrouped and grouped evaluation.
+
+AUC depends on classifier class, feature representation, sample size and validation design. A low AUC does not prove equality; a high AUC does not identify the cause of shift. Group labels must encode meaningful independent spatial/temporal units. The classifier cannot detect concept shift from predictors alone.
+
 ## Scope
 
-This is a method-selection and study-design guide. It does not claim to provide a tested MMD implementation, a spatial permutation engine, a KMM optimiser or a complete AOA implementation. Those are separate implementation targets with different assumptions and validation requirements.
+This remains a method-selection and study-design guide. It does not claim to provide a spatially valid permutation engine, KMM optimiser or complete AOA implementation. Those are separate implementation targets with different assumptions and validation requirements.
 
 
 ## Executable two-sample baselines
