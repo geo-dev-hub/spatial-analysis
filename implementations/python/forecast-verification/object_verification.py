@@ -87,13 +87,27 @@ def match_objects(forecast_objects, observed_objects, field_shape, *,
             area_error=abs(np.log(float(a["area"])/float(b["area"])))
             intensity_error=abs(np.log((float(a["intensity_mean"])+1e-12)/(float(b["intensity_mean"])+1e-12)))
             costs[i,j]=distance_weight*distance+area_weight*area_error+intensity_weight*intensity_error
-    rows,cols=linear_sum_assignment(costs)
+    # Dummy rows/columns allow either side to remain unmatched. Without
+    # them, a forced rectangular assignment can sacrifice a valid low-cost
+    # pair merely to pair a distant object elsewhere.
+    nf,no=len(f),len(o)
+    unmatched_cost=max_match_cost/2.0
+    big_cost=max_match_cost*1e6+1.0
+    padded=np.full((nf+no,nf+no),big_cost,dtype=float)
+    padded[:nf,:no]=costs
+    for i in range(nf):
+        padded[i,no+i]=unmatched_cost
+    for j in range(no):
+        padded[nf+j,j]=unmatched_cost
+    padded[nf:,no:]=0.0
+    rows,cols=linear_sum_assignment(padded)
     matches=[]
     for i,j in zip(rows,cols):
-        distance=np.hypot(f[i]["centroid_x"]-o[j]["centroid_x"],f[i]["centroid_y"]-o[j]["centroid_y"])/diagonal
-        if distance<=max_centroid_distance and costs[i,j]<=max_match_cost:
-            matches.append({"forecast_id":f[i]["id"],"observed_id":o[j]["id"],
-                            "cost":float(costs[i,j]),"normalized_centroid_distance":float(distance)})
+        if i<nf and j<no and costs[i,j]<=max_match_cost:
+            distance=np.hypot(f[i]["centroid_x"]-o[j]["centroid_x"],f[i]["centroid_y"]-o[j]["centroid_y"])/diagonal
+            if distance<=max_centroid_distance:
+                matches.append({"forecast_id":f[i]["id"],"observed_id":o[j]["id"],
+                                "cost":float(costs[i,j]),"normalized_centroid_distance":float(distance)})
     matched_f={m["forecast_id"] for m in matches}; matched_o={m["observed_id"] for m in matches}
     return {"matches":matches,"unmatched_forecast":[x["id"] for x in f if x["id"] not in matched_f],
             "unmatched_observed":[x["id"] for x in o if x["id"] not in matched_o],
