@@ -23,3 +23,12 @@ The sal_verification module computes the amplitude component from domain means, 
 The connected-component object finder is a bounded teaching choice, not a claim of exact parity with the original coherent-object identification. Dry-field edge cases are explicit. See [implementation](sal_verification.py), [tests](test_sal_verification.py) and [lab](../../../notebooks/sal-precipitation-verification-lab.ipynb).
 
 Reference: Wernli, Paulat, Hagen & Frei (2008), “SAL—A Novel Quality Measure for the Verification of Quantitative Precipitation Forecasts,” *Monthly Weather Review*, 136, 4470–4487. https://doi.org/10.1175/2008MWR2415.1
+
+
+## CRPS reliability-resolution-uncertainty decomposition
+
+The `crps_decomposition` module applies the identity CRPS = integral of threshold Brier scores. For each threshold, ensemble exceedance fractions are grouped into forecast-probability bins and the Brier score is decomposed into reliability − resolution + uncertainty. Each term is integrated with trapezoidal quadrature over a supplied or generated threshold grid.
+
+This is a transparent finite-threshold approximation to the CRPS decomposition, not the exact ensemble-bin-width estimator of Hersbach (2000). Report the threshold range and density; use a dense grid and compare the integrated score with the direct empirical-ensemble CRPS. See [implementation](crps_decomposition.py), [tests](test_crps_decomposition.py) and [lab](../../../notebooks/crps-decomposition-lab.ipynb).
+
+Reference: Hersbach (2000), “Decomposition of the Continuous Ranked Probability Score for Ensemble Prediction Systems,” *Weather and Forecasting*, 15, 559–570. https://doi.org/10.1175/1520-0434(2000)015<0559:DOTCRP>2.0.CO;2
