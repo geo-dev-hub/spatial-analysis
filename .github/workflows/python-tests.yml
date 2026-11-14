@@ -94,6 +94,12 @@ jobs:
           - example: line-simplification
             directory: implementations/python/line-simplification
             pythonpath: ""
+          - example: change-point-detection
+            directory: implementations/python/change-point-detection
+            pythonpath: ""
+          - example: potential-field
+            directory: implementations/python/potential-field
+            pythonpath: ""
           - example: polygon-offsetting
             directory: implementations/python/polygon-offsetting
             pythonpath: ""
@@ -416,6 +422,12 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/curves-smoothing-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/forecast-verification-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/forecast-fractions-skill-score-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/line-simplification-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/change-point-detection-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/bspline-nurbs-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/kalman-rts-smoothing-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/bayesian-online-change-point-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/potential-field-derivatives-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks

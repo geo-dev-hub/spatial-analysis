@@ -140,3 +140,17 @@ Further implementation update: polynomial B-spline and rational NURBS evaluation
 
 
 Bayesian online change-point detection has now been added as a bounded conjugate-Gaussian teaching model with run-length posterior, change probabilities, tests and a lab notebook. BEAST remains open.
+
+
+## Additional Section 10 child record — potential-field derivatives
+
+| Source page | Child algorithm / measure | Current treatment | Status |
+|---|---|---|---|
+| 22 | Spectral horizontal derivatives | Fourier differentiation operators on regular grids; exact periodic-cosine test | Implemented / tested candidate |
+| 22 | Spectral first vertical derivative | Radial-wavenumber operator under explicit potential-field sign convention | Implemented / tested candidate |
+| 22 | Analytic-signal amplitude | Derived from x, y and vertical derivatives; synthetic lab | Implemented / tested candidate |
+| 22 | Tilt derivative | atan2(vertical derivative, total horizontal gradient); synthetic lab | Implemented / tested candidate |
+| 22 | Euler / Werner deconvolution | No implementation verified | Open |
+| 22 | Matched filtering / continuation | No implementation verified | Open |
+
+The package assumes a regular grid and periodic FFT boundary conditions. It is not an inversion or source-depth estimator. Technical review and reference-equivalence checks remain pending.
