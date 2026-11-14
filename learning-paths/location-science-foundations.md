@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** Seven distinct facility-location and accessibility models now have scoped lessons, alongside a distributional equity diagnostics lesson; the wider optimisation and mobility path is still being developed.
+**Status:** Six distinct facility-location and accessibility models now have scoped lessons, alongside a distributional equity diagnostics lesson; the wider optimisation and mobility path is still being developed.
 
 ## The question
 
