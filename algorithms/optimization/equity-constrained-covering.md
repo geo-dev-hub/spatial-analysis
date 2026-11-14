@@ -14,22 +14,22 @@ Let I be demand rows, J candidate sites, G mutually exclusive groups, c_ij the t
 
 Let y_j be the binary opening decision and z_i indicate whether demand i is covered by at least one selected site within T.
 
-\[
+$$
 \max \sum_{i\in I}v_i z_i
-\]
+$$
 
 subject to:
 
-\[
+$$
 z_i\leq\sum_{j:c_{ij}\leq T}y_j,\quad z_i,y_j\in\{0,1\},
-\]
+$$
 
-\[
+$$
 \sum_{i\in g}q_i z_i\geq\alpha_g\sum_{i\in g}q_i
 \quad \forall g\in G,
 \qquad
 \sum_{j\in J}y_j\leq p.
-\]
+$$
 
 The model maximises weighted covered demand after requiring every group to meet its declared coverage floor. Population weights q_i define the group coverage denominator. Objective weights v_i define the total benefit. Keep them separate.
 
