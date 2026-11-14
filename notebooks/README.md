@@ -152,3 +152,5 @@ These notebooks are learning materials. For production analysis, check the input
 - [MEXCLP expected-coverage lab](mexclp-lab.ipynb) — vary unit busy probability and inspect how availability changes the best small facility placement.
 
 - [Rasterisation lab](rasterization-lab.ipynb) — compare DDA, Bresenham, Wu anti-aliasing, supercover traversal and scanline polygon fill using the repository's tested teaching implementation.
+
+- [Line clipping lab](line-clipping-lab.ipynb) — compare Cohen–Sutherland, Liang–Barsky and Cyrus–Beck segment clipping on rectangular and convex windows.
