@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 ```
 
-The GitHub Actions workflow runs all eight Python example suites and executes all nine notebooks. It also checks local links on relevant changes. If you change a notebook, run it from top to bottom before opening the pull request; a successful CI run is useful evidence, not a substitute for checking the explanation and assumptions.
+The GitHub Actions workflow runs all seventy-two Python implementation package suites, executes all sixty learning notebooks, checks internal links and runs the Clipper2 C# smoke checks. The exact matrix is maintained in [.github/workflows/python-tests.yml](.github/workflows/python-tests.yml). If you change a notebook, run it from top to bottom before opening the pull request; a successful CI run is useful evidence, not a substitute for checking the explanation and assumptions.
 
 ## Help us keep it trustworthy
 
