@@ -248,3 +248,8 @@ Line clipping update: Nicholl–Lee–Nicholl is now implemented for axis-aligne
 
 
 Schneider fitting update: a piecewise-cubic fitter is now added with chord-length parameterisation, least-squares tangent handles, bounded Newton–Raphson refinement and recursive maximum-error splitting. It is explicitly distinct from Bezier curve evaluation.
+
+
+## Population diversity and segregation update — source page 23
+
+Shannon entropy, Simpson concentration, the Reardon–Firebaugh multigroup entropy index and an areal-unit group exposure matrix are now implemented with tests, derivation, walkthrough and synthetic notebook. The exposure statistic is not distance-weighted; spatially explicit exposure remains a separate task.

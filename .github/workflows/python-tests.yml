@@ -109,6 +109,9 @@ jobs:
           - example: distribution-shift
             directory: implementations/python/distribution-shift
             pythonpath: ""
+          - example: population-diversity
+            directory: implementations/python/population-diversity
+            pythonpath: ""
           - example: polygon-offsetting
             directory: implementations/python/polygon-offsetting
             pythonpath: ""
@@ -435,6 +438,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/change-point-detection-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/bspline-nurbs-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/schneider-bezier-fitting-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/population-diversity-segregation-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/kalman-rts-smoothing-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/bayesian-online-change-point-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/potential-field-derivatives-lab.ipynb
