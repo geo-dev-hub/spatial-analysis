@@ -4,7 +4,7 @@
 - **Source pages:** 9–11
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md) and [pages 11–15](../../source-inventory/pages-11-15.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [The p-median problem](../../algorithms/optimization/p-median.md); [Capacitated p-median](../../algorithms/optimization/capacitated-p-median.md); [Discrete p-center](../../algorithms/optimization/p-center.md); [Location set covering](../../algorithms/optimization/set-covering.md); [Maximal covering location](../../algorithms/optimization/maximal-covering.md); [Two-step floating catchment area](../../algorithms/optimization/two-step-fca.md) (first audited facility-location and accessibility models; remaining entries are still unverified)
+- **Current canonical records:** [The p-median problem](../../algorithms/optimization/p-median.md); [Capacitated p-median](../../algorithms/optimization/capacitated-p-median.md); [Discrete p-center](../../algorithms/optimization/p-center.md); [Location set covering](../../algorithms/optimization/set-covering.md); [Maximal covering location](../../algorithms/optimization/maximal-covering.md); [Backup coverage (r-covering)](../../algorithms/optimization/backup-coverage.md); [Two-step floating catchment area](../../algorithms/optimization/two-step-fca.md) (first audited facility-location and accessibility models; remaining entries are still unverified)
 
 This section brings together optimisation problems, logistics, accessibility, transport planning, human mobility, positioning and robotics. It includes exact optimisation methods, heuristics, models, software, metrics and applied workflows. Keep the problem definition visible: many similarly named methods solve different objectives or operate under different constraints.
 
@@ -88,3 +88,7 @@ The [capacitated p-median lesson](../../algorithms/optimization/capacitated-p-me
 4. Treat GTFS processing and transit routing as data and network workflows with explicit feed versions and service assumptions.
 5. Record temporal resolution, sampling bias and privacy constraints for mobility data.
 6. Verify named software, forecasting architectures and robotics systems against original publications and maintained documentation.
+
+## Backup coverage extension
+
+The [backup-coverage lesson](../../algorithms/optimization/backup-coverage.md) and [Python package](../../implementations/python/backup-coverage/README.md) introduce deterministic r-covering: demand is counted only when at least r distinct selected candidate facilities are within the service threshold. The package includes tests, an intern walkthrough, exercise and executable notebook. This is a redundancy screen, not a reliability probability; shared infrastructure, correlated failures, capacity and queues are outside scope.
