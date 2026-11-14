@@ -215,7 +215,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Water quality | Chlorophyll indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
 | Water quality | Turbidity indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
 | Water quality | Cyanobacteria indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
-| Population | Top-down dasymetric disaggregation | algorithm / model | No dedicated implementation verified | Open |
+| Population | Top-down weighted dasymetric disaggregation | allocation algorithm | `implementations/python/dasymetric-allocation/` normalizes ancillary weights within each source zone, conserves source totals, supports an explicit eligibility mask and tested zero-weight fallback policy; tests, walkthrough and notebook added | Implemented / tested candidate; geometry/ancillary-data and independent accuracy review pending |
 | Population | Bottom-up microcensus estimation | estimator / workflow | No verified implementation | Research required |
 | Population | Building-based population disaggregation | algorithm / model | No verified implementation | Open |
 | Population | Settlement-level population estimation | model / estimator | No verified implementation | Research required |
@@ -280,3 +280,8 @@ Active-learning update: a greedy spatially constrained uncertainty sampler is im
 
 - Strict leave-location-and-time-out (LLTO) now has a tested fold generator, explicit train/test/buffer indices, intern walkthrough and visual notebook. It evaluates joint transfer to unseen location/time combinations; it is not NNDM, kNNDM, rolling-origin forecasting or a distance-buffer design.
 - The sequential privacy accountant now normalizes release names before duplicate detection, preventing whitespace variants from reserving the same named release twice. A regression test covers the collision.
+
+
+## 14 November 2026 — top-down dasymetric allocation
+
+A bounded weighted dasymetric allocation baseline is now implemented. It allocates known source-zone totals to eligible target units using normalized non-negative ancillary weights and checks per-source conservation. The package does not perform polygon overlay or validate the ancillary proxy; bottom-up microcensus, settlement estimation and a full building-based population model remain separate open work.
