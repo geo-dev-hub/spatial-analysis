@@ -9,6 +9,8 @@ def test_gini_equal_unequal_and_zero():
     assert weighted_gini([0, 10]) == pytest.approx(.5)
     assert weighted_gini([0, 0, 10]) == pytest.approx(2/3)
     assert weighted_gini([0, 0, 0]) == 0
+    p, l = weighted_lorenz_curve([0, 0, 0])
+    assert l == pytest.approx(p)
 
 
 def test_weights_equivalent_to_replication():
