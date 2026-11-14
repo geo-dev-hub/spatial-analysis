@@ -127,7 +127,7 @@ After triangulating a simple polygon, ask whether adjacent triangles can be merg
 
 ## Combine shapes with Minkowski sums
 
-The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects convex polygon edge merging with non-convex decomposition and convolution. It also shows how a reflected robot footprint turns collision checking into a configuration-space obstacle. Work through the [Minkowski sum exercise](../exercises/minkowski-sum.md) and compare the identities against a geometry library.
+The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects convex polygon edge merging with non-convex decomposition and convolution. It also shows how a reflected robot footprint turns collision checking into a configuration-space obstacle. Run the [convex Python implementation](../implementations/python/minkowski-convex/README.md) and [visual lab](../notebooks/minkowski-convex-lab.ipynb), then work through the [Minkowski sum exercise](../exercises/minkowski-sum.md). The implementation is intentionally limited to convex rings; compare its exact output with a geometry library before exploring non-convex decomposition or convolution.
 
 ## Read a shape's internal skeleton
 
