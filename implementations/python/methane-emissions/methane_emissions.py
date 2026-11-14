@@ -91,3 +91,50 @@ def cross_sectional_flux(concentration_kg_m3, normal_wind_m_s, segment_width_m):
     if not all(np.all(np.isfinite(a)) for a in (c,u,w)) or np.any(c<0) or np.any(w<=0):
         raise ValueError("concentration must be non-negative, widths positive and all values finite")
     return float(np.sum(c*u*w))
+
+
+
+def hysteresis_plume_segmentation(image, low_threshold, high_threshold, *,
+                                  smooth_sigma=0.0, min_area=1, connectivity=8):
+    """Segment connected plume regions using low/high hysteresis thresholds.
+
+    A low-threshold connected component is retained only when it contains at
+    least one high-threshold seed pixel. Thresholds are applied to the
+    optionally Gaussian-smoothed enhancement field, while reported intensity
+    attributes use the original field.
+    """
+    from scipy.ndimage import gaussian_filter, label
+    data=_finite_array(image,"image")
+    low=float(low_threshold); high=float(high_threshold); sigma=float(smooth_sigma)
+    if not np.all(np.isfinite([low,high,sigma])) or low<0 or high<low or sigma<0:
+        raise ValueError("thresholds must be finite with 0 <= low <= high and sigma >= 0")
+    if not isinstance(min_area,(int,np.integer)) or min_area<1:
+        raise ValueError("min_area must be a positive integer")
+    if connectivity not in (4,8):
+        raise ValueError("connectivity must be 4 or 8")
+    smoothed=gaussian_filter(data,sigma=sigma,mode="nearest") if sigma>0 else data
+    structure=np.array([[0,1,0],[1,1,1],[0,1,0]],dtype=int) if connectivity==4 else np.ones((3,3),dtype=int)
+    low_mask=smoothed>=low
+    high_mask=smoothed>=high
+    raw_labels,count=label(low_mask,structure=structure)
+    labels=np.zeros(data.shape,dtype=int)
+    objects=[]
+    for old_id in range(1,count+1):
+        region=raw_labels==old_id
+        if not np.any(high_mask & region):
+            continue
+        rows,cols=np.where(region)
+        if rows.size<min_area:
+            continue
+        values=data[rows,cols]
+        new_id=len(objects)+1
+        labels[region]=new_id
+        objects.append({"id":new_id,"area":int(rows.size),
+                        "centroid_x":float(cols.mean()),"centroid_y":float(rows.mean()),
+                        "enhancement_sum":float(values.sum()),
+                        "enhancement_mean":float(values.mean()),
+                        "enhancement_max":float(values.max()),
+                        "contains_high_threshold_seed":True})
+    return {"mask":labels>0,"labels":labels,"objects":objects,
+            "smoothed_image":smoothed,"low_threshold":low,
+            "high_threshold":high,"connectivity":connectivity}
