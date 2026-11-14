@@ -34,3 +34,8 @@ Run `python -m pip install -r requirements.txt` and `python -m pytest -q`.
 ## Gaussian column-plume inversion
 
 A fixed-geometry, vertically integrated Gaussian model now estimates a non-negative emission rate and constant column background from a retrieved enhancement raster. The source location, wind aligned with the x-axis, wind speed, initial lateral spread and dispersion-growth coefficient are supplied inputs. It does not localise a source or retrieve atmospheric variables. See the [algorithm walkthrough](gaussian-plume-inversion-walkthrough.md), [implementation](gaussian_plume_inversion.py), [tests](test_gaussian_plume_inversion.py) and [synthetic inversion lab](../../../notebooks/gaussian-plume-inversion-lab.ipynb). Synthetic recovery is not operational validation.
+
+
+## Hysteresis plume segmentation
+
+The `hysteresis_plume_segmentation` routine optionally smooths the retrieved enhancement field, labels connected components above a low threshold, and retains only components containing at least one high-threshold seed. This is useful for preserving connected weak plume tails while discarding isolated low-enhancement patches. Component attributes are measured on the original, unsmoothed input. The method is threshold- and connectivity-sensitive; it does not distinguish plume from structured background without additional physical or contextual information. See [tests](test_methane_emissions.py) and [lab](../../../notebooks/methane-plume-detection-and-flux-lab.ipynb).
