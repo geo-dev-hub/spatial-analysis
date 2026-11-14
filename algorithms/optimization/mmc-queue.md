@@ -102,7 +102,7 @@ For a real service plan, estimate arrival and service rates from appropriately s
 
 ## References
 
-- Erlang, A. K. (1917), “Solution of some problems in the theory of probabilities of significance in automatic telephone exchanges,” *The Post Office Electrical Engineers' Journal*, 10, 189–197.
+- Erlang, A. K. (1917), “Solution of some problems in the theory of probabilities of significance in automatic telephone exchanges,” originally published in *Elektroteknikeren*, 13, 5–13. English translation: *The Post Office Electrical Engineers' Journal*, 10 (1918), 189–197.
 - Gross, D., Shortle, J. F., Thompson, J. M. and Harris, C. M. (2008), *Fundamentals of Queueing Theory*, 4th ed., Wiley.
 - Janssen, A. J. E. M., van Leeuwaarden, J. S. H. and Zwart, B. (2011), “A lower bound for the Erlang C formula in the Halfin–Whitt regime,” *Queueing Systems*, 68, 361–363. https://doi.org/10.1007/s11134-011-9244-z
 
