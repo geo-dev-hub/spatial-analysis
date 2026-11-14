@@ -71,6 +71,31 @@ All preprocessing that learns from data must be fitted within each training fold
 9. Baselines and metrics, including variation across folds.
 10. Geographic performance gaps and areas outside the training data's applicability.
 
+
+## Prediction-oriented validation: NNDM and kNNDM
+
+Spatial blocking and buffering are not universal upgrades over random cross-validation. They answer a particular question: how well does a model transfer when test observations are geographically separated from training observations? If the actual task is to interpolate across a mapped area, forcing every test point to be distant from training data can create a harder prediction problem than the map itself requires.
+
+Milà et al. (2022) proposed **nearest-neighbour distance matching (NNDM) leave-one-out cross-validation** for map validation. Instead of imposing one fixed separation rule, NNDM seeks to match the distribution of nearest-neighbour distances from prediction locations to training locations with the corresponding distribution from held-out test locations to training locations. The prediction area and the observed sampling pattern therefore become part of the validation design.
+
+Linnenbrink et al. (2024) extended this idea to **k-fold NNDM (kNNDM)**. It searches for a k-fold configuration whose empirical distribution of test-to-training nearest-neighbour distances resembles the prediction-to-training distance distribution. The authors report similar accuracy-estimation behaviour to NNDM in their experiments, with substantially lower computation time for their large clustered-data example. That result is evidence for the studied settings, not a universal speed or accuracy guarantee.
+
+These methods are not interchangeable with spatial blocks:
+
+| Design | Main construction | Question it can help answer | Important limitation |
+|---|---|---|---|
+| Random k-fold / LOO | Randomly partition observations | Performance when test observations resemble the sampled locations and dependence is not causing leakage | Can be optimistic with clustered samples or strong spatial dependence |
+| Spatial block k-fold | Hold out whole geographic blocks | Transfer to spatially separated groups or regions | May overstate error for interpolation within the sampled prediction area |
+| Buffered LOO | Hold out one observation and remove nearby training observations | Transfer beyond a chosen separation radius | Radius choice is consequential; may discard much training data |
+| NNDM LOO | Match test-to-training nearest-neighbour distance distribution to prediction-to-training distances | Map accuracy for a defined prediction area under the method's assumptions | LOO computation can be expensive; distance matching ignores direction and can miss anisotropy or nonstationarity |
+| kNNDM | Find k folds that approximate the same distance-distribution match | Prediction-oriented map validation at larger sample sizes | Fold search and match quality require diagnostics; it is not a universal replacement for probability-sample validation |
+
+**Do not choose the method by which gives the highest score.** First define the prediction area, sampling pattern and deployment task. Then inspect the training-to-test distance distributions, covariate-space novelty, residual dependence, fold sizes and geographic coverage. If a probability sample and design-based accuracy assessment are feasible for the map population, cross-validation is not automatically a substitute.
+
+For NNDM, the paper discusses limitations of relying on geographical distance alone: distance distributions do not encode direction, and they do not guarantee that training and prediction covariate distributions are comparable. Anisotropy, nonstationarity and covariate shift therefore still require explicit checks. kNNDM inherits the prediction-oriented distance-matching idea; its folds should be inspected rather than accepted as an opaque score-generating procedure.
+
+A maintained implementation is available in the R package `blockCV` (`cv_nndm`), and the kNNDM method is also documented by its authors and in the package ecosystem. Treat software behaviour as version-specific: cite the package version and record its parameters in any reproducible analysis.
+
 ## Practical lab
 
 - [Python spatial block and buffered-fold implementation](../implementations/python/spatial-cross-validation/README.md)
@@ -83,6 +108,6 @@ The implementation provides a deterministic grid-block split for compact planar 
 - Roberts, D. R. et al. (2017). Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. *Ecography*, 40, 913–929. https://doi.org/10.1111/ecog.02881
 - Valavi, R. et al. (2019). blockCV: An R package for generating spatially or environmentally separated folds for k-fold cross-validation of species distribution models. *Methods in Ecology and Evolution*, 10, 225–232. https://doi.org/10.1111/2041-210X.13107
 - Meyer, H. et al. (2018). Improving performance of spatio-temporal machine learning models using forward feature selection and target-oriented validation. *Environmental Modelling & Software*, 101, 1–9. https://doi.org/10.1016/j.envsoft.2017.12.001
-- Li, W. et al. (2024). GeoAI for Science and the Science of GeoAI. *Journal of Spatial Information Science*, 29, 1–17. https://doi.org/10.5311/JOSIS.2024.29.349
+- Milà, C., Mateu, J., Pebesma, E. and Meyer, H. (2022). Nearest neighbour distance matching Leave-One-Out Cross-Validation for map validation. *Methods in Ecology and Evolution*, 13(6), 1304–1316. https://doi.org/10.1111/2041-210X.13851\n- Linnenbrink, J., Milà, C., Ludwig, M. and Meyer, H. (2024). kNNDM CV: k-fold nearest-neighbour distance matching cross-validation for map accuracy estimation. *Geoscientific Model Development*, 17, 5897–5912. https://doi.org/10.5194/gmd-17-5897-2024\n- Li, W. et al. (2024). GeoAI for Science and the Science of GeoAI. *Journal of Spatial Information Science*, 29, 1–17. https://doi.org/10.5311/JOSIS.2024.29.349
 
 Passing the code tests proves the splitter contract, not the suitability of a split for a particular study.
