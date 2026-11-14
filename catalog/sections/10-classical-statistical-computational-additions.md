@@ -14,7 +14,7 @@ The source describes these as further methods not listed in sections 1–9. Seve
 |---|---|---:|--- |
 | Line and polygon rasterization: Bresenham, DDA, Wu's anti-aliased line, scanline polygon fill, supercover lines | Rasterization algorithms | 21 | Not checked — intake only |
 | Line clipping: Cohen-Sutherland, Liang-Barsky, Cyrus-Beck, Nicholl-Lee-Nicholl | Line clipping algorithms | 21 | Not checked — intake only |
-| Line simplification variants: Reumann-Witkam, Lang, Opheim, Zhao-Saalfeld, [Visvalingam–Whyatt](../../algorithms/geometry/simplification.md) | Simplification algorithms / variants | 21 | Partial — related record exists; source-entry review pending |
+| Line simplification variants: Reumann-Witkam, Lang, Opheim, Zhao-Saalfeld, [Visvalingam–Whyatt](../../algorithms/geometry/simplification.md) ([selected bibliography check](../selected-verification-notes.md)) | Simplification algorithms / variants | 21 | Partial — related record exists; source-entry review pending |
 | Curves and smoothing: Chaikin corner cutting, Catmull-Rom, B-splines, NURBS, Bezier fitting (Schneider), Kalman and RTS smoothers | Curve construction / smoothing and filtering methods | 21 | Not checked — intake only |
 | Geodesics on meshes: MMP exact geodesics, Chen-Han, fast marching on triangle meshes | Mesh geodesic algorithms / numerical methods | 21 | Not checked — intake only |
 | Spherical and discrete global grids: ISEA3H, rHEALPix, DGGRID, hierarchical triangular mesh (HTM), hexagonal grid operations | Global grid systems / indexing structures / grid operations | 21 | Not checked — intake only |
