@@ -69,7 +69,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Point-pattern analysis
 
 - [Clark–Evans lab](clark-evans-lab.ipynb): compare nearest-neighbour spacing in clustered, random and regular synthetic patterns.
-- [Ripley's K and L lab](ripley-k-lab.ipynb): compare uncorrected pair-count summaries with the homogeneous Poisson reference across distance scales.
+- [Ripley's K and L lab](ripley-k-lab.ipynb): compare uncorrected and translation-corrected summaries, pointwise conditional-CSR envelopes and a global studentised maximum-deviation test.
 
 - [Point-pattern KDE lab](point-pattern-kde-lab.ipynb): compare Gaussian bandwidths and weighted event intensity on a synthetic point pattern.
 
