@@ -137,3 +137,6 @@ A successful automated run means the tests in the repository passed in that envi
 The canonical lesson explains the problem and method. The implementation shows one concrete way to put it into practice. Tests make expected behaviour explicit. The walkthrough explains how the code is built and why. A notebook is added when changing values or inspecting intermediate results makes the idea easier to learn.
 
 These are connected teaching materials, not interchangeable copies of the same explanation.
+
+
+- [Geodetic, ECEF and local ENU](python/ecef-enu/README.md) — convert between geodetic coordinates, Earth-centred Cartesian coordinates and a local tangent frame, with a published EPSG reference test.
