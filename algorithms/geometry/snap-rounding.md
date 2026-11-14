@@ -31,6 +31,7 @@ The geometric sequence is:
 
 This means a segment can acquire a new vertex even if that point was not an endpoint in the input. The new vertex is introduced so that the rounded arrangement records the influence of the original arrangement vertex.
 
+~~~mermaid
 flowchart TD
     A["Input segments at original precision"] --> B["Find endpoints and segment intersections"]
     B --> C["Map arrangement vertices to grid cells"]
@@ -38,6 +39,7 @@ flowchart TD
     D --> E["Find every segment that intersects a hot pixel"]
     E --> F["Order hot-pixel centres along each segment"]
     F --> G["Build snapped polylines and noded edges"]
+~~~
 
 ## 3. The geometric model
 
