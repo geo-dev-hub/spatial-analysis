@@ -64,7 +64,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Extend network routing with contraction hierarchies, non-FIFO routing, transit algorithms and multimodal transfers.
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
-- [x] Add a spatial cross-validation lesson and tested grid-block/buffered-fold baseline with an intern walkthrough; keep block-size selection and deployment-specific design as explicit research decisions.
+- [x] Add a spatial cross-validation lesson and tested grid-block/buffered-fold baseline with an intern walkthrough; keep block-size selection and deployment-specific design as explicit research decisions.\n- [x] Add a line-clipping method lesson comparing Cohen–Sutherland, Liang–Barsky and Cyrus–Beck, with parameter derivations, worked example, numeric contracts and test plan; implementation remains open.\n- [x] Add a rasterization method lesson distinguishing DDA, Bresenham, Wu, scanline fill, supercover traversal and fractional coverage; implementation remains open.
 - [x] Add a masked-autoencoding method lesson and tested NumPy patch masking/restoration baseline with an intern walkthrough; do not present it as a trained foundation model.
 - [x] Add a seven-parameter Helmert Position Vector lesson and tested geocentric XYZ implementation, including a published IOGP example and inverse-transform tests.
 - [x] Add an affine georeferencing lesson and tested least-squares control-point fit, including rank checks, residual diagnostics and pixel-coordinate convention notes.
