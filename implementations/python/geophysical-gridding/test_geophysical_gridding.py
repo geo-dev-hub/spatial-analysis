@@ -58,3 +58,42 @@ def test_thin_plate_spline_rejects_collinear_samples():
     from geophysical_gridding import thin_plate_spline_grid
     with pytest.raises(ValueError, match="non-degenerate"):
         thin_plate_spline_grid([[0, 0], [1, 1], [2, 2]], [0, 1, 2], [0, 1], [0, 1])
+
+
+def test_ordinary_kriging_reproduces_constant_mean_without_nugget():
+    from geophysical_gridding import ordinary_kriging_grid
+    p = np.array([[0, 0], [1, 0], [0, 1], [1, 1]], dtype=float)
+    v = np.full(4, 7.5)
+    result = ordinary_kriging_grid(p, v, [0, .5, 1], [0, .5, 1], range_=2, sill=3)
+    np.testing.assert_allclose(result["prediction"], 7.5, atol=1e-10)
+    assert np.all(result["variance"] >= 0)
+    assert result["variance"].shape == (3, 3)
+
+
+def test_ordinary_kriging_interpolates_sample_nodes_when_nugget_is_zero():
+    from geophysical_gridding import ordinary_kriging_grid
+    p = np.array([[0, 0], [2, 0], [0, 2], [2, 2]], dtype=float)
+    v = np.array([1, 5, -5, -1], dtype=float)
+    result = ordinary_kriging_grid(p, v, [0, 2], [0, 2], range_=3, sill=2)
+    np.testing.assert_allclose(result["prediction"], v.reshape(2, 2), atol=1e-9)
+    assert np.max(result["variance"]) < 1e-8
+
+
+def test_ordinary_kriging_returns_nonnegative_variance_with_nugget():
+    from geophysical_gridding import ordinary_kriging_grid
+    result = ordinary_kriging_grid(POINTS, VALUES, [.5, 1], [.5, 1], range_=2, sill=3, nugget=.2)
+    assert np.all(np.isfinite(result["prediction"]))
+    assert np.all(result["variance"] >= 0)
+
+
+@pytest.mark.parametrize("range_,sill,nugget", [(0, 1, 0), (1, 0, 0), (1, 1, -1), (float("nan"), 1, 0)])
+def test_ordinary_kriging_rejects_invalid_covariance_parameters(range_, sill, nugget):
+    from geophysical_gridding import ordinary_kriging_grid
+    with pytest.raises(ValueError):
+        ordinary_kriging_grid(POINTS, VALUES, [0, 1], [0, 1], range_, sill, nugget)
+
+
+def test_ordinary_kriging_rejects_single_sample():
+    from geophysical_gridding import ordinary_kriging_grid
+    with pytest.raises(ValueError):
+        ordinary_kriging_grid([[0, 0]], [1], [0], [0], 1, 1)
