@@ -28,8 +28,8 @@ def bayesian_online_changepoint(values,hazard,observation_variance,prior_mean=0.
     for y in data:
         prior_predictive=_log_normal_pdf(y,prior_mean,observation_variance+prior_variance)
         cp_log=_logsumexp([log(p)+log(hazard)+prior_predictive for p in run_probs if p>0])
-        growth_logs=[log(p)+log1p(-hazard)+_log_normal_pdf(y,m,observation_variance+v)
-                     for p,m,v in zip(run_probs,means,variances) if p>0]
+        growth_logs=[(log(p) if p>0 else float("-inf"))+log1p(-hazard)+_log_normal_pdf(y,m,observation_variance+v)
+                     for p,m,v in zip(run_probs,means,variances)]
         log_masses=[cp_log]+growth_logs
         normalizer=_logsumexp(log_masses)
         run_probs=[exp(x-normalizer) for x in log_masses]

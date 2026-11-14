@@ -53,8 +53,9 @@ def pelt_mean(values,penalty,min_size=2):
         if not eligible:continue
         options=[(best[s]+_sse(sums,squares,s,end)+penalty,s) for s in eligible]
         best[end],previous[end]=min(options)
-        candidates=[s for s in eligible if best[s]+_sse(sums,squares,s,end)<=best[end]+1e-12]
-        candidates.append(end)
+        not_yet_eligible=[s for s in candidates if end-s<min_size]
+        pruned=[s for s in eligible if best[s]+_sse(sums,squares,s,end)<=best[end]+1e-12]
+        candidates=not_yet_eligible+pruned+[end]
     if previous[n]<0:return []
     changes=[];end=n
     while end>0:
