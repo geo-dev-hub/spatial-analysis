@@ -12,27 +12,27 @@ The p-center problem minimizes the maximum service cost. It is a minimax objecti
 
 Let I be demand locations, J candidate sites, d_ij the cost from demand i to site j, and p the required number of facilities. Let x_j indicate an opened site, y_ij assign demand i to site j, and R be the maximum assignment cost.
 
-[
+$$
 \min R
-]
+$$
 
 subject to:
 
-[
+$$
 \sum_{j\in J} y_{ij}=1 \quad \forall i\in I,
 \qquad
 y_{ij}\le x_j \quad \forall i,j,
-]
+$$
 
-[
+$$
 \sum_{j\in J}x_j=p,
 \qquad
 \sum_{j\in J}d_{ij}y_{ij}\le R \quad \forall i,
-]
+$$
 
-[
+$$
 x_j,y_{ij}\in\{0,1\}, \quad R\ge0.
-]
+$$
 
 For any chosen facility set, assigning each demand to its nearest open facility minimizes the worst assignment cost for that set. The small-instance implementation therefore enumerates facility sets and computes the maximum of the nearest-site costs.
 
@@ -46,7 +46,7 @@ The p-center objective is sensitive to outliers and the definition of the demand
 
 ## Exact small-instance baseline
 
-The [Python package](../../implementations/python/p-center/README.md) enumerates all (inom{|J|}{p}) candidate sets. For each set it assigns every demand point to its least-cost open facility and evaluates the largest resulting cost.
+The [Python package](../../implementations/python/p-center/README.md) enumerates all \(\binom{|J|}{p}\) candidate sets. For each set it assigns every demand point to its least-cost open facility and evaluates the largest resulting cost.
 
 This is exact and transparent for small instances, but combinatorial in the number of candidate sites. It is not a large-scale optimization solver.
 
