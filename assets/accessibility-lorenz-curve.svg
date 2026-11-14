@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" role="img" aria-labelledby="title desc">
+<title id="title">How to read a Lorenz curve</title>
+<desc id="desc">A square plot with cumulative population share on the horizontal axis and cumulative accessibility share on the vertical axis. A dashed diagonal marks equality and a bowed curve illustrates an unequal distribution.</desc>
+<rect width="760" height="470" fill="#ffffff"/>
+<text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#222">Reading a Lorenz curve</text>
+<g transform="translate(100 70)">
+<rect x="0" y="0" width="360" height="300" fill="#fafafa" stroke="#444" stroke-width="1.5"/>
+<g stroke="#e3e3e3" stroke-width="1">
+<path d="M90 0V300 M180 0V300 M270 0V300 M0 75H360 M0 150H360 M0 225H360"/>
+</g>
+<path d="M0 300 L360 0" fill="none" stroke="#555" stroke-width="2.5" stroke-dasharray="8 6"/>
+<path d="M0 300 C85 292 145 265 205 220 S315 95 360 0" fill="none" stroke="#b85c38" stroke-width="5" stroke-linecap="round"/>
+<g font-family="Arial, sans-serif" font-size="13" fill="#444" text-anchor="middle">
+<text x="0" y="322">0</text><text x="90" y="322">25</text><text x="180" y="322">50</text><text x="270" y="322">75</text><text x="360" y="322">100%</text>
+<text x="-15" y="304" text-anchor="end">0</text><text x="-15" y="229" text-anchor="end">25</text><text x="-15" y="154" text-anchor="end">50</text><text x="-15" y="79" text-anchor="end">75</text><text x="-15" y="5" text-anchor="end">100%</text>
+</g>
+<text x="180" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#222">Cumulative population share</text>
+<text transform="translate(-66 150) rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#222">Cumulative accessibility share</text>
+</g>
+<g transform="translate(500 125)" font-family="Arial, sans-serif" fill="#333">
+<path d="M0 0H52" stroke="#555" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="64" y="5" font-size="15">Equal distribution</text>
+<path d="M0 42H52" stroke="#b85c38" stroke-width="5" stroke-linecap="round"/>
+<text x="64" y="47" font-size="15">Illustrative inequality</text>
+<text x="0" y="100" font-size="15" font-weight="700">How to interpret it</text>
+<text x="0" y="128" font-size="14">1. Sort people from lowest</text>
+<text x="18" y="148" font-size="14">to highest access.</text>
+<text x="0" y="181" font-size="14">2. Accumulate population</text>
+<text x="18" y="201" font-size="14">and accessibility shares.</text>
+<text x="0" y="234" font-size="14">3. More bowing means</text>
+<text x="18" y="254" font-size="14">greater relative inequality.</text>
+</g>
+<text x="100" y="440" font-family="Arial, sans-serif" font-size="12" fill="#666">Conceptual diagram only — not a measured city or dataset.</text>
+</svg>
