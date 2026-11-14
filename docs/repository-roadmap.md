@@ -346,3 +346,5 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - [x] Recount the current CI configuration: 78 Python package suites and 70 notebook executions, plus internal-link and Clipper2 checks. The previous full validation on commit 0327318 passed; the newer catalogue/formula batch still requires a full-head run.
 
 - [x] Add a mesh-geodesics research guide comparing MMP, Chen–Han and fast marching on triangulated domains; implementation remains open.
+
+- [x] Add a discrete-global-grid guide comparing ISEA3H, rHEALPix and HTM, and distinguish DGGRID software from grid definitions; implementation remains open.
