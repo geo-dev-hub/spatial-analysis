@@ -69,7 +69,30 @@ Rearrangement produces a linear least-squares system for source coordinates \((x
 
 Euler estimates are not unique geological answers. They can be unstable when the structural index is wrong, regional field is not removed, sources overlap, the window is poorly conditioned or derivative noise dominates. Inspect residuals and solution stability across window sizes and structural indices.
 
-## 6. Grid and boundary assumptions
+## 6. Werner 2D thin-dike deconvolution
+
+The basic Werner thin-dike profile model is
+
+\[
+F(x)=\frac{A h+B(x-x_0)}{(x-x_0)^2+h^2},
+\]
+
+where \(x_0\) is the horizontal position above the top of the sheet and \(h\) is the depth to its top. Multiplying through and expanding gives a linear system:
+
+\[
+x^2F=a_0+a_1x+b_0F+b_1xF,
+\]
+
+with \(x_0=b_1/2\), \(h=\sqrt{-b_0-x_0^2}\), \(B=a_1\), and \(A=(a_0+a_1x_0)/h\). The implementation solves an overdetermined system in moving windows (seven samples by default), centers/scales the profile coordinate for conditioning, and records rejected windows, condition numbers and profile RMSE.
+
+This is a bounded single-thin-dike baseline. It expects a residual profile with regional background removed and assumes a level observation plane and a 2D sheet-like source. It does not include the thick-interface horizontal-gradient transformation, polynomial interference terms, multi-source clustering, upward-continuation scale loops, remanence modelling or Marquardt nonlinear refinement. A and B are model coefficients, not susceptibility estimates without the field/orientation physics.
+
+- [Werner implementation](../implementations/python/potential-field/werner_deconvolution.py)
+- [Tests](../implementations/python/potential-field/test_werner_deconvolution.py)
+- [Walkthrough](../implementations/python/potential-field/werner-deconvolution-walkthrough.md)
+- [Synthetic recovery lab](../notebooks/werner-deconvolution-lab.ipynb)
+
+## 7. Grid and boundary assumptions
 
 The FFT operations assume a regular, uniformly spaced Cartesian grid and periodic boundaries. Edge mismatch creates spectral ringing. Pad and taper where appropriate, compare edge treatments and inspect borders. Do not apply these operators to geographic degrees without a suitable projection or local metric treatment.
 
@@ -88,5 +111,7 @@ The FFT operations assume a regular, uniformly spaced Cartesian grid and periodi
 - Nabighian, M. N. (1972). The analytic signal of two-dimensional magnetic bodies with polygonal cross-section: its properties and use for automated anomaly interpretation. *Geophysics*, 37(3), 507–517.
 - Miller, H. G., and Singh, V. (1994). Potential field tilt—a new concept for location of potential field sources. *Journal of Applied Geophysics*, 32, 213–217.
 - Blakely, R. J. (1995). *Potential Theory in Gravity and Magnetic Applications*. Cambridge University Press.
+- Werner, S. (1953). Original thin-dike formulation, as reproduced in later Werner-deconvolution literature.
+- Ku, C. C. & Sharp, J. A. (1983). Werner deconvolution for automated magnetic interpretation and its refinement using Marquardt's inverse modeling. *Geophysics*, 48(6), 754–774. https://doi.org/10.1190/1.1441505.
 
-**Scope:** the package provides regular-grid spectral attributes, upward continuation, regularised downward continuation and a windowed Euler solver. Werner deconvolution, potential-field matched filtering, and full gravity/magnetic inversion remain open algorithm tasks. The Euler solver is a model-dependent source-location estimate, not a complete inversion.
+**Scope:** the package provides regular-grid spectral attributes, upward continuation, regularised downward continuation, windowed Euler deconvolution and a bounded single-thin-dike Werner solver. Potential-field matched filtering and full gravity/magnetic inversion remain open algorithm tasks. The Euler solver is a model-dependent source-location estimate, not a complete inversion.
