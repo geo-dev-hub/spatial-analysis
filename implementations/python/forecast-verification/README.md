@@ -7,7 +7,8 @@ Implemented:
 - probability of detection (POD), false alarm ratio (FAR), false-positive rate, critical success index (CSI) and equitable threat score (ETS);
 - Brier score and Brier skill score against an explicitly supplied reference forecast;
 - reliability-bin summaries with empty bins retained;
-- empirical ROC AUC using average ranks for tied scores.
+- empirical ROC AUC using average ranks for tied scores;
+- a separate regular-grid Fractions Skill Score (FSS) baseline with explicit edge policies.
 
 Run tests from this directory:
 
@@ -24,7 +25,7 @@ Undefined ratios return `None`, not zero. ROC AUC returns `None` if either obser
 
 ## Explicit limits
 
-This package does not implement CRPS, ensemble rank histograms, Fractions Skill Score, SAL or MODE. It does not handle multi-category events, censoring, missing-value masks, spatial neighbourhoods, temporal dependence, confidence intervals or forecast-threshold selection. The scores are not a complete verification report: stratification, sample sizes, uncertainty and a defensible held-out design remain the analyst's responsibility.
+The package does not implement CRPS, ensemble rank histograms, SAL or MODE. The separate FSS module is limited to regular 2D grids and square neighbourhoods. It does not handle multi-category events, censoring, missing-value masks, spatial neighbourhoods, temporal dependence, confidence intervals or forecast-threshold selection. The scores are not a complete verification report: stratification, sample sizes, uncertainty and a defensible held-out design remain the analyst's responsibility.
 
 These are transparent teaching implementations, not a substitute for a domain-validated operational verification system.
 
