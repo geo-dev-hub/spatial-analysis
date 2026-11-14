@@ -49,7 +49,8 @@ For observations (tᵢ,yᵢ), the Theil–Sen slope is the median of all pairwis
 
 $$
 \hat\beta_1=
-\operatorname{median}_{i<j,\ t_i\ne t_j}
+\operatorname{median}_{i<j,\ t_i
+e t_j}
 \left(\frac{y_j-y_i}{t_j-t_i}\right).
 $$
 
@@ -87,7 +88,11 @@ Use it as a single-break diagnostic, with attention to trend removal, autocorrel
 
 These estimators and tests have different assumptions. In particular, Theil–Sen is a point estimator, Pettitt's null calibration assumes independent observations, and STL assumes regularly sampled observations. None automatically handles spatial dependence or sensor-induced artefacts.
 
-## Executable ARIMA/SARIMA package\n\nA [statsmodels-backed wrapper](../implementations/python/arima-forecasting/README.md) fits specified non-seasonal and seasonal orders, returning fitted values, forecasts, model confidence intervals, AIC/BIC and convergence status. It does not automate order selection or residual diagnostics; rolling-origin evaluation and naïve baselines remain essential.\n\n## 5. ARIMA: model temporal dependence
+## Executable ARIMA/SARIMA package
+
+A [statsmodels-backed wrapper](../implementations/python/arima-forecasting/README.md) fits specified non-seasonal and seasonal orders, returning fitted values, forecasts, model confidence intervals, AIC/BIC and convergence status. It does not automate order selection or residual diagnostics; rolling-origin evaluation and naïve baselines remain essential.
+
+## 5. ARIMA: model temporal dependence
 
 An autoregressive integrated moving-average model combines differencing, autoregression and moving-average terms. In backshift notation, a non-seasonal ARIMA(p,d,q) can be written as
 
