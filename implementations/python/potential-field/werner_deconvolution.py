@@ -23,7 +23,7 @@ def werner_deconvolution_windows(x, anomaly, *, window_size=7, step=1,
         F(x) = [A h + B (x - x0)] / [(x - x0)^2 + h^2].
     Rearrangement gives
         x^2 F = a0 + a1 x + b0 F + b1 x F,
-    where x0=b1/2, h=sqrt(-b0-x0^2), B=a1 and A=(a0+A?)/h.
+    where x0=b1/2, h=sqrt(-b0-x0^2), B=a1 and A=(a0+a1*x0)/h.
     Coordinates are centered and scaled within each window before solving to
     improve numerical conditioning; recovered positions/depths are returned
     in the original coordinate units.
