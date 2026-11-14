@@ -111,3 +111,10 @@ The companion package now includes candidate-site selection with a Gaussian-proc
 - [Implementation and tests](../implementations/python/adaptive-sampling/README.md)
 - [GP-UCB walkthrough](../implementations/python/adaptive-sampling/bayesian-optimization-walkthrough.md)
 - [Lab](../notebooks/gp-ucb-spatial-survey-lab.ipynb)
+
+
+## UCB1 baseline for survey-arm selection
+
+A generic UCB1 implementation now accompanies the GP-UCB spatial candidate selector. It simulates independent stationary reward arms and uses the classical empirical-mean plus exploration-bound rule. It is useful as a baseline for survey allocation, but it does not model spatial correlation between sites; a spatial bandit requires a contextual or correlated reward model.
+
+- [UCB1 implementation and tests](../implementations/python/adaptive-sampling/ucb1.py)

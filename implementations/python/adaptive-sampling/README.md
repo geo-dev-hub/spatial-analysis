@@ -9,3 +9,6 @@ The GP-UCB baseline assumes an isotropic stationary RBF kernel, known hyperparam
 The adaptive cluster sampler returns the realised sample set, not a population estimator. Valid inclusion probabilities and estimators depend on the initial probability-sampling design and adaptive network structure.
 
 Run python -m pip install -r requirements.txt and python -m pytest -q.
+
+
+The package also includes generic UCB1 for independent stationary reward arms. This is a bandit baseline for comparing survey-site reward strategies; it does not model spatial correlation between candidate locations.

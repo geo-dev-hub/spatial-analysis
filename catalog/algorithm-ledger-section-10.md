@@ -94,7 +94,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Spatial validation | blockCV | External R package / method reference, not a Python algorithm to clone | Research / lesson only |
 | Spatial validation | Spatial + temporal leave-out | Guide-level discussion; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Bayesian optimisation on spatial fields | GP-UCB candidate-site selection with stationary RBF GP, tests, walkthrough and notebook added | Implemented / tested candidate; hyperparameter and spatial-model review pending |
-| Adaptive sampling | Multi-armed bandits for survey design | Family guide only; no matching implementation verified | Research / lesson only |
+| Adaptive sampling | Multi-armed bandits for survey design | Generic UCB1 simulator and tests added; independent stationary arms only | Implemented / tested candidate; spatially correlated reward modelling remains open |
 | Adaptive sampling | Adaptive cluster sampling | Network expansion from initial sample, tests, walkthrough and notebook added; estimator/inclusion probabilities remain separate | Implemented / tested candidate; design-based estimator review pending |
 | Adaptive sampling | Active learning for map validation | Family guide only; no matching implementation verified | Research / lesson only |
 | Distribution shift | Kernel two-sample tests / MMD | Unbiased Gaussian-kernel MMD, tests, walkthrough and notebook added | Implemented / tested candidate; spatial null design remains open |
@@ -262,3 +262,6 @@ Adaptive sampling update: adaptive cluster-sample network expansion is now imple
 
 
 Bayesian optimisation update: GP-UCB candidate-site selection is now implemented with a fixed-hyperparameter isotropic RBF Gaussian process. This is a bounded baseline; nonstationary kernels, barriers, costs, batch acquisition and model fitting remain open.
+
+
+Bandit update: generic UCB1 selection and a stationary Gaussian-arm simulator are implemented and tested. It is not a spatially correlated bandit; contextual/spatial reward models remain open.
