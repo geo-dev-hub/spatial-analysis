@@ -37,3 +37,20 @@ def test_rejects_invalid_parameters_and_frames():
     with pytest.raises(ValueError): dis(a,a,preset="unknown")
     with pytest.raises(ValueError): dis(a,a,patch_stride=0)
     with pytest.raises(ValueError): farneback(np.zeros((4,4)),np.zeros((4,4)))
+
+
+def test_tvl1_recovers_translation_direction_and_shape():
+    a,b=translated_pair()
+    from dense_optical_flow import tvl1
+    result=tvl1(a,b,num_warp=5,num_iter=20)
+    region=np.s_[20:-20,20:-20]
+    assert result["u"].shape==a.shape and result["v"].shape==a.shape
+    assert np.nanmedian(result["u"][region])==pytest.approx(3,abs=1.5)
+    assert np.nanmedian(result["v"][region])==pytest.approx(-2,abs=1.5)
+    assert result["method"]=="tvl1"
+
+def test_tvl1_rejects_invalid_parameters():
+    a=np.zeros((32,32),dtype=np.uint8)
+    from dense_optical_flow import tvl1
+    with pytest.raises(ValueError): tvl1(a,a,attachment=0)
+    with pytest.raises(ValueError): tvl1(a,a,num_iter=0)
