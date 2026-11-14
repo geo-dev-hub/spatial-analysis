@@ -24,7 +24,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Line clipping | Liang–Barsky | Same package, tests and lab | Implemented / tested |
 | Line clipping | Cyrus–Beck | Same package; convex polygon window contract | Implemented / tested |
 | Line clipping | Nicholl–Lee–Nicholl | Canonical-region transformations and slope-based boundary selection; randomized differential tests against Liang–Barsky | Implemented / tested candidate; primary-reference and numerical review pending |
-| Line simplification | Reumann–Witkam | Moving infinite-strip teaching implementation, tests and walkthrough added; variant contract stated | Implemented / tested candidate; independent reference comparison pending |
+| Line simplification | Reumann–Witkam | Consolidated `implementations/python/line-simplification/` implementation, tests and comparison lab; this pass added regression cases for repeated vertices and empty/singleton inputs across all six simplifiers | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Lang | Bounded look-ahead teaching implementation, tests and walkthrough added; vertex-count lookahead contract stated | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Opheim | Constrained moving-strip implementation with explicit half-width/min/max-radius contract and tests | Implemented / tested candidate; exact-reference variant comparison pending |
 | Line simplification | Zhao–Saalfeld narrow sleeve | Sector-bound narrow-sleeve implementation, supporting-line tolerance tests and notebook | Implemented / tested candidate; other two variants and reference review pending |
@@ -103,14 +103,14 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 ## What this audit says right now
 
-1. **There is real executable work already present.** The strongest Section 10 implementation clusters include rasterisation, three line-clipping algorithms, four line simplifiers (Douglas–Peucker, Visvalingam–Whyatt, Reumann–Witkam and Lang), three curve constructors, Viterbi decoding, CUSUM, binary segmentation, PELT mean-shift segmentation, forecast metrics and FSS.
+1. **There is real executable work already present.** The strongest Section 10 implementation clusters include rasterisation, four line-clipping algorithms, six line simplifiers (Douglas–Peucker, Visvalingam–Whyatt, Reumann–Witkam, Lang, Opheim and Zhao–Saalfeld), curve construction/fitting and smoothing, Viterbi decoding, CUSUM, binary segmentation, PELT mean-shift segmentation, forecast metrics and FSS. The line-simplification test suite was expanded in this pass to make threshold, degenerate-endpoint, repeated-vertex and short-input contracts more explicit.
 2. **Several family guides are not algorithm completion.** Mesh geodesics, discrete global grids, change points, trend/seasonality, optical flow, adaptive sampling and distribution shift still need child-level development.
 3. **Some apparent matches are deliberately marked partial.** Bezier evaluation is not Schneider fitting; Viterbi decoding is not a complete HMM estimation package; spatial cross-validation baselines are not NNDM/kNNDM.
 4. **This is not yet a complete Section 10 ledger.** The original source also includes geophysical processing, microclimate, environmental monitoring, population methods and other families on pages 22–23. Those will be split into child records next. Sections 1–9 and 11–22 still need the same reconciliation.
 
 ## Immediate algorithm-first queue
 
-1. Nicholl–Lee–Nicholl: recover the complete case classification from the original paper, implement only the documented 2D rectangular-window algorithm, and test it against a trusted clipping oracle.
+1. Nicholl–Lee–Nicholl: implementation and differential tests are already present; complete the primary-reference and numerical review rather than creating another package.
 2. Opheim and Zhao–Saalfeld: develop and compare each simplification algorithm separately rather than treating them as one generic simplifier.
 3. B-splines and NURBS: derive basis evaluation and knot/weight behaviour before adding code.
 4. BOCPD and BEAST: specify the probabilistic model, priors/hazard and computational strategy before implementation.
