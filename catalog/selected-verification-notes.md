@@ -135,3 +135,19 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new detector implementation is claimed.
 - **Rights:** DOI and author-hosted paper links only; no source text or figures reproduced.
 - **Remaining work:** verify binary segmentation's exact variant and stopping rule; add executable baseline implementations and calibrate false alarms, boundary error and detection delay on simulated and spatially structured series.
+
+
+## Section 10 — Trend, seasonality and forecasting methods
+
+**Source entry:** “Trend and seasonality: STL, seasonal-trend decomposition, Prophet, Theil-Sen, Pettitt test, ARIMA, Kalman filtering of EO series” (source page 21).
+
+- **STL bibliography:** Cleveland, R. B., Cleveland, W. S., McRae, J. E. and Terpenning, I. (1990), “STL: A Seasonal-Trend Decomposition Procedure Based on Loess,” *Journal of Official Statistics*, 6(1), 3–73. The statsmodels and Forecasting: Principles and Practice documentation provide current implementation/teaching references.
+- **Theil–Sen bibliography:** Sen, P. K. (1968), “Estimates of the Regression Coefficient Based on Kendall's Tau,” *Journal of the American Statistical Association*, 63(324), 1379–1389, DOI [10.1080/01621459.1968.10480934](https://doi.org/10.1080/01621459.1968.10480934). The publisher abstract confirms the median-of-pairwise-slopes estimator.
+- **Pettitt bibliography:** Pettitt, A. N. (1979), “A Non-Parametric Approach to the Change-Point Problem,” *Journal of the Royal Statistical Society: Series C*, 28(2), 126–135, DOI [10.2307/2346729](https://doi.org/10.2307/2346729). The publisher record confirms the non-parametric single change-point testing scope.
+- **ARIMA bibliography:** Box, G. E. P., Jenkins, G. M., Reinsel, G. C. and Ljung, G. M. (2015), *Time Series Analysis: Forecasting and Control*, 5th ed., Wiley.
+- **Prophet bibliography:** Taylor, S. J. and Letham, B. (2018), “Forecasting at Scale,” *The American Statistician*, 72(1), 37–45, DOI [10.1080/00031305.2017.1380080](https://doi.org/10.1080/00031305.2017.1380080). The publisher abstract describes the decomposable trend/seasonality/event approach and analyst-in-the-loop forecasting.
+- **Kalman filter bibliography:** Kalman, R. E. (1960), “A New Approach to Linear Filtering and Prediction Problems,” *Journal of Basic Engineering*, 82(1), 35–45, DOI [10.1115/1.3662552](https://doi.org/10.1115/1.3662552).
+- **Technical-claim status:** the lesson distinguishes decomposition, robust slope estimation, a single non-parametric change-point test, autoregressive forecasting, decomposable forecasting and latent-state filtering. It warns about autocorrelation, irregular sampling, missing observations, temporal leakage and spatial dependence.
+- **Implementation:** no new time-series implementation is claimed.
+- **Rights:** DOI, publisher and official documentation links only; no third-party figures or text reproduced.
+- **Remaining work:** build separate tested implementations; verify the STL parameter conventions and Prophet changepoint priors; evaluate ARIMA and Kalman models against baselines using rolling-origin and spatial holdout designs.
