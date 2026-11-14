@@ -61,8 +61,8 @@ def accessibility_summary(values, population_weights=None, minimum_threshold=Non
         "p10": weighted_quantile(x, .10, w),
         "median": weighted_quantile(x, .50, w),
         "p90": weighted_quantile(x, .90, w),
-        "minimum": min(x),
-        "maximum": max(x),
+        "minimum": min(a for a, b in zip(x, w) if b > 0),
+        "maximum": max(a for a, b in zip(x, w) if b > 0),
     }
     if minimum_threshold is not None:
         t = float(minimum_threshold)
