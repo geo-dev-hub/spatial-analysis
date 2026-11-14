@@ -99,7 +99,19 @@ def _prepare(vertices: Iterable[RawPoint]) -> list[Point]:
     # Start at the lowest vertex (then leftmost), making the edge sequence
     # monotonically ordered by polar angle for a CCW convex polygon.
     start = min(range(len(ring)), key=lambda i: (ring[i][1], ring[i][0]))
-    return ring[start:] + ring[:start]
+    ordered = ring[start:] + ring[:start]
+
+    # Local positive turns alone do not prove simplicity: a star traversal can
+    # turn consistently while crossing itself. For a convex CCW ring started
+    # at its lowest-leftmost vertex, edge directions must be strictly ordered
+    # by polar angle over one revolution. This linear check rejects star rings
+    # without adding a quadratic segment-intersection pass.
+    edges = [_sub(ordered[(i + 1) % len(ordered)], ordered[i])
+             for i in range(len(ordered))]
+    for i in range(len(edges) - 1):
+        if _angle_compare(edges[i], edges[i + 1]) >= 0:
+            raise ValueError("input polygon must be simple and convex")
+    return ordered
 
 
 def _half(v: Point) -> int:
