@@ -44,7 +44,7 @@ You do not have to start at the beginning. You do not have to know everything be
 | Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |
 | Understanding coordinate reference systems | [Coordinate transformation](algorithms/geodesy/crs-transformation.md) |
 | Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
-| Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md) |
+| Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md), [p-median](algorithms/optimization/p-median.md) and [maximal covering](algorithms/optimization/maximal-covering.md) |
 | Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md), [weighted linear combination](methods/weighted-linear-combination.md), [weights of evidence](methods/weights-of-evidence.md) and [ELECTRE outranking](methods/electre-outranking.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
@@ -105,7 +105,7 @@ Start with the [spatial autocorrelation learning path](learning-paths/global-spa
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
-The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons, [coverage-aware polygon simplification](algorithms/geometry/coverage-simplification.md), [precision models and snap rounding](algorithms/geometry/precision-models.md), an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
+The [algorithm collection](algorithms/README.md) also includes [maximal covering location](algorithms/optimization/maximal-covering.md), a small-instance facility-location model that maximizes weighted demand reached within a service threshold, alongside the foundational geometry lessons, [coverage-aware polygon simplification](algorithms/geometry/coverage-simplification.md), [precision models and snap rounding](algorithms/geometry/precision-models.md), an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
 
 A native [Clipper2 offsetting example](implementations/clipper2-csharp/README.md) complements the Shapely/GEOS route. A [coverage and advanced-routing lab](notebooks/coverage-simplification-routing-lab.ipynb) lets you inspect shared-edge simplification and compare directed shortest-path searches.
 
