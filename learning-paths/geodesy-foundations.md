@@ -42,3 +42,8 @@ The source section also includes Helmert and Molodensky transformations, Bursa-W
 3. Explain the meaning of always_xy.
 4. List the information needed to reproduce a datum transformation with grid shifts.
 5. Explain why a projected CRS appropriate for one region may be unsuitable elsewhere.
+
+
+## Continue: local coordinate frames
+
+After learning how coordinate reference systems and datum operations work, study [geodetic, ECEF and local ENU coordinates](../algorithms/geodesy/ecef-enu.md). This lesson connects the ellipsoid to a local Cartesian frame, with a tested implementation, published EPSG example, intern walkthrough, exercise and [visual lab](../notebooks/ecef-enu-lab.ipynb). Keep ellipsoidal and orthometric heights distinct.
