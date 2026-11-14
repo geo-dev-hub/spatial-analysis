@@ -18,10 +18,10 @@ def test_threshold_is_inclusive():
 
 
 def test_lexicographic_tie_break_is_deterministic():
-    sites, count, assignments = solve_set_cover([[1, 1, 9], [9, 1, 1]], 1)
+    sites, count, assignments = solve_set_cover([[1, 1, 9], [9, 1, 1], [1, 9, 1]], 1)
     assert sites == (0, 1)
     assert count == 2
-    assert assignments == (0, 1)
+    assert assignments == (0, 1, 0)
 
 
 def test_reports_uncoverable_demand_rows():
