@@ -68,6 +68,8 @@ Each implementation should state:
 
 ### Raster analysis
 
+- [Rasterisation algorithms](python/rasterization/README.md): DDA, all-octant Bresenham, Wu anti-aliasing, closed-cell supercover and centre-sampled scanline polygon fill, with tests, an [intern walkthrough](python/rasterization/implementation-walkthrough.md) and a [lab notebook](../notebooks/rasterization-lab.ipynb).
+
 - [Horn slope and aspect](python/terrain-derivatives/README.md): a NumPy implementation of 3×3 Horn derivatives, local analytical hillshade and topographic wetness index, with explicit units, sun-angle conventions, specific-area and slope-floor contracts, aspect convention, NoData policy, tests and an [intern walkthrough](python/terrain-derivatives/implementation-walkthrough.md).
 - [Raster least-cost distance](python/cost-distance/README.md): multi-source Dijkstra on a weighted 4/8-neighbour grid, with explicit edge-cost integration, corner policy, NoData barriers, tests and an [intern walkthrough](python/cost-distance/implementation-walkthrough.md).
 - [Raster resampling](python/raster-resampling/README.md): same-extent nearest-neighbour and bilinear interpolation, explicit NoData policies, tests and an [intern walkthrough](python/raster-resampling/implementation-walkthrough.md).
