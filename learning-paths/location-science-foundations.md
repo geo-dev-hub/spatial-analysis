@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** Five distinct facility-location and accessibility models now have scoped lessons; the wider optimisation and mobility path is still being developed.
+**Status:** Six distinct facility-location and accessibility models now have scoped lessons; the wider optimisation and mobility path is still being developed.
 
 ## The question
 
@@ -48,7 +48,7 @@ A real cost matrix may require a directed road or transit network, mode restrict
 2. Increase one demand weight and inspect whether the facility choices change.
 3. Replace Euclidean distance with a directed travel-time matrix.
 4. Add a maximum service distance. Which assignments become infeasible?
-5. Identify the capacity, equity, land availability and operating constraints that a real service plan needs.
+5. Identify the remaining equity, land availability, operating and service-quality constraints that a real service plan needs.
 6. Compare binary 2SFCA with a distance-decay catchment. Which assumptions change?
 
 ## What comes next
