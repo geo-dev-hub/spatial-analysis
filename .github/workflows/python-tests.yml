@@ -4,7 +4,7 @@ name: Python examples
 
 concurrency:
   group: spatial-analysis-ci-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 on:
   push:
