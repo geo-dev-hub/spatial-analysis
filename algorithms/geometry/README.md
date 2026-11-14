@@ -19,3 +19,6 @@ These records are part of the broader [algorithm collection](../README.md). The 
 - [Convex decomposition](convex-decomposition.md) — partition a polygon into convex pieces, and distinguish exact from approximate objectives.
 
 - [Minkowski sums](minkowski-sum.md) — combine sets by vector addition; connect convex edge merging, convolution and configuration-space obstacles.
+
+- [Medial axis](medial-axis.md) — locate centres of maximal interior discs through boundary-feature distance.
+- [Straight skeleton](straight-skeleton.md) — trace wavefront vertices as polygon edges move inward in parallel.
