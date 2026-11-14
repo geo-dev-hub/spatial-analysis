@@ -31,8 +31,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Line simplification | Visvalingam–Whyatt effective area | `implementations/python/line-simplification/` implementation and tests | Implemented / tested |
 | Curves and smoothing | Chaikin corner cutting | `implementations/python/curves-smoothing/`, tests and notebook | Implemented / tested |
 | Curves and smoothing | Catmull–Rom spline | Same package; uniform, centripetal and chordal parameterisations | Implemented / tested |
-| Curves and smoothing | B-splines | Family lesson only; no matching implementation verified | Open |
-| Curves and smoothing | NURBS | Family lesson only; no matching implementation verified | Open |
+| Curves and smoothing | B-splines | de Boor evaluator, tests, walkthrough and spline notebook added | Implemented / tested candidate; reference review pending |
+| Curves and smoothing | NURBS | Homogeneous de Boor evaluator, rational quarter-circle test and notebook added | Implemented / tested candidate; reference review pending |
 | Curves and smoothing | Schneider Bezier fitting | Bezier evaluation exists, but curve-fitting algorithm is not the same deliverable | Partial |
 | Curves and smoothing | Kalman smoother | Family lesson only; no matching implementation verified | Open |
 | Curves and smoothing | Rauch–Tung–Striebel smoother | Family lesson only; no matching implementation verified | Open |
@@ -131,3 +131,6 @@ Two additional algorithm families now have executable teaching baselines and lea
 - Change points: CUSUM, binary segmentation and PELT for piecewise-constant mean/SSE added; tests include brute-force partition comparison for PELT; walkthrough and synthetic lab notebook added.
 
 These are implementation candidates, not independently verified release completions. Reference-equivalence checks, notebook execution in CI, rights review and technical review remain open. Opheim, Zhao–Saalfeld, BOCPD and BEAST remain open algorithm tasks.
+
+
+Additional update: B-spline and NURBS evaluation by de Boor has been added to the curves package, with polynomial and rational validation fixtures, a walkthrough and a dedicated notebook. Schneider fitting and Kalman/RTS smoothing remain separate, unimplemented methods.
