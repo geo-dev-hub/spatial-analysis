@@ -61,3 +61,11 @@ def test_triangle_is_already_convex():
 def test_invalid_polygon_is_rejected(invalid):
     with pytest.raises(ValueError):
         convex_decompose(invalid)
+
+
+def test_generator_input_is_supported():
+    polygon = ((point for point in ring) for ring in [])
+    # A single-use generator for the polygon ring is consumed only once.
+    vertices = (point for point in [(0, 0), (2, 0), (2, 2), (0, 2)])
+    pieces = convex_decompose(vertices)
+    assert len(pieces) == 1
