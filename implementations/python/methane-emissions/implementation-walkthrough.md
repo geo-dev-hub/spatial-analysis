@@ -25,3 +25,8 @@ For a cross-section discretised into strips, each strip transports C_i u_i ds_i 
 ## 4. What is not implemented
 
 Raw spectral retrieval, cloud screening, background estimation, wind retrieval, plume segmentation, Gaussian plume inversion, uncertainty propagation and operational quality control are distinct tasks. A matched-filter score alone is not an emission estimate.
+
+
+## 5. Hysteresis segmentation
+
+Let `I_s` be the optionally smoothed enhancement field. Form a low-threshold mask `L = I_s ≥ τ_low` and a high-threshold seed mask `H = I_s ≥ τ_high`, with `τ_high ≥ τ_low`. Label connected components of `L`; retain component C exactly when `C ∩ H` is non-empty and its area meets the minimum-area rule. This is connected-component hysteresis segmentation. It reduces isolated weak detections but remains sensitive to thresholds, smoothing, connectivity and structured background. It is not a learned segmentation model.
