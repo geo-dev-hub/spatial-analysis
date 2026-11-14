@@ -195,3 +195,8 @@ The companion package now also provides empirical ensemble CRPS per case and its
 - [Tests](../implementations/python/forecast-verification/test_ensemble_verification.py)
 - [Walkthrough](../implementations/python/forecast-verification/ensemble-verification-walkthrough.md)
 - [Ensemble verification lab](../notebooks/ensemble-forecast-verification-lab.ipynb)
+
+
+## MODE-inspired object verification baseline
+
+The [teaching implementation](../implementations/python/forecast-verification/object_verification.py), with [tests](../implementations/python/forecast-verification/test_object_verification.py) and a [lab notebook](../notebooks/mode-inspired-object-verification-lab.ipynb), performs optional Gaussian smoothing, thresholding, connected-component extraction, object-attribute measurement and minimum-cost one-to-one matching. It is a bounded MODE-inspired baseline, not a full MET/MODE reproduction: within-field merging, fuzzy-interest matching, cluster objects and temporal tracking are not implemented.
