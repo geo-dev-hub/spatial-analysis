@@ -16,15 +16,15 @@ Let i index demand locations and j candidate sites. Let a_i be non-negative dema
 
 Let k_i be the number of deployed units at sites within the threshold of demand i. Under the model's independence and equal-busy-probability assumptions, the probability that all k_i covering units are busy is q raised to k_i. Therefore the probability that at least one is available is:
 
-\[
+$$
 P(\text{available for }i)=1-q^{k_i}.
-\]
+$$
 
 The objective is:
 
-\[
+$$
 \max \sum_{i\in I} a_i(1-q^{k_i}).
-\]
+$$
 
 The teaching solver treats p as an exact number of units. It permits multiple units at the same candidate site, matching a common MEXCLP modelling feature. The site list returned by the solver can therefore contain repeated candidate indices.
 
@@ -32,9 +32,9 @@ The teaching solver treats p as an exact number of units. It permits multiple un
 
 Suppose a demand area has weight 100 and two units can reach it. If each unit is busy with probability q = 0.3 and their states are independent, then:
 
-\[
+$$
 P(\text{at least one available})=1-0.3^2=0.91.
-\]
+$$
 
 Its expected covered demand contribution is 100 × 0.91 = 91. With only one covering unit, the contribution is 100 × 0.7 = 70. A second nearby unit adds expected coverage, but not another full 100 units.
 
@@ -42,9 +42,9 @@ Its expected covered demand contribution is 100 × 0.91 = 91. With only one cove
 
 The [Python package](../../implementations/python/mexclp/README.md) enumerates all multisets of p unit placements over m candidate sites. The number of placements is:
 
-\[
+$$
 \binom{m+p-1}{p}
-\]
+$$
 
 for p greater than zero. This is an exact small-instance reference, not a metropolitan-scale optimisation method. The solver maximises expected covered demand and uses lexicographic candidate-index order to break ties.
 
