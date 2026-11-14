@@ -78,3 +78,6 @@ The capacitated p-median addition includes a small exact enumerator, capacity-fe
 
 
 The Section 6 accessibility-equity addition provides a tested descriptive diagnostics package and visual notebook: population-weighted Lorenz curves and Gini, lower-tail quantiles, minimum-standard shortfall and group mean gaps. It explicitly distinguishes inequality measurement from normative judgments about fairness; the chosen groups, opportunities and minimum standard remain policy decisions.
+
+
+The Section 6 equity-constrained maximal-covering addition provides an exact tiny-instance model that maximises covered objective weight subject to population-weighted minimum coverage floors for each caller-defined group. It includes separate demand and objective weights, infeasibility handling, tests, an intern walkthrough, exercise and executable lab. The group definitions and floors remain explicit policy choices; this is not a general fairness optimiser.
