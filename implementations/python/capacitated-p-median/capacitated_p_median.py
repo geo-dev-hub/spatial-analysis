@@ -41,7 +41,7 @@ def solve_capacitated_p_median(costs: Sequence[Sequence[float]] | np.ndarray, p:
                 continue
             objective = float(weights @ matrix[np.arange(n), assignment])
             key = (opened, assignment)
-            if objective < best_objective - tolerance or (abs(objective - best_objective) <= tolerance and (best_key is None or key < best_key)):
+            if objective < best_objective or (objective == best_objective and (best_key is None or key < best_key)):
                 best_objective, best_key = objective, key
     if best_key is None:
         raise ValueError("no feasible assignment satisfies the selected facilities' capacities")
