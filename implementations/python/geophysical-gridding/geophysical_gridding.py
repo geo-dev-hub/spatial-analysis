@@ -116,21 +116,19 @@ def ordinary_kriging_grid(
     system[-1, -1] = 0.0
     rhs = np.empty(len(p) + 1, dtype=float)
     rhs[-1] = 1.0
-    try:
-        factor = np.linalg.inv(system)
-    except np.linalg.LinAlgError as exc:
-        raise ValueError("kriging system is singular; inspect sample geometry and covariance parameters") from exc
-
     prediction = np.empty(len(q), dtype=float)
     variance = np.empty(len(q), dtype=float)
     for start in range(0, len(q), 256):
         stop = min(start + 256, len(q))
         cross = sill * np.exp(-cdist(p, q[start:stop]) / range_)
-        rhs[:-1] = cross
-        solution = factor @ rhs
+        rhs = np.vstack((cross, np.ones((1, stop - start))))
+        try:
+            solution = np.linalg.solve(system, rhs)
+        except np.linalg.LinAlgError as exc:
+            raise ValueError("kriging system is singular; inspect sample geometry and covariance parameters") from exc
         weights = solution[:-1]
         lagrange = solution[-1]
-        prediction[start:stop] = weights @ v
+        prediction[start:stop] = weights.T @ v
         raw_variance = sill - np.sum(weights * cross, axis=0) - lagrange
         if np.any(raw_variance < -1e-8 * sill):
             raise ValueError("computed kriging variance is materially negative; inspect model conditioning")
