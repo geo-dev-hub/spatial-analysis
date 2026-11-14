@@ -107,3 +107,12 @@ The path ends with a useful distinction: knowing how to test one pair is not the
 5. Which assumptions would you need to check before using the teaching implementation on real GIS data?
 
 If you can explain those answers and reproduce the examples, you have a solid first foundation. The next part of the Core GIS collection will extend these ideas into spatial indexes, proximity queries and network analysis.
+
+## Continue into robust geometry and point location
+
+Once you can recognise intersections, two deeper questions follow: how do we make an arrangement reliable on a fixed precision grid, and how can we locate a point quickly in a subdivision with many faces?
+
+- [Snap rounding](../algorithms/geometry/snap-rounding.md) explains hot pixels and why intersections must be found before grid rounding. Run the [visual snap-rounding lab](../notebooks/snap-rounding-noder-lab.ipynb) and inspect the [exact-arithmetic teaching noder](../implementations/python/snap-rounding-noder/README.md).
+- [Planar point location](../algorithms/geometry/point-location.md) compares static slab decomposition with randomized trapezoidal maps. Use the [point-location lab](../notebooks/point-location-lab.ipynb) for the implemented slab model, then complete the [randomized trapezoidal-map exercise](../exercises/randomized-trapezoidal-map.md) to trace the more advanced construction.
+
+These are follow-on topics, not prerequisites for the four-lesson foundation. The snap-rounding package is a transparent teaching baseline; the randomized trapezoidal-map exercise is conceptual and does not claim a complete implementation.
