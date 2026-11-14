@@ -80,6 +80,10 @@ The variance is conditional on the selected variogram and its parameters. It doe
 
 The semivariogram describes how expected squared differences change with separation. The nugget, partial sill, range and anisotropy determine different aspects of the spatial dependence. This baseline intentionally fixes a zero nugget and isotropic exponential form so the linear system can be studied without hiding the model behind a fitting routine.
 
+![Conceptual semivariogram showing nugget, sill and practical range.](../../assets/semivariogram-concept.svg)
+
+*This is a schematic curve, not an empirical variogram or a fitted model.*
+
 The [implementation](../../implementations/python/geostatistics/README.md) also calculates a classical empirical semivariogram from distance bins, reporting mean pair distance, semivariance and pair count. Empty bins remain visible. This is an exploratory isotropic method-of-moments summary, not a variogram fit.\n\nBefore applying kriging, inspect an empirical variogram, check whether the stationarity assumption is plausible, assess directional structure, and justify the model and parameters. Do not infer these from a single attractive map.
 
 ## Coordinate reference system and validation

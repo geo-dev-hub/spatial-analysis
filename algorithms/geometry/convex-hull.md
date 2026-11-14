@@ -17,6 +17,10 @@ $$
 
 For a non-degenerate planar point set, the hull boundary is a convex polygon. Depending on the input, the result may instead be empty, one point or a line segment.
 
+![A convex hull enclosing a set of planar points, with boundary vertices distinguished from interior points.](../../assets/graham-scan-convex-hull.svg)
+
+*The hull contains every input point; only extreme points define its boundary.*
+
 ## Why it matters
 
 A convex hull is a useful geometric summary. It can support:

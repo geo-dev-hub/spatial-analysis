@@ -46,6 +46,13 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [D8 flow accumulation](raster/d8-flow-accumulation.md) — propagate upstream cell counts or weighted contributions through an existing D8 direction grid.
 - [Watershed delineation](raster/watershed-delineation.md) — trace the contributing area of a selected outlet through a D8 flow network.
 - [Stream ordering](raster/stream-order.md) — compare Strahler order and Shreve magnitude on a connected D8 channel network.
+- [Terrain slope and aspect](raster/slope-aspect.md) — estimate local derivatives with Horn's 3×3 operator.
+- [Local hillshade](raster/hillshade.md) — derive normalized illumination from slope, aspect and a declared sun position.
+- [Topographic wetness index](raster/topographic-wetness-index.md) — combine specific catchment area and slope into a relative terrain index.
+- [Raster resampling](raster/resampling.md) — compare nearest-neighbour and bilinear interpolation, including NoData policies.
+- [Zonal statistics](raster/zonal-statistics.md) — summarize aligned raster values by integer zone labels.
+- [Connected-component labeling](raster/connected-components.md) — identify connected foreground regions under 4/8-neighbour rules.
+- [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
 
 ## Geostatistics
 
@@ -91,26 +98,10 @@ Not every spatial method is a standalone algorithm. See the [methods collection]
 
 - [Global Getis-Ord G](statistics/global-getis-ord-g.md) — a supplementary global concentration statistic added to explain the source-listed local Gi* method; it is not a separate entry in the original compendium.
 
-## Raster and terrain analysis
-
-- [Focal raster statistics](raster/focal-statistics.md) — calculate NoData-aware neighbourhood summaries.
-- [Priority-Flood](raster/priority-flood.md) — fill DEM depressions to their lowest spill elevation.
-- [Euclidean distance transform](raster/euclidean-distance-transform.md) — calculate centre-to-centre distance on a regular raster grid.
-- [D8 flow direction](raster/d8-flow-direction.md) — assign each cell to its steepest downslope neighbour.
-- [D8 flow accumulation](raster/d8-flow-accumulation.md) — propagate upstream contributions through a D8 grid.
-- [Watershed delineation](raster/watershed-delineation.md) — trace cells draining to a selected outlet.
-- [Stream ordering](raster/stream-order.md) — compare Strahler order and Shreve magnitude.
-- [Terrain slope and aspect](raster/slope-aspect.md) — estimate local derivatives with Horn's 3×3 operator.
-- [Local hillshade](raster/hillshade.md) — derive normalized illumination from slope, aspect and a declared sun position.
-- [Topographic wetness index](raster/topographic-wetness-index.md) — combine specific catchment area and slope into a relative terrain index.
-- [Raster resampling](raster/resampling.md) — compare nearest-neighbour and bilinear interpolation, including NoData policies.
-- [Zonal statistics](raster/zonal-statistics.md) — summarize aligned raster values by integer zone labels.
-- [Connected-component labeling](raster/connected-components.md) — identify connected foreground regions under 4/8-neighbour rules.
-- [Raster cost distance](raster/cost-distance.md) — calculate multi-source least accumulated cost through a weighted raster graph.
-
 ## Geodesy and coordinate systems
 
 - [Coordinate transformation and CRS axis order](geodesy/crs-transformation.md) — transform point coordinates with explicit longitude/latitude and x/y conventions.
+- [Geodetic, ECEF and local ENU coordinates](geodesy/ecef-enu.md) — move between ellipsoidal longitude/latitude/height, Earth-centred Cartesian coordinates and a local East-North-Up frame.
 
 ## GeoAI
 
@@ -142,18 +133,8 @@ Records may have different evidence and implementation status. Check the status 
 - [Delaunay-filtered proximity graphs](../implementations/python/proximity-graphs/README.md) — compare sparse candidate filtering with all-pairs reference methods.
 
 
-### Geodesy
 
-- [Geodetic, ECEF and local ENU coordinates](geodesy/ecef-enu.md) — move between ellipsoidal longitude/latitude/height, Earth-centred Cartesian coordinates and a local East-North-Up frame.
 
-- [Maximal covering location](optimization/maximal-covering.md) — choose at most p facilities to maximize demand reached within a defined service threshold.
 
-- [Discrete p-center](optimization/p-center.md) — minimize the maximum nearest-facility cost when exactly p candidate sites must open.
 
-- [Inverse distance weighting](interpolation/inverse-distance-weighting.md) — estimate values at unsampled locations with normalized inverse-distance weights and explicit neighbourhood choices.
 
-- [Location set covering](optimization/set-covering.md) — minimize the number of facilities needed to reach every demand location within a service threshold.
-
-- [Backup coverage (r-covering)](optimization/backup-coverage.md) — maximize demand with at least r distinct selected facilities within a service threshold; a deterministic redundancy screen, not a reliability probability.
-
-- [M/M/c queueing model](optimization/mmc-queue.md) — estimate steady-state waiting and queue lengths for one FCFS queue feeding identical parallel servers under Erlang-C assumptions.

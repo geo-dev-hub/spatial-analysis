@@ -41,6 +41,10 @@ The implementation uses the common ESRI power-of-two convention, with rows incre
 
 A valid cell with no lower valid neighbour receives 0 in this teaching implementation. NoData or invalid cells receive -1.
 
+![D8 direction codes for the eight neighbours of a central raster cell.](../../assets/d8-direction-codes.svg)
+
+*The code points to the receiving neighbour; zero is reserved for a sink or unresolved flat in this implementation.*
+
 ## Why cell dimensions matter
 
 For rectangular cells, diagonal distances are not $\sqrt{2}$ times a single cell size. Use separate row and column spacing and make sure horizontal and vertical units are compatible. If the DEM elevation units differ from the horizontal units, convert them before comparing slopes.

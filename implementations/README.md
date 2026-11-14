@@ -29,21 +29,17 @@ Each implementation should state:
 
 - [Exact p-median](python/p-median/README.md): exhaustive small-instance facility-location solver with deterministic assignments, tests and an [intern walkthrough](python/p-median/implementation-walkthrough.md).
 - [Capacitated p-median](python/capacitated-p-median/README.md): exact tiny-instance assignment solver with indivisible demand, scalar capacity constraints, tests and an [intern walkthrough](python/capacitated-p-median/implementation-walkthrough.md).
-- [Maximal covering location](python/maximal-covering/README.md): exact small-instance solver that maximises weighted demand reached by at least one selected facility.
 - [Deterministic backup coverage](python/backup-coverage/README.md): exact small-instance r-covering solver that requires multiple distinct selected facilities to reach demand.
 - [MEXCLP expected coverage](python/mexclp/README.md): exact small-instance expected-coverage solver with equal, independent unit busy probabilities and possible co-location.
-- [Equity-constrained maximal covering](python/equity-covering/README.md): exact small-instance facility selection with explicit group coverage floors and separate demand/objective weights.
-- [Accessibility equity diagnostics](python/accessibility-equity/README.md): distribution, group summaries, weighted gaps, Gini and Lorenz diagnostics for an existing accessibility surface.
 - [M/M/c queue metrics](python/mmc-queue/README.md): steady-state Erlang-C waiting and system metrics for one FCFS queue feeding identical parallel servers.
 - [Two-step floating catchment area](python/two-step-fca/README.md): binary-catchment supply/demand accessibility measure with explicit impedance matrix semantics, tests and an [intern walkthrough](python/two-step-fca/implementation-walkthrough.md).
+- [Discrete p-center](python/p-center/README.md): exact small-instance minimax facility-location solver.
+- [Location set covering](python/set-covering/README.md): exact small-instance solver for minimum-cardinality coverage of every demand row.
 
 ### Geodesy and georeferencing
+- [Geodetic, ECEF and local ENU](python/ecef-enu/README.md): convert between geodetic coordinates, Earth-centred Cartesian coordinates and a local tangent frame, with a published EPSG reference test.
 
 - [Affine georeferencing](python/affine-georeferencing/README.md): least-squares six-parameter 2D transform from control points, rank checks, residual diagnostics, tests and an [intern walkthrough](python/affine-georeferencing/implementation-walkthrough.md).
-- [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
-
-### Geodesy
-
 - [Helmert seven-parameter transformation](python/helmert-7-parameter/README.md): NumPy Position Vector transformation in geocentric XYZ, validated against a published IOGP example, with inverse tests and an [intern walkthrough](python/helmert-7-parameter/implementation-walkthrough.md).
 
 ### GeoAI and model validation
@@ -54,9 +50,9 @@ Each implementation should state:
 
 ### Geostatistics and covariance
 
-- [Stationary covariance functions](python/covariance-functions/README.md): five Euclidean covariance models, dense covariance matrices, eigenvalue diagnostics, tests and an [intern walkthrough](python/covariance-functions/implementation-walkthrough.md). The examples do not implement spherical or network covariance models.
+- [Inverse distance weighting](python/inverse-distance-weighting/README.md): dependency-free IDW prediction with tested exact-location and neighbourhood policies.
 
-### Geostatistics and covariance
+- [Stationary covariance functions](python/covariance-functions/README.md): five Euclidean covariance models, dense covariance matrices, eigenvalue diagnostics, tests and an [intern walkthrough](python/covariance-functions/implementation-walkthrough.md). The examples do not implement spherical or network covariance models.
 
 - [Isotropic spherical covariance](python/spherical-covariance/README.md): a finite non-negative Legendre-series model on the unit two-sphere, coordinate conversion, covariance matrices, tests and an [intern walkthrough](python/spherical-covariance/implementation-walkthrough.md). This is a scalar isotropic S2 model, not ellipsoidal geodesy or network covariance.
 
@@ -144,20 +140,3 @@ A successful automated run means the tests in the repository passed in that envi
 The canonical lesson explains the problem and method. The implementation shows one concrete way to put it into practice. Tests make expected behaviour explicit. The walkthrough explains how the code is built and why. A notebook is added when changing values or inspecting intermediate results makes the idea easier to learn.
 
 These are connected teaching materials, not interchangeable copies of the same explanation.
-
-
-- [Geodetic, ECEF and local ENU](python/ecef-enu/README.md) — convert between geodetic coordinates, Earth-centred Cartesian coordinates and a local tangent frame, with a published EPSG reference test.
-
-- [Maximal covering location](python/maximal-covering/README.md): exact small-instance MCLP solver with an explicit at-most-p facility budget and service threshold.
-
-- [Discrete p-center](python/p-center/README.md): exact small-instance minimax facility-location solver.
-
-- [Inverse distance weighting](python/inverse-distance-weighting/README.md): dependency-free IDW prediction with tested exact-location and neighbourhood policies.
-
-- [Location set covering](python/set-covering/README.md): exact small-instance solver for minimum-cardinality coverage of every demand row.
-
-
-- [Accessibility distribution and equity diagnostics](python/accessibility-equity/README.md): population-weighted Lorenz curve, Gini, lower-tail quantiles, minimum-standard shortfall and caller-defined group comparisons, with tests and an [intern walkthrough](python/accessibility-equity/implementation-walkthrough.md).
-
-
-- [Equity-constrained maximal covering](python/equity-covering/README.md): exact tiny-instance facility selection with explicit minimum population coverage floors for caller-defined groups, separate demand/objective weights, infeasibility reporting, tests and an [intern walkthrough](python/equity-covering/implementation-walkthrough.md).

@@ -62,3 +62,13 @@ For [segment intersection](../algorithms/geometry/segment-intersection.md), the 
 - [ ] Have we disclosed cropping, recolouring, translation or other adaptations?
 - [ ] Is the figure legible and explained in the surrounding text?
 - [ ] If rights are unclear, have we linked to the original instead of copying it?
+
+## Project-created diagrams
+
+The following diagrams are original, project-created explanatory assets. They are not copied from a third-party publication:
+
+- `assets/graham-scan-convex-hull.svg` — distinguishes hull vertices from interior points.
+- `assets/d8-direction-codes.svg` — shows the eight ESRI-style D8 direction codes around a raster cell.
+- `assets/semivariogram-concept.svg` — illustrates nugget, sill and practical range as conceptual components.
+
+These diagrams are linked from their respective lessons. Their presence does not resolve the repository-wide code or documentation licence decision; see [licensing and reuse](licensing-and-reuse.md).

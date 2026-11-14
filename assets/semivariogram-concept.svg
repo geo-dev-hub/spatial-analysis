@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" role="img" aria-labelledby="t d">
+<title id="t">Conceptual semivariogram</title>
+<desc id="d">A curve starts at a positive nugget, rises as lag distance increases, then approaches a horizontal sill. A vertical marker shows the practical range.</desc>
+<rect width="760" height="420" fill="#fff"/>
+<line x1="105" y1="330" x2="680" y2="330" stroke="#333" stroke-width="2"/>
+<line x1="105" y1="330" x2="105" y2="65" stroke="#333" stroke-width="2"/>
+<line x1="105" y1="115" x2="680" y2="115" stroke="#999" stroke-dasharray="7 6" stroke-width="1.5"/>
+<path d="M105 280 C160 235 210 170 300 137 S445 116 680 115" fill="none" stroke="#247967" stroke-width="5" stroke-linecap="round"/>
+<line x1="420" y1="330" x2="420" y2="120" stroke="#b45b36" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="105" cy="280" r="6" fill="#b45b36"/>
+<text x="92" y="353" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#333">0</text>
+<text x="392" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#333">Practical range</text>
+<text x="685" y="353" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#333">Lag distance</text>
+<text x="40" y="200" transform="rotate(-90 40 200)" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#333">Semivariance</text>
+<text x="120" y="270" font-family="Arial,sans-serif" font-size="14" fill="#8a452a">Nugget</text>
+<text x="690" y="108" font-family="Arial,sans-serif" font-size="14" fill="#555">Sill</text>
+<text x="380" y="35" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#222">A common bounded semivariogram shape</text>
+<text x="380" y="395" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#666">Conceptual only — not empirical data or a fitted model</text>
+</svg>
