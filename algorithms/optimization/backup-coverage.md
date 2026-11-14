@@ -6,11 +6,11 @@ Stable ID: `SA-OPT-BACKUP-COVERAGE` · Draft 0.1 · Location-science extension
 
 A map may show a neighbourhood as served because one facility lies within the chosen travel-time threshold. But what happens if that facility closes temporarily, reaches capacity, loses power or becomes inaccessible? Backup-coverage models ask whether demand has more than one eligible facility nearby.
 
-This lesson introduces a deterministic **r-covering** objective: maximize the demand weight that has at least \(r\) distinct selected facilities within a stated service threshold.
+This lesson introduces a deterministic **r-covering** objective: maximize the demand weight that has at least \(r\) distinct selected facilities within a stated service threshold. This is a restricted all-or-nothing formulation for teaching and small-instance verification. Hogan and ReVelle's original backup-coverage work considers trade-offs between first and backup coverage; this package does not reproduce every objective or variant in that literature.
 
 ## Define the model carefully
 
-Let \(I\) be demand locations and \(J\) candidate facilities. Let \(a_i\geq0\) be demand weight, \(d_{ij}\geq0\) the impedance from demand (i) to candidate (j), \(S\) the service threshold and \(p\) the maximum number of facilities. Let \(r\geq1\) be the required number of distinct selected facilities.
+Let \(I\) be demand locations and \(J\) candidate facilities. Let \(a_i\geq0\) be demand weight, \(d_{ij}\geq0\) the impedance from demand \(i\) to candidate \(j\), \(S\) the service threshold and \(p\) the maximum number of facilities. Let \(r\geq1\) be the required number of distinct selected facilities.
 
 Define eligibility:
 
@@ -21,7 +21,7 @@ e_{ij}=\begin{cases}
 \end{cases}
 \]
 
-Let \(x_j\in\{0,1\}\) indicate whether candidate (j) is selected, and \(y_i\in\{0,1\}\) indicate whether demand (i) receives the required number of nearby selected facilities.
+Let \(x_j\in\{0,1\}\) indicate whether candidate \(j\) is selected, and \(y_i\in\{0,1\}\) indicate whether demand \(i\) receives the required number of nearby selected facilities.
 
 \[
 \max\quad \sum_{i\in I}a_i y_i
