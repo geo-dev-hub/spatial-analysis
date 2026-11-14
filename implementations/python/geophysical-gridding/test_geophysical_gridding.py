@@ -7,7 +7,7 @@ VALUES=np.array([1,5,-5,-1],dtype=float)
 
 def test_nearest_neighbor_returns_sample_value_at_sample_node():
     out=nearest_neighbor_grid(POINTS,VALUES,[0,2],[0,2])
-    assert out==pytest.approx([[1,5],[-5,-1]])
+    np.testing.assert_allclose(out,[[1,5],[-5,-1]])
 
 def test_nearest_neighbor_max_distance_masks_far_nodes():
     out=nearest_neighbor_grid(POINTS,VALUES,[0,10],[0],max_distance=1)
@@ -18,7 +18,7 @@ def test_triangulation_reproduces_affine_plane():
     v=2*p[:,0]-3*p[:,1]+1
     out=triangulation_grid(p,v,[.25,.75,1.25],[.25,.75,1.25])
     x,y=np.meshgrid([.25,.75,1.25],[.25,.75,1.25])
-    assert out==pytest.approx(2*x-3*y+1)
+    np.testing.assert_allclose(out,2*x-3*y+1)
 
 def test_triangulation_fills_outside_convex_hull():
     out=triangulation_grid(POINTS,VALUES,[-1,1,3],[1],fill_value=-999)
