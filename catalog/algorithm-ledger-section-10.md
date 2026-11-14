@@ -220,7 +220,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Population | Settlement-level population estimation | model / estimator | No verified implementation | Research required |
 | Privacy | Synthetic spatial microdata generation | model / workflow | No verified implementation | Research required |
 | Privacy | Spatial k-anonymity | privacy method | No verified implementation | Open |
-| Privacy | Differential privacy for spatial aggregates | algorithm / privacy mechanism | No verified implementation | Open |
+| Privacy | Differential privacy for spatial aggregates | algorithm / privacy mechanism | `implementations/python/spatial-privacy/` user-level Laplace mechanism with bounded per-person cell contributions, sensitivity/noise-scale tests and lab | Implemented / tested candidate; adjacency, contribution governance and composition review pending |
 | Segregation / diversity | Reardon–Firebaugh multigroup entropy index implemented with tests and lab | Implemented / tested candidate; source-entry review pending |
 | Segregation / diversity | Areal-unit group exposure matrix and isolation diagonal implemented; distance-weighted exposure not included | Implemented / tested candidate; spatial interaction review pending |
 | Segregation / diversity | Shannon entropy implementation with zero-category handling and tests | Implemented / tested candidate |
