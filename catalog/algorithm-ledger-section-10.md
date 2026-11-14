@@ -99,7 +99,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Adaptive sampling | Active learning for map validation | One-round uncertainty-per-cost batch selector with minimum spatial separation and tests | Implemented / tested candidate; iterative model-update loop and sampling-design review pending |
 | Distribution shift | Kernel two-sample tests / MMD | Unbiased Gaussian-kernel MMD, tests, walkthrough and notebook added | Implemented / tested candidate; spatial null design remains open |
 | Distribution shift | Energy distance | Unbiased sample energy-distance statistic and tests added | Implemented / tested candidate; spatial null design remains open |
-| Distribution shift | Domain-classifier divergence | Family guide only; no matching implementation verified | Research / lesson only |
+| Distribution shift | Domain-classifier divergence | `implementations/python/domain-classifier-shift/` standardised logistic-regression classifier with out-of-fold ROC AUC and balanced accuracy; optional StratifiedGroupKFold; tests, walkthrough and lab | Implemented / tested candidate; classifier/feature sensitivity and spatial grouping review pending |
 
 ## What this audit says right now
 
