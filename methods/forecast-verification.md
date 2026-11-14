@@ -184,4 +184,4 @@ A strong verification report combines:
 
 ## Scope
 
-This is a verification-method guide, not a forecast-evaluation package. It does not implement ETS, Brier, ROC/AUC, CRPS, FSS, SAL or MODE. Each metric has assumptions and configuration choices that must be tested against the forecast variable, spatial scale and decision context.
+**Implemented teaching baseline:** [contingency-table scores, Brier score/skill, reliability bins and tied-rank ROC AUC](../implementations/python/forecast-verification/README.md), with [tests](../implementations/python/forecast-verification/test_forecast_verification.py), an [intern walkthrough](../implementations/python/forecast-verification/implementation-walkthrough.md) and an [executable lab](../notebooks/forecast-verification-lab.ipynb). CRPS, ensemble rank histograms, Fractions Skill Score, SAL and MODE remain unimplemented. Spatial metrics require separate grid, neighbourhood, object and boundary contracts; they should not be represented by one generic vector function.
