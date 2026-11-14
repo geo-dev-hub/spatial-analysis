@@ -68,7 +68,7 @@ For a polygon with area (A(P)), the triangle areas should satisfy
 
 Area agreement is a strong diagnostic, but it does not by itself prove that triangles do not overlap. The ear condition and simple-polygon precondition are essential.
 
-## Complexity
+## Follow the clipping decisions\n\n~~~mermaid\nflowchart TD\n    A[Read polygon ring] --> B[Normalize duplicates and collinear points]\n    B --> C[Check area and simple topology]\n    C --> D[Orient ring counter-clockwise]\n    D --> E[Find a convex candidate vertex]\n    E --> F{Any other vertex inside or on triangle?}\n    F -- Yes --> G[Reject this candidate]\n    G --> E\n    F -- No --> H[Record triangle and remove ear tip]\n    H --> I{Three vertices remain?}\n    I -- No --> E\n    I -- Yes --> J[Emit final triangle]\n~~~\n\nThe flow is deliberately sequential. It is easy to trace and test, but it is not the most efficient way to maintain the set of possible ears.\n\n## Complexity
 
 The teaching implementation checks up to (O(n)) candidate vertices at each of (O(n)) clipping steps. Its point-in-triangle check can inspect another (O(n)) vertices, but the implementation uses the convex-vertex filter and simple active-ring scan. The resulting straightforward algorithm is (O(n^2)) worst-case when candidate testing scans only reflex vertices; this package instead scans all remaining vertices, so its conservative bound is **(O(n^3))** in the worst case. This distinction matters: the code prioritizes transparency over an optimized ear queue.
 
@@ -89,6 +89,6 @@ A triangulation is not automatically a constrained Delaunay triangulation. If tr
 
 ## Further reading
 
-- Meisters, G. H. (1975), *Polygons have ears*, The American Mathematical Monthly 82(6), 648–651. The two-ears theorem provides the existence result used by the method.
+- Meisters, G. H. (1975), [*Polygons have ears*](https://www.jstor.org/stable/2319845), The American Mathematical Monthly 82(6), 648–651. The two-ears theorem provides the existence result used by the method.
 - Eder, G., Held, M. & Palfrader, P. (2015), *Experiments on Parallel Polygon Triangulation Using Ear Clipping*. The paper describes ear candidates, clipping and the (O(n^2)) baseline, and discusses practical parallel variants.
-- Geometric Tools, *Triangulation by Ear Clipping*, for a careful presentation of the simple-polygon method and its complexity.
+- Geometric Tools, [*Triangulation by Ear Clipping*](https://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf), for a careful presentation of the simple-polygon method and its complexity.
