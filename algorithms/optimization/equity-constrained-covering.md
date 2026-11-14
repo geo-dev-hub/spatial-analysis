@@ -37,7 +37,7 @@ The model maximises weighted covered demand after requiring every group to meet 
 
 Run the [equity-constrained covering lab](../../notebooks/equity-constrained-covering-lab.ipynb). Start with zero group floors to recover ordinary maximal covering. Then increase one group's minimum and inspect whether the selected facilities, total covered weight or number of sites changes.
 
-A tested [exact small-instance Python implementation](../../implementations/python/equity-covering/README.md) enumerates candidate subsets. It is intended as a transparent teaching oracle, not a city-scale optimiser.
+An [exact small-instance Python implementation with unit tests](../../implementations/python/equity-covering/README.md) enumerates candidate subsets. It is intended as a transparent teaching oracle, not a city-scale optimiser.
 
 ## What the model assumes
 
