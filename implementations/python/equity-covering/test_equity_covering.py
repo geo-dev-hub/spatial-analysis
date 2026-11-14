@@ -7,7 +7,7 @@ def test_equity_floor_changes_selected_facilities():
     costs = [[1, 9, 8], [1, 8, 9], [9, 1, 8], [9, 1, 8]]
     groups = ["A", "A", "B", "B"]
     plain = equity_maximal_covering(costs, groups, {"A": 0, "B": 0}, 1, 2)
-    fair = equity_maximal_covering(costs, groups, {"A": .5, "B": .5}, 1, 2)
+    fair = equity_maximal_covering(costs, groups, {"A": .5, "B": .5}, 2, 2)
     assert plain["selected_facilities"] == (0,)
     assert fair["selected_facilities"] == (0, 1)
     assert fair["group_coverage"] == {"A": 1.0, "B": 1.0}
@@ -15,8 +15,8 @@ def test_equity_floor_changes_selected_facilities():
 
 def test_weighted_group_floor():
     result = equity_maximal_covering(
-        [[1, 9], [9, 1], [9, 1]], ["A", "B", "B"], {"A": 1, "B": .5},
-        1, 2, demand_weights=[10, 2, 2],
+        [[1, 9], [9, 1], [9, 9]], ["A", "B", "B"], {"A": 1, "B": .5},
+        2, 2, demand_weights=[10, 2, 2],
     )
     assert result["group_coverage"]["A"] == 1
     assert result["group_coverage"]["B"] == .5
