@@ -115,7 +115,7 @@ A terrain raster and a triangle mesh are not interchangeable. Raster cost-distan
 - Mitchell, J. S. B., Mount, D. M. and Papadimitriou, C. H. (1987), “The Discrete Geodesic Problem,” *SIAM Journal on Computing*, 16(4), 647–668. [DOI 10.1137/0216045](https://doi.org/10.1137/0216045). The paper develops the continuous-Dijkstra exact polyhedral-surface method and reports O(n² log n) time and O(n²) space.
 - Chen, J. and Han, Y. (1990), “Shortest Paths on a Polyhedron, Part I: Computing Shortest Paths,” *Proceedings of the Sixth Annual Symposium on Computational Geometry*, DOI [10.1145/98524.98601](https://doi.org/10.1145/98524.98601). An alternative exact method for possibly nonconvex polyhedra.
 - Kimmel, R. and Sethian, J. A. (1998), “Computing Geodesic Paths on Manifolds,” *Proceedings of the National Academy of Sciences*, 95(15), 8431–8435. [DOI 10.1073/pnas.95.15.8431](https://doi.org/10.1073/pnas.95.15.8431). Extends fast marching to triangulated domains.
-- Sethian, J. A. (1996), “Fast Marching Methods,” *SIAM Review*, 41(2), 1999 publication, DOI [10.1137/S0036144598347059](https://doi.org/10.1137/S0036144598347059), for the Eikonal and upwind framework.
+- Sethian, J. A. (1999), “Fast Marching Methods,” *SIAM Review*, 41(2), 199–235, DOI [10.1137/S0036144598347059](https://doi.org/10.1137/S0036144598347059), for the Eikonal and upwind framework.
 
 ## Scope
 
