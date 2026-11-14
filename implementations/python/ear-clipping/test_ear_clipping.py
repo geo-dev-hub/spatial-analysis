@@ -56,3 +56,8 @@ def test_too_few_vertices_is_rejected():
 def test_non_finite_coordinate_is_rejected():
     with pytest.raises(ValueError, match="finite"):
         triangulate([(0, 0), (1, 0), (float("nan"), 1)])
+
+
+def test_adjacent_backtracking_edges_are_rejected():
+    with pytest.raises(ValueError, match="overlapping adjacent edges"):
+        triangulate([(0, 0), (3, 0), (1, 0), (1, 3), (0, 3)])
