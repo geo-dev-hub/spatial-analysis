@@ -123,7 +123,7 @@ A simple polygon can be divided into triangles by repeatedly removing an ear. Re
 
 ## Partition into convex pieces
 
-After triangulating a simple polygon, ask whether adjacent triangles can be merged without introducing a reflex corner. The [convex decomposition lesson](../algorithms/geometry/convex-decomposition.md) compares this approach with optimal dynamic programming and tolerance-based approximate decomposition. Complete the [convex decomposition exercise](../exercises/convex-decomposition.md) before attempting the Hertel–Mehlhorn merge implementation.
+After triangulating a simple polygon, ask whether adjacent triangles can be merged without introducing a reflex corner. The [convex decomposition lesson](../algorithms/geometry/convex-decomposition.md) compares this approach with optimal dynamic programming and tolerance-based approximate decomposition. Run the [greedy Python baseline](../implementations/python/convex-decomposition/README.md) and [visual lab](../notebooks/convex-decomposition-lab.ipynb), then complete the [convex decomposition exercise](../exercises/convex-decomposition.md). The code demonstrates triangulate-and-merge but does not claim the optimized Hertel–Mehlhorn guarantee.
 
 ## Combine shapes with Minkowski sums
 
