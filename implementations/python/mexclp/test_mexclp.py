@@ -65,3 +65,15 @@ def test_invalid_costs_are_rejected():
 def test_invalid_demand_weights_are_rejected():
     with pytest.raises(ValueError, match="demand_weights"):
         solve_mexclp([[1], [2]], 1, 2, 0.2, demand_weights=[1])
+
+
+@pytest.mark.parametrize("busy", ["0.2", None])
+def test_non_numeric_busy_fraction_raises_value_error(busy):
+    with pytest.raises(ValueError, match="busy_fraction"):
+        solve_mexclp([[1]], 1, 2, busy)
+
+
+@pytest.mark.parametrize("threshold", ["5", None])
+def test_non_numeric_threshold_raises_value_error(threshold):
+    with pytest.raises(ValueError, match="service_threshold"):
+        solve_mexclp([[1]], 1, threshold, 0.2)
