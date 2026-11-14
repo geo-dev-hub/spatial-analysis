@@ -114,8 +114,6 @@ def ordinary_kriging_grid(
     system[:-1, -1] = 1.0
     system[-1, :-1] = 1.0
     system[-1, -1] = 0.0
-    rhs = np.empty(len(p) + 1, dtype=float)
-    rhs[-1] = 1.0
     prediction = np.empty(len(q), dtype=float)
     variance = np.empty(len(q), dtype=float)
     for start in range(0, len(q), 256):
