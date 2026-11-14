@@ -32,7 +32,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 ### Optimization and location science
 
 - [p-median facility-location lab](p-median-facility-location-lab.ipynb): select candidate facilities, assign demand and inspect the effect of demand weights.
-- [2SFCA accessibility lab](two-step-fca-accessibility-lab.ipynb): compare provider supply-to-demand ratios and population accessibility under different catchment thresholds.
+- [2SFCA accessibility lab](two-step-fca-accessibility-lab.ipynb): compare the binary catchment with an E2SFCA-style distance-decay extension, inspect provider ratios and population scores, and test threshold and band-weight sensitivity.
 
 ### Remote sensing
 
