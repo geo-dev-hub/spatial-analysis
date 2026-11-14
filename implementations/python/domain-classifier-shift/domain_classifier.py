@@ -49,9 +49,18 @@ def domain_classifier_diagnostic(source_features, target_features, *, n_splits=5
         group_labels = np.asarray(groups, dtype=object)
         if group_labels.ndim != 1 or len(group_labels) != len(X):
             raise ValueError("groups must have one label per pooled source and target observation")
-        if any(value is None for value in group_labels):
-            raise ValueError("groups cannot contain missing labels")
-        if len(set(group_labels.tolist())) < n_splits:
+        unique_groups = set()
+        for value in group_labels:
+            if value is None:
+                raise ValueError("groups cannot contain missing labels")
+            try:
+                hash(value)
+            except TypeError as exc:
+                raise ValueError("group labels must be hashable scalars") from exc
+            if isinstance(value, (float, np.floating)) and not np.isfinite(value):
+                raise ValueError("groups cannot contain non-finite labels")
+            unique_groups.add(value)
+        if len(unique_groups) < n_splits:
             raise ValueError("groups must contain at least n_splits distinct labels")
         splitter = StratifiedGroupKFold(n_splits=int(n_splits), shuffle=True, random_state=int(random_state))
         probabilities = cross_val_predict(
