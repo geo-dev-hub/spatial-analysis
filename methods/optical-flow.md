@@ -139,7 +139,7 @@ For advection nowcasting, evaluate the downstream forecast, not only optical-flo
 
 ## Scope
 
-This is a method-selection guide, not an optical-flow implementation. It distinguishes sparse/local tracking from dense-flow methods and explains conversion from pixel motion to map displacement. A future implementation should include synthetic ground-truth sequences, validity masks and georeferencing tests before applying the method to Earth-observation time series.
+This guide is paired with a tested teaching package: [Lucas–Kanade, Farnebäck and DIS implementations](../implementations/python/optical-flow/README.md), [Lucas–Kanade source](../implementations/python/optical-flow/lucas_kanade.py), [Farnebäck/DIS wrappers](../implementations/python/optical-flow/dense_optical_flow.py) and synthetic translation tests. Farnebäck and DIS call OpenCV; they are not reimplementations of the underlying papers. The package currently provides translation fixtures rather than a full benchmark. It distinguishes sparse/local tracking from dense-flow methods and explains conversion from pixel motion to map displacement. A future implementation should include synthetic ground-truth sequences, validity masks and georeferencing tests before applying the method to Earth-observation time series.
 
 
 ## Executable Lucas–Kanade baseline
