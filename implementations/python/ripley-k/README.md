@@ -41,6 +41,7 @@ Read the [canonical lesson](../../../algorithms/statistics/ripley-k.md) and [int
 The companion module `ripley_k_envelope.py` keeps the observed event count fixed, simulates uniform point patterns in the same rectangular window and calculates translation-corrected L curves.
 
 ```python
+import numpy as np
 from ripley_k_envelope import ripley_k_csr_envelope
 
 result = ripley_k_csr_envelope(
