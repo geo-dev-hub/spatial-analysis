@@ -20,7 +20,17 @@ k=\sqrt{k_x^2+k_y^2}.
 
 The sign convention depends on whether the vertical axis is positive upward or downward and on whether the operation is described as upward continuation or derivative. This teaching implementation uses the positive radial-wavenumber amplitude convention and states it explicitly. It sets the zero-frequency derivative to zero.
 
-## 2. Analytic-signal amplitude
+## 2. Upward continuation
+
+For a potential field continued upward by height h, each Fourier component is multiplied by
+
+\\[
+\\widehat{T_h}(k_x,k_y)=e^{-kh}\\widehat T(k_x,k_y),\\qquad k=\\sqrt{k_x^2+k_y^2}.
+\\]
+
+High wavenumbers are attenuated more strongly, so upward continuation smooths the field and suppresses short-wavelength features. The implementation assumes a regular grid and periodic FFT boundaries; height and grid spacing must share a unit. Downward continuation multiplies high frequencies by an exponentially growing factor and is unstable without explicit regularisation, so it is not treated as the inverse of this routine.
+
+## 3. Analytic-signal amplitude
 
 The 3D analytic-signal amplitude is
 
@@ -30,7 +40,7 @@ A=\sqrt{T_x^2+T_y^2+T_z^2}.
 
 It combines the horizontal and vertical derivative magnitudes. It can help delineate edges of magnetic sources, but it does not uniquely identify source depth, geometry or lithology. Noise is amplified by differentiation, especially at high wavenumbers.
 
-## 3. Tilt derivative
+## 4. Tilt derivative
 
 The tilt angle is
 
@@ -40,7 +50,7 @@ The tilt angle is
 
 implemented with the two-argument arctangent to preserve quadrant information. It normalises the vertical derivative by the total horizontal gradient and returns values in \([-\pi/2,\pi/2]\). The zero-gradient case and noise floor require care.
 
-## 4. Grid and boundary assumptions
+## 5. Grid and boundary assumptions
 
 The FFT implementation assumes:
 - a regular, uniformly spaced Cartesian grid;
@@ -50,9 +60,9 @@ The FFT implementation assumes:
 
 A real survey grid is rarely periodic. Edge mismatch creates spectral ringing. Pad and taper where appropriate, compare alternative edge treatments, inspect the border, and avoid interpreting artefacts as geological contacts. Do not apply these operators to geographic degrees without a suitable projection or local metric treatment.
 
-## 5. Runnable teaching implementation
+## 6. Runnable teaching implementation
 
-The companion package provides horizontal derivatives, the radial-wavenumber vertical derivative, analytic-signal amplitude and tilt angle. Tests compare the spectral operators with a periodic cosine of known wavenumber.
+The companion package provides horizontal derivatives, the radial-wavenumber vertical derivative, upward continuation, analytic-signal amplitude and tilt angle. Tests compare the spectral operators with a periodic cosine of known wavenumber.
 
 - [Implementation and contract](../implementations/python/potential-field/README.md)
 - [Tests](../implementations/python/potential-field/test_spectral_derivatives.py)
@@ -65,4 +75,4 @@ The companion package provides horizontal derivatives, the radial-wavenumber ver
 - Miller, H. G., and Singh, V. (1994). Potential field tilt—a new concept for location of potential field sources. *Journal of Applied Geophysics*, 32, 213–217.
 - Blakely, R. J. (1995). *Potential Theory in Gravity and Magnetic Applications*. Cambridge University Press.
 
-**Scope:** this is a regular-grid derivative/attribute baseline. Upward continuation, downward continuation, Euler deconvolution, Werner deconvolution, matched filtering, inversion and source-geometry estimation remain distinct algorithms and are not implemented here.
+**Scope:** this is a regular-grid derivative/attribute baseline. Downward continuation, Euler deconvolution, Werner deconvolution, matched filtering, inversion and source-geometry estimation remain distinct algorithms and are not implemented here.
