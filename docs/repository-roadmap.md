@@ -184,17 +184,17 @@ The current GitHub state has been checked directly rather than inferred from ear
 - Pull request: [#1 — Continue the spatial analysis compendium](https://github.com/geo-dev-hub/spatial-analysis/pull/1).
 - State: open, draft and unmerged.
 - Branch: `compendium/section-01-geometry-continuation`; base: `main`.
-- Current comparison: **1,459 commits ahead and 129 behind**, with 593 changed files; GitHub reports the comparison as diverged and the pull request as not mergeable.
-- Merge base: `e7a3600f8b2dd6cbede1486935b69b64cc01fcb7`.
-- A recursive tree comparison at main `618af7a656c8d8ea7c2e8a49bb75849d474aa39f` and branch `123f7f14a20c0ecc66073188fce4dc08fda4e5f1` found 156 shared file paths: 111 identical, 45 modified, 35 present only on main, and 545 present only on the compendium branch. Many of the 35 main-only paths are older split packages now represented by consolidated branch equivalents: Graham scan by the convex-hull lesson/package; Dijkstra by the shortest-paths lesson/package; D8 by the raster D8 lesson/package; ordinary kriging and empirical semivariogram by the shared geostatistics package and lessons; and the spatial-index guide by the branch's selection guide. The three unique original diagrams have been brought across and linked. Do not copy these older packages as parallel implementations.
-- The branch contains a large body of work, but the remaining 45 shared-file differences and commit-history divergence must be reconciled deliberately. Do not force-push, merge, or rebase blindly.
-- The configured validation inventory is **78 Python package suites and 66 notebook executions**, with internal-link and Clipper2 checks. Full-head run [43567496516](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43567496516) completed successfully on `123f7f14a20c0ecc66073188fce4dc08fda4e5f1`, with all 81 jobs passing. This includes the latest Section 6 bibliographic corrections, original teaching diagrams, the standalone empirical-semivariogram lesson and exercise, the streaming semivariogram implementation and its new edge-bin tests. This validates the configured checks on that commit; it does not establish source accuracy, rights clearance or publication readiness.
+- At merge-sync snapshot `e5817631d180fbbcae68f212b10802e3f973bf45`, the PR comparison was **1,463 commits ahead and 0 behind**, with 594 changed files; GitHub reported it as mergeable. PR #1 remains a draft and has not been merged into `main`.
+- The merge base is now main `618af7a656c8d8ea7c2e8a49bb75849d474aa39f`.
+- Before synchronization, the tree audit at main `618af7a656c8d8ea7c2e8a49bb75849d474aa39f` and compendium head `55563fe599bec5c3e23fc7604a03aa67e0100a0a` found 160 shared paths (111 identical, 49 modified), 31 paths only on main and 545 only on the compendium branch. The merge commit `e5817631d180fbbcae68f212b10802e3f973bf45` uses the compendium head as its first parent and main as its second; its union tree preserves every path from both trees, with no deletions. The remaining main-only paths are retained unchanged; many are older split packages now complemented by consolidated branch equivalents. The unique diagrams and interactive learning features from the parallel work have been integrated.
+- This synchronization used a two-parent merge commit and a union tree; no force-push or rebase was used. The PR is now up to date with main. Keep it in draft until the remaining publication and source-verification gates are satisfied.
+- The configured validation inventory is **78 Python package suites and 70 notebook executions**, with internal-link and Clipper2 checks. Full-head run [43568713412](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43568713412) passed all 81 jobs on pre-sync head `55563fe599bec5c3e23fc7604a03aa67e0100a0a`, including all 70 notebooks. Full-head run [43569026462](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43569026462) passed all 81 jobs on the merge commit, including all 78 Python package suites and 70 notebooks. A green run validates configured checks, not source accuracy, rights clearance or publication readiness.
 - The Section 6 continuation now includes accessibility distribution diagnostics, group-constrained maximal covering, deterministic r-covering, MEXCLP expected availability and M/M/c queueing. These are explicitly scoped teaching models, not a claim that the full location-science, stochastic reliability or fairness literature is complete.
 
 ### Release blockers
 
-1. Reconcile the branch with the current base and inspect conflicts without discarding either side's work.
-2. Run the complete validation matrix on the reconciled head and resolve every failure.
+1. [x] Reconcile the branch with the current base using a two-parent merge commit and a union tree that preserves both sides' files and histories.
+2. [x] Run the complete validation matrix on the synchronized merge commit; run `43569026462` passed all 81 jobs.
 3. Verify source entries and claims against authoritative references across all 22 sections; source transcription and indexing are not verification.
 4. Decide publication rights for the supplied 47-page compendium and its transcription.
 5. Select and apply code/documentation licences, with contributor sign-off.
@@ -240,7 +240,21 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - [x] Add regression tests for mean pair distance, left-closed/right-open bin semantics and inclusion of the final upper edge.
 - [x] Connect the method to the interpolation lesson, geostatistics learning paths, Section 3 index, exercise index and notebook catalogue.
 - [x] Add and attribute three original diagrams: Graham-scan convex hull, D8 direction codes and the conceptual semivariogram. Link them from the relevant lessons and record them in the visual-source register.
-- [x] Validate the full branch head in Actions run `43567496516`; all 81 jobs passed, including the geostatistics suite and all 66 notebooks.
+- [x] Validate pre-sync head `55563fe599bec5c3e23fc7604a03aa67e0100a0a` in Actions run `43568713412`; all 81 jobs passed, including the geostatistics suite and all 70 notebooks.
+
+
+## 10. Interactive notebook integration and branch synchronization — 14 November 2026
+
+- [x] Adapt the Dijkstra priority-queue trace to the tested `shortest-paths` package.
+- [x] Adapt the Graham scan stack trace to the tested `convex-hull` package.
+- [x] Add an interactive empirical-semivariogram binning lab using the shared `empirical_variogram` function.
+- [x] Add an ordinary-kriging sensitivity lab using the shared `ordinary_kriging_predict` function and its explicit exponential-model parameters; no separate PyKrige dependency is required.
+- [x] Extend the D8 notebook with an interactive synthetic hill and rectangular-cell-spacing controls.
+- [x] Update the workflow, notebook catalogue, contributor guide and learning paths to include 70 executable notebooks.
+- [x] Complete a full 81-job run on pre-sync head `55563fe599bec5c3e23fc7604a03aa67e0100a0a`; all 70 notebooks passed.
+- [x] Synchronize the compendium branch with `main` using a two-parent merge commit and a union tree that preserves all files from both sides.
+- [x] Confirm PR #1 is 0 commits behind and reported mergeable; it remains draft and unmerged.
+- [x] Confirm the full 81-job matrix on merge commit `e5817631d180fbbcae68f212b10802e3f973bf45`; run `43569026462` passed, including all 70 notebooks.
 
 ## Section 6 reference corrections — 14 November 2026
 
@@ -259,7 +273,9 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 ## Section 3 bibliography audit — 14 November 2026
 
 - Added the verified Matheron (1963) “Principles of geostatistics” reference to the interpolation lesson: *Economic Geology*, 58(8), 1246–1266, DOI `10.2113/gsecongeo.58.8.1246`.
-- Replaced the phrase “first audited interpolation lesson” with a narrower scope description. A foundational citation and tested teaching solver do not imply that the whole kriging family or every Section 3 source entry has been audited.
+- Verified Shepard (1968), “A two-dimensional interpolation function for irregularly-spaced data,” *Proceedings of the 1968 23rd ACM National Conference*, 517–524, DOI `10.1145/800186.810616`, against the ACM record.
+- Verified Hengl (2007), *A Practical Guide to Geostatistical Mapping of Environmental Variables*, EUR 22904 EN, 143 pp., ISBN 978-92-79-06904-8, against the official JRC record; the IDW and semivariogram lessons now use the complete report metadata and official record/PDF links.
+- Replaced the phrase “first audited interpolation lesson” with a narrower scope description. The Section 3 IDW, kriging and variogram rows remain partial because their grouped entries include methods and variants not yet independently reviewed.
 
 ## Geostatistics rendering correction — 14 November 2026
 

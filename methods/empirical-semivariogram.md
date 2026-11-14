@@ -163,9 +163,10 @@ Complete the [empirical semivariogram exercise](../exercises/empirical-semivario
 ## References
 
 1. Matheron, G. (1963). “Principles of geostatistics.” *Economic Geology*, 58(8), 1246–1266. https://doi.org/10.2113/gsecongeo.58.8.1246. Foundational reference for the geostatistical framework.
-2. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. European Commission, Joint Research Centre. [Open PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Provides an applied introduction to variograms and spatial prediction.
-3. PyKrige documentation. [Variogram models](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/variogram_models.html). Documents model parameter conventions and supported functional forms in PyKrige; conventions can differ between packages.
-4. SciKit-GStat documentation. [Variography](https://scikit-gstat.readthedocs.io/en/latest/userguide/variogram.html). Describes lag grouping and the Matheron estimator in a maintained Python geostatistics package.
+2. Cressie, N. (1993). *Statistics for Spatial Data*, revised edition. Wiley. A standard treatment of empirical variograms and spatial statistical inference.
+3. Hengl, T. (2007). *A Practical Guide to Geostatistical Mapping of Environmental Variables*. EUR 22904 EN, Joint Research Centre, Institute for Environment and Sustainability, European Commission. Luxembourg: Office for Official Publications of the European Communities, 143 pp., ISBN 978-92-79-06904-8. [Official JRC record](https://publications.jrc.ec.europa.eu/repository/handle/JRC38153) · [PDF](https://publications.jrc.ec.europa.eu/repository/bitstream/JRC38153/eur22904en.pdf). Provides an applied introduction to variograms and spatial prediction.
+4. PyKrige documentation. [Variogram models](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/variogram_models.html). Documents model parameter conventions and supported functional forms in PyKrige; conventions can differ between packages.
+5. SciKit-GStat documentation. [Variography](https://scikit-gstat.readthedocs.io/en/latest/userguide/variogram.html). Describes lag grouping and the Matheron estimator in a maintained Python geostatistics package.
 
 ## What remains to be checked
 
