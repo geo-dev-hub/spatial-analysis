@@ -11,13 +11,13 @@ The source groups together descriptive statistics, inferential procedures, point
 
 ## Autocorrelation and local statistics
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Global: [Moran's I](../../algorithms/statistics/global-morans-i.md), [Geary's C](../../algorithms/statistics/gearys-c.md), join count, Lee's L, bivariate Moran's I, Mantel and partial Mantel tests | Global statistics / tests | 2 |
-| Local: [Local Moran's I (LISA)](../../algorithms/statistics/local-morans-i.md), [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md), Moran scatterplot | Local statistics / diagnostic visualisation | 3 |
-| Summary geometry: mean center, median center, standard distance, standard deviational ellipse | Descriptive spatial summaries / geometric measures | 3 |
-| Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3 |
-| Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Global: [Moran's I](../../algorithms/statistics/global-morans-i.md), [Geary's C](../../algorithms/statistics/gearys-c.md), join count, Lee's L, bivariate Moran's I, Mantel and partial Mantel tests | Global statistics / tests | 2  Partial — related record exists; source-entry review pending |
+| Local: [Local Moran's I (LISA)](../../algorithms/statistics/local-morans-i.md), [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md), Moran scatterplot | Local statistics / diagnostic visualisation | 3  Partial — related record exists; source-entry review pending |
+| Summary geometry: mean center, median center, standard distance, standard deviational ellipse | Descriptive spatial summaries / geometric measures | 3  Not checked — intake only |
+| Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3  Not checked — intake only |
+| Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3  Not checked — intake only |
 
 ## First audited clustering lesson
 
@@ -25,14 +25,14 @@ The [DBSCAN lesson](../../algorithms/statistics/dbscan.md) introduces core, bord
 
 ## Point pattern analysis
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Quadrat analysis, Clark-Evans, nearest neighbor index | Exploratory methods / spatial statistics | 3 |
-| Ripley's K and L; G, F and J functions; pair correlation function | Point-pattern summary functions | 3 |
-| Models: Poisson, Cox, Neyman-Scott, Gibbs and Strauss processes, log-Gaussian Cox processes, marked patterns | Stochastic point-process models | 3 |
-| Cluster tests: Besag-Newell, Tango, SaTScan scan statistics, elliptic and flexible shapes (FleXScan) | Cluster-detection tests / scan statistics | 3 |
-| Kernel density estimation: adaptive and variable bandwidth, Silverman and cross-validated bandwidth selection | Density estimation / bandwidth-selection methods | 3 |
-| Network K-function, network KDE (NKDE), SANET methods | Network-constrained point-pattern methods / software-method families | 3 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Quadrat analysis, Clark-Evans, nearest neighbor index | Exploratory methods / spatial statistics | 3  Not checked — intake only |
+| Ripley's K and L; G, F and J functions; pair correlation function | Point-pattern summary functions | 3  Not checked — intake only |
+| Models: Poisson, Cox, Neyman-Scott, Gibbs and Strauss processes, log-Gaussian Cox processes, marked patterns | Stochastic point-process models | 3  Not checked — intake only |
+| Cluster tests: Besag-Newell, Tango, SaTScan scan statistics, elliptic and flexible shapes (FleXScan) | Cluster-detection tests / scan statistics | 3  Not checked — intake only |
+| Kernel density estimation: adaptive and variable bandwidth, Silverman and cross-validated bandwidth selection | Density estimation / bandwidth-selection methods | 3  Not checked — intake only |
+| Network K-function, network KDE (NKDE), SANET methods | Network-constrained point-pattern methods / software-method families | 3  Not checked — intake only |
 
 ## First audited point-pattern lessons
 
@@ -40,39 +40,39 @@ The [planar Gaussian KDE lesson](../../algorithms/statistics/point-pattern-kde.m
 
 ## Clustering and regionalization
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Density-based: DBSCAN, HDBSCAN, OPTICS, DENCLUE, density peaks, ST-DBSCAN, T-DBSCAN | Clustering algorithms | 3 |
-| Partitioning: k-means, k-medoids, CLARA, CLARANS, constrained and equal-size k-means | Clustering algorithms / constrained variants | 3 |
-| Hierarchical and grid: BIRCH, STING, CLIQUE, Ward, mean shift, affinity propagation, spectral, Gaussian mixtures, fuzzy c-means, self-organizing maps, growing neural gas, consensus and co-clustering | Clustering algorithms / model families / grid methods | 3 |
-| Spatially constrained: SKATER, REDCAP, AZP, Max-p, spatial LDA | Regionalisation algorithms / spatial clustering methods | 3 |
-| Geodemographic classification (OAC-style), principal components and factor analysis | Classification approaches / dimensionality reduction | 3 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Density-based: DBSCAN, HDBSCAN, OPTICS, DENCLUE, density peaks, ST-DBSCAN, T-DBSCAN | Clustering algorithms | 3  Not checked — intake only |
+| Partitioning: k-means, k-medoids, CLARA, CLARANS, constrained and equal-size k-means | Clustering algorithms / constrained variants | 3  Not checked — intake only |
+| Hierarchical and grid: BIRCH, STING, CLIQUE, Ward, mean shift, affinity propagation, spectral, Gaussian mixtures, fuzzy c-means, self-organizing maps, growing neural gas, consensus and co-clustering | Clustering algorithms / model families / grid methods | 3  Not checked — intake only |
+| Spatially constrained: SKATER, REDCAP, AZP, Max-p, spatial LDA | Regionalisation algorithms / spatial clustering methods | 3  Not checked — intake only |
+| Geodemographic classification (OAC-style), principal components and factor analysis | Classification approaches / dimensionality reduction | 3  Not checked — intake only |
 
 ## Regression and spatial econometrics
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Lag and error: SAR, CAR, spatial lag, spatial error, SLX, SDEM, SAC/SARAR, Spatial Durbin, Manski model | Spatial regression model families | 3 |
-| Local and varying coefficients: GWR, MGWR, GTWR, GW principal components, GW summary statistics, spatially varying coefficient models, GeoDetector | Local modelling methods / geographically weighted methods | 3 |
-| Diagnostics: LM-lag, LM-error and robust variants, Wald and LR tests, Moran's I on residuals, Chow and regime tests, Breusch-Pagan, Koenker, GWR significance tests | Model diagnostics / statistical tests | 3 |
-| Estimation: spatial GMM, spatial HAC standard errors, spatial panel and dynamic panel models, spatial probit, spatial Heckman, spatial quantile regression, spatial stochastic frontier, spatial SUR, hedonic regression, endogenous weights, Bayesian model averaging over weights | Estimators / regression models / inference methods | 4 |
-| Bayesian: BYM, INLA/SPDE, hierarchical CAR models, spatial Dirichlet process, Gaussian process mixtures | Bayesian spatial model families / computational frameworks | 4 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Lag and error: SAR, CAR, spatial lag, spatial error, SLX, SDEM, SAC/SARAR, Spatial Durbin, Manski model | Spatial regression model families | 3  Not checked — intake only |
+| Local and varying coefficients: GWR, MGWR, GTWR, GW principal components, GW summary statistics, spatially varying coefficient models, GeoDetector | Local modelling methods / geographically weighted methods | 3  Not checked — intake only |
+| Diagnostics: LM-lag, LM-error and robust variants, Wald and LR tests, Moran's I on residuals, Chow and regime tests, Breusch-Pagan, Koenker, GWR significance tests | Model diagnostics / statistical tests | 3  Not checked — intake only |
+| Estimation: spatial GMM, spatial HAC standard errors, spatial panel and dynamic panel models, spatial probit, spatial Heckman, spatial quantile regression, spatial stochastic frontier, spatial SUR, hedonic regression, endogenous weights, Bayesian model averaging over weights | Estimators / regression models / inference methods | 4  Not checked — intake only |
+| Bayesian: BYM, INLA/SPDE, hierarchical CAR models, spatial Dirichlet process, Gaussian process mixtures | Bayesian spatial model families / computational frameworks | 4  Not checked — intake only |
 
 ## Smoothing and outlier detection
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Empirical Bayes rate smoothing, head-banging, median polish | Smoothing / exploratory procedures | 4 |
-| Gaussian, Laplacian, median, bilateral and non-local means filters, anisotropic diffusion, total-variation denoising, guided filters | Image and spatial filtering methods | 4 |
-| Spatial outlier tests: Z-value, scatterplot approach, variogram cloud, isolation forest, spatial LOF, geographically weighted outliers | Outlier diagnostics / anomaly-detection methods | 4 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Empirical Bayes rate smoothing, head-banging, median polish | Smoothing / exploratory procedures | 4  Not checked — intake only |
+| Gaussian, Laplacian, median, bilateral and non-local means filters, anisotropic diffusion, total-variation denoising, guided filters | Image and spatial filtering methods | 4  Not checked — intake only |
+| Spatial outlier tests: Z-value, scatterplot approach, variogram cloud, isolation forest, spatial LOF, geographically weighted outliers | Outlier diagnostics / anomaly-detection methods | 4  Not checked — intake only |
 
 ## Inequality, entropy and scale
 
-| Source entry | Kind to review | Source page |
-|---|---|---:|
-| Spatial Gini, Theil, spatial entropy, segregation indices (dissimilarity, isolation) | Inequality and segregation measures | 4 |
-| Fractal dimension, lacunarity, Hurst exponent, multifractal analysis, scale-space theory, MAUP analysis | Scale measures / spatial analysis concepts | 4 |
-| Spatial spectral analysis: 2D periodogram, EOF, SSA and MSSA, canonical correlation, maximum covariance analysis, cross-spectral coherence, wavelet coherence, Hilbert-Huang transform | Spectral and multivariate analysis methods | 4 |
+| Source entry | Provisional kind | Source page  Verification status |
+|---|---|---: --- |
+| Spatial Gini, Theil, spatial entropy, segregation indices (dissimilarity, isolation) | Inequality and segregation measures | 4  Not checked — intake only |
+| Fractal dimension, lacunarity, Hurst exponent, multifractal analysis, scale-space theory, MAUP analysis | Scale measures / spatial analysis concepts | 4  Not checked — intake only |
+| Spatial spectral analysis: 2D periodogram, EOF, SSA and MSSA, canonical correlation, maximum covariance analysis, cross-spectral coherence, wavelet coherence, Hilbert-Huang transform | Spectral and multivariate analysis methods | 4  Not checked — intake only |
 
 ## Decisions for the next pass
 

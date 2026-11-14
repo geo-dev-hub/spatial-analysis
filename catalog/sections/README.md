@@ -1,6 +1,6 @@
 # Section indexes
 
-All 22 original sections now have an item-level intake index. Each index preserves the source grouping, records the source page and adds a provisional “kind to review” classification. These are **catalogue intake records**, not independent verification of every named method, model, software package or dataset.
+All 22 original sections have item-level intake indexes. Each index preserves the source grouping and page provenance, proposes a provisional kind and now displays an explicit source-entry review status. These are **catalogue intake records**, not proof that every named method, model, software package or dataset has been independently verified.
 
 | Section | Item-level index | Source pages |
 |---:|---|---:|
@@ -27,20 +27,24 @@ All 22 original sections now have an item-level intake index. Each index preserv
 | 21 | [Neural fields, climate ML, accounting, robust geometry and semantic maps](21-neural-fields-climate-accounting-robust-geometry.md) | 43–45 |
 | 22 | [Inference, covariance, spherical statistics, asset mapping and monitoring](22-inference-covariance-spherical-asset-monitoring.md) | 45–47 |
 
-## How to use these indexes
+## How to read each section index
 
-- The original wording is preserved as source-entry labels; line breaks have been joined where needed for tables.
-- “Kind to review” is a provisional classification, not a claim that the entry has been technically verified.
-- Source page references point back to the [page-by-page transcription](../../source-inventory/README.md).
+- **Source entry** preserves the intake label and grouping.
+- **Provisional kind** is a classification proposal, not yet a final primary kind.
+- **Source page** points back to the [page-by-page transcription](../../source-inventory/README.md).
+- **Verification status** is deliberately conservative:
+  - **Not checked — intake only:** no independent source-entry review is recorded.
+  - **Partial — related record exists; source-entry review pending:** a related canonical page is linked, but that does not verify every item or claim in the grouped source entry.
 - Canonical records, implementations and learning paths are linked only where they already exist.
 - Source warnings about memory-based or representative names remain visible in the relevant indexes.
 
-## Next pass: verification and canonical records
+Use the [source-entry verification protocol](../verification-protocol.md) to record identity, bibliography, technical claims, implementation and rights as separate dimensions. A row-level summary does not replace those evidence records.
 
-Use the [source-entry verification protocol](../verification-protocol.md) to apply separate identity, bibliography, technical-claim, implementation and rights statuses. For each entry, preserve evidence and a review date. Do not treat a linked lesson or passing test suite as verification of the whole source entry.
+## Next pass: verify and normalise
 
 1. Verify names and variants against original papers, standards, official documentation or maintained project sources.
-2. Identify duplicate names, near-duplicates and cross-domain relationships.
-3. Decide which items deserve individual canonical records and which belong together.
-4. Assign stable IDs only when scope is clear.
-5. Add prerequisites, examples, tests and learning-path links.
+2. Split grouped entries when members have different identities or evidence.
+3. Identify duplicate names, near-duplicates and cross-domain relationships.
+4. Confirm a primary kind and decide which items deserve individual canonical records.
+5. Assign stable IDs only when scope is clear.
+6. Add prerequisites, examples, tests and learning-path links.
