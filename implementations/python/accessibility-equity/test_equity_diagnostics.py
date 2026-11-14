@@ -62,6 +62,13 @@ def test_mismatched_groups_and_invalid_quantile():
         weighted_quantile([1, 2], 1.1)
 
 
+def test_summary_minimum_and_maximum_ignore_zero_population_weight():
+    summary = accessibility_summary([0, 5, 100], [0, 2, 0])
+    assert summary["minimum"] == 5
+    assert summary["maximum"] == 5
+    assert summary["weighted_mean"] == 5
+
+
 def test_zero_weight_group_omitted_and_zero_ratio():
     g = group_accessibility_summary([2, 8], ["A", "B"], [1, 0])
     assert list(g) == ["A"]
