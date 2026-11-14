@@ -12,9 +12,9 @@ Equity analysis asks how accessibility is distributed. It is separate from calcu
 
 Let a_i >= 0 be an accessibility score for population unit i, and w_i >= 0 the population represented by that unit. The weighted mean is:
 
-\[
+$
 \bar a_w=\frac{\sum_i w_i a_i}{\sum_i w_i}.
-\]
+$
 
 The score might come from cumulative opportunities, a gravity measure or 2SFCA. State its units and interpretation. Do not apply the conventional Gini coefficient directly to raw travel costs without defining an appropriate non-negative access measure.
 
@@ -28,9 +28,9 @@ For the exercise data (scores 2, 4, 8, 10 and populations 100, 300, 200, 100), t
 
 Sort units from lowest to highest accessibility. Plot cumulative population share against cumulative accessibility share. The diagonal represents equal distribution.
 
-\[
+$
 G=1-\sum_{k=1}^{n}(p_k-p_{k-1})(L_k+L_{k-1}).
-\]
+$
 
 Here p_k is cumulative population share and L_k is cumulative accessibility share. A larger Gini indicates more relative inequality. The [Lorenz curve diagram](../../assets/accessibility-lorenz-curve.svg) shows the equality line and a conceptual unequal distribution. If every unit has zero access, the curve is conventionally returned on the diagonal and Gini is zero because all values are equal; this is not a good outcome, so report absolute levels too.
 
@@ -42,9 +42,9 @@ Report population-weighted p10, median and p90. Lower-tail quantiles describe th
 
 If a defensible minimum accessibility standard t exists, calculate:
 
-\[
+$
 S(t)=\frac{\sum_i w_i\,\mathbf{1}(a_i<t)}{\sum_i w_i}.
-\]
+$
 
 This is the population share below the declared standard. The standard must be justified by service policy, needs or an explicit scenario.
 
@@ -52,9 +52,9 @@ This is the population share below the declared standard. The standard must be j
 
 For caller-defined groups g, calculate weighted means:
 
-\[
+$
 \bar a_g=\frac{\sum_{i\in g}w_i a_i}{\sum_{i\in g}w_i}.
-\]
+$
 
 Compare highest and lowest group means using an absolute gap and a ratio. Also inspect within-group distributions.
 
