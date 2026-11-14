@@ -57,3 +57,16 @@ def test_group_array_contract_rejected():
         domain_classifier_diagnostic(source, target, n_splits=2, groups=np.arange(10))
     with pytest.raises(ValueError):
         domain_classifier_diagnostic(source, target, n_splits=2, groups=[None] * 20)
+
+
+
+@pytest.mark.parametrize("groups", [
+    [None] * 20,
+    [float("nan")] * 20,
+    [[i] for i in range(20)],
+])
+def test_invalid_group_labels_rejected(groups):
+    source = np.ones((10, 2))
+    target = np.ones((10, 2))
+    with pytest.raises(ValueError):
+        domain_classifier_diagnostic(source, target, n_splits=2, groups=groups)
