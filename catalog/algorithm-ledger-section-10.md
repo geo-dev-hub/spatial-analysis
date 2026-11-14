@@ -154,3 +154,71 @@ Bayesian online change-point detection has now been added as a bounded conjugate
 | 22 | Matched filtering / continuation | No implementation verified | Open |
 
 The package assumes a regular grid and periodic FFT boundary conditions. It is not an inversion or source-depth estimator. Technical review and reference-equivalence checks remain pending.
+
+
+## Remaining Section 10 source families — pages 22–23
+
+The source also includes applied methods, measures, software and workflows. These are recorded here so they are not silently dropped, but only the entries that are actual algorithms should receive from-scratch algorithm implementations.
+
+| Source family | Child record | Primary kind | Current treatment | Status |
+|---|---|---|---|---|
+| Geophysical gridding | Minimum-curvature gridding | method / algorithm family | No dedicated implementation verified | Open |
+| Geophysical gridding | Nearest-neighbour gridding | algorithm | No dedicated gridding implementation verified | Open |
+| Geophysical gridding | Triangulation-based gridding | algorithm family | Delaunay/TIN components exist elsewhere; gridding-specific interpolation not verified | Partial |
+| Geophysical gridding | Kriging versus minimum-curvature comparison | method comparison | Requires comparative experiment and assumptions | Open |
+| Potential fields | Analytic-signal amplitude | metric / attribute | Spectral derivative package and tests added | Implemented / tested candidate |
+| Potential fields | Tilt derivative | metric / attribute | Spectral derivative package and tests added | Implemented / tested candidate |
+| Potential fields | Horizontal derivatives | numerical operation | Spectral x/y derivatives and periodic-cosine test added | Implemented / tested candidate |
+| Potential fields | First vertical derivative | numerical operation | Radial-wavenumber spectral operator and periodic-cosine test added | Implemented / tested candidate |
+| Potential fields | Euler deconvolution | algorithm / estimator | No implementation verified | Open |
+| Potential fields | Werner deconvolution | algorithm / estimator | No implementation verified | Open |
+| Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
+| Potential fields | Upward / downward continuation | spectral operation | No implementation verified; downward continuation needs stability treatment | Open |
+| Geophysical methods | Airborne EM inversion | inverse problem / workflow | No implementation verified | Research required |
+| Geophysical methods | Magnetotelluric inversion | inverse problem / workflow | No implementation verified | Research required |
+| Geophysical methods | Seismic attribute analysis | method family | Must split into named attributes before implementation | Research required |
+| Geophysical methods | Receiver-function analysis | signal-processing workflow | No implementation verified | Research required |
+| Urban microclimate | Mean radiant temperature (MRT) | metric | No verified treatment | Open |
+| Urban microclimate | UTCI | metric / model | No verified treatment | Open |
+| Urban microclimate | PET | metric / model | No verified treatment | Open |
+| Urban microclimate | SOLWEIG / UMEP / ENVI-met | software | External maintained tools; integration/reproduction, not cloning | Research required |
+| Urban wind | RANS | numerical model family | No verified implementation | Research required |
+| Urban wind | LES | numerical model family | No verified implementation | Research required |
+| Urban wind | Lattice Boltzmann street-canyon flow | numerical algorithm / model | No verified implementation | Open |
+| Urban wind | Pedestrian wind comfort | applied assessment method | Needs criteria, exposure and validation context | Research required |
+| Stormwater | SWMM | software / model | External software integration, not reimplementation | Research required |
+| Stormwater | 1D–2D coupled urban flood models | model / workflow | No verified implementation | Research required |
+| Stormwater | Low-impact development siting | spatial optimisation method | No verified implementation | Open |
+| Building energy | Archetype-based simulation | workflow / model | No verified implementation | Research required |
+| Building energy | Shading and view-factor computation | geometry / numerical method | No verified implementation | Open |
+| Environmental monitoring | GLAD alerts | system / dataset / workflow | External alert product; verify versions and provenance | Research required |
+| Environmental monitoring | RADD alerts | system / dataset / workflow | External alert product; verify versions and provenance | Research required |
+| Forest monitoring | SAR–optical fusion for forest-loss detection | workflow / model | No reproducible workflow verified | Open |
+| Carbon accounting | Forest carbon stock mapping | model / workflow | No verified implementation | Research required |
+| Carbon accounting | REDD+ MRV | standard / workflow | Must identify normative framework and measurement components | Research required |
+| Carbon accounting | Soil carbon mapping | model / workflow | No verified implementation | Research required |
+| Carbon accounting | Additionality and leakage analysis | causal / accounting method | No verified implementation | Research required |
+| Methane detection | Matched-filter plume detection | algorithm | No implementation verified | Open |
+| Methane detection | Deep plume segmentation | model / workflow | External model families and data needed | Research required |
+| Methane quantification | Integrated mass enhancement (IME) | estimator / method | No verified implementation | Open |
+| Methane quantification | Cross-sectional flux | estimator / method | No verified implementation | Open |
+| Methane quantification | Gaussian plume inversion | inverse model | No verified implementation | Open |
+| Maritime monitoring | Vessel behaviour classification | model / workflow | No verified implementation | Research required |
+| Maritime monitoring | AIS gap detection | algorithm / data-quality method | No implementation verified | Open |
+| Maritime monitoring | Fishing effort mapping from SAR and AIS | workflow / estimator | No reproducible workflow verified | Research required |
+| Water quality | Chlorophyll indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
+| Water quality | Turbidity indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
+| Water quality | Cyanobacteria indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
+| Population | Top-down dasymetric disaggregation | algorithm / model | No dedicated implementation verified | Open |
+| Population | Bottom-up microcensus estimation | estimator / workflow | No verified implementation | Research required |
+| Population | Building-based population disaggregation | algorithm / model | No verified implementation | Open |
+| Population | Settlement-level population estimation | model / estimator | No verified implementation | Research required |
+| Privacy | Synthetic spatial microdata generation | model / workflow | No verified implementation | Research required |
+| Privacy | Spatial k-anonymity | privacy method | No verified implementation | Open |
+| Privacy | Differential privacy for spatial aggregates | algorithm / privacy mechanism | No verified implementation | Open |
+| Segregation / diversity | Reardon–Firebaugh multigroup indices | statistic | No verified implementation | Open |
+| Segregation / diversity | Spatial exposure indices | statistic / measure | No verified implementation | Open |
+| Segregation / diversity | Shannon diversity | statistic | No verified implementation in Section 10 context | Partial |
+| Segregation / diversity | Simpson diversity | statistic | No verified implementation in Section 10 context | Partial |
+
+This is the explicit remaining Section 10 backlog, not a claim that the listed software, models, metrics and workflows should all be cloned. Their correct deliverable may be a validated integration, derivation, metric implementation or research dossier according to the record-type and completion standards.
