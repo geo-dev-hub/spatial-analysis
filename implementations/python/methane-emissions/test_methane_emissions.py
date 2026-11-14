@@ -49,6 +49,6 @@ def test_cross_sectional_flux_integrates_signed_normal_transport():
     c=np.array([1,2,3.0])
     u=np.array([2,2,-1.0])
     width=np.array([1,0.5,2.0])
-    assert cross_sectional_flux(c,u,width)==pytest.approx(1.0)
+    assert cross_sectional_flux(c,u,width)==pytest.approx(-2.0)
     with pytest.raises(ValueError):
         cross_sectional_flux([1,2],[1],[1,1])
