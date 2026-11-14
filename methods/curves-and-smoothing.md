@@ -112,4 +112,4 @@ Report input point count, output sampling interval, coordinate units, method and
 
 ## Scope
 
-This is a method-selection and mathematical overview. It does not claim to implement these spline families or a Kalman/RTS smoother. Those should be separate tested packages because their input contracts, boundary conditions, numerical behaviour and evaluation criteria differ.
+**Implemented teaching baseline:** [Chaikin corner cutting, centripetal/uniform/chordal Catmull–Rom interpolation and arbitrary-degree Bézier evaluation](../implementations/python/curves-smoothing/README.md), with [tests](../implementations/python/curves-smoothing/test_curves_smoothing.py), an [intern walkthrough](../implementations/python/curves-smoothing/implementation-walkthrough.md) and an [executable lab notebook](../notebooks/curves-smoothing-lab.ipynb). B-spline and NURBS evaluation/fitting, Schneider-style Bezier fitting, Kalman filtering and RTS smoothing remain unimplemented and require separate numerical contracts and validation.
