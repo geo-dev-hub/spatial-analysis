@@ -36,3 +36,8 @@ def test_duplicate_points_do_not_break_fit():
 def test_invalid_inputs_rejected():
     with pytest.raises(ValueError):fit_bezier_curves([(0,0)],.1)
     with pytest.raises(ValueError):fit_bezier_curves([(0,0),(1,1)],-1)
+
+
+def test_malformed_points_rejected():
+    with pytest.raises(ValueError):
+        fit_bezier_curves([(0,0),(1,2,3)],.1)

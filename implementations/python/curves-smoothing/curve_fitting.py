@@ -6,8 +6,8 @@ Point=tuple[float,float]
 Curve=tuple[Point,Point,Point,Point]
 
 def _points(values):
+    if len(values)<2 or any(len(p)!=2 for p in values):raise ValueError("at least two 2D points are required")
     pts=[(float(p[0]),float(p[1])) for p in values]
-    if len(pts)<2 or any(len(p)!=2 for p in values):raise ValueError("at least two 2D points are required")
     if any(not isfinite(x) or not isfinite(y) for x,y in pts):raise ValueError("points must be finite")
     return pts
 
