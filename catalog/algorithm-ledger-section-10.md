@@ -76,8 +76,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Categorical / probabilistic verification | CSI | Tested forecast-verification package | Implemented / tested |
 | Probabilistic verification | Brier score and Brier skill score | Tested forecast-verification package | Implemented / tested |
 | Probabilistic verification | ROC and AUC | Tested forecast-verification package; tied-rank ROC AUC | Implemented / tested |
-| Probabilistic verification | CRPS decomposition | Guide/context only; no matching implementation verified | Open |
-| Probabilistic verification | Rank histograms | Guide/context only; no matching implementation verified | Open |
+| Probabilistic verification | CRPS decomposition | Not implemented; ensemble CRPS score is now separate and tested | Open |
+| Probabilistic verification | Rank histograms | Expected rank histogram with fractional tie handling, tests and notebook added | Implemented / tested candidate; calibration review pending |
 | Optical flow | Lucas–Kanade | Family guide; no matching implementation verified | Research / lesson only |
 | Optical flow | Farnebäck | Family guide; no matching implementation verified | Research / lesson only |
 | Optical flow | DIS | Family guide; no matching implementation verified | Research / lesson only |
@@ -222,3 +222,6 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Segregation / diversity | Simpson diversity | statistic | No verified implementation in Section 10 context | Partial |
 
 This is the explicit remaining Section 10 backlog, not a claim that the listed software, models, metrics and workflows should all be cloned. Their correct deliverable may be a validated integration, derivation, metric implementation or research dossier according to the record-type and completion standards.
+
+
+Ensemble verification update: empirical ensemble CRPS and an expected rank histogram with deterministic fractional tie handling are implemented, tested and documented in a dedicated lab. CRPS decomposition remains open; the CRPS score itself must not be mistaken for a full reliability-resolution-uncertainty decomposition.

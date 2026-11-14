@@ -1,45 +1,7 @@
 # Forecast verification teaching package
 
-A dependency-free baseline for binary-event forecast verification.
+The package includes binary-event contingency metrics, Brier score and skill, reliability bins, tied-rank ROC AUC, regular-grid Fractions Skill Score, and a new ensemble-verification module.
 
-Implemented:
-- contingency-table construction (hits, misses, false alarms, correct negatives);
-- probability of detection (POD), false alarm ratio (FAR), false-positive rate, critical success index (CSI) and equitable threat score (ETS);
-- Brier score and Brier skill score against an explicitly supplied reference forecast;
-- reliability-bin summaries with empty bins retained;
-- empirical ROC AUC using average ranks for tied scores;
-- a separate regular-grid Fractions Skill Score (FSS) baseline with explicit edge policies.
+The ensemble module implements empirical-distribution CRPS per case and its sample mean, plus an expected rank histogram that fractionally distributes ties across admissible ranks. Inputs are paired cases with a rectangular ensemble and finite values. These metrics do not replace calibration assessment, uncertainty intervals or a spatially valid held-out design.
 
-Run tests from this directory:
-
-```bash
-python -m pip install -r requirements.txt
-python -m pytest -q
-```
-
-## Contract and interpretation
-
-Observations and deterministic forecasts are binary 0/1 values (booleans are accepted). Probability forecasts must be finite and lie in [0, 1]. ROC scores may be any finite ranking score and need not be probabilities. Paired arrays must have equal lengths.
-
-Undefined ratios return `None`, not zero. ROC AUC returns `None` if either observed class is absent. Reliability bins use caller-specified edges from exactly 0 to 1; bins are left-closed/right-open except the final bin, which includes 1. Empty bins remain visible with null means.
-
-## Explicit limits
-
-The package does not implement CRPS, ensemble rank histograms, SAL or MODE. The separate FSS module is limited to regular 2D grids and square neighbourhoods. It does not handle multi-category events, censoring, missing-value masks, spatial neighbourhoods, temporal dependence, confidence intervals or forecast-threshold selection. The scores are not a complete verification report: stratification, sample sizes, uncertainty and a defensible held-out design remain the analyst's responsibility.
-
-These are transparent teaching implementations, not a substitute for a domain-validated operational verification system.
-
-
-## Spatial neighbourhood verification: Fractions Skill Score
-
-The separate spatial_fss.py module implements a transparent FSS baseline for paired regular 2D grids. It thresholds both fields, calculates event fractions in centred square neighbourhoods, then compares those fractions:
-
-$$FSS = 1 - \\frac{\\sum_i(P_i-O_i)^2}{\\sum_i P_i^2+\\sum_i O_i^2}.$$
-
-- window_size is a positive odd width in grid cells; 1 gives gridpoint verification.
-- edge_policy='truncate' clips windows at grid edges and uses the actual clipped area.
-- edge_policy='valid' evaluates only centres with complete windows.
-- A zero denominator returns None rather than silently declaring a no-event sample perfect.
-- Summed-area tables make each rectangular event-count query constant time after linear preprocessing.
-
-The implementation does not infer physical distance from cell count. Align grids before verification and report grid spacing, projection, threshold, physical window size, domain and edge policy. Missing-data masks, weighted neighbourhoods, SAL and MODE remain outside this package.
+Run python -m pip install -r requirements.txt and python -m pytest -q from this directory. See the individual module docstrings for contracts and the package walkthrough for derivations.

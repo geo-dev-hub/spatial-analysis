@@ -185,3 +185,13 @@ A strong verification report combines:
 ## Scope
 
 **Implemented teaching baseline:** [contingency-table scores, Brier score/skill, reliability bins and tied-rank ROC AUC](../implementations/python/forecast-verification/README.md), with [tests](../implementations/python/forecast-verification/test_forecast_verification.py), an [intern walkthrough](../implementations/python/forecast-verification/implementation-walkthrough.md) and an [executable lab](../notebooks/forecast-verification-lab.ipynb). CRPS, ensemble rank histograms, SAL and MODE remain unimplemented. Fractions Skill Score has a tested regular-grid baseline with explicit cell-window and edge policies. Spatial metrics require separate grid, neighbourhood, object and boundary contracts; they should not be represented by one generic vector function.
+
+
+## Ensemble verification additions
+
+The companion package now also provides empirical ensemble CRPS per case and its mean, plus an expected rank histogram. Ties are fractionally distributed over admissible ranks, yielding a deterministic version of random tie handling. The implementation states its finite rectangular-ensemble contract and does not silently substitute the fair-CRPS estimator.
+
+- [Ensemble metrics implementation](../implementations/python/forecast-verification/ensemble_verification.py)
+- [Tests](../implementations/python/forecast-verification/test_ensemble_verification.py)
+- [Walkthrough](../implementations/python/forecast-verification/ensemble-verification-walkthrough.md)
+- [Ensemble verification lab](../notebooks/ensemble-forecast-verification-lab.ipynb)
