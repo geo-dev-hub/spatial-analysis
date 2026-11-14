@@ -34,3 +34,27 @@ print(result.k_values, result.l_values)
 - Isotropic and border corrections, simulation envelopes and formal hypothesis tests are not included.
 
 Read the [canonical lesson](../../../algorithms/statistics/ripley-k.md) and [intern walkthrough](implementation-walkthrough.md).
+
+
+## Conditional CSR simulation and global deviation test
+
+The companion module `ripley_k_envelope.py` keeps the observed event count fixed, simulates uniform point patterns in the same rectangular window and calculates translation-corrected L curves.
+
+```python
+from ripley_k_envelope import ripley_k_csr_envelope
+
+result = ripley_k_csr_envelope(
+    points,
+    bounds=(0, 10, 0, 10),
+    radii=np.linspace(0.5, 3.0, 26),
+    n_simulations=199,
+    alpha=0.05,
+    seed=2026,
+)
+print(result.global_p_value)
+print(result.pointwise_lower_l, result.pointwise_upper_l)
+```
+
+The returned bands are pointwise quantiles, not a simultaneous global envelope. The p-value is calculated separately from a studentised maximum absolute deviation over the selected radii. The null is homogeneous CSR conditional on the observed number of events. The simulation count controls Monte Carlo resolution; the smallest possible p-value is 1/(B+1).
+
+This is a transparent teaching test, not a specialist rank-envelope implementation. It does not adjust for parameter estimation, inhomogeneous intensity, network constraints or other departures from the stated null. See the [canonical lesson](../../../algorithms/statistics/ripley-k.md).
