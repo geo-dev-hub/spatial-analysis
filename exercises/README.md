@@ -30,6 +30,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Bentley–Ottmann](../implementations/python/bentley-ottmann/implementation-walkthrough.md#10-suggested-intern-exercises)
 - [Geometry overlay and validity](geometry-overlay-and-validity.md)
 - [Core GIS continuation](core-gis-continuation.md)
+- [ELECTRE I kernel](electre-i-kernel.md) — test internal and external stability and inspect cycles and multiple kernels.
 - [Spatial decision support](spatial-decision-support.md)
 - [Spatial cross-validation](spatial-cross-validation.md)
 - [GeoAI foundations](geoai-foundations.md)
