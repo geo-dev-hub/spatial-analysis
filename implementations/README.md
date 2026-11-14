@@ -129,7 +129,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all seventy-four Python example packages and the Clipper2 C# smoke test, and execute all sixty-two learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all seventy-five Python example packages and the Clipper2 C# smoke test, and execute all sixty-three learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
@@ -152,3 +152,6 @@ These are connected teaching materials, not interchangeable copies of the same e
 
 
 - [Accessibility distribution and equity diagnostics](python/accessibility-equity/README.md): population-weighted Lorenz curve, Gini, lower-tail quantiles, minimum-standard shortfall and caller-defined group comparisons, with tests and an [intern walkthrough](python/accessibility-equity/implementation-walkthrough.md).
+
+
+- [Equity-constrained maximal covering](python/equity-covering/README.md): exact tiny-instance facility selection with explicit minimum population coverage floors for caller-defined groups, separate demand/objective weights, infeasibility reporting, tests and an [intern walkthrough](python/equity-covering/implementation-walkthrough.md).
