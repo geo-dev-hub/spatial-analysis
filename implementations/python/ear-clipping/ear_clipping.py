@@ -69,13 +69,13 @@ def _clean_ring(vertices: Iterable[Sequence[float | int]]) -> list[Point]:
                 break
     if len(compact) < 3:
         raise ValueError("A polygon needs at least three distinct non-collinear vertices.")
-    if _signed_area2(compact) == 0:
-        raise ValueError("Polygon area must be non-zero.")
     return compact
 
 
 def _validate_simple(ring: Sequence[Point]) -> None:
     n = len(ring)
+    # Check adjacent collinear edges first: a reversal overlaps rather than merely
+    # meeting at their shared vertex.
     for i in range(n):
         previous, current, following = ring[i - 1], ring[i], ring[(i + 1) % n]
         if orient(previous, current, following) == 0:
@@ -83,6 +83,7 @@ def _validate_simple(ring: Sequence[Point]) -> None:
             v = (following[0] - current[0], following[1] - current[1])
             if u[0] * v[0] + u[1] * v[1] >= 0:
                 raise ValueError("Input ring contains overlapping adjacent edges.")
+    for i in range(n):
         a, b = ring[i], ring[(i + 1) % n]
         for j in range(i + 1, n):
             # Adjacent boundary edges share their common endpoint by definition.
@@ -119,6 +120,8 @@ def triangulate(vertices: Iterable[Sequence[float | int]]) -> list[Triangle]:
     """
     ring = _clean_ring(vertices)
     _validate_simple(ring)
+    if _signed_area2(ring) == 0:
+        raise ValueError("Polygon area must be non-zero.")
     if _signed_area2(ring) < 0:
         ring.reverse()
 
