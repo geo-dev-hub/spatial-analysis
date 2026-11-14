@@ -77,3 +77,65 @@ def thin_plate_spline_grid(points, values, x_coordinates, y_coordinates, smoothi
     except (ValueError, np.linalg.LinAlgError) as exc:
         raise ValueError("thin-plate spline system could not be solved for these samples") from exc
     return np.asarray(result, dtype=float).reshape(shape)
+
+
+def ordinary_kriging_grid(
+    points, values, x_coordinates, y_coordinates, range_, sill, nugget=0.0
+):
+    """Ordinary kriging with a fixed exponential covariance model.
+
+    Returns prediction and kriging variance grids. The covariance is
+    C(h)=sill*exp(-h/range_) and nugget is added only to the observation
+    covariance diagonal. Variogram/covariance parameters are supplied, not
+    fitted. This is a small-data reference implementation (dense O(n^3)
+    factorisation); it is not a scalable production kriging engine.
+    """
+    p, v = _samples(points, values)
+    if len(p) < 2:
+        raise ValueError("ordinary kriging needs at least two sample points")
+    range_ = float(range_)
+    sill = float(sill)
+    nugget = float(nugget)
+    if not np.isfinite(range_) or range_ <= 0:
+        raise ValueError("range_ must be finite and positive")
+    if not np.isfinite(sill) or sill <= 0:
+        raise ValueError("sill must be finite and positive")
+    if not np.isfinite(nugget) or nugget < 0:
+        raise ValueError("nugget must be finite and non-negative")
+
+    from scipy.spatial.distance import cdist
+
+    q, shape = _grid(x_coordinates, y_coordinates)
+    distances = cdist(p, p)
+    covariance = sill * np.exp(-distances / range_)
+    covariance.flat[:: len(p) + 1] += nugget
+    system = np.empty((len(p) + 1, len(p) + 1), dtype=float)
+    system[:-1, :-1] = covariance
+    system[:-1, -1] = 1.0
+    system[-1, :-1] = 1.0
+    system[-1, -1] = 0.0
+    rhs = np.empty(len(p) + 1, dtype=float)
+    rhs[-1] = 1.0
+    try:
+        factor = np.linalg.inv(system)
+    except np.linalg.LinAlgError as exc:
+        raise ValueError("kriging system is singular; inspect sample geometry and covariance parameters") from exc
+
+    prediction = np.empty(len(q), dtype=float)
+    variance = np.empty(len(q), dtype=float)
+    for start in range(0, len(q), 256):
+        stop = min(start + 256, len(q))
+        cross = sill * np.exp(-cdist(p, q[start:stop]) / range_)
+        rhs[:-1] = cross
+        solution = factor @ rhs
+        weights = solution[:-1]
+        lagrange = solution[-1]
+        prediction[start:stop] = weights @ v
+        raw_variance = sill - np.sum(weights * cross, axis=0) - lagrange
+        if np.any(raw_variance < -1e-8 * sill):
+            raise ValueError("computed kriging variance is materially negative; inspect model conditioning")
+        variance[start:stop] = np.maximum(raw_variance, 0.0)
+    return {
+        "prediction": prediction.reshape(shape),
+        "variance": variance.reshape(shape),
+    }
