@@ -92,3 +92,46 @@ def test_euler_deconvolution_validates_window_contract():
     a = np.arange(4.0).reshape(2, 2)
     with pytest.raises(ValueError):
         euler_deconvolution_window(a, a, a, a, x, y, 0, 0)
+
+
+def test_regularized_downward_continuation_recovers_a_low_frequency_mode():
+    from spectral_derivatives import downward_continuation_regularized
+    n = 64
+    x = np.arange(n)
+    height, lam = 2.0, 1e-8
+    k = 2 * np.pi / n
+    surface = np.tile(4.0 + np.cos(k * x), (n, 1))
+    observed = np.tile(4.0 + np.exp(-k * height) * np.cos(k * x), (n, 1))
+    result = downward_continuation_regularized(observed, 1, 1, height, lam)
+    np.testing.assert_allclose(result, surface, atol=2e-6)
+
+
+def test_regularized_downward_continuation_suppresses_high_frequency_noise():
+    from spectral_derivatives import downward_continuation_regularized
+    n = 64
+    x = np.arange(n)
+    height, lam = 3.0, 1e-4
+    low_k, high_k = 2 * np.pi / n, np.pi
+    observed = np.tile(
+        np.exp(-low_k * height) * np.cos(low_k * x)
+        + np.exp(-high_k * height) * np.cos(high_k * x),
+        (n, 1),
+    )
+    result = downward_continuation_regularized(observed, 1, 1, height, lam)
+    low_amplitude = 2 * np.mean(result[0] * np.cos(low_k * x))
+    high_amplitude = 2 * np.mean(result[0] * np.cos(high_k * x))
+    assert low_amplitude > 0.9
+    assert abs(high_amplitude) < 0.01
+
+
+def test_regularized_downward_continuation_zero_height_is_identity():
+    from spectral_derivatives import downward_continuation_regularized
+    field = np.arange(64, dtype=float).reshape(8, 8)
+    np.testing.assert_allclose(downward_continuation_regularized(field, 1, 1, 0, 0.1), field)
+
+
+@pytest.mark.parametrize("height,lam", [(-1, .1), (1, 0), (1, -0.1), (1, float("nan"))])
+def test_regularized_downward_continuation_rejects_invalid_parameters(height, lam):
+    from spectral_derivatives import downward_continuation_regularized
+    with pytest.raises(ValueError):
+        downward_continuation_regularized(np.ones((8, 8)), 1, 1, height, lam)
