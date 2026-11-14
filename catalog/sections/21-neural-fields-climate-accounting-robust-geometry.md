@@ -49,7 +49,7 @@
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Exact and adaptive predicates (Shewchuk), exact arithmetic, interval arithmetic, floating-point robustness in overlay and triangulation | Robust predicate and arithmetic methods | 44 | Not checked — intake only |
+| [Exact orientation predicate](../../methods/exact-orientation-predicate.md), adaptive predicates (Shewchuk), exact arithmetic, interval arithmetic, floating-point robustness in overlay and triangulation | Robust predicate and arithmetic methods | 44 | Partial — related record exists; source-entry review pending |
 | Snapping, tolerance handling, topological robustness, simulation of simplicity, precision models in JTS and GEOS | Robust geometric computation / precision strategies / implementation behaviour | 44 | Not checked — intake only |
 
 ## Time-dependent datums and vertical reference

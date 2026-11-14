@@ -21,7 +21,7 @@ The source organises methods by application field. The same statistical, geometr
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Weighted and Boolean overlay, AHP, fuzzy overlay, TOPSIS, ELECTRE, ordered weighted averaging, weights of evidence | Multi-criteria decision methods / evidence combination | 12 | Not checked — intake only |
+| [Weighted and Boolean overlay](../../methods/boolean-and-fuzzy-overlay.md), [AHP](../../methods/analytic-hierarchy-process.md), fuzzy overlay, [TOPSIS](../../methods/topsis.md), [ELECTRE](../../methods/electre-outranking.md), [ordered weighted averaging](../../methods/ordered-weighted-averaging.md), [weights of evidence](../../methods/weights-of-evidence.md), [weighted linear combination](../../methods/weighted-linear-combination.md) | Multi-criteria decision methods / evidence combination | 12 | Partial — related record exists; source-entry review pending |
 | Spatial decision support, participatory GIS, scenario analysis, InVEST ecosystem services | Decision-support workflows / software and models | 12 | Not checked — intake only |
 | Indices: social vulnerability (SoVI), multi-hazard and compound-risk, environmental justice, landscape connectivity (IIC, PC) | Composite indices / risk measures / connectivity metrics | 12 | Not checked — intake only |
 

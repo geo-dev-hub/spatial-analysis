@@ -23,7 +23,7 @@ The Euclidean foundation covers five stationary covariance examples and finite-m
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Stationary kernels: Matern, exponential, spherical, Gaussian, Cauchy, powered exponential, Wendland compact support | Covariance and kernel functions | 45 | Not checked — intake only |
+| Stationary kernels: [stationary covariance functions](../../methods/stationary-covariance-functions.md), Matern, exponential, spherical, Gaussian, Cauchy, powered exponential, Wendland compact support | Covariance and kernel functions | 45 | Partial — related record exists; source-entry review pending |
 | Non-Euclidean validity: valid covariances on spheres (Gneiting), on networks (Anderes), graph kernels; why geodesic-distance Gaussian kernels can fail | Covariance validity theory / spherical and network kernels | 45 | Not checked — intake only |
 | Space-time covariances: Gneiting nonseparable class, Cressie-Huang, product-sum and metric models | Spatiotemporal covariance models | 45 | Not checked — intake only |
 | Bases: thin plate, B-splines and tensor products, wavelets, Slepian functions, Zernike, radial bases, multiresolution Haar, FRK bases, Moran basis | Basis functions / low-rank representations | 46 | Not checked — intake only |

@@ -13,7 +13,7 @@ Do not silently replace the source label with a canonical name. Keep both.
 
 Do not compress all checks into one unqualified `verified` flag. Record these dimensions separately.
 
-Each section index also has a concise **source-entry review status**. Use `Not checked — intake only` when no independent review is recorded, and `Partial — related record exists; source-entry review pending` when a linked canonical record covers only part of the grouped entry. These are summary labels, not substitutes for the separate verification dimensions below.
+Each section index also has a concise **source-entry review status**. Use `Not checked — intake only` when no independent review is recorded; `Partial — related record exists; source-entry review pending` when a linked canonical record covers only part of the grouped entry; or `Partial — selected bibliography checked; canonical lesson pending` when citation metadata has been checked for some members but the group has no complete canonical lesson. These are summary labels, not substitutes for the separate verification dimensions below.
 
 | Dimension | Status values | What the status means |
 |---|---|---|

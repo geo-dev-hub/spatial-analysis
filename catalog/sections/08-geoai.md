@@ -18,8 +18,8 @@ A first masked-autoencoding lesson now explains the encoder-visible/decoder-mask
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Masked autoencoding: MAE, SatMAE (temporal and spectral grouping), Scale-MAE (GSD-aware encoding), SelectiveMAE, S2MAE, SpectralGPT (3D masking) | Self-supervised pretraining objectives / model families | 15 | Not checked — intake only |
-| Contrastive and self-distillation: SimCLR, MoCo, DINO, DINOv2, DINOv3, iBOT, BYOL, Barlow Twins, VICReg, SeCo, SSL4EO, CROMA, JEPA-style latent prediction | Self-supervised learning methods / model families | 15 | Not checked — intake only |
+| Masked autoencoding: [MAE](../../methods/masked-autoencoding.md), SatMAE (temporal and spectral grouping), Scale-MAE (GSD-aware encoding), SelectiveMAE, S2MAE, SpectralGPT (3D masking) | Self-supervised pretraining objectives / model families | 15 | Partial — related record exists; source-entry review pending |
+| Contrastive and self-distillation: SimCLR, MoCo, DINO, DINOv2, DINOv3, iBOT, BYOL, Barlow Twins, VICReg, SeCo, SSL4EO, CROMA, [NT-Xent / InfoNCE](../../algorithms/geoai/contrastive-info-nce.md), JEPA-style latent prediction | Self-supervised learning methods / model families | 15 | Partial — related record exists; source-entry review pending |
 | Image-text and image-location alignment: RemoteCLIP, GeoRSCLIP, SkyCLIP, SatCLIP, GeoCLIP, CSP | Cross-modal representation learning models | 15 | Not checked — intake only |
 | Multi-sensor and cross-modal masking: Galileo, DOFA, SkySense, Copernicus-FM, TerraMind, AnySat, Panopticon | Multimodal and multisensor model families | 15 | Not checked — intake only |
 | Embedding fields: AlphaEarth Foundations, Clay, TESSERA; pixel-timeseries models: Presto, Galileo, TiMo | Geospatial embedding models / time-series model families | 15 | Not checked — intake only |

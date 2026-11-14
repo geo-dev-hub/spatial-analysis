@@ -35,6 +35,7 @@ All 22 original sections have item-level intake indexes. Each index preserves th
 - **Verification status** is deliberately conservative:
   - **Not checked — intake only:** no independent source-entry review is recorded.
   - **Partial — related record exists; source-entry review pending:** a related canonical page is linked, but that does not verify every item or claim in the grouped source entry.
+  - **Partial — selected bibliography checked; canonical lesson pending:** some source metadata has been checked, but the group does not yet have a complete canonical lesson.
 - Canonical records, implementations and learning paths are linked only where they already exist.
 - Source warnings about memory-based or representative names remain visible in the relevant indexes.
 

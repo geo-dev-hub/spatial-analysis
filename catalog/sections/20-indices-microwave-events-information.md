@@ -37,7 +37,7 @@
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Triple collocation and extended triple collocation, error covariance estimation, signal-to-noise ratio of products | Product validation / error estimation | 42 | Not checked — intake only |
+| [Triple collocation](../../methods/triple-collocation.md), extended triple collocation, error covariance estimation, signal-to-noise ratio of products | Product validation / error estimation | 42 | Partial — related record exists; source-entry review pending |
 | Precipitation merging: gauge-satellite kriging blending (CHIRPS and MSWEP style), conditional merging, optimal interpolation | Data fusion / precipitation estimation | 42 | Not checked — intake only |
 
 ## Nighttime lights processing
@@ -50,7 +50,7 @@
 
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
-| Event definition: marine heatwaves (Hobday), heatwave and cold spell definitions, drought events via run theory, percentile thresholds | Event definitions / threshold and run-theory methods | 42 | Not checked — intake only |
+| Event definition: [marine heatwaves (Hobday)](../../methods/marine-heatwave-detection.md), heatwave and cold spell definitions, drought events via run theory, percentile thresholds | Event definitions / threshold and run-theory methods | 42 | Partial — related record exists; source-entry review pending |
 | Space-time tracking: 3D connected component labeling, storm and cyclone tracking (TempestExtremes-style), atmospheric river detection (IVT-based, ARTMIP), blocking and jet stream detection, monsoon onset indices | Spatiotemporal tracking / detection methods / climate indices | 42 | Not checked — intake only |
 | Ocean: mesoscale eddy tracking, upwelling indices, Lagrangian coherent structures (FTLE), geostrophic currents from sea surface height, Ekman and Stokes drift | Ocean feature tracking / dynamical and transport measures | 42 | Not checked — intake only |
 
