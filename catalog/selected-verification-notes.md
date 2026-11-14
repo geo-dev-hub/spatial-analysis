@@ -165,3 +165,17 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new forecast-verification implementation is claimed.
 - **Rights:** DOI and publisher links only; no third-party text or figures reproduced.
 - **Remaining work:** implement scores with hand-calculated fixtures; validate edge cases such as zero denominators, event prevalence and ensemble ties; add spatially aware uncertainty intervals and reproducible forecast/observation examples.
+
+
+## Section 10 — Optical flow and image motion
+
+**Source entry:** “Optical flow for advection: Lucas-Kanade, Farneback, DIS, variational optical flow” (source page 21).
+
+- **Lucas–Kanade bibliography:** Lucas, B. D. and Kanade, T. (1981), “An Iterative Image Registration Technique with an Application to Stereo Vision,” *Proceedings of the Seventh International Joint Conference on Artificial Intelligence*, 674–679. The IJCAI proceedings record confirms the paper and its gradient-based registration method.
+- **Farnebäck bibliography:** Farnebäck, G. (2003), “Two-Frame Motion Estimation Based on Polynomial Expansion,” *Scandinavian Conference on Image Analysis*, 363–370. The author-hosted paper describes local quadratic polynomial expansion and displacement estimation.
+- **DIS bibliography:** Kroeger, T., Timofte, R., Dai, D. and Van Gool, L. (2016), “Fast Optical Flow using Dense Inverse Search,” *European Conference on Computer Vision*, 471–488, DOI [10.1007/978-3-319-46493-0_29](https://doi.org/10.1007/978-3-319-46493-0_29). The paper describes inverse patch search, dense aggregation and variational refinement.
+- **Implementation reference:** OpenCV's official optical-flow and DIS documentation identifies available functions, parameters and presets. The lesson treats these as implementation references, not substitutes for the original algorithm papers.
+- **Technical-claim status:** the lesson distinguishes sparse/local Lucas–Kanade tracking from dense Farnebäck and DIS flow, derives the brightness-constancy constraint, and explains the affine conversion from pixel displacement to map displacement. It warns that image motion is not automatically physical surface motion.
+- **Implementation:** no new optical-flow or variational-flow implementation is claimed.
+- **Rights:** publisher, conference, author-hosted and official documentation links only; no third-party figures or code reproduced.
+- **Remaining work:** add a tested synthetic image-pair package, evaluate occlusion and textureless regions, and verify pixel-to-map conversion on rotated and sheared georeferenced rasters.
