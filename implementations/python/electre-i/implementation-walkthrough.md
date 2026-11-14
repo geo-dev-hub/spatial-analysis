@@ -50,3 +50,17 @@ Tests cover benefit/cost orientation, weight normalisation, pairwise ties, refle
 Change the concordance and discordance thresholds. Identify an alternative pair whose relation changes. Explain which coalition supports the pair and which criterion supplies the strongest opposition.
 
 Then design a small spatial decision involving three candidate service sites. Include at least one benefit criterion (accessibility) and one cost criterion (travel cost or hazard exposure). Explain why the result is not a continuous suitability map.
+
+
+## 8. Extract and interpret the kernel
+
+The companion `electre_i_kernel.py` module takes the Boolean outranking matrix and checks two conditions for each candidate subset:
+
+- **Internal stability:** no two distinct selected alternatives outrank one another.
+- **External stability:** each alternative outside the subset is directly outranked by at least one selected alternative.
+
+The output is a set of one or more kernels. An empty result means no subset satisfies both conditions for the supplied relation. Multiple results mean the relation does not identify a unique kernel. The implementation deliberately reports these cases rather than applying an undocumented cycle-reduction rule.
+
+The implementation checks direct edges, not transitive reachability. If A outranks B and B outranks C, that does not by itself mean A directly outranks C for the external-stability test.
+
+The search enumerates subsets and is exponential. It is capped at 20 alternatives by default and is intended for small decision problems. The kernel is a choice set, not a total ranking. Inspect cycles, thresholds and criterion assumptions before interpreting the result.
