@@ -4,7 +4,7 @@
 - **Source pages:** 21–23
 - **Source transcription:** [pages 21–25](../../source-inventory/pages-21-25.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [spatial cross-validation](../../methods/spatial-cross-validation.md) and its tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md), covering grid-block groups and optional buffer exclusion. Other entries remain intake.
+- **Current canonical records:** [spatial cross-validation](../../methods/spatial-cross-validation.md) and its tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md). The lesson now distinguishes grid-block and buffered-fold baselines from the research-backed NNDM and kNNDM methods; the Python package does not implement NNDM or kNNDM. Other entries remain intake.
 
 The source describes these as further methods not listed in sections 1–9. Several entries are cross-cutting techniques that should connect to earlier topic families rather than be treated as entirely new subjects.
 
