@@ -224,6 +224,9 @@ jobs:
           - example: ear-clipping
             directory: implementations/python/ear-clipping
             pythonpath: ""
+          - example: minkowski-convex
+            directory: implementations/python/minkowski-convex
+            pythonpath: ""
 
     steps:
       - name: Check out repository
@@ -335,6 +338,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/electre-i-outranking-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/snap-rounding-noder-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/ear-clipping-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/minkowski-convex-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
