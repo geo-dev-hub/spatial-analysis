@@ -93,3 +93,12 @@ The next executable package should not try to combine all these families. A soun
 - Moradi, M., & Brown, J. (2024). “Mapping using an adaptive sampling design.” *Spatial Statistics*, 60, 100820. [https://doi.org/10.1016/j.spasta.2024.100820](https://doi.org/10.1016/j.spasta.2024.100820)
 
 This is a method-selection and design guide, not an implementation. The ACS estimators, spatial Bayesian optimisation, acquisition-function diagnostics, active-learning strategies and survey-weighted map-accuracy estimators remain separate implementation tasks.
+
+
+## Executable adaptive cluster sampling
+
+The package now implements network expansion from an initial sample: a unit meeting the prespecified threshold recruits all of its neighbours, and recruited qualifying units can continue expansion. It returns the realised sample and separates initial from recruited units. It does not calculate an estimator or inclusion probabilities; those depend on the initial probability-sampling design and the adaptive estimator.
+
+- [Implementation and tests](../implementations/python/adaptive-sampling/README.md)
+- [Intern walkthrough](../implementations/python/adaptive-sampling/implementation-walkthrough.md)
+- [Lab](../notebooks/adaptive-cluster-sampling-lab.ipynb)

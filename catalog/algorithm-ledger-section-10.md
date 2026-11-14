@@ -95,7 +95,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Spatial validation | Spatial + temporal leave-out | Guide-level discussion; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Bayesian optimisation on spatial fields | Family guide only; no matching implementation verified | Research / lesson only |
 | Adaptive sampling | Multi-armed bandits for survey design | Family guide only; no matching implementation verified | Research / lesson only |
-| Adaptive sampling | Adaptive cluster sampling | Family guide only; no matching implementation verified | Research / lesson only |
+| Adaptive sampling | Adaptive cluster sampling | Network expansion from initial sample, tests, walkthrough and notebook added; estimator/inclusion probabilities remain separate | Implemented / tested candidate; design-based estimator review pending |
 | Adaptive sampling | Active learning for map validation | Family guide only; no matching implementation verified | Research / lesson only |
 | Distribution shift | Kernel two-sample tests / MMD | Unbiased Gaussian-kernel MMD, tests, walkthrough and notebook added | Implemented / tested candidate; spatial null design remains open |
 | Distribution shift | Energy distance | Unbiased sample energy-distance statistic and tests added | Implemented / tested candidate; spatial null design remains open |
@@ -256,3 +256,6 @@ Shannon entropy, Simpson concentration, the Reardon–Firebaugh multigroup entro
 
 
 Spatial validation update: buffered leave-one-out and deterministic cluster-based k-fold splitters are now executable in the existing spatial-cross-validation package. Neither is NNDM/kNNDM; distance-matching methods remain open.
+
+
+Adaptive sampling update: adaptive cluster-sample network expansion is now implemented and tested. The realised sample is not a population estimator; inclusion probabilities and a valid design-based estimator remain separate open work.

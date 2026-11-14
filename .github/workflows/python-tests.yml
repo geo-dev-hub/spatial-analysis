@@ -112,6 +112,9 @@ jobs:
           - example: population-diversity
             directory: implementations/python/population-diversity
             pythonpath: ""
+          - example: adaptive-sampling
+            directory: implementations/python/adaptive-sampling
+            pythonpath: ""
           - example: polygon-offsetting
             directory: implementations/python/polygon-offsetting
             pythonpath: ""
@@ -447,6 +450,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/lucas-kanade-optical-flow-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-distribution-shift-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/spatial-cross-validation-splitters-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/adaptive-cluster-sampling-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
