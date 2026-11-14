@@ -19,7 +19,7 @@ Minimise sum of segment costs plus beta times the number of changes. Dynamic pro
 A detected shift is not a causal explanation. Seasonality, serial dependence, cloud contamination, sensor transitions and spatial multiplicity need separate treatment.
 
 
-## Bayesian online change-point detection
+## Pettitt's test\n\nFor every split t, compare all observations on the left with all observations on the right. The signed statistic is the sum of pairwise signs; equivalently, with average ranks for ties, U_t = 2 sum(r_i, i≤t) − t(n+1). Select the split maximising |U_t|. The returned p-value uses the conventional large-sample approximation 2 exp(−6K²/(n³+n²)), capped at one. The selected split is a candidate, not proof of a physical event. The standard null assumes independent observations; autocorrelation and spatial multiple testing need adjusted inference.\n\n## Bayesian online change-point detection
 
 Maintain a posterior over run length r, the number of observations since the latest change. The growth branch extends each run with probability 1-H and its posterior predictive likelihood. The change branch resets to run length zero with hazard H and the prior predictive likelihood. Normalise the combined masses to obtain P(r_t | y_1:t).
 
