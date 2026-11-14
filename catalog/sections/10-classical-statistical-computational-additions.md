@@ -4,7 +4,7 @@
 - **Source pages:** 21–23
 - **Source transcription:** [pages 21–25](../../source-inventory/pages-21-25.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [spatial cross-validation](../../methods/spatial-cross-validation.md) with a tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md); [line clipping](../../methods/line-clipping.md); [rasterization](../../methods/rasterization.md); [curves and smoothing](../../methods/curves-and-smoothing.md); [mesh geodesics](../../methods/mesh-geodesics.md); [discrete global grids](../../methods/discrete-global-grids.md); and [change-point detection](../../methods/change-point-detection.md); and [time-series trend and seasonality](../../methods/time-series-trend-seasonality.md). These method guides are research and method-selection material; they do not claim new implementations. The cross-validation lesson distinguishes grid-block and buffered-fold baselines from research-backed NNDM and kNNDM; the Python package does not implement NNDM or kNNDM. Other entries remain intake.
+- **Current canonical records:** [spatial cross-validation](../../methods/spatial-cross-validation.md) with a tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md); [line clipping](../../methods/line-clipping.md); [rasterization](../../methods/rasterization.md); [curves and smoothing](../../methods/curves-and-smoothing.md); [mesh geodesics](../../methods/mesh-geodesics.md); [discrete global grids](../../methods/discrete-global-grids.md); and [change-point detection](../../methods/change-point-detection.md); and [time-series trend and seasonality](../../methods/time-series-trend-seasonality.md); and [forecast verification](../../methods/forecast-verification.md). These method guides are research and method-selection material; they do not claim new implementations. The cross-validation lesson distinguishes grid-block and buffered-fold baselines from research-backed NNDM and kNNDM; the Python package does not implement NNDM or kNNDM. Other entries remain intake.
 
 The source describes these as further methods not listed in sections 1–9. Several entries are cross-cutting techniques that should connect to earlier topic families rather than be treated as entirely new subjects.
 
@@ -31,8 +31,8 @@ The source describes these as further methods not listed in sections 1–9. Seve
 
 | Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
 |---|---|---:|---|---|
-| Fractions Skill Score, neighborhood verification, SAL (structure, amplitude, location), object-based verification (MODE) | Forecast verification metrics and methods | 21 | Not checked — intake only |
-| ETS, POD, FAR, CSI, Brier skill score, ROC and AUC, CRPS decomposition, rank histograms | Forecast and probabilistic evaluation metrics | 21 | Not checked — intake only |
+| Fractions Skill Score, neighborhood verification, SAL (structure, amplitude, location), object-based verification (MODE) | Forecast verification metrics and methods | 21 | [Forecast verification lesson](../../methods/forecast-verification.md) covers scale-selective and object-based diagnostics; no new implementation | Partial — related record exists; source-entry review pending |
+| ETS, POD, FAR, CSI, Brier skill score, ROC and AUC, CRPS decomposition, rank histograms | Forecast and probabilistic evaluation metrics | 21 | [Forecast verification lesson](../../methods/forecast-verification.md) covers categorical, probabilistic and ensemble diagnostics; no new implementation | Partial — related record exists; source-entry review pending |
 | Optical flow for advection: Lucas-Kanade, Farneback, DIS, variational optical flow | Motion estimation algorithms | 21 | Not checked — intake only |
 
 ## Spatial cross-validation and sampling
