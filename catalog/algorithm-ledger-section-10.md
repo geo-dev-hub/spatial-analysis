@@ -69,7 +69,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 |---|---|---|---|
 | Spatial verification | Fractions Skill Score (FSS) | Regular-grid square-neighbourhood implementation, tests and scale notebook | Implemented / tested |
 | Spatial verification | SAL | Guide discusses it; no matching implementation verified | Research / lesson only |
-| Spatial verification | MODE object-based verification | Guide discusses it; no matching implementation verified | Research / lesson only |
+| Spatial verification | MODE object-based verification | `implementations/python/forecast-verification/object_verification.py` implements Gaussian smoothing, thresholding, connected-component objects, attributes and minimum-cost one-to-one matching; tests and lab; not full MET/MODE fuzzy-interest/merge workflow | Implemented candidate; reference equivalence, merging and fuzzy-interest validation remain open |
 | Categorical / probabilistic verification | ETS | Tested forecast-verification package | Implemented / tested |
 | Categorical / probabilistic verification | POD | Tested forecast-verification package | Implemented / tested |
 | Categorical / probabilistic verification | FAR | Tested forecast-verification package | Implemented / tested |
