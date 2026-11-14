@@ -77,3 +77,52 @@ def cusum(values,target_mean,allowance,threshold):
         if up>threshold:alarms.append((i,"up",up));up=0.0
         if down>threshold:alarms.append((i,"down",down));down=0.0
     return alarms
+
+
+def pettitt_test(values):
+    """Pettitt's rank test for one change in location.
+
+    Returns a dict with the zero-based split index (first item in the
+    second segment), signed U statistic, K=max(abs(U)), and the conventional
+    large-sample approximate p-value. The null calibration assumes independent
+    observations from a common continuous distribution; ties are handled with
+    average ranks but do not make the approximation exact.
+    """
+    data = _series(values)
+    n = len(data)
+    if n < 2:
+        raise ValueError("Pettitt test requires at least two observations")
+
+    # Average ranks give the Mann–Whitney form of Pettitt's statistic,
+    # including a deterministic mid-rank convention for tied values.
+    ordered = sorted((value, index) for index, value in enumerate(data))
+    ranks = [0.0] * n
+    i = 0
+    while i < n:
+        j = i + 1
+        while j < n and ordered[j][0] == ordered[i][0]:
+            j += 1
+        average_rank = ((i + 1) + j) / 2.0
+        for k in range(i, j):
+            ranks[ordered[k][1]] = average_rank
+        i = j
+
+    cumulative_rank = 0.0
+    best_k = -1.0
+    best_u = 0.0
+    best_split = 1
+    for split in range(1, n):
+        cumulative_rank += ranks[split - 1]
+        u = 2.0 * cumulative_rank - split * (n + 1)
+        if abs(u) > best_k:
+            best_k, best_u, best_split = abs(u), u, split
+
+    p_value = min(1.0, 2.0 * __import__("math").exp(
+        -6.0 * best_k * best_k / (n ** 3 + n ** 2)
+    ))
+    return {
+        "change_index": best_split,
+        "statistic": best_u,
+        "K": best_k,
+        "p_value_approx": p_value,
+    }
