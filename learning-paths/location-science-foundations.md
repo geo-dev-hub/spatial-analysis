@@ -42,7 +42,11 @@ Read [Two-step floating catchment area](../algorithms/optimization/two-step-fca.
 
 Read [Accessibility equity diagnostics](../algorithms/optimization/accessibility-equity.md) and run the [equity lab](../notebooks/accessibility-equity-lab.ipynb). Compare place-weighted and population-weighted distributions, inspect the Lorenz curve and Gini, report lower-tail quantiles, and calculate the share below an explicitly chosen minimum standard. Compare caller-defined groups without treating their averages as causal explanations. The threshold and group definitions are policy choices that must be justified.
 
-### 7. Connect location to transport
+### 7. Add minimum group-coverage requirements
+
+Read [Equity-constrained maximal covering](../algorithms/optimization/equity-constrained-covering.md) and run its [interactive lab](../notebooks/equity-constrained-covering-lab.ipynb). Begin with zero group floors, then add minimum coverage shares and inspect which facility sets remain feasible, how total covered demand changes and how population weights differ from objective weights. The model does not decide which groups or floors are fair; justify them with affected communities and policy evidence.
+
+### 8. Connect location to transport
 
 A real cost matrix may require a directed road or transit network, mode restrictions, time-dependent travel times and access rules. Straight-line distance is only an initial approximation.
 
@@ -55,6 +59,7 @@ A real cost matrix may require a directed road or transit network, mode restrict
 5. Identify the remaining equity, land availability, operating and service-quality constraints that a real service plan needs.
 6. Compare binary 2SFCA with a distance-decay catchment. Which assumptions change?
 7. Compare population-weighted and unweighted accessibility distributions. Why can the Gini fall while the mean also falls?
+8. Add minimum coverage floors to the maximal-covering model. Explain the effect on total covered demand and group outcomes.
 
 ## What comes next
 
