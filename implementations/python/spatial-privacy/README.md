@@ -7,3 +7,8 @@ Each person is deduplicated and capped to at most k distinct cells. Under add/re
 This is a bounded contribution mechanism, not a complete privacy system. The cell domain is public/fixed, identifiers are not returned, and the output is not postprocessed to non-negative integers. Repeated releases compose privacy loss and require an accountant. The caller must choose a defensible contribution bound, adjacency definition, epsilon budget and release policy. The mechanism does not protect location traces when one person's many records are not correctly grouped under a stable person identifier.
 
 Run `python -m pip install -r requirements.txt` and `python -m pytest -q`.
+
+
+## Repeated-release accounting
+
+The package also includes an in-memory [basic sequential composition accountant](composition.py). It adds epsilon and delta across named releases, reports remaining budget, rejects duplicate names and refuses over-budget releases without mutating the ledger. It does not implement advanced composition or Rényi DP. See the [walkthrough](composition-walkthrough.md), [tests](test_composition.py) and [composition lab](../../../notebooks/spatial-privacy-composition-lab.ipynb). This is a teaching component, not durable production governance.
