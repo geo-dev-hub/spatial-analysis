@@ -58,7 +58,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Trend / seasonality | Prophet | External software/model; family guide only | Research / lesson only |
 | Trend / seasonality | Theil–Sen trend estimator | `implementations/python/theil-sen/` pairwise-median slope, irregular-time handling, outlier and input tests, walkthrough and lab | Implemented / tested candidate; independent reference review pending |
 | Trend / seasonality | Pettitt test | `implementations/python/change-point-detection/` rank statistic, tie-aware tests, walkthrough and change-point lab; approximate p-value under independent-observation null | Implemented / tested candidate; reference calibration review pending |
-| Trend / seasonality | ARIMA | Family guide; no matching implementation verified | Research / lesson only |
+| Trend / seasonality | ARIMA / seasonal ARIMA | `implementations/python/arima-forecasting/` statsmodels-backed ARIMA/SARIMA wrapper, forecast and interval outputs, synthetic tests, walkthrough and lab | Implemented via documented reference dependency; diagnostics and independent model review pending |
 | Trend / seasonality | Kalman filtering of EO series | Family guide; no matching implementation verified | Research / lesson only |
 | State sequences | Hidden Markov model (discrete model / filtering) | Viterbi package implements decoding, not HMM parameter estimation or full inference | Partial |
 | State sequences | Viterbi decoding | `implementations/python/hmm-viterbi/`, tests, walkthrough and notebook | Implemented / tested |
