@@ -112,7 +112,7 @@ A tested [static slab point locator](../../implementations/python/point-location
 
 Draw a planar subdivision with at least six faces. Add a vertical decomposition through every vertex x-coordinate. Choose query points strictly inside each face, on a vertical decomposition line, on a non-vertical edge, on a vertex and outside the bounded subdivision.
 
-For each point, state the expected face or boundary result. Explain why a data structure must preserve edge order within each open slab. Then run the [interactive point-location lab](../../notebooks/point-location-lab.ipynb) to inspect the event lines, crossing groups and hole handling.
+For each point, state the expected face or boundary result. Explain why a data structure must preserve edge order within each open slab. Then run the [interactive point-location lab](../../notebooks/point-location-lab.ipynb) to inspect the event lines, crossing groups and hole handling. Complete the [randomized trapezoidal-map exercise](../../exercises/randomized-trapezoidal-map.md) to trace the insertion and search-DAG updates.
 
 ## References
 
