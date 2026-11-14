@@ -8,6 +8,8 @@ A demand area may have several facilities within the response-time standard, yet
 
 It is different from deterministic maximal covering and deterministic backup coverage: those count nearby selected facilities, while MEXCLP discounts the chance that those facilities are unavailable.
 
+![Two units can reach one demand area; with independent busy probability q, expected contribution is a times (one minus q squared)](../../assets/mexclp-expected-coverage.svg)
+
 ## Model
 
 Let i index demand locations and j candidate sites. Let a_i be non-negative demand weight, d_ij the travel impedance, S the service threshold, p the number of units to deploy, and q the common probability that any one unit is busy.
