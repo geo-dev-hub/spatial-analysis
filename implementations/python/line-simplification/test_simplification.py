@@ -1,5 +1,5 @@
 import pytest
-from simplification import douglas_peucker,lang,reumann_witkam,visvalingam_whyatt
+from simplification import douglas_peucker,lang,opheim,reumann_witkam,visvalingam_whyatt
 def test_existing_methods():
     line=[(0,0),(1,.1),(2,-.1),(3,0)]
     assert douglas_peucker(line,.2)==[line[0],line[-1]]
