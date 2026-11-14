@@ -132,7 +132,7 @@ SAL was designed for quantitative precipitation fields. Do not assume that its t
 
 The Method for Object-Based Diagnostic Evaluation (MODE) identifies forecast and observed objects using thresholds and spatial processing, then compares attributes such as area, centroid, orientation, intensity and similarity. It can support matching and merging/splitting analyses to diagnose displacement and morphology errors.
 
-Object-based verification helps explain why a forecast misses a feature, but object definitions introduce parameters: threshold, smoothing, convolution radius, minimum area and matching criteria. Different settings can produce different objects and pairings. Report the settings and retain a field-based score alongside object diagnostics.
+Object-based verification helps explain why a forecast misses a feature, but object definitions introduce parameters: threshold, smoothing, convolution radius, minimum area and matching criteria. Different settings can produce different objects and pairings. Report the settings and retain a field-based score alongside object diagnostics.\n\nA bounded [MODE-inspired teaching implementation](../implementations/python/forecast-verification/object_verification.py), with [tests](../implementations/python/forecast-verification/test_object_verification.py) and a [lab](../notebooks/mode-inspired-object-verification-lab.ipynb), performs Gaussian smoothing, thresholding, connected-component extraction, attribute measurement and minimum-cost one-to-one matching. It is not a full MODE reproduction: within-field merging, fuzzy-interest matching, cluster objects and temporal tracking are not implemented.
 
 ## 9. Match the metric to the question
 
