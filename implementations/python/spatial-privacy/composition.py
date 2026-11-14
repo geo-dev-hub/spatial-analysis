@@ -60,7 +60,8 @@ class SequentialPrivacyAccountant:
         """Record one release, or reject it without changing state if over budget."""
         if not isinstance(name, str) or not name.strip():
             raise ValueError("release name must be a non-empty string")
-        if any(item.name == name for item in self._releases):
+        normalized_name = name.strip()
+        if any(item.name == normalized_name for item in self._releases):
             raise ValueError("release names must be unique")
         eps = self._positive(epsilon, "epsilon")
         delt = self._delta(delta)
@@ -69,7 +70,7 @@ class SequentialPrivacyAccountant:
         tolerance = 1e-12
         if next_eps > self.epsilon_budget + tolerance or next_delta > self.delta_budget + tolerance:
             raise ValueError("release exceeds the remaining sequential privacy budget")
-        self._releases.append(PrivacyRelease(name.strip(), eps, delt))
+        self._releases.append(PrivacyRelease(normalized_name, eps, delt))
         return self.summary()
 
     def summary(self):
