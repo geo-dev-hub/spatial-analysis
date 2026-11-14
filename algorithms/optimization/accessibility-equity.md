@@ -18,6 +18,10 @@ Let a_i >= 0 be an accessibility score for population unit i, and w_i >= 0 the p
 
 The score might come from cumulative opportunities, a gravity measure or 2SFCA. State its units and interpretation. Do not apply the conventional Gini coefficient directly to raw travel costs without defining an appropriate non-negative access measure.
 
+## Worked example
+
+For the exercise data (scores 2, 4, 8, 10 and populations 100, 300, 200, 100), the place-weighted mean is 6.0 while the population-weighted mean is approximately 5.71. The place-weighted Gini is approximately 0.292; the population-weighted Gini is approximately 0.257. With a minimum standard of 5, 400 of 700 represented residents (about 57.1%) fall below it. The different Gini values arise because the two calculations describe different distributions.
+
 ## Four complementary views
 
 ### 1. Lorenz curve and Gini coefficient
@@ -28,7 +32,7 @@ Sort units from lowest to highest accessibility. Plot cumulative population shar
 G=1-\sum_{k=1}^{n}(p_k-p_{k-1})(L_k+L_{k-1}).
 \]
 
-Here p_k is cumulative population share and L_k is cumulative accessibility share. A larger Gini indicates more relative inequality. If every unit has zero access, Gini is zero because all values are equal; this is not a good outcome, so report absolute levels too.
+Here p_k is cumulative population share and L_k is cumulative accessibility share. A larger Gini indicates more relative inequality. The [Lorenz curve diagram](../../assets/accessibility-lorenz-curve.svg) shows the equality line and a conceptual unequal distribution. If every unit has zero access, the curve is conventionally returned on the diagonal and Gini is zero because all values are equal; this is not a good outcome, so report absolute levels too.
 
 ### 2. Lower-tail quantiles
 
