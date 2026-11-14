@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** Six distinct facility-location and accessibility models now have scoped lessons, alongside a distributional equity diagnostics lesson; the wider optimisation and mobility path is still being developed.
+**Status:** Facility-location, accessibility and equity models now include a deterministic backup-coverage extension. The wider optimisation and mobility path is still being developed.
 
 ## The question
 
@@ -46,7 +46,11 @@ Read [Accessibility equity diagnostics](../algorithms/optimization/accessibility
 
 Read [Equity-constrained maximal covering](../algorithms/optimization/equity-constrained-covering.md) and run its [interactive lab](../notebooks/equity-constrained-covering-lab.ipynb). Begin with zero group floors, then add minimum coverage shares and inspect which facility sets remain feasible, how total covered demand changes and how population weights differ from objective weights. The model does not decide which groups or floors are fair; justify them with affected communities and policy evidence.
 
-### 8. Connect location to transport
+### 8. Test service redundancy
+
+Read [Backup coverage (r-covering)](../algorithms/optimization/backup-coverage.md) and run the [backup-coverage lab](../notebooks/backup-coverage-lab.ipynb). Compare the share of demand reached by at least one facility with the share reached by at least two distinct facilities. Inspect the per-demand counts and challenge the independence assumption: two nearby facilities may share a bridge, power source, hazard zone or staff pool. This deterministic model does not calculate outage probabilities or guarantee spare capacity.
+
+### 9. Connect location to transport
 
 A real cost matrix may require a directed road or transit network, mode restrictions, time-dependent travel times and access rules. Straight-line distance is only an initial approximation.
 
@@ -60,6 +64,7 @@ A real cost matrix may require a directed road or transit network, mode restrict
 6. Compare binary 2SFCA with a distance-decay catchment. Which assumptions change?
 7. Compare population-weighted and unweighted accessibility distributions. Why can the Gini fall while the mean also falls?
 8. Add minimum coverage floors to the maximal-covering model. Explain the effect on total covered demand and group outcomes.
+9. Compare one-cover and two-cover demand. Explain why two eligible sites do not necessarily provide independent backup.
 
 ## What comes next
 
