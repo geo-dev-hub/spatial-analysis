@@ -87,3 +87,20 @@ def test_invalid_demand_weights_are_rejected(weights):
             [[1, 2]], 1, capacities=[1, 1],
             demand_quantities=[1], demand_weights=weights,
         )
+
+
+def test_priority_weights_can_change_selected_sites_without_changing_load_units():
+    costs = [[0, 5, 9], [1, 4, 8], [8, 1, 4], [9, 0, 3]]
+    quantities = [2, 1, 2, 1]
+    capacities = [2, 2, 4]
+    plain = solve_capacitated_p_median(
+        costs, 2, capacities=capacities, demand_quantities=quantities,
+    )
+    weighted = solve_capacitated_p_median(
+        costs, 2, capacities=capacities, demand_quantities=quantities,
+        demand_weights=[1, 4, 1, 1],
+    )
+    assert plain[0] == (0, 2)
+    assert weighted[0] == (1, 2)
+    loads = [sum(quantities[i] for i, site in enumerate(weighted[2]) if site == j) for j in weighted[0]]
+    assert loads == [2, 4]
