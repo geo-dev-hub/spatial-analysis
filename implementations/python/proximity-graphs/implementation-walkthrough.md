@@ -31,3 +31,16 @@ Run the tests and inspect the square and intermediate-point fixtures. For standa
 ## Step 7 — Understand the scale limit
 
 The direct Gabriel, RNG and beta-skeleton routines test O(n²) candidate pairs against up to O(n) blockers, so they are O(n³). Yao selects cone neighbours by scanning all other points and is O(n²). The MST materialises O(n²) candidate edges and sorts them. These are transparent reference implementations, not scalable geometric construction algorithms.
+
+
+## Step 8 — Use Delaunay edges as a sparse candidate set
+
+The package now includes Delaunay-filtered Gabriel and RNG variants. Instead of testing every possible point pair, they:
+
+1. Build a planar Delaunay triangulation with SciPy/Qhull.
+2. Extract its undirected triangle edges.
+3. Apply the same open-disk or open-lune blocker predicate to those candidates.
+
+For a non-degenerate planar triangulation, there are only O(n) candidate edges. The current implementation still scans all points for each candidate, so its total bound is O(n²), rather than the specialised O(n) RNG filtering result in Lingas (1994). This distinction matters: using a sparse candidate graph is an improvement over the cubic all-pairs reference, but it is not the final optimal algorithm.
+
+Cocircular points require special care. A triangulation chooses one diagonal, while an open-disk Gabriel definition may include both diagonals when the opposite points lie exactly on the disk boundary. Do not use the Delaunay-filtered variant as an exact boundary-tie oracle for such inputs.
