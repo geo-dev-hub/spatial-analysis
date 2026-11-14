@@ -151,7 +151,7 @@ Bayesian online change-point detection has now been added as a bounded conjugate
 | 22 | Analytic-signal amplitude | Derived from x, y and vertical derivatives; synthetic lab | Implemented / tested candidate |
 | 22 | Tilt derivative | atan2(vertical derivative, total horizontal gradient); synthetic lab | Implemented / tested candidate |
 | 22 | Euler deconvolution | Windowed least-squares homogeneity-equation solver; synthetic exact-recovery and rank-deficiency tests | Implemented / tested candidate; structural-index and field-model review pending |
-| 22 | Werner deconvolution | No implementation verified | Open |
+| 22 | Werner deconvolution | Windowed linearized 2D single-thin-dike solver; seven-point default, centered/scaled least squares, source position/depth and model coefficients; synthetic recovery tests, walkthrough and lab | Implemented / tested candidate; thick-interface, regional-interference, multi-source and nonlinear-refinement variants remain open |
 | 22 | Upward continuation | Spectral exponential attenuation `exp(-kh)` with known-mode attenuation tests and explicit periodic-grid contract | Implemented / tested candidate |
 | 22 | Downward continuation | Tikhonov spectral inverse of upward continuation with positive regularisation, DC-mean preservation, low-frequency recovery and high-frequency damping tests | Implemented / tested candidate; regularisation selection and boundary/reference review pending |
 | 22 | Matched filtering | No implementation verified | Open |
@@ -285,3 +285,8 @@ Active-learning update: a greedy spatially constrained uncertainty sampler is im
 ## 14 November 2026 — top-down dasymetric allocation
 
 A bounded weighted dasymetric allocation baseline is now implemented. It allocates known source-zone totals to eligible target units using normalized non-negative ancillary weights and checks per-source conservation. The package does not perform polygon overlay or validate the ancillary proxy; bottom-up microcensus, settlement estimation and a full building-based population model remain separate open work.
+
+
+## 14 November 2026 — Werner thin-dike deconvolution
+
+The potential-field package now includes a bounded 2D single-thin-dike Werner deconvolution: moving-window linear least squares, coordinate centering/scaling, depth/position recovery, condition diagnostics, rejection reasons, synthetic recovery tests, walkthrough and notebook. It is not the complete later Ku–Sharp workflow; thick-interface derivative transforms, polynomial regional/interference terms, multi-source clustering and Marquardt refinement remain open.
