@@ -128,7 +128,7 @@ Each implementation should state:
 
 ## Automated checks
 
-The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all seventy-one Python example packages and the Clipper2 C# smoke test, and execute all fifty-nine learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
+The [Python examples workflow](../.github/workflows/python-tests.yml) is configured to run the test suites for all seventy-two Python example packages and the Clipper2 C# smoke test, and execute all sixty learning notebooks on relevant pushes and pull requests, using Python 3.13. The Local Moran notebook uses PySAL's maintained implementation rather than presenting a new from-scratch implementation. The Bentley–Ottmann job also adds the sibling segment-intersection package to `PYTHONPATH`.
 
 A successful automated run means the tests in the repository passed in that environment. It does not prove correctness for every possible geometry or make a restricted teaching implementation production-ready. Always read the input contract and limitations before adapting an example.
 
@@ -146,3 +146,5 @@ These are connected teaching materials, not interchangeable copies of the same e
 - [Discrete p-center](python/p-center/README.md): exact small-instance minimax facility-location solver.
 
 - [Inverse distance weighting](python/inverse-distance-weighting/README.md): dependency-free IDW prediction with tested exact-location and neighbourhood policies.
+
+- [Location set covering](python/set-covering/README.md): exact small-instance solver for minimum-cardinality coverage of every demand row.
