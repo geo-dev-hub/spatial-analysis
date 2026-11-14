@@ -29,7 +29,7 @@ The weighted Lorenz curve sorts observations from lowest to highest access and p
 G=1-\sum_{k=1}^{n}(p_k-p_{k-1})(L_k+L_{k-1}).
 \]
 
-The curve includes (0, 0). A perfectly equal distribution follows the 45-degree line. If all values are zero, Gini is defined as zero because there is no variation; this does not mean access is adequate.
+The curve includes (0, 0). A perfectly equal distribution follows the 45-degree line. If all values are zero, the implementation returns the Lorenz curve on the diagonal and defines Gini as zero because there is no variation; this does not mean access is adequate.
 
 Weighted p10, median and p90 describe the lower, middle and upper parts of the population distribution. For a declared minimum standard t, the population share below it is:
 
