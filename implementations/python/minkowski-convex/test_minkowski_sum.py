@@ -81,6 +81,13 @@ def test_rejects_non_convex_or_degenerate_input(bad):
         minkowski_sum(bad, [(0, 0), (1, 0), (0, 1)])
 
 
+def test_rejects_self_crossing_star_with_consistent_local_turns():
+    # A pentagram can have consistently signed local turns while crossing itself.
+    star = [(0, 3), (2, -3), (-3, 1), (3, 1), (-2, -3)]
+    with pytest.raises(ValueError, match="simple and convex"):
+        minkowski_sum(star, [(0, 0), (1, 0), (0, 1)])
+
+
 def test_closing_vertex_is_optional():
     p = [(0, 0), (2, 0), (0, 2), (0, 0)]
     q = [(0, 0), (1, 0), (0, 1)]
