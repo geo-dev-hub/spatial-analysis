@@ -118,7 +118,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 ## Evidence consulted for the first reconciliation
 
-- Original source transcription: [pages 21–25](../../source-inventory/pages-21-25.md).
+- Original source transcription: [pages 21–25](../source-inventory/pages-21-25.md).
 - Repository implementation and test files are linked in the corresponding package READMEs and test modules.
 - Nicholl–Lee–Nicholl identity and scope: Nicholl, Lee & Nicholl (1987), “An efficient new algorithm for 2-D line clipping: Its development and analysis,” SIGGRAPH '87, DOI [10.1145/37401.37432](https://doi.org/10.1145/37401.37432); see also the [2022 line-clipping survey](https://www.mdpi.com/2313-433X/8/10/286) and [Brown University graphics notes](https://cs.brown.edu/media/filer_public/88/9c/889c4b64-6979-4d31-a4fe-3904a681b978/dasilva.pdf).
 
