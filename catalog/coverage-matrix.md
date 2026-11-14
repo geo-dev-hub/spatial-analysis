@@ -93,3 +93,8 @@ The Section 6 queueing extension adds a dependency-free M/M/c implementation usi
 
 - [Strict leave-location-and-time-out validation](../implementations/python/spatiotemporal-validation/README.md) now supplies observed location/time pair folds with explicit train, test and buffer sets, plus tests and a [visual lab](../notebooks/spatiotemporal-llto-lab.ipynb). NNDM, kNNDM and alternative spatial/temporal block designs remain distinct open methods.
 - [Weighted dasymetric allocation](../implementations/python/dasymetric-allocation/README.md) now supplies a conservative top-down allocation baseline using caller-provided ancillary weights, with source-total conservation tests and a [visual lab](../notebooks/dasymetric-allocation-lab.ipynb). It does not perform geometry overlays or validate the proxy data.
+
+
+## Potential-field algorithm update — 14 November 2026
+
+The potential-field package now includes a bounded 2D single-thin-dike Werner deconvolution alongside its spectral derivatives, continuation operators and Euler solver. The new [Werner package walkthrough](../implementations/python/potential-field/werner-deconvolution-walkthrough.md), [tests](../implementations/python/potential-field/test_werner_deconvolution.py) and [synthetic lab](../notebooks/werner-deconvolution-lab.ipynb) cover windowed linear recovery. Thick-interface transforms, regional interference modelling, multi-source clustering, nonlinear refinement and matched filtering remain open.
