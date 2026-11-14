@@ -122,3 +122,5 @@ Records may have different evidence and implementation status. Check the status 
 - [Ear clipping](geometry/ear-clipping.md) — triangulate one simple polygon ring, with a tested exact-predicate teaching baseline.
 
 - [Convex decomposition](geometry/convex-decomposition.md) — compare triangulation-based merging, optimal partitioning and approximate convex decomposition.
+
+- [Minkowski sums](geometry/minkowski-sum.md) — combine geometric sets through pointwise addition and apply the result to offsets and collision planning.
