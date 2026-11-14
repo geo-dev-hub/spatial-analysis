@@ -13,6 +13,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 - [Core GIS algorithms continuation lab](core-gis-algorithms-lab.ipynb): compare Douglas–Peucker and Visvalingam–Whyatt simplification, inspect polygon offsets and proximity graphs, and compare Dijkstra with A*.
 - [Coverage simplification and advanced routing lab](coverage-simplification-routing-lab.ipynb): simplify a shared-edge polygon coverage, inspect fixed-grid precision changes, then compare Dijkstra, bidirectional Dijkstra, ALT A*, turn restrictions and FIFO time-dependent arrival on directed graphs.
 - [Planar point-location lab](point-location-lab.ipynb): inspect x-event lines, open slabs, face transitions, holes and boundary queries using the tested static slab locator.
+- [Ear-clipping lab](ear-clipping-lab.ipynb): inspect a concave polygon, its triangle partition, triangle count and area invariant.
 
 ### Spatial indexing
 
