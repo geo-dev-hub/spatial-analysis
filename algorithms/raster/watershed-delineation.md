@@ -46,7 +46,7 @@ The method does not condition the DEM, fill depressions, resolve flats, derive f
 
 ## References
 
-- Jenson, S. K. and Domingue, J. O. (1988), *Extracting topographic structure from digital elevation data for geographic information system analysis*, Photogrammetric Engineering & Remote Sensing, 54(11), 1593–1600.
-- O'Callaghan, J. F. and Mark, D. M. (1984), *The extraction of drainage networks from digital elevation data*, Computer Vision, Graphics, and Image Processing, 28(3), 323–344.
+- Jenson, S. K. and Domingue, J. O. (1988), “Extracting topographic structure from digital elevation data for geographic information system analysis,” *Photogrammetric Engineering & Remote Sensing*, 54(11), 1593–1600. [USGS publication record](https://pubs.usgs.gov/publication/70142175).
+- O'Callaghan, J. F. and Mark, D. M. (1984), “The extraction of drainage networks from digital elevation data,” *Computer Vision, Graphics, and Image Processing*, 28(3), 323–344. https://doi.org/10.1016/S0734-189X(84)80011-0.
 
 **Scope:** single-outlet contributing area from an existing acyclic D8 direction raster; no DEM conditioning, outlet snapping or hydraulic flood model is included.

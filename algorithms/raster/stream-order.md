@@ -54,7 +54,7 @@ The stream graph is processed in topological order. Cycles are rejected. Non-str
 
 ## References
 
-- Strahler, A. N. (1957), *Quantitative analysis of watershed geomorphology*, Transactions, American Geophysical Union, 38(6), 913–920.
-- Shreve, R. L. (1966), *Statistical law of stream numbers*, Journal of Geology, 74(1), 17–37.
+- Strahler, A. N. (1957), “Quantitative analysis of watershed geomorphology,” *Eos, Transactions American Geophysical Union*, 38(6), 913–920. https://doi.org/10.1029/TR038i006p00913.
+- Shreve, R. L. (1966), “Statistical law of stream numbers,” *The Journal of Geology*, 74(1), 17–37. https://doi.org/10.1086/627137.
 
 **Scope:** Strahler order and Shreve magnitude on a connected, acyclic D8 stream mask; channel extraction and alternative flow-routing models are not included.

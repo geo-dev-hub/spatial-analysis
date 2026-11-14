@@ -4,7 +4,7 @@
 - **Source pages:** 7–9
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Normalised Difference Vegetation Index (NDVI)](../../algorithms/remote-sensing/ndvi.md) (first audited spectral index; remaining entries are still unverified)
+- **Current canonical records:** [Normalised Difference Vegetation Index (NDVI)](../../algorithms/remote-sensing/ndvi.md) (first scoped and tested spectral-index lesson; remaining entries are still unverified)
 
 The source spans raw imagery correction, spectral transforms, classification, hyperspectral analysis, radar, point clouds, photogrammetry and biophysical retrieval. These methods operate at different stages of a sensor-to-product workflow; do not collapse them into one generic “remote sensing algorithm” category.
 
@@ -95,3 +95,9 @@ The [NDVI lesson](../../algorithms/remote-sensing/ndvi.md) defines the normalise
 3. Distinguish an algorithm from a named software package, product, dataset or model architecture.
 4. Verify recent neural architectures and product names against original papers and maintainer sources.
 5. Include conventional baselines and independent validation when evaluating learned methods.
+
+## Bibliographic check on the NDVI foundation
+
+Rouse, J. W., Jr., Haas, R. H., Schell, J. A., Deering, D. W. and Harlan, J. C. (1974, November), *Monitoring the vernal advancement and retrogradation (green wave effect) of natural vegetation*. Type III final report for September 1972–November 1974, Texas A&M University Remote Sensing Center, prepared for NASA Goddard Space Flight Center; NASA-CR-144661 (RSC-1978-4). [NASA NTRS record](https://ntrs.nasa.gov/citations/19750020419).
+
+The report identity, author list and report number were checked against the NASA record and report title page. This is a selected source check, not an audit of all Section 5 spectral indices or preprocessing workflows.

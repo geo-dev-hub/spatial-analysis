@@ -52,7 +52,7 @@ Use field observations, suitable reference data and a study-specific validation 
 
 ## References
 
-- Rouse, J. W. et al. (1974), *Monitoring the vernal advancement and retrogradation (green wave effect) of natural vegetation*, NASA/GSFC Type III Final Report.
+- Rouse, J. W., Jr., Haas, R. H., Schell, J. A., Deering, D. W. and Harlan, J. C. (1974, November), *Monitoring the vernal advancement and retrogradation (green wave effect) of natural vegetation*. Type III final report for September 1972–November 1974, Texas A&M University Remote Sensing Center, prepared for NASA Goddard Space Flight Center; NASA-CR-144661 (RSC-1978-4). [NASA NTRS record](https://ntrs.nasa.gov/citations/19750020419).
 - [USGS Landsat Normalized Difference Vegetation Index](https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index).
 - [NASA Earth Observatory: Measuring Vegetation (NDVI & EVI)](https://earthobservatory.nasa.gov/features/MeasuringVegetation).
 
