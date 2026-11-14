@@ -43,6 +43,43 @@ flowchart TD
     G --> H[Boundary and degeneracy policy]
 ~~~
 
+## Randomized incremental construction: what is being maintained?
+
+Assume the input is a planar subdivision represented by non-crossing segments and that the required degeneracies have been handled by a stated convention. Begin with a bounding rectangle containing the subdivision. Insert the segments in a uniformly random permutation.
+
+For each inserted segment:
+
+1. **Locate its left endpoint.** Search the current point-location structure to find the trapezoid containing the endpoint.
+2. **Trace the segment through the map.** Starting from that trapezoid, follow the segment from left to right through the adjacent trapezoids it intersects.
+3. **Remove the crossed trapezoids.** The segment splits the crossed region into upper and lower pieces.
+4. **Create replacement trapezoids.** New vertical walls are introduced at the segment endpoints, subject to the chosen representation and degeneracy rules.
+5. **Update the search structure.** Replace the leaves for the removed trapezoids with a small directed acyclic graph (DAG) of x-coordinate, y-coordinate and segment-comparison decisions. Unaffected leaves remain reusable.
+
+The search DAG is a history of how the current decomposition was built. A query follows decisions from the root until it reaches a leaf representing the containing trapezoid. The face label can then be returned from that trapezoid.
+
+The key invariant is that the map and the search structure describe the same current subdivision after every insertion. A query structure that is updated independently of the geometric decomposition can return a plausible but incorrect face.
+
+## Why random insertion helps
+
+An adversarial insertion order can create a deep search structure and repeated large updates. A random permutation makes it possible to analyse the expected number of trapezoids crossed and the expected search-path depth.
+
+For the standard general-position setting, the classic randomized incremental analysis gives expected logarithmic point-location query time and expected \(O(n\log n)\) construction time for a set of \(n\) non-intersecting segments. The exact bounds and storage guarantees depend on the variant and the input model.
+
+Seidel's 1991 result studies trapezoidal decompositions for polygonal chains and plane graphs and gives expected bounds for those more specific settings. It should not be quoted as a universal bound for arbitrary intersecting segment sets. Hemmer, Kleinbort and Halperin later give a randomized construction with expected \(O(n\log n)\) preprocessing while guaranteeing worst-case linear storage and worst-case logarithmic query time for planar maps. That stronger guarantee belongs to their particular search-structure construction, not automatically to every trapezoidal-map implementation.
+
+## The general-position assumptions are algorithmic, not cosmetic
+
+A clean derivation commonly assumes no vertical input segments, no coincident endpoints beyond allowed shared endpoints, no multiple intersections at one point, and distinct x-coordinates for events. Real spatial data violates these assumptions.
+
+A production implementation must define how it handles:
+- vertical segments and equal x-coordinates;
+- shared endpoints and multiway intersections;
+- overlapping or coincident segments;
+- query points on trapezoid walls, vertices and original edges;
+- bounding-box and unbounded-face queries.
+
+One safe strategy is to preprocess the input into a well-defined planar subdivision with explicit vertices and edges before building the point-location structure. Another is to extend the search structure's predicates and event ordering to handle degeneracies directly. Neither strategy should be assumed without documentation.
+
 ## What must be specified
 
 - Are segments pairwise interior-disjoint?
