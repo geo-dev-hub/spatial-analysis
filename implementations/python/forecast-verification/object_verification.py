@@ -46,7 +46,9 @@ def identify_objects(field, *, threshold, smooth_sigma=0.0, min_area=1, connecti
             orientation=float(np.arctan2(vector[1],vector[0]))
         else:
             cy=float(rows.mean()); cx=float(cols.mean()); orientation=0.0
-        new_id=len(objects)+1\n        labels[labels==old_id]=new_id\n        objects.append({"id":new_id,"area":int(rows.size),"centroid_x":cx,
+        new_id=len(objects)+1
+        labels[labels==old_id]=new_id
+        objects.append({"id":new_id,"area":int(rows.size),"centroid_x":cx,
                         "centroid_y":cy,"orientation_radians":orientation,
                         "intensity_sum":mass,"intensity_mean":float(values.mean()),
                         "intensity_max":float(values.max())})
