@@ -15,3 +15,5 @@
 These records are part of the broader [algorithm collection](../README.md). The source inventory identifies the methods to investigate; each record documents its own scope, assumptions and evidence.
 
 - [Ear clipping](ear-clipping.md) — triangulate a simple polygon ring by repeatedly removing an interior ear.
+
+- [Convex decomposition](convex-decomposition.md) — partition a polygon into convex pieces, and distinguish exact from approximate objectives.
