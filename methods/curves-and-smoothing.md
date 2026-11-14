@@ -144,4 +144,5 @@ The companion curve-fitting module implements Schneider's recursive piecewise-cu
 - [Implementation](../implementations/python/curves-smoothing/curve_fitting.py)
 - [Tests](../implementations/python/curves-smoothing/test_curve_fitting.py)
 - [Walkthrough](../implementations/python/curves-smoothing/curve-fitting-walkthrough.md)
+- [Executable fitting lab](../notebooks/schneider-bezier-fitting-lab.ipynb)
 - Primary source: Schneider (1990), *Graphics Gems*, pp. 612–626; [original paper PDF](https://lhf.impa.br/cursos/tmg/Schneider-1990.pdf).
