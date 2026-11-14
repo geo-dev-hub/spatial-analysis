@@ -45,7 +45,27 @@ where \(a\) is the range and \(s^2\) is the structured sill. A nugget is added t
 
 The implementation does not fit the variogram. Range, sill and nugget are assumed inputs, so the predictions and variances are conditional on those choices. The dense solver is intended for small teaching datasets, not large surveys; variogram-parameter uncertainty is not included.
 
-## Comparing the four methods
+## 5. Discrete biharmonic fixed-boundary interpolation
+
+A separate regular-grid teaching solver fills unknown interior nodes by minimizing the sum of squared five-point Laplacians:
+
+\[
+J(z)=\sum_{i,j}\left[
+\frac{z_{i,j-1}-2z_{ij}+z_{i,j+1}}{\Delta x^2}
++\frac{z_{i-1,j}-2z_{ij}+z_{i+1,j}}{\Delta y^2}
+\right]^2.
+\]
+
+Finite values are fixed observations and NaN values are unknown. The full perimeter must be supplied as fixed boundary values. The unknown interior values are solved simultaneously by least squares; fixed interior observations remain unchanged.
+
+This is a discrete biharmonic minimum-curvature baseline with a Dirichlet perimeter. It is **not** the full Briggs scattered-data algorithm or the USGS MINC implementation: it does not map scattered observations to grid nodes, use Briggs's scattered-point constraints, build regional/coarse grids, or run the original iterative block solver. It is intended for small teaching grids.
+
+- [Implementation](../implementations/python/geophysical-gridding/discrete_biharmonic.py)
+- [Tests](../implementations/python/geophysical-gridding/test_discrete_biharmonic.py)
+- [Walkthrough](../implementations/python/geophysical-gridding/discrete-biharmonic-walkthrough.md)
+- [Lab](../notebooks/discrete-biharmonic-gridding-lab.ipynb)
+
+## Comparing the four scattered-point methods
 
 | Method | Surface behaviour | Outside convex hull |
 |---|---|---|
@@ -58,7 +78,7 @@ Kriging is not automatically superior to deterministic interpolation. Its useful
 
 ## What remains outside this package
 
-- The classic Briggs iterative minimum-curvature algorithm and a verified equivalence comparison against the thin-plate spline.
+- The full Briggs iterative minimum-curvature gridding algorithm for scattered observations, including its scattered-point constraints, initialization and multilevel/block convergence behaviour; the fixed-boundary discrete solver above is a separate bounded baseline.
 - Variogram fitting, anisotropic covariance models, universal kriging and scalable large-data kriging.
 - Natural-neighbour interpolation and explicit uncertainty models for the deterministic interpolators.
 
