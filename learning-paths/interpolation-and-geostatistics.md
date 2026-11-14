@@ -6,15 +6,19 @@ This path connects a simple distance-weighted estimate to spatially modelled int
 
 Read [Inverse distance weighting](../algorithms/interpolation/inverse-distance-weighting.md) and run the [IDW visual lab](../notebooks/inverse-distance-weighting-lab.ipynb). Change the power parameter and neighbourhood size. IDW is deterministic and does not provide a model-based prediction variance.
 
-## 2. Understand spatial variation
+## 2. Build an empirical semivariogram
 
-Continue with [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md). The lesson includes empirical semivariogram summaries and explains how the assumed spatial dependence model changes the kriging calculation. The teaching baseline does not fit variogram parameters or cover the full kriging family.
+Read [Empirical semivariogram](../methods/empirical-semivariogram.md) and inspect the pair counts as well as the plotted semivariances. Change the lag edges and see how the summary changes. An empirical curve is a noisy summary of the sample pairs, not a fitted model.
 
-## 3. Validate away from sampled locations
+## 3. Understand ordinary kriging
+
+Continue with [Spatial interpolation: IDW and ordinary kriging](../algorithms/geostatistics/interpolation.md). Follow the specified variogram through the kriging system and distinguish the model-based variance from observed prediction error. The teaching baseline does not fit variogram parameters or cover the full kriging family.
+
+## 4. Validate away from sampled locations
 
 Read [Spatial cross-validation](../methods/spatial-cross-validation.md). Compare random splits with spatially separated folds and record how the validation design changes the interpretation of predictive performance.
 
-## 4. Extend carefully
+## 5. Extend carefully
 
 Natural-neighbour interpolation, splines, radial basis functions, anisotropy, co-kriging, large-data Gaussian processes, simulation and spatiotemporal models require separate assumptions and validation.
 

@@ -1,6 +1,6 @@
 # Spatial interpolation: estimating what we have not measured
 
-**Status:** First foundation lesson published; the wider geostatistics path is still being developed.
+**Status:** Introductory interpolation and empirical-semivariogram lessons are published; the wider geostatistics path is still being developed.
 
 ## The question
 
@@ -14,7 +14,7 @@ It helps to understand:
 - a mean, variance and a matrix;
 - the idea that nearby observations may be spatially related.
 
-The lesson introduces the variogram and kriging system as they are needed.
+The path introduces the empirical semivariogram as a separate method before using a theoretical variogram in the kriging system.
 
 ## Follow the path
 
@@ -24,15 +24,19 @@ Read [Spatial interpolation](../algorithms/geostatistics/interpolation.md), then
 
 Change the power, search radius and number of neighbours. Notice that IDW is a weighted average, not a probability model.
 
-### 2. Understand the variogram assumption
+### 2. Calculate an empirical semivariogram
 
-The lesson uses an isotropic exponential semivariogram. Follow the distance scale and partial sill through the kriging matrix. They are supplied model parameters, not values that the implementation estimates automatically.
+Read [Empirical semivariogram](../methods/empirical-semivariogram.md). Work through pairwise distances, squared differences, lag bins and pair counts. The empirical estimate describes the sample; it is not yet a fitted covariance model.
 
-### 3. Solve the ordinary-kriging system
+### 3. Understand the variogram assumption
+
+Return to [Spatial interpolation](../algorithms/geostatistics/interpolation.md). The kriging example uses an isotropic exponential semivariogram. Follow the distance scale and partial sill through the kriging matrix. They are supplied model parameters, not values that the implementation estimates automatically.
+
+### 4. Solve the ordinary-kriging system
 
 Work through the augmented matrix and its sum-of-weights constraint. Inspect the prediction and model-based variance separately.
 
-### 4. Validate in space
+### 5. Validate in space
 
 Use a spatially separated holdout rather than relying only on random splits. Explain what kind of geographic generalisation the split tests.
 
@@ -46,4 +50,4 @@ Use a spatially separated holdout rather than relying only on random splits. Exp
 
 ## What comes next
 
-The next lessons should cover empirical variograms, model fitting, anisotropy, universal and regression kriging, block prediction, co-kriging and scalable Gaussian-process approximations. The full source section also includes spatial simulation, space-time models, data assimilation, uncertainty propagation and small-area estimation. Those topics are not yet covered by this first lesson.
+The next lessons should cover variogram model fitting, anisotropy, universal and regression kriging, block prediction, co-kriging and scalable Gaussian-process approximations. The full source section also includes spatial simulation, space-time models, data assimilation, uncertainty propagation and small-area estimation. Those topics are not yet covered by this first lesson.

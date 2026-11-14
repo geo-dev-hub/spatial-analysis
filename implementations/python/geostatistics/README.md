@@ -40,7 +40,7 @@ predictions = ordinary_kriging_predict(
 print(predictions)  # (prediction, kriging variance)
 ~~~
 
-The empirical semivariogram reports mean pair distance, classical semivariance and pair count for caller-defined distance bins. It is not a fitted model.
+The empirical semivariogram is exposed as `empirical_variogram(samples, bin_edges)`. It reports mean pair distance, classical semivariance and pair count for caller-defined bins. Bins are left-closed/right-open except the final bin, which includes its upper edge; empty bins remain visible with a midpoint and `None` semivariance. Pair summaries are accumulated online, using O(B) auxiliary memory for B bins. It is not a fitted model.
 
 The exponential semivariogram is
 
@@ -60,4 +60,4 @@ with $\gamma(0)=0$, partial sill $c>0$ and range scale $a>0$. The ordinary-krigi
 - This teaching implementation solves a dense linear system. It is intended for small examples, not large datasets.
 - IDW is not kriging and does not provide a model-based prediction variance.
 
-Read the [canonical lesson](../../../algorithms/geostatistics/interpolation.md) and [intern walkthrough](implementation-walkthrough.md) before interpreting the results.
+Read the [interpolation lesson](../../../algorithms/geostatistics/interpolation.md), the [empirical semivariogram method record](../../../methods/empirical-semivariogram.md) and the [intern walkthrough](implementation-walkthrough.md) before interpreting the results.

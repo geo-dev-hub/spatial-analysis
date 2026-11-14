@@ -4,7 +4,7 @@
 - **Source pages:** 4–6 (the small-area and survey estimation subsection continues onto page 6)
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md) and [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md); [Spatial interpolation: IDW and ordinary kriging](../../algorithms/geostatistics/interpolation.md) (tested implementations, walkthroughs and interactive notebooks are available; variogram fitting and the wider kriging family remain open)
+- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md); [Empirical semivariogram](../../methods/empirical-semivariogram.md); [Spatial interpolation: IDW and ordinary kriging](../../algorithms/geostatistics/interpolation.md) (tested implementations, walkthroughs and an interactive notebook are available; variogram fitting and the wider kriging family remain open)
 
 This section combines surface estimation, stochastic spatial models, simulation, time-dependent analysis, data assimilation, uncertainty measures and small-area estimation. Some entries are model families, some are computational procedures and some are evaluation measures.
 
@@ -20,7 +20,7 @@ This section combines surface estimation, stochastic spatial models, simulation,
 | Source entry | Provisional kind | Source page | Verification status |
 |---|---|---:|--- |
 | Kriging: [ordinary kriging](../../algorithms/geostatistics/interpolation.md), simple, universal, co-kriging, regression kriging, external drift, indicator, disjunctive, block, area-to-point, area-to-area, spatiotemporal | Geostatistical estimators / kriging variants | 4 | Partial — related record exists; source-entry review pending |
-| [Variogram modeling](../../algorithms/geostatistics/interpolation.md), anisotropy, nonstationary covariance, spatial deformation, process convolution, multiscale kriging | Covariance and variogram modelling methods / geostatistical approaches | 4 | Partial — related record exists; source-entry review pending |
+| [Empirical semivariogram](../../methods/empirical-semivariogram.md), theoretical variogram fitting, anisotropy, nonstationary covariance, spatial deformation, process convolution, multiscale kriging | Covariance and variogram modelling methods / geostatistical approaches | 4 | Partial — related record exists; source-entry review pending |
 | Large-data Gaussian processes: Vecchia, NNGP, covariance tapering, fixed rank kriging, predictive processes, lattice kriging, multi-resolution approximation | Gaussian-process approximations / scalable spatial models | 4 | Not checked — intake only |
 | Simulation: sequential Gaussian, indicator simulation, multiple-point statistics (SNESIM, direct sampling), object-based, p-field | Spatial simulation methods | 5 | Not checked — intake only |
 | Extremes and dependence: max-stable processes (Brown-Resnick), spatial copulas, GEV and Gumbel fits | Extreme-value and dependence models | 5 | Not checked — intake only |
@@ -66,7 +66,7 @@ This section combines surface estimation, stochastic spatial models, simulation,
 
 ## First audited lesson
 
-The [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.
+The [empirical semivariogram lesson](../../methods/empirical-semivariogram.md) explains the pairwise estimator and binning contract. The [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.
 
 ## Decisions for the next pass
 

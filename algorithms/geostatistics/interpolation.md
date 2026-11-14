@@ -84,7 +84,7 @@ The semivariogram describes how expected squared differences change with separat
 
 *This is a schematic curve, not an empirical variogram or a fitted model.*
 
-The [implementation](../../implementations/python/geostatistics/README.md) also calculates a classical empirical semivariogram from distance bins, reporting mean pair distance, semivariance and pair count. Empty bins remain visible. This is an exploratory isotropic method-of-moments summary, not a variogram fit.\n\nBefore applying kriging, inspect an empirical variogram, check whether the stationarity assumption is plausible, assess directional structure, and justify the model and parameters. Do not infer these from a single attractive map.
+The [implementation](../../implementations/python/geostatistics/README.md) also calculates a classical empirical semivariogram from distance bins, reporting mean pair distance, semivariance and pair count. Empty bins remain visible. This is an exploratory isotropic method-of-moments summary, not a variogram fit. For the estimator, bin-edge convention, worked pair calculations and limits, see the separate [empirical semivariogram method record](../../methods/empirical-semivariogram.md).\n\nBefore applying kriging, inspect an empirical variogram, check whether the stationarity assumption is plausible, assess directional structure, and justify the model and parameters. Do not infer these from a single attractive map.
 
 ## Coordinate reference system and validation
 

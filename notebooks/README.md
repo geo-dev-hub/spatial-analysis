@@ -65,7 +65,7 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ### Geostatistics and interpolation
 
-- [Spatial interpolation lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.
+- [Spatial interpolation and empirical semivariogram lab](geostatistics-interpolation-lab.ipynb): compare IDW powers, inspect an ordinary-kriging estimate and model-based variance, and evaluate a simple spatial holdout.
 
 ### Point-pattern analysis
 

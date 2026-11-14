@@ -34,6 +34,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Spatial decision support](spatial-decision-support.md)
 - [Ripley's K/L simulation envelopes](ripley-k-envelopes.md) — distinguish edge correction, pointwise envelopes and a global Monte Carlo deviation test.
 - [Spatial cross-validation](spatial-cross-validation.md)
+- [Empirical semivariogram](empirical-semivariogram.md) — calculate pairwise semivariance, inspect binning and distinguish an empirical estimate from a fitted model.
 - [GeoAI foundations](geoai-foundations.md)
 - [Geodesy foundations](geodesy-foundations.md)
 - [Geodetic, ECEF and ENU coordinates](ecef-enu.md)

@@ -15,6 +15,7 @@ This directory holds those foundational methods separately from individual algor
 - [Masked autoencoding](masked-autoencoding.md) — reconstruct hidden patch content through an encoder-decoder pretraining objective; includes a scoped masking mechanics example.
 
 - [Spatial cross-validation](spatial-cross-validation.md) — design geographic holdouts and buffered folds that better match the intended deployment setting.
+- [Empirical semivariogram](empirical-semivariogram.md) — summarize how pairwise value differences change with spatial separation before fitting a theoretical variogram.
 
 - [Spatial weights matrix](spatial-weights-matrix.md) — define which spatial units are neighbours, how strongly they are connected and how those relationships are transformed.
 - [ELECTRE outranking](electre-outranking.md) — compare discrete alternatives through concordance, discordance and outranking relations; includes a scoped relation builder and exact small-instance kernel enumerator that reports no-kernel and multiple-kernel cases.

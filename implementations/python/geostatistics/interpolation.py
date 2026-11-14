@@ -174,7 +174,11 @@ def empirical_variogram(
     its right edge. Empty bins retain their midpoint with semivariance None.
     This is an exploratory classical method-of-moments estimate, not a fitted
     variogram model and not a directional/robust estimator.
+
+    Pair summaries are accumulated as each pair is visited, so auxiliary
+    memory is O(B) for B lag bins rather than O(n^2) for n observations.
     """
+    from bisect import bisect_right
     from itertools import combinations
 
     data = _validated_samples(samples)
@@ -184,28 +188,30 @@ def empirical_variogram(
     if edges[0] < 0 or any(right <= left for left, right in zip(edges, edges[1:])):
         raise ValueError("bin_edges must be non-negative and strictly increasing")
 
-    distances: list[list[float]] = [[] for _ in range(len(edges) - 1)]
-    squared_differences: list[list[float]] = [[] for _ in range(len(edges) - 1)]
+    bin_count = len(edges) - 1
+    distance_sums = [0.0] * bin_count
+    squared_difference_sums = [0.0] * bin_count
+    pair_counts = [0] * bin_count
+
     for first, second in combinations(data, 2):
         distance = hypot(first[0] - second[0], first[1] - second[1])
         if distance < edges[0] or distance > edges[-1]:
             continue
-        bin_index = None
-        for index, (lower, upper) in enumerate(zip(edges, edges[1:])):
-            is_last = index == len(edges) - 2
-            if lower <= distance and (distance < upper or (is_last and distance <= upper)):
-                bin_index = index
-                break
-        if bin_index is not None:
-            distances[bin_index].append(distance)
-            squared_differences[bin_index].append((first[2] - second[2]) ** 2)
+        bin_index = bisect_right(edges, distance) - 1
+        if bin_index == bin_count:
+            bin_index = bin_count - 1
+        if 0 <= bin_index < bin_count:
+            distance_sums[bin_index] += distance
+            squared_difference_sums[bin_index] += (first[2] - second[2]) ** 2
+            pair_counts[bin_index] += 1
 
     result = []
-    for index, pair_distances in enumerate(distances):
-        if not pair_distances:
+    for index, count in enumerate(pair_counts):
+        if count == 0:
             midpoint = (edges[index] + edges[index + 1]) / 2.0
             result.append((midpoint, None, 0))
             continue
-        semivariance = sum(squared_differences[index]) / (2.0 * len(pair_distances))
-        result.append((sum(pair_distances) / len(pair_distances), semivariance, len(pair_distances)))
+        mean_distance = distance_sums[index] / count
+        semivariance = squared_difference_sums[index] / (2.0 * count)
+        result.append((mean_distance, semivariance, count))
     return result

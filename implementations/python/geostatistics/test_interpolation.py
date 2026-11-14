@@ -102,6 +102,25 @@ def test_empirical_variogram_calculates_classical_pairwise_semivariance():
     assert result[1] == pytest.approx((2.0, 2.0, 1))
 
 
+def test_empirical_variogram_reports_mean_pair_distance_not_bin_midpoint():
+    from interpolation import empirical_variogram
+
+    samples = [(0, 0, 0), (1, 0, 2), (3, 0, 6)]
+    result = empirical_variogram(samples, [0, 3])
+    assert result[0] == pytest.approx((2.0, 28.0 / 3.0, 3))
+
+
+def test_empirical_variogram_uses_left_closed_right_open_bins_and_includes_final_edge():
+    from interpolation import empirical_variogram
+
+    samples = [(0, 0, 0), (1, 0, 2), (2, 0, 4)]
+    result = empirical_variogram(samples, [0, 1, 2])
+    assert result[0][0] == pytest.approx(0.5)
+    assert result[0][1] is None
+    assert result[0][2] == 0
+    assert result[1] == pytest.approx((4.0 / 3.0, 4.0, 3))
+
+
 def test_empirical_variogram_keeps_empty_bins_visible():
     from interpolation import empirical_variogram
 
