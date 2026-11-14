@@ -64,3 +64,6 @@ Read the [spatial cross-validation lesson](../../../methods/spatial-cross-valida
 The package also includes buffered leave-one-out (one test observation per fold, with nearby candidate training observations excluded) and spatial k-fold by clustering (deterministic farthest-first k-means on projected coordinates, with each cluster held out as one fold).
 
 Cluster folds need not be equal-sized, contiguous or aligned with meaningful administrative/ecological regions. They are a reproducible grouping baseline, not NNDM/kNNDM. Buffered leave-one-out is O(n²) and intended for teaching-sized samples.
+
+
+- [Cluster, buffered LOO and block-split lab](../../../notebooks/spatial-cross-validation-splitters-lab.ipynb)
