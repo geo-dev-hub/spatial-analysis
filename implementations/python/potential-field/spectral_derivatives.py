@@ -61,3 +61,45 @@ def tilt_angle(values, dx, dy):
     """Tilt derivative atan2(vertical derivative, total horizontal gradient)."""
     gx, gy, gz = spectral_derivatives(values, dx, dy)
     return np.arctan2(gz, np.hypot(gx, gy))
+
+
+def euler_deconvolution_window(
+    field, dTdx, dTdy, dTdz, x_coordinates, y_coordinates,
+    observation_z, structural_index,
+):
+    """Estimate source (x0,y0,z0) and regional base level B in one window.
+
+    Solves the linear Euler homogeneity equation by least squares:
+      x0*T_x + y0*T_y + z0*T_z + N*B
+        = x*T_x + y*T_y + z*T_z + N*T
+    All arrays must describe the same 2D window. Coordinates and observation_z
+    use consistent length units. At least four independent equations are
+    required; rank-deficient windows are rejected rather than pseudoinverted.
+    """
+    arrays = [np.asarray(a, dtype=float) for a in
+              (field, dTdx, dTdy, dTdz, x_coordinates, y_coordinates)]
+    if any(a.ndim != 2 or a.shape != arrays[0].shape for a in arrays):
+        raise ValueError("field, derivatives and coordinate grids must share a 2D shape")
+    if arrays[0].size < 4 or any(not np.all(np.isfinite(a)) for a in arrays):
+        raise ValueError("window must contain at least four finite samples")
+    z_obs = float(observation_z)
+    index = float(structural_index)
+    if not np.isfinite(z_obs) or not np.isfinite(index) or index == 0:
+        raise ValueError("observation_z must be finite and structural_index finite and non-zero")
+    T, Tx, Ty, Tz, X, Y = [a.ravel() for a in arrays]
+    Z = np.full(T.shape, z_obs, dtype=float)
+    design = np.column_stack((Tx, Ty, Tz, np.full(T.shape, index)))
+    rhs = X * Tx + Y * Ty + Z * Tz + index * T
+    solution, _, rank, _ = np.linalg.lstsq(design, rhs, rcond=None)
+    if rank < 4:
+        raise ValueError("Euler window is rank deficient; source parameters are not identifiable")
+    residual = design @ solution - rhs
+    return {
+        "x0": float(solution[0]),
+        "y0": float(solution[1]),
+        "z0": float(solution[2]),
+        "base_level": float(solution[3]),
+        "rms_residual": float(np.sqrt(np.mean(residual * residual))),
+        "sample_count": int(T.size),
+        "structural_index": index,
+    }
