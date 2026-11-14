@@ -46,7 +46,7 @@ The p-center objective is sensitive to outliers and the definition of the demand
 
 ## Exact small-instance baseline
 
-The [Python package](../../implementations/python/p-center/README.md) enumerates all \(\binom{|J|}{p}\) candidate sets. For each set it assigns every demand point to its least-cost open facility and evaluates the largest resulting cost.
+The [Python package](../../implementations/python/p-center/README.md) enumerates all $\binom{|J|}{p}$ candidate sets. For each set it assigns every demand point to its least-cost open facility and evaluates the largest resulting cost.
 
 This is exact and transparent for small instances, but combinatorial in the number of candidate sites. It is not a large-scale optimization solver.
 
