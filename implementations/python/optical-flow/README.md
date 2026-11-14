@@ -1,8 +1,9 @@
-# Optical flow: Lucas–Kanade, Farnebäck and DIS
+# Optical flow: Lucas–Kanade, TV-L1, Farnebäck and DIS
 
 This package contains three executable optical-flow treatments:
 
 - A single-scale dense local Lucas–Kanade teaching implementation.
+- A scikit-image TV-L1 variational dense-flow wrapper.
 - An OpenCV-backed Farnebäck dense-flow wrapper based on polynomial expansion.
 - An OpenCV-backed DIS dense inverse-search wrapper with explicit speed/quality preset and refinement parameters.
 
