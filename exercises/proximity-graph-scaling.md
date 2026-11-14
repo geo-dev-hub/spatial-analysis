@@ -37,3 +37,17 @@ Estimate how the number of candidate tests grows when the point count doubles.
 ## Submission
 
 Submit the point set, graph plots, edge-count table, complexity discussion and a short design note for a future scalable implementation. Do not claim that the existing package implements the researched Delaunay or optimal Yao constructions.
+
+
+## Part 4 — Compare all-pairs and Delaunay-filtered construction
+
+The proximity-graphs package now contains Delaunay-filtered Gabriel and RNG functions.
+
+1. Run both all-pairs and Delaunay-filtered versions on a non-degenerate point set.
+2. Confirm that the edge lists agree for the supplied general-position fixture.
+3. Count all possible pairs, Delaunay candidate edges and retained graph edges.
+4. Estimate the work performed by the blocker scans. Explain why the current filter is O(n²), not O(n).
+5. Create a cocircular fixture. Compare the all-pairs open-disk Gabriel graph with the filtered result, and explain how a chosen Delaunay diagonal affects boundary ties.
+6. Read Lingas (1994). Identify what geometric fact or local structure permits linear-time filtering from the triangulation, beyond simply checking every point against every candidate edge.
+
+**Submission:** a table of candidate counts and timings across increasing n, plus a short note distinguishing the teaching filter from the specialised linear-time algorithm.
