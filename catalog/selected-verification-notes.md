@@ -106,3 +106,18 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new geodesic implementation is claimed. The lesson specifies reference geometries and a validation plan.
 - **Rights:** DOI, publisher, institutional and author-hosted links only; no third-party paper text or figures reproduced.
 - **Remaining work:** inspect exact algorithm variants and mesh degeneracies in greater depth; build a graph-Dijkstra baseline first, then evaluate a validated exact geodesic library and a separate fast-marching implementation.
+
+
+## Section 10 — Discrete global grids and spherical indexing
+
+**Source entry:** “Spherical and discrete global grids: ISEA3H, rHEALPix, DGGRID, hierarchical triangular mesh (HTM), hexagonal grid operations” (source page 21).
+
+- **Standards source:** the Open Geospatial Consortium's [OGC API — Discrete Global Grid Systems, Part 1: Core](https://docs.ogc.org/is/21-038r1/21-038r1.html) defines DGGS concepts and includes an ISEA3H DGGRS definition. Its ISEA3H description explicitly identifies hexagonal and pentagonal zones and specifies the area relationship between them.
+- **ISEA3H bibliography:** Sahr, K., White, D. and Kimerling, A. J. (2003), “Geodesic Discrete Global Grid Systems,” *Cartography and Geographic Information Science*, 30(2), 121–134. The source describes the icosahedral Snyder equal-area projection and aperture-3 hexagonal construction; the OGC definition records the twelve smaller pentagonal zones.
+- **rHEALPix bibliography:** Gibb, R. G. (2016), “The rHEALPix Discrete Global Grid System,” *IOP Conference Series: Earth and Environmental Science*, 34, 012012, DOI [10.1088/1755-1315/34/1/012012](https://doi.org/10.1088/1755-1315/34/1/012012). The paper describes cell geometries, identifiers and topological operations.
+- **HTM bibliography:** Szalay, A. S., Gray, J., Fekete, G., Kunszt, P. Z., Kukol, P. Z. and Thakar, A. (2005), “Indexing the Sphere with the Hierarchical Triangular Mesh,” Microsoft Research Technical Report MSR-TR-2005-123. The institutional record describes recursive spherical-triangle subdivision and multi-resolution indexing.
+- **DGGRID and implementation comparison:** Kmoch et al. (2022), “Applied open-source Discrete Global Grid Systems,” *AGILE GIScience Series*, 3, 41, DOI [10.5194/agile-giss-3-41-2022](https://doi.org/10.5194/agile-giss-3-41-2022), compares open-source DGGS software APIs. The lesson distinguishes DGGRID as software from a named cell tessellation.
+- **Technical-claim status:** the lesson distinguishes hierarchy, cell geometry, equal-area properties, addressing and query covering. It does not claim all DGGS cells are equal-area or that a cell-cover approximation replaces an exact geometry predicate.
+- **Implementation:** no new DGGS or HTM implementation is claimed.
+- **Rights:** standards, DOI, institutional and author-hosted links only; no third-party figures or text reproduced.
+- **Remaining work:** independently test one named implementation, inspect the exact DGGRID version and supported operations, and benchmark cell assignment, hierarchy, neighbour traversal, polygon covering and query performance on the intended data.
