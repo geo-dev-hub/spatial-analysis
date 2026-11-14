@@ -219,7 +219,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Population | Building-based population disaggregation | algorithm / model | No verified implementation | Open |
 | Population | Settlement-level population estimation | model / estimator | No verified implementation | Research required |
 | Privacy | Synthetic spatial microdata generation | model / workflow | No verified implementation | Research required |
-| Privacy | Spatial k-anonymity | privacy method | No verified implementation | Open |
+| Privacy | Spatial k-anonymity | privacy method | `implementations/python/spatial-privacy/spatial_k_anonymity.py` adaptive quadtree generalisation; disjoint groups each contain at least k records or are suppressed; tests, walkthrough and lab added | Implemented / tested candidate; location-only guarantee, attribute/linkage threat model and utility review pending |
 | Privacy | Differential privacy for spatial aggregates | algorithm / privacy mechanism | `implementations/python/spatial-privacy/` user-level Laplace mechanism with bounded per-person cell contributions plus a basic sequential accountant that sums epsilon/delta across releases; tests, walkthroughs and labs | Implemented / tested candidate; adjacency, contribution governance, durable accounting and advanced composition review pending |
 | Segregation / diversity | Reardon–Firebaugh multigroup entropy index implemented with tests and lab | Implemented / tested candidate; source-entry review pending |
 | Segregation / diversity | Areal-unit group exposure matrix and isolation diagonal implemented; distance-weighted exposure not included | Implemented / tested candidate; spatial interaction review pending |
