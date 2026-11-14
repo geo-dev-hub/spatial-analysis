@@ -91,8 +91,8 @@ A distance-decay extension is included separately below. Multiple catchments, va
 
 ## References
 
-- Radke, J. and Mu, L. (2000), [Spatial decomposition, modeling and mapping service regions to predict access to social programs](https://doi.org/10.1080/136588100240976), *Geographical Analysis*, 32(2), 105–129.
-- Luo, W. and Wang, F. (2003), [Measures of spatial accessibility to health care in a GIS environment: synthesis and a case study in the Chicago region](https://doi.org/10.1016/S0038-0121(02)00032-8), *Environment and Planning B*, 30(6), 865–884.
+- Radke, J. and Mu, L. (2000), [Spatial decompositions, modeling and mapping service regions to predict access to social programs](https://doi.org/10.1080/10824000009480538), *Geographic Information Sciences*, 6(2), 105–112.
+- Luo, W. and Wang, F. (2003), [Measures of spatial accessibility to health care in a GIS environment: synthesis and a case study in the Chicago region](https://doi.org/10.1068/b29120), *Environment and Planning B: Planning and Design*, 30(6), 865–884.
 
 **Scope:** binary-catchment 2SFCA with supplied impedance costs; no distance decay, provider choice or dynamic capacity model is included.
 
@@ -147,4 +147,4 @@ The [distance-decay implementation](../../implementations/python/two-step-fca/RE
 
 ## References
 
-- Luo, W. and Qi, Y. (2009), [An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians](https://doi.org/10.1016/j.healthplace.2009.06.002), *Health & Place*, 15(4), 1100–1107.
+- Luo, W. and Qi, Y. (2009), [An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians](https://doi.org/10.1016/j.healthplace.2009.06.002), *Health & Place*, 15(4), 1100–1107. See also the [2011 erratum](https://doi.org/10.1016/j.healthplace.2010.10.006), which corrects one Gaussian weight value reported in the original article; the piecewise-constant example here uses illustrative analyst-supplied weights.
