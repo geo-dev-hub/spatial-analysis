@@ -1,11 +1,7 @@
 # Curve construction teaching implementations
 
-This package provides three bounded, transparent curve algorithms:
+This package includes Chaikin corner cutting, Catmull–Rom interpolation, arbitrary-degree Bezier evaluation by de Casteljau, and B-spline/NURBS evaluation by de Boor's algorithm.
 
-- Chaikin corner cutting for open polylines and closed rings.
-- Centripetal Catmull–Rom interpolation for open control-point sequences, with uniform and chordal parameterisation available through the alpha parameter.
-- Arbitrary-degree Bezier evaluation using de Casteljau's algorithm.
+B-spline/NURBS inputs are planar control points, degree, nondecreasing knot vector and parameter in the closed spline domain. The knot vector length is control_count + degree + 1. NURBS weights must be finite and non-zero. Sampling functions include both domain endpoints.
 
-Run `python -m pytest -q` from this directory. Runtime code uses only the Python standard library.
-
-The package does **not** implement B-spline or NURBS evaluation/fitting, Schneider's cubic Bezier curve fitting, Kalman filtering or Rauch–Tung–Striebel smoothing. Those are different mathematical problems and require separate contracts and tests. The algorithms here are curve construction/geometry examples, not trajectory denoising or statistically optimal smoothing.
+Run python -m pytest -q from this directory. The package does not yet implement Schneider's Bezier curve fitting or Kalman/RTS trajectory smoothing. Curve construction and statistical trajectory estimation are different tasks.
