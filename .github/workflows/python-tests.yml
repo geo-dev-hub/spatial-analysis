@@ -133,6 +133,9 @@ jobs:
           - example: maximal-covering
             directory: implementations/python/maximal-covering
             pythonpath: ""
+          - example: backup-coverage
+            directory: implementations/python/backup-coverage
+            pythonpath: ""
           - example: dbscan
             directory: implementations/python/dbscan
             pythonpath: ""
@@ -343,6 +346,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/p-center-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/set-covering-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/maximal-covering-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/backup-coverage-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/dbscan-clustering-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/two-step-fca-accessibility-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/d8-flow-direction-lab.ipynb
