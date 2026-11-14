@@ -34,8 +34,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Curves and smoothing | B-splines | de Boor evaluator, tests, walkthrough and spline notebook added | Implemented / tested candidate; reference review pending |
 | Curves and smoothing | NURBS | Homogeneous de Boor evaluator, rational quarter-circle test and notebook added | Implemented / tested candidate; reference review pending |
 | Curves and smoothing | Schneider Bezier fitting | Bezier evaluation exists, but curve-fitting algorithm is not the same deliverable | Partial |
-| Curves and smoothing | Kalman smoother | Family lesson only; no matching implementation verified | Open |
-| Curves and smoothing | Rauch–Tung–Striebel smoother | Family lesson only; no matching implementation verified | Open |
+| Curves and smoothing | Kalman smoother | Linear-Gaussian vector-state filter and RTS smoother; tests, walkthrough and notebook added | Implemented / tested candidate; model/reference review pending |
+| Curves and smoothing | Rauch–Tung–Striebel smoother | Backward fixed-interval RTS pass added to tested Kalman package | Implemented / tested candidate; model/reference review pending |
 | Mesh geodesics | Mitchell–Mount–Papadimitriou exact geodesics | Comparative method guide; no executable package verified | Research / lesson only |
 | Mesh geodesics | Chen–Han exact geodesics | Comparative method guide; no executable package verified | Research / lesson only |
 | Mesh geodesics | Fast marching on triangle meshes | Comparative method guide; no executable package verified | Research / lesson only |
@@ -134,3 +134,6 @@ These are implementation candidates, not independently verified release completi
 
 
 Additional update: B-spline and NURBS evaluation by de Boor has been added to the curves package, with polynomial and rational validation fixtures, a walkthrough and a dedicated notebook. Schneider fitting and Kalman/RTS smoothing remain separate, unimplemented methods.
+
+
+Further implementation update: polynomial B-spline and rational NURBS evaluation (de Boor) plus linear-Gaussian Kalman filtering and RTS smoothing are now present in the curves package, with tests, walkthroughs and dedicated notebooks. Schneider's curve fitting remains open. These are implementation candidates pending CI and independent technical/reference review.
