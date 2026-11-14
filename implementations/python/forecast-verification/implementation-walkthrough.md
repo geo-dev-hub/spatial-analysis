@@ -23,3 +23,14 @@ ROC AUC is calculated using the Mann–Whitney rank identity. Average ranks are 
 ## 5. What remains outside the package
 
 CRPS, ensemble rank histograms, neighbourhood FSS, SAL and MODE need separate data contracts and validation. In particular, spatial neighbourhood metrics must declare grid geometry, physical scale, thresholds and edge treatment. They should not be hidden inside a generic one-dimensional metric function.
+
+
+## 6. Fractions Skill Score on a grid
+
+FSS is separate from the one-dimensional functions because it needs a spatial data contract. It accepts equally shaped rectangular numeric grids, a threshold, an odd square window size in cells and an explicit edge policy. Each cell becomes an event indicator using value >= threshold. At each evaluated centre, the implementation calculates forecast and observation event fractions and compares them using the FSS formula.
+
+A summed-area table (integral image) makes each rectangular event-count query constant time after a single grid pass. The default truncate policy clips windows at the domain boundary and uses the smaller actual area. The valid policy excludes centres whose full window would extend beyond the grid. These choices change the evaluated population and must be reported.
+
+A one-cell window reduces FSS to gridpoint comparison. Larger windows test agreement at broader neighbourhood scales, so a displaced feature can receive more credit. Window size is in cells, not metres: the same 5-by-5 window has different physical meaning on 1 km and 10 km grids. The implementation returns None when both thresholded fields contain no events because the denominator is zero.
+
+The code cannot choose a scientifically meaningful threshold, projection, grid spacing, resampling method, mask or neighbourhood scale. Forecast and observation must refer to the same valid time and accumulation period. A scale curve across several neighbourhood sizes is often more informative than one selected value.
