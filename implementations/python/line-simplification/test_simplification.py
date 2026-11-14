@@ -1,5 +1,5 @@
 import pytest
-from simplification import douglas_peucker,lang,opheim,reumann_witkam,visvalingam_whyatt
+from simplification import _distance_to_line, douglas_peucker,lang,opheim,reumann_witkam,visvalingam_whyatt
 def test_existing_methods():
     line=[(0,0),(1,.1),(2,-.1),(3,0)]
     assert douglas_peucker(line,.2)==[line[0],line[-1]]
@@ -37,3 +37,37 @@ def test_opheim_preserves_endpoints_and_handles_short_line():
 def test_opheim_rejects_invalid_distance_constraints():
     with pytest.raises(ValueError):
         opheim([(0,0),(1,0)], 0.1, 2, 1)
+
+
+def test_zhao_saalfeld_narrow_sleeve_simplifies_straight_line():
+    from simplification import zhao_saalfeld_narrow_sleeve
+    line=[(0,0),(1,0.02),(2,-0.01),(3,0.01),(4,0)]
+    assert zhao_saalfeld_narrow_sleeve(line,0.05)==[(0.0,0.0),(4.0,0.0)]
+
+def test_zhao_saalfeld_narrow_sleeve_retains_direction_change():
+    from simplification import zhao_saalfeld_narrow_sleeve
+    line=[(0,0),(1,0),(2,0),(2,1),(2,2)]
+    out=zhao_saalfeld_narrow_sleeve(line,0.1)
+    assert out[0]==(0.0,0.0) and out[-1]==(2.0,2.0)
+    assert len(out)>=3
+
+def test_zhao_saalfeld_sleeve_respects_supporting_line_tolerance():
+    from simplification import zhao_saalfeld_narrow_sleeve
+    line=[(0,0),(1,0.03),(2,-0.02),(3,0.01),(4,0),(4,1),(4,2)]
+    eps=0.05;out=zhao_saalfeld_narrow_sleeve(line,eps)
+    source_index={p:i for i,p in enumerate(line)}
+    for a,b in zip(out,out[1:]):
+        ia,ib=source_index[a],source_index[b]
+        for p in line[ia+1:ib]:
+            assert _distance_to_line(p,a,b)<=eps+1e-10
+
+def test_zhao_saalfeld_handles_angle_wrap_and_duplicates():
+    from simplification import zhao_saalfeld_narrow_sleeve
+    line=[(0,0),(-1,0.01),(-2,0),(-2,0),(-3,-0.01)]
+    out=zhao_saalfeld_narrow_sleeve(line,0.02)
+    assert out[0]==(0.0,0.0) and out[-1]==(-3.0,-0.01)
+
+def test_zhao_saalfeld_rejects_negative_tolerance():
+    from simplification import zhao_saalfeld_narrow_sleeve
+    with pytest.raises(ValueError):
+        zhao_saalfeld_narrow_sleeve([(0,0),(1,1)],-1)

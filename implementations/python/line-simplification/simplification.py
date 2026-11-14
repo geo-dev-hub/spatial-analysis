@@ -133,3 +133,64 @@ def opheim(points, strip_half_width, min_distance, max_distance):
     if out[-1] != pts[-1]:
         out.append(pts[-1])
     return out
+
+
+def zhao_saalfeld_narrow_sleeve(points, tolerance):
+    """Zhao–Saalfeld narrow-sleeve (epsilon-width) variant.
+
+    Maintains the intersection of angular sector bounds for all vertices in
+    the active sleeve. A candidate endpoint is accepted only when its
+    direction lies in the current intersection; otherwise the previous
+    original vertex is committed and becomes the next sleeve's start.
+
+    The guarantee is perpendicular distance to the supporting line of each
+    simplified segment, not necessarily distance to the finite segment.
+    """
+    from math import asin, atan2, pi
+    pts = _points(points)
+    if not isfinite(tolerance) or tolerance < 0:
+        raise ValueError("tolerance must be finite and non-negative")
+    n = len(pts)
+    if n <= 2:
+        return pts[:]
+    out = [pts[0]]
+    anchor = 0
+    while anchor < n - 1:
+        lower = None
+        upper = None
+        i = anchor + 1
+        while i < n:
+            dx = pts[i][0] - pts[anchor][0]
+            dy = pts[i][1] - pts[anchor][1]
+            distance = hypot(dx, dy)
+            if distance == 0:
+                i += 1
+                continue
+            angle = atan2(dy, dx)
+            if lower is not None:
+                middle = (lower + upper) / 2.0
+                angle += 2.0 * pi * round((middle - angle) / (2.0 * pi))
+                if angle < lower - 1e-12 or angle > upper + 1e-12:
+                    break
+            if distance > tolerance:
+                half_angle = asin(min(1.0, tolerance / distance))
+                lo, hi = angle - half_angle, angle + half_angle
+                if lower is None:
+                    lower, upper = lo, hi
+                else:
+                    lower, upper = max(lower, lo), min(upper, hi)
+            i += 1
+        if i == n:
+            out.append(pts[-1])
+            break
+        # i is the first point that cannot join this sleeve. Commit the last
+        # accepted original vertex and restart from it; no accepted point is
+        # revisited, giving the narrow-sleeve variant its linear scan.
+        new_anchor = i - 1
+        if new_anchor <= anchor:
+            new_anchor = anchor + 1
+        out.append(pts[new_anchor])
+        anchor = new_anchor
+    if out[-1] != pts[-1]:
+        out.append(pts[-1])
+    return out
