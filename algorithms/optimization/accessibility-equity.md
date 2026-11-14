@@ -68,7 +68,7 @@ Compare highest and lowest group means using an absolute gap and a ratio. Also i
 6. Repeat for alternative network assumptions, thresholds, population estimates and time periods.
 7. Compare policy scenarios using total benefits and distributional changes.
 
-The tested [Python implementation](../../implementations/python/accessibility-equity/README.md) provides descriptive diagnostics; the [notebook](../../notebooks/accessibility-equity-lab.ipynb) demonstrates them on synthetic data.
+The [Python implementation and unit tests](../../implementations/python/accessibility-equity/README.md) provides descriptive diagnostics; the [notebook](../../notebooks/accessibility-equity-lab.ipynb) demonstrates them on synthetic data.
 
 ## Equity is not a single number
 
