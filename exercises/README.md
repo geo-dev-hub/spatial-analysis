@@ -65,3 +65,5 @@ Do not make an exercise depend on an unavailable dataset, paid software or unexp
 - [Location set covering](set-covering.md) — minimize the number of facilities required to reach all demand within a stated service standard.
 
 - [Backup coverage](backup-coverage.md) — distinguish ordinary coverage from r-covering and explain why deterministic redundancy is not a reliability probability.
+
+- [M/M/c queueing](mmc-queue.md) — calculate waiting under a stable multi-server queue and challenge the Poisson and exponential assumptions.
