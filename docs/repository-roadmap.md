@@ -354,7 +354,8 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 
 - [x] Add a spatial time-series guide covering STL, Theil–Sen, Pettitt, ARIMA, Prophet and Kalman filtering, with spatial and temporal validation guidance; implementations remain open.
 
-- [x] Add a forecast-verification guide covering contingency-table scores, proper probabilistic scoring, FSS, SAL and MODE; metric implementations and worked verification experiments remain open.
+- [x] Add a forecast-verification guide covering contingency-table scores, proper probabilistic scoring, FSS, SAL and MODE.
+- [x] Implement and test binary contingency-table scores, Brier score/skill, reliability-bin summaries and tied-rank ROC AUC; add an intern walkthrough and executable lab. CRPS, rank histograms, FSS, SAL and MODE remain open.
 
 - [x] Add an optical-flow guide comparing Lucas–Kanade, Farnebäck and DIS, with georeferencing, Earth-observation failure modes and validation requirements; tested image-flow and geospatial conversion examples remain open.
 
