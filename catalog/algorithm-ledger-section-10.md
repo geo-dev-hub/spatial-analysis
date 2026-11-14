@@ -76,7 +76,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Categorical / probabilistic verification | CSI | Tested forecast-verification package | Implemented / tested |
 | Probabilistic verification | Brier score and Brier skill score | Tested forecast-verification package | Implemented / tested |
 | Probabilistic verification | ROC and AUC | Tested forecast-verification package; tied-rank ROC AUC | Implemented / tested |
-| Probabilistic verification | CRPS decomposition | Not implemented; ensemble CRPS score is now separate and tested | Open |
+| Probabilistic verification | CRPS decomposition | `implementations/python/forecast-verification/crps_decomposition.py` integrates threshold-wise Murphy Brier reliability/resolution/uncertainty components with trapezoidal quadrature; tests and lab; finite-grid approximation, not exact Hersbach bin-width estimator | Implemented candidate; quadrature sensitivity and exact Hersbach reference parity remain open |
 | Probabilistic verification | Rank histograms | Expected rank histogram with fractional tie handling, tests and notebook added | Implemented / tested candidate; calibration review pending |
 | Optical flow | Lucas–Kanade | Single-scale dense local implementation, tests, walkthrough and synthetic translation notebook added | Implemented / tested candidate; benchmark/reference review pending |
 | Optical flow | Farnebäck | OpenCV-backed dense wrapper, parameter contract and synthetic translation test in `implementations/python/optical-flow/` | Implemented via reference dependency; broader benchmark and independent validation pending |
@@ -206,7 +206,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Carbon accounting | Soil carbon mapping | model / workflow | No verified implementation | Research required |
 | Carbon accounting | Additionality and leakage analysis | causal / accounting method | No verified implementation | Research required |
 | Methane detection | Matched-filter plume detection | algorithm | `implementations/python/methane-emissions/` Gaussian template bank, normalized correlation score, amplitude estimate, synthetic injection tests and lab | Implemented / tested candidate; correlated-noise and operational retrieval validation pending |
-| Methane detection | Deep plume segmentation | model / workflow | External model families and data needed | Research required |
+| Methane detection | Deep plume segmentation | model / workflow | No trained deep model claimed; `hysteresis_plume_segmentation` adds a classical low/high-threshold connected-component segmentation baseline with tests and lab | Classical baseline implemented; learned model, training data and independent plume validation remain open |
 | Methane quantification | Integrated mass enhancement (IME) | estimator / method | `ime_emission_rate` implements Q = IME × wind speed / characteristic length with unit-contract tests | Implemented / tested arithmetic baseline; physical input/retrieval validation pending |
 | Methane quantification | Cross-sectional flux | estimator / method | `cross_sectional_flux` integrates concentration × signed normal wind × segment width; tests include reversed flow | Implemented / tested numerical baseline; sampling and uncertainty review pending |
 | Methane quantification | Gaussian plume inversion | inverse model | `implementations/python/methane-emissions/gaussian_plume_inversion.py` fits non-negative Q and constant background for a fixed-source, vertically integrated Gaussian column plume; synthetic recovery tests, walkthrough and lab added | Implemented / tested candidate; source geometry and dispersion are fixed inputs, operational physics and uncertainty review pending |
@@ -297,3 +297,6 @@ The potential-field package now includes a bounded 2D single-thin-dike Werner de
 
 - Building-based population disaggregation now has a direct per-building allocation routine. Source-zone totals are distributed over residential buildings using floor area multiplied by an optional occupancy factor; non-residential buildings are excluded and zone totals are checked for conservation. This remains a top-down allocation baseline, not an occupancy or household model.
 - Spatial microdata work now includes an IPF/raking implementation that calibrates seed-record weights against categorical control margins. It preserves seed structural zeros and reports non-convergence. This is a weight-calibration component, not a complete synthetic microdata generator.
+
+
+14 November 2026 batch: added threshold-integrated CRPS reliability-resolution-uncertainty decomposition and classical hysteresis segmentation for methane enhancement fields. Both have tests and notebook material. CRPS uses finite trapezoidal quadrature rather than the exact Hersbach ensemble-bin-width estimator; methane hysteresis is a classical segmentation baseline, not a deep neural model.
