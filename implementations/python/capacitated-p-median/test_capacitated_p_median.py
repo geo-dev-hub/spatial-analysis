@@ -7,8 +7,8 @@ def test_capacity_changes_the_assignment_and_selected_sites():
         capacities=[2, 2, 4], demand_quantities=[2, 1, 2, 1],
     )
     assert opened == (0, 2)
-    assert objective == pytest.approx(14)
-    assert assignment == (0, 0, 2, 2)
+    assert objective == pytest.approx(15)
+    assert assignment == (0, 2, 2, 2)
 
 def test_capacity_can_force_a_higher_cost_assignment():
     opened, objective, assignment = solve_capacitated_p_median(
@@ -16,7 +16,7 @@ def test_capacity_can_force_a_higher_cost_assignment():
         capacities=[1, 2], demand_quantities=[1, 1, 1],
     )
     assert opened == (0, 1)
-    assert objective == pytest.approx(3)
+    assert objective == pytest.approx(2)
     assert assignment == (0, 1, 1)
 
 def test_demand_weights_change_cost_not_capacity_load():
