@@ -171,3 +171,12 @@ The segmentation algorithms detect piecewise-constant mean changes, not arbitrar
 - [Runnable Python package and tests](../implementations/python/change-point-detection/README.md)
 - [Intern walkthrough](../implementations/python/change-point-detection/implementation-walkthrough.md)
 - [Synthetic change-point lab](../notebooks/change-point-detection-lab.ipynb)
+
+
+## Reproducible Bayesian online baseline
+
+A conjugate BOCPD teaching implementation now accompanies the conceptual guide. It tracks the posterior over run length for an unknown segment mean with a Normal prior, known Gaussian observation variance and constant hazard. Tests check posterior normalisation, response to an abrupt synthetic shift and invalid model parameters. The model assumptions are intentionally explicit; this is not a generic BOCPD library or a replacement for BEAST.
+
+- [Implementation](../implementations/python/change-point-detection/bayesian_online.py)
+- [Tests](../implementations/python/change-point-detection/test_bayesian_online.py)
+- [Bayesian online lab](../notebooks/bayesian-online-change-point-lab.ipynb)

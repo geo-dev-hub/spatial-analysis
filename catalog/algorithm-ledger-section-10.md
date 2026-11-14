@@ -53,7 +53,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Change points | Binary segmentation | Greedy SSE split implementation and tests added | Implemented / tested candidate; comparison review pending |
 | Change points | PELT | Pruned exact SSE mean-shift implementation, brute-force partition test and walkthrough added | Implemented / tested candidate; independent reference review pending |
 | Change points | BEAST | Family comparison guide; no matching implementation verified | Research / lesson only |
-| Change points | Bayesian online change-point detection | Family comparison guide; no matching implementation verified | Research / lesson only |
+| Change points | Bayesian online change-point detection | Conjugate Gaussian-mean run-length recursion, tests and notebook added | Implemented / tested candidate; reference/model review pending |
 | Trend / seasonality | STL decomposition | Family guide; no matching implementation verified | Research / lesson only |
 | Trend / seasonality | Prophet | External software/model; family guide only | Research / lesson only |
 | Trend / seasonality | Theil–Sen trend estimator | Family guide; no matching implementation verified | Research / lesson only |
@@ -137,3 +137,6 @@ Additional update: B-spline and NURBS evaluation by de Boor has been added to th
 
 
 Further implementation update: polynomial B-spline and rational NURBS evaluation (de Boor) plus linear-Gaussian Kalman filtering and RTS smoothing are now present in the curves package, with tests, walkthroughs and dedicated notebooks. Schneider's curve fitting remains open. These are implementation candidates pending CI and independent technical/reference review.
+
+
+Bayesian online change-point detection has now been added as a bounded conjugate-Gaussian teaching model with run-length posterior, change probabilities, tests and a lab notebook. BEAST remains open.
