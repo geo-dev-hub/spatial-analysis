@@ -103,3 +103,28 @@ def euler_deconvolution_window(
         "sample_count": int(T.size),
         "structural_index": index,
     }
+
+
+def downward_continuation_regularized(values, dx, dy, height, regularization):
+    """Continue a potential field downward with Tikhonov spectral regularisation.
+
+    For non-zero Fourier modes this is the Tikhonov inverse of upward
+    continuation A(k)=exp(-k*height): H=A/(A**2+lambda). The DC component
+    (mean) is preserved exactly. regularization must be positive; larger
+    values suppress unstable high-wavenumber amplification more strongly.
+    """
+    z, dx, dy = _grid(values, dx, dy)
+    height = float(height)
+    lam = float(regularization)
+    if not np.isfinite(height) or height < 0:
+        raise ValueError("height must be finite and non-negative")
+    if not np.isfinite(lam) or lam <= 0:
+        raise ValueError("regularization must be finite and positive")
+    if height == 0:
+        return z.copy()
+    _, _, K = _wavenumbers(z.shape, dx, dy)
+    kh = K * height
+    # Log-domain denominator avoids overflow for large downward distances.
+    transfer = np.exp(kh - np.logaddexp(0.0, np.log(lam) + 2.0 * kh))
+    transfer[0, 0] = 1.0  # Preserve the regional mean rather than regularising DC.
+    return np.fft.ifft2(np.fft.fft2(z) * transfer).real
