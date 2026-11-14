@@ -24,7 +24,7 @@ Not every topic needs six exercises. Choose the progression that fits the method
 - [Proximity-graph scaling](proximity-graph-scaling.md)
 - [Ear-clipping triangulation](ear-clipping-triangulation.md)
 - [Convex decomposition](convex-decomposition.md)
-- [Minkowski sum](minkowski-sum.md)
+- [Minkowski sum](minkowski-sum.md) — includes a runnable convex edge-merge trace and visual lab.
 - [Medial axis](medial-axis.md)
 - [Straight skeleton](straight-skeleton.md)
 - [Bentley–Ottmann](../implementations/python/bentley-ottmann/implementation-walkthrough.md#10-suggested-intern-exercises)
