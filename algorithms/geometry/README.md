@@ -22,3 +22,5 @@ These records are part of the broader [algorithm collection](../README.md). The 
 
 - [Medial axis](medial-axis.md) — locate centres of maximal interior discs through boundary-feature distance.
 - [Straight skeleton](straight-skeleton.md) — trace wavefront vertices as polygon edges move inward in parallel.
+
+- [Convex Minkowski-sum implementation](../../implementations/python/minkowski-convex/README.md) — exact rational edge merge, tests and intern walkthrough.
