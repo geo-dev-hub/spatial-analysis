@@ -114,7 +114,7 @@ $$
 
 FSS is 1 for a perfect match and approaches 0 for poor agreement relative to the score's reference behaviour. It is scale-selective: changing the neighbourhood size changes the question being asked. Small neighbourhoods test precise placement; larger neighbourhoods test broader spatial organisation.
 
-FSS does not mean that the forecast is “correct” at every location inside a neighbourhood. Report the event threshold, neighbourhood size in physical units, grid spacing, domain and reference/skill interpretation. Do not compare FSS values across studies without checking those choices.
+FSS does not mean that the forecast is “correct” at every location inside a neighbourhood. Report the event threshold, neighbourhood size in physical units, grid spacing, domain and reference/skill interpretation. Do not compare FSS values across studies without checking those choices. A tested regular-grid teaching baseline is available in the [Fractions Skill Score module](../implementations/python/forecast-verification/README.md#spatial-neighbourhood-verification-fractions-skill-score), with a [scale-verification lab](../notebooks/forecast-fractions-skill-score-lab.ipynb); its windows are specified in cells and its edge policy is explicit.
 
 ## 7. SAL: structure, amplitude and location
 
@@ -184,4 +184,4 @@ A strong verification report combines:
 
 ## Scope
 
-**Implemented teaching baseline:** [contingency-table scores, Brier score/skill, reliability bins and tied-rank ROC AUC](../implementations/python/forecast-verification/README.md), with [tests](../implementations/python/forecast-verification/test_forecast_verification.py), an [intern walkthrough](../implementations/python/forecast-verification/implementation-walkthrough.md) and an [executable lab](../notebooks/forecast-verification-lab.ipynb). CRPS, ensemble rank histograms, Fractions Skill Score, SAL and MODE remain unimplemented. Spatial metrics require separate grid, neighbourhood, object and boundary contracts; they should not be represented by one generic vector function.
+**Implemented teaching baseline:** [contingency-table scores, Brier score/skill, reliability bins and tied-rank ROC AUC](../implementations/python/forecast-verification/README.md), with [tests](../implementations/python/forecast-verification/test_forecast_verification.py), an [intern walkthrough](../implementations/python/forecast-verification/implementation-walkthrough.md) and an [executable lab](../notebooks/forecast-verification-lab.ipynb). CRPS, ensemble rank histograms, SAL and MODE remain unimplemented. Fractions Skill Score has a tested regular-grid baseline with explicit cell-window and edge policies. Spatial metrics require separate grid, neighbourhood, object and boundary contracts; they should not be represented by one generic vector function.
