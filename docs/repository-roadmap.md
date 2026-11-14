@@ -279,7 +279,7 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 
 ## Geostatistics rendering correction — 14 November 2026
 
-- The README and intern walkthrough contained literal `\\n` text in prose and a formula block rather than actual line breaks. The correction restores paragraph boundaries and the semivariogram equation as a normal display-math block. Full-head run `43563534022` passed all 81 jobs after this correction.
+- The README and intern walkthrough contained literal `\n` text in prose and a formula block rather than actual line breaks. The correction restores paragraph boundaries and the semivariogram equation as a normal display-math block. Full-head run `43563534022` passed all 81 jobs after this correction.
 - This was a presentation/documentation fix; the numerical implementation and notebook were not changed.
 
 ## Section 4–5 bibliography checks — 14 November 2026
@@ -340,3 +340,5 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - [x] Link existing canonical lessons and evidence notes from the relevant Section 10, 21 and 22 source rows while preserving partial status.
 - [x] Render the Gneiting-class space-time covariance equations in the lesson, implementation README and intern walkthrough; align the displayed absolute temporal lag with the implementation.
 - [x] Recount the current CI configuration: 78 Python package suites and 70 notebook executions, plus internal-link and Clipper2 checks. The previous full validation on commit 0327318 passed; the newer catalogue/formula batch still requires a full-head run.
+
+- [x] Add a mesh-geodesics research guide comparing MMP, Chen–Han and fast marching on triangulated domains; implementation remains open.
