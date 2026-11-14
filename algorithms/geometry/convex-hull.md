@@ -124,7 +124,7 @@ The [Graham scan implementation](../../implementations/python/convex-hull/README
 
 ## References
 
-- Graham, R. L. (1972), [An efficient algorithm for determining the convex hull of a finite planar set](https://doi.org/10.1016/0020-0190(72)90045-2), Information Processing Letters.
+- Graham, R. L. (1972). [An efficient algorithm for determining the convex hull of a finite planar set](https://doi.org/10.1016/0020-0190(72)90045-2). *Information Processing Letters*, 1(4), 132–133.
 - Preparata, F. P. and Shamos, M. I. (1985), *Computational Geometry: An Introduction*, Springer, for foundational geometric algorithms.
 - [CGAL 2D convex hull documentation](https://doc.cgal.org/latest/Convex_hull_2/index.html), for robust computational geometry implementations and traits.
 

@@ -40,7 +40,7 @@ $$
 
 Here $\mathbf{s}$ is a location and $\mathbf{h}$ is a separation vector. The semivariogram describes the expected half-squared difference between values separated by that vector.
 
-From observed data, the classical Matheron empirical estimator for a lag class is
+For a non-empty lag bin, the classical Matheron empirical estimator is
 
 $$
 \widehat{\gamma}_k=
@@ -53,7 +53,7 @@ $$
 \sum_{(i,j)\in N_k} d_{ij}.
 $$
 
-$N_k$ is the set of observation pairs assigned to bin $k$, and $|N_k|$ is its pair count. The mean pair distance $\bar h_k$ is the horizontal coordinate reported for a non-empty bin. In practice, exact separation vectors are rare, so distances are grouped into bins or lag classes. The implementation below uses left-closed, right-open intervals (with the final upper edge included). For a non-empty bin, it reports the **mean observed pair distance** as the representative lag; an empty bin retains its midpoint so the gap remains visible.
+$N_k$ is the set of observation pairs assigned to bin $k$, and $|N_k|$ is its pair count. The mean pair distance $\bar h_k$ is the horizontal coordinate reported for a non-empty bin. In practice, exact separation vectors are rare, so distances are grouped into bins or lag classes. The repository implementation uses left-closed, right-open intervals (with the final upper edge included). For a non-empty bin, it reports the **mean observed pair distance** as the representative lag; an empty bin retains its midpoint so the gap remains visible.
 
 ## A small example
 
@@ -134,7 +134,7 @@ The teaching implementation visits every unordered pair of observations. For $n$
 
 ## What this record calculates
 
-The shared [geostatistics package](../implementations/python/geostatistics/README.md) exposes `empirical_variogram(samples, bin_edges)`. It computes the omnidirectional Matheron estimator from planar Euclidean distances and caller-supplied lag edges. For non-empty bins it returns mean pair distance, semivariance and pair count; empty bins return their midpoint, `None` and zero. Bins are left-closed/right-open except the final bin, which includes its upper edge. The implementation accumulates summaries online and uses $O(B)$ auxiliary memory.
+The shared [geostatistics package](../implementations/python/geostatistics/README.md) exposes `empirical_variogram(samples, bin_edges)`. It computes the omnidirectional Matheron estimator from planar Euclidean distances and caller-supplied lag edges. For non-empty bins it returns mean pair distance, semivariance and pair count; empty bins return their midpoint, `None` and zero. Bins are left-closed/right-open except the final bin, which includes its upper edge. The implementation accumulates summaries online and uses $O(B)$ auxiliary memory. Its shared input validator rejects duplicate coordinates; replicate observations need an explicit aggregation or measurement-error policy before they are passed to this function.
 
 It does not:
 - fit a theoretical variogram;
