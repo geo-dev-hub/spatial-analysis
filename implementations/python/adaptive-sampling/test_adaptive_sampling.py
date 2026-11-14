@@ -2,7 +2,7 @@ import pytest
 from adaptive_sampling import adaptive_cluster_sample
 
 def test_positive_unit_recruits_neighbourhood_recursively():
-    values=[0,5,0,6,0]
+    values=[5,5,5,6,0]
     graph=[[1],[0,2],[1,3],[2,4],[3]]
     result=adaptive_cluster_sample(values,graph,[0],threshold=5)
     assert result.initial_indices==(0,)
