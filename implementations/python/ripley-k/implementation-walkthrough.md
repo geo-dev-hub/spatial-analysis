@@ -41,3 +41,16 @@ This package applies none of them. It does not produce confidence envelopes or p
 ## 6. Validate and extend
 
 Tests cover inclusive radius thresholds, ordered-pair counting, monotonicity and invalid inputs. Extensions should add one edge correction at a time, compare it with a reference implementation and use simulation envelopes under a clearly stated null model.
+
+
+## 7. Simulate a conditional CSR reference
+
+The companion `ripley_k_envelope.py` module fixes the observed event count and rectangular window, then draws uniform random point patterns. It calculates translation-corrected L curves for the observed and simulated patterns at the same preselected radii.
+
+## 8. Keep pointwise and global inference separate
+
+The lower and upper simulation quantiles are pointwise bands. They are useful for seeing the scale and direction of deviations, but they do not control the probability of an excursion anywhere across the whole interval.
+
+The global p-value uses a studentised maximum absolute deviation over the selected radii. All curves are centred and scaled symmetrically using the combined observed-plus-simulated curve set. The Monte Carlo rank formula includes the observed curve among the exchangeable curves. Record the simulation count, random seed, alpha and radius interval.
+
+This is a scoped global deviation test, not a full rank-envelope procedure. More simulations improve p-value resolution; the minimum possible value is 1/(B+1).
