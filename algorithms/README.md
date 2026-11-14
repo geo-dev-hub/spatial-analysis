@@ -28,6 +28,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Accessibility equity diagnostics](optimization/accessibility-equity.md) — inspect population-weighted accessibility distributions, lower-tail outcomes and group gaps without treating one metric as a fairness verdict.
 - [Equity-constrained maximal covering](optimization/equity-constrained-covering.md) — maximise covered demand while enforcing explicit minimum coverage shares for caller-defined groups.
 - [Two-step floating catchment area](optimization/two-step-fca.md) — estimate potential service accessibility by combining provider supply and population demand within travel catchments.
+- [Maximum expected covering (MEXCLP)](optimization/mexclp.md) — account for the probability that nearby service units are busy when demand arrives.
 
 ## Remote sensing
 
