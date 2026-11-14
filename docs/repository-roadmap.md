@@ -325,3 +325,10 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - Added [catalog/selected-verification-notes.md](../catalog/selected-verification-notes.md) to record the publisher/institutional metadata checks for Visvalingam and Whyatt (1993), Cressie and Huang (1999), and Gneiting (2002).
 - Corrected/confirmed scope is deliberately narrow: these notes confirm bibliographic identity and metadata; they do not promote the full grouped source entries to verified status or claim that all mathematical assumptions have been independently audited.
 - Linked the notes from the corresponding Section 10 and Section 22 source rows. Rights remain link-only; no third-party paper text or figures are reproduced.
+
+## Space-time covariance lesson presentation — 14 November 2026
+
+- Replaced the plain-text covariance expression with rendered display mathematics in the canonical lesson, package README and intern walkthrough.
+- Made the absolute temporal lag explicit in the displayed definition, matching the implementation's use of absolute time differences and ensuring the covariance is symmetric in temporal lag.
+- Defined the marginal variance and spatial/temporal scale parameters next to the equations. The lesson remains scoped to one Euclidean-space-by-linear-time Gneiting-class construction.
+- This is a presentation and contract-clarity correction; it does not add a new covariance family or claim a full mathematical audit of the source paper.
