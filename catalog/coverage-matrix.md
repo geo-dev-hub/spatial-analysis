@@ -46,3 +46,8 @@ See the [original section map](source-sections.md) and [page-by-page source tran
 ## Section 7 implementation note
 
 The ELECTRE I-style package now contains two deliberately separate stages: pairwise relation construction and exact small-instance kernel enumeration. The kernel enumerator checks internal and external stability, reports every kernel, and explicitly reports when no kernel exists. It is exhaustive and capped at 20 alternatives by default; it does not perform cycle reduction or produce a total ranking. See the [method record](../methods/electre-outranking.md), [implementation contract](../implementations/python/electre-i/README.md), [kernel exercise](../exercises/electre-i-kernel.md) and [kernel lab](../notebooks/electre-i-kernel-lab.ipynb).
+
+
+## Section 9 implementation note
+
+The first local-frame package now connects geodetic longitude/latitude/ellipsoidal height to ECEF XYZ and local East-North-Up coordinates, including the inverse ENU-to-ECEF rotation. It reproduces the published EPSG:9836 example, has tests, an intern walkthrough, an exercise and a visual lab. Geoid/vertical-datum conversion, dynamic reference frames and epoch propagation remain outside scope. See the [lesson](../algorithms/geodesy/ecef-enu.md) and [package](../implementations/python/ecef-enu/README.md).
