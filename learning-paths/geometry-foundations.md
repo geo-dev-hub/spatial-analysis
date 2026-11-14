@@ -124,3 +124,7 @@ A simple polygon can be divided into triangles by repeatedly removing an ear. Re
 ## Partition into convex pieces
 
 After triangulating a simple polygon, ask whether adjacent triangles can be merged without introducing a reflex corner. The [convex decomposition lesson](../algorithms/geometry/convex-decomposition.md) compares this approach with optimal dynamic programming and tolerance-based approximate decomposition. Complete the [convex decomposition exercise](../exercises/convex-decomposition.md) before attempting the Hertel–Mehlhorn merge implementation.
+
+## Combine shapes with Minkowski sums
+
+The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects convex polygon edge merging with non-convex decomposition and convolution. It also shows how a reflected robot footprint turns collision checking into a configuration-space obstacle. Work through the [Minkowski sum exercise](../exercises/minkowski-sum.md) and compare the identities against a geometry library.
