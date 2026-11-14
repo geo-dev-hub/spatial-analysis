@@ -77,6 +77,12 @@ def _clean_ring(vertices: Iterable[Sequence[float | int]]) -> list[Point]:
 def _validate_simple(ring: Sequence[Point]) -> None:
     n = len(ring)
     for i in range(n):
+        previous, current, following = ring[i - 1], ring[i], ring[(i + 1) % n]
+        if orient(previous, current, following) == 0:
+            u = (previous[0] - current[0], previous[1] - current[1])
+            v = (following[0] - current[0], following[1] - current[1])
+            if u[0] * v[0] + u[1] * v[1] >= 0:
+                raise ValueError("Input ring contains overlapping adjacent edges.")
         a, b = ring[i], ring[(i + 1) % n]
         for j in range(i + 1, n):
             # Adjacent boundary edges share their common endpoint by definition.
