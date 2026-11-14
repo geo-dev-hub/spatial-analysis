@@ -203,10 +203,10 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Carbon accounting | REDD+ MRV | standard / workflow | Must identify normative framework and measurement components | Research required |
 | Carbon accounting | Soil carbon mapping | model / workflow | No verified implementation | Research required |
 | Carbon accounting | Additionality and leakage analysis | causal / accounting method | No verified implementation | Research required |
-| Methane detection | Matched-filter plume detection | algorithm | No implementation verified | Open |
+| Methane detection | Matched-filter plume detection | algorithm | `implementations/python/methane-emissions/` Gaussian template bank, normalized correlation score, amplitude estimate, synthetic injection tests and lab | Implemented / tested candidate; correlated-noise and operational retrieval validation pending |
 | Methane detection | Deep plume segmentation | model / workflow | External model families and data needed | Research required |
-| Methane quantification | Integrated mass enhancement (IME) | estimator / method | No verified implementation | Open |
-| Methane quantification | Cross-sectional flux | estimator / method | No verified implementation | Open |
+| Methane quantification | Integrated mass enhancement (IME) | estimator / method | `ime_emission_rate` implements Q = IME × wind speed / characteristic length with unit-contract tests | Implemented / tested arithmetic baseline; physical input/retrieval validation pending |
+| Methane quantification | Cross-sectional flux | estimator / method | `cross_sectional_flux` integrates concentration × signed normal wind × segment width; tests include reversed flow | Implemented / tested numerical baseline; sampling and uncertainty review pending |
 | Methane quantification | Gaussian plume inversion | inverse model | No verified implementation | Open |
 | Maritime monitoring | Vessel behaviour classification | model / workflow | No verified implementation | Research required |
 | Maritime monitoring | AIS gap detection | algorithm / data-quality method | No implementation verified | Open |
