@@ -69,5 +69,14 @@ def test_nicholl_lee_nicholl_randomized_against_liang_barsky():
 
 def test_nicholl_lee_nicholl_handles_vertical_and_horizontal_segments():
     r=(0,0,10,10)
-    assert nicholl_lee_nicholl((5,-2),(5,12),r)==pytest.approx(((5,0),(5,10)))
-    assert nicholl_lee_nicholl((-2,5),(12,5),r)==pytest.approx(((0,5),(10,5)))
+    for got, expected in [
+        (nicholl_lee_nicholl((5,-2),(5,12),r), ((5,0),(5,10))),
+        (nicholl_lee_nicholl((-2,5),(12,5),r), ((0,5),(10,5))),
+    ]:
+        assert got[0] == pytest.approx(expected[0])
+        assert got[1] == pytest.approx(expected[1])
+
+def test_nicholl_lee_nicholl_boundary_start_outward_is_single_point():
+    r=(0,0,10,10)
+    assert nicholl_lee_nicholl((10,5),(12,5),r)==((10.0,5.0),(10.0,5.0))
+    assert nicholl_lee_nicholl((5,10),(5,12),r)==((5.0,10.0),(5.0,10.0))

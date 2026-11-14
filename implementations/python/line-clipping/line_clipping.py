@@ -213,6 +213,16 @@ def nicholl_lee_nicholl(start, end, rect):
     p0, p1 = _pt(start), _pt(end)
     r = _rect(rect)
     c0, c1 = _rect_area_code(p0, r), _rect_area_code(p1, r)
+    xmin, ymin, xmax, ymax = r
+    # A segment that starts on a boundary and immediately leaves the
+    # rectangle has only the start point visible.
+    if c0 == 0 and (
+        (p0[0] == xmin and p1[0] < xmin) or
+        (p0[0] == xmax and p1[0] > xmax) or
+        (p0[1] == ymin and p1[1] < ymin) or
+        (p0[1] == ymax and p1[1] > ymax)
+    ):
+        return p0, p0
     if (c0 | c1) == 0:
         return p0, p1
     if (c0 & c1) != 0:
