@@ -8,6 +8,8 @@ A clinic, service desk, charging station or transit counter may be close enough 
 
 The M/M/c model is a deliberately idealized starting point for one facility with c identical parallel servers and one shared first-come, first-served queue.
 
+![M/M/c queue structure: arrivals, one FCFS queue and parallel servers](../../assets/mmc-queue-structure.svg)
+
 ## Model assumptions
 
 - Arrivals follow a stationary Poisson process with rate \(\lambda\).
