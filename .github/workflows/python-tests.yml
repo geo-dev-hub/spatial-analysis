@@ -3,7 +3,7 @@ name: Python examples
 # Keep the package matrix and explicit notebook execution list in sync with the public learning catalogue.
 
 concurrency:
-  group: spatial-analysis-ci-${{ github.ref }}
+  group: spatial-analysis-ci-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: true
 
 on:

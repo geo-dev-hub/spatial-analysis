@@ -216,10 +216,10 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Privacy | Synthetic spatial microdata generation | model / workflow | No verified implementation | Research required |
 | Privacy | Spatial k-anonymity | privacy method | No verified implementation | Open |
 | Privacy | Differential privacy for spatial aggregates | algorithm / privacy mechanism | No verified implementation | Open |
-| Segregation / diversity | Reardon–Firebaugh multigroup indices | statistic | No verified implementation | Open |
-| Segregation / diversity | Spatial exposure indices | statistic / measure | No verified implementation | Open |
-| Segregation / diversity | Shannon diversity | statistic | No verified implementation in Section 10 context | Partial |
-| Segregation / diversity | Simpson diversity | statistic | No verified implementation in Section 10 context | Partial |
+| Segregation / diversity | Reardon–Firebaugh multigroup entropy index implemented with tests and lab | Implemented / tested candidate; source-entry review pending |
+| Segregation / diversity | Areal-unit group exposure matrix and isolation diagonal implemented; distance-weighted exposure not included | Implemented / tested candidate; spatial interaction review pending |
+| Segregation / diversity | Shannon entropy implementation with zero-category handling and tests | Implemented / tested candidate |
+| Segregation / diversity | Simpson concentration implementation with tests | Implemented / tested candidate |
 
 This is the explicit remaining Section 10 backlog, not a claim that the listed software, models, metrics and workflows should all be cloned. Their correct deliverable may be a validated integration, derivation, metric implementation or research dossier according to the record-type and completion standards.
 

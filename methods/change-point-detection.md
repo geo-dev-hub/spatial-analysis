@@ -155,7 +155,7 @@ Evaluate more than exact-date accuracy. Report detection probability, false alar
 
 ## Scope
 
-This guide compares method families and states their modelling assumptions. It does not claim to implement CUSUM, binary segmentation, PELT, BOCPD or BEAST. A practical package should begin with one explicitly chosen cost model, simulated known-change tests, missing-data rules and uncertainty reporting before scaling to spatial image collections.
+This guide compares method families and states their modelling assumptions. The companion package now implements CUSUM, binary segmentation, PELT mean-shift and a conjugate-Gaussian BOCPD baseline; BEAST remains research-only in this repository. A practical package should begin with one explicitly chosen cost model, simulated known-change tests, missing-data rules and uncertainty reporting before scaling to spatial image collections.
 
 
 ## Reproducible mean-shift implementations

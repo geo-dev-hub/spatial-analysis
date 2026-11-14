@@ -15,3 +15,10 @@ The package also includes generic UCB1 for independent stationary reward arms. T
 
 
 The package also provides a one-round spatially constrained uncertainty sampler for map validation. It greedily ranks candidate sites by uncertainty (or uncertainty per unit cost) while enforcing a minimum distance between selected sites. This is a batch selection heuristic, not a complete active-learning loop or a design-based accuracy estimator.
+
+
+Learning labs:
+- [Adaptive cluster sampling](../../../notebooks/adaptive-cluster-sampling-lab.ipynb)
+- [GP-UCB spatial survey selection](../../../notebooks/gp-ucb-spatial-survey-lab.ipynb)
+- [UCB1 survey bandit](../../../notebooks/ucb1-survey-bandit-lab.ipynb)
+- [Spatial active learning](../../../notebooks/spatial-active-learning-lab.ipynb)

@@ -124,7 +124,7 @@ The companion Python package now evaluates polynomial B-splines and rational NUR
 - [Intern walkthrough](../implementations/python/curves-smoothing/implementation-walkthrough.md)
 - [Spline lab notebook](../notebooks/bspline-nurbs-lab.ipynb)
 
-This is evaluation, not curve fitting. Schneider's cubic Bezier fitting and Kalman/RTS state estimation remain separate open tasks.
+This is evaluation, not curve fitting. Schneider's recursive cubic Bezier fitting is now implemented in a separate module; Kalman/RTS state estimation is a distinct model family described below.
 
 
 ## Reproducible Kalman filtering and RTS smoothing
