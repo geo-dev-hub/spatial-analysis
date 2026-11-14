@@ -46,3 +46,34 @@ def triangulation_grid(points,values,x_coordinates,y_coordinates,fill_value=np.n
         weights=np.column_stack((first,1-first.sum(axis=1)))
         out[inside]=np.einsum("ni,ni->n",v[tri.simplices[s]],weights)
     return out.reshape(shape)
+
+
+def thin_plate_spline_grid(points, values, x_coordinates, y_coordinates, smoothing=0.0):
+    """Grid scattered data with a 2D thin-plate-spline radial basis function.
+
+    The kernel r**2 * log(r) with an affine polynomial tail gives the
+    minimum-bending-energy thin-plate spline interpolant when smoothing=0.
+    Positive smoothing trades exact sample fit for a smoother least-squares
+    surface. This is a thin-plate-spline minimum-curvature-style method; it
+    should not be confused with the classic Briggs iterative gridding scheme.
+    """
+    from scipy.interpolate import RBFInterpolator
+
+    p, v = _samples(points, values)
+    if len(p) < 3:
+        raise ValueError("thin-plate spline needs at least three non-collinear samples")
+    design = np.column_stack((np.ones(len(p)), p))
+    if np.linalg.matrix_rank(design) < 3:
+        raise ValueError("thin-plate spline samples must span a non-degenerate 2D domain")
+    smoothing = float(smoothing)
+    if not np.isfinite(smoothing) or smoothing < 0:
+        raise ValueError("smoothing must be finite and non-negative")
+    q, shape = _grid(x_coordinates, y_coordinates)
+    try:
+        interpolator = RBFInterpolator(
+            p, v, kernel="thin_plate_spline", degree=1, smoothing=smoothing
+        )
+        result = interpolator(q)
+    except (ValueError, np.linalg.LinAlgError) as exc:
+        raise ValueError("thin-plate spline system could not be solved for these samples") from exc
+    return np.asarray(result, dtype=float).reshape(shape)
