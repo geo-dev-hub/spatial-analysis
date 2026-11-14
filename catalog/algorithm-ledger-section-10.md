@@ -87,7 +87,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 | Source family | Child method | Verified repository treatment | Status |
 |---|---|---|---|
-| Spatial validation | NNDM | Research discussion distinguishes it from the implemented baselines; original leave-one-out algorithm remains unimplemented | Research / lesson only; kNNDM is separate |
+| Spatial validation | NNDM | `implementations/python/nndm/` greedy prediction-distance-matching LOO fold generator, tests and walkthrough; projected Euclidean teaching scope | Implemented candidate; reference-equivalence, geographic distances, scale/performance and full test execution remain open |
 | Spatial validation | kNNDM | `implementations/python/knndm/` bounded KMeans/Euclidean candidate with tests and walkthrough; not an exact CAST port | Implemented candidate; reference-equivalence, full tests and geographic-distance variants remain open |
 | Spatial validation | Buffered leave-one-out | One-test-point-per-fold implementation with exclusion tests added | Implemented / tested candidate; distance-design review pending |
 | Spatial validation | Spatial k-fold by clustering | Deterministic farthest-first k-means grouping with whole-cluster folds and tests added | Implemented / tested candidate; geographic grouping review pending |
@@ -261,7 +261,7 @@ Schneider fitting update: a piecewise-cubic fitter is now added with chord-lengt
 Shannon entropy, Simpson concentration, the Reardon–Firebaugh multigroup entropy index and an areal-unit group exposure matrix are now implemented with tests, derivation, walkthrough and synthetic notebook. The exposure statistic is not distance-weighted; spatially explicit exposure remains a separate task.
 
 
-Spatial validation update: buffered leave-one-out and deterministic cluster-based k-fold splitters are now executable in the existing spatial-cross-validation package. Neither is NNDM/kNNDM; distance-matching methods remain open.
+Spatial validation update: buffered leave-one-out and deterministic cluster-based k-fold splitters remain in the spatial-cross-validation package. Separate bounded NNDM LOO and kNNDM candidates now exist with tests and walkthroughs; exact reference equivalence and geographic-distance variants remain open.
 
 
 Adaptive sampling update: adaptive cluster-sample network expansion is now implemented and tested. The realised sample is not a population estimator; inclusion probabilities and a valid design-based estimator remain separate open work.
