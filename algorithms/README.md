@@ -133,3 +133,8 @@ Records may have different evidence and implementation status. Check the status 
 - [Convex decomposition implementation](../implementations/python/convex-decomposition/README.md) — a tested greedy triangulate-and-merge teaching baseline.
 
 - [Delaunay-filtered proximity graphs](../implementations/python/proximity-graphs/README.md) — compare sparse candidate filtering with all-pairs reference methods.
+
+
+### Geodesy
+
+- [Geodetic, ECEF and local ENU coordinates](geodesy/ecef-enu.md) — move between ellipsoidal longitude/latitude/height, Earth-centred Cartesian coordinates and a local East-North-Up frame.
