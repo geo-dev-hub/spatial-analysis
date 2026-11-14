@@ -30,3 +30,8 @@ Raw spectral retrieval, cloud screening, background estimation, wind retrieval, 
 ## 5. Hysteresis segmentation
 
 Let `I_s` be the optionally smoothed enhancement field. Form a low-threshold mask `L = I_s ≥ τ_low` and a high-threshold seed mask `H = I_s ≥ τ_high`, with `τ_high ≥ τ_low`. Label connected components of `L`; retain component C exactly when `C ∩ H` is non-empty and its area meets the minimum-area rule. This is connected-component hysteresis segmentation. It reduces isolated weak detections but remains sensitive to thresholds, smoothing, connectivity and structured background. It is not a learned segmentation model.
+
+
+## 6. Robust local background estimation
+
+For each pixel, estimate a local median background `b(x)` over an odd square window. Compute residual `r(x)=I(x)-b(x)`, then estimate local robust noise scale as `s(x)=1.4826 median(|r|)` in the same window. The standardized enhancement is `r(x)/max(s(x), s_min)`, where the positive scale floor `s_min` avoids division by zero. The window-scale assumption is critical: broad plume structures may be absorbed into the median background, while small windows can treat plume pixels as anomalies.
