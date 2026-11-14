@@ -92,7 +92,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Spatial validation | Buffered leave-one-out | One-test-point-per-fold implementation with exclusion tests added | Implemented / tested candidate; distance-design review pending |
 | Spatial validation | Spatial k-fold by clustering | Deterministic farthest-first k-means grouping with whole-cluster folds and tests added | Implemented / tested candidate; geographic grouping review pending |
 | Spatial validation | blockCV | External R package / method reference, not a Python algorithm to clone | Research / lesson only |
-| Spatial validation | Spatial + temporal leave-out | Guide-level discussion; no matching implementation verified | Research / lesson only |
+| Spatial validation | Spatial + temporal leave-out (strict LLTO) | `implementations/python/spatiotemporal-validation/` generates observed location/time test folds, excludes the held-out location and time from training through an explicit buffer set, and includes tests, walkthrough and lab notebook | Implemented / tested candidate; deployment-specific grouping and reference review pending |
 | Adaptive sampling | Bayesian optimisation on spatial fields | GP-UCB candidate-site selection with stationary RBF GP, tests, walkthrough and notebook added | Implemented / tested candidate; hyperparameter and spatial-model review pending |
 | Adaptive sampling | Multi-armed bandits for survey design | Generic UCB1 simulator and tests added; independent stationary arms only | Implemented / tested candidate; spatially correlated reward modelling remains open |
 | Adaptive sampling | Adaptive cluster sampling | Network expansion from initial sample, tests, walkthrough and notebook added; estimator/inclusion probabilities remain separate | Implemented / tested candidate; design-based estimator review pending |
@@ -274,3 +274,9 @@ Bandit update: generic UCB1 selection and a stationary Gaussian-arm simulator ar
 
 
 Active-learning update: a greedy spatially constrained uncertainty sampler is implemented for one-round candidate selection. It is not a full iterative active-learning loop and does not provide design-based inclusion probabilities.
+
+
+## 14 November 2026 — spatiotemporal validation and privacy-accounting refinements
+
+- Strict leave-location-and-time-out (LLTO) now has a tested fold generator, explicit train/test/buffer indices, intern walkthrough and visual notebook. It evaluates joint transfer to unseen location/time combinations; it is not NNDM, kNNDM, rolling-origin forecasting or a distance-buffer design.
+- The sequential privacy accountant now normalizes release names before duplicate detection, preventing whitespace variants from reserving the same named release twice. A regression test covers the collision.
