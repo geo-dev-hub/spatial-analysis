@@ -303,3 +303,11 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 
 - Full-head run `43563534022` passed all 81 jobs after adding row-level links for existing canonical lessons in Sections 2–6. These links support a conservative “Partial” status, not full source-entry verification.
 - The next pass extends those direct links to the existing records in Sections 7–10 and 20–22 and distinguishes a partially checked bibliography from a linked canonical lesson.
+
+## Source-index linkage pass: Sections 10, 21 and 22 — 14 November 2026
+
+- Linked the Section 10 line-simplification family to the existing Douglas–Peucker / Visvalingam–Whyatt lesson. The row remains partial because Reumann–Witkam, Lang, Opheim and Zhao–Saalfeld are not covered by that lesson.
+- Linked the Section 21 precision-model family to the existing precision-model lesson. The row remains partial: the source group also names simulation of simplicity and implementation-specific behaviour not established by that record.
+- Linked the Section 22 space-time covariance family to the existing nonseparable space-time covariance lesson and added it to the section's canonical-record summary. The lesson implements one Euclidean-space-by-linear-time Gneiting-class construction; Cressie–Huang, product-sum, metric and non-Euclidean variants remain outside that implementation.
+- Existing partial links in Sections 7–9 and 20 were reviewed and retained. A linked canonical record is not evidence that every member of its grouped source row has been verified.
+- The prior full validation run 43577080531 passed on commit 0327318db91c31d190169fec5111644a18f5ad3b. The catalogue edits above are later commits and require their own full-head validation.
