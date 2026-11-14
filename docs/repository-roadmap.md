@@ -165,7 +165,6 @@ We will keep working through those gaps before designing the membership tiers, a
 - [x] Add set covering, capacitated location and distance-decay accessibility as separate, explicitly scoped models.
 - [x] Add equity-aware accessibility diagnostics and group-constrained maximal covering with explicit group floors, separate population/objective weights and documented limitations.
 - [x] Add deterministic backup coverage (r-covering) and a separate M/M/c queueing model, each with tests, walkthroughs, exercises and notebooks.
-- [ ] Extend location science with stochastic/robust capacity, adjusted MEXCLP variants and hypercube queueing.
 
 
 - [x] Integrate the standalone inverse-distance-weighting lesson, package, SVG explanation, learning path and notebook from the base branch; add the package and notebook to CI.
