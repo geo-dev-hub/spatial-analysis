@@ -80,6 +80,8 @@ The companion package provides horizontal derivatives, the radial-wavenumber ver
 - [Tests](../implementations/python/potential-field/test_spectral_derivatives.py)
 - [Walkthrough](../implementations/python/potential-field/implementation-walkthrough.md)
 - [Synthetic grid lab](../notebooks/potential-field-derivatives-lab.ipynb)
+- [Upward-continuation lab](../notebooks/potential-field-upward-continuation-lab.ipynb)
+- [Euler deconvolution synthetic-recovery lab](../notebooks/euler-deconvolution-lab.ipynb)
 
 ## References
 
