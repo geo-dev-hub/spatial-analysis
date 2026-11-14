@@ -11,7 +11,7 @@ NumPy teaching implementations for regular, uniformly spaced 2D grids:
 
 The grid is assumed periodic by the FFT. Edge discontinuities cause spectral ringing; pad/taper and inspect boundary effects for real surveys. Inputs must be finite, regular grids with positive dx and dy. The vertical derivative follows the common potential-field spectral convention; it is not a general derivative in an arbitrary z coordinate.
 
-Run python -m pip install -r requirements.txt and python -m pytest -q. Both continuation operators state their height and periodic-boundary assumptions. Downward continuation is an ill-posed inverse regularised by a positive Tikhonov parameter. A bounded single-thin-dike Werner deconvolution baseline is now included; thick-interface transforms, polynomial interference, multi-source clustering, nonlinear refinement and potential-field matched filtering remain open. Euler estimates depend strongly on the supplied structural index and window quality; they are not unique geological interpretations.
+Run python -m pip install -r requirements.txt and python -m pytest -q. Both continuation operators state their height and periodic-boundary assumptions. Downward continuation is an ill-posed inverse regularised by a positive Tikhonov parameter. A bounded single-thin-dike Werner deconvolution baseline is now included; thick-interface transforms, polynomial interference, multi-source clustering, nonlinear refinement and a supplied-model equivalent-layer matched-bandpass decomposition is now included; automatic radial-spectrum fitting and azimuthal filters remain open. Euler estimates depend strongly on the supplied structural index and window quality; they are not unique geological interpretations.
 
 
 ## Learning notebooks
@@ -21,6 +21,8 @@ Run python -m pip install -r requirements.txt and python -m pytest -q. Both cont
 - [Euler deconvolution synthetic recovery](../../../notebooks/euler-deconvolution-lab.ipynb)
 - [Werner thin-dike deconvolution](../../../notebooks/werner-deconvolution-lab.ipynb)
 - [Werner deconvolution walkthrough](werner-deconvolution-walkthrough.md)
+- [Matched-bandpass decomposition](matched-filtering-README.md), tests and walkthrough
+- [Matched-filtering synthetic lab](../../../notebooks/potential-field-matched-filtering-lab.ipynb)
 
 
 - [Regularized downward-continuation lab](../../../notebooks/potential-field-downward-continuation-lab.ipynb)
