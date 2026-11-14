@@ -76,3 +76,7 @@ The [interpolation lesson](../../algorithms/geostatistics/interpolation.md) comp
 4. Distinguish space-time models from methods that merely display or aggregate data in a time cube.
 5. Treat named products and workflows (such as PRISM, Daymet and SoilGrids-style stacking) differently from algorithms.
 6. Use reproducible synthetic surfaces and known sampling designs to demonstrate uncertainty and interpolation behaviour.
+
+## Bibliographic check on the geostatistics foundation
+
+Matheron (1963), “Principles of geostatistics,” *Economic Geology*, 58(8), 1246–1266, [10.2113/gsecongeo.58.8.1246](https://doi.org/10.2113/gsecongeo.58.8.1246), was checked against the publisher and DOI records and is now cited in the interpolation lesson. This confirms the selected foundational citation only; it does not verify the full kriging family or all Section 3 source entries.

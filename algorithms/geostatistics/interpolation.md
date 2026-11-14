@@ -102,9 +102,10 @@ The [Python implementation](../../implementations/python/geostatistics/README.md
 
 ## References
 
+- Matheron, G. (1963), “Principles of geostatistics,” *Economic Geology*, 58(8), 1246–1266. https://doi.org/10.2113/gsecongeo.58.8.1246.
 - Cressie, N. (1993), *Statistics for Spatial Data*, revised edition, Wiley.
 - Chilès, J.-P. and Delfiner, P. (2012), *Geostatistics: Modeling Spatial Uncertainty*, 2nd ed., Wiley.
 - [PyKrige documentation](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/).
 - [GSTools documentation](https://gmd.copernicus.org/articles/15/3161/2022/).
 
-**Scope:** a first audited interpolation lesson and small teaching implementation, not a complete geostatistics chapter.
+**Scope:** a scoped introductory interpolation lesson and small teaching implementation, not a complete geostatistics chapter.
