@@ -69,3 +69,52 @@ def test_positive_infinity_represents_an_unreachable_pair():
 def test_negative_infinity_is_rejected():
     with pytest.raises(ValueError, match="impedance"):
         two_step_fca([[-float("inf")]], [1], [1], max_cost=2)
+
+
+
+def test_distance_decay_2sfca_weights_both_steps():
+    from two_step_fca import two_step_fca_distance_decay
+
+    ratios, accessibility = two_step_fca_distance_decay(
+        [[5, 15], [25, 5]],
+        [10, 20],
+        [100, 100],
+        band_upper_bounds=[10, 20],
+        band_weights=[1.0, 0.5],
+    )
+    assert ratios == pytest.approx([0.1, 20 / 150])
+    assert accessibility == pytest.approx([1 / 6, 2 / 15])
+
+
+def test_distance_decay_2sfca_uses_inclusive_band_edges_and_zero_outside():
+    from two_step_fca import two_step_fca_distance_decay
+
+    ratios, accessibility = two_step_fca_distance_decay(
+        [[10, 20, 21]], [10, 20, 30], [100],
+        band_upper_bounds=[10, 20], band_weights=[1.0, 0.25],
+    )
+    assert ratios == pytest.approx([0.1, 0.8, 0.0])
+    assert accessibility == pytest.approx([0.3])
+
+
+@pytest.mark.parametrize(
+    "bounds, weights",
+    [
+        ([], []),
+        ([10, 10], [1.0, 0.5]),
+        ([20, 10], [1.0, 0.5]),
+        ([10, float("inf")], [1.0, 0.5]),
+        ([10, 20], [1.0]),
+        ([10, 20], [0.5, 1.0]),
+        ([10, 20], [1.0, -0.1]),
+    ],
+)
+def test_distance_decay_2sfca_rejects_invalid_bands(bounds, weights):
+    from two_step_fca import two_step_fca_distance_decay
+
+    with pytest.raises(ValueError):
+        two_step_fca_distance_decay(
+            [[1]], [1], [10],
+            band_upper_bounds=bounds,
+            band_weights=weights,
+        )
