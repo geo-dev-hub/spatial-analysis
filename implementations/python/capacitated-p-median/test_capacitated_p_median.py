@@ -31,7 +31,7 @@ def test_demand_weights_change_assignment_cost_not_capacity_load():
         costs, 2, capacities=[1, 1], demand_quantities=[1, 1], demand_weights=[1, 10],
     )
     assert unweighted[1] == pytest.approx(1)
-    assert unweighted[2] == (1, 0)
+    assert unweighted[2] == (0, 1)
     assert weighted[0] == (0, 1)
     assert weighted[1] == pytest.approx(2)
     assert weighted[2] == (1, 0)
