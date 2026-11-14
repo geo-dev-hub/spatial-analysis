@@ -29,3 +29,8 @@ With C in kg/m^3, u in m/s and ds in m, Q is kg/s. Normal wind is signed, so rev
 Synthetic tests check matched-filter localization and amplitude recovery, template selection, invalid inputs, dimensional IME arithmetic and signed cross-sectional integration. These tests validate the code contract, not the accuracy of a satellite emissions product.
 
 Run `python -m pip install -r requirements.txt` and `python -m pytest -q`.
+
+
+## Gaussian column-plume inversion
+
+A fixed-geometry, vertically integrated Gaussian model now estimates a non-negative emission rate and constant column background from a retrieved enhancement raster. The source location, wind aligned with the x-axis, wind speed, initial lateral spread and dispersion-growth coefficient are supplied inputs. It does not localise a source or retrieve atmospheric variables. See the [algorithm walkthrough](gaussian-plume-inversion-walkthrough.md), [implementation](gaussian_plume_inversion.py), [tests](test_gaussian_plume_inversion.py) and [synthetic inversion lab](../../../notebooks/gaussian-plume-inversion-lab.ipynb). Synthetic recovery is not operational validation.
