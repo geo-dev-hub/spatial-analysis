@@ -57,7 +57,7 @@ Outranking relations may be incomplete or non-transitive. A method can leave alt
 
 ## Implementation status
 
-The repository now includes a narrowly scoped [ELECTRE I-style outranking relation implementation](../implementations/python/electre-i/README.md), with tests, an intern walkthrough, an exercise and a visual lab. It calculates crisp weighted concordance, range-normalised discordance and the resulting pairwise relation. It does **not** extract the ELECTRE I kernel/choice set, produce a complete ranking, or implement ELECTRE III/TRI. The range-normalised discordance index is an explicit teaching convention; thresholds and assumptions must be documented. Do not mistake this relation-building component for a complete ELECTRE decision procedure.
+The repository includes a narrowly scoped [ELECTRE I-style relation implementation](../implementations/python/electre-i/README.md) and a companion exact small-instance kernel enumerator. The relation builder calculates crisp weighted concordance, range-normalised discordance and the pairwise relation. The kernel enumerator checks internal and external stability and reports all kernels, multiple kernels or no kernel. Its exhaustive search is exponential and capped at 20 alternatives by default. The range-normalised discordance index is an explicit teaching convention, not a claim to reproduce every classical ELECTRE I veto-threshold formulation. The two modules together provide a transparent small-choice-set teaching workflow; they do not implement ELECTRE III/TRI, cycle reduction or a complete ranking. Thresholds, relation conventions and assumptions must be documented.
 
 ## References
 
@@ -66,4 +66,4 @@ The repository now includes a narrowly scoped [ELECTRE I-style outranking relati
 - Govindan, K. & Jepsen, M. B. (2016). ELECTRE: A comprehensive literature review on methodologies and applications. European Journal of Operational Research, 250(1), 1–29. https://doi.org/10.1016/j.ejor.2015.07.019
 - UK Department for Communities and Local Government (2009). *Multi-criteria analysis: a manual*, Section 6.3, ELECTRE I. https://assets.publishing.service.gov.uk/media/5a790545e5274a2acd18b975/1132618.pdf
 
-This is a method-family overview. Choose and document a specific ELECTRE variant before applying it.
+This is a method-family overview. Choose and document a specific ELECTRE variant before applying it. For the graph-kernel definition and its cycle caveats, see the LAMSADE survey of ELECTRE I (https://www.lamsade.dauphine.fr/CahiersLAMSADE/CahiersLamsade269.pdf) and the review by Figueira et al. (2024), https://doi.org/10.1016/j.ejor.2024.07.038.
