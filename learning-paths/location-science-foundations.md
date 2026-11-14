@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** Six distinct facility-location and accessibility models now have scoped lessons; the wider optimisation and mobility path is still being developed.
+**Status:** Seven distinct facility-location and accessibility models now have scoped lessons, alongside a distributional equity diagnostics lesson; the wider optimisation and mobility path is still being developed.
 
 ## The question
 
@@ -38,7 +38,11 @@ Read [Location set covering](../algorithms/optimization/set-covering.md) and run
 
 Read [Two-step floating catchment area](../algorithms/optimization/two-step-fca.md) and run the [2SFCA notebook](../notebooks/two-step-fca-accessibility-lab.ipynb). It compares provider supply with population demand in a travel catchment, then calculates an accessibility score for each population location. The notebook compares the binary baseline with a separately named E2SFCA-style distance-decay extension, applying analyst-supplied travel-time-band weights in both steps. Change the band edges and weights and inspect how provider ratios and population scores respond.
 
-### 6. Connect location to transport
+### 6. Inspect who receives accessibility
+
+Read [Accessibility equity diagnostics](../algorithms/optimization/accessibility-equity.md) and run the [equity lab](../notebooks/accessibility-equity-lab.ipynb). Compare place-weighted and population-weighted distributions, inspect the Lorenz curve and Gini, report lower-tail quantiles, and calculate the share below an explicitly chosen minimum standard. Compare caller-defined groups without treating their averages as causal explanations. The threshold and group definitions are policy choices that must be justified.
+
+### 7. Connect location to transport
 
 A real cost matrix may require a directed road or transit network, mode restrictions, time-dependent travel times and access rules. Straight-line distance is only an initial approximation.
 
@@ -50,6 +54,7 @@ A real cost matrix may require a directed road or transit network, mode restrict
 4. Add a maximum service distance. Which assignments become infeasible?
 5. Identify the remaining equity, land availability, operating and service-quality constraints that a real service plan needs.
 6. Compare binary 2SFCA with a distance-decay catchment. Which assumptions change?
+7. Compare population-weighted and unweighted accessibility distributions. Why can the Gini fall while the mean also falls?
 
 ## What comes next
 
