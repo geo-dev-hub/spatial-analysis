@@ -59,3 +59,32 @@ def dis(first, second, *, preset="medium", finest_scale=0, patch_size=8,
                 "preset":preset,"finest_scale":finest_scale,"patch_size":patch_size,
                 "patch_stride":patch_stride,"gradient_descent_iterations":grad_descent_iterations,
                 "variational_refinement":bool(variational_refinement)}}
+
+
+def tvl1(first, second, *, attachment=15, tightness=0.3, num_warp=5,
+         num_iter=10, tol=0.0001, prefilter=False, dtype=np.float32):
+    """Dense TV-L1 variational flow via scikit-image; u is column, v is row."""
+    from skimage.registration import optical_flow_tvl1
+    a,b=_frames(first,second)
+    if not np.isfinite(attachment) or attachment <= 0:
+        raise ValueError("attachment must be positive")
+    if not np.isfinite(tightness) or tightness <= 0:
+        raise ValueError("tightness must be positive")
+    if not isinstance(num_warp,int) or num_warp < 1:
+        raise ValueError("num_warp must be positive")
+    if not isinstance(num_iter,int) or num_iter < 1:
+        raise ValueError("num_iter must be positive")
+    if not np.isfinite(tol) or tol <= 0:
+        raise ValueError("tol must be positive")
+    first_float=a.astype(dtype)/255.0
+    second_float=b.astype(dtype)/255.0
+    flow=optical_flow_tvl1(first_float,second_float,attachment=float(attachment),
+                           tightness=float(tightness),num_warp=num_warp,
+                           num_iter=num_iter,tol=float(tol),prefilter=bool(prefilter))
+    v,u=flow
+    stacked=np.stack([u,v],axis=-1)
+    return {"u":u,"v":v,"valid":np.isfinite(stacked).all(axis=2),
+            "flow":stacked,"method":"tvl1","parameters":{
+                "attachment":float(attachment),"tightness":float(tightness),
+                "num_warp":num_warp,"num_iter":num_iter,"tol":float(tol),
+                "prefilter":bool(prefilter)}}
