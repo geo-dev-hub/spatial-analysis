@@ -1,5 +1,5 @@
 from __future__ import annotations
-from math import floor, isfinite
+from math import ceil, floor, isfinite
 from typing import Iterable, Sequence
 
 Point = tuple[float, float]
@@ -16,7 +16,7 @@ def _round_cell(v: float) -> int:
 
 def dda_line(start: Sequence[float], end: Sequence[float]) -> list[Cell]:
     x0,y0=_point(start); x1,y1=_point(end); dx,dy=x1-x0,y1-y0
-    steps=int(max(abs(dx),abs(dy)))
+    steps=ceil(max(abs(dx),abs(dy)))
     if steps == 0: return [(_round_cell(x0),_round_cell(y0))]
     sx,sy=dx/steps,dy/steps; x,y=x0,y0; out=[]
     for _ in range(steps+1):
