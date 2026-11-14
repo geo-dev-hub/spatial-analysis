@@ -84,3 +84,6 @@ The Section 6 equity-constrained maximal-covering addition provides an exact tin
 
 
 The Section 6 backup-coverage extension adds an exact small-instance r-covering solver, tests, intern walkthrough, exercise and executable notebook. It reports how many selected candidate facilities lie within the threshold for each demand row. It does not estimate failure probabilities or operational reliability, and shared dependencies must be examined separately.
+
+
+The Section 6 queueing extension adds a dependency-free M/M/c implementation using Erlang-C, tests for the M/M/1 closed form, server sensitivity, Little's law and stability, plus an intern walkthrough, exercise and notebook. It is a stationary FCFS model with Poisson arrivals, exponential service and identical servers; it does not replace travel-time accessibility or model time-varying arrivals.
