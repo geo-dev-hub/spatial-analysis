@@ -79,3 +79,20 @@ def test_hysteresis_thresholds_smoothing_and_connectivity_contract():
         hysteresis_plume_segmentation(image,3,2)
     with pytest.raises(ValueError):
         hysteresis_plume_segmentation(image,1,2,connectivity=6)
+
+
+def test_robust_local_background_removes_smooth_gradient_and_finds_injected_plume():
+    from methane_emissions import robust_local_background
+    yy,xx=np.mgrid[:51,:61]
+    field=0.03*xx+0.01*yy
+    field[20:25,25:36]+=3.0
+    result=robust_local_background(field,window_size=11,scale_floor=0.01)
+    assert result["background"].shape==field.shape
+    assert result["standardized_enhancement"][22,30]>10
+    assert abs(result["enhancement"][5,5])<0.2
+
+
+def test_robust_local_background_validates_window_and_scale_floor():
+    from methane_emissions import robust_local_background
+    with pytest.raises(ValueError): robust_local_background(np.ones((5,5)),window_size=4)
+    with pytest.raises(ValueError): robust_local_background(np.ones((5,5)),scale_floor=0)
