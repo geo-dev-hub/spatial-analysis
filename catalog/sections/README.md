@@ -37,6 +37,8 @@ All 22 original sections now have an item-level intake index. Each index preserv
 
 ## Next pass: verification and canonical records
 
+Use the [source-entry verification protocol](../verification-protocol.md) to apply separate identity, bibliography, technical-claim, implementation and rights statuses. For each entry, preserve evidence and a review date. Do not treat a linked lesson or passing test suite as verification of the whole source entry.
+
 1. Verify names and variants against original papers, standards, official documentation or maintained project sources.
 2. Identify duplicate names, near-duplicates and cross-domain relationships.
 3. Decide which items deserve individual canonical records and which belong together.
