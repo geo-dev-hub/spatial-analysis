@@ -16,6 +16,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Line simplification](geometry/simplification.md) — compare Douglas–Peucker maximum-deviation and Visvalingam–Whyatt effective-area generalisation, with tested baselines.
 - [Polygon coverage simplification](geometry/coverage-simplification.md) — preserve shared boundaries when simplifying an edge-matched polygon coverage.
 - [Precision models and snap rounding](geometry/precision-models.md) — distinguish coordinate precision reduction, fixed-grid overlay and snap-rounding noding.
+- [Snap rounding noder](geometry/snap-rounding.md) — understand hot pixels, exact arrangement vertices and fixed-grid rerouting, with a tested teaching baseline.
 - [Polygon offsetting](geometry/offsetting.md) — distinguish geometric offsets from clipping and compare join, cap and precision behaviour.
 - [Proximity graphs](geometry/proximity-graphs.md) — compare Gabriel, relative-neighbourhood and Euclidean minimum-spanning graphs.
 - [Planar point location](geometry/point-location.md) — understand slab decompositions and randomized trapezoidal maps, with a tested restricted static slab locator.
