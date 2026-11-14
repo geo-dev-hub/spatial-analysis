@@ -1,6 +1,6 @@
 # Location science: choosing where services should go
 
-**Status:** Facility-location, accessibility and equity models now include a deterministic backup-coverage extension. The wider optimisation and mobility path is still being developed.
+**Status:** The path now connects deterministic facility location, accessibility and equity, r-covering redundancy, MEXCLP expected availability and M/M/c queueing. The wider optimisation and mobility path is still being developed.
 
 ## The question
 
