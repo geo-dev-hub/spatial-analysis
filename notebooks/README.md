@@ -4,6 +4,11 @@ Notebooks are used when changing values, inspecting intermediate calculations or
 
 ## Available labs
 
+### Forecast verification
+
+- [Forecast verification lab](forecast-verification-lab.ipynb): work through contingency tables, probability calibration, Brier scores and ROC AUC.
+- [Fractions Skill Score scale lab](forecast-fractions-skill-score-lab.ipynb): compare gridpoint and neighbourhood verification for a displaced spatial event and inspect a scale curve.
+
 ### Geometry
 
 - [Geometry foundations lab](geometry-foundations-lab.ipynb): move a point, adjust a segment and change two rectangles to inspect point location, segment intersection and polygon overlay.
