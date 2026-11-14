@@ -13,7 +13,7 @@ This dashboard counts the source-entry review labels in the 22 item-level sectio
 | Not checked — intake only | 653 | The source wording is preserved, but no independent review is recorded |
 | Fully verified | 0 | No row is currently labelled fully verified across the independent review dimensions |
 
-<text>Note: the 22 indexes also contain implementation inventories and explanatory tables. Those are not source-entry rows and are excluded from these counts.</text>
+Note: the 22 indexes also contain implementation inventories and explanatory tables. Those are not source-entry rows and are excluded from these counts.
 
 ## By section
 
