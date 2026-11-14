@@ -6,6 +6,8 @@ Stable ID: `SA-OPT-BACKUP-COVERAGE` · Draft 0.1 · Location-science extension
 
 A map may show a neighbourhood as served because one facility lies within the chosen travel-time threshold. But what happens if that facility closes temporarily, reaches capacity, loses power or becomes inaccessible? Backup-coverage models ask whether demand has more than one eligible facility nearby.
 
+![Schematic of one demand point with two eligible facilities and another with only one](../../assets/backup-coverage-r-cover.svg)
+
 This lesson introduces a deterministic **r-covering** objective: maximize the demand weight that has at least \(r\) distinct selected facilities within a stated service threshold. This is a restricted all-or-nothing formulation for teaching and small-instance verification. Hogan and ReVelle's original backup-coverage work considers trade-offs between first and backup coverage; this package does not reproduce every objective or variant in that literature.
 
 ## Define the model carefully
