@@ -10,8 +10,8 @@ The source describes these as further methods not listed in sections 1–9. Seve
 
 ## Rasterization, curves and low-level geometry
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Line and polygon rasterization: Bresenham, DDA, Wu's anti-aliased line, scanline polygon fill, supercover lines | Rasterization algorithms | 21 | [Rasterization lesson](../../methods/rasterization.md) compares the algorithms and defines grid/cell contracts; implementations remain future work | Partial — related record exists; source-entry review pending |
 | Line clipping: Cohen-Sutherland, Liang-Barsky, Cyrus-Beck, Nicholl-Lee-Nicholl | Line clipping algorithms | 21 | [Line-clipping lesson](../../methods/line-clipping.md) derives and compares Cohen–Sutherland, Liang–Barsky and Cyrus–Beck; Nicholl–Lee–Nicholl is scoped as further reading; no new implementation | Partial — related record exists; source-entry review pending |
 | Line simplification variants: Reumann-Witkam, Lang, Opheim, Zhao-Saalfeld, [Visvalingam–Whyatt](../../algorithms/geometry/simplification.md) ([selected bibliography check](../selected-verification-notes.md)) | Simplification algorithms / variants | 21 | Partial — related record exists; source-entry review pending |
@@ -21,16 +21,16 @@ The source describes these as further methods not listed in sections 1–9. Seve
 
 ## Time series and change detection
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Change-point detection: CUSUM, PELT, binary segmentation, BEAST, Bayesian online change-point detection | Change-point detection algorithms | 21 | Not checked — intake only |
 | Trend and seasonality: STL, seasonal-trend decomposition, Prophet, Theil-Sen, Pettitt test, ARIMA, Kalman filtering of EO series | Time-series decomposition / tests / forecasting and filtering methods | 21 | Not checked — intake only |
 | Hidden Markov models and Viterbi decoding for state sequences (map matching, land cover trajectories) | Probabilistic sequence models / decoding algorithm | 21 | Not checked — intake only |
 
 ## Forecast verification and nowcasting skill
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Fractions Skill Score, neighborhood verification, SAL (structure, amplitude, location), object-based verification (MODE) | Forecast verification metrics and methods | 21 | Not checked — intake only |
 | ETS, POD, FAR, CSI, Brier skill score, ROC and AUC, CRPS decomposition, rank histograms | Forecast and probabilistic evaluation metrics | 21 | Not checked — intake only |
 | Optical flow for advection: Lucas-Kanade, Farneback, DIS, variational optical flow | Motion estimation algorithms | 21 | Not checked — intake only |
@@ -40,24 +40,24 @@ The source describes these as further methods not listed in sections 1–9. Seve
 A first reproducible point-data baseline is now available: [spatial cross-validation](../../methods/spatial-cross-validation.md), with [tested code and intern walkthrough](../../implementations/python/spatial-cross-validation/README.md). It is not a replacement for NNDM, kNNDM, buffered leave-one-out, environmental blocking or a deployment-specific region/time holdout.
 
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | [Spatial cross-validation](../../methods/spatial-cross-validation.md), NNDM, kNNDM, buffered leave-one-out, spatial k-fold by clustering, blockCV, spatial+temporal leave-out | Spatial and spatiotemporal validation designs | 21 | Partial — related record exists; source-entry review pending |
 | Adaptive and Bayesian sampling: Bayesian optimization on spatial fields, multi-armed bandits for survey design, adaptive cluster sampling, active learning for map validation | Adaptive sampling / active learning / survey design | 22 | Not checked — intake only |
 | Kernel two-sample tests and domain divergence metrics for spatial distribution shift | Distribution-shift tests / domain comparison metrics | 22 | Not checked — intake only |
 
 ## Geophysical gridding and potential field processing
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Minimum curvature gridding, nearest-neighbor and triangulation gridding, kriging versus minimum curvature comparison | Gridding methods / interpolation comparison | 22 | Not checked — intake only |
 | Potential fields: analytic signal, tilt derivative, Euler and Werner deconvolution, matched filtering, continuation, vertical and horizontal derivatives | Potential-field processing / geophysical interpretation methods | 22 | Not checked — intake only |
 | Airborne EM and magnetotelluric inversion, seismic attribute analysis, receiver functions | Geophysical inversion and signal-analysis workflows | 22 | Not checked — intake only |
 
 ## Urban microclimate and energy
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Radiation and thermal comfort: SOLWEIG, UMEP, ENVI-met, mean radiant temperature, UTCI, PET | Microclimate software / thermal comfort measures | 22 | Not checked — intake only |
 | Urban wind and CFD: RANS, LES, lattice Boltzmann for street canyons, pedestrian wind comfort | Computational fluid dynamics methods / urban wind assessment | 22 | Not checked — intake only |
 | Stormwater and drainage: SWMM, 1D-2D coupled urban flood models, low-impact development siting | Drainage and flood models / site-selection methods | 22 | Not checked — intake only |
@@ -65,8 +65,8 @@ A first reproducible point-data baseline is now available: [spatial cross-valida
 
 ## Environmental monitoring and MRV
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Deforestation alerts: GLAD, RADD, forest loss detection from SAR and optical fusion | Monitoring systems / change-detection workflows | 22 | Not checked — intake only |
 | Carbon accounting: forest carbon stock mapping, REDD+ MRV, soil carbon mapping, additionality and leakage analysis | Carbon estimation / monitoring, reporting and verification methods | 22 | Not checked — intake only |
 | Methane and gas emissions: matched-filter plume detection, deep plume segmentation, integrated mass enhancement (IME), cross-sectional flux, Gaussian plume inversion | Plume detection / segmentation / emissions estimation | 22 | Not checked — intake only |
@@ -75,8 +75,8 @@ A first reproducible point-data baseline is now available: [spatial cross-valida
 
 ## Population and social data
 
-| Source entry | Provisional kind | Source page | Verification status |
-|---|---|---:|---|---|---:|---|---|
+| Source entry | Provisional kind | Source page | Canonical material / implementation | Review status |
+|---|---|---:|---|---|
 | Gridded population: top-down dasymetric, bottom-up microcensus, building-based disaggregation, settlement-level estimation | Population estimation / areal disaggregation methods | 22 | Not checked — intake only |
 | Synthetic data for privacy: synthetic microdata, spatial k-anonymity for census, differential privacy for aggregates | Synthetic data generation / privacy methods | 23 | Not checked — intake only |
 | Segregation and diversity: Reardon-Firebaugh multigroup indices, spatial exposure indices, Shannon and Simpson diversity | Segregation and diversity measures | 23 | Not checked — intake only |
