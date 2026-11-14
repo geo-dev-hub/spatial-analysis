@@ -6,6 +6,8 @@ This directory holds those foundational methods separately from individual algor
 
 ## Available foundations
 
+- [Adaptive and Bayesian spatial sampling](adaptive-and-bayesian-spatial-sampling.md) — distinguish design-based adaptive cluster sampling from Bayesian optimisation, active learning and spatial bandit designs.
+
 - [Spatial data formats and delivery](spatial-data-formats.md) — choose raster, array, vector, catalogue and tile formats by workload and access pattern.
 
 - [Affine georeferencing](affine-georeferencing.md) — estimate a six-parameter 2D transformation from ground control points and inspect residuals.
