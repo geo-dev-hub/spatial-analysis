@@ -54,3 +54,6 @@ Kriging remains outside this implementation. A fair kriging comparison needs an 
 - [Tests](../implementations/python/geophysical-gridding/test_geophysical_gridding.py)
 - [Updated walkthrough](../implementations/python/geophysical-gridding/implementation-walkthrough.md)
 - [Synthetic lab](../notebooks/geophysical-gridding-lab.ipynb)
+
+
+The four implemented methods are compared in the [gridding lab](../notebooks/geophysical-gridding-lab.ipynb); see the [implementation walkthrough](../implementations/python/geophysical-gridding/implementation-walkthrough.md).
