@@ -4,7 +4,7 @@
 - **Source pages:** 21–23
 - **Source transcription:** [pages 21–25](../../source-inventory/pages-21-25.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [spatial cross-validation](../../methods/spatial-cross-validation.md) and its tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md), covering grid-block groups and optional buffer exclusion. Other entries remain intake.
 
 The source describes these as further methods not listed in sections 1–9. Several entries are cross-cutting techniques that should connect to earlier topic families rather than be treated as entirely new subjects.
 
@@ -36,6 +36,9 @@ The source describes these as further methods not listed in sections 1–9. Seve
 | Optical flow for advection: Lucas-Kanade, Farneback, DIS, variational optical flow | Motion estimation algorithms | 21 |
 
 ## Spatial cross-validation and sampling
+
+A first reproducible point-data baseline is now available: [spatial cross-validation](../../methods/spatial-cross-validation.md), with [tested code and intern walkthrough](../../implementations/python/spatial-cross-validation/README.md). It is not a replacement for NNDM, kNNDM, buffered leave-one-out, environmental blocking or a deployment-specific region/time holdout.
+
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|

@@ -1,6 +1,6 @@
 # Spatial indexing: find the places worth checking
 
-**Status:** First two lessons available. The path begins with bounding boxes and a packed R-tree, then applies the index to a filter-and-refine spatial join. Dynamic indexes and nearest-neighbour search will be added as their methods are verified.
+**Status:** Four lesson topics are available: a packed R-tree, filter-and-refine spatial joins, point-region quadtrees and k-d tree nearest-neighbour search. Both the k-d tree and point-region quadtree now have Python teaching implementations, brute-force comparison tests and intern walkthroughs. The quadtree also has an executable notebook. These are deliberately scoped 2D teaching implementations, not production indexes.
 
 ## Why an index helps
 
@@ -46,12 +46,19 @@ Keeping those steps separate is the basis of filter-and-refine spatial query pro
 
 You will see how an STRtree narrows the possible geometry pairs, how the exact predicate refines those candidates and why predicate direction and boundary rules matter. The [tested Shapely implementation](../implementations/python/spatial-join/README.md) returns stable pairs of original input indices.
 
+## Compare the structures
+
+The [quadtree lesson](../algorithms/indexing/quadtree.md) introduces recursive spatial subdivision, with a focus on point-region trees and their stopping rules. The [k-d tree lesson](../algorithms/indexing/kd-tree-nearest-neighbour.md) introduces exact nearest-neighbour search by branch-and-bound and explains why coordinate metrics and dimensionality matter. Use the new [spatial index selection guide](../algorithms/indexing/choosing-spatial-index.md) to decide which structure matches your data model, query, update pattern and metric.
+
+Run the [k-d tree teaching implementation](../implementations/python/kd-tree/README.md) and follow its [step-by-step walkthrough](../implementations/python/kd-tree/implementation-walkthrough.md). For the quadtree, run the [Python implementation](../implementations/python/quadtree/README.md), follow its [intern walkthrough](../implementations/python/quadtree/implementation-walkthrough.md) and explore the [quadtree notebook](../notebooks/quadtree-lab.ipynb). Use the [quadtrees and k-d trees exercises](../exercises/spatial-indexing-quadtrees-kdtree.md) to compare both structures with brute-force baselines.
+
 ## What comes next
 
 The next additions to this path will cover:
 - dynamic R-tree variants and update operations;
-- quadtrees, k-d trees and other index structures;
-- nearest-neighbour and range queries;
-- space-filling curves and grid-based indexing.
+- octrees, ball trees, VP-trees and other structures;
+- range, reverse nearest-neighbour and closest-pair queries;
+- space-filling curves and grid systems such as Morton, Hilbert, H3 and S2;
+- spatial skyline, top-k and geofencing queries.
 
-Each index makes different trade-offs. We will compare them only after the query workload, update pattern and data shape are clear.
+Each index makes different trade-offs. We will compare them only after the query workload, update pattern, dimensionality and data shape are clear.

@@ -4,7 +4,7 @@
 - **Source pages:** 12–14
 - **Source transcription:** [pages 11–15](../../source-inventory/pages-11-15.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [ELECTRE outranking](../../methods/electre-outranking.md) — researched method-family overview with a scoped ELECTRE I-style relation builder and exact small-instance kernel enumerator, tests, walkthroughs, exercises and visual labs; [TOPSIS](../../methods/topsis.md) — finite-alternative ranking with a tested vector-normalised NumPy implementation; [Ordered Weighted Averaging](../../methods/ordered-weighted-averaging.md) — researched aggregation lesson with standard and GIS weighted NumPy implementations; [Boolean and fuzzy overlay](../../methods/boolean-and-fuzzy-overlay.md) — researched operator-family lesson with tested NumPy implementations; [Analytic Hierarchy Process](../../methods/analytic-hierarchy-process.md) — researched pairwise-weighting lesson with a tested NumPy priority-vector baseline and consistency diagnostics; [Weighted linear combination](../../methods/weighted-linear-combination.md) — researched decision-rule lesson with a tested Python aggregation baseline and interactive suitability lab; [weights of evidence](../../methods/weights-of-evidence.md) — researched Bayesian evidence-combination lesson with a tested NumPy baseline, intern walkthrough and exercise
 
 The source organises methods by application field. The same statistical, geometric, network and machine-learning methods can appear in several domains. Keep domain context, input data, scale and validation requirements visible rather than treating each application label as a separate algorithm.
 
@@ -115,6 +115,10 @@ The source organises methods by application field. The same statistical, geometr
 |---|---|---:|
 | Spatial transcriptomics (SpatialDE, cell neighborhood analysis), histopathology point patterns, materials grain boundary analysis | Spatial omics / microscopy and materials analysis | 14 |
 | Astronomy: two-point correlation, friends-of-friends, HEALPix cross-matching; microscopy particle tracking and Voronoi analysis | Spatial statistics / graph clustering / spherical indexing / particle tracking | 14 |
+
+## Current reviewed coverage
+
+Weighted linear combination has a canonical method record, tested numerical aggregation implementation and interactive synthetic suitability lab. Weights of evidence has a separate Bayesian method record, tested NumPy baseline, intern walkthrough, worked exercise and visual lab. ELECTRE has a researched family overview and a scoped ELECTRE I-style relation builder plus exact small-instance kernel enumerator, with tests, walkthroughs, exercises and visual labs. It reports multiple or absent kernels rather than applying undocumented cycle reduction; other ELECTRE variants and larger-scale choice procedures remain open. These methods answer different questions: WLC combines preference scores; weights of evidence estimates associations from labelled occurrences under its specialised conditional-independence assumption; ELECTRE constructs pairwise outranking relations. The wider domain entries still require separate verification.
 
 ## Decisions for the next pass
 

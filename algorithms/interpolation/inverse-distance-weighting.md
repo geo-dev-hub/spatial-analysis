@@ -6,7 +6,7 @@
 - **Status:** researched; reference implementation and tests added; independent review pending
 - **Version:** 0.1
 - **Source inventory:** Section 3, page 4 — deterministic interpolation
-- **Related records:** [Spatial weights matrix](../../methods/spatial-weights-matrix.md); ordinary kriging (planned)
+- **Related records:** [Spatial weights matrix](../../methods/spatial-weights-matrix.md); [ordinary kriging and empirical semivariogram](../geostatistics/interpolation.md)
 - **Learning path:** [Interpolation and geostatistics](../../learning-paths/interpolation-and-geostatistics.md)
 
 ## You know a few places. What about the places in between?

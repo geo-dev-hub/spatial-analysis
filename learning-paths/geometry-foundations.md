@@ -75,6 +75,20 @@ You will learn:
 
 **Try it:** follow the [step-by-step implementation walkthrough](../implementations/python/bentley-ottmann/implementation-walkthrough.md), run both implementations and compare them with the all-pairs oracle.
 
+## Continue into polygon geometry
+
+The four foundations above lead into a second set of practical questions: is the boundary valid, how should one polygon be clipped by another, and how do we combine or subtract whole areas?
+
+1. [Check polygon validity](../algorithms/geometry/polygon-validity.md), then inspect the [Shapely validity workflow](../implementations/python/polygon-validity/README.md). Treat repair as an explicit modelling decision.
+2. [Understand polygon clipping](../algorithms/geometry/polygon-clipping.md), then run the [convex Sutherland–Hodgman teaching implementation](../implementations/python/polygon-clipping/README.md). Its deliberate convex-input limit is part of the lesson.
+3. [Study polygon overlay](../algorithms/geometry/overlay-operations.md), run the [four-operation Shapely/GEOS package](../implementations/python/polygon-overlay/README.md), and explore the [visual overlay lab](../notebooks/polygon-overlay-lab.ipynb).
+
+This continuation distinguishes a narrow algorithm implementation (convex clipping) from a library-backed general overlay workflow. It also reinforces a key habit: inspect the geometry type and validity of every result rather than assuming that polygon inputs always produce polygon outputs.
+
+A related construction problem is the [convex hull](../algorithms/geometry/convex-hull.md): find the smallest convex boundary containing a set of points. Run the [Graham scan implementation](../implementations/python/convex-hull/README.md) and explore its [visual lab](../notebooks/convex-hull-lab.ipynb) to see how interior and collinear points are handled.
+
+The [Voronoi and Delaunay lesson](../algorithms/geometry/voronoi-delaunay.md) then connects nearest-site regions to triangulations. Explore both structures in the [visual tessellation lab](../notebooks/voronoi-delaunay-lab.ipynb) and inspect the [SciPy/Qhull implementation](../implementations/python/voronoi-delaunay/README.md).
+
 ## What connects the lessons?
 
 - Point-in-polygon asks where a point sits relative to a boundary.
@@ -93,3 +107,33 @@ The path ends with a useful distinction: knowing how to test one pair is not the
 5. Which assumptions would you need to check before using the teaching implementation on real GIS data?
 
 If you can explain those answers and reproduce the examples, you have a solid first foundation. The next part of the Core GIS collection will extend these ideas into spatial indexes, proximity queries and network analysis.
+
+## Continue into robust geometry and point location
+
+Once you can recognise intersections, two deeper questions follow: how do we make an arrangement reliable on a fixed precision grid, and how can we locate a point quickly in a subdivision with many faces?
+
+- [Snap rounding](../algorithms/geometry/snap-rounding.md) explains hot pixels and why intersections must be found before grid rounding. Run the [visual snap-rounding lab](../notebooks/snap-rounding-noder-lab.ipynb) and inspect the [exact-arithmetic teaching noder](../implementations/python/snap-rounding-noder/README.md).
+- [Planar point location](../algorithms/geometry/point-location.md) compares static slab decomposition with randomized trapezoidal maps. Use the [point-location lab](../notebooks/point-location-lab.ipynb) for the implemented slab model, then complete the [randomized trapezoidal-map exercise](../exercises/randomized-trapezoidal-map.md) to trace the more advanced construction.
+
+These are follow-on topics, not prerequisites for the four-lesson foundation. The snap-rounding package is a transparent teaching baseline; the randomized trapezoidal-map exercise is conceptual and does not claim a complete implementation.
+
+## Triangulate a polygon
+
+A simple polygon can be divided into triangles by repeatedly removing an ear. Read the [ear-clipping lesson](../algorithms/geometry/ear-clipping.md), run the [Python teaching implementation](../implementations/python/ear-clipping/README.md), and explore the [visual triangulation lab](../notebooks/ear-clipping-lab.ipynb). This extension assumes one simple ring; holes and constrained Delaunay refinement are separate topics.
+
+## Partition into convex pieces
+
+After triangulating a simple polygon, ask whether adjacent triangles can be merged without introducing a reflex corner. The [convex decomposition lesson](../algorithms/geometry/convex-decomposition.md) compares this approach with optimal dynamic programming and tolerance-based approximate decomposition. Run the [greedy Python baseline](../implementations/python/convex-decomposition/README.md) and [visual lab](../notebooks/convex-decomposition-lab.ipynb), then complete the [convex decomposition exercise](../exercises/convex-decomposition.md). The code demonstrates triangulate-and-merge but does not claim the optimized Hertel–Mehlhorn guarantee.
+
+## Combine shapes with Minkowski sums
+
+The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects convex polygon edge merging with non-convex decomposition and convolution. It also shows how a reflected robot footprint turns collision checking into a configuration-space obstacle. Run the [convex Python implementation](../implementations/python/minkowski-convex/README.md) and [visual lab](../notebooks/minkowski-convex-lab.ipynb), then work through the [Minkowski sum exercise](../exercises/minkowski-sum.md). The implementation is intentionally limited to convex rings; compare its exact output with a geometry library before exploring non-convex decomposition or convolution.
+
+## Read a shape's internal skeleton
+
+Two different structures can describe the inside of a polygon. The [medial axis](../algorithms/geometry/medial-axis.md) follows points with multiple nearest boundary contacts and encodes maximal inscribed discs. The [straight skeleton](../algorithms/geometry/straight-skeleton.md) follows the vertices of inward-moving parallel wavefronts. Work through the [medial-axis exercise](../exercises/medial-axis.md) and [straight-skeleton exercise](../exercises/straight-skeleton.md) before selecting a construction library.
+
+
+## Build proximity networks
+
+The [proximity-graphs lesson](../algorithms/geometry/proximity-graphs.md) compares Gabriel, relative-neighbourhood, beta-skeleton, Yao and Euclidean MST structures. Run the all-pairs reference methods first, then compare them with the [Delaunay-filtered Gabriel/RNG variants](../implementations/python/proximity-graphs/README.md) and the [visual lab](../notebooks/proximity-graphs-delaunay-lab.ipynb). Pay particular attention to the documented O(n²) bound and cocircular tie limitation: this is an intermediate candidate-reduction method, not the specialised linear-time RNG construction.

@@ -4,7 +4,7 @@
 - **Source pages:** 2–4
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Source-derived records:** [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
+- **Source-derived records:** [Ripley's K and L](../../algorithms/statistics/ripley-k.md) — uncorrected and rectangular-window translation-corrected estimators, conditional-CSR simulation envelopes and a global studentised maximum-deviation test; [Clark–Evans nearest-neighbour index](../../algorithms/statistics/clark-evans.md); [Planar Gaussian KDE](../../algorithms/statistics/point-pattern-kde.md); [DBSCAN](../../algorithms/statistics/dbscan.md); [Global Moran's I](../../algorithms/statistics/global-morans-i.md); [Global Geary's C](../../algorithms/statistics/gearys-c.md); [Local Moran's I](../../algorithms/statistics/local-morans-i.md); [Getis-Ord Gi*](../../algorithms/statistics/getis-ord-gi-star.md)
 - **Supplementary companions:** [Local Geary](../../algorithms/statistics/local-geary.md); [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md)
 
 The source groups together descriptive statistics, inferential procedures, point-process models, clustering methods, regression families, filters, inequality measures and spatial spectral analysis. The [Local Geary](../../algorithms/statistics/local-geary.md) and [Global Getis-Ord G](../../algorithms/statistics/global-getis-ord-g.md) lessons are supplementary companions added during research; neither is a separate entry in the original compendium. These are not all algorithms in the same sense. Keep the original grouping, then decide the right record type during research.
@@ -19,6 +19,10 @@ The source groups together descriptive statistics, inferential procedures, point
 | Inference: permutation and Monte Carlo tests, Bonferroni, FDR and Šidák correction, Dutilleul's modified t-test, spatial and block bootstrap | Inferential procedures / multiple-testing corrections / resampling | 3 |
 | Spatial eigenvector filtering (Moran eigenvectors), Spatial+, restricted spatial regression | Regression approaches / spatial dependence adjustments | 3 |
 
+## First audited clustering lesson
+
+The [DBSCAN lesson](../../algorithms/statistics/dbscan.md) introduces core, border and noise points, the eps/min_samples parameters and the input-order policy for ambiguous border points. A tested O(n²) planar implementation and interactive notebook provide a small-data baseline; HDBSCAN, OPTICS and indexed large-data search remain open.
+
 ## Point pattern analysis
 
 | Source entry | Kind to review | Source page |
@@ -29,6 +33,10 @@ The source groups together descriptive statistics, inferential procedures, point
 | Cluster tests: Besag-Newell, Tango, SaTScan scan statistics, elliptic and flexible shapes (FleXScan) | Cluster-detection tests / scan statistics | 3 |
 | Kernel density estimation: adaptive and variable bandwidth, Silverman and cross-validated bandwidth selection | Density estimation / bandwidth-selection methods | 3 |
 | Network K-function, network KDE (NKDE), SANET methods | Network-constrained point-pattern methods / software-method families | 3 |
+
+## First audited point-pattern lessons
+
+The [planar Gaussian KDE lesson](../../algorithms/statistics/point-pattern-kde.md) explains the fixed-bandwidth Gaussian kernel, intensity units, projected-coordinate requirement and uncorrected study-window edge effect. A tested NumPy implementation and interactive notebook compare bandwidths and weighted events. The [Clark–Evans lesson](../../algorithms/statistics/clark-evans.md) compares observed nearest-neighbour spacing with a homogeneous Poisson reference, while explicitly withholding a significance claim because this baseline does not apply edge correction or calculate a test statistic. The [Ripley's K/L lesson](../../algorithms/statistics/ripley-k.md) compares pair counts across distance scales with both uncorrected and rectangular-window translation-corrected estimators. All four point-pattern/clustering lessons have tested implementations, intern walkthroughs and notebooks. Isotropic/border corrections, formal nearest-neighbour inference, inhomogeneous point-process models, adaptive bandwidths and network KDE remain open.
 
 ## Clustering and regionalization
 

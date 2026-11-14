@@ -4,7 +4,7 @@
 - **Source pages:** 4–6 (the small-area and survey estimation subsection continues onto page 6)
 - **Source transcription:** [pages 1–5](../../source-inventory/pages-01-05.md) and [pages 6–10](../../source-inventory/pages-06-10.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md) (first deterministic interpolation record; implementation, tests, walkthrough and interactive lab available)
+- **Current canonical records:** [Inverse distance weighting](../../algorithms/interpolation/inverse-distance-weighting.md); [Spatial interpolation: IDW and ordinary kriging](../../algorithms/geostatistics/interpolation.md) (tested implementations, walkthroughs and interactive notebooks are available; variogram fitting and the wider kriging family remain open)
 
 This section combines surface estimation, stochastic spatial models, simulation, time-dependent analysis, data assimilation, uncertainty measures and small-area estimation. Some entries are model families, some are computational procedures and some are evaluation measures.
 
@@ -63,6 +63,10 @@ This section combines surface estimation, stochastic spatial models, simulation,
 | Fay-Herriot, unit-level small-area models, Horvitz-Thompson, model-assisted estimation, MRP | Small-area estimators / survey estimators / multilevel modelling | 6 |
 | Spatial microsimulation (IPF, simulated annealing), areal interpolation, dasymetric mapping, WorldPop-style random forest population surfaces | Spatial microsimulation / areal estimation / mapping workflows | 6 |
 | Statistical downscaling: quantile mapping, BCSD, delta change, analog methods | Downscaling methods | 6 |
+
+## First audited lesson
+
+The [interpolation lesson](../../algorithms/geostatistics/interpolation.md) compares deterministic inverse distance weighting with ordinary kriging. A tested teaching implementation covers IDW and a dense ordinary-kriging solver using a specified zero-nugget isotropic exponential variogram. It does not fit variogram parameters or cover the wider kriging family.
 
 ## Decisions for the next pass
 

@@ -4,11 +4,13 @@
 - **Source pages:** 18–20
 - **Source transcription:** [pages 16–20](../../source-inventory/pages-16-20.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Coordinate transformation and CRS axis order](../../algorithms/geodesy/crs-transformation.md), [Geodetic, ECEF and local ENU coordinates](../../algorithms/geodesy/ecef-enu.md), and [Helmert seven-parameter transformation](../../methods/helmert-7-parameter.md)
 
 This section contains the supporting systems and concepts that make spatial work possible: coordinate reference systems, georeferencing, geocoding, map design, data infrastructure, quality assurance, privacy and geographic language. It also includes graph, topology and causal-analysis methods. These should become connected topic families rather than one oversized “GIS tools” lesson.
 
-## Geodesy and coordinate systems
+## First implemented learning record\n\nThe [Geodesy foundations learning path](../../learning-paths/geodesy-foundations.md) begins with point-coordinate transformation and explicit axis order. It does not claim to cover advanced datum, vertical or dynamic reference-frame transformations.\n\n## Geodesy and coordinate systems
+
+The geodetic/ECEF/ENU lesson now covers ellipsoidal geodetic-to-ECEF conversion, the ECEF-to-local tangent-frame rotation and its inverse, with an EPSG:9836 reference test, intern walkthrough and visual lab. It does not perform vertical datum or geoid conversion. The first additional geocentric datum-operation lesson covers the seven-parameter Helmert Position Vector convention, parameter units, the rotation-sign trap and its relationship to a complete geographic/geocentric/geographic CRS operation. See the [method lesson](../../methods/helmert-7-parameter.md) and [tested implementation](../../implementations/python/helmert-7-parameter/README.md).
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
@@ -21,6 +23,8 @@ This section contains the supporting systems and concepts that make spatial work
 | Astronomical: solar position, sunrise and sunset, tidal prediction, least-squares network adjustment | Astronomical calculations / prediction / adjustment | 18 |
 
 ## Georeferencing and transformation
+
+A first affine control-point lesson and tested least-squares implementation are available. It covers the six-parameter 2D model, rank deficiency, residual vectors and pixel-corner/centre conventions; polynomial and thin-plate-spline transformations remain open.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
@@ -47,6 +51,8 @@ This section contains the supporting systems and concepts that make spatial work
 | Rendering: isosurfaces, streamlines and LIC, ray marching, hillshade variants, vector tile styling, tile pyramids, level-of-detail, WebGL and WebGPU pipelines | Rendering algorithms / tile and graphics pipelines | 19 |
 
 ## Data infrastructure and computing
+
+A first format-selection guide now separates authoritative storage, analytical layout, discovery metadata and delivery products. It compares COG, Zarr, GeoParquet, FlatGeobuf, STAC, vector tiles and spatial databases by access pattern. It is a decision guide, not a claim that all listed formats are equally mature or interchangeable.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|

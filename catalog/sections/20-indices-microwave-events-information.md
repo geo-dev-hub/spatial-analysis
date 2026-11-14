@@ -4,7 +4,7 @@
 - **Source pages:** 41–43
 - **Source transcription:** [pages 41–47](../../source-inventory/pages-41-47.md)
 - **Review state:** intake extracted; source says names are from memory and should be verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Triple collocation](../../methods/triple-collocation.md), with a tested NumPy baseline, intern walkthrough, exercise and visual notebook. The lesson covers the classical three-product error-variance estimator only; extended TC, error covariance estimation and product merging remain open. A researched [marine heatwave detection lesson](../../methods/marine-heatwave-detection.md) and tested single-series event detector cover the Hobday-style threshold-run and short-gap stage; seasonal climatology construction and gridded spatial feature tracking remain open. A [visual notebook](../../notebooks/marine-heatwave-detection-lab.ipynb) demonstrates the single-series workflow with synthetic data.
 
 **Source caution:** the source says coverage is broad and additions are increasingly narrow variants. Verify the name, formula, sensor requirements and intended use of every index or retrieval method.
 

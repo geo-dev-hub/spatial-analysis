@@ -33,7 +33,19 @@ You do not have to start at the beginning. You do not have to know everything be
 | Exploring calculations interactively | [Notebooks and labs](notebooks/README.md) |
 | Checking the source coverage | [Coverage matrix](catalog/coverage-matrix.md) |
 | Learning at your own pace | [Learning paths](learning-paths/README.md) |
-| Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md) |
+| Finding patterns in spatial data | [Spatial autocorrelation and hotspots](learning-paths/global-spatial-autocorrelation.md), [point-pattern analysis](learning-paths/point-pattern-foundations.md) and [spatial clustering](learning-paths/spatial-clustering-foundations.md) |
+| Estimating values between observations | [Spatial interpolation foundations](learning-paths/geostatistics-foundations.md) and [interpolation and geostatistics path](learning-paths/interpolation-and-geostatistics.md) |
+| Working with raster distances | [Raster distance foundations](learning-paths/raster-distance-foundations.md) |
+| Summarising raster neighbourhoods | [Focal raster statistics](algorithms/raster/focal-statistics.md) |
+| Understanding how terrain drains | [Raster hydrology foundations](learning-paths/raster-hydrology-foundations.md) |
+| Resampling raster data | [Nearest neighbour and bilinear interpolation](algorithms/raster/resampling.md) |
+| Summarizing raster values by zone | [Zonal statistics](algorithms/raster/zonal-statistics.md) |
+| Labeling connected raster regions | [Connected-component labeling](algorithms/raster/connected-components.md) |
+| Learning geospatial self-supervision | [Contrastive learning with NT-Xent](algorithms/geoai/contrastive-info-nce.md) |
+| Understanding coordinate reference systems | [Coordinate transformation](algorithms/geodesy/crs-transformation.md) |
+| Interpreting satellite vegetation bands | [Remote sensing index foundations](learning-paths/remote-sensing-indices.md) |
+| Choosing locations for services | [Location science foundations](learning-paths/location-science-foundations.md), [p-median](algorithms/optimization/p-median.md), [p-center](algorithms/optimization/p-center.md) and [maximal covering](algorithms/optimization/maximal-covering.md) |
+| Combining spatial criteria for a decision | [Spatial decision support](learning-paths/spatial-decision-support.md), [weighted linear combination](methods/weighted-linear-combination.md), [weights of evidence](methods/weights-of-evidence.md) and [ELECTRE outranking](methods/electre-outranking.md) |
 | Searching large collections of features | [Spatial indexing](learning-paths/spatial-indexing.md) |
 | Joining spatial layers | [Filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) |
 | Defining spatial neighbours | [Spatial weights matrix](methods/spatial-weights-matrix.md) |
@@ -89,12 +101,14 @@ Go further with [Bentley–Ottmann](algorithms/geometry/bentley-ottmann.md), whi
 
 ## A first look at spatial patterns
 
-Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research.
+Start with the [spatial autocorrelation learning path](learning-paths/global-spatial-autocorrelation.md). It connects six methods, from global Moran's I and Geary's C to local clusters, neighbourhood differences and Getis-Ord hotspots. Local Geary and global Getis-Ord G are supplementary companions added during research. For point data, the new [DBSCAN clustering lesson](algorithms/statistics/dbscan.md) shows how core points, border points and noise are distinguished.
 
 You can read the individual lessons or open their [interactive notebooks](notebooks/README.md). The examples use small, reproducible data so you can change the values, inspect the spatial relationships and see what changes in the result.
 
-The [algorithm collection](algorithms/README.md) also includes the foundational geometry lessons, an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
+The [algorithm collection](algorithms/README.md) also includes [maximal covering location](algorithms/optimization/maximal-covering.md), a small-instance facility-location model that maximizes weighted demand reached within a service threshold, alongside the foundational geometry lessons, [coverage-aware polygon simplification](algorithms/geometry/coverage-simplification.md), [precision models and snap rounding](algorithms/geometry/precision-models.md), an [STR-packed R-tree](algorithms/indexing/str-packed-rtree.md), a [filter-and-refine spatial join](algorithms/query-processing/filter-refine-spatial-join.md) and their tested Python examples.
+
+A native [Clipper2 offsetting example](implementations/clipper2-csharp/README.md) complements the Shapely/GEOS route. A [coverage and advanced-routing lab](notebooks/coverage-simplification-routing-lab.ipynb) lets you inspect shared-edge simplification and compare directed shortest-path searches.
 
 The weekly edition format is documented in the [newsletter issue template](docs/newsletter-issue-template.md).
 
-**Current stage:** the first geometry sequence, a spatial-autocorrelation learning path, and foundational lessons in spatial indexing, spatial joins and spatial weights are available with runnable examples and notebooks. All 22 source sections are indexed, but most of their individual entries still need verification and research.
+**Current stage:** the compendium now has tested learning material across geometry, routing, spatial statistics, geostatistics, raster and terrain analysis, remote sensing, location science, decision support, GeoAI and geodesy. The repository inventory and CI status are tracked in the [roadmap](docs/repository-roadmap.md). All 22 source sections are indexed, but each source entry still needs appropriate verification, and many methods remain to be researched and implemented.

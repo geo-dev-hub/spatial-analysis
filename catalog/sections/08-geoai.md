@@ -4,11 +4,17 @@
 - **Source pages:** 14–18
 - **Source transcription:** [pages 11–15](../../source-inventory/pages-11-15.md) and [pages 16–20](../../source-inventory/pages-16-20.md)
 - **Review state:** source entries extracted into this index; names and claims not yet individually verified
-- **Current canonical records:** none yet
+- **Current canonical records:** [Masked autoencoding](../../methods/masked-autoencoding.md) (scoped objective and masking mechanics); [Contrastive representation learning with NT-Xent](../../algorithms/geoai/contrastive-info-nce.md) (scoped objective lesson); [spatial cross-validation](../../methods/spatial-cross-validation.md) (validation foundation shared with Section 10). Neither record is a foundation-model catalogue.
 
-The source explicitly says that model names are representative examples, not an exhaustive or verified catalogue. Preserve that warning. This section changes quickly: model names, benchmark results, datasets and deployment claims must be checked against original papers, official model cards and maintained project documentation before publication.
+The source explicitly says that model names are representative examples, not an exhaustive or verified catalogue. The first canonical record is a general contrastive objective lesson; it does not verify or reproduce any named geospatial foundation model. Preserve that warning. This section changes quickly: model names, benchmark results, datasets and deployment claims must be checked against original papers, official model cards and maintained project documentation before publication.
+
+## First implemented learning records\n\nThe [GeoAI foundations learning path](../../learning-paths/geoai-foundations.md) begins with paired-view contrastive learning and NT-Xent. It makes spatial split leakage and geospatial augmentation assumptions explicit.\n\n## Spatial validity and evaluation foundation
+
+The source identifies spatial block cross-validation, leave-location-out evaluation and autocorrelation-aware sampling as central GeoAI validity concerns. Start with the [spatial cross-validation lesson](../../methods/spatial-cross-validation.md) and its tested [Python implementation](../../implementations/python/spatial-cross-validation/README.md). It is a compact point-data teaching splitter, not a complete validation framework or a scientifically selected block design.
 
 ## Pretraining objectives
+
+A first masked-autoencoding lesson now explains the encoder-visible/decoder-masked sequence and connects the general MAE idea to satellite-specific temporal, spectral and scale-aware adaptations. Its NumPy package demonstrates masking and inverse sequence restoration only; it does not train or reproduce MAE, SatMAE or Scale-MAE.
 
 | Source entry | Kind to review | Source page |
 |---|---|---:|
