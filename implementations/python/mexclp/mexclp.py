@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from itertools import combinations_with_replacement
 from math import isfinite
+from numbers import Real
 from typing import Sequence
 
 
@@ -30,15 +31,19 @@ def solve_mexclp(
         raise ValueError("costs must be finite and non-negative")
     if not isinstance(p, int) or isinstance(p, bool) or p < 0:
         raise ValueError("p must be a non-negative integer")
+    if not isinstance(service_threshold, Real) or isinstance(service_threshold, bool):
+        raise ValueError("service_threshold must be a real numeric value")
     try:
         threshold = float(service_threshold)
-    except (TypeError, ValueError) as exc:
+    except (TypeError, ValueError, OverflowError) as exc:
         raise ValueError("service_threshold must be finite and non-negative") from exc
     if not isfinite(threshold) or threshold < 0:
         raise ValueError("service_threshold must be finite and non-negative")
+    if not isinstance(busy_fraction, Real) or isinstance(busy_fraction, bool):
+        raise ValueError("busy_fraction must be a real numeric value")
     try:
         q = float(busy_fraction)
-    except (TypeError, ValueError) as exc:
+    except (TypeError, ValueError, OverflowError) as exc:
         raise ValueError("busy_fraction must be in [0, 1)") from exc
     if not isfinite(q) or not 0 <= q < 1:
         raise ValueError("busy_fraction must be in [0, 1)")
