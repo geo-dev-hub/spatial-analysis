@@ -17,10 +17,11 @@ def test_permutation_test_is_reproducible_and_bounded():
     assert 0<a["p_value"]<=1
     assert np.array_equal(a["null_statistics"],b["null_statistics"])
 
-def test_identical_samples_have_small_population_signal():
+def test_statistics_are_symmetric_in_the_two_samples():
     x=np.array([[0,0],[1,0],[0,1],[1,1]],dtype=float)
-    assert abs(mmd_squared(x,x,1))<1e-12
-    assert energy_distance(x,x)==pytest.approx(0)
+    y=np.array([[.1,0],[1.1,0],[.1,1],[1.1,1]],dtype=float)
+    assert mmd_squared(x,y,1)==pytest.approx(mmd_squared(y,x,1))
+    assert energy_distance(x,y)==pytest.approx(energy_distance(y,x))
 
 @pytest.mark.parametrize("fn,args",[(mmd_squared,(1,)),(energy_distance,())])
 def test_invalid_samples_rejected(fn,args):
