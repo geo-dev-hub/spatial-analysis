@@ -73,6 +73,8 @@ def test_nicholl_lee_nicholl_handles_vertical_and_horizontal_segments():
     for got, expected in [
         (nicholl_lee_nicholl((5,-2),(5,12),r), ((5,0),(5,10))),
         (nicholl_lee_nicholl((-2,5),(12,5),r), ((0,5),(10,5))),
+        (nicholl_lee_nicholl((-2,0),(12,0),r), ((0,0),(10,0))),
+        (nicholl_lee_nicholl((-2,10),(12,10),r), ((0,10),(10,10))),
     ]:
         assert got[0] == pytest.approx(expected[0])
         assert got[1] == pytest.approx(expected[1])

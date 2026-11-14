@@ -216,6 +216,22 @@ def nicholl_lee_nicholl(start, end, rect):
         raise ValueError("Nicholl–Lee–Nicholl requires a non-degenerate rectangle")
     c0, c1 = _rect_area_code(p0, r), _rect_area_code(p1, r)
     xmin, ymin, xmax, ymax = r
+    # Axis-aligned segments (including segments coincident with a window
+    # boundary) have direct interval solutions and avoid slope singularities.
+    if p0[0] == p1[0]:
+        if p0[0] < xmin or p0[0] > xmax:
+            return None
+        lo, hi = max(min(p0[1], p1[1]), ymin), min(max(p0[1], p1[1]), ymax)
+        if lo > hi:
+            return None
+        return ((p0[0], lo), (p0[0], hi)) if p0[1] <= p1[1] else ((p0[0], hi), (p0[0], lo))
+    if p0[1] == p1[1]:
+        if p0[1] < ymin or p0[1] > ymax:
+            return None
+        lo, hi = max(min(p0[0], p1[0]), xmin), min(max(p0[0], p1[0]), xmax)
+        if lo > hi:
+            return None
+        return ((lo, p0[1]), (hi, p0[1])) if p0[0] <= p1[0] else ((hi, p0[1]), (lo, p0[1]))
     # A segment that starts on a boundary and immediately leaves the
     # rectangle has only the start point visible.
     if c0 == 0 and (
