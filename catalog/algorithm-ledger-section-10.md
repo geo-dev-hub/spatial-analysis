@@ -165,9 +165,9 @@ The source also includes applied methods, measures, software and workflows. Thes
 
 | Source family | Child record | Primary kind | Current treatment | Status |
 |---|---|---|---|---|
-| Geophysical gridding | Minimum-curvature gridding | method / algorithm family | No dedicated implementation verified | Open |
-| Geophysical gridding | Nearest-neighbour gridding | algorithm | No dedicated gridding implementation verified | Open |
-| Geophysical gridding | Triangulation-based gridding | algorithm family | Delaunay/TIN components exist elsewhere; gridding-specific interpolation not verified | Partial |
+| Geophysical gridding | Minimum-curvature gridding | method / algorithm family | Thin-plate-spline minimum-bending-energy interpolator with affine tail and optional smoothing; explicitly not the classic Briggs iterative algorithm | Partial — related variational interpolator implemented; Briggs-equivalence review and kriging comparison remain open |
+| Geophysical gridding | Nearest-neighbour gridding | algorithm | `implementations/python/geophysical-gridding/` k-d-tree nearest assignment with optional maximum-distance masking, tests and lab | Implemented / tested candidate; sampling-distance and coordinate review pending |
+| Geophysical gridding | Triangulation-based gridding | algorithm family | Delaunay triangulation with barycentric piecewise-linear interpolation, convex-hull fill contract and affine-plane tests | Implemented / tested candidate; triangulation robustness and sampling review pending |
 | Geophysical gridding | Kriging versus minimum-curvature comparison | method comparison | Requires comparative experiment and assumptions | Open |
 | Potential fields | Analytic-signal amplitude | metric / attribute | Spectral derivative package and tests added | Implemented / tested candidate |
 | Potential fields | Tilt derivative | metric / attribute | Spectral derivative package and tests added | Implemented / tested candidate |
