@@ -96,6 +96,71 @@ def euclidean_mst(points: Sequence[Sequence[float]]) -> list[tuple[int, int, flo
     return result
 
 
+def _delaunay_candidate_edges(points: Sequence[Sequence[float]]) -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
+    """Return Delaunay edges for a non-collinear planar point set.
+
+    SciPy/Qhull chooses one valid triangulation when the input is degenerate.
+    Consequently this candidate set is not guaranteed to retain every
+    boundary-tie edge of a Gabriel graph for cocircular sites.
+    """
+    pts = _normalise(points)
+    if len(pts) < 3:
+        raise ValueError("at least three points are required")
+    import numpy as np
+    from scipy.spatial import Delaunay
+
+    coordinates = np.asarray(pts, dtype=float)
+    if np.linalg.matrix_rank(coordinates - coordinates[0]) < 2:
+        raise ValueError("sites must not all be collinear")
+    triangulation = Delaunay(coordinates)
+    candidates = set()
+    for a, b, c in triangulation.simplices:
+        for u, v in ((a, b), (b, c), (c, a)):
+            candidates.add((min(int(u), int(v)), max(int(u), int(v))))
+    return pts, sorted(candidates)
+
+
+def delaunay_filtered_gabriel_graph(points: Sequence[Sequence[float]]) -> list[tuple[int, int]]:
+    """Filter Delaunay edges using the open-diameter-disk Gabriel predicate.
+
+    Under general-position Euclidean assumptions, every Gabriel edge is a
+    Delaunay edge. The blocker scan is still O(n) per candidate, so this
+    transparent filter is O(n^2), not the linear-time specialised algorithm.
+    Cocircular boundary ties follow Qhull's chosen triangulation.
+    """
+    pts, candidates = _delaunay_candidate_edges(points)
+    result = []
+    for i, j in candidates:
+        u, v = pts[i], pts[j]
+        blocked = any(
+            (w[0] - u[0]) * (w[0] - v[0]) + (w[1] - u[1]) * (w[1] - v[1]) < 0
+            for k, w in enumerate(pts) if k not in (i, j)
+        )
+        if not blocked:
+            result.append((i, j))
+    return result
+
+
+def delaunay_filtered_rng(points: Sequence[Sequence[float]]) -> list[tuple[int, int]]:
+    """Filter Delaunay edges using the open-lune RNG predicate.
+
+    Under general-position Euclidean assumptions the RNG is contained in the
+    Delaunay triangulation. This direct blocker scan is O(n^2) overall; it is
+    not Lingas's specialised linear-time post-processing algorithm.
+    """
+    pts, candidates = _delaunay_candidate_edges(points)
+    result = []
+    for i, j in candidates:
+        uv = _distance(pts[i], pts[j])
+        blocked = any(
+            max(_distance(pts[i], w), _distance(pts[j], w)) < uv
+            for k, w in enumerate(pts) if k not in (i, j)
+        )
+        if not blocked:
+            result.append((i, j))
+    return result
+
+
 def beta_skeleton(points: Sequence[Sequence[float]], beta: float = 2.0
                   ) -> list[tuple[int, int]]:
     """Lune-based beta-skeleton for 1 <= beta <= 2.
