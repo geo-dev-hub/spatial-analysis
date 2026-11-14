@@ -71,6 +71,10 @@ facility-set/assignment combinations. This is a transparent tiny-instance baseli
 6. Test sensitivity to demand, capacity and travel-cost assumptions.
 7. Report overflow, unmet demand or expansion needs for a more complete model.
 
+## Exercise
+
+Work through the [capacitated p-median exercise](../../exercises/capacitated-p-median.md), compare the uncapacitated and capacitated assignments, and verify each selected facility's load.
+
 ## References
 
 - Daskin, M. S. (2013), *Network and Discrete Location: Models, Algorithms, and Applications*, 2nd ed., Wiley.
