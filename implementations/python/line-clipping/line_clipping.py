@@ -212,6 +212,8 @@ def nicholl_lee_nicholl(start, end, rect):
     """
     p0, p1 = _pt(start), _pt(end)
     r = _rect(rect)
+    if r[0] == r[2] or r[1] == r[3]:
+        raise ValueError("Nicholl–Lee–Nicholl requires a non-degenerate rectangle")
     c0, c1 = _rect_area_code(p0, r), _rect_area_code(p1, r)
     xmin, ymin, xmax, ymax = r
     # A segment that starts on a boundary and immediately leaves the

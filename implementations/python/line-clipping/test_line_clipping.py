@@ -1,4 +1,5 @@
 import unittest
+import pytest
 from line_clipping import cohen_sutherland, liang_barsky, cyrus_beck, nicholl_lee_nicholl
 R=(0,0,10,10)
 class LineClippingTests(unittest.TestCase):
@@ -80,3 +81,8 @@ def test_nicholl_lee_nicholl_boundary_start_outward_is_single_point():
     r=(0,0,10,10)
     assert nicholl_lee_nicholl((10,5),(12,5),r)==((10.0,5.0),(10.0,5.0))
     assert nicholl_lee_nicholl((5,10),(5,12),r)==((5.0,10.0),(5.0,10.0))
+
+
+def test_nicholl_lee_nicholl_rejects_degenerate_window():
+    with pytest.raises(ValueError):
+        nicholl_lee_nicholl((0,0),(1,1),(0,0,0,1))
