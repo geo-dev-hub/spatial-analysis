@@ -32,7 +32,6 @@ Each record explains one method or operation, its assumptions, where it is usefu
 - [Maximum expected covering (MEXCLP)](optimization/mexclp.md) — discount coverage according to the probability that nearby units are busy.
 - [M/M/c queueing](optimization/mmc-queue.md) — estimate waiting and system performance for a stable multi-server FCFS queue.
 - [Two-step floating catchment area](optimization/two-step-fca.md) — estimate potential service accessibility by combining provider supply and population demand within travel catchments.
-- [Maximum expected covering (MEXCLP)](optimization/mexclp.md) — account for the probability that nearby service units are busy when demand arrives.
 
 ## Remote sensing
 
