@@ -44,3 +44,26 @@ The relation is reflexive. It may be incomplete or non-transitive. That is an ex
 This package constructs the pairwise relation only. It does not extract the ELECTRE I kernel/choice set, produce a complete ranking, elicit weights or thresholds, model indifference/preference/veto thresholds, account for criterion interactions or validate stakeholder judgements. The range-normalised discordance index is one explicit teaching convention; record it and the thresholds used. Do not present this package as ELECTRE III, ELECTRE TRI or a complete ELECTRE decision workflow.
 
 See the [ELECTRE method-family lesson](../../../methods/electre-outranking.md) and [intern walkthrough](implementation-walkthrough.md).
+
+
+## Kernel / choice-set stage
+
+The companion module `electre_i_kernel.py` enumerates every subset satisfying the two graph-kernel conditions for the supplied relation:
+
+1. **Internal stability:** no two distinct selected alternatives outrank one another.
+2. **External stability:** every alternative outside the selected set is directly outranked by at least one selected alternative.
+
+```python
+from electre_i_kernel import enumerate_electre_kernels
+
+choice = enumerate_electre_kernels(
+    result.outranks,
+    result.alternative_names,
+)
+print(choice.kernels)
+print("Unique kernel:", choice.is_unique)
+```
+
+The function returns all kernels, including multiple kernels, or an empty tuple when no kernel exists. It does not silently remove cycles or invent a unique recommendation. The exhaustive search is exponential and is capped at 20 alternatives by default. This is a small-choice-set teaching implementation, not a large-graph solver.
+
+The kernel is an exploitation step applied to the outranking relation. It is not a complete ranking. If cycles prevent a kernel or produce multiple kernels, inspect the graph and decision assumptions before selecting a documented cycle-reduction procedure.
