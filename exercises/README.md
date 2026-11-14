@@ -63,3 +63,5 @@ Do not make an exercise depend on an unavailable dataset, paid software or unexp
 - [Discrete p-center](p-center.md) — minimize worst-case assignment cost and compare with p-median and maximal covering.
 
 - [Location set covering](set-covering.md) — minimize the number of facilities required to reach all demand within a stated service standard.
+
+- [Backup coverage](backup-coverage.md) — distinguish ordinary coverage from r-covering and explain why deterministic redundancy is not a reliability probability.
