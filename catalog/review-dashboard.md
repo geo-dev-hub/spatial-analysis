@@ -1,6 +1,6 @@
 # Source review dashboard
 
-Snapshot: 14 November 2026 (updated after Section 10 line-clipping, rasterization, curves/smoothing, mesh-geodesics, discrete-global-grid, change-point-detection, time-series, forecast-verification and optical-flow lessons)
+Snapshot: 14 November 2026 (updated after Section 10 line-clipping, rasterization, curves/smoothing, mesh-geodesics, discrete-global-grid, change-point-detection, time-series, forecast-verification and optical-flow and curve-construction lessons)
 
 This dashboard counts the source-entry review labels in the 22 item-level section indexes. It is an inventory of review progress, not a claim that the entries have been technically verified.
 
