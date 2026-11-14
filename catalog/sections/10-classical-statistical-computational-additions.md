@@ -88,3 +88,8 @@ A first reproducible point-data baseline is now available: [spatial cross-valida
 3. Keep forecast verification separate from model training and prediction.
 4. Treat spatial cross-validation as a core validity requirement, not an optional evaluation detail.
 5. Document the provenance and intended use of any population or environmental monitoring data.
+
+
+### Potential-field processing update
+
+The [potential-field package](../../implementations/python/potential-field/README.md) now includes a bounded [Werner single-thin-dike deconvolution](../../implementations/python/potential-field/werner-deconvolution-walkthrough.md), with tests and a synthetic [lab notebook](../../notebooks/werner-deconvolution-lab.ipynb). It is deliberately narrower than the complete later Werner/Ku–Sharp workflow; see the method guide for assumptions and remaining variants.
