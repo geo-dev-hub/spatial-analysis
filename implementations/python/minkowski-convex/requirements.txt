@@ -1,1 +1,1 @@
-pytest>=8.0\n
+pytest>=8.0
