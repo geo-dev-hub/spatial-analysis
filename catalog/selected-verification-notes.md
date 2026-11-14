@@ -81,3 +81,15 @@ These notes record bounded checks against publisher or institutional bibliograph
 - **Implementation:** no new rasterization or traversal code is claimed. The lesson includes a test-design specification.
 - **Rights:** links only; no third-party text or figures reproduced.
 - **Remaining work:** verify each algorithm's exact variant and build independent, tested implementations with explicit row/column, affine-grid, boundary and NoData contracts.
+
+
+## Section 10 — Curves, subdivision and trajectory smoothing
+
+**Source entry:** “Curves and smoothing: Chaikin corner cutting, Catmull-Rom, B-splines, NURBS, Bezier fitting (Schneider), Kalman and RTS smoothers” (source page 21).
+
+- **Identity and scope:** the lesson separates approximating subdivision (Chaikin), interpolating splines (Catmull–Rom), parametric design curves (Bézier, B-spline and NURBS) and state estimation/smoothing (Kalman filter and Rauch–Tung–Striebel smoother). These are not equivalent operations.
+- **Bibliography and evidence:** de Boor, C. (1987), “Cutting corners always works,” *Computer Aided Geometric Design*, 4(1–2), 125–131, DOI [10.1016/0167-8396(87)90029-X](https://doi.org/10.1016/0167-8396(87)90029-X), discusses convergence of corner-cutting schemes including Chaikin's algorithm. Carnegie Mellon University course notes provide a B-spline chapter describing knot insertion and Chaikin's relationship to uniform quadratic B-splines. A 2021 Springer paper discusses Catmull–Rom as a cubic interpolating spline. Rauch, Tung and Striebel (1965), “Maximum Likelihood Estimates of Linear Dynamic Systems,” *AIAA Journal*, 3(8), 1445–1450, DOI [10.2514/3.3166](https://doi.org/10.2514/3.3166), is the classical RTS smoother reference.
+- **Technical-claim status:** the lesson distinguishes interpolation from approximation, rational spline weights from statistical weights, and offline RTS smoothing from geometric spline construction. It warns that unconstrained smoothing can violate road, river or barrier constraints. The lesson is a bounded overview, not a full mathematical treatment of every basis or filter variant.
+- **Implementation:** no new spline or Kalman implementation is claimed.
+- **Rights:** DOI and institutional links only; no source figures or text reproduced.
+- **Remaining work:** verify the Schneider fitting method as its own algorithm; expand NURBS basis and knot multiplicity treatment; build separate spline and state-space implementations with numerical and geometry-specific tests.
