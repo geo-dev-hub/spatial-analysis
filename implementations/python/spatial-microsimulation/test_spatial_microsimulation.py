@@ -28,3 +28,22 @@ def test_ipf_reports_incompatible_margins_without_claiming_convergence():
 ])
 def test_ipf_rejects_invalid_inputs(seed,design,target):
     with pytest.raises(ValueError): ipf_rake(seed,design,target)
+
+
+def test_systematic_resampling_returns_requested_size_and_reproducible_donors():
+    from spatial_microsimulation import systematic_resample_records
+    records = np.array([["A"], ["B"]])
+    first = systematic_resample_records(records, [1, 3], 40, rng=np.random.default_rng(12))
+    second = systematic_resample_records(records, [1, 3], 40, rng=np.random.default_rng(12))
+    assert first["synthetic_records"].shape == (40, 1)
+    np.testing.assert_array_equal(first["donor_indices"], second["donor_indices"])
+    assert first["donor_counts"].sum() == 40
+    assert abs(first["donor_counts"][0] / 40 - 0.25) <= 0.025
+
+
+def test_systematic_resampling_rejects_invalid_population_or_weights():
+    from spatial_microsimulation import systematic_resample_records
+    with pytest.raises(ValueError):
+        systematic_resample_records([[1], [2]], [0, 0], 10)
+    with pytest.raises(ValueError):
+        systematic_resample_records([[1], [2]], [1, 1], 0)
