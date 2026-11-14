@@ -127,6 +127,8 @@ SAL is an object-based diagnostic for quantitative precipitation forecasts. It h
 The components provide interpretable diagnostics that a single scalar score cannot. A forecast can have approximately correct total rainfall (A near zero) but poor structure or location. SAL depends on the object-identification and domain choices, so those settings must be reported.
 
 SAL was designed for quantitative precipitation fields. Do not assume that its thresholds and object definitions transfer unchanged to arbitrary spatial variables.
+A bounded [SAL implementation](../implementations/python/forecast-verification/sal_verification.py), with [tests](../implementations/python/forecast-verification/test_sal_verification.py) and a [lab](../notebooks/sal-precipitation-verification-lab.ipynb), computes the standard amplitude, structure and two-part location formulas. It uses relative-maximum thresholding and connected components as an explicit teaching object-identification choice; results are sensitive to that choice. If both fields are dry, all components are defined as zero. If only one field is dry, amplitude is ±2 while structure and location are returned as undefined.
+
 
 ## 8. MODE and object-based verification
 
