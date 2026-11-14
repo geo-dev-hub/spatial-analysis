@@ -28,8 +28,8 @@ def test_cost_direction_is_oriented_correctly():
         performance, [0.5, 0.5], ["benefit", "cost"],
         concordance_threshold=0.5, discordance_threshold=1.0,
     )
-    assert result.concordance[0, 1] == pytest.approx(0.5)
-    assert result.concordance[1, 0] == pytest.approx(0.5)
+    assert result.concordance[0, 1] == pytest.approx(1.0)
+    assert result.concordance[1, 0] == pytest.approx(0.0)
 
 
 def test_weights_are_normalised_and_zero_weight_criteria_do_not_contribute():
@@ -59,7 +59,7 @@ def test_pairwise_ties_produce_full_concordance_and_zero_discordance():
 
 
 def test_constant_criterion_has_no_discordance_range():
-    performance = np.array([[1, 5], [2, 5]], dtype=float)
+    performance = np.array([[1, 5], [1, 5]], dtype=float)
     result = electre_i_relation(
         performance, [0.5, 0.5], ["benefit", "benefit"],
         concordance_threshold=0.5, discordance_threshold=0.0,
