@@ -118,7 +118,7 @@ The links below point to notebooks already available on the default branch. The 
 - [Filter-and-refine spatial join](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/filter-refine-spatial-join-lab.ipynb)
 - [Spatial weights](https://colab.research.google.com/github/geo-dev-hub/spatial-analysis/blob/main/notebooks/spatial-weights-lab.ipynb)
 
-The repository workflow executes all sixty-five notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
+The repository workflow executes all sixty-six notebooks on relevant pushes and pull requests. A successful run checks that the cells execute in the configured environment; it does not replace review of the statistical assumptions or geometry contracts.
 
 These notebooks are learning materials. For production analysis, check the input assumptions, use maintained geospatial libraries and record the environment used to produce results.
 
@@ -141,3 +141,4 @@ These notebooks are learning materials. For production analysis, check the input
 - [Backup coverage (r-covering)](backup-coverage-lab.ipynb) — compare one-cover with redundant two-cover access and inspect per-demand counts. This is a deterministic redundancy screen, not a failure-probability model.
 
 - [M/M/c queueing lab](mmc-queue-lab.ipynb) — vary arrival rate, service rate and server count; inspect Erlang-C waiting and Little's law.
+- [MEXCLP expected-coverage lab](mexclp-lab.ipynb) — vary unit busy probability and inspect how availability changes the best small facility placement.
