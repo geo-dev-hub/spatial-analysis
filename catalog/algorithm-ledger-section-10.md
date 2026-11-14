@@ -151,7 +151,9 @@ Bayesian online change-point detection has now been added as a bounded conjugate
 | 22 | Analytic-signal amplitude | Derived from x, y and vertical derivatives; synthetic lab | Implemented / tested candidate |
 | 22 | Tilt derivative | atan2(vertical derivative, total horizontal gradient); synthetic lab | Implemented / tested candidate |
 | 22 | Euler / Werner deconvolution | No implementation verified | Open |
-| 22 | Matched filtering / continuation | No implementation verified | Open |
+| 22 | Upward continuation | Spectral exponential attenuation `exp(-kh)` with known-mode attenuation tests and explicit periodic-grid contract | Implemented / tested candidate |
+| 22 | Downward continuation | No stable regularised implementation verified; high-wavenumber amplification requires explicit regularisation | Open |
+| 22 | Matched filtering | No implementation verified | Open |
 
 The package assumes a regular grid and periodic FFT boundary conditions. It is not an inversion or source-depth estimator. Technical review and reference-equivalence checks remain pending.
 
@@ -173,7 +175,9 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Potential fields | Euler deconvolution | algorithm / estimator | No implementation verified | Open |
 | Potential fields | Werner deconvolution | algorithm / estimator | No implementation verified | Open |
 | Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
-| Potential fields | Upward / downward continuation | spectral operation | No implementation verified; downward continuation needs stability treatment | Open |
+| Potential fields | Upward continuation | spectral operation | `implementations/python/potential-field/` Fourier multiplier `exp(-kh)`; exact periodic-mode attenuation test | Implemented / tested candidate; boundary/reference review pending |
+| Potential fields | Downward continuation | unstable inverse spectral operation | No regularised implementation verified | Open |
+| Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
 | Geophysical methods | Airborne EM inversion | inverse problem / workflow | No implementation verified | Research required |
 | Geophysical methods | Magnetotelluric inversion | inverse problem / workflow | No implementation verified | Research required |
 | Geophysical methods | Seismic attribute analysis | method family | Must split into named attributes before implementation | Research required |
