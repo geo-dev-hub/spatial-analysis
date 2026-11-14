@@ -16,29 +16,29 @@ Let $I$ be demand locations and $J$ candidate facilities. Let $a_i\geq0$ be dema
 
 Define eligibility:
 
-$
+$$
 e_{ij}=\begin{cases}
 1 & d_{ij}\leq S,\\
 0 & d_{ij}>S.
 \end{cases}
-$
+$$
 
 Let $x_j\in\{0,1\}$ indicate whether candidate $j$ is selected, and $y_i\in\{0,1\}$ indicate whether demand $i$ receives the required number of nearby selected facilities.
 
-$
+$$
 \max\quad \sum_{i\in I}a_i y_i
-$
+$$
 
 subject to
 
-$
+$$
 \sum_{j\in J} e_{ij}x_j\geq r y_i
 \quad\forall i\in I,
 \qquad
 \sum_{j\in J}x_j\leq p,
 \qquad
 x_j,y_i\in\{0,1\}.
-$
+$$
 
 For $r=1$, the coverage condition reduces to ordinary maximal covering. For $r=2$, a demand location is counted only when at least two distinct selected candidates are within $S$.
 
@@ -54,9 +54,9 @@ The [Python package](../../implementations/python/backup-coverage/README.md) enu
 
 For $m$ candidate facilities, the solver checks:
 
-$
+$$
 \sum_{k=r}^{p}\binom{m}{k}
-$
+$$
 
 subsets. This is an exact teaching baseline and a small-instance test oracle, not a metropolitan-scale optimiser.
 
