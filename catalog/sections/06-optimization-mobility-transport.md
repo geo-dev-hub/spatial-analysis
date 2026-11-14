@@ -4,7 +4,7 @@
 - **Source pages:** 9–11
 - **Source transcription:** [pages 6–10](../../source-inventory/pages-06-10.md) and [pages 11–15](../../source-inventory/pages-11-15.md)
 - **Review state:** source entries extracted into this index; not every entry independently verified
-- **Current canonical records:** [The p-median problem](../../algorithms/optimization/p-median.md); [Capacitated p-median](../../algorithms/optimization/capacitated-p-median.md); [Discrete p-center](../../algorithms/optimization/p-center.md); [Location set covering](../../algorithms/optimization/set-covering.md); [Maximal covering location](../../algorithms/optimization/maximal-covering.md); [Backup coverage (r-covering)](../../algorithms/optimization/backup-coverage.md); [M/M/c queueing model](../../algorithms/optimization/mmc-queue.md); [Two-step floating catchment area](../../algorithms/optimization/two-step-fca.md) (first audited facility-location and accessibility models; remaining entries are still unverified)
+- **Current canonical records:** [The p-median problem](../../algorithms/optimization/p-median.md); [Capacitated p-median](../../algorithms/optimization/capacitated-p-median.md); [Discrete p-center](../../algorithms/optimization/p-center.md); [Location set covering](../../algorithms/optimization/set-covering.md); [Maximal covering location](../../algorithms/optimization/maximal-covering.md); [Backup coverage (r-covering)](../../algorithms/optimization/backup-coverage.md); [M/M/c queueing model](../../algorithms/optimization/mmc-queue.md); [Maximum expected covering (MEXCLP)](../../algorithms/optimization/mexclp.md); [Two-step floating catchment area](../../algorithms/optimization/two-step-fca.md) (first audited facility-location and accessibility models; remaining entries are still unverified)
 
 This section brings together optimisation problems, logistics, accessibility, transport planning, human mobility, positioning and robotics. It includes exact optimisation methods, heuristics, models, software, metrics and applied workflows. Keep the problem definition visible: many similarly named methods solve different objectives or operate under different constraints.
 
@@ -19,6 +19,10 @@ The [p-median lesson](../../algorithms/optimization/p-median.md) states the unca
 ## Capacity-constrained location
 
 The [capacitated p-median lesson](../../algorithms/optimization/capacitated-p-median.md) and exact tiny-instance implementation add indivisible demand quantities and hard facility capacities to the assignment model. A test suite, intern walkthrough, exercise and visual notebook compare the constrained solution with the uncapacitated p-median baseline. It is not a queueing model and does not allow demand splitting.
+
+## Expected coverage under busy units
+
+The [MEXCLP lesson](../../algorithms/optimization/mexclp.md) adds an availability-aware objective to the deterministic location models. Its exact small-instance solver, tests, intern walkthrough, exercise and interactive lab assume equal independent busy fractions and allow multiple units at one candidate site. This is distinct from deterministic r-covering and from M/M/c queueing; the adjusted MEXCLP and hypercube queueing model remain outside this implementation.
 
 ## Location-allocation and spatial optimization
 
