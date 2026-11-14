@@ -87,8 +87,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 
 | Source family | Child method | Verified repository treatment | Status |
 |---|---|---|---|
-| Spatial validation | NNDM | Research discussion distinguishes it from the implemented baselines; no NNDM implementation verified | Research / lesson only |
-| Spatial validation | kNNDM | Research discussion distinguishes it from the implemented baselines; no kNNDM implementation verified | Research / lesson only |
+| Spatial validation | NNDM | Research discussion distinguishes it from the implemented baselines; original leave-one-out algorithm remains unimplemented | Research / lesson only; kNNDM is separate |
+| Spatial validation | kNNDM | `implementations/python/knndm/` bounded KMeans/Euclidean candidate with tests and walkthrough; not an exact CAST port | Implemented candidate; reference-equivalence, full tests and geographic-distance variants remain open |
 | Spatial validation | Buffered leave-one-out | One-test-point-per-fold implementation with exclusion tests added | Implemented / tested candidate; distance-design review pending |
 | Spatial validation | Spatial k-fold by clustering | Deterministic farthest-first k-means grouping with whole-cluster folds and tests added | Implemented / tested candidate; geographic grouping review pending |
 | Spatial validation | blockCV | External R package / method reference, not a Python algorithm to clone | Research / lesson only |
