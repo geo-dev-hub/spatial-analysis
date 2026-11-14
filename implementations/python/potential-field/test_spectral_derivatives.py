@@ -59,3 +59,36 @@ def test_invalid_grid():
         spectral_derivatives([[1, float("nan")], [2, 3]], 1, 1)
     with pytest.raises(ValueError):
         spectral_derivatives([1, 2, 3], 1, 1)
+
+
+def test_euler_deconvolution_recovers_synthetic_source_parameters():
+    from spectral_derivatives import euler_deconvolution_window
+    rng = np.random.default_rng(42)
+    x, y = np.meshgrid(np.linspace(-2, 2, 8), np.linspace(-2, 2, 7))
+    tx, ty, tz = (rng.normal(size=x.shape) for _ in range(3))
+    x0, y0, z0, base, index, zobs = 1.25, -0.75, 3.5, 12.0, 2.0, 0.0
+    field = ((x0 - x) * tx + (y0 - y) * ty + (z0 - zobs) * tz) / index + base
+    result = euler_deconvolution_window(
+        field, tx, ty, tz, x, y, zobs, index
+    )
+    assert result["x0"] == pytest.approx(x0)
+    assert result["y0"] == pytest.approx(y0)
+    assert result["z0"] == pytest.approx(z0)
+    assert result["base_level"] == pytest.approx(base)
+    assert result["rms_residual"] < 1e-10
+
+
+def test_euler_deconvolution_rejects_rank_deficient_window():
+    from spectral_derivatives import euler_deconvolution_window
+    x, y = np.meshgrid(np.arange(3.0), np.arange(3.0))
+    ones = np.ones_like(x)
+    with pytest.raises(ValueError, match="rank deficient"):
+        euler_deconvolution_window(ones, ones, ones, ones, x, y, 0, 2)
+
+
+def test_euler_deconvolution_validates_window_contract():
+    from spectral_derivatives import euler_deconvolution_window
+    x, y = np.meshgrid(np.arange(2.0), np.arange(2.0))
+    a = np.arange(4.0).reshape(2, 2)
+    with pytest.raises(ValueError):
+        euler_deconvolution_window(a, a, a, a, x, y, 0, 0)
