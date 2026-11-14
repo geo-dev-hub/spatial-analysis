@@ -87,3 +87,9 @@ The Section 6 backup-coverage extension adds an exact small-instance r-covering 
 
 
 The Section 6 queueing extension adds a dependency-free M/M/c implementation using Erlang-C, tests for the M/M/1 closed form, server sensitivity, Little's law and stability, plus an intern walkthrough, exercise and notebook. It is a stationary FCFS model with Poisson arrivals, exponential service and identical servers; it does not replace travel-time accessibility or model time-varying arrivals.
+
+
+## Section 10 algorithm additions — 14 November 2026
+
+- [Strict leave-location-and-time-out validation](../implementations/python/spatiotemporal-validation/README.md) now supplies observed location/time pair folds with explicit train, test and buffer sets, plus tests and a [visual lab](../notebooks/spatiotemporal-llto-lab.ipynb). NNDM, kNNDM and alternative spatial/temporal block designs remain distinct open methods.
+- [Weighted dasymetric allocation](../implementations/python/dasymetric-allocation/README.md) now supplies a conservative top-down allocation baseline using caller-provided ancillary weights, with source-total conservation tests and a [visual lab](../notebooks/dasymetric-allocation-lab.ipynb). It does not perform geometry overlays or validate the proxy data.
