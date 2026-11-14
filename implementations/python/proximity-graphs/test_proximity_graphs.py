@@ -2,6 +2,8 @@ import pytest
 
 from proximity_graphs import (
     beta_skeleton,
+    delaunay_filtered_gabriel_graph,
+    delaunay_filtered_rng,
     euclidean_mst,
     gabriel_graph,
     relative_neighborhood_graph,
@@ -81,3 +83,26 @@ def test_yao_graph_returns_valid_undirected_edges():
 def test_yao_graph_rejects_invalid_cone_count():
     with pytest.raises(ValueError):
         yao_graph(SQUARE, cones=2)
+
+
+GENERAL_POSITION = [(0, 0), (4, 0), (5, 3), (2, 5), (-1, 3), (1, 2)]
+
+
+def test_delaunay_filtered_gabriel_matches_all_pairs_on_general_position_fixture():
+    assert delaunay_filtered_gabriel_graph(GENERAL_POSITION) == gabriel_graph(GENERAL_POSITION)
+
+
+def test_delaunay_filtered_rng_matches_all_pairs_on_general_position_fixture():
+    assert delaunay_filtered_rng(GENERAL_POSITION) == relative_neighborhood_graph(GENERAL_POSITION)
+
+
+@pytest.mark.parametrize("function", [delaunay_filtered_gabriel_graph, delaunay_filtered_rng])
+def test_delaunay_filtered_variants_reject_collinear_sites(function):
+    with pytest.raises(ValueError, match="collinear"):
+        function([(0, 0), (1, 1), (2, 2), (3, 3)])
+
+
+@pytest.mark.parametrize("function", [delaunay_filtered_gabriel_graph, delaunay_filtered_rng])
+def test_delaunay_filtered_variants_require_three_sites(function):
+    with pytest.raises(ValueError, match="three points"):
+        function([(0, 0), (1, 0)])
