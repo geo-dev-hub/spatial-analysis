@@ -118,3 +118,5 @@ The [geometry foundations path](../learning-paths/geometry-foundations.md) conne
 Start with the practical question, then follow the explanation into the formal definition, method, guarantees, complexity, numerical issues and references. Where a runnable implementation exists, it is linked from the record.
 
 Records may have different evidence and implementation status. Check the status and version before relying on them.
+
+- [Ear clipping](geometry/ear-clipping.md) — triangulate one simple polygon ring, with a tested exact-predicate teaching baseline.
