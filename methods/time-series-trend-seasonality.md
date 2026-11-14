@@ -79,7 +79,15 @@ It is non-parametric in the sense that it does not require a Gaussian location m
 
 Use it as a single-break diagnostic, with attention to trend removal, autocorrelation and multiple testing across many locations.
 
-## Executable teaching implementation\n\nA tested implementation of Pettitt's rank statistic, including average-rank handling for ties, is available in the [change-point detection package](../implementations/python/change-point-detection/README.md#pettitt-single-change-point-test), alongside CUSUM, binary segmentation, PELT and a bounded BOCPD model. The Pettitt p-value is the conventional large-sample approximation and relies on independent observations under the null; it should not be read as autocorrelation-robust significance.\n\n## Executable teaching implementations\n\nThe [Theil–Sen package](../implementations/python/theil-sen/README.md) implements the median pairwise slope and median intercept, using actual numeric time coordinates so irregular sampling is respected. It is a point estimator, not an autocorrelation-adjusted significance test. The [Pettitt implementation](../implementations/python/change-point-detection/README.md#pettitt-single-change-point-test) tests for one rank-based location shift and reports a large-sample approximate p-value under an independent-observation null.\n\n## 5. ARIMA: model temporal dependence
+## Executable teaching implementations
+
+- [STL decomposition](../implementations/python/stl-decomposition/README.md) wraps the statsmodels reference implementation, with input validation, reconstruction tests, a walkthrough and a lab. It is explicitly not a from-scratch LOESS implementation.
+- [Theil–Sen](../implementations/python/theil-sen/README.md) implements the median pairwise slope and median intercept, respecting irregular time coordinates.
+- [Pettitt](../implementations/python/change-point-detection/README.md#pettitt-single-change-point-test) implements a tie-aware rank statistic and conventional large-sample p-value approximation.
+
+These estimators and tests have different assumptions. In particular, Theil–Sen is a point estimator, Pettitt's null calibration assumes independent observations, and STL assumes regularly sampled observations. None automatically handles spatial dependence or sensor-induced artefacts.
+
+## 5. ARIMA: model temporal dependence
 
 An autoregressive integrated moving-average model combines differencing, autoregression and moving-average terms. In backshift notation, a non-seasonal ARIMA(p,d,q) can be written as
 
