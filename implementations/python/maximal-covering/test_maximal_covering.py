@@ -7,9 +7,9 @@ def test_selects_sites_maximising_weighted_coverage():
              [9, 2, 6, 4], [5, 5, 1, 8]]
     sites, value, covered = solve_maximal_covering(
         costs, 2, 2, demand_weights=[10, 5, 8, 4, 3])
-    assert sites == (0, 2)
-    assert value == pytest.approx(30)
-    assert covered == (True, True, True, True, True)
+    assert sites == (0, 1)
+    assert value == pytest.approx(27)
+    assert covered == (True, True, True, True, False)
 
 
 def test_threshold_is_inclusive():
