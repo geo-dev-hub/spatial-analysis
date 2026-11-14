@@ -120,3 +120,22 @@ Passing the code tests proves the splitter contract, not the suitability of a sp
 **Spatial k-fold by clustering** applies deterministic farthest-first k-means to projected coordinates and assigns each resulting cluster to one test fold. It does not guarantee equal fold sizes, contiguous geographic regions or alignment with ecological/administrative units. It is not NNDM or kNNDM.
 
 Use these as baselines only after defining the deployment question. Compare fold maps, distances, sample sizes and covariate distributions before interpreting validation scores.
+
+
+## Strict leave-location-and-time-out (LLTO)
+
+When the deployment task requires transfer to both unseen locations and unseen times, a strict LLTO fold can withhold one observed location/time pair. For held-out location \(s\) and time \(t\):
+
+- **Test:** rows at \(s\) and \(t\).
+- **Buffer:** rows at \(s\) at other times, plus rows at other locations at \(t\).
+- **Train:** rows at other locations and other times.
+
+The buffer is excluded from both training and testing for that fold. This prevents training examples from sharing either the held-out location or held-out time. Every observed location/time pair generates a fold; every input row appears in exactly one test fold.
+
+This is stricter than leaving out only one location or one time slice and can leave very little training data. It is not rolling-origin forecasting, a spatial-distance buffer, NNDM or kNNDM. Use it only when joint space-and-time transfer is the prediction target.
+
+- [LLTO implementation](../implementations/python/spatiotemporal-validation/README.md)
+- [Tests](../implementations/python/spatiotemporal-validation/test_spatiotemporal_validation.py)
+- [Intern walkthrough](../implementations/python/spatiotemporal-validation/walkthrough.md)
+- [Visual lab](../notebooks/spatiotemporal-llto-lab.ipynb)
+
