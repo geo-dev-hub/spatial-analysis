@@ -112,8 +112,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all sixty-four Python implementation packages and execute all fifty notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree and point-location labs are included in notebook execution.
-- [x] Confirm a successful Actions run for all twenty-eight Python implementation suites, the Clipper2 C# smoke test, internal links and all twenty-one notebook executions. A later DBSCAN ambiguous-border regression case is being revalidated in a follow-up run.
+- [x] GitHub Actions workflow configured to test all seventy-eight Python implementation packages and execute all sixty-six notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree and point-location labs are included in notebook execution.
+- [x] Confirm successful full-head Actions run `43558998747` for the current branch head `5a50336720590105eebc1b9891db0ba85e7d1423`: all 81 workflow jobs passed, including 78 Python package suites, 66 notebook executions, internal-link checks and Clipper2 checks.
 - [x] Add regression tests for polygon validity, clipping, overlay topology and precision-grid input contracts.
 - [ ] Add regression tests whenever a real edge case is discovered.
 - [ ] Add representative workloads before drawing broader performance conclusions.
@@ -184,10 +184,10 @@ The current GitHub state has been checked directly rather than inferred from ear
 - Pull request: [#1 — Continue the spatial analysis compendium](https://github.com/geo-dev-hub/spatial-analysis/pull/1).
 - State: open, draft and unmerged.
 - Branch: `compendium/section-01-geometry-continuation`; base: `main`.
-- Current comparison: **1,434 commits ahead and 129 behind** the base; GitHub reports the comparison as diverged and the pull request as not mergeable.
+- Current comparison: **1,441 commits ahead and 129 behind** the base; GitHub reports the comparison as diverged and the pull request as not mergeable.
 - Merge base: `e7a3600f8b2dd6cbede1486935b69b64cc01fcb7`.
 - The branch contains a large body of work, but the divergence must be reconciled deliberately. Do not force-push, merge, or rebase blindly.
-- The configured validation inventory is **78 Python package suites and 66 notebook executions**, with internal-link and Clipper2 checks. No full-head green CI result is currently confirmed; missing status data is not a pass.
+- The configured validation inventory is **78 Python package suites and 66 notebook executions**, with internal-link and Clipper2 checks. Full-head run [43558998747](https://github.com/geo-dev-hub/spatial-analysis/actions/runs/43558998747) completed successfully on `5a50336720590105eebc1b9891db0ba85e7d1423`, with all 81 jobs passing. This validates the configured checks on that commit; it does not establish source accuracy, rights clearance or publication readiness.
 - The Section 6 continuation now includes accessibility distribution diagnostics, group-constrained maximal covering, deterministic r-covering, MEXCLP expected availability and M/M/c queueing. These are explicitly scoped teaching models, not a claim that the full location-science, stochastic reliability or fairness literature is complete.
 
 ### Release blockers
@@ -214,7 +214,7 @@ Added a deterministic r-covering extension to the location-science path.
 - Integrated into the Section 6 catalogue, algorithm index, coverage matrix, location-science learning path and CI workflow.
 - Validation inventory is now **78 Python package suites and 66 notebook executions**.
 
-The solver is intentionally scoped as deterministic redundancy screening. It does not estimate outage probabilities, correlated failures, spare capacity or queueing. Representative solver behaviour and invalid-parameter checks were independently exercised during authoring; the GitHub Actions run for the corrected test commit is pending and must be inspected before calling the package CI-validated.
+The solver is intentionally scoped as deterministic redundancy screening. It does not estimate outage probabilities, correlated failures, spare capacity or queueing. The full-head GitHub Actions run `43558998747` passed the backup-coverage package suite and all notebook executions on commit `5a50336720590105eebc1b9891db0ba85e7d1423`.
 
 
 ## 8. Service queueing learning package — 14 November 2026
@@ -228,4 +228,4 @@ Added a separate M/M/c service-operations model to the Section 6 learning path.
 - Integrated into the algorithm index, Section 6 catalogue, coverage matrix, location-science path and CI workflow.
 - Validation inventory is now **78 Python package suites and 66 notebook executions**.
 
-The package is a stationary M/M/c teaching model, not a time-varying simulation. Representative formula and invariant checks passed during authoring. GitHub Actions still needs a completed run on the final branch head before this addition can be marked CI-validated.
+The package is a stationary M/M/c teaching model, not a time-varying simulation. The full-head GitHub Actions run `43558998747` passed the M/M/c package suite and all notebook executions on commit `5a50336720590105eebc1b9891db0ba85e7d1423`.
