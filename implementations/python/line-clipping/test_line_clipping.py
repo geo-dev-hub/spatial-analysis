@@ -23,6 +23,8 @@ class LineClippingTests(unittest.TestCase):
    self.assertAlmostEqual(got[0][0],0); self.assertAlmostEqual(got[1][0],10)
  def test_cyrus_beck_reject(self):
   self.assertIsNone(cyrus_beck((-5,-5),(-1,-1),[(0,0),(10,0),(10,10),(0,10)]))
+ def test_cyrus_beck_rejects_concave_window(self):
+  with self.assertRaises(ValueError): cyrus_beck((-1,2),(5,2),[(0,0),(4,0),(2,1),(4,4),(0,4)])
  def test_invalid_window(self):
   with self.assertRaises(ValueError): cyrus_beck((0,0),(1,1),[(0,0),(1,1)])
   with self.assertRaises(ValueError): liang_barsky((0,0),(1,1),(2,0,1,1))
