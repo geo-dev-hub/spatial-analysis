@@ -138,3 +138,29 @@ def hysteresis_plume_segmentation(image, low_threshold, high_threshold, *,
     return {"mask":labels>0,"labels":labels,"objects":objects,
             "smoothed_image":smoothed,"low_threshold":low,
             "high_threshold":high,"connectivity":connectivity}
+
+
+def robust_local_background(image, *, window_size=15, scale_floor=1e-6):
+    """Estimate a local median background and MAD-standardized enhancement.
+
+    The odd square median window should be wider than the plume cross-section
+    but smaller than the background-variation scale. The robust scale is
+    1.4826 times the local median absolute deviation of residuals. A positive
+    floor prevents division by zero in locally constant regions.
+    """
+    from scipy.ndimage import median_filter
+    data=_finite_array(image,"image")
+    if not isinstance(window_size,(int,np.integer)) or window_size<3 or window_size%2==0:
+        raise ValueError("window_size must be an odd integer >= 3")
+    floor=float(scale_floor)
+    if not np.isfinite(floor) or floor<=0:
+        raise ValueError("scale_floor must be positive and finite")
+    background=median_filter(data,size=window_size,mode="reflect")
+    residual=data-background
+    local_mad=median_filter(np.abs(residual),size=window_size,mode="reflect")
+    robust_sigma=1.4826*local_mad
+    scale=np.maximum(robust_sigma,floor)
+    return {"background":background,"enhancement":residual,
+            "local_mad":local_mad,"robust_sigma":robust_sigma,
+            "standardized_enhancement":residual/scale,
+            "scale_floor":floor,"window_size":int(window_size)}
