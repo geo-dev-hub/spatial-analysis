@@ -154,7 +154,7 @@ Bayesian online change-point detection has now been added as a bounded conjugate
 | 22 | Werner deconvolution | Windowed linearized 2D single-thin-dike solver; seven-point default, centered/scaled least squares, source position/depth and model coefficients; synthetic recovery tests, walkthrough and lab | Implemented / tested candidate; thick-interface, regional-interference, multi-source and nonlinear-refinement variants remain open |
 | 22 | Upward continuation | Spectral exponential attenuation `exp(-kh)` with known-mode attenuation tests and explicit periodic-grid contract | Implemented / tested candidate |
 | 22 | Downward continuation | Tikhonov spectral inverse of upward continuation with positive regularisation, DC-mean preservation, low-frequency recovery and high-frequency damping tests | Implemented / tested candidate; regularisation selection and boundary/reference review pending |
-| 22 | Matched filtering | No implementation verified | Open |
+| 22 | Matched filtering | Supplied-model equivalent-layer amplitude matched-bandpass decomposition; tests, walkthrough and synthetic lab; automatic radial-spectrum fitting and azimuthal filters remain open | Implemented / tested candidate; model fitting and boundary/reference review pending |
 
 The package assumes a regular grid and periodic FFT boundary conditions. It is not an inversion or source-depth estimator. Technical review and reference-equivalence checks remain pending.
 
@@ -176,7 +176,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Potential fields | First vertical derivative | numerical operation | Radial-wavenumber spectral operator and periodic-cosine test added | Implemented / tested candidate |
 | Potential fields | Euler deconvolution | algorithm / estimator | Windowed least-squares homogeneity equation with synthetic parameter-recovery tests | Implemented / tested candidate; model assumptions and structural-index sensitivity review pending |
 | Potential fields | Werner deconvolution | algorithm / estimator | Windowed linearized 2D single-thin-dike solver; synthetic recovery tests, walkthrough and lab | Implemented / tested candidate; thick-interface, regional-interference and multi-source variants remain open |
-| Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
+| Potential fields | Matched filtering | signal-processing method | Supplied-model equivalent-layer amplitude matched-bandpass decomposition; tests, walkthrough and synthetic lab | Implemented / tested candidate; automatic radial-spectrum fitting and azimuthal filters remain open |
 | Potential fields | Upward continuation | spectral operation | `implementations/python/potential-field/` Fourier multiplier `exp(-kh)`; exact periodic-mode attenuation test | Implemented / tested candidate; boundary/reference review pending |
 | Potential fields | Downward continuation | unstable inverse spectral operation | Tikhonov-regularised spectral inverse with positive regularisation and DC-mean preservation | Implemented / tested candidate; regularisation selection and boundary/reference review pending |
 | Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
