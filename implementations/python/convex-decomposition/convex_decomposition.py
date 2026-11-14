@@ -77,7 +77,8 @@ def _merge_if_convex(a: Sequence[Point], b: Sequence[Point]) -> list[Point] | No
                   candidate[(k + 1) % len(candidate)]) < 0
            for k in range(len(candidate))):
         return None
-    return candidate
+    start = min(range(len(candidate)), key=lambda k: (candidate[k][1], candidate[k][0]))
+    return candidate[start:] + candidate[:start]
 
 
 def convex_decompose(vertices: Iterable[RawPoint]) -> list[list[Point]]:
@@ -89,7 +90,8 @@ def convex_decompose(vertices: Iterable[RawPoint]) -> list[list[Point]]:
     The result is a valid convex partition, not necessarily a minimum-cardinality
     partition. Holes and self-intersecting inputs are unsupported.
     """
-    triangles = triangulate(vertices)
+    ring = list(vertices)
+    triangles = triangulate(ring)
     pieces: list[list[Point]] = [list(t) for t in triangles]
 
     changed = True
@@ -106,7 +108,7 @@ def convex_decompose(vertices: Iterable[RawPoint]) -> list[list[Point]]:
                     changed = True
                     break
 
-    expected_area = polygon_area(vertices)
+    expected_area = polygon_area(ring)
     actual_area = sum((abs(_area2(piece)) / 2 for piece in pieces), Fraction(0))
     if actual_area != expected_area:
         raise RuntimeError("convex partition failed area conservation")
