@@ -46,7 +46,7 @@ def identify_objects(field, *, threshold, smooth_sigma=0.0, min_area=1, connecti
             orientation=float(np.arctan2(vector[1],vector[0]))
         else:
             cy=float(rows.mean()); cx=float(cols.mean()); orientation=0.0
-        objects.append({"id":len(objects)+1,"area":int(rows.size),"centroid_x":cx,
+        new_id=len(objects)+1\n        labels[labels==old_id]=new_id\n        objects.append({"id":new_id,"area":int(rows.size),"centroid_x":cx,
                         "centroid_y":cy,"orientation_radians":orientation,
                         "intensity_sum":mass,"intensity_mean":float(values.mean()),
                         "intensity_max":float(values.max())})
@@ -70,7 +70,7 @@ def match_objects(forecast_objects, observed_objects, field_shape, *,
         raise ValueError("distance limits must be positive and weights non-negative")
     for obj in f+o:
         required=("id","area","centroid_x","centroid_y","intensity_mean")
-        if any(k not in obj for k in required) or obj["area"]<=0 or obj["intensity_mean"]<=0:
+        if any(k not in obj for k in required) or obj["area"]<=0 or obj["intensity_mean"]<0:
             raise ValueError("objects require positive area/intensity and centroid attributes")
         if not np.all(np.isfinite([obj["centroid_x"],obj["centroid_y"],obj["intensity_mean"]])):
             raise ValueError("object attributes must be finite")
@@ -83,7 +83,7 @@ def match_objects(forecast_objects, observed_objects, field_shape, *,
         for j,b in enumerate(o):
             distance=np.hypot(a["centroid_x"]-b["centroid_x"],a["centroid_y"]-b["centroid_y"])/diagonal
             area_error=abs(np.log(float(a["area"])/float(b["area"])))
-            intensity_error=abs(np.log(float(a["intensity_mean"])/float(b["intensity_mean"])))
+            intensity_error=abs(np.log((float(a["intensity_mean"])+1e-12)/(float(b["intensity_mean"])+1e-12)))
             costs[i,j]=distance_weight*distance+area_weight*area_error+intensity_weight*intensity_error
     rows,cols=linear_sum_assignment(costs)
     matches=[]
