@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import deque
 from dataclasses import dataclass
 from math import isfinite
+from numbers import Integral
 from typing import Sequence
 
 @dataclass(frozen=True)
@@ -25,12 +26,13 @@ def adaptive_cluster_sample(values:Sequence[float],neighbours:Sequence[Sequence[
     n=len(y)
     if n==0 or any(not isfinite(v) for v in y):raise ValueError("values must be non-empty and finite")
     if len(neighbours)!=n:raise ValueError("neighbours must have one adjacency list per unit")
-    if not isfinite(float(threshold)):raise ValueError("threshold must be finite")
+    threshold=float(threshold)
+    if not isfinite(threshold):raise ValueError("threshold must be finite")
     graph=[]
     for i,row in enumerate(neighbours):
         items=[]
         for j in row:
-            if not isinstance(j,int) or isinstance(j,bool) or not 0<=j<n:raise ValueError("neighbour indices must be valid integers")
+            if not isinstance(j,Integral) or isinstance(j,bool) or not 0<=j<n:raise ValueError("neighbour indices must be valid integers")
             if j!=i and j not in items:items.append(j)
         graph.append(items)
     for i,row in enumerate(graph):
@@ -38,7 +40,7 @@ def adaptive_cluster_sample(values:Sequence[float],neighbours:Sequence[Sequence[
             if i not in graph[j]:raise ValueError("neighbour graph must be symmetric")
     initial=[]
     for i in initial_sample:
-        if not isinstance(i,int) or isinstance(i,bool) or not 0<=i<n:raise ValueError("initial sample indices must be valid integers")
+        if not isinstance(i,Integral) or isinstance(i,bool) or not 0<=i<n:raise ValueError("initial sample indices must be valid integers")
         if i not in initial:initial.append(i)
     if not initial:raise ValueError("initial sample must be non-empty")
     sampled=set(initial);queue=deque(initial)
