@@ -103,6 +103,14 @@ Funke, Sanders and Georgiadis report an implementation of an optimal O(n log n)-
 
 The Yao construction should not be conflated with Delaunay filtering. The graph family has a different nearest-in-cone definition and requires its own candidate-search method.
 
+### Delaunay-filtered reference implementation
+
+The package now includes Delaunay-filtered Gabriel and RNG functions in addition to the all-pairs reference methods. They construct a SciPy/Qhull triangulation, extract its O(n) planar edge set, and apply the same open-region blocker tests to those candidates. Since the blocker test scans all n sites per candidate, this implementation is O(n²) overall rather than O(n³) for the all-pairs pair-and-blocker scan.
+
+This is an intermediate engineering step, not the specialised linear-time RNG filtering algorithm. Lingas (1994) gives a linear-time construction of the RNG from a Delaunay triangulation under the paper's assumptions. The teaching implementation deliberately keeps the blocker test explicit so learners can compare the candidate reduction with the more advanced local method.
+
+**Degeneracy warning:** a cocircular point set can have multiple valid Delaunay triangulations. Qhull returns one choice. Under an open-disk Gabriel convention, more than one boundary-tie diagonal may qualify, so filtering a single triangulation can omit a valid tie edge. Use general-position fixtures for direct equality comparisons, and study degeneracies separately.
+
 ### What the current package covers
 
 The current Python package remains a small-input baseline for Gabriel, RNG, one lune-based beta-skeleton variant, one Yao variant and Euclidean MST. It does not implement Lingas's Delaunay-based construction or the optimal Yao algorithm. The research above is a design direction for a future scalable package, not a claim that the current code has those bounds.
