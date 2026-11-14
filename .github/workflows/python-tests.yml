@@ -43,6 +43,9 @@ jobs:
           - example: curves-smoothing
             directory: implementations/python/curves-smoothing
             pythonpath: ""
+          - example: forecast-verification
+            directory: implementations/python/forecast-verification
+            pythonpath: ""
           - example: polygon-intersection
             directory: implementations/python/polygon-intersection
             pythonpath: ""
@@ -411,6 +414,7 @@ jobs:
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/line-clipping-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/hmm-viterbi-lab.ipynb
           python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/curves-smoothing-lab.ipynb
+          python -m nbconvert --to notebook --execute --output-dir /tmp/notebook-output --ExecutePreprocessor.timeout=180 notebooks/forecast-verification-lab.ipynb
 
   clipper2:
     name: Clipper2 C# offset checks
