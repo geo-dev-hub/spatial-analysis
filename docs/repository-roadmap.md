@@ -23,6 +23,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Preserve the 47-page source transcription and original page boundaries.
 - [x] Preserve the original 22 section headings and editorial cautions.
 - [x] Publish a coverage matrix that distinguishes captured material from researched material.
+- [x] Define the [compendium completion standard](compendium-completion-standard.md), including record-kind-specific deliverables, implementation tiers, notebook criteria and release gates.
 - [x] Extract and classify the source entries across all 22 sections; preserve original groupings and labels.
 - [ ] Verify names, variants and claims against authoritative sources.
 - [x] Record source-page provenance in the item-level section indexes.
@@ -65,8 +66,8 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [ ] Extend spatial indexing into dynamic trees, octrees, ball/VP trees and space-filling curves.
 - [ ] Extend spatial statistics with spatial correlograms, point-pattern analysis and spatial regression.
 - [x] Add a spatial cross-validation lesson and tested grid-block/buffered-fold baseline with an intern walkthrough; keep block-size selection and deployment-specific design as explicit research decisions.
-- [x] Add a line-clipping method lesson comparing Cohen–Sutherland, Liang–Barsky and Cyrus–Beck, with parameter derivations, worked example, numeric contracts and test plan; implementation remains open.
-- [x] Add a rasterization method lesson distinguishing DDA, Bresenham, Wu, scanline fill, supercover traversal and fractional coverage; implementation remains open.
+- [x] Add a line-clipping lesson and tested Python implementations of Cohen–Sutherland, Liang–Barsky and Cyrus–Beck, with tests, walkthrough and executable notebook; Nicholl–Lee–Nicholl remains unimplemented.
+- [x] Add a rasterisation lesson and tested Python implementations of DDA, Bresenham, Wu, scanline fill and supercover traversal, with tests, walkthrough and executable notebook; exact fractional-area coverage remains open.
 - [x] Add a curve and smoothing guide separating Chaikin subdivision, Catmull–Rom interpolation, Bézier/B-spline/NURBS design curves and Kalman/RTS trajectory smoothing; implementations remain open.
 - [x] Add a masked-autoencoding method lesson and tested NumPy patch masking/restoration baseline with an intern walkthrough; do not present it as a trained foundation model.
 - [x] Add a seven-parameter Helmert Position Vector lesson and tested geocentric XYZ implementation, including a published IOGP example and inverse-transform tests.
@@ -345,14 +346,26 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - [x] Render the Gneiting-class space-time covariance equations in the lesson, implementation README and intern walkthrough; align the displayed absolute temporal lag with the implementation.
 - [x] Recount the current CI configuration: 78 Python package suites and 70 notebook executions, plus internal-link and Clipper2 checks. The previous full validation on commit 0327318 passed; the newer catalogue/formula batch still requires a full-head run.
 
-- [x] Add a mesh-geodesics research guide comparing MMP, Chen–Han and fast marching on triangulated domains; implementation remains open.
+- [x] Add a mesh-geodesics research guide comparing MMP, Chen–Han and fast marching on triangulated domains; exact and numerical implementations remain open.
 
-- [x] Add a discrete-global-grid guide comparing ISEA3H, rHEALPix and HTM, and distinguish DGGRID software from grid definitions; implementation remains open.
+- [x] Add a discrete-global-grid guide comparing ISEA3H, rHEALPix and HTM, and distinguish DGGRID software from grid definitions; grid construction and indexing implementations remain open.
 
-- [x] Add a change-point detection guide comparing CUSUM, binary segmentation, PELT, BOCPD and BEAST, with spatial time-series validation concerns; implementations remain open.
+- [x] Add a change-point detection guide comparing CUSUM, binary segmentation, PELT, BOCPD and BEAST, with spatial time-series validation concerns; executable comparisons remain open.
 
 - [x] Add a spatial time-series guide covering STL, Theil–Sen, Pettitt, ARIMA, Prophet and Kalman filtering, with spatial and temporal validation guidance; implementations remain open.
 
-- [x] Add a forecast-verification guide covering contingency-table scores, proper probabilistic scoring, FSS, SAL and MODE; implementations remain open.
+- [x] Add a forecast-verification guide covering contingency-table scores, proper probabilistic scoring, FSS, SAL and MODE; metric implementations and worked verification experiments remain open.
 
-- [x] Add an optical-flow guide comparing Lucas–Kanade, Farnebäck and DIS, with georeferencing, Earth-observation failure modes and validation requirements; implementations remain open.
+- [x] Add an optical-flow guide comparing Lucas–Kanade, Farnebäck and DIS, with georeferencing, Earth-observation failure modes and validation requirements; tested image-flow and geospatial conversion examples remain open.
+
+
+## Compendium continuation: implementation and learning completeness
+
+- [x] Restore the source compendium as the master specification; keep the source transcription, technical lessons, implementations and learning system as distinct linked layers.
+- [x] Add a record-kind-aware completion standard so algorithms, models, metrics, software, standards and workflows receive appropriate deliverables rather than being forced into identical Python packages.
+- [ ] Audit all 22 source indexes against the actual canonical lessons, implementations, tests, notebooks, exercises and rights records; do not infer coverage from file counts.
+- [ ] Split broad grouped source rows into child records while preserving parent/source-page provenance.
+- [ ] Finish implementation/integration decisions for all entries where executable treatment is appropriate; explicitly justify research-only and reference-only records.
+- [ ] Complete primary-source, technical-claim, reproducibility and rights review.
+- [ ] Run full CI and notebook execution on the exact release candidate commit; resolve any failure or document a narrowly scoped exclusion.
+- [ ] Complete visual, navigation, accessibility and mobile QA before publishing the first edition and beginning Patreon work.
