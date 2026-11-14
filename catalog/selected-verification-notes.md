@@ -58,3 +58,26 @@ These notes record bounded checks against publisher or institutional bibliograph
 - Review type: bibliographic identity and metadata check.
 - Technical-claim status: not promoted by these notes.
 - Rights status: link-only for the cited papers; no third-party content reused.
+
+
+## Section 10 — Line clipping
+
+**Source entry:** “Line clipping: Cohen-Sutherland, Liang-Barsky, Cyrus-Beck, Nicholl-Lee-Nicholl” (source page 21).
+
+- **Identity and technical scope:** the canonical lesson treats Cohen–Sutherland as an outcode/encoding method, Liang–Barsky as parametric clipping against an axis-aligned rectangle, and Cyrus–Beck as parametric clipping against convex half-spaces. It explicitly does not claim that Cyrus–Beck handles arbitrary concave windows or that segment clipping alone produces clipped polygon output.
+- **Bibliography:** Matthes, J. and Drakopoulos, V. (2022), “Line Clipping in 2D: Overview, Techniques and Algorithms,” *Journal of Imaging*, 8(10), 286, DOI [10.3390/jimaging8100286](https://doi.org/10.3390/jimaging8100286). The publisher's open-access article surveys the major line-clipping families and named algorithms.
+- **Technical-claim status:** the lesson's high-level taxonomy and algorithm distinctions are checked against the review. The equations are presented as teaching derivations; they have not been validated against a new implementation in this repository.
+- **Implementation:** no new clipping implementation is claimed. The lesson includes a manual test plan but no executable test suite.
+- **Rights:** DOI link only; no article text or figures reproduced.
+- **Remaining work:** independently inspect the exact parameter-sign convention and edge cases in a future tested implementation; verify Nicholl–Lee–Nicholl separately if it becomes a full lesson.
+
+## Section 10 — Rasterization and grid traversal
+
+**Source entry:** “Line and polygon rasterization: Bresenham, DDA, Wu's anti-aliased line, scanline polygon fill, supercover lines” (source page 21).
+
+- **Identity and scope:** the lesson distinguishes thin-line rasterisation, anti-aliased display, polygon scan conversion, supercover cell visitation and fractional-area coverage. It does not treat these outputs as interchangeable.
+- **Bibliography:** Levoy, M., Stanford CS 248, [Rasterization algorithms](https://www.graphics.stanford.edu/courses/cs248-08/scan/scan1.html), lecture notes covering DDA, Bresenham and polygon scan conversion; Wu, X. (1991), “An Efficient Antialiasing Technique,” *Computer Graphics*, 25(4), 143–152, DOI [10.1145/127719.122734](https://doi.org/10.1145/127719.122734); Amanatides, J. and Woo, A. (1987), “A Fast Voxel Traversal Algorithm for Ray Tracing,” *Eurographics*, DOI [10.2312/egtp.19871000](https://doi.org/10.2312/egtp.19871000).
+- **Technical-claim status:** method distinctions and the need to state sample, edge, corner and cell-coverage conventions are checked against the cited teaching and research sources. The lesson's cell-coverage equations are definitions, not claims that a particular library implements exact coverage.
+- **Implementation:** no new rasterization or traversal code is claimed. The lesson includes a test-design specification.
+- **Rights:** links only; no third-party text or figures reproduced.
+- **Remaining work:** verify each algorithm's exact variant and build independent, tested implementations with explicit row/column, affine-grid, boundary and NoData contracts.
