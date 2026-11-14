@@ -20,7 +20,7 @@ def kalman_rts_smoother(observations,transition,observation_matrix,process_covar
 
     observations has shape (time, observation_dimension); NaN entries denote
     missing observations. A fully missing row performs prediction only.
-    Returns filtered and smoothed state means/covariances plus predictions.
+    The initial state/covariance are the prior before the first transition. Returns filtered and smoothed state means/covariances plus predictions.
     """
     F=_matrix(transition,"transition");H=_matrix(observation_matrix,"observation_matrix")
     x0=np.asarray(initial_state,dtype=float)
@@ -52,7 +52,7 @@ def kalman_rts_smoother(observations,transition,observation_matrix,process_covar
         xf[t]=x;Pf[t]=P
     xs=xf.copy();Ps=Pf.copy()
     for t in range(n-2,-1,-1):
-        J=np.linalg.solve(Pp[t+1],(Pf[t]@F.T).T).T
+        J=(Pf[t]@F.T)@np.linalg.pinv(Pp[t+1])
         xs[t]=xf[t]+J@(xs[t+1]-xp[t+1])
         Ps[t]=Pf[t]+J@(Ps[t+1]-Pp[t+1])@J.T
         Ps[t]=(Ps[t]+Ps[t].T)/2
