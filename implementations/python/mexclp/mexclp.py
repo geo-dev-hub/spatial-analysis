@@ -30,9 +30,17 @@ def solve_mexclp(
         raise ValueError("costs must be finite and non-negative")
     if not isinstance(p, int) or isinstance(p, bool) or p < 0:
         raise ValueError("p must be a non-negative integer")
-    if not isfinite(service_threshold) or service_threshold < 0:
+    try:
+        threshold = float(service_threshold)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("service_threshold must be finite and non-negative") from exc
+    if not isfinite(threshold) or threshold < 0:
         raise ValueError("service_threshold must be finite and non-negative")
-    if not isfinite(busy_fraction) or not 0 <= busy_fraction < 1:
+    try:
+        q = float(busy_fraction)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("busy_fraction must be in [0, 1)") from exc
+    if not isfinite(q) or not 0 <= q < 1:
         raise ValueError("busy_fraction must be in [0, 1)")
     n, m = len(matrix), len(matrix[0])
     if demand_weights is None:
@@ -45,14 +53,14 @@ def solve_mexclp(
         if len(weights) != n or any(not isfinite(value) or value < 0 for value in weights):
             raise ValueError("demand_weights must be finite, non-negative and match demand rows")
 
-    eligible = [[value <= service_threshold for value in row] for row in matrix]
+    eligible = [[value <= threshold for value in row] for row in matrix]
     best_sites: tuple[int, ...] | None = None
     best_contributions: tuple[float, ...] = ()
     best_value = float("-inf")
     for sites in combinations_with_replacement(range(m), p):
         counts = [sum(1 for site in sites if eligible[i][site]) for i in range(n)]
         contributions = tuple(
-            weights[i] * (1.0 - busy_fraction ** counts[i]) for i in range(n)
+            weights[i] * (1.0 - q ** counts[i]) for i in range(n)
         )
         value = sum(contributions)
         if value > best_value or (value == best_value and (best_sites is None or sites < best_sites)):
