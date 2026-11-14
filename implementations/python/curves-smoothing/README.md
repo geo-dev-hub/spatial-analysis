@@ -1,6 +1,6 @@
 # Curve construction teaching implementations
 
-This package includes Chaikin corner cutting, Catmull–Rom interpolation, arbitrary-degree Bezier evaluation by de Casteljau, and B-spline/NURBS evaluation by de Boor's algorithm.
+This package includes Chaikin corner cutting, Catmull–Rom interpolation, arbitrary-degree Bezier evaluation by de Casteljau, and B-spline/NURBS evaluation by de Boor's algorithm, and linear-Gaussian Kalman filtering with Rauch–Tung–Striebel (RTS) fixed-interval smoothing.
 
 B-spline/NURBS inputs are planar control points, degree, nondecreasing knot vector and parameter in the closed spline domain. The knot vector length is control_count + degree + 1. NURBS weights must be finite and non-zero. Sampling functions include both domain endpoints.
 
