@@ -10,7 +10,7 @@ class ViterbiTests(unittest.TestCase):
  def test_empty_sequence(self):
   self.assertEqual(viterbi_decode((),self.states,self.symbols,self.start,self.trans,self.emit),([],0.0))
  def test_zero_probability_sequence_rejected(self):
-  with self.assertRaises(ValueError): viterbi_decode(('clean',),self.states,self.symbols,(1,0),self.trans,((0,0,1),(0,0,1)))
+  with self.assertRaises(ValueError): viterbi_decode(('clean',),self.states,self.symbols,(1,0),self.trans,((1,0,0),(1,0,0)))
  def test_unknown_symbol(self):
   with self.assertRaises(ValueError): viterbi_decode(('unknown',),self.states,self.symbols,self.start,self.trans,self.emit)
  def test_bad_probability_sum(self):
