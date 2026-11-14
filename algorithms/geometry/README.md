@@ -7,6 +7,7 @@
 - [Line simplification](simplification.md)
 - [Polygon coverage simplification](coverage-simplification.md)
 - [Precision models and snap rounding](precision-models.md)
+- [Snap rounding noder](snap-rounding.md)
 - [Polygon offsetting](offsetting.md)
 - [Proximity graphs](proximity-graphs.md)
 - [Planar point location](point-location.md)
