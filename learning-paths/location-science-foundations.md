@@ -32,7 +32,7 @@ Read [Location set covering](../algorithms/optimization/set-covering.md) and run
 
 ### 4. Measure potential service accessibility
 
-Read [Two-step floating catchment area](../algorithms/optimization/two-step-fca.md) and run the [2SFCA notebook](../notebooks/two-step-fca-accessibility-lab.ipynb). It compares provider supply with population demand in a travel catchment, then calculates an accessibility score for each population location. The baseline uses a binary catchment; distance-decay variants remain a separate extension.
+Read [Two-step floating catchment area](../algorithms/optimization/two-step-fca.md) and run the [2SFCA notebook](../notebooks/two-step-fca-accessibility-lab.ipynb). It compares provider supply with population demand in a travel catchment, then calculates an accessibility score for each population location. The notebook compares the binary baseline with a separately named E2SFCA-style distance-decay extension, applying analyst-supplied travel-time-band weights in both steps. Change the band edges and weights and inspect how provider ratios and population scores respond.
 
 ### 5. Connect location to transport
 
