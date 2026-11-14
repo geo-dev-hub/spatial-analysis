@@ -4,7 +4,7 @@ This directory is the structured index of the project's knowledge inventory. It 
 
 ## Coverage
 
-See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest view of what is captured, what has been researched and where work remains. The matrix deliberately does not count a source transcription as verified coverage.
+See the [source-to-repository coverage matrix](coverage-matrix.md) for an honest view of what is captured, what has been researched and where work remains. The matrix deliberately does not count a source transcription as verified coverage. See the [source review dashboard](review-dashboard.md) for a dated count of all 694 source-entry rows and their current review labels.
 
 ## Intake source
 
