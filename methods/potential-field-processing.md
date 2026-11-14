@@ -92,7 +92,15 @@ This is a bounded single-thin-dike baseline. It expects a residual profile with 
 - [Walkthrough](../implementations/python/potential-field/werner-deconvolution-walkthrough.md)
 - [Synthetic recovery lab](../notebooks/werner-deconvolution-lab.ipynb)
 
-## 7. Grid and boundary assumptions
+## 7. Matched-bandpass separation of equivalent source layers
+
+An idealised equivalent source layer has radial Fourier-amplitude model \(A_j(k)=B_j k^{n_j}e^{-kz_j}\). For several layers, the matched amplitude filter is \(W_j(k)=A_j(k)/\sum_i A_i(k)\). Multiplying the observed Fourier grid by each filter and inverse transforming produces an approximate component associated with each equivalent layer. The filters sum to one at non-zero frequencies, so the components reconstruct the input grid.
+
+The [bounded implementation](../implementations/python/potential-field/matched-filtering-README.md) accepts caller-supplied layer amplitudes, depths and spectral exponents \(n\in\{-1,0,1\}\). It assigns the DC mean to an explicitly selected layer. It does not fit the radial spectrum, refine the model nonlinearly or implement azimuthal filters. See the [derivation and limitations](../implementations/python/potential-field/matched-filtering-walkthrough.md) and [synthetic lab](../notebooks/potential-field-matched-filtering-lab.ipynb).
+
+This is an approximate depth-separation filter, not a unique geological inversion. Equivalent-layer depths are model-dependent, and FFT periodic boundaries, edge leakage, anisotropy and overlapping spectra affect results.
+
+## 8. Grid and boundary assumptions
 
 The FFT operations assume a regular, uniformly spaced Cartesian grid and periodic boundaries. Edge mismatch creates spectral ringing. Pad and taper where appropriate, compare edge treatments and inspect borders. Do not apply these operators to geographic degrees without a suitable projection or local metric treatment.
 
