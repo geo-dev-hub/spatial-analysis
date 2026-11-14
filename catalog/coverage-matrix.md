@@ -98,3 +98,8 @@ The Section 6 queueing extension adds a dependency-free M/M/c implementation usi
 ## Potential-field algorithm update — 14 November 2026
 
 The potential-field package now includes a bounded 2D single-thin-dike Werner deconvolution alongside its spectral derivatives, continuation operators and Euler solver. The new [Werner package walkthrough](../implementations/python/potential-field/werner-deconvolution-walkthrough.md), [tests](../implementations/python/potential-field/test_werner_deconvolution.py) and [synthetic lab](../notebooks/werner-deconvolution-lab.ipynb) cover windowed linear recovery. Thick-interface transforms, regional interference modelling, multi-source clustering, nonlinear refinement and matched filtering remain open.
+
+
+## Geophysical gridding update — 14 November 2026
+
+A separate fixed-perimeter discrete biharmonic solver now minimizes squared five-point Laplacian curvature on regular grids, with affine-plane reproduction and spacing tests. It is intentionally not represented as the full Briggs scattered-data algorithm. The existing thin-plate spline remains a distinct radial-basis interpolator.
