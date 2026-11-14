@@ -27,3 +27,18 @@ Undefined ratios return `None`, not zero. ROC AUC returns `None` if either obser
 This package does not implement CRPS, ensemble rank histograms, Fractions Skill Score, SAL or MODE. It does not handle multi-category events, censoring, missing-value masks, spatial neighbourhoods, temporal dependence, confidence intervals or forecast-threshold selection. The scores are not a complete verification report: stratification, sample sizes, uncertainty and a defensible held-out design remain the analyst's responsibility.
 
 These are transparent teaching implementations, not a substitute for a domain-validated operational verification system.
+
+
+## Spatial neighbourhood verification: Fractions Skill Score
+
+The separate spatial_fss.py module implements a transparent FSS baseline for paired regular 2D grids. It thresholds both fields, calculates event fractions in centred square neighbourhoods, then compares those fractions:
+
+$$FSS = 1 - \\frac{\\sum_i(P_i-O_i)^2}{\\sum_i P_i^2+\\sum_i O_i^2}.$$
+
+- window_size is a positive odd width in grid cells; 1 gives gridpoint verification.
+- edge_policy='truncate' clips windows at grid edges and uses the actual clipped area.
+- edge_policy='valid' evaluates only centres with complete windows.
+- A zero denominator returns None rather than silently declaring a no-event sample perfect.
+- Summed-area tables make each rectangular event-count query constant time after linear preprocessing.
+
+The implementation does not infer physical distance from cell count. Align grids before verification and report grid spacing, projection, threshold, physical window size, domain and edge policy. Missing-data masks, weighted neighbourhoods, SAL and MODE remain outside this package.
