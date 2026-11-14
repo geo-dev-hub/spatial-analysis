@@ -17,7 +17,7 @@ Each implementation should state:
 
 ### Forecast verification
 
-- [Binary-event forecast verification](python/forecast-verification/README.md): contingency-table counts and scores, Brier score/skill, reliability bins and tied-rank ROC AUC, with tests and an [intern walkthrough](python/forecast-verification/implementation-walkthrough.md). CRPS, ensemble and spatial/object-based metrics remain separate open work.
+- [Binary-event forecast verification](python/forecast-verification/README.md): contingency-table counts and scores, Brier score/skill, reliability bins and tied-rank ROC AUC, with tests and an [intern walkthrough](python/forecast-verification/implementation-walkthrough.md). A separate [Fractions Skill Score module](python/forecast-verification/spatial_fss.py) adds regular-grid neighbourhood verification, with a [scale lab](../notebooks/forecast-fractions-skill-score-lab.ipynb); CRPS, ensemble rank histograms, SAL and MODE remain open.
 
 ### Geometry and computational geometry
 
