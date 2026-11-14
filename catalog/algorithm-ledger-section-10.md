@@ -79,8 +79,8 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Probabilistic verification | CRPS decomposition | Not implemented; ensemble CRPS score is now separate and tested | Open |
 | Probabilistic verification | Rank histograms | Expected rank histogram with fractional tie handling, tests and notebook added | Implemented / tested candidate; calibration review pending |
 | Optical flow | Lucas–Kanade | Single-scale dense local implementation, tests, walkthrough and synthetic translation notebook added | Implemented / tested candidate; benchmark/reference review pending |
-| Optical flow | Farnebäck | Family guide; no matching implementation verified | Research / lesson only |
-| Optical flow | DIS | Family guide; no matching implementation verified | Research / lesson only |
+| Optical flow | Farnebäck | OpenCV-backed dense wrapper, parameter contract and synthetic translation test in `implementations/python/optical-flow/` | Implemented via reference dependency; broader benchmark and independent validation pending |
+| Optical flow | DIS | OpenCV DISOpticalFlow wrapper with preset/refinement parameters and synthetic translation test in `implementations/python/optical-flow/` | Implemented via reference dependency; broader benchmark and independent validation pending |
 | Optical flow | Variational optical flow | Family guide; no matching implementation verified | Research / lesson only |
 
 ## Spatial validation and adaptive sampling — source pages 21–22
