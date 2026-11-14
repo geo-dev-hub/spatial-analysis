@@ -118,3 +118,10 @@ The companion package now includes candidate-site selection with a Gaussian-proc
 A generic UCB1 implementation now accompanies the GP-UCB spatial candidate selector. It simulates independent stationary reward arms and uses the classical empirical-mean plus exploration-bound rule. It is useful as a baseline for survey allocation, but it does not model spatial correlation between sites; a spatial bandit requires a contextual or correlated reward model.
 
 - [UCB1 implementation and tests](../implementations/python/adaptive-sampling/ucb1.py)
+
+
+## Spatially constrained uncertainty sampling
+
+A one-round batch selector now ranks candidate map-validation sites by predictive uncertainty, optionally divided by survey cost, while enforcing a minimum separation between selected sites. It is a transparent greedy heuristic; it does not retrain the model, estimate inclusion probabilities or optimise global information gain.
+
+- [Implementation and tests](../implementations/python/adaptive-sampling/active_learning.py)

@@ -12,3 +12,6 @@ Run python -m pip install -r requirements.txt and python -m pytest -q.
 
 
 The package also includes generic UCB1 for independent stationary reward arms. This is a bandit baseline for comparing survey-site reward strategies; it does not model spatial correlation between candidate locations.
+
+
+The package also provides a one-round spatially constrained uncertainty sampler for map validation. It greedily ranks candidate sites by uncertainty (or uncertainty per unit cost) while enforcing a minimum distance between selected sites. This is a batch selection heuristic, not a complete active-learning loop or a design-based accuracy estimator.
