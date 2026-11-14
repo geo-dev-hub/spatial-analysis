@@ -19,7 +19,7 @@ def test_ipf_rejects_positive_control_without_seed_support():
         ipf_rake([1,1],[[1,0],[1,0]],[2,1])
 
 def test_ipf_reports_incompatible_margins_without_claiming_convergence():
-    result=ipf_rake([1,1],[[1,0],[0,1]],[10,20],max_iter=2)
+    result=ipf_rake([1,1],[[1,1],[1,1]],[10,20],max_iter=2)
     assert not result["converged"] and result["iterations"]==2
 
 @pytest.mark.parametrize("seed,design,target",[
