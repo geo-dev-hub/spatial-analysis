@@ -1,6 +1,6 @@
 # Source review dashboard
 
-Snapshot: 14 November 2026 (updated after Section 10 line-clipping and rasterization lessons)
+Snapshot: 14 November 2026 (updated after Section 10 line-clipping, rasterization and curves/smoothing lessons)
 
 This dashboard counts the source-entry review labels in the 22 item-level section indexes. It is an inventory of review progress, not a claim that the entries have been technically verified.
 
