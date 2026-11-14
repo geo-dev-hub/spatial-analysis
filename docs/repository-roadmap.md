@@ -113,7 +113,7 @@ The goal is not to fill folders or publish pages quickly. The goal is a collecti
 - [x] Tests and documented input contracts.
 - [x] Add a regression test for a ray passing through a concave vertex in point-in-polygon.
 - [x] A benchmark report with its workload and limitations stated.
-- [x] GitHub Actions workflow configured to test all seventy-eight Python implementation packages and execute all sixty-six notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree and point-location labs are included in notebook execution.
+- [x] GitHub Actions workflow configured to test all seventy-eight Python implementation packages and execute all seventy notebooks. The k-d tree, quadtree and polygon-validity suites are included in the matrix; the quadtree and point-location labs are included in notebook execution.
 - [x] Confirm successful full-head Actions run `43563534022` on commit `2a340035372f45eb43e16770e6f41f2d6b78f70d`: all 81 workflow jobs passed, including 78 Python package suites, 66 notebook executions, internal-link checks and Clipper2 checks.
 - [x] Add regression tests for polygon validity, clipping, overlay topology and precision-grid input contracts.
 - [ ] Add regression tests whenever a real edge case is discovered.
@@ -332,3 +332,11 @@ The package is a stationary M/M/c teaching model, not a time-varying simulation.
 - Made the absolute temporal lag explicit in the displayed definition, matching the implementation's use of absolute time differences and ensuring the covariance is symmetric in temporal lag.
 - Defined the marginal variance and spatial/temporal scale parameters next to the equations. The lesson remains scoped to one Euclidean-space-by-linear-time Gneiting-class construction.
 - This is a presentation and contract-clarity correction; it does not add a new covariance family or claim a full mathematical audit of the source paper.
+
+## Recent catalogue and formula QA — 14 November 2026
+
+- [x] Add a dated source review dashboard covering 694 source-entry rows across all 22 indexes; explicitly distinguish 41 partial rows from 653 intake-only rows.
+- [x] Add bounded bibliography evidence notes for Visvalingam–Whyatt (1993), Cressie–Huang (1999) and Gneiting (2002), without overstating technical or rights verification.
+- [x] Link existing canonical lessons and evidence notes from the relevant Section 10, 21 and 22 source rows while preserving partial status.
+- [x] Render the Gneiting-class space-time covariance equations in the lesson, implementation README and intern walkthrough; align the displayed absolute temporal lag with the implementation.
+- [x] Recount the current CI configuration: 78 Python package suites and 70 notebook executions, plus internal-link and Clipper2 checks. The previous full validation on commit 0327318 passed; the newer catalogue/formula batch still requires a full-head run.
