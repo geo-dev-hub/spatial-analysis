@@ -54,7 +54,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Change points | PELT | Pruned exact SSE mean-shift implementation, brute-force partition test and walkthrough added | Implemented / tested candidate; independent reference review pending |
 | Change points | BEAST | Family comparison guide; no matching implementation verified | Research / lesson only |
 | Change points | Bayesian online change-point detection | Conjugate Gaussian-mean run-length recursion, tests and notebook added | Implemented / tested candidate; reference/model review pending |
-| Trend / seasonality | STL decomposition | Family guide; no matching implementation verified | Research / lesson only |
+| Trend / seasonality | STL decomposition | `implementations/python/stl-decomposition/` validated wrapper around statsmodels STL, reconstruction and input-contract tests, walkthrough and lab; not a from-scratch LOESS implementation | Implemented via documented reference dependency; independent numerical review pending |
 | Trend / seasonality | Prophet | External software/model; family guide only | Research / lesson only |
 | Trend / seasonality | Theil–Sen trend estimator | `implementations/python/theil-sen/` pairwise-median slope, irregular-time handling, outlier and input tests, walkthrough and lab | Implemented / tested candidate; independent reference review pending |
 | Trend / seasonality | Pettitt test | `implementations/python/change-point-detection/` rank statistic, tie-aware tests, walkthrough and change-point lab; approximate p-value under independent-observation null | Implemented / tested candidate; reference calibration review pending |
