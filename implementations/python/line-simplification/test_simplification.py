@@ -22,3 +22,18 @@ def test_invalid_lang_lookahead():
     with pytest.raises(ValueError):lang([(0,0),(1,1)],1,0)
 def test_nonfinite():
     with pytest.raises(ValueError):reumann_witkam([(0,0),(1,float("nan"))],1)
+
+
+def test_opheim_collinear_respects_maximum_search_distance():
+    line = [(0,0),(1,0),(2,0),(3,0),(4,0),(5,0),(6,0)]
+    out = opheim(line, strip_half_width=0.1, min_distance=1, max_distance=3)
+    assert out == [(0.0,0.0),(3.0,0.0),(6.0,0.0)]
+
+def test_opheim_preserves_endpoints_and_handles_short_line():
+    line = [(0,0),(0.2,0),(0.4,0)]
+    out = opheim(line, 0.1, 1, 3)
+    assert out[0] == (0.0,0.0) and out[-1] == (0.4,0.0)
+
+def test_opheim_rejects_invalid_distance_constraints():
+    with pytest.raises(ValueError):
+        opheim([(0,0),(1,0)], 0.1, 2, 1)

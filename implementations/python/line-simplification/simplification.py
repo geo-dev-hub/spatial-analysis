@@ -80,3 +80,56 @@ def lang(points,tolerance,lookahead):
             else:break
         out.append(pts[chosen]);anchor=chosen
     return out
+
+
+def opheim(points, strip_half_width, min_distance, max_distance):
+    """Constrained moving-strip Opheim variant for an open polyline.
+
+    At each retained anchor, orient a strip toward the first subsequent point
+    at least min_distance away. Advance while vertices remain inside the
+    strip and within max_distance of the anchor; retain the last eligible
+    vertex and restart there. Endpoints are always retained.
+
+    strip_half_width is the perpendicular half-width of the corridor. The
+    min/max radii are Euclidean distances in the same coordinate units.
+    """
+    pts = _points(points)
+    params = (strip_half_width, min_distance, max_distance)
+    if any(not isfinite(float(x)) for x in params):
+        raise ValueError("Opheim distances must be finite")
+    width, minimum, maximum = map(float, params)
+    if width < 0 or minimum <= 0 or maximum < minimum:
+        raise ValueError("require width >= 0 and 0 < min_distance <= max_distance")
+    n = len(pts)
+    if n <= 2:
+        return pts[:]
+    out = [pts[0]]
+    anchor = 0
+    while anchor < n - 1:
+        direction = anchor + 1
+        while direction < n - 1 and hypot(
+            pts[direction][0] - pts[anchor][0],
+            pts[direction][1] - pts[anchor][1]
+        ) < minimum:
+            direction += 1
+        if direction == n - 1:
+            out.append(pts[-1])
+            break
+        a, b = pts[anchor], pts[direction]
+        chosen = direction
+        i = direction + 1
+        while i < n:
+            distance = hypot(pts[i][0] - a[0], pts[i][1] - a[1])
+            if distance > maximum or _distance_to_line(pts[i], a, b) > width:
+                break
+            chosen = i
+            i += 1
+        if chosen <= anchor:
+            chosen = min(anchor + 1, n - 1)
+        out.append(pts[chosen])
+        anchor = chosen
+        if anchor == n - 1:
+            break
+    if out[-1] != pts[-1]:
+        out.append(pts[-1])
+    return out

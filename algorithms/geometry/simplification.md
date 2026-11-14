@@ -102,3 +102,16 @@ These methods have different decision rules from Douglas–Peucker and Visvaling
 - [Runnable implementations and tests](../../implementations/python/line-simplification/README.md)
 - [Four-algorithm walkthrough](../../implementations/python/line-simplification/implementation-walkthrough.md)
 - [Simplification comparison lab](../../notebooks/line-simplification-lab.ipynb)
+
+
+## Reumann–Witkam, Lang and Opheim
+
+These extended-local algorithms should not be merged into one generic simplifier.
+
+- **Reumann–Witkam** moves a strip in the direction of the initial tangent and retains the last point in each strip section.
+- **Lang** uses a fixed look-ahead count and checks the distance of intermediate points to a candidate baseline segment.
+- **Opheim** adds minimum and maximum distance constraints to a corridor search. The implementation in this repository explicitly defines a strip half-width and Euclidean min/max radii; it is a bounded teaching variant, not a reproduction of the road-network-specific improved Opheim method.
+
+The Opheim method is described in the cartographic generalisation literature as a constrained search region based on the Reumann–Witkam corridor with minimum and maximum distance constraints. See Clayton's NOAA review and the later road-network study by Guo et al. The latter's improved Opheim variant adds semantic critical-point and topology handling; those additions are not part of this implementation.
+
+- [Opheim implementation and tests](../../implementations/python/line-simplification/README.md)

@@ -26,7 +26,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Line clipping | Nicholl–Lee–Nicholl | Section 10 lesson mentions it as further reading; no implementation or dedicated test suite verified | Open |
 | Line simplification | Reumann–Witkam | Moving infinite-strip teaching implementation, tests and walkthrough added; variant contract stated | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Lang | Bounded look-ahead teaching implementation, tests and walkthrough added; vertex-count lookahead contract stated | Implemented / tested candidate; independent reference comparison pending |
-| Line simplification | Opheim | Family lesson exists; no implementation verified | Open |
+| Line simplification | Opheim | Constrained moving-strip implementation with explicit half-width/min/max-radius contract and tests | Implemented / tested candidate; exact-reference variant comparison pending |
 | Line simplification | Zhao–Saalfeld | Family lesson exists; no implementation verified | Open |
 | Line simplification | Visvalingam–Whyatt effective area | `implementations/python/line-simplification/` implementation and tests | Implemented / tested |
 | Curves and smoothing | Chaikin corner cutting | `implementations/python/curves-smoothing/`, tests and notebook | Implemented / tested |
@@ -236,3 +236,6 @@ Optical-flow update: a single-scale dense local Lucas–Kanade teaching implemen
 
 
 Distribution-shift update: unbiased Gaussian-kernel MMD, energy distance and a reproducible exchangeability-based permutation test now have executable implementations, tests, walkthrough and a lab. The permutation procedure is explicitly not spatially valid under autocorrelation; block-aware inference remains open.
+
+
+Opheim update: a constrained moving-strip variant is now implemented and tested. Its half-width and minimum/maximum radial-distance conventions are explicit; it does not claim to reproduce the road-network-specific improved Opheim variant. Zhao–Saalfeld remains open.
