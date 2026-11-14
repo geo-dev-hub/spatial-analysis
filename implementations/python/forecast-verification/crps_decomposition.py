@@ -6,6 +6,7 @@ each threshold. It is not the exact bin-width Hersbach (2000) estimator.
 """
 from __future__ import annotations
 import numpy as np
+from scipy.integrate import trapezoid
 from ensemble_verification import _ensemble_inputs
 
 
@@ -63,7 +64,7 @@ def crps_brier_decomposition(observations, ensemble, *, thresholds=None,
         probability=np.mean(x>z,axis=1)
         part=_brier_decomposition(event,probability)
         for key in components: components[key].append(part[key])
-    integrated={key:float(np.trapz(values,grid)) for key,values in components.items()}
+    integrated={key:float(trapezoid(values,grid)) for key,values in components.items()}
     return {"crps":integrated["reliability"]-integrated["resolution"]+integrated["uncertainty"],
             "direct_integrated_brier":integrated["brier_score"],
             "reliability":integrated["reliability"],
