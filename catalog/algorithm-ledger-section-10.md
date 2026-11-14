@@ -207,7 +207,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Methane detection | Deep plume segmentation | model / workflow | External model families and data needed | Research required |
 | Methane quantification | Integrated mass enhancement (IME) | estimator / method | `ime_emission_rate` implements Q = IME × wind speed / characteristic length with unit-contract tests | Implemented / tested arithmetic baseline; physical input/retrieval validation pending |
 | Methane quantification | Cross-sectional flux | estimator / method | `cross_sectional_flux` integrates concentration × signed normal wind × segment width; tests include reversed flow | Implemented / tested numerical baseline; sampling and uncertainty review pending |
-| Methane quantification | Gaussian plume inversion | inverse model | No verified implementation | Open |
+| Methane quantification | Gaussian plume inversion | inverse model | `implementations/python/methane-emissions/gaussian_plume_inversion.py` fits non-negative Q and constant background for a fixed-source, vertically integrated Gaussian column plume; synthetic recovery tests, walkthrough and lab added | Implemented / tested candidate; source geometry and dispersion are fixed inputs, operational physics and uncertainty review pending |
 | Maritime monitoring | Vessel behaviour classification | model / workflow | No verified implementation | Research required |
 | Maritime monitoring | AIS gap detection | algorithm / data-quality method | No implementation verified | Open |
 | Maritime monitoring | Fishing effort mapping from SAR and AIS | workflow / estimator | No reproducible workflow verified | Research required |
