@@ -1,6 +1,6 @@
 # Line clipping — Python teaching implementation
 
-Implements Cohen–Sutherland and Liang–Barsky clipping against an axis-aligned rectangle, plus Cyrus–Beck clipping against a convex polygon. All functions return clipped endpoint pairs or `None` when the segment is rejected.
+Implements Cohen–Sutherland, Liang–Barsky and Nicholl–Lee–Nicholl clipping against an axis-aligned rectangle, plus Cyrus–Beck clipping against a convex polygon. All functions return clipped endpoint pairs or `None` when the segment is rejected.
 
 Run tests with `python -m pytest -q` from this directory. Runtime code uses only the standard library; pytest is the test runner.
 

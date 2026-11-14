@@ -132,3 +132,16 @@ For a robust implementation, compare generated small cases against an independen
 ## Scope
 
 This is a method comparison and derivation, not a production clipping library. The named methods are described, but no new implementation is claimed. A future package must specify boundary inclusion, numeric precision, degenerate inputs and differential tests.
+
+
+## Nicholl–Lee–Nicholl clipping
+
+Nicholl–Lee–Nicholl is a 2D line-segment algorithm for axis-aligned rectangular clipping windows. It partitions the endpoint plane using rays from the first endpoint to window corners. The first endpoint is mapped by symmetry into one of three canonical regions: inside, left, or top-left. Slope-region tests then identify the relevant boundary or boundary pair directly, reducing repeated clipping iterations.
+
+The Python implementation includes canonical-region transformations, side selection, boundary intersection and explicit handling for vertical and boundary-outward segments. It is tested differentially against Liang–Barsky on hand-selected and randomized cases. It does not clip arbitrary convex polygons; Cyrus–Beck remains the convex-window method in this package.
+
+- [Implementation](../implementations/python/line-clipping/line_clipping.py)
+- [Tests](../implementations/python/line-clipping/test_line_clipping.py)
+- [Intern walkthrough](../implementations/python/line-clipping/implementation-walkthrough.md)
+- Primary reference: Nicholl, Lee & Nicholl (1987), “An efficient new algorithm for 2-D line clipping: Its development and analysis,” SIGGRAPH '87, DOI: 10.1145/37401.37432.
+- Supporting walkthrough: Brown University computer graphics notes, [Nicholl–Lee–Nicholl clipping](https://cs.brown.edu/media/filer_public/88/9c/889c4b64-6979-4d31-a4fe-3904a681b978/dasilva.pdf).

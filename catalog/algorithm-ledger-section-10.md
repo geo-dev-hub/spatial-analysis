@@ -23,7 +23,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Line clipping | Cohen–Sutherland | `implementations/python/line-clipping/`, tests and lab | Implemented / tested |
 | Line clipping | Liang–Barsky | Same package, tests and lab | Implemented / tested |
 | Line clipping | Cyrus–Beck | Same package; convex polygon window contract | Implemented / tested |
-| Line clipping | Nicholl–Lee–Nicholl | Section 10 lesson mentions it as further reading; no implementation or dedicated test suite verified | Open |
+| Line clipping | Nicholl–Lee–Nicholl | Canonical-region transformations and slope-based boundary selection; randomized differential tests against Liang–Barsky | Implemented / tested candidate; primary-reference and numerical review pending |
 | Line simplification | Reumann–Witkam | Moving infinite-strip teaching implementation, tests and walkthrough added; variant contract stated | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Lang | Bounded look-ahead teaching implementation, tests and walkthrough added; vertex-count lookahead contract stated | Implemented / tested candidate; independent reference comparison pending |
 | Line simplification | Opheim | Constrained moving-strip implementation with explicit half-width/min/max-radius contract and tests | Implemented / tested candidate; exact-reference variant comparison pending |
@@ -242,3 +242,6 @@ Opheim update: a constrained moving-strip variant is now implemented and tested.
 
 
 Zhao–Saalfeld update: the narrow-sleeve, original-vertex variant is implemented using intersecting angular sector bounds. Tests check straight-line reduction, direction changes, angle wrap, duplicate vertices and supporting-line tolerance. The wider sleeve with perturbed vertices and the middle trimming variant remain open.
+
+
+Line clipping update: Nicholl–Lee–Nicholl is now implemented for axis-aligned rectangular windows, with explicit transformations into inside/left/top-left canonical cases and differential tests against Liang–Barsky. It is not a general convex polygon clipper.
