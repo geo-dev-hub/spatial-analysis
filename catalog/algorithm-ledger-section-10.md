@@ -33,7 +33,7 @@ A shared family lesson or notebook is not counted as a separate derivation for e
 | Curves and smoothing | Catmull–Rom spline | Same package; uniform, centripetal and chordal parameterisations | Implemented / tested |
 | Curves and smoothing | B-splines | de Boor evaluator, tests, walkthrough and spline notebook added | Implemented / tested candidate; reference review pending |
 | Curves and smoothing | NURBS | Homogeneous de Boor evaluator, rational quarter-circle test and notebook added | Implemented / tested candidate; reference review pending |
-| Curves and smoothing | Schneider Bezier fitting | Bezier evaluation exists, but curve-fitting algorithm is not the same deliverable | Partial |
+| Curves and smoothing | Schneider Bezier fitting | Recursive cubic fitter with chord-length parameterisation, least-squares handles, Newton reparameterisation, tests and walkthrough | Implemented / tested candidate; reference and tolerance review pending |
 | Curves and smoothing | Kalman smoother | Linear-Gaussian vector-state filter and RTS smoother; tests, walkthrough and notebook added | Implemented / tested candidate; model/reference review pending |
 | Curves and smoothing | Rauch–Tung–Striebel smoother | Backward fixed-interval RTS pass added to tested Kalman package | Implemented / tested candidate; model/reference review pending |
 | Mesh geodesics | Mitchell–Mount–Papadimitriou exact geodesics | Comparative method guide; no executable package verified | Research / lesson only |
@@ -245,3 +245,6 @@ Zhao–Saalfeld update: the narrow-sleeve, original-vertex variant is implemente
 
 
 Line clipping update: Nicholl–Lee–Nicholl is now implemented for axis-aligned rectangular windows, with explicit transformations into inside/left/top-left canonical cases and differential tests against Liang–Barsky. It is not a general convex polygon clipper.
+
+
+Schneider fitting update: a piecewise-cubic fitter is now added with chord-length parameterisation, least-squares tangent handles, bounded Newton–Raphson refinement and recursive maximum-error splitting. It is explicitly distinct from Bezier curve evaluation.

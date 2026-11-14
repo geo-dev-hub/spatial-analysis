@@ -1,7 +1,7 @@
-# Curve construction teaching implementations
+# Curve construction and fitting
 
-This package includes Chaikin corner cutting, Catmull–Rom interpolation, arbitrary-degree Bezier evaluation by de Casteljau, and B-spline/NURBS evaluation by de Boor's algorithm, and linear-Gaussian Kalman filtering with Rauch–Tung–Striebel (RTS) fixed-interval smoothing.
+The package includes Chaikin corner cutting, Catmull–Rom interpolation, Bezier evaluation by de Casteljau, B-spline/NURBS evaluation by de Boor, and Schneider's recursive piecewise-cubic Bezier fitting algorithm.
 
-B-spline/NURBS inputs are planar control points, degree, nondecreasing knot vector and parameter in the closed spline domain. The knot vector length is control_count + degree + 1. NURBS weights must be finite and non-zero. Sampling functions include both domain endpoints.
+The Schneider fitter accepts an ordered sequence of planar samples and a maximum squared-error tolerance. It uses chord-length parameterisation, least-squares tangent handle lengths, optional Newton–Raphson reparameterisation and recursive splitting at the maximum-error sample. The output is a connected chain of cubic Bezier segments. This is curve fitting, not line simplification.
 
-Run python -m pytest -q from this directory. The package does not yet implement Schneider's Bezier curve fitting or Kalman/RTS trajectory smoothing. Curve construction and statistical trajectory estimation are different tasks.
+Run python -m pytest -q. NumPy is required for the separate Kalman/RTS smoother; the curve-fitting implementation itself uses the standard library.

@@ -135,3 +135,13 @@ A NumPy-based companion module now implements a general linear-Gaussian state mo
 - [Tests](../implementations/python/curves-smoothing/test_kalman_smoothing.py)
 - [Intern walkthrough](../implementations/python/curves-smoothing/kalman-smoothing-walkthrough.md)
 - [Synthetic trajectory lab](../notebooks/kalman-rts-smoothing-lab.ipynb)
+
+
+## Schneider's automatic cubic fitting
+
+The companion curve-fitting module implements Schneider's recursive piecewise-cubic algorithm: chord-length parameterisation, least-squares tangent handle lengths, bounded Newton–Raphson reparameterisation and recursive splitting at the maximum-error sample. Its tolerance is a maximum squared residual in coordinate units squared. The output is a chain of connected cubic Bezier segments; this is not polyline simplification and does not guarantee tangent continuity at split points.
+
+- [Implementation](../implementations/python/curves-smoothing/curve_fitting.py)
+- [Tests](../implementations/python/curves-smoothing/test_curve_fitting.py)
+- [Walkthrough](../implementations/python/curves-smoothing/curve-fitting-walkthrough.md)
+- Primary source: Schneider (1990), *Graphics Gems*, pp. 612–626; [original paper PDF](https://lhf.impa.br/cursos/tmg/Schneider-1990.pdf).
