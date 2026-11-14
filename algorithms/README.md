@@ -25,6 +25,7 @@ Each record explains one method or operation, its assumptions, where it is usefu
 
 - [The p-median problem](optimization/p-median.md) — choose a fixed number of candidate facilities to minimise weighted assignment cost.
 - [Capacitated p-median](optimization/capacitated-p-median.md) — minimise assignment cost while respecting finite facility capacities and indivisible demand.
+- [Accessibility equity diagnostics](optimization/accessibility-equity.md) — inspect population-weighted accessibility distributions, lower-tail outcomes and group gaps without treating one metric as a fairness verdict.
 - [Two-step floating catchment area](optimization/two-step-fca.md) — estimate potential service accessibility by combining provider supply and population demand within travel catchments.
 
 ## Remote sensing
