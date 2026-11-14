@@ -60,9 +60,21 @@ The FFT implementation assumes:
 
 A real survey grid is rarely periodic. Edge mismatch creates spectral ringing. Pad and taper where appropriate, compare alternative edge treatments, inspect the border, and avoid interpreting artefacts as geological contacts. Do not apply these operators to geographic degrees without a suitable projection or local metric treatment.
 
-## 6. Runnable teaching implementation
+## 6. Euler deconvolution
 
-The companion package provides horizontal derivatives, the radial-wavenumber vertical derivative, upward continuation, analytic-signal amplitude and tilt angle. Tests compare the spectral operators with a periodic cosine of known wavenumber.
+Euler deconvolution uses the homogeneity equation for a potential field and a chosen structural index N:
+
+\\[
+(x-x_0)T_x+(y-y_0)T_y+(z-z_0)T_z=N(B-T).
+\\]
+
+Rearrangement produces a linear least-squares system for source coordinates (x0,y0,z0) and base level B. The companion function solves one supplied 2D window and rejects rank-deficient systems. It requires the derivatives and coordinates on the same grid, a known structural index, and a consistent observation height.
+
+Euler estimates are not unique geological answers. They can be unstable or misleading when the structural index is wrong, regional field is not removed, multiple sources overlap, the window is poorly conditioned, or noise dominates derivatives. Inspect residuals, solution stability across window sizes and structural indices, and geological plausibility. Do not report a single solution without those checks.
+
+## 7. Runnable teaching implementation
+
+The companion package provides horizontal derivatives, the radial-wavenumber vertical derivative, upward continuation, analytic-signal amplitude and tilt angle, plus windowed Euler deconvolution. Tests compare the spectral operators with a periodic cosine of known wavenumber.
 
 - [Implementation and contract](../implementations/python/potential-field/README.md)
 - [Tests](../implementations/python/potential-field/test_spectral_derivatives.py)
@@ -75,4 +87,4 @@ The companion package provides horizontal derivatives, the radial-wavenumber ver
 - Miller, H. G., and Singh, V. (1994). Potential field tilt—a new concept for location of potential field sources. *Journal of Applied Geophysics*, 32, 213–217.
 - Blakely, R. J. (1995). *Potential Theory in Gravity and Magnetic Applications*. Cambridge University Press.
 
-**Scope:** this is a regular-grid derivative/attribute baseline. Downward continuation, Euler deconvolution, Werner deconvolution, matched filtering, inversion and source-geometry estimation remain distinct algorithms and are not implemented here.
+**Scope:** this is a regular-grid derivative/attribute baseline. Downward continuation, Werner deconvolution, matched filtering, inversion and source-geometry estimation remain distinct algorithms and are not implemented here.
