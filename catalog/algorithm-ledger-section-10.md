@@ -175,7 +175,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Potential fields | Horizontal derivatives | numerical operation | Spectral x/y derivatives and periodic-cosine test added | Implemented / tested candidate |
 | Potential fields | First vertical derivative | numerical operation | Radial-wavenumber spectral operator and periodic-cosine test added | Implemented / tested candidate |
 | Potential fields | Euler deconvolution | algorithm / estimator | Windowed least-squares homogeneity equation with synthetic parameter-recovery tests | Implemented / tested candidate; model assumptions and structural-index sensitivity review pending |
-| Potential fields | Werner deconvolution | algorithm / estimator | No implementation verified | Open |
+| Potential fields | Werner deconvolution | algorithm / estimator | Windowed linearized 2D single-thin-dike solver; synthetic recovery tests, walkthrough and lab | Implemented / tested candidate; thick-interface, regional-interference and multi-source variants remain open |
 | Potential fields | Matched filtering | signal-processing method | No implementation verified | Open |
 | Potential fields | Upward continuation | spectral operation | `implementations/python/potential-field/` Fourier multiplier `exp(-kh)`; exact periodic-mode attenuation test | Implemented / tested candidate; boundary/reference review pending |
 | Potential fields | Downward continuation | unstable inverse spectral operation | Tikhonov-regularised spectral inverse with positive regularisation and DC-mean preservation | Implemented / tested candidate; regularisation selection and boundary/reference review pending |
@@ -210,7 +210,7 @@ The source also includes applied methods, measures, software and workflows. Thes
 | Methane quantification | Cross-sectional flux | estimator / method | `cross_sectional_flux` integrates concentration × signed normal wind × segment width; tests include reversed flow | Implemented / tested numerical baseline; sampling and uncertainty review pending |
 | Methane quantification | Gaussian plume inversion | inverse model | `implementations/python/methane-emissions/gaussian_plume_inversion.py` fits non-negative Q and constant background for a fixed-source, vertically integrated Gaussian column plume; synthetic recovery tests, walkthrough and lab added | Implemented / tested candidate; source geometry and dispersion are fixed inputs, operational physics and uncertainty review pending |
 | Maritime monitoring | Vessel behaviour classification | model / workflow | No verified implementation | Research required |
-| Maritime monitoring | AIS gap detection | algorithm / data-quality method | No implementation verified | Open |
+| Maritime monitoring | AIS gap detection | algorithm / data-quality method | `implementations/python/ais-gap-detection/` groups and sorts vessel tracks, flags long report intervals and excessive great-circle implied speeds, with tests, walkthrough and synthetic lab | Implemented / tested candidate; threshold calibration, reception coverage and operational review pending |
 | Maritime monitoring | Fishing effort mapping from SAR and AIS | workflow / estimator | No reproducible workflow verified | Research required |
 | Water quality | Chlorophyll indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
 | Water quality | Turbidity indices | metric / index | Existing spectral-index package may overlap; source-specific review required | Partial |
