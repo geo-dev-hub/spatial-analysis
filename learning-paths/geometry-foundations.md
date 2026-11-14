@@ -132,3 +132,8 @@ The [Minkowski-sum lesson](../algorithms/geometry/minkowski-sum.md) connects con
 ## Read a shape's internal skeleton
 
 Two different structures can describe the inside of a polygon. The [medial axis](../algorithms/geometry/medial-axis.md) follows points with multiple nearest boundary contacts and encodes maximal inscribed discs. The [straight skeleton](../algorithms/geometry/straight-skeleton.md) follows the vertices of inward-moving parallel wavefronts. Work through the [medial-axis exercise](../exercises/medial-axis.md) and [straight-skeleton exercise](../exercises/straight-skeleton.md) before selecting a construction library.
+
+
+## Build proximity networks
+
+The [proximity-graphs lesson](../algorithms/geometry/proximity-graphs.md) compares Gabriel, relative-neighbourhood, beta-skeleton, Yao and Euclidean MST structures. Run the all-pairs reference methods first, then compare them with the [Delaunay-filtered Gabriel/RNG variants](../implementations/python/proximity-graphs/README.md) and the [visual lab](../notebooks/proximity-graphs-delaunay-lab.ipynb). Pay particular attention to the documented O(n²) bound and cocircular tie limitation: this is an intermediate candidate-reduction method, not the specialised linear-time RNG construction.
