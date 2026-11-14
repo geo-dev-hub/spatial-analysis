@@ -20,13 +20,17 @@ def test_capacity_can_force_a_higher_cost_assignment():
     assert assignment == (0, 1, 1)
 
 def test_demand_weights_change_cost_not_capacity_load():
-    opened, objective, assignment = solve_capacitated_p_median(
-        [[0, 5], [1, 0]], 2,
-        capacities=[1, 1], demand_quantities=[1, 1], demand_weights=[10, 1],
+    costs = [[0, 5], [1, 0]]
+    unweighted = solve_capacitated_p_median(
+        costs, 2, capacities=[1, 1], demand_quantities=[1, 1],
     )
-    assert opened == (0, 1)
-    assert objective == pytest.approx(0)
-    assert assignment == (0, 1)
+    weighted = solve_capacitated_p_median(
+        costs, 2, capacities=[1, 1], demand_quantities=[1, 1], demand_weights=[10, 1],
+    )
+    assert unweighted[1] == pytest.approx(1)
+    assert weighted[0] == (0, 1)
+    assert weighted[1] == pytest.approx(0)
+    assert weighted[2] == (0, 1)
 
 def test_infeasible_total_capacity_is_reported():
     with pytest.raises(ValueError, match="no feasible assignment"):
